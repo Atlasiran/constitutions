@@ -92,6 +92,7 @@ Atlasiran/Atlas-website            ← main site (AtlasIran.org)
 | Integration into Atlas | The constitutions UI is refactored into `app.js` exporting `mount(el, { lang, base, dataUrl })`. An Atlas route `src/routes/constitutions/+page.svelte` renders Atlas's header and footer and calls `mount()`. Build output is copied to `static/constitutions/` before the Vite build. All URLs are relative to `base`. |
 | Styling | `atlas-theme.css` in constitutions mirrors Atlas's tokens. All CSS is scoped under `.qa-root`. Persian is the default when embedded. |
 | Tab name | «اسناد بنیادین» |
+| Treatises | Their own comparison group D (Yek Kalameh, Velayat-e Faqih), not compared with constitutions |
 | Source PDFs | Plain git (no LFS; GitHub Pages can't serve LFS files) |
 | مرامنامه (coc) | Grouped with charters/programmes, **not** with bylaws |
 | Democratic Platform | Its own new Atlas entry (not listed as of 2026-09-24). The document is published and labelled «پیش‌نویس برای بررسی و تصویب» (`doc_status: draft`). **No PJAK link.** |
@@ -272,10 +273,10 @@ Status values: ☐ to do · ◐ in progress · ☑ done
 ### Phase 3: constitutions tab in Atlas
 | # | Task | Status |
 |---|---|---|
-| 3.1 | Refactor the site into `app.js` + `mount()`, add `atlas-theme.css`, scope CSS under `.qa-root`, Persian default | ☐ |
-| 3.2 | Build step producing `dist/` + `org-index.json` | ☐ |
-| 3.3 | Atlas: submodule at `modules/constitutions`, copy step before build, `/constitutions` route, «اسناد بنیادین» nav entry, prerender entries | ☐ |
-| 3.4 | CI `submodules: recursive`; Cloudflare nested submodules; test under base `/Atlas-website` | ☐ |
+| 3.1 | Refactor the site into `app.js` + `mount()`, add `atlas-theme.css`, scope CSS under `.qa-root`, Persian default | ☑ `0f8c94f`…`affa214` |
+| 3.2 | Build step producing `dist/` + `org-index.json` | ☑ `pipeline/build_module.py [--out DIR]` (stdlib; Atlas runs it from the submodule) |
+| 3.3 | Atlas: submodule at `modules/constitutions`, copy step before build, `/constitutions` route, «اسناد بنیادین» nav entry, prerender entries | ◐ Atlas branch `constitutions-tab` (`64d33b6`), local only; assets go to `static/modules/constitutions/` (not `static/constitutions/`, which would collide with the `/constitutions` page) |
+| 3.4 | CI `submodules: recursive`; Cloudflare nested submodules; test under base `/Atlas-website` | ◐ CI updated; static build tested under `/Atlas-website` with headless Chrome; Cloudflare Pages build (needs python3 + submodules) untested |
 
 ### Phase 4: new documents
 | # | Task | Status |
@@ -287,7 +288,7 @@ Status values: ☐ to do · ◐ in progress · ☑ done
 ### Phase 5: comparison
 | # | Task | Status |
 |---|---|---|
-| 5.1 | Compare view limited to one comparison group; deep-link parameters | ☐ |
+| 5.1 | Compare view limited to one comparison group; deep-link parameters | ☑ groups A/B/C + D (treatises); `#compare=a,b[,topic]`, `#search=…`, `#map` |
 | 5.2 | «مقایسه اساسنامه» / «مقایسه منشور» ("compare bylaws" / "compare charter") button on `/op/[page]`, shown only when a comparable document exists | ☐ |
 | 5.3 | Ingest the PJAK PDF from Atlas `static/docs/`; harvest the 104 `manifest`/`coc` links (download → classify → extract → link to organisation, with review) | ☐ |
 | 5.4 | Benchmark audit through the batch pipeline; rights matrix with citations; methodology page; review workflow | ◐ `pipeline/audit.py` (submit/collect → `data/audits/<uid>.json`, review status `unreviewed`); first run pending |
@@ -351,3 +352,10 @@ Status values: ☐ to do · ◐ in progress · ☑ done
   - Persian translations are not needed before auditing: the model reads the authoritative English, and translations are display text. The benchmark version now hashes English text + IDs only (normalcy `f677ded`; new version `f04ecff03b434da0`), so adding translations later won't invalidate audits.
   - OCR/text quality check (word coverage across the corpus): 32 of 33 distinct texts are usable. The OCR'd ones have scattered character errors but read fine. `tabriz-federal-2018` was garbage from a legacy font's wrong glyph map; it was re-OCR'd (`ocr.py` now takes explicit uids) and is now 131 clean articles. Downstream data rebuilt; only Tabriz changed.
   - normalcy pushed (`c7176ba`) and deployed (version `ca10da72`). Setting the `API_KEYS` secret was blocked for the agent; the user sets it. `audit.py` reads `NORMALCY_KEY` from the environment or `local/normalcy.env`.
+- **2026-09-24 (session 4, Phase 3):**
+  - First test audit failed: `invalid_request_error: Schema is too complex` (an object with one required property per right). Output is now a flat `findings` list; coverage is checked in `validate()` (normalcy `75591b9`, deployed). Batch errors now carry the API message.
+  - The site is now a module (`site/app.js` `mount()`, `app.css` scoped to `.qa-root`, `atlas-theme.css`); `site/index.html` is a thin standalone shell. Embedded mode leaves `<html>`/`<body>` alone, follows Atlas's `.dark`, and hides its own title/intro.
+  - Fixed a pre-existing RTL bug: timeline lane labels were clipped in Persian (SVG `text-anchor` flipped under `dir=rtl`).
+  - Atlas branch `constitutions-tab`: submodule, `/constitutions` route, nav entry, build step, prerender entry, CI `submodules: recursive`. Built with `ADAPTER=static` and checked headless under `/Atlas-website/` (nav link, table of 34 documents, compare deep link, dark mode).
+  - Noticed while building: Atlas's committed `static/data/data.json` is stale for org 310 (logo and `manifest` → local PJAK PDF); the build regenerates it. Left out of the tab commit.
+  - `majame-eslami-1382` has 1 extracted article, so it's hidden from the compare view (needs > 5), although it's one of the two documents linked to an Atlas org. Relevant for 5.2.
