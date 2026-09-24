@@ -1,0 +1,3 @@
+[submodule "vendor/normalcy"]
+	path = vendor/normalcy
+	url = https://github.com/jomhoor/normalcy.git
