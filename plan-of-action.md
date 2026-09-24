@@ -63,7 +63,7 @@ Atlasiran/Atlas-website            ← main site (AtlasIran.org)
 - Worker endpoints:
   - `GET /`: test UI
   - `POST /check`: async, bearer `SHARED_SECRET`, sends a callback when done
-  - `POST /check-sync`: ⚠️ **no authentication**
+  - `POST /check-sync`: bearer `SHARED_SECRET` (since 2026-09-24)
   - `POST /receive`: a stub that echoes the callback, for local testing
 - **Uncommitted local changes** (review and commit as the user):
   - SDK `^0.32` → `^0.128.0`
@@ -254,10 +254,10 @@ Status values: ☐ to do · ◐ in progress · ☑ done
 ### Phase 1: normalcy demo (first priority)
 | # | Task | Status |
 |---|---|---|
-| 1.1 | Store the Tier 1 + Tier 2 texts as provision JSON (English + Persian, with sources) | ☐ |
-| 1.2 | Lock down `/check-sync` (Turnstile, rate limit); make the README and prompt agree on the 12 sources | ☐ |
-| 1.3 | Commit a `wrangler.toml` without secrets, with the normalcy.is route | ☐ |
-| 1.4 | Demo site: benchmark library, try-a-text checker, showcase audits; deploy to normalcy.is *(ask before deploying)* | ☐ |
+| 1.1 | Store the Tier 1 + Tier 2 texts as provision JSON (English + Persian, with sources) | ◐ English done (15 instruments, 1,907 IDs); Persian pending |
+| 1.2 | Lock down `/check-sync` (Turnstile, rate limit); make the README and prompt agree on the 12 sources | ◐ done except Turnstile keys (code ready, not configured) |
+| 1.3 | Commit a `wrangler.toml` without secrets, with the normalcy.is route | ☑ |
+| 1.4 | Demo site: benchmark library, try-a-text checker, showcase audits; deploy to normalcy.is *(ask before deploying)* | ◐ live; checker waits for `ANTHROPIC_API_KEY`; no audits yet |
 
 ### Phase 2: normalcy API
 | # | Task | Status |
@@ -327,3 +327,12 @@ Status values: ☐ to do · ◐ in progress · ☑ done
   - `org_ids` set only where the author is exactly an Atlas org: `ncri-ten-articles-1397` → 30, `majame-eslami-1382` → 433. Other authors (WCUP, Pan-Iranist, CPI-MLM, Iran-e No, Andishgah, Pars, Tabriz center, Iranian National Congress) are not in Atlas; انجمن ایران نو ≠ حزب ایران نوین.
   - Rule 2: removed `baseline: true` from `iri-constitution-1979`; the compare view no longer defaults side A to the in-force (IRI) constitution.
   - 0.5: normalcy upgrade committed as `920349e` (not pushed). Model and API shape checked against the current Claude API reference.
+- **2026-09-24 (session 3):**
+  - Published `Atlasiran/constitutions` (public, AGPL-3.0, `df90d90`); normalcy added as a submodule at `vendor/normalcy`. Pushed normalcy `main`.
+  - 1.1: `benchmark/build.py` in normalcy fetches 15 instruments from official sources (OHCHR, UNTC, legal.un.org, un.org, yogyakartaprinciples.org, venice.coe.int), pins them by SHA-256 in `sources.lock.json`, and writes verbatim provisions: 581 provisions, 1,907 citable IDs.
+    - The Genocide Convention's only reachable source is an OCR'd UNTC scan, so its text is `benchmark/manual/genocide-en.txt`, corrected line by line against the page images.
+    - The Rome Statute is the 2002 corrected text; the 2010/2017/2019 amendments are not included (the ICC site blocks scripted downloads).
+    - Persian: no clean source was reachable. The OHCHR Persian UDHR PDF is image-only and OCR was too poor to publish, so `fa_status: pending` and the site links to the official PDF.
+  - 1.2: `/check-sync` and `/receive` now need `SHARED_SECRET`. New public `/api/check` has a per-IP rate limit (5/min), optional Turnstile, and a KV cache keyed by text hash + rubric + benchmark + model. The prompt now names all 12 instruments.
+  - 1.4: site live at https://normalcy.is (and www, and normalcy.torkzabanarman.workers.dev), styled after Atlas. It uses Worker routes in front of the existing proxied DNS records; MX/SPF records untouched. KV namespace `worker-normalcy-cache`.
+  - Still needed from the user: `wrangler secret put ANTHROPIC_API_KEY` and `SHARED_SECRET`; optionally a Turnstile widget (site key in `wrangler.toml`, secret via `wrangler secret put TURNSTILE_SECRET`).
