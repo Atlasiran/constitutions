@@ -96,7 +96,7 @@ Atlasiran/Atlas-website            ← main site (AtlasIran.org)
 | Source PDFs | Plain git (no LFS; GitHub Pages can't serve LFS files) |
 | مرامنامه (coc) | Grouped with charters/programmes, **not** with bylaws |
 | Democratic Platform | Its own new Atlas entry (not listed as of 2026-09-24). The document is published and labelled «پیش‌نویس برای بررسی و تصویب» (`doc_status: draft`). **No PJAK link.** |
-| naoruz.com | Corpus only (one person's project, jurist Jahan Asadi). No Atlas entry. |
+| naoruz.com | Corpus only (one person's project, jurist Jahan Asadi). No Atlas entry. Only the constitution is a corpus document; the manifesto, English version, graphics and essays are linked companions. |
 | Model | `claude-opus-5` by default; Claude Sonnet 5 is an option for high-volume Gate 2 (the user's call) |
 | Scoring guide per kind | `audit-constitution` for constitution, constitution_proposal, charter, program, ideology, treatise (what the document promises for the country); `audit-org` for bylaws (internal democracy + Tier 2). Set by each guide's `applies_to` in normalcy `rubrics/*.json`. |
 | Audit segments | Articles when `articles.py` found them reliably (`seq_score` ≥ 0.5, mean article ≤ 4,000 chars), otherwise pages. Registry `pages` ranges are honoured. |
@@ -218,11 +218,13 @@ relations:
 ## 9. New documents: details
 
 **naoruz.com**
-- «قانون اساسی ایالات متحده ایران» ("Constitution of the United States of Iran"), a federal model by Jahan Asadi (جهان اسدی), 2026.
-- Main text (`kind: constitution_proposal`): `https://naoruz.com/wp-content/uploads/2026/07/قانون-اساسی-_3_.pdf` (the "3" is probably a version number).
-- Manifesto, a separate `charter` document: `.../2026/03/1_مانیفست-نوروز.pdf`.
-- Attachments, not split into articles: `4_گرافیک-_ساختار.pdf`, `دوران-گذار_گرافیک_2.pdf`, `7_پرچم-آینده-1.pdf`, `5_تاریخچه-بنیانگذاری-فدرالیزم-در-چند-کشور.pdf`, `مروری-بر-روند-تاریخی-قانون-اساسی-در-ایران_6.pdf`.
-- Check the URLs when downloading; they came from an automated page summary.
+- «قانون اساسی ایالات متحده ایران» ("Constitution of the United States of Iran"), a federal model by the jurist Jahan Asadi (جهان اسدی), 2026. Registry uid `naoruz-usi-2026`.
+- Main text (`kind: constitution_proposal`): `https://naoruz.com/wp-content/uploads/2026/07/قانون-اساسی-_3_.pdf`. The `_3_` is its number in the site's 7-file series, not a version. The PDF was made with "Microsoft Print to PDF", which leaves a broken text layer, so the corpus text is OCR.
+- Everything else is a **companion** of that one document (registry `companions`: title, role, URL). None is a separate corpus document:
+  - `1_مانیفست-نوروز.pdf` (2022, 30 pages): the author's commentary on his own draft, citing its articles, plus chapters on the transition and coalitions. As a `charter` it would sit in group C next to party programmes while mostly restating the constitution.
+  - `3_Constitution_USI_E_I.pdf`: the author's own English version (March 2026). Use it for this document's English text (1.1) instead of a translation of ours. Check it against the July Persian text first.
+  - Two graphics (transition, structure), the flag, and two history essays (federalism elsewhere; Iran's constitutional history).
+- German versions of all seven also exist on the site; not recorded.
 
 **Democratic Platform of Iran (پلتفرم دموکراتیک ایران)**
 - File: `local/_اساسنامه_و_نظام_سازمانی_و_منشور_سیاسی_پلتفرم_دموکراتیک_ایران.pdf`. 75 pages, a Word export, dated 2026-09-21.
@@ -281,7 +283,7 @@ Status values: ☐ to do · ◐ in progress · ☑ done
 ### Phase 4: new documents
 | # | Task | Status |
 |---|---|---|
-| 4.1 | naoruz: download, registry entries (proposal + charter + attachments), extract, rebuild | ☐ |
+| 4.1 | naoruz: download, registry entry (constitution; manifesto and attachments as companions), OCR, rebuild | ☑ `naoruz-usi-2026`, 202 articles; companions and `source_url` not yet shown on the site |
 | 4.2 | Democratic Platform: OCR/normalise, split into 3 documents, `doc_status: draft` | ☐ |
 | 4.3 | Democratic Platform: new Atlas org page, logo, OG image, `manifest` link, **no PJAK relation** | ☐ |
 
@@ -306,6 +308,9 @@ Status values: ☐ to do · ◐ in progress · ☑ done
 ## 11. Pitfalls
 
 - **Persian PDFs:** Word exports often have broken glyph mapping. Check the extracted text before splitting into articles; the OCR fallback is `pipeline/ocr.py`. A legacy font can map glyphs to *valid but wrong* Persian letters (Tabriz draft: «هرکس هطالعاتی تبریس»), which the letter check in `ocr.py` can't see. Check new documents by the share of their words found in at least two other documents (all good texts score ≥ 0.78; Tabriz scored 0.20), and force OCR with `ocr.py <uid>`.
+- **Page-level Tesseract drops whole lines** on clean typeset pages (up to a fifth of a page; e.g. the equal-pay line of the naoruz draft). Use `ocr.py --lines <uid>`: each text line is cut out and read on its own (psm 13), final «ی» is restored from the corpus vocabulary, and a stray «» read for «،» is fixed. Line mode doesn't work on scans with decorative frames or skew (Pars, Shajarian), and white-on-dark covers fall back to page mode (and may still come back empty).
+- **Tables of contents** list «اصل N title … page» rows that compete with the real headings in `articles.py`. Pages where most lines end in a number are skipped.
+- **Garbled heading numbers:** some fonts' digits are misread (Tabriz: ۴ → ۶/؛/ء/4, ۶ → 1/٩). `articles.py` numbers unread line-start headings in order only when exactly the missing count sits between two found ones, and marks them `n_inferred`. A block misread the same way (Tabriz 60–69 read as 10–19) is not fixable by rule; check by hand.
 - **Benchmark version** hashes the English text and IDs only, so adding Persian translations doesn't invalidate cached audits.
 - **Atlas base path:** the GitHub Pages build serves under `/Atlas-website`. Never hardcode absolute URLs in the constitutions module.
 - **Cloudflare Pages** only clones public submodules. Keep Atlas, constitutions and normalcy public, or change the deploy approach.
@@ -360,3 +365,9 @@ Status values: ☐ to do · ◐ in progress · ☑ done
   - Noticed while building: Atlas's committed `static/data/data.json` is stale for org 310 (logo and `manifest` → local PJAK PDF); the build regenerates it. Left out of the tab commit.
   - `majame-eslami-1382` has 1 extracted article, so it's hidden from the compare view (needs > 5), although it's one of the two documents linked to an Atlas org. Relevant for 5.2.
   - Pushed and merged (fast-forward) into Atlas `main` as `5ffde5f` with the user's go-ahead. GitHub Pages workflow passed; atlasiran.org/constitutions is live too.
+- **2026-09-25 (session 5):**
+  - 4.1: added `naoruz-usi-2026`, «قانون اساسی ایالات متحده ایران» by the jurist Jahan Asadi (naoruz.com, 2026; no organisation). Only the constitution is a corpus document; the manifesto, English version, graphics, essays and flag are `companions` of the registry entry (new field: `fa`, `en`, `role`, `url`). Its PDF has no usable text layer, so the text is OCR.
+  - Found that page-level OCR drops whole lines on typeset pages; added `ocr.py --lines` (see Pitfalls) and re-OCR'd naoruz, Green Jurists 1388, Majame and Tabriz with it. More text and fewer junk characters in all four; the Tabriz cover page kept its old OCR text.
+  - `articles.py`: skip table-of-contents pages; fill garbled/unmatched headings between found ones (`n_inferred`). Articles: naoruz 202; Green Jurists 111 → 153; Tabriz 130 (many were contents rows) → 95; Mashruteh texts, Bani-Sadr, the Left Socialists draft and others recover compound-ordinal articles («بیست و یکم», «سیم»); Majame 1 → 0 (its single "article" was spurious). Corpus: 35 documents, 3,843 articles in the site data.
+  - Still wrong: Tabriz heading numbers 60–69 and a few swaps need manual review; the scans (Pars, Shajarian) lose lines and Tesseract can't recover them. Hold their audits until fixed.
+  - `audit.py collect` now loads only documents with pending jobs (a new registry entry without text crashed it).
