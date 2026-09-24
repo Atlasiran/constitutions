@@ -204,7 +204,9 @@ def main():
     if cmd == "submit":
         submit(documents(uids), refresh)
     elif cmd == "collect":
-        collect({d["doc"]["id"]: d for d in documents(set())})
+        # only the documents still awaited, so a new registry entry without text can't block collection
+        pending = {uid for j in load_jobs() if not j.get("collected") for uid in j["docs"]}
+        collect({d["doc"]["id"]: d for d in documents(pending)} if pending else {})
     else:
         sys.exit(__doc__)
 
