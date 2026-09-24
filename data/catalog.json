@@ -716,10 +716,10 @@
   ],
   "source_pdf": "مرکز-مطالعاتی-تبریز-پیش-نویس-قانون-اساسی-جمهوری-فدرال-ایران ۲۰۱۸.pdf",
   "unit": "اص[سص]?ل",
-  "n_articles": 90,
+  "n_articles": 130,
   "n_pages": 81,
-  "confidence": 0.909,
-  "ocr": false
+  "confidence": 0.869,
+  "ocr": true
  },
  {
   "uid": "banisadr-constitution-1398",

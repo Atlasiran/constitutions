@@ -8,9 +8,9 @@ follows the document's kind (see normalcy's rubrics/*.json), so bylaws are never
 scored with the constitutional guide. normalcy answers repeated input from its
 cache and runs the rest through the Message Batches API.
 
-    NORMALCY_KEY=... .venv/bin/python pipeline/audit.py --dry-run   # segments and size only
-    NORMALCY_KEY=... .venv/bin/python pipeline/audit.py submit [uid ...]
-    NORMALCY_KEY=... .venv/bin/python pipeline/audit.py collect
+    .venv/bin/python pipeline/audit.py --dry-run          # segments and size only
+    .venv/bin/python pipeline/audit.py submit [uid ...]   # needs NORMALCY_KEY (env or local/normalcy.env)
+    .venv/bin/python pipeline/audit.py collect
 
 Results go to data/audits/<uid>.json with review.status "unreviewed": a verdict
 is published only after a reviewer signs it off.
@@ -33,10 +33,22 @@ MAX_BATCH_DOCS, MAX_BATCH_CHARS = 10, 1_500_000
 MAX_MEAN_ARTICLE = 4000  # longer "articles" mean the markers were missed: cite pages instead
 
 
-def api(method, path, body=None):
+def client_key():
+    """NORMALCY_KEY from the environment, else from local/normalcy.env (gitignored)."""
     key = os.environ.get("NORMALCY_KEY")
+    path = os.path.join(ROOT, "local", "normalcy.env")
+    if not key and os.path.exists(path):
+        for line in open(path, encoding="utf-8"):
+            if line.startswith("NORMALCY_KEY="):
+                key = line.split("=", 1)[1].strip()
     if not key:
-        sys.exit("NORMALCY_KEY is not set (the constitutions client key for normalcy /v1)")
+        sys.exit("NORMALCY_KEY is not set (the constitutions client key for normalcy /v1; "
+                 "export it or put NORMALCY_KEY=... in local/normalcy.env)")
+    return key
+
+
+def api(method, path, body=None):
+    key = client_key()
     req = urllib.request.Request(
         API + path, method=method,
         data=json.dumps(body, ensure_ascii=False).encode() if body is not None else None,

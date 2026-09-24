@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""OCR the scanned + legacy-font PDFs back into clean Persian text."""
+"""OCR the scanned + legacy-font PDFs back into clean Persian text.
+
+    ocr.py              # every document whose text fails the letter check
+    ocr.py <uid> ...    # these documents, regardless of the check
+"""
 import json, glob, os, re, subprocess, sys, tempfile, shutil
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -21,7 +25,17 @@ def needs_ocr(path):
     if len(nz) < 500: return True
     return len(OK.findall(nz)) / len(nz) < 0.55
 
-targets = [p for p in sorted(glob.glob(os.path.join(TEXT, "*.json"))) if needs_ocr(p)]
+# Named documents (registry uid or text slug) are OCR'd regardless of the check:
+# a legacy font with a wrong glyph map yields valid Persian letters in the wrong
+# places, which the letter check cannot see.
+force = sys.argv[1:]
+if force:
+    reg = {d["uid"]: d["legacy_slug"] for d in json.load(open(os.path.join(ROOT, "data/registry.json"), encoding="utf-8"))}
+    targets = [os.path.join(TEXT, reg.get(a, a) + ".json") for a in force]
+    missing = [t for t in targets if not os.path.exists(t)]
+    if missing: sys.exit(f"no text for: {missing}")
+else:
+    targets = [p for p in sorted(glob.glob(os.path.join(TEXT, "*.json"))) if needs_ocr(p)]
 print(f"{len(targets)} documents need OCR", flush=True)
 
 for jp in targets:

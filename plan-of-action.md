@@ -264,9 +264,9 @@ Status values: ☐ to do · ◐ in progress · ☑ done
 ### Phase 2: normalcy API
 | # | Task | Status |
 |---|---|---|
-| 2.1 | Result cache (D1/KV) keyed by content hash | ◐ KV, in normalcy `ee7d768`; not deployed |
-| 2.2 | `/v1/audit` through the Batch API; relevant-provision selection; cached prefix; citation check | ◐ in `ee7d768`, tested locally up to the Anthropic call; not deployed |
-| 2.3 | `/v1/instruments`, `/v1/provisions`; API keys per client; `/v1/check` off for Jomhoor | ◐ in `ee7d768`; needs `API_KEYS` secret + deploy |
+| 2.1 | Result cache (D1/KV) keyed by content hash | ☑ KV; deployed |
+| 2.2 | `/v1/audit` through the Batch API; relevant-provision selection; cached prefix; citation check | ◐ deployed; first real batch pending the `API_KEYS` secret |
+| 2.3 | `/v1/instruments`, `/v1/provisions`; API keys per client; `/v1/check` off for Jomhoor | ◐ deployed; user to set `API_KEYS` (only a `constitutions` key: Atlas reads committed JSON and needs none) |
 | 2.4 | Three scoring guides: gate2-post, audit-constitution, audit-org | ☑ |
 
 ### Phase 3: constitutions tab in Atlas
@@ -304,7 +304,8 @@ Status values: ☐ to do · ◐ in progress · ☑ done
 
 ## 11. Pitfalls
 
-- **Persian PDFs:** Word exports often have broken glyph mapping. Check the extracted text before splitting into articles; the OCR fallback is `pipeline/ocr.py`.
+- **Persian PDFs:** Word exports often have broken glyph mapping. Check the extracted text before splitting into articles; the OCR fallback is `pipeline/ocr.py`. A legacy font can map glyphs to *valid but wrong* Persian letters (Tabriz draft: «هرکس هطالعاتی تبریس»), which the letter check in `ocr.py` can't see. Check new documents by the share of their words found in at least two other documents (all good texts score ≥ 0.78; Tabriz scored 0.20), and force OCR with `ocr.py <uid>`.
+- **Benchmark version** hashes the English text and IDs only, so adding Persian translations doesn't invalidate cached audits.
 - **Atlas base path:** the GitHub Pages build serves under `/Atlas-website`. Never hardcode absolute URLs in the constitutions module.
 - **Cloudflare Pages** only clones public submodules. Keep Atlas, constitutions and normalcy public, or change the deploy approach.
 - **Claude API:** use `output_config.format` for JSON (not prefill; prefill returns 400 on current models). Check `stop_reason` before reading content. Stream when `max_tokens` is over about 16K. `fallbacks` isn't supported on the Batches API, so handle `refusal` results per item there.
@@ -346,3 +347,7 @@ Status values: ☐ to do · ◐ in progress · ☑ done
     - `/v1/instruments`, `/v1/provisions/{id}`, `/v1/rubrics` public with CORS; `/v1/check` answers 503 until `GATE2_ENABLED`.
   - constitutions: `pipeline/audit.py` (`--dry-run`, `submit`, `collect`). The corpus is 34 documents / 3.05M chars; 8 documents are cited by page because their article split is unreliable (e.g. cpi-mlm: 6 "articles", 275K chars). Submodule `vendor/normalcy` bumped to `ee7d768`.
   - To go live: push normalcy, `wrangler secret put API_KEYS`, deploy, then `NORMALCY_KEY=… pipeline/audit.py submit`. Estimated cost for the whole corpus at batch prices: roughly $10–20.
+- **2026-09-24 (session 4, continued):**
+  - Persian translations are not needed before auditing: the model reads the authoritative English, and translations are display text. The benchmark version now hashes English text + IDs only (normalcy `f677ded`; new version `f04ecff03b434da0`), so adding translations later won't invalidate audits.
+  - OCR/text quality check (word coverage across the corpus): 32 of 33 distinct texts are usable. The OCR'd ones have scattered character errors but read fine. `tabriz-federal-2018` was garbage from a legacy font's wrong glyph map; it was re-OCR'd (`ocr.py` now takes explicit uids) and is now 131 clean articles. Downstream data rebuilt; only Tabriz changed.
+  - normalcy pushed (`c7176ba`) and deployed (version `ca10da72`). Setting the `API_KEYS` secret was blocked for the agent; the user sets it. `audit.py` reads `NORMALCY_KEY` from the environment or `local/normalcy.env`.
