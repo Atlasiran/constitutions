@@ -79,7 +79,8 @@
 
 /* ---------- charts ---------- */
 .qa-root .chart{width:100%;overflow-x:auto}
-.qa-root .chart svg{display:block;max-width:100%;height:auto}
+/* coordinates are computed per language; keep SVG text-anchor unflipped under dir=rtl */
+.qa-root .chart svg{display:block;max-width:100%;height:auto;direction:ltr}
 .qa-root .gridline{stroke:var(--line);stroke-width:1}
 .qa-root .axis-t{fill:var(--ink-3);font-size:10.5px;font-family:var(--f-mono)}
 .qa-root .lane-t{fill:var(--ink-2);font-size:11.5px;font-weight:600}
