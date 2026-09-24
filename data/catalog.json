@@ -51,9 +51,9 @@
   "note": "Filename says ۱۲۵۸; the document's own text gives ۱۳۲۴ ه.ق. = ۱۲۸۵ ش. = 1906 CE. Byte-identical duplicate of the file labelled ۱۳۳۴.",
   "source_pdf": "قانون اساسی مشروطه ۱۲۵۸.pdf",
   "unit": "اص[سص]?ل",
-  "n_articles": 129,
+  "n_articles": 163,
   "n_pages": 15,
-  "confidence": 0.829,
+  "confidence": 0.656,
   "ocr": false
  },
  {
@@ -81,9 +81,9 @@
   "note": "Byte-identical (md5 c453887f…) to قانون اساسی مشروطه ۱۲۵۸.pdf.",
   "source_pdf": "قانون اساسی مشروطه ۱۳۳۴.pdf",
   "unit": "اص[سص]?ل",
-  "n_articles": 129,
+  "n_articles": 163,
   "n_pages": 15,
-  "confidence": 0.829,
+  "confidence": 0.656,
   "ocr": false
  },
  {
@@ -110,9 +110,9 @@
   ],
   "source_pdf": "متمم قانون اساسی مشروطه ۱۲۸۶.pdf",
   "unit": "اص[سص]?ل",
-  "n_articles": 84,
+  "n_articles": 104,
   "n_pages": 9,
-  "confidence": 0.785,
+  "confidence": 0.972,
   "ocr": false
  },
  {
@@ -197,9 +197,9 @@
   ],
   "source_pdf": "طرح-پیش‌نویس-قانون-اساسی-جمهوری-فدرال-ایران-شورای-موقت-سوسیالیست‌های-چپ-ایران ۱۳۸۱.pdf",
   "unit": "اص[سص]?ل",
-  "n_articles": 153,
+  "n_articles": 160,
   "n_pages": 63,
-  "confidence": 0.961,
+  "confidence": 0.919,
   "ocr": true
  },
  {
@@ -227,9 +227,9 @@
   ],
   "source_pdf": "نظام پیشنهادی برای آینده ایران، طرح پیشنهادی مجامع اسلامی ایرانیان ۱۳۸۲.pdf",
   "unit": "اص[سص]?ل",
-  "n_articles": 1,
+  "n_articles": 0,
   "n_pages": 29,
-  "confidence": 0.143,
+  "confidence": 0.0,
   "ocr": true
  },
  {
@@ -255,9 +255,9 @@
   ],
   "source_pdf": "پیش نویس قانون اساسی جمهوری مشروطه ایران، سازمان پارس و شورای براندازی ۱۳۸۳.pdf",
   "unit": "اص[سص]?ل",
-  "n_articles": 54,
+  "n_articles": 60,
   "n_pages": 25,
-  "confidence": 0.283,
+  "confidence": 0.314,
   "ocr": true
  },
  {
@@ -312,9 +312,9 @@
   ],
   "source_pdf": "قانون اساسی پیشنهادی ایران-حقوق بنیادین مردم ایران-اندیشگاه ملی ایرانیان-هوشنگ آریان‌پور ۱۳۸۷.pdf",
   "unit": "اص[سص]?ل",
-  "n_articles": 140,
+  "n_articles": 162,
   "n_pages": 34,
-  "confidence": 0.859,
+  "confidence": 0.994,
   "ocr": false
  },
  {
@@ -401,9 +401,9 @@
   "rev": 1,
   "source_pdf": "قانون اساسی نوین - حقوقدانان سبز ۱۳۸۸.pdf",
   "unit": "اص[سص]?ل",
-  "n_articles": 111,
+  "n_articles": 153,
   "n_pages": 36,
-  "confidence": 0.721,
+  "confidence": 0.994,
   "ocr": true
  },
  {
@@ -428,9 +428,9 @@
   ],
   "source_pdf": "پیشنهاد_پیش_نویس_قانون_اساسی-  امیرحسین جهانشاهی ۱۳۹۰.pdf",
   "unit": "اص[سص]?ل",
-  "n_articles": 48,
+  "n_articles": 49,
   "n_pages": 8,
-  "confidence": 0.98,
+  "confidence": 1.0,
   "ocr": false
  },
  {
@@ -486,9 +486,9 @@
   "rev": 3,
   "source_pdf": "قانون اساسی نوین ایران-نگارش سوم-حقوق‌دانان سبز-۱۳۹۶.pdf",
   "unit": "اص[سص]?ل",
-  "n_articles": 132,
+  "n_articles": 153,
   "n_pages": 37,
-  "confidence": 0.857,
+  "confidence": 0.994,
   "ocr": false
  },
  {
@@ -542,9 +542,9 @@
   ],
   "source_pdf": "قانون اساسی جمهوری سکولار دموکراتیک ایران آینده - نیره انصاری ۱۳۹۷.pdf",
   "unit": "اص[سص]?ل",
-  "n_articles": 55,
+  "n_articles": 65,
   "n_pages": 19,
-  "confidence": 0.786,
+  "confidence": 0.929,
   "ocr": false
  },
  {
@@ -570,9 +570,9 @@
   ],
   "source_pdf": "حقوق پنج گانه (اصول قانون اساسی)-ابولحسن بنی‌صدر ۱۳۹۷.pdf",
   "unit": "اص[سص]?ل",
-  "n_articles": 190,
+  "n_articles": 225,
   "n_pages": 184,
-  "confidence": 0.815,
+  "confidence": 0.966,
   "ocr": false
  },
  {
@@ -658,9 +658,9 @@
   ],
   "source_pdf": "ایران فردا - ده ماده‌، (حقوق و آزادی‌ها) - مریم رجوی ۱۳۹۷ .pdf",
   "unit": "ماد[هدة]",
-  "n_articles": 7,
+  "n_articles": 8,
   "n_pages": 63,
-  "confidence": 0.7,
+  "confidence": 0.8,
   "ocr": false
  },
  {
@@ -687,9 +687,9 @@
   ],
   "source_pdf": "حزب-پان-ایرانیست-قانون-اساسی-پیشنهادی۱۳۹۷.pdf",
   "unit": "اص[سص]?ل",
-  "n_articles": 217,
+  "n_articles": 218,
   "n_pages": 34,
-  "confidence": 0.995,
+  "confidence": 1.0,
   "ocr": false
  },
  {
@@ -716,9 +716,9 @@
   ],
   "source_pdf": "مرکز-مطالعاتی-تبریز-پیش-نویس-قانون-اساسی-جمهوری-فدرال-ایران ۲۰۱۸.pdf",
   "unit": "اص[سص]?ل",
-  "n_articles": 130,
+  "n_articles": 95,
   "n_pages": 81,
-  "confidence": 0.869,
+  "confidence": 0.841,
   "ocr": true
  },
  {
@@ -744,9 +744,9 @@
   ],
   "source_pdf": "قانون اساسی براساس حقوق پنج گانه - ابولحسن بنی‌صدر ۱۳۹۸.pdf",
   "unit": "اص[سص]?ل",
-  "n_articles": 435,
+  "n_articles": 526,
   "n_pages": 379,
-  "confidence": 0.877,
+  "confidence": 0.943,
   "ocr": false
  },
  {
@@ -862,9 +862,83 @@
   "note": "Attribution stated as 'منتسب' (attributed) in the source; provenance unverified.",
   "source_pdf": "طرح قانون اساسی انتقالی، منتسب به محمدرضا شجریان و همراهان ۱۳۹۹.pdf",
   "unit": "ماد[هدة]",
-  "n_articles": 46,
+  "n_articles": 57,
   "n_pages": 14,
-  "confidence": 0.793,
+  "confidence": 0.983,
+  "ocr": true
+ },
+ {
+  "uid": "naoruz-usi-2026",
+  "collection": "iran-drafts",
+  "status": "active",
+  "fa": "قانون اساسی ایالات متحده ایران",
+  "en": "Constitution of the United States of Iran",
+  "author_fa": "جهان اسدی",
+  "author_en": "Jahan Asadi",
+  "year": 2026,
+  "era": "۲۰۲۶",
+  "type": "draft",
+  "kind": "constitution_proposal",
+  "org_ids": [],
+  "pages": null,
+  "doc_status": "draft",
+  "source_url": "https://naoruz.com/wp-content/uploads/2026/07/قانون-اساسی-_3_.pdf",
+  "version": "1",
+  "tags": [
+   "republic",
+   "federal",
+   "secular"
+  ],
+  "companions": [
+   {
+    "fa": "مانیفست نوروز",
+    "en": "Naoruz Manifesto",
+    "role": "commentary",
+    "url": "https://naoruz.com/wp-content/uploads/2026/03/1_مانیفست-نوروز.pdf"
+   },
+   {
+    "fa": "قانون اساسی ایالات متحده ایران (انگلیسی)",
+    "en": "Constitution of the United States of Iran (English, by the author)",
+    "role": "translation",
+    "url": "https://naoruz.com/wp-content/uploads/2026/03/3_Constitution_USI_E_I.pdf"
+   },
+   {
+    "fa": "دوران گذار (گرافیک)",
+    "en": "Transition process (graphic)",
+    "role": "graphic",
+    "url": "https://naoruz.com/wp-content/uploads/2026/03/دوران-گذار_گرافیک_2.pdf"
+   },
+   {
+    "fa": "ساختار ایالات متحده ایران (گرافیک)",
+    "en": "Structure of the USI (graphic)",
+    "role": "graphic",
+    "url": "https://naoruz.com/wp-content/uploads/2026/03/4_گرافیک-_ساختار.pdf"
+   },
+   {
+    "fa": "تاریخچه بنیانگذاری فدرالیزم در چند کشور",
+    "en": "Emergence of federalism in several countries",
+    "role": "essay",
+    "url": "https://naoruz.com/wp-content/uploads/2026/03/5_تاریخچه-بنیانگذاری-فدرالیزم-در-چند-کشور.pdf"
+   },
+   {
+    "fa": "مروری بر روند تاریخی قانون اساسی در ایران",
+    "en": "Analysis of Iran's constitutional laws",
+    "role": "essay",
+    "url": "https://naoruz.com/wp-content/uploads/2026/03/مروری-بر-روند-تاریخی-قانون-اساسی-در-ایران_6.pdf"
+   },
+   {
+    "fa": "پرچم آینده",
+    "en": "Future flag",
+    "role": "graphic",
+    "url": "https://naoruz.com/wp-content/uploads/2026/03/7_پرچم-آینده-1.pdf"
+   }
+  ],
+  "note": "Individual project of the jurist Jahan Asadi (naoruz.com); no organisation. Source PDF was printed without a usable text layer, so the text is OCR.",
+  "source_pdf": "قانون اساسی ایالات متحده ایران - جهان اسدی ۲۰۲۶.pdf",
+  "unit": "اص[سص]?ل",
+  "n_articles": 202,
+  "n_pages": 48,
+  "confidence": 1.0,
   "ocr": true
  },
  {

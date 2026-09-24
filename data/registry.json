@@ -832,5 +832,75 @@
   "tags": [
    "republic"
   ]
+ },
+ {
+  "uid": "naoruz-usi-2026",
+  "collection": "iran-drafts",
+  "status": "active",
+  "source": "قانون اساسی ایالات متحده ایران - جهان اسدی ۲۰۲۶.pdf",
+  "legacy_slug": "قانون_اساسی_ایالات_متحده_ایران_جهان_اسدی_۲۰۲۶",
+  "fa": "قانون اساسی ایالات متحده ایران",
+  "en": "Constitution of the United States of Iran",
+  "author_fa": "جهان اسدی",
+  "author_en": "Jahan Asadi",
+  "year": 2026,
+  "era": "۲۰۲۶",
+  "type": "draft",
+  "kind": "constitution_proposal",
+  "org_ids": [],
+  "pages": null,
+  "doc_status": "draft",
+  "source_url": "https://naoruz.com/wp-content/uploads/2026/07/قانون-اساسی-_3_.pdf",
+  "version": "1",
+  "tags": [
+   "republic",
+   "federal",
+   "secular"
+  ],
+  "companions": [
+   {
+    "fa": "مانیفست نوروز",
+    "en": "Naoruz Manifesto",
+    "role": "commentary",
+    "url": "https://naoruz.com/wp-content/uploads/2026/03/1_مانیفست-نوروز.pdf"
+   },
+   {
+    "fa": "قانون اساسی ایالات متحده ایران (انگلیسی)",
+    "en": "Constitution of the United States of Iran (English, by the author)",
+    "role": "translation",
+    "url": "https://naoruz.com/wp-content/uploads/2026/03/3_Constitution_USI_E_I.pdf"
+   },
+   {
+    "fa": "دوران گذار (گرافیک)",
+    "en": "Transition process (graphic)",
+    "role": "graphic",
+    "url": "https://naoruz.com/wp-content/uploads/2026/03/دوران-گذار_گرافیک_2.pdf"
+   },
+   {
+    "fa": "ساختار ایالات متحده ایران (گرافیک)",
+    "en": "Structure of the USI (graphic)",
+    "role": "graphic",
+    "url": "https://naoruz.com/wp-content/uploads/2026/03/4_گرافیک-_ساختار.pdf"
+   },
+   {
+    "fa": "تاریخچه بنیانگذاری فدرالیزم در چند کشور",
+    "en": "Emergence of federalism in several countries",
+    "role": "essay",
+    "url": "https://naoruz.com/wp-content/uploads/2026/03/5_تاریخچه-بنیانگذاری-فدرالیزم-در-چند-کشور.pdf"
+   },
+   {
+    "fa": "مروری بر روند تاریخی قانون اساسی در ایران",
+    "en": "Analysis of Iran's constitutional laws",
+    "role": "essay",
+    "url": "https://naoruz.com/wp-content/uploads/2026/03/مروری-بر-روند-تاریخی-قانون-اساسی-در-ایران_6.pdf"
+   },
+   {
+    "fa": "پرچم آینده",
+    "en": "Future flag",
+    "role": "graphic",
+    "url": "https://naoruz.com/wp-content/uploads/2026/03/7_پرچم-آینده-1.pdf"
+   }
+  ],
+  "note": "Individual project of the jurist Jahan Asadi (naoruz.com); no organisation. Source PDF was printed without a usable text layer, so the text is OCR."
  }
 ]
