@@ -97,6 +97,8 @@ Atlasiran/Atlas-website            ← main site (AtlasIran.org)
 | Democratic Platform | Its own new Atlas entry (not listed as of 2026-09-24). The document is published and labelled «پیش‌نویس برای بررسی و تصویب» (`doc_status: draft`). **No PJAK link.** |
 | naoruz.com | Corpus only (one person's project, jurist Jahan Asadi). No Atlas entry. |
 | Model | `claude-opus-5` by default; Claude Sonnet 5 is an option for high-volume Gate 2 (the user's call) |
+| Scoring guide per kind | `audit-constitution` for constitution, constitution_proposal, charter, program, ideology, treatise (what the document promises for the country); `audit-org` for bylaws (internal democracy + Tier 2). Set by each guide's `applies_to` in normalcy `rubrics/*.json`. |
+| Audit segments | Articles when `articles.py` found them reliably (`seq_score` ≥ 0.5, mean article ≤ 4,000 chars), otherwise pages. Registry `pages` ranges are honoured. |
 
 ---
 
@@ -257,15 +259,15 @@ Status values: ☐ to do · ◐ in progress · ☑ done
 | 1.1 | Store the Tier 1 + Tier 2 texts as provision JSON (English + Persian, with sources) | ◐ English done (15 instruments, 1,907 IDs); Persian pending |
 | 1.2 | Lock down `/check-sync` (Turnstile, rate limit); make the README and prompt agree on the 12 sources | ◐ done except Turnstile keys (code ready, not configured) |
 | 1.3 | Commit a `wrangler.toml` without secrets, with the normalcy.is route | ☑ |
-| 1.4 | Demo site: benchmark library, try-a-text checker, showcase audits; deploy to normalcy.is *(ask before deploying)* | ◐ live; checker waits for `ANTHROPIC_API_KEY`; no audits yet |
+| 1.4 | Demo site: benchmark library, try-a-text checker, showcase audits; deploy to normalcy.is *(ask before deploying)* | ◐ live; checker verified live; showcase audits wait on the first corpus audit (5.4) |
 
 ### Phase 2: normalcy API
 | # | Task | Status |
 |---|---|---|
-| 2.1 | Result cache (D1/KV) keyed by content hash | ☐ |
-| 2.2 | `/v1/audit` through the Batch API; relevant-provision selection; cached prefix; citation check | ☐ |
-| 2.3 | `/v1/instruments`, `/v1/provisions`; API keys per client; `/v1/check` off for Jomhoor | ☐ |
-| 2.4 | Three scoring guides: gate2-post, audit-constitution, audit-org | ☐ |
+| 2.1 | Result cache (D1/KV) keyed by content hash | ◐ KV, in normalcy `ee7d768`; not deployed |
+| 2.2 | `/v1/audit` through the Batch API; relevant-provision selection; cached prefix; citation check | ◐ in `ee7d768`, tested locally up to the Anthropic call; not deployed |
+| 2.3 | `/v1/instruments`, `/v1/provisions`; API keys per client; `/v1/check` off for Jomhoor | ◐ in `ee7d768`; needs `API_KEYS` secret + deploy |
+| 2.4 | Three scoring guides: gate2-post, audit-constitution, audit-org | ☑ |
 
 ### Phase 3: constitutions tab in Atlas
 | # | Task | Status |
@@ -288,7 +290,7 @@ Status values: ☐ to do · ◐ in progress · ☑ done
 | 5.1 | Compare view limited to one comparison group; deep-link parameters | ☐ |
 | 5.2 | «مقایسه اساسنامه» / «مقایسه منشور» ("compare bylaws" / "compare charter") button on `/op/[page]`, shown only when a comparable document exists | ☐ |
 | 5.3 | Ingest the PJAK PDF from Atlas `static/docs/`; harvest the 104 `manifest`/`coc` links (download → classify → extract → link to organisation, with review) | ☐ |
-| 5.4 | Benchmark audit through the batch pipeline; rights matrix with citations; methodology page; review workflow | ☐ |
+| 5.4 | Benchmark audit through the batch pipeline; rights matrix with citations; methodology page; review workflow | ◐ `pipeline/audit.py` (submit/collect → `data/audits/<uid>.json`, review status `unreviewed`); first run pending |
 
 ### Phase 6: Atlas connections
 | # | Task | Status |
@@ -336,3 +338,11 @@ Status values: ☐ to do · ◐ in progress · ☑ done
   - 1.2: `/check-sync` and `/receive` now need `SHARED_SECRET`. New public `/api/check` has a per-IP rate limit (5/min), optional Turnstile, and a KV cache keyed by text hash + rubric + benchmark + model. The prompt now names all 12 instruments.
   - 1.4: site live at https://normalcy.is (and www, and normalcy.torkzabanarman.workers.dev), styled after Atlas. It uses Worker routes in front of the existing proxied DNS records; MX/SPF records untouched. KV namespace `worker-normalcy-cache`.
   - Still needed from the user: `wrangler secret put ANTHROPIC_API_KEY` and `SHARED_SECRET`; optionally a Turnstile widget (site key in `wrangler.toml`, secret via `wrangler secret put TURNSTILE_SECRET`).
+- **2026-09-24 (session 4):**
+  - The user set `ANTHROPIC_API_KEY` and `SHARED_SECRET`. Live check on normalcy.is works (Opus 5, ~7.5 s, verdict with article citations). Small quirk: one reason contained a literal `\u2014` escape from the model's JSON.
+  - Phase 2 in normalcy `ee7d768` (committed, not pushed or deployed):
+    - `rubrics/audit-constitution.json` (31 rights) and `rubrics/audit-org.json` (14 items with Tier 2), each right tied to the provision IDs it rests on. `benchmark/rubrics.py` validates every ID, renders the cited articles verbatim (97 articles, ~85K chars for the constitutional guide) and versions each guide by content hash.
+    - `/v1/audit`: KV cache by content + guide version + benchmark version + model; misses go to one Message Batch; the guide's benchmark block is a `cache_control` prefix (1 h TTL); strict JSON schema with every right required. On collection, unknown provision/segment IDs reject that verdict; quotes are checked against the document (Persian letter variants folded) and flagged if missing. Refusals and other stop reasons fail the item (`fallbacks` isn't available on Batches).
+    - `/v1/instruments`, `/v1/provisions/{id}`, `/v1/rubrics` public with CORS; `/v1/check` answers 503 until `GATE2_ENABLED`.
+  - constitutions: `pipeline/audit.py` (`--dry-run`, `submit`, `collect`). The corpus is 34 documents / 3.05M chars; 8 documents are cited by page because their article split is unreliable (e.g. cpi-mlm: 6 "articles", 275K chars). Submodule `vendor/normalcy` bumped to `ee7d768`.
+  - To go live: push normalcy, `wrangler secret put API_KEYS`, deploy, then `NORMALCY_KEY=… pipeline/audit.py submit`. Estimated cost for the whole corpus at batch prices: roughly $10–20.
