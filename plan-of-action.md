@@ -275,8 +275,8 @@ Status values: ☐ to do · ◐ in progress · ☑ done
 |---|---|---|
 | 3.1 | Refactor the site into `app.js` + `mount()`, add `atlas-theme.css`, scope CSS under `.qa-root`, Persian default | ☑ `0f8c94f`…`affa214` |
 | 3.2 | Build step producing `dist/` + `org-index.json` | ☑ `pipeline/build_module.py [--out DIR]` (stdlib; Atlas runs it from the submodule) |
-| 3.3 | Atlas: submodule at `modules/constitutions`, copy step before build, `/constitutions` route, «اسناد بنیادین» nav entry, prerender entries | ◐ Atlas branch `constitutions-tab` (`64d33b6`), local only; assets go to `static/modules/constitutions/` (not `static/constitutions/`, which would collide with the `/constitutions` page) |
-| 3.4 | CI `submodules: recursive`; Cloudflare nested submodules; test under base `/Atlas-website` | ◐ CI updated; static build tested under `/Atlas-website` with headless Chrome; Cloudflare Pages build (needs python3 + submodules) untested |
+| 3.3 | Atlas: submodule at `modules/constitutions`, copy step before build, `/constitutions` route, «اسناد بنیادین» nav entry, prerender entries | ☑ Atlas `5ffde5f` on main; assets go to `static/modules/constitutions/` (not `static/constitutions/`, which would collide with the `/constitutions` page) |
+| 3.4 | CI `submodules: recursive`; Cloudflare nested submodules; test under base `/Atlas-website` | ☑ live on atlasiran.org (Cloudflare) and atlasiran.github.io/Atlas-website (Pages); both checked headless |
 
 ### Phase 4: new documents
 | # | Task | Status |
@@ -359,3 +359,4 @@ Status values: ☐ to do · ◐ in progress · ☑ done
   - Atlas branch `constitutions-tab`: submodule, `/constitutions` route, nav entry, build step, prerender entry, CI `submodules: recursive`. Built with `ADAPTER=static` and checked headless under `/Atlas-website/` (nav link, table of 34 documents, compare deep link, dark mode).
   - Noticed while building: Atlas's committed `static/data/data.json` is stale for org 310 (logo and `manifest` → local PJAK PDF); the build regenerates it. Left out of the tab commit.
   - `majame-eslami-1382` has 1 extracted article, so it's hidden from the compare view (needs > 5), although it's one of the two documents linked to an Atlas org. Relevant for 5.2.
+  - Pushed and merged (fast-forward) into Atlas `main` as `5ffde5f` with the user's go-ahead. GitHub Pages workflow passed; atlasiran.org/constitutions is live too.
