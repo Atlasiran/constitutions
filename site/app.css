@@ -1,0 +1,153 @@
+/* Qanun Atlas. Every rule is scoped under .qa-root so the module can sit inside
+   another site (Atlas) without leaking styles either way. Theme: data-theme on
+   .qa-root ("light"/"dark"); without it, the OS preference applies. */
+.qa-root{
+  color-scheme:light;
+  --ground:#f3f4f7; --surface:#fff; --surface-2:#fafbfc;
+  --ink:#12161d; --ink-2:#4d5766; --ink-3:#78818f;
+  --line:#dde1e8; --line-2:#eef0f4;
+  --accent:#1e4fa3; --accent-soft:#e8eefb;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a;
+  --shadow:0 1px 2px rgba(18,22,29,.06),0 8px 24px -12px rgba(18,22,29,.14);
+  --f-display:"Newsreader",Georgia,"Times New Roman",serif;
+  --f-ui:"Vazirmatn",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --f-mono:ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){.qa-root:not([data-theme="light"]){
+  color-scheme:dark;
+  --ground:#0d1016; --surface:#151922; --surface-2:#1b202a;
+  --ink:#e8ebf1; --ink-2:#9aa4b4; --ink-3:#6f7889;
+  --line:#242a35; --line-2:#1d222c;
+  --accent:#7ea6ff; --accent-soft:#1a2740;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+}}
+.qa-root[data-theme="dark"]{
+  color-scheme:dark;
+  --ground:#0d1016; --surface:#151922; --surface-2:#1b202a;
+  --ink:#e8ebf1; --ink-2:#9aa4b4; --ink-3:#6f7889;
+  --line:#242a35; --line-2:#1d222c;
+  --accent:#7ea6ff; --accent-soft:#1a2740;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+}
+.qa-root,.qa-root *{box-sizing:border-box}
+.qa-root{background:var(--ground);color:var(--ink);font-family:var(--f-ui);
+  font-size:14px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.qa-root h1,.qa-root h2,.qa-root h3{margin:0;font-weight:600;text-wrap:balance}
+.qa-root button,.qa-root select,.qa-root input{font:inherit;color:inherit}
+.qa-root :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+@media (prefers-reduced-motion:reduce){.qa-root *{animation:none!important;transition:none!important}}
+
+/* ---------- chrome ---------- */
+.qa-root .hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:color-mix(in srgb,var(--surface) 88%,transparent);
+  backdrop-filter:blur(12px);border-block-end:1px solid var(--line)}
+.qa-root.qa-embedded .hdr{position:static;backdrop-filter:none;background:var(--surface);
+  border:1px solid var(--line);border-radius:13px}
+.qa-root .hdr-in{max-width:1280px;margin-inline:auto;padding-inline:16px;padding-block:10px;
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.qa-root .brand{display:flex;align-items:baseline;gap:9px;margin-inline-end:auto}
+.qa-root .brand b{font-family:var(--f-display);font-size:20px;font-weight:600;letter-spacing:-.01em}
+.qa-root .brand span{font-size:11.5px;color:var(--ink-3);letter-spacing:.06em;text-transform:uppercase}
+.qa-root .tabs{display:flex;gap:2px;background:var(--surface-2);padding:3px;border-radius:9px;border:1px solid var(--line)}
+.qa-root .tabs button{border:0;background:transparent;padding:6px 13px;border-radius:6px;cursor:pointer;
+  color:var(--ink-2);font-size:13px;font-weight:500;white-space:nowrap}
+.qa-root .tabs button[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+.qa-root .ghost{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:6px 11px;
+  cursor:pointer;font-size:12.5px;color:var(--ink-2)}
+.qa-root .ghost:hover{color:var(--ink);border-color:var(--ink-3)}
+
+.qa-root .qa-main{max-width:1280px;margin-inline:auto;padding-inline:16px;padding-block:22px 64px}
+.qa-root.qa-embedded .qa-main{padding-inline:0}
+.qa-root .view[hidden]{display:none!important}
+.qa-root .lede{font-family:var(--f-display);font-size:16.5px;line-height:1.6;color:var(--ink-2);
+  max-width:64ch;margin-block:0 22px}
+.qa-root .lede em{color:var(--ink);font-style:italic}
+
+/* ---------- panels ---------- */
+.qa-root .panel{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px;margin-block-end:18px}
+.qa-root .panel > h2{font-family:var(--f-display);font-size:17px;margin-block-end:3px}
+.qa-root .panel > .sub{color:var(--ink-3);font-size:12.5px;margin-block-end:16px}
+.qa-root .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+
+/* ---------- legend ---------- */
+.qa-root .legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12.5px;color:var(--ink-2);margin-block-end:12px}
+.qa-root .legend i{width:9px;height:9px;border-radius:50%;display:inline-block;margin-inline-end:6px;vertical-align:baseline}
+
+/* ---------- charts ---------- */
+.qa-root .chart{width:100%;overflow-x:auto}
+.qa-root .chart svg{display:block;max-width:100%;height:auto}
+.qa-root .gridline{stroke:var(--line);stroke-width:1}
+.qa-root .axis-t{fill:var(--ink-3);font-size:10.5px;font-family:var(--f-mono)}
+.qa-root .lane-t{fill:var(--ink-2);font-size:11.5px;font-weight:600}
+.qa-root .node{cursor:pointer;stroke:var(--surface);stroke-width:2}
+.qa-root .node:hover{stroke:var(--ink)}
+.qa-root .edge{stroke:var(--line);fill:none}
+
+/* ---------- table ---------- */
+.qa-root .tbl-wrap{overflow-x:auto}
+.qa-root table{border-collapse:collapse;width:100%;font-size:13px;min-width:620px}
+.qa-root th{text-align:start;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);
+  font-weight:600;padding:8px 10px;border-block-end:1px solid var(--line);position:sticky;top:0;background:var(--surface)}
+.qa-root td{padding:9px 10px;border-block-end:1px solid var(--line-2);vertical-align:top}
+.qa-root tbody tr:hover{background:var(--surface-2)}
+.qa-root .num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;color:var(--ink-2);text-align:end}
+.qa-root .dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-inline-end:7px}
+.qa-root .ttl{font-weight:500}
+.qa-root .ttl small{display:block;font-weight:400;color:var(--ink-3);font-size:12px;margin-block-start:1px}
+.qa-root .flag{display:inline-block;font-size:10.5px;padding:1px 6px;border-radius:4px;background:var(--accent-soft);
+  color:var(--accent);margin-inline-start:6px;font-weight:600}
+.qa-root .flag.quiet{background:transparent;border:1px solid var(--line);color:var(--ink-3)}
+
+/* ---------- compare ---------- */
+.qa-root select{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:7px 10px;
+  max-width:100%;font-size:13px}
+.qa-root .topic-row{display:grid;grid-template-columns:minmax(120px,1.4fr) 1fr;gap:12px;align-items:center;
+  padding-block:5px;cursor:pointer;border-radius:6px}
+.qa-root .topic-row:hover{background:var(--surface-2)}
+.qa-root .topic-row.on{background:var(--accent-soft)}
+.qa-root .tname{font-size:12.5px;color:var(--ink-2)}
+.qa-root .tname b{color:var(--ink);font-weight:500}
+.qa-root .bars{display:flex;flex-direction:column;gap:3px}
+.qa-root .bar{height:9px;border-radius:0 4px 4px 0;min-width:2px}
+.qa-root[dir="rtl"] .bar{border-radius:4px 0 0 4px}
+.qa-root .barlbl{font-family:var(--f-mono);font-size:10.5px;color:var(--ink-3);margin-inline-start:6px}
+.qa-root .group-note{font-size:12px;color:var(--ink-3);margin-block-start:8px}
+
+/* ---------- articles ---------- */
+.qa-root .arts{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-block-start:16px}
+.qa-root .artcol h3{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-3);
+  margin-block-end:8px;font-weight:600}
+.qa-root .art{background:var(--surface-2);border:1px solid var(--line-2);border-radius:9px;padding:11px 13px;margin-block-end:9px}
+.qa-root .art-h{display:flex;gap:8px;align-items:baseline;margin-block-end:5px}
+.qa-root .art-n{font-family:var(--f-mono);font-size:11px;color:var(--accent);font-weight:600}
+.qa-root .art-p{font-family:var(--f-mono);font-size:10.5px;color:var(--ink-3);margin-inline-start:auto}
+.qa-root .fa{direction:rtl;text-align:right;font-family:var(--f-ui);font-size:13.5px;line-height:1.85}
+.qa-root .art .fa{max-height:8.5em;overflow:hidden;position:relative}
+.qa-root .art.open .fa{max-height:none}
+.qa-root .more{border:0;background:none;color:var(--accent);font-size:11.5px;cursor:pointer;padding:3px 0}
+
+/* ---------- search ---------- */
+.qa-root .searchbar{display:flex;gap:9px;flex-wrap:wrap;margin-block-end:14px}
+.qa-root .searchbar input{flex:1;min-width:200px;background:var(--surface-2);border:1px solid var(--line);
+  border-radius:9px;padding:9px 13px;font-size:14px}
+.qa-root mark{background:var(--accent-soft);color:var(--ink);border-radius:2px;padding:0 1px}
+.qa-root .hit{border-block-end:1px solid var(--line-2);padding-block:12px}
+.qa-root .hit-src{font-size:11.5px;color:var(--ink-3);margin-block-end:5px}
+.qa-root .hit-src b{color:var(--ink-2);font-weight:500}
+.qa-root .empty{color:var(--ink-3);padding-block:28px;text-align:center;font-size:13.5px}
+
+/* ---------- tooltip ---------- */
+.qa-root .qa-tip{position:fixed;z-index:60;pointer-events:none;background:var(--surface);border:1px solid var(--line);
+  border-radius:9px;padding:9px 12px;box-shadow:var(--shadow);font-size:12.5px;max-width:280px;opacity:0;
+  transition:opacity .1s}
+.qa-root .qa-tip b{display:block;font-size:13px;margin-block-end:3px}
+.qa-root .qa-tip span{color:var(--ink-3)}
+
+.qa-root .note{font-size:12px;color:var(--ink-3);border-inline-start:2px solid var(--line);padding-inline-start:11px;
+  margin-block-start:14px;line-height:1.6}
+@media (max-width:760px){
+  .qa-root .arts{grid-template-columns:1fr}
+  .qa-root .brand span{display:none}
+  .qa-root .tabs{width:100%;overflow-x:auto}
+}

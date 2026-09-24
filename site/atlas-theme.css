@@ -1,0 +1,25 @@
+/* Atlas (AtlasIran.org) look for the embedded module: mount(el, {theme: "atlas"})
+   adds .qa-atlas. Mirrors Atlas's tokens in src/app.css: navy #1E3A6B, sky #8CDAF5,
+   teal #0EBB90, beige #EDE3C7, background #F4F6F7, font Shabnam (loaded by Atlas).
+   Atlas switches dark mode with .dark on <html>; the module mirrors that into
+   data-theme on .qa-root, so the rules below follow the same attribute. */
+.qa-root.qa-atlas{
+  --ground:#F4F6F7; --surface:#fff; --surface-2:#f8f9fb;
+  --ink:#1E3A6B; --ink-2:#4f6690; --ink-3:#7c8cab;
+  --line:#d9e0eb; --line-2:#e9edf3;
+  --accent:#1E3A6B; --accent-soft:#EDE3C7;
+  --s1:#1E3A6B; --s2:#0EBB90; --s3:#3aa8d8;
+  --shadow:0 1px 2px rgba(30,58,107,.06),0 8px 24px -12px rgba(30,58,107,.16);
+  --f-display:"Shabnam","Vazirmatn",Georgia,serif;
+  --f-ui:"Shabnam","Vazirmatn",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+.qa-root.qa-atlas[data-theme="dark"]{
+  --ground:#111111; --surface:#1c1c1c; --surface-2:#232323;
+  --ink:#e6e6e6; --ink-2:#a6a6a6; --ink-3:#7a7a7a;
+  --line:#2e2e2e; --line-2:#262626;
+  --accent:#8CDAF5; --accent-soft:#1d3440;
+  --s1:#8CDAF5; --s2:#0EBB90; --s3:#EDE3C7;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+}
+.qa-root.qa-atlas{background:transparent}
+.qa-root.qa-atlas .panel{border-radius:.75rem}
