@@ -47,6 +47,9 @@
 .qa-root .hdr-in{max-width:1280px;margin-inline:auto;padding-inline:16px;padding-block:10px;
   display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 .qa-root .brand{display:flex;align-items:baseline;gap:9px;margin-inline-end:auto}
+/* embedded: the host page carries the title and intro */
+.qa-root.qa-embedded .brand,.qa-root.qa-embedded .lede{display:none}
+.qa-root.qa-embedded .tabs{margin-inline-end:auto}
 .qa-root .brand b{font-family:var(--f-display);font-size:20px;font-weight:600;letter-spacing:-.01em}
 .qa-root .brand span{font-size:11.5px;color:var(--ink-3);letter-spacing:.06em;text-transform:uppercase}
 .qa-root .tabs{display:flex;gap:2px;background:var(--surface-2);padding:3px;border-radius:9px;border:1px solid var(--line)}
