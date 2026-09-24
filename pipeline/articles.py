@@ -70,6 +70,11 @@ def markers(text, kind):
         if s > last: ded.append((s, e, n)); last = s
     return ded
 
+def toc_page(text):
+    """A contents page: most of its lines end in a page number."""
+    lines = [l.strip(" .") for l in text.split("\n") if l.strip(" .")]
+    return len(lines) >= 5 and sum(bool(re.search(r'\s[\d۰-۹]{1,3}$', l)) for l in lines) >= 0.6 * len(lines)
+
 def _chain(nums, live):
     """Longest near-consecutive ascending chain over the indices still in `live`."""
     idx = [i for i in range(len(nums)) if live[i]]
@@ -99,6 +104,21 @@ def score(nums, keep):
     vals = [nums[i] for i in keep]
     return min(len(keep), max(vals)) / max(len(keep), max(vals))
 
+def fill_gaps(ms, full, kind, skip):
+    """OCR garbles some heading numbers (this font's ۴ and ۶ especially). When found headings jump
+    from n to n+g and exactly g-1 unread headings start lines in between, number those in order."""
+    heads = [m for m in re.finditer(rf'(?m)^[ \t]*({kind})(?![{L}])[^\S\n]*(\S*[^{L}\s]\S*)?[^\S\n]*', full)
+             if not skip(m.start(1))]
+    out = []
+    for i, (s, e, n) in enumerate(ms):
+        out.append((s, e, n, False))
+        if i + 1 < len(ms):
+            s2, n2 = ms[i+1][0], ms[i+1][2]
+            between = [m for m in heads if e <= m.start(1) < s2]
+            if n2 - n > 1 and len(between) == n2 - n - 1:
+                out += [(m.start(1), m.end(), n + k + 1, True) for k, m in enumerate(between)]
+    return out
+
 def longest_run(nums):
     """Pick whichever strategy yields the most sequence-like numbering."""
     if not nums: return []
@@ -112,23 +132,28 @@ def main():
     rows, total = [], 0
     for path in sorted(glob.glob(os.path.join(DATA, "text", "*.json"))):
         doc = json.load(open(path, encoding="utf-8"))
-        full, offs = "", []
+        full, offs, toc = "", [], []
         for pg in doc["pages"]:
             offs.append((len(full), pg["page"]))
-            full += repair(pg["text"]) + "\n"
+            t = repair(pg["text"])
+            if toc_page(t): toc.append((len(full), len(full) + len(t)))
+            full += t + "\n"
+        in_toc = lambda i: any(a <= i < b for a, b in toc)
         best = None
         for kind in ('اص[سص]?ل', 'ماد[هدة]', 'بند', 'تبصره'):
-            ms = markers(full, kind)
+            # headings listed in a table of contents would otherwise compete with the real ones
+            ms = [m for m in markers(full, kind) if not in_toc(m[0])]
             keep = longest_run([n for _, _, n in ms])
             if best is None or len(keep) > len(best[1]):
                 best = (kind, [ms[i] for i in keep])
         kind, ms = best
+        ms = fill_gaps(ms, full, kind, in_toc)
         arts = []
-        for i, (s, e, n) in enumerate(ms):
+        for i, (s, e, n, inferred) in enumerate(ms):
             stop = ms[i+1][0] if i+1 < len(ms) else len(full)
             body = full[e:stop].strip(" :ـ-–—\n\t")
             page = max((p for off, p in offs if off <= s), default=1)
-            arts.append({"n": n, "kind": kind, "page": page, "text": body})
+            arts.append({"n": n, "kind": kind, "page": page, "text": body} | ({"n_inferred": True} if inferred else {}))
         slug = os.path.basename(path)[:-5]
         nums_k = [a["n"] for a in arts]
         conf = round(min(len(arts), max(nums_k))/max(len(arts), max(nums_k)), 3) if arts else 0.0
