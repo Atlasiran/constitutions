@@ -255,10 +255,10 @@
   ],
   "source_pdf": "پیش نویس قانون اساسی جمهوری مشروطه ایران، سازمان پارس و شورای براندازی ۱۳۸۳.pdf",
   "unit": "اص[سص]?ل",
-  "n_articles": 60,
+  "n_articles": 199,
   "n_pages": 25,
-  "confidence": 0.314,
-  "ocr": true
+  "confidence": 0.995,
+  "ocr": false
  },
  {
   "uid": "wcup-better-world-2007",
@@ -716,10 +716,10 @@
   ],
   "source_pdf": "مرکز-مطالعاتی-تبریز-پیش-نویس-قانون-اساسی-جمهوری-فدرال-ایران ۲۰۱۸.pdf",
   "unit": "اص[سص]?ل",
-  "n_articles": 95,
+  "n_articles": 113,
   "n_pages": 81,
-  "confidence": 0.841,
-  "ocr": true
+  "confidence": 1.0,
+  "ocr": false
  },
  {
   "uid": "banisadr-constitution-1398",
@@ -862,10 +862,10 @@
   "note": "Attribution stated as 'منتسب' (attributed) in the source; provenance unverified.",
   "source_pdf": "طرح قانون اساسی انتقالی، منتسب به محمدرضا شجریان و همراهان ۱۳۹۹.pdf",
   "unit": "ماد[هدة]",
-  "n_articles": 57,
+  "n_articles": 58,
   "n_pages": 14,
-  "confidence": 0.983,
-  "ocr": true
+  "confidence": 1.0,
+  "ocr": false
  },
  {
   "uid": "naoruz-usi-2026",
