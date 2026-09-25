@@ -1,7 +1,7 @@
 # Plan of action: Atlas × constitutions × normalcy
 
 This is the reference for anyone, human or agent, continuing this work. It records what exists, what has been decided, which rules are not negotiable, and what comes next.
-Last updated: 2026-09-24. Update the **Status** column and the **Log** at the bottom as work lands.
+Last updated: 2026-09-25. Update the **Status** column and the **Log** at the bottom as work lands.
 
 ---
 
@@ -49,10 +49,11 @@ Atlasiran/Atlas-website            ← main site (AtlasIran.org)
 - `local/` is gitignored and holds the Democratic Platform PDF.
 
 ### Atlas
-- 226 organisations, one `.md` per organisation in `src/content/org-pages/`. Frontmatter fields include `id, org_type, name_fa, name_en, manifest, coc, …`. There are **no relation fields**.
+- 226 organisations, one `.md` per organisation in `src/content/org-pages/`. Frontmatter fields include `id, org_type, name_fa, name_en, manifest, coc, …`. A `relations` field exists since branch `org-relations` (§8).
+- The CSV has a free-text column `ائتلاف ،‌ همکاری` (coalition / cooperation; 48 of 343 rows), and some coalition rows list members under `ملاحظات`. Neither reaches the pages. They name coalitions, not org ids, and cite no source, so they are leads for §8, not data.
 - `manifest` is filled for 104 organisations, `coc` for 4. Values are mostly external URLs; one is a local PDF (`static/docs/pjak-constitution-7th-congress.pdf`). `manifest` mixes charters, مرامنامه and bylaws (اساسنامه).
 - Political types shown at `/parties`: `حزب`, `سازمان سیاسی`, `شورا / کنگره / ائتلاف`. Everything else is shown at `/groups`.
-- Data flow: CSV in `data/` → `deploy/csv_to_json.py` → `deploy/update_org_pages.py` (data.json → md) → `npm run build` (`md_to_json.py` → `static/data/data.json`, then Vite).
+- Data flow: CSV in `data/` (gitignored; a local export of the team's «Source of Truth» spreadsheet, **not** Supabase) → `deploy/csv_to_json.py` → `deploy/update_org_pages.py` (data.json → md) → `npm run build` (`md_to_json.py` → `static/data/data.json`, then Vite).
 - The graph (`/graph`, from `deploy/gen_gexf.py`) only has org → country "BASED IN" edges.
 - Nav links live in `src/content/configs.js` (`defaultHeaderLinks`). Organisation pages are rendered in `src/routes/op/[page]/+page.svelte`; the «مرامنامه یا مانیفست» block is around line 280.
 - Design tokens: navy `#1E3A6B`, sky `#8CDAF5`, teal `#0EBB90`, beige `#EDE3C7`, background `#F4F6F7`, font Shabnam. Right-to-left, Persian first.
@@ -195,20 +196,18 @@ Topic lists are defined per group. The bylaws list: membership, internal electio
 
 ## 8. Atlas: connections and affiliations (new feature)
 
-Add to the organisation frontmatter:
+Add to the organisation frontmatter, as **one line of JSON** (valid YAML for MDsveX; `md_to_json.py` and the CSV sync read frontmatter line by line, so a nested YAML block would break):
 ```yaml
-relations:
-  - type: member_of        # member_of | affiliated_with | coalition_partner | split_from | merged_into | successor_of
-    target: "310"          # Atlas org id
-    since: ""
-    until: ""
-    source: "https://…"    # required
-    status: self_declared  # self_declared | documented | disputed
+relations: [{"type": "member_of", "target": "310", "since": "", "until": "", "source": "https://…", "status": "self_declared"}]
+# type: member_of | affiliated_with | coalition_partner | split_from | merged_into | successor_of
+# target: Atlas org id · source: required · status: self_declared | documented | disputed
 ```
 - Stored in one direction only. The reverse link ("members: …") is generated in `md_to_json.py`.
 - Organisation pages get a new section «پیوندها و وابستگی‌ها», grouped by type, with dates and a source link. Coalition pages (`شورا / کنگره / ائتلاف`) list their members automatically.
 - `gen_gexf.py` adds these as graph edges, coloured by type.
-- ⚠️ Check that `update_org_pages.py` keeps the `relations` field during the CSV sync.
+- `update_org_pages.py` keeps the `relations` line during the CSV sync (it only rewrites keys it knows; tested 2026-09-25).
+- `md_to_json.py` writes `static/data/relations.json` (gitignored, built) and **stops the build** on a relation with no source URL, or an unknown type, status or target.
+- `gen_gexf.py` reads relations from `data.json`, so run it after `md_to_json.py`, not straight after `csv_to_json.py`.
 - The edit/create forms and Supabase need a relations table.
 - Only publicly declared or documented ties (rule 5). A disputed tie is marked disputed, never shown as fact.
 - Separate from documents: an alliance doesn't make two organisations' documents comparable.
@@ -231,12 +230,12 @@ relations:
 - Metadata: «نسخه نهایی ممیزی‌شده برای بررسی و تصویب» ("final audited version for review and approval").
 - ⚠️ The text layer is garbled: ی characters are dropped and ligatures broken (e.g. «مشود» for «می‌شود»). Use OCR or a normalisation pass, not raw `pdftotext`.
 - Contents: bylaws + organisational structure, political charter, programme outline. Split them by page range into `bylaws`, `charter` and `program`.
-- Atlas entry:
-  - org_type `شورا / کنگره / ائتلاف`
-  - founded 21 Dey 1396 (2018-01-11), Brussels
-  - website `https://www.iran-dp.com/`
-  - alternative spelling «پلاتفرم»
-  - English name: Democratic Platform of Iran
+- Page ranges (checked 2026-09-25): cover p. 1; bylaws + organisational structure pp. 2–21 (appendix table p. 21); programme outline pp. 22–26; charter pp. 27–75 (its contents list pp. 27–30, text from p. 31). Registry uids `dp-bylaws-2026`, `dp-program-2026`, `dp-charter-2026`, all `org_ids: ["440"]`.
+- Atlas entry (id 440, branch `democratic-platform`):
+  - org_type `شورا / کنگره / ائتلاف`; English name Democratic Platform of Iran; alternative spelling «پلاتفرم»
+  - **Not verified, so left empty:** founded 21 Dey 1396 (2018-01-11), Brussels, and website `https://www.iran-dp.com/`. These come from fa.wikipedia, which cites ANF (403 to scripted fetches); iran-dp.com does not resolve (2026-09-25). No logo source.
+  - `manifest` points to the PDF in this repo on GitHub (live once pushed).
+  - fa.wikipedia says PJAK is a «گروه همکار» (cooperating group), citing pjak.eu. Per the user's decision this is **not** recorded; if it is ever added, it needs the pjak.eu page read first-hand and status `self_declared`.
   - It was searched for in the org pages, the CSV and data.json, and was not listed.
 
 ---
@@ -251,7 +250,7 @@ Status values: ☐ to do · ◐ in progress · ☑ done
 | 0.1 | Replace the hardcoded absolute paths in `pipeline/*.py` with paths relative to the repo; re-run the pipeline end to end | ☑ |
 | 0.2 | `git init` constitutions; add `.gitignore` (`.wrangler`, `__pycache__`, `local/`); create `Atlasiran/constitutions` (public) *(ask before creating or pushing)* | ☑ public at github.com/Atlasiran/constitutions |
 | 0.3 | Add normalcy as a submodule at `vendor/normalcy` | ☑ |
-| 0.4 | Add the registry fields (§6) and backfill the 34 documents (mostly `kind`) | ◐ fields backfilled; `pages` not yet honoured by the pipeline (needed for 4.2) |
+| 0.4 | Add the registry fields (§6) and backfill the 34 documents (mostly `kind`) | ☑ `pages` honoured: one articles file per entry (`<slug>__<uid>.json`) |
 | 0.5 | Commit the normalcy SDK and model upgrade (as the user) | ☑ `920349e`, pushed |
 | 0.6 | normalcy: merge the other branches into main | ☑ |
 | 0.7 | Global no-AI-attribution settings | ☑ |
@@ -284,8 +283,8 @@ Status values: ☐ to do · ◐ in progress · ☑ done
 | # | Task | Status |
 |---|---|---|
 | 4.1 | naoruz: download, registry entry (constitution; manifesto and attachments as companions), OCR, rebuild | ☑ `naoruz-usi-2026`, 202 articles; companions and `source_url` not yet shown on the site |
-| 4.2 | Democratic Platform: OCR/normalise, split into 3 documents, `doc_status: draft` | ☐ |
-| 4.3 | Democratic Platform: new Atlas org page, logo, OG image, `manifest` link, **no PJAK relation** | ☐ |
+| 4.2 | Democratic Platform: OCR/normalise, split into 3 documents, `doc_status: draft` | ☑ `39274a9`: bylaws 52 articles, charter 17, programme by page |
+| 4.3 | Democratic Platform: new Atlas org page, logo, OG image, `manifest` link, **no PJAK relation** | ◐ page (id 440) on Atlas branch `democratic-platform` (`3b53d2b`, not pushed); founding facts, website, logo and OG image wait on a primary source |
 
 ### Phase 5: comparison
 | # | Task | Status |
@@ -298,10 +297,11 @@ Status values: ☐ to do · ◐ in progress · ☑ done
 ### Phase 6: Atlas connections
 | # | Task | Status |
 |---|---|---|
-| 6.1 | `relations` schema; reverse links generated in `md_to_json.py` | ☐ |
-| 6.2 | «پیوندها و وابستگی‌ها» section; coalition member lists | ☐ |
-| 6.3 | Graph edges in `gen_gexf.py` | ☐ |
-| 6.4 | Make `update_org_pages.py` keep `relations`; edit-form and Supabase support | ☐ |
+| 6.1 | `relations` schema; reverse links generated in `md_to_json.py` | ☑ Atlas branch `org-relations` (`573feb2`, not pushed) |
+| 6.2 | «پیوندها و وابستگی‌ها» section; coalition member lists | ☑ same branch; checked in a static build with a temporary relation |
+| 6.3 | Graph edges in `gen_gexf.py` | ☑ same branch |
+| 6.4 | Make `update_org_pages.py` keep `relations`; edit-form and Supabase support | ◐ the sync keeps it (no change needed); edit form/Supabase not done (Supabase is not the live data source) |
+| 6.5 | First relations data: sourced ties only (leads: the CSV coalition column) | ☐ |
 
 ---
 
@@ -317,6 +317,7 @@ Status values: ☐ to do · ◐ in progress · ☑ done
 - **Cloudflare Pages** only clones public submodules. Keep Atlas, constitutions and normalcy public, or change the deploy approach.
 - **Claude API:** use `output_config.format` for JSON (not prefill; prefill returns 400 on current models). Check `stop_reason` before reading content. Stream when `max_tokens` is over about 16K. `fallbacks` isn't supported on the Batches API, so handle `refusal` results per item there.
 - **Prompt caching** only kicks in above the model's minimum prefix size, and any change in the prefix bytes invalidates it (no timestamps or IDs in the system prompt).
+- **`extract.py` and vision texts:** it used to keep only `source: "ocr"` texts, so a plain run would have overwritten the vision-read ones with `pdftotext` output. Fixed 2026-09-25 (it keeps `ocr` and `vision`).
 - **Web summaries are not sources.** Verify facts such as membership, dates and URLs against primary sources before publishing (rule 5).
 
 ---
@@ -383,3 +384,10 @@ Status values: ☐ to do · ◐ in progress · ☑ done
     - contents pages with dot leaders are skipped.
     
     Changes: 1979 constitution 161 → 176 of 177; Mashruteh 1906 163 (mixed) → 156; supplement 104 → 110 (107 plus the amended 36–40, headed again; its 14 and 95 are headed «فصل» in the source); Saginian monarchy 23 → 44; Left Socialists 160 (with duplicates) → 147 clean; inferred numbers fall across the corpus (e.g. Green Jurists 21 → 8). Corpus: 4,232 catalog articles, 4,226 in the site data, 525 edges.
+- **2026-09-25 (session 6):**
+  - Checked Atlas for the Democratic Platform in the source CSV (normalised spelling), the org pages and data.json: not listed. Atlas's org data comes from the local CSV export, not Supabase.
+  - 0.4/4.2: registry `pages` honoured by articles/catalog/analyze/audit. The Democratic Platform PDF (75 pages) added as three documents; its garbled text layer replaced by vision OCR (1 batch, 385K in / 90K out tokens, ≈ $2.5, no failures). Bylaws: 52 articles, clean run; charter: 17 articles (it also numbers sub-articles «ماده ۱۳.۱», not split out), audited by page since its articles are long; programme: prose, by page. 38 documents, 4,301 catalog articles.
+  - Fixed `extract.py` so it keeps vision-read texts.
+  - 4.3: Atlas org page id 440 on branch `democratic-platform`, only facts from the document itself. See §9 for what is unverified.
+  - 6.1–6.3 on Atlas branch `org-relations`; see §8. Tested with a temporary relation (Turkmens → joint congress): both pages render the section, the graph gets the edge, the CSV sync keeps the line, a sourceless relation stops the build. Fixture reverted; no relations are recorded.
+  - Nothing pushed. Left alone: another session's uncommitted `pipeline/proofread.py`, `data/proof/`, `data/audits/` (first audit, iri-constitution-1979). Noticed for proofreading: the Parsa text ends 98 of 149 pages with the footer `www.ghanon.org`.
