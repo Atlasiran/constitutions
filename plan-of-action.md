@@ -231,7 +231,7 @@ relations: [{"type": "member_of", "target": "310", "since": "", "until": "", "so
 - ⚠️ The text layer is garbled: ی characters are dropped and ligatures broken (e.g. «مشود» for «می‌شود»). Use OCR or a normalisation pass, not raw `pdftotext`.
 - Contents: bylaws + organisational structure, political charter, programme outline. Split them by page range into `bylaws`, `charter` and `program`.
 - Page ranges (checked 2026-09-25): cover p. 1; bylaws + organisational structure pp. 2–21 (appendix table p. 21); programme outline pp. 22–26; charter pp. 27–75 (its contents list pp. 27–30, text from p. 31). Registry uids `dp-bylaws-2026`, `dp-program-2026`, `dp-charter-2026`, all `org_ids: ["440"]`.
-- Atlas entry (id 440, branch `democratic-platform`):
+- Atlas entry (id 440, branch `democratic-platform`, from a row in the source CSV):
   - org_type `شورا / کنگره / ائتلاف`; English name Democratic Platform of Iran; alternative spelling «پلاتفرم»
   - **Not verified, so left empty:** founded 21 Dey 1396 (2018-01-11), Brussels, and website `https://www.iran-dp.com/`. These come from fa.wikipedia, which cites ANF (403 to scripted fetches); iran-dp.com does not resolve (2026-09-25). No logo source.
   - `manifest` points to the PDF in this repo on GitHub (live once pushed).
@@ -284,7 +284,7 @@ Status values: ☐ to do · ◐ in progress · ☑ done
 |---|---|---|
 | 4.1 | naoruz: download, registry entry (constitution; manifesto and attachments as companions), OCR, rebuild | ☑ `naoruz-usi-2026`, 202 articles; companions and `source_url` not yet shown on the site |
 | 4.2 | Democratic Platform: OCR/normalise, split into 3 documents, `doc_status: draft` | ☑ `39274a9`: bylaws 52 articles, charter 17, programme by page |
-| 4.3 | Democratic Platform: new Atlas org page, logo, OG image, `manifest` link, **no PJAK relation** | ◐ page (id 440) on Atlas branch `democratic-platform` (`3b53d2b`, not pushed); founding facts, website, logo and OG image wait on a primary source |
+| 4.3 | Democratic Platform: new Atlas org page, logo, OG image, `manifest` link, **no PJAK relation** | ◐ imported the documented way (CSV row → csv_to_json → update_org_pages → gen:og → gen_gexf → build) on Atlas branch `democratic-platform` (`14edc91`, not pushed), id 440; founding facts, website and logo wait on a primary source |
 
 ### Phase 5: comparison
 | # | Task | Status |
@@ -318,6 +318,8 @@ Status values: ☐ to do · ◐ in progress · ☑ done
 - **Claude API:** use `output_config.format` for JSON (not prefill; prefill returns 400 on current models). Check `stop_reason` before reading content. Stream when `max_tokens` is over about 16K. `fallbacks` isn't supported on the Batches API, so handle `refusal` results per item there.
 - **Prompt caching** only kicks in above the model's minimum prefix size, and any change in the prefix bytes invalidates it (no timestamps or IDs in the system prompt).
 - **`extract.py` and vision texts:** it used to keep only `source: "ocr"` texts, so a plain run would have overwritten the vision-read ones with `pdftotext` output. Fixed 2026-09-25 (it keeps `ocr` and `vision`).
+- **Adding an org to Atlas:** use the README flow, never a hand-written page (`/parties` reads `political_parties.json`, which only `csv_to_json.py` writes). Run `md_to_json.py` first, because `csv_to_json.py` takes `logo` from the stale committed `data.json`. The CSV export uses CRLF, has LF inside cells, and has no final newline; edit it byte-exact (`newline=''`).
+- **OG images:** `gen_org_og_images.py` needs Pillow's basic layout (fixed in Atlas `b0f9a6f`); with raqm the Persian came out reversed.
 - **Web summaries are not sources.** Verify facts such as membership, dates and URLs against primary sources before publishing (rule 5).
 
 ---
@@ -391,3 +393,4 @@ Status values: ☐ to do · ◐ in progress · ☑ done
   - 4.3: Atlas org page id 440 on branch `democratic-platform`, only facts from the document itself. See §9 for what is unverified.
   - 6.1–6.3 on Atlas branch `org-relations`; see §8. Tested with a temporary relation (Turkmens → joint congress): both pages render the section, the graph gets the edge, the CSV sync keeps the line, a sourceless relation stops the build. Fixture reverted; no relations are recorded.
   - Nothing pushed. Left alone: another session's uncommitted `pipeline/proofread.py`, `data/proof/`, `data/audits/` (first audit, iri-constitution-1979). Noticed for proofreading: the Parsa text ends 98 of 149 pages with the footer `www.ghanon.org`.
+  - Redid 4.3 by the documented procedure (the hand-written page was discarded). The local CSV got the Democratic Platform row plus two values brought in line with hand edits: PJAK manifest `docs/pjak-constitution-7th-congress.pdf` and TCF website `https://transcf.org/about-us/` (the user mirrors these in the shared spreadsheet; backup in `data/`). Atlas `democratic-platform`: `b0f9a6f` OG layout fix, `14edc91` the org, `86e2516` regenerated OG images (footer now «AtlasIran.org»; PJAK's shows its logo).
