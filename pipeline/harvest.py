@@ -5,8 +5,9 @@
     harvest.py fetch <org id> ...        # download each link; a web page also gets a PDF reading copy
     harvest.py copy <org id> ...         # (re)make the reading copies of saved web pages
     harvest.py report [<org id> ...]     # extract text, guess the document kind, write data/harvest/review.json
+    harvest.py ingest                    # add the rows a reviewer accepted to the corpus and data/registry.json
 
-Nothing enters the corpus here. review.json lists what was found per link, with a guessed `kind`
+Nothing enters the corpus before review. review.json lists what was found per link, with a guessed `kind`
 and `decision: "pending"`; a person sets the decision (and corrects kind / pages) before a document
 is added to data/registry.json. A web page's corpus text is its main text taken from the HTML (the
 reading copy's own text layer breaks «لا»); the reading copy is the PDF people open. Downloads stay in local/harvest/<org id>/ (gitignored)
@@ -288,7 +289,8 @@ def cmd_report(ids):
                         "arabic_letters": ar, "kind_guess": guess_kind(h1, title, text[:1500]),
                         "opening": text[:400]}
             old = review.get(key, {})
-            row |= {k: old.get(k, v) for k, v in (("decision", "pending"), ("kind", None), ("pages_range", None), ("note", ""))}
+            # the reviewer's fields (decision, kind, pages_range, note, file, entries, ...) survive a new report
+            row |= {"decision": "pending", "kind": None, "pages_range": None, "note": ""} | {k: v for k, v in old.items() if k not in row}
             review[key] = row
     rows = sorted(review.values(), key=lambda r: (int(r["org_id"]), r["key"]))
     save(review_path, rows)
@@ -302,6 +304,85 @@ def cmd_report(ids):
     print(f"\n{len(rows)} links in {review_path}")
 
 
+# ---- ingest: approved rows of review.json -> corpus folder, data/text, data/registry.json ----
+
+CORPUS = os.path.join(ROOT, "(پیشنهادهای پیش‌نویس) قانون اساسی")
+TEXT = os.path.join(ROOT, "data", "text")
+REGISTRY = os.path.join(ROOT, "data", "registry.json")
+
+
+def _key(s):
+    """Persian letters only, without ا / ل / hamza above: the reading copy's text layer turns «لا» into «ال»,
+    moves hamza, and reorders digits and Latin runs, so only this skeleton matches the HTML text reliably."""
+    keep = [(c, i) for i, c in enumerate(s) if "ء" <= c <= "ۿ" and c.isalpha() and c not in "الٔ"]
+    return "".join(c for c, _ in keep), [i for _, i in keep]
+
+
+def paged_text(text, copy_pdf):
+    """The HTML text cut where the reading copy's pages break, so page citations match the PDF people open."""
+    n = pdf_text(copy_pdf)[2]
+    hkey, hpos = _key(text)
+    cuts, at = [0], 0
+    for p in range(2, n + 1):
+        page = subprocess.run(["pdftotext", "-q", "-f", str(p), "-l", str(p), copy_pdf, "-"],
+                              capture_output=True, text=True).stdout
+        # the page's opening letters, read across lines so a short first line («۵. کنگره:») stays on its page;
+        # if bidi reordering garbled the first line, try from the next one
+        lines = normalize_fa(page).splitlines()
+        found = None
+        for i in range(min(6, len(lines))):
+            needle = _key("".join(lines[i:]))[0][:24]
+            if len(needle) >= 10 and (k := hkey.find(needle, at)) >= 0:
+                found = k; break
+        if found is None:
+            print(f"  page {p}: start not found, merged into page {p - 1}"); cuts.append(cuts[-1]); continue
+        at = found
+        pos = hpos[found]
+        word = max(text.rfind(" ", 0, pos), text.rfind("\n", 0, pos)) + 1     # a page may break mid-paragraph
+        line = text.rfind("\n", 0, pos) + 1
+        cuts.append(line if not _key(text[line:word])[0] else word)          # keep «۱.» with its item
+    cuts.append(len(text))
+    return [{"page": i + 1, "text": text[a:b].strip()} for i, (a, b) in enumerate(zip(cuts, cuts[1:]))]
+
+
+def cmd_ingest():
+    """Rows with decision "accept" carry `file` (the corpus file name) and `entries` (registry fields per document).
+    Rows with decision "duplicate" name the accepted row in `duplicate_of`; their org joins its documents."""
+    from extract import slug_of
+    rows = load(os.path.join(DATA, "review.json"), [])
+    by_key = {r["key"]: r for r in rows}
+    orgs = {}
+    for r in rows:
+        if r["decision"] == "accept": orgs.setdefault(r["key"], []).append(r["org_id"])
+    for r in rows:
+        if r["decision"] == "duplicate": orgs[r["duplicate_of"]].append(r["org_id"])
+    reg = json.load(open(REGISTRY, encoding="utf-8"))
+    uids = {e["uid"]: i for i, e in enumerate(reg)}
+    for key, org_ids in orgs.items():
+        r = by_key[key]
+        meta = load(os.path.join(STORE, r["org_id"], key.split(":")[1] + ".json"), {})
+        src = os.path.join(STORE, r["org_id"], meta["raw"] if meta["raw"].endswith(".pdf") else meta["copy"])
+        dest = os.path.join(CORPUS, r["file"])
+        if not os.path.exists(dest):
+            subprocess.run(["cp", src, dest], check=True)
+        slug = slug_of(r["file"])
+        print(f"{key}  {r['file']}")
+        if meta["raw"].endswith(".html"):
+            pages = paged_text(html_text(os.path.join(STORE, r["org_id"], meta["raw"]))[0], src)
+            save(os.path.join(TEXT, slug + ".json"),
+                 {"source_pdf": r["file"], "source": "html", "source_url": r["url"], "pages": pages})
+            print(f"  text from HTML, {len(pages)} pages")
+        for part in r["entries"]:
+            entry = {"uid": part["uid"], "collection": "org-documents", "status": "active", "source": r["file"],
+                     "legacy_slug": slug, "type": "program", "org_ids": sorted(set(org_ids), key=int),
+                     "source_url": r["url"], "version": "1"} | part
+            if entry["uid"] in uids: reg[uids[entry["uid"]]] = entry
+            else: uids[entry["uid"]] = len(reg); reg.append(entry)
+            print(f"  {entry['uid']}  {entry['kind']}  orgs {entry['org_ids']}")
+    open(REGISTRY, "w", encoding="utf-8").write(json.dumps(reg, ensure_ascii=False, indent=1) + "\n")
+    print(f"\n{len(reg)} registry entries")
+
+
 if __name__ == "__main__":
     a = sys.argv[1:]
     if not a: sys.exit(__doc__)
@@ -309,4 +390,5 @@ if __name__ == "__main__":
     elif a[0] == "fetch" and len(a) >= 2: cmd_fetch(a[1:])
     elif a[0] == "copy" and len(a) >= 2: cmd_copy(a[1:])
     elif a[0] == "report": cmd_report(a[1:])
+    elif a[0] == "ingest": cmd_ingest()
     else: sys.exit(__doc__)

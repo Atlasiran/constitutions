@@ -18,6 +18,10 @@ def normalize_fa(s: str) -> str:
     s = re.sub(r'\n{3,}', '\n\n', s)
     return s.strip()
 
+def slug_of(pdf_name):
+    """data/text/<slug>.json for a corpus PDF."""
+    return re.sub(r'[^\w؀-ۿ]+', '_', pdf_name[:-4]).strip('_')[:80]
+
 def page_count(path):
     r = subprocess.run(['pdfinfo', path], capture_output=True, text=True)
     m = re.search(r'^Pages:\s+(\d+)', r.stdout, re.M)
@@ -30,11 +34,12 @@ def main():
     force = "--force" in sys.argv
     for path in files:
         base = os.path.basename(path)
-        slug = re.sub(r'[^\w؀-ۿ]+', '_', base[:-4]).strip('_')[:80]
+        slug = slug_of(base)
         dest = os.path.join(OUT, slug + ".json")
-        if not force and os.path.exists(dest):
+        if os.path.exists(dest):
             prev = json.load(open(dest, encoding="utf-8"))
-            if prev.get("source") in ("ocr", "vision"):   # keep OCR output; --force to redo
+            # keep OCR output (--force redoes it); a web page's text comes from its HTML, never from the reading copy
+            if prev.get("source") == "html" or (not force and prev.get("source") in ("ocr", "vision")):
                 chars = sum(len(pg["text"]) for pg in prev["pages"])
                 manifest.append({"slug": slug, "source_pdf": base, "pages": len(prev["pages"]),
                                  "chars": chars, "needs_ocr": False})

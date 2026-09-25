@@ -997,5 +997,263 @@
    "secular"
   ],
   "note": "One PDF (Word export, 2026-09-21) titled «نسخه نهایی ممیزی‌شده برای بررسی و تصویب»: bylaws pp. 2–21, programme outline pp. 22–26, political charter pp. 27–75 (its contents list on 27–30). Its text layer is garbled, so the text is vision OCR. Not linked to any other organisation (plan rule 5)."
+ },
+ {
+  "uid": "pdki-program-1403",
+  "collection": "org-documents",
+  "status": "active",
+  "source": "برنامه و اساسنامه‌ی حزب دموکرات کوردستان ایران - کنگره‌ی ۱۷ ۱۴۰۳.pdf",
+  "legacy_slug": "برنامه_و_اساسنامه_ی_حزب_دموکرات_کوردستان_ایران_کنگره_ی_۱۷_۱۴۰۳",
+  "type": "program",
+  "org_ids": [
+   "267"
+  ],
+  "source_url": "https://kurdistanmedia.com/content/upload/1/pdf/%D9%81%D8%A7%D8%B1%D8%B3%DB%8C-%DA%A9%D9%86%DA%AF%D8%B1%DB%95%DB%8C-.pdf",
+  "version": "1",
+  "kind": "program",
+  "pages": [
+   1,
+   36
+  ],
+  "fa": "برنامه‌ی حزب دموکرات کوردستان ایران",
+  "en": "Democratic Party of Iranian Kurdistan — Programme",
+  "author_fa": "حزب دموکرات کوردستان ایران",
+  "author_en": "Democratic Party of Iranian Kurdistan",
+  "org_en": "Democratic Party of Iranian Kurdistan",
+  "year": 2025,
+  "era": "بهمن ۱۴۰۳",
+  "doc_status": "adopted",
+  "tags": [],
+  "note": "Adopted by the 17th congress («کنگره‌ی اتحاد دموکرات‌ها», 15–16 Bahman 1403). Programme pp. 1–36, bylaws pp. 37–56; pp. 57–60 are the party's history and back cover. The text layer is garbled, so the text is vision OCR."
+ },
+ {
+  "uid": "pdki-bylaws-1403",
+  "collection": "org-documents",
+  "status": "active",
+  "source": "برنامه و اساسنامه‌ی حزب دموکرات کوردستان ایران - کنگره‌ی ۱۷ ۱۴۰۳.pdf",
+  "legacy_slug": "برنامه_و_اساسنامه_ی_حزب_دموکرات_کوردستان_ایران_کنگره_ی_۱۷_۱۴۰۳",
+  "type": "program",
+  "org_ids": [
+   "267"
+  ],
+  "source_url": "https://kurdistanmedia.com/content/upload/1/pdf/%D9%81%D8%A7%D8%B1%D8%B3%DB%8C-%DA%A9%D9%86%DA%AF%D8%B1%DB%95%DB%8C-.pdf",
+  "version": "1",
+  "kind": "bylaws",
+  "pages": [
+   37,
+   56
+  ],
+  "fa": "اساسنامه‌ی حزب دموکرات کوردستان ایران",
+  "en": "Democratic Party of Iranian Kurdistan — Bylaws",
+  "author_fa": "حزب دموکرات کوردستان ایران",
+  "author_en": "Democratic Party of Iranian Kurdistan",
+  "org_en": "Democratic Party of Iranian Kurdistan",
+  "year": 2025,
+  "era": "بهمن ۱۴۰۳",
+  "doc_status": "adopted",
+  "tags": [],
+  "note": "Adopted by the 17th congress («کنگره‌ی اتحاد دموکرات‌ها», 15–16 Bahman 1403). Programme pp. 1–36, bylaws pp. 37–56; pp. 57–60 are the party's history and back cover. The text layer is garbled, so the text is vision OCR."
+ },
+ {
+  "uid": "fadaian-majority-bylaws-1390",
+  "collection": "org-documents",
+  "status": "active",
+  "source": "اساسنامه‌ی سازمان فداییان خلق ایران (اکثریت) - کنگره‌ی دوازدهم ۱۳۹۰.pdf",
+  "legacy_slug": "اساسنامه_ی_سازمان_فداییان_خلق_ایران_اکثریت_کنگره_ی_دوازدهم_۱۳۹۰",
+  "type": "program",
+  "org_ids": [
+   "275"
+  ],
+  "source_url": "https://kar-online.com/%D8%A7%D8%B3%D8%A7%D8%B3%D9%86%D8%A7%D9%85%D9%87-%D8%B3%D8%A7%D8%B2%D9%85%D8%A7%D9%86-%D9%81%D8%AF%D8%A7%D8%A6%DB%8C%D8%A7%D9%86-%D8%AE%D9%84%D9%82-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%A7%DA%A9%D8%AB/",
+  "version": "1",
+  "kind": "bylaws",
+  "fa": "اساسنامه‌ی سازمان فداییان خلق ایران (اکثریت)",
+  "en": "Organization of Iranian People's Fadaian (Majority) — Bylaws",
+  "author_fa": "سازمان فداییان خلق ایران (اکثریت)",
+  "author_en": "Organization of Iranian People's Fadaian (Majority)",
+  "org_en": "Organization of Iranian People's Fadaian (Majority)",
+  "year": 2011,
+  "era": "اردیبهشت ۱۳۹۰",
+  "doc_status": "adopted",
+  "tags": [],
+  "note": "Adopted by the 12th congress, 2–5 Ordibehesht 1390; by its closing line 12 chapters, 26 articles, 82 clauses and 14 notes. The web page drops the article numbers, so the text is audited by page. Reading copy of the web page; the text comes from its HTML."
+ },
+ {
+  "uid": "cpi-bylaws",
+  "collection": "org-documents",
+  "status": "active",
+  "source": "اساسنامه‌ی حزب کمونیست ایران.pdf",
+  "legacy_slug": "اساسنامه_ی_حزب_کمونیست_ایران",
+  "type": "program",
+  "org_ids": [
+   "276",
+   "277",
+   "304"
+  ],
+  "source_url": "https://cpiran.org/wp/wp-content/uploads/2021/03/ahci.pdf",
+  "version": "1",
+  "kind": "bylaws",
+  "fa": "اساسنامه‌ی حزب کمونیست ایران",
+  "en": "Communist Party of Iran — Bylaws",
+  "author_fa": "حزب کمونیست ایران",
+  "author_en": "Communist Party of Iran",
+  "org_en": "Communist Party of Iran",
+  "year": null,
+  "era": null,
+  "doc_status": null,
+  "tags": [],
+  "note": "The party's bylaws as rewritten after its second congress, followed by those of Komala as its Kurdistan organisation. No adoption date is given; the file says the party's organisation abroad reproduced it in October 2006. Atlas entries 276, 277 and 304 all link this same PDF."
+ },
+ {
+  "uid": "iran-novin-ideology-1402",
+  "collection": "org-documents",
+  "status": "active",
+  "source": "مرامنامه‌ی حزب ایران نوین ۱۴۰۲.pdf",
+  "legacy_slug": "مرامنامه_ی_حزب_ایران_نوین_۱۴۰۲",
+  "type": "program",
+  "org_ids": [
+   "278"
+  ],
+  "source_url": "https://irannovin.party/persian-page/%d9%85%d8%b1%d8%a7%d9%85%d9%86%d8%a7%d9%85%d9%87/",
+  "version": "1",
+  "kind": "ideology",
+  "fa": "مرامنامه‌ی حزب ایران نوین",
+  "en": "Iran Novin Party — Statement of Principles",
+  "author_fa": "حزب ایران نوین",
+  "author_en": "The Iran Novin Party (Modern Iran Party)",
+  "org_en": "The Iran Novin Party (Modern Iran Party)",
+  "year": 2023,
+  "era": "آبان ۱۴۰۲",
+  "doc_status": "adopted",
+  "tags": [],
+  "note": "Drafted 18 Dey 1401, adopted by the party's first congress on 6 Aban 1402 (stated on the page, below its main text). Reading copy of the web page; the text comes from its HTML."
+ },
+ {
+  "uid": "adp-bylaws",
+  "collection": "org-documents",
+  "status": "active",
+  "source": "اساسنامه‌ی حزب دموکرات آذربایجان.pdf",
+  "legacy_slug": "اساسنامه_ی_حزب_دموکرات_آذربایجان",
+  "type": "program",
+  "org_ids": [
+   "290"
+  ],
+  "source_url": "https://adparty.org/index.php/statute",
+  "version": "1",
+  "kind": "bylaws",
+  "fa": "اساسنامه‌ی حزب دموکرات آذربایجان",
+  "en": "Democratic Party of Azerbaijan — Bylaws",
+  "author_fa": "حزب دموکرات آذربایجان",
+  "author_en": "Democratic Party of Azerbaijan",
+  "org_en": "Democratic Party of Azerbaijan",
+  "year": null,
+  "era": null,
+  "doc_status": null,
+  "tags": [],
+  "note": "Undated. The page title is in Azerbaijani Turkish, the text in Persian. The page numbers its first section 1–2 and then runs one list 1–31; the split follows that list, so its items 1–2 sit inside item 2. Reading copy of the web page; the text comes from its HTML."
+ },
+ {
+  "uid": "condfr-charter",
+  "collection": "org-documents",
+  "status": "active",
+  "source": "تفاهم‌نامه‌ی همکاری کنگره‌ی مشترک جمهوری‌خواهان دموکرات و فدرال دموکرات.pdf",
+  "legacy_slug": "تفاهم_نامه_ی_همکاری_کنگره_ی_مشترک_جمهوری_خواهان_دموکرات_و_فدرال_دموکرات",
+  "type": "program",
+  "org_ids": [
+   "292"
+  ],
+  "source_url": "https://con-dfr.org/wp-content/uploads/2026/01/TAFOHOM-NAMEH.pdf",
+  "version": "1",
+  "kind": "charter",
+  "fa": "تفاهم‌نامه‌ی همکاری جمهوری‌خواهان دموکرات و فدرال دموکرات",
+  "en": "Congress of Democratic and Federalist Republicans — Memorandum of Cooperation",
+  "author_fa": "کنگره‌ی مشترک جمهوری‌خواهان دموکرات و فدرال دموکرات",
+  "author_en": "Congress of Democratic and Federalist Republicans",
+  "org_en": "Congress of Democratic and Federalist Republicans",
+  "year": null,
+  "era": null,
+  "doc_status": null,
+  "tags": [],
+  "note": "«تفاهم‌نامه همکاری». Undated; its URL shows it was uploaded in January 2026. The PDF's title metadata is unrelated to the document."
+ },
+ {
+  "uid": "sepidar-bylaws",
+  "collection": "org-documents",
+  "status": "active",
+  "source": "اساسنامه‌ی سپیدار حزب زنان ایران ۱۴۰۴.pdf",
+  "legacy_slug": "اساسنامه_ی_سپیدار_حزب_زنان_ایران_۱۴۰۴",
+  "type": "program",
+  "org_ids": [
+   "338"
+  ],
+  "source_url": "https://usercontent.one/wp/www.sepidar.org/wp-content/uploads/2025/08/Hezb-Stadgar.pdf",
+  "version": "1",
+  "kind": "bylaws",
+  "fa": "اساسنامه‌ی سپیدار، حزب زنان ایران",
+  "en": "Sepidar, Iranian Women's Party — Bylaws",
+  "author_fa": "سپیدار حزب زنان ایران",
+  "author_en": "Sepidar WIP",
+  "org_en": "Sepidar WIP",
+  "year": 2025,
+  "era": "مرداد ۱۴۰۴",
+  "doc_status": null,
+  "tags": [],
+  "note": "The party's own PDF of its bylaws, linked from sepidar.org/اساسنامه: 15 chapters, 47 articles, 32 notes (its closing line). Undated; the PDF was made on 15 August 2025. Its text layer is garbled, so the text is vision OCR."
+ },
+ {
+  "uid": "pjak-program-1403",
+  "collection": "org-documents",
+  "status": "active",
+  "source": "برنامه و اساس‌نامه‌ی حزب حیات آزاد کردستان (پژاک) - کنگره‌ی هفتم ۱۴۰۳.pdf",
+  "legacy_slug": "برنامه_و_اساس_نامه_ی_حزب_حیات_آزاد_کردستان_پژاک_کنگره_ی_هفتم_۱۴۰۳",
+  "type": "program",
+  "org_ids": [
+   "310"
+  ],
+  "source_url": "https://atlasiran.org/docs/pjak-constitution-7th-congress.pdf",
+  "version": "1",
+  "kind": "program",
+  "pages": [
+   1,
+   53
+  ],
+  "fa": "برنامه‌ی حزب حیات آزاد کردستان (پژاک)",
+  "en": "Kurdistan Free Life Party (PJAK) — Programme",
+  "author_fa": "حزب حیات آزاد کردستان (پژاک)",
+  "author_en": "Kurdistan Free Life Party (PJAK)",
+  "org_en": "Kurdistan Free Life Party",
+  "year": 2024,
+  "era": "۱۴۰۳",
+  "doc_status": "adopted",
+  "tags": [],
+  "note": "Adopted by the 7th congress (1403 / 2024); the PDF is the party press centre's edition, the copy Atlas hosts. Programme pp. 1–53 (preface and seven parts), bylaws pp. 54–65 («اساس‌نامه پژاک»). The text layer is garbled, so the text is vision OCR."
+ },
+ {
+  "uid": "pjak-bylaws-1403",
+  "collection": "org-documents",
+  "status": "active",
+  "source": "برنامه و اساس‌نامه‌ی حزب حیات آزاد کردستان (پژاک) - کنگره‌ی هفتم ۱۴۰۳.pdf",
+  "legacy_slug": "برنامه_و_اساس_نامه_ی_حزب_حیات_آزاد_کردستان_پژاک_کنگره_ی_هفتم_۱۴۰۳",
+  "type": "program",
+  "org_ids": [
+   "310"
+  ],
+  "source_url": "https://atlasiran.org/docs/pjak-constitution-7th-congress.pdf",
+  "version": "1",
+  "kind": "bylaws",
+  "pages": [
+   54,
+   65
+  ],
+  "fa": "اساس‌نامه‌ی حزب حیات آزاد کردستان (پژاک)",
+  "en": "Kurdistan Free Life Party (PJAK) — Bylaws",
+  "author_fa": "حزب حیات آزاد کردستان (پژاک)",
+  "author_en": "Kurdistan Free Life Party (PJAK)",
+  "org_en": "Kurdistan Free Life Party",
+  "year": 2024,
+  "era": "۱۴۰۳",
+  "doc_status": "adopted",
+  "tags": [],
+  "note": "Adopted by the 7th congress (1403 / 2024); the PDF is the party press centre's edition, the copy Atlas hosts. Programme pp. 1–53 (preface and seven parts), bylaws pp. 54–65 («اساس‌نامه پژاک»). The text layer is garbled, so the text is vision OCR."
  }
 ]

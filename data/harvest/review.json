@@ -8,7 +8,7 @@
   "fetched_at": "2026-09-25T08:39:28+00:00",
   "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
   "kind_guess": null,
-  "decision": "pending",
+  "decision": "unavailable",
   "kind": null,
   "pages_range": null,
   "note": "دامنه rcoir.com دیگر وجود ندارد؛ شاید در archive.org باشد."
@@ -30,7 +30,7 @@
   "arabic_letters": 0,
   "kind_guess": "bylaws",
   "opening": "برنامە و اساسنامەی\nحزب دموکرات کوردستان ایران\n\n\f\f\f\f\f\fبرنامە و اساسنامەی حزب\nدموکرات کوردستان ایران\nمصوبەی کنگرەی ،١٧\nکنگرەی اتحاد دموکرات‌ها\n( ١٥و ١٦بهمن ١٤٠٣خورشیدی)\n\n\f\fمصوبەی کنگرەی ،١٧کنگرەی اتحاد دموکرات‌ها 7 \n\nمقدمە\nکوردســتان در گســرەی جغرافیایــی‌ای کــە منطقــەی\n\nخاورمیانـە نامیـدە می‌شـود ،واقـع شـدە اسـت .بـە دلیـل\nآنکــە از لحــاظ منابــع طبیعــی یــک منطقــەی غنــی بــە\nش ـار م ـی‌رو",
-  "decision": "pending",
+  "decision": "accept",
   "kind": "program+bylaws",
   "pages_range": [
    [
@@ -39,10 +39,49 @@
    ],
    [
     37,
-    60
+    56
    ]
   ],
-  "note": "«برنامه و اساسنامه» مصوب کنگره‌ی ۱۷ (۱۵–۱۶ بهمن ۱۴۰۳): برنامه pp. 1–36، اساسنامه pp. 37–60 (p. 60 تاریخچه‌ی حزب). لایه‌ی متن معیوب (رسنوشت، رصاحت، طوالنی): نیاز به OCR تصویری، ۶۰ صفحه ≈ $2."
+  "note": "«برنامه و اساسنامه» مصوب کنگره‌ی ۱۷ (۱۵–۱۶ بهمن ۱۴۰۳): برنامه pp. 1–36، اساسنامه pp. 37–60 (p. 60 تاریخچه‌ی حزب). لایه‌ی متن معیوب (رسنوشت، رصاحت، طوالنی): نیاز به OCR تصویری، ۶۰ صفحه ≈ $2.",
+  "file": "برنامه و اساسنامه‌ی حزب دموکرات کوردستان ایران - کنگره‌ی ۱۷ ۱۴۰۳.pdf",
+  "entries": [
+   {
+    "uid": "pdki-program-1403",
+    "kind": "program",
+    "pages": [
+     1,
+     36
+    ],
+    "fa": "برنامه‌ی حزب دموکرات کوردستان ایران",
+    "en": "Democratic Party of Iranian Kurdistan — Programme",
+    "author_fa": "حزب دموکرات کوردستان ایران",
+    "author_en": "Democratic Party of Iranian Kurdistan",
+    "org_en": "Democratic Party of Iranian Kurdistan",
+    "year": 2025,
+    "era": "بهمن ۱۴۰۳",
+    "doc_status": "adopted",
+    "tags": [],
+    "note": "Adopted by the 17th congress («کنگره‌ی اتحاد دموکرات‌ها», 15–16 Bahman 1403). Programme pp. 1–36, bylaws pp. 37–56; pp. 57–60 are the party's history and back cover. The text layer is garbled, so the text is vision OCR."
+   },
+   {
+    "uid": "pdki-bylaws-1403",
+    "kind": "bylaws",
+    "pages": [
+     37,
+     56
+    ],
+    "fa": "اساسنامه‌ی حزب دموکرات کوردستان ایران",
+    "en": "Democratic Party of Iranian Kurdistan — Bylaws",
+    "author_fa": "حزب دموکرات کوردستان ایران",
+    "author_en": "Democratic Party of Iranian Kurdistan",
+    "org_en": "Democratic Party of Iranian Kurdistan",
+    "year": 2025,
+    "era": "بهمن ۱۴۰۳",
+    "doc_status": "adopted",
+    "tags": [],
+    "note": "Adopted by the 17th congress («کنگره‌ی اتحاد دموکرات‌ها», 15–16 Bahman 1403). Programme pp. 1–36, bylaws pp. 37–56; pp. 57–60 are the party's history and back cover. The text layer is garbled, so the text is vision OCR."
+   }
+  ]
  },
  {
   "key": "275:d98dff51e0",
@@ -61,10 +100,27 @@
   "arabic_letters": 0,
   "kind_guess": "bylaws",
   "opening": "اساس‌نامهٔ سازمان فداییان خلق ایران (اکثریت)\n\nمصوب کنگرهٔ دوازدهم سازمان – ۲ تا ۵ اردیبهشت ۱۳۹۰ (۲۲ تا ۲۵ آوریل ۲۰۱۱ میلادی)\n\nسازمان فداییان خلق ایران (اکثریت) تشکل داوطلبانهٔ افرادی است که چارچوب کلی برنامهٔ سازمان را پذیرفته و آمادگی دارند با پایبندی به اساس‌نامه برای تحقق اهداف برنامهای سازمان فعالیت کنند. عضویت در سازمان، استعفاء و کناره‌گیری از آن امری آزاد و داوطلبانه است.\n\nسازمان ما به مثاب",
-  "decision": "pending",
+  "decision": "accept",
   "kind": "bylaws",
   "pages_range": null,
-  "note": "مصوب کنگره‌ی دوازدهم، ۲–۵ اردیبهشت ۱۳۹۰. متن از HTML."
+  "note": "مصوب کنگره‌ی دوازدهم، ۲–۵ اردیبهشت ۱۳۹۰. متن از HTML.",
+  "file": "اساسنامه‌ی سازمان فداییان خلق ایران (اکثریت) - کنگره‌ی دوازدهم ۱۳۹۰.pdf",
+  "entries": [
+   {
+    "uid": "fadaian-majority-bylaws-1390",
+    "kind": "bylaws",
+    "fa": "اساسنامه‌ی سازمان فداییان خلق ایران (اکثریت)",
+    "en": "Organization of Iranian People's Fadaian (Majority) — Bylaws",
+    "author_fa": "سازمان فداییان خلق ایران (اکثریت)",
+    "author_en": "Organization of Iranian People's Fadaian (Majority)",
+    "org_en": "Organization of Iranian People's Fadaian (Majority)",
+    "year": 2011,
+    "era": "اردیبهشت ۱۳۹۰",
+    "doc_status": "adopted",
+    "tags": [],
+    "note": "Adopted by the 12th congress, 2–5 Ordibehesht 1390; by its closing line 12 chapters, 26 articles, 82 clauses and 14 notes. The web page drops the article numbers, so the text is audited by page. Reading copy of the web page; the text comes from its HTML."
+   }
+  ]
  },
  {
   "key": "276:0fe9535bd4",
@@ -83,10 +139,27 @@
   "arabic_letters": 0,
   "kind_guess": "bylaws",
   "opening": "1\n\nاساسنامه حزب کمونیست ایران\nکنگره دوم حزب کمونیست ایران اصلاح اساسنامه پیشین و تدوین متن جدید\nرا به کمیته مرکزی منتخب این کنگره واگذار کرد .این متن جدید می بایست\nبر مبنای جهت گیری های خود این کنگره تهیه شده و به رای عموم اعضای\nحزب گذاشته شود ،کمیته مرکزی حزب پس از انتخاب کمیسیونهای لازم و\nبررسی اصلاحیه های رسیده از طرف اعضای حزب ،در پلنوم هشتم\n)سومین پلنوم کمیته مرکزی منتخب کنگره دوم( طرح اساسنا",
-  "decision": "pending",
+  "decision": "accept",
   "kind": "bylaws",
   "pages_range": null,
-  "note": "همان فایل ۲۷۷ و ۳۰۴ (sha 224cb3dc880d): یک سند، org_ids [276, 277, 304]. اساسنامه‌ی حزب کمونیست ایران پس از کنگره‌ی دوم."
+  "note": "همان فایل ۲۷۷ و ۳۰۴ (sha 224cb3dc880d): یک سند، org_ids [276, 277, 304]. اساسنامه‌ی حزب کمونیست ایران پس از کنگره‌ی دوم.",
+  "file": "اساسنامه‌ی حزب کمونیست ایران.pdf",
+  "entries": [
+   {
+    "uid": "cpi-bylaws",
+    "kind": "bylaws",
+    "fa": "اساسنامه‌ی حزب کمونیست ایران",
+    "en": "Communist Party of Iran — Bylaws",
+    "author_fa": "حزب کمونیست ایران",
+    "author_en": "Communist Party of Iran",
+    "org_en": "Communist Party of Iran",
+    "year": null,
+    "era": null,
+    "doc_status": null,
+    "tags": [],
+    "note": "The party's bylaws as rewritten after its second congress, followed by those of Komala as its Kurdistan organisation. No adoption date is given; the file says the party's organisation abroad reproduced it in October 2006. Atlas entries 276, 277 and 304 all link this same PDF."
+   }
+  ]
  },
  {
   "key": "277:8e4b9a83f5",
@@ -105,10 +178,11 @@
   "arabic_letters": 0,
   "kind_guess": "bylaws",
   "opening": "1\n\nاساسنامه حزب کمونیست ایران\nکنگره دوم حزب کمونیست ایران اصلاح اساسنامه پیشین و تدوین متن جدید\nرا به کمیته مرکزی منتخب این کنگره واگذار کرد .این متن جدید می بایست\nبر مبنای جهت گیری های خود این کنگره تهیه شده و به رای عموم اعضای\nحزب گذاشته شود ،کمیته مرکزی حزب پس از انتخاب کمیسیونهای لازم و\nبررسی اصلاحیه های رسیده از طرف اعضای حزب ،در پلنوم هشتم\n)سومین پلنوم کمیته مرکزی منتخب کنگره دوم( طرح اساسنا",
-  "decision": "pending",
+  "decision": "duplicate",
   "kind": "bylaws",
   "pages_range": null,
-  "note": "تکراری؛ ← ۲۷۶"
+  "note": "تکراری؛ ← ۲۷۶",
+  "duplicate_of": "276:0fe9535bd4"
  },
  {
   "key": "278:3c35aa10fc",
@@ -127,10 +201,27 @@
   "arabic_letters": 0,
   "kind_guess": "ideology",
   "opening": "حزب ایران نوین در گرماگرم انقلاب ملی ایران در نخستین روزهای زمستان ۲۵۸۱ شاهنشاهی (۱۴۰۱ خورشیدی) به حیات سیاسی ایران گام گذاشت. سرنوشت‌ساز بودن این مقطع از تاریخ ایران، لزوم تحکیم تحزب و مشارکت در سیاست، کمک به تحقق آرمان‌های مربوط به برپایی حکومت قانون و نیز لزوم تلاش برای تاسیس اصل نیک آزادی، برخی اعضای شبکه فرشگرد و چند تن از دیگر کنشگران را به این نتیجه رهنمون شد که به تاسیس یک حزب سیاسی منسجم ",
-  "decision": "pending",
+  "decision": "accept",
   "kind": "ideology",
   "pages_range": null,
-  "note": "مرامنامه، پیش‌نویس ۱۸ دی ۱۴۰۱، مصوب نخستین کنگره ۶ آبان ۱۴۰۲ (این یادداشت خارج از بدنه‌ی اصلی صفحه است و باید در یادداشت ثبت شود). متن از HTML."
+  "note": "مرامنامه، پیش‌نویس ۱۸ دی ۱۴۰۱، مصوب نخستین کنگره ۶ آبان ۱۴۰۲ (این یادداشت خارج از بدنه‌ی اصلی صفحه است و باید در یادداشت ثبت شود). متن از HTML.",
+  "file": "مرامنامه‌ی حزب ایران نوین ۱۴۰۲.pdf",
+  "entries": [
+   {
+    "uid": "iran-novin-ideology-1402",
+    "kind": "ideology",
+    "fa": "مرامنامه‌ی حزب ایران نوین",
+    "en": "Iran Novin Party — Statement of Principles",
+    "author_fa": "حزب ایران نوین",
+    "author_en": "The Iran Novin Party (Modern Iran Party)",
+    "org_en": "The Iran Novin Party (Modern Iran Party)",
+    "year": 2023,
+    "era": "آبان ۱۴۰۲",
+    "doc_status": "adopted",
+    "tags": [],
+    "note": "Drafted 18 Dey 1401, adopted by the party's first congress on 6 Aban 1402 (stated on the page, below its main text). Reading copy of the web page; the text comes from its HTML."
+   }
+  ]
  },
  {
   "key": "290:268c9931c4",
@@ -149,10 +240,27 @@
   "arabic_letters": 0,
   "kind_guess": "bylaws",
   "opening": "اساسنامه حزب دموکرات آذربایجان\n\nنام و نشان تشکیلات\n\n1. نام تشکیلات، «حزب دموکرات آذربایجان» است. نام این حزب به انگلیسی: Azerbaijan Democratic Party و به فارسی: «حزب دموکرات آذربایجان» می‌باشد.\n\n2. حزب دموکرات آذربایجان با لوگو و نماد ویژه‌ی خود شناخته می‌شود.\n\nاهداف و اصول تشکیلات\n\n1. حزب دموکرات آذربایجان، یک سازمان سیاسی متعلق به آذربایجان است که همه اقشار ملت ترک، همه وطن‌دوستان، آزادی‌خواهان،",
-  "decision": "pending",
+  "decision": "accept",
   "kind": "bylaws",
   "pages_range": null,
-  "note": "عنوان صفحه به ترکی آذربایجانی، متن فارسی. شماره‌گذاری بندها از فهرست HTML. متن از HTML."
+  "note": "عنوان صفحه به ترکی آذربایجانی، متن فارسی. شماره‌گذاری بندها از فهرست HTML. متن از HTML.",
+  "file": "اساسنامه‌ی حزب دموکرات آذربایجان.pdf",
+  "entries": [
+   {
+    "uid": "adp-bylaws",
+    "kind": "bylaws",
+    "fa": "اساسنامه‌ی حزب دموکرات آذربایجان",
+    "en": "Democratic Party of Azerbaijan — Bylaws",
+    "author_fa": "حزب دموکرات آذربایجان",
+    "author_en": "Democratic Party of Azerbaijan",
+    "org_en": "Democratic Party of Azerbaijan",
+    "year": null,
+    "era": null,
+    "doc_status": null,
+    "tags": [],
+    "note": "Undated. The page title is in Azerbaijani Turkish, the text in Persian. The page numbers its first section 1–2 and then runs one list 1–31; the split follows that list, so its items 1–2 sit inside item 2. Reading copy of the web page; the text comes from its HTML."
+   }
+  ]
  },
  {
   "key": "292:d73fbbb413",
@@ -171,10 +279,27 @@
   "arabic_letters": 0,
   "kind_guess": "charter",
   "opening": "تفاهم‌نامه همکاری\nآنچه می‌آید ،تفاهم‌نامه همکاری میان جمهور ی‌خواهان دموکرات و سکوالر ایران\nاست.\nاین تفاهم‌نامه با هدف تعیین و تبیین اصول حداقلی مورد توافق جمهور ی‌خواهان\nدموکرات و سکوالر ایران ،جهت همکاری سازمان‌ها ،حزب‌ها و شخصیت‌های مستقل،\nدر راستای ایجاد بدیل جمهوری و گذار از نظام «جمهوری اسالمی ایران» منعقد\nمی‌شود.\n\nمقدمه\nجمهور ی‌خواهان دموکرات و سکوالر ،با اذعان به تنوع و تکثر دیدگاه‌ها و رو",
-  "decision": "pending",
+  "decision": "accept",
   "kind": "charter",
   "pages_range": null,
-  "note": "«تفاهم‌نامه همکاری» جمهوری‌خواهان دموکرات و سکولار؛ عنوان متادیتای PDF ربطی به سند ندارد."
+  "note": "«تفاهم‌نامه همکاری» جمهوری‌خواهان دموکرات و سکولار؛ عنوان متادیتای PDF ربطی به سند ندارد.",
+  "file": "تفاهم‌نامه‌ی همکاری کنگره‌ی مشترک جمهوری‌خواهان دموکرات و فدرال دموکرات.pdf",
+  "entries": [
+   {
+    "uid": "condfr-charter",
+    "kind": "charter",
+    "fa": "تفاهم‌نامه‌ی همکاری جمهوری‌خواهان دموکرات و فدرال دموکرات",
+    "en": "Congress of Democratic and Federalist Republicans — Memorandum of Cooperation",
+    "author_fa": "کنگره‌ی مشترک جمهوری‌خواهان دموکرات و فدرال دموکرات",
+    "author_en": "Congress of Democratic and Federalist Republicans",
+    "org_en": "Congress of Democratic and Federalist Republicans",
+    "year": null,
+    "era": null,
+    "doc_status": null,
+    "tags": [],
+    "note": "«تفاهم‌نامه همکاری». Undated; its URL shows it was uploaded in January 2026. The PDF's title metadata is unrelated to the document."
+   }
+  ]
  },
  {
   "key": "304:0fe9535bd4",
@@ -193,10 +318,81 @@
   "arabic_letters": 0,
   "kind_guess": "bylaws",
   "opening": "1\n\nاساسنامه حزب کمونیست ایران\nکنگره دوم حزب کمونیست ایران اصلاح اساسنامه پیشین و تدوین متن جدید\nرا به کمیته مرکزی منتخب این کنگره واگذار کرد .این متن جدید می بایست\nبر مبنای جهت گیری های خود این کنگره تهیه شده و به رای عموم اعضای\nحزب گذاشته شود ،کمیته مرکزی حزب پس از انتخاب کمیسیونهای لازم و\nبررسی اصلاحیه های رسیده از طرف اعضای حزب ،در پلنوم هشتم\n)سومین پلنوم کمیته مرکزی منتخب کنگره دوم( طرح اساسنا",
-  "decision": "pending",
+  "decision": "duplicate",
   "kind": "bylaws",
   "pages_range": null,
-  "note": "تکراری؛ ← ۲۷۶"
+  "note": "تکراری؛ ← ۲۷۶",
+  "duplicate_of": "276:0fe9535bd4"
+ },
+ {
+  "key": "310:154acc7dce",
+  "org_id": "310",
+  "name_fa": "حزب حیات آزاد کردستان ایران",
+  "field": "manifest",
+  "url": "https://atlasiran.org/docs/pjak-constitution-7th-congress.pdf",
+  "fetched_at": "2026-09-25T09:14:08+00:00",
+  "type": "pdf",
+  "title": "",
+  "h1": "",
+  "pages": 65,
+  "chars": 92138,
+  "fa_script_share": 1.0,
+  "kurdish_letters": 0,
+  "arabic_letters": 0,
+  "kind_guess": "program",
+  "opening": "FREE LIVE\nPARTY OF\nKURDISTAN\nمرکز‌مطبوعات‌حزب‌حیات‌آزاد‌کردستان\n\n\fپارتی‌ژیانیئازادیکوردستان\n\nPARTÎYA JÎYANA AZAD A\nKURDISTANÊ\n\nPJAK\n\nبرنامه‌و‌اساس‌نامه(فارسی)\n\n7\n\nحزب‌حیات‌آزاد‌کردستان\n\nمصوبه‌ی‌کنگره‌ی\n1403 � 2024\n\n\fبرنامه‌و‌اساس‌نامه‌ی‌\n\n‌حزب‌حیات‌آزاد‌کردستان\n\nمصوب کنگره ی هفتم\nکمیته‌ی مطبوعات‌پژاک\nچاپ اول بهار۱٤٠٣-۲۰٢٤\nشامرگان ۵۰۰۰هزار جدل\nطراحی جدل و صفهح آرایی جدل،مکزر هنری\nپژاک چاپ و نرش .چپ",
+  "decision": "accept",
+  "kind": "program+bylaws",
+  "pages_range": [
+   [
+    1,
+    53
+   ],
+   [
+    54,
+    65
+   ]
+  ],
+  "note": "Atlas links its own copy (static/docs), identical to the file served at atlasiran.org.",
+  "file": "برنامه و اساس‌نامه‌ی حزب حیات آزاد کردستان (پژاک) - کنگره‌ی هفتم ۱۴۰۳.pdf",
+  "entries": [
+   {
+    "uid": "pjak-program-1403",
+    "kind": "program",
+    "pages": [
+     1,
+     53
+    ],
+    "fa": "برنامه‌ی حزب حیات آزاد کردستان (پژاک)",
+    "en": "Kurdistan Free Life Party (PJAK) — Programme",
+    "author_fa": "حزب حیات آزاد کردستان (پژاک)",
+    "author_en": "Kurdistan Free Life Party (PJAK)",
+    "org_en": "Kurdistan Free Life Party",
+    "year": 2024,
+    "era": "۱۴۰۳",
+    "doc_status": "adopted",
+    "tags": [],
+    "note": "Adopted by the 7th congress (1403 / 2024); the PDF is the party press centre's edition, the copy Atlas hosts. Programme pp. 1–53 (preface and seven parts), bylaws pp. 54–65 («اساس‌نامه پژاک»). The text layer is garbled, so the text is vision OCR."
+   },
+   {
+    "uid": "pjak-bylaws-1403",
+    "kind": "bylaws",
+    "pages": [
+     54,
+     65
+    ],
+    "fa": "اساس‌نامه‌ی حزب حیات آزاد کردستان (پژاک)",
+    "en": "Kurdistan Free Life Party (PJAK) — Bylaws",
+    "author_fa": "حزب حیات آزاد کردستان (پژاک)",
+    "author_en": "Kurdistan Free Life Party (PJAK)",
+    "org_en": "Kurdistan Free Life Party",
+    "year": 2024,
+    "era": "۱۴۰۳",
+    "doc_status": "adopted",
+    "tags": [],
+    "note": "Adopted by the 7th congress (1403 / 2024); the PDF is the party press centre's edition, the copy Atlas hosts. Programme pp. 1–53 (preface and seven parts), bylaws pp. 54–65 («اساس‌نامه پژاک»). The text layer is garbled, so the text is vision OCR."
+   }
+  ]
  },
  {
   "key": "311:b7c2b1ba86",
@@ -207,10 +403,49 @@
   "fetched_at": "2026-09-25T08:38:26+00:00",
   "error": "HTTPError: HTTP Error 404: Not Found",
   "kind_guess": null,
-  "decision": "pending",
+  "decision": "unavailable",
   "kind": null,
   "pages_range": null,
   "note": "پیوند اطلس ۴۰۴ می‌دهد؛ نسخه‌ی تازه لازم است."
+ },
+ {
+  "key": "338:784c83866c",
+  "org_id": "338",
+  "name_fa": "سپیدار حزب زنان ایران",
+  "field": "linked_from:92a0eb71ec",
+  "url": "https://usercontent.one/wp/www.sepidar.org/wp-content/uploads/2025/08/Hezb-Stadgar.pdf",
+  "fetched_at": "2026-09-25T09:04:18+00:00",
+  "type": "pdf",
+  "title": "",
+  "h1": "",
+  "pages": 26,
+  "chars": 26473,
+  "fa_script_share": 1.0,
+  "kurdish_letters": 0,
+  "arabic_letters": 0,
+  "kind_guess": "bylaws",
+  "opening": "1\n\nاساسنامه سپیدار حزب زنان ایران\nمقدمه\n\nاین حزب با هدف مشارکت در انتخابات ،کسب قدرت سیاسی و تاثیرگذاری بر سیاست\nهای کالن کشور تاسیس شده است .ما بر این باوریم که آینده ایران باید بر پایه حکومتی\nدموکراتیک ،سکوالر ،شفاف و مبتنی بر مشارکت مردم بنا شود .اصول بنیادین ما شامل\nتضمین برگزاری انتخابات آزاد ،آگاهانه ،عادالنه ،حاکمیت مردم و رعایت دموکراسی است.\nحزب زنان ایران ،که ریشه در انجمن سپیدار دارد ،از",
+  "decision": "accept",
+  "kind": "bylaws",
+  "pages_range": null,
+  "note": "Linked from the bylaws page (338:92a0eb71ec) as «دریافت نسخه پی دی اف اساسنامه سپیدار حزب زنان ایران».",
+  "file": "اساسنامه‌ی سپیدار حزب زنان ایران ۱۴۰۴.pdf",
+  "entries": [
+   {
+    "uid": "sepidar-bylaws",
+    "kind": "bylaws",
+    "fa": "اساسنامه‌ی سپیدار، حزب زنان ایران",
+    "en": "Sepidar, Iranian Women's Party — Bylaws",
+    "author_fa": "سپیدار حزب زنان ایران",
+    "author_en": "Sepidar WIP",
+    "org_en": "Sepidar WIP",
+    "year": 2025,
+    "era": "مرداد ۱۴۰۴",
+    "doc_status": null,
+    "tags": [],
+    "note": "The party's own PDF of its bylaws, linked from sepidar.org/اساسنامه: 15 chapters, 47 articles, 32 notes (its closing line). Undated; the PDF was made on 15 August 2025. Its text layer is garbled, so the text is vision OCR."
+   }
+  ]
  },
  {
   "key": "338:92a0eb71ec",
@@ -229,9 +464,10 @@
   "arabic_letters": 0,
   "kind_guess": "bylaws",
   "opening": "اساسنامه سپیدار حزب زنان ایران\n\nمقدمه\n\nاین حزب با هدف مشارکت در انتخابات ، کسب قدرت سیاسی و تاثیرگذاری بر سیاست های کلان کشور تاسیس شده است. ما بر این باوریم که آینده ایران باید بر پایه حکومتی دموکراتیک، سکولار، شفاف و مبتنی بر مشارکت مردم بنا شود. اصول بنیادین ما شامل تضمین برگزاری انتخابات آزاد، آگاهانه، عادلانه، حاکمیت مردم و رعایت دموکراسی است.\nحزب زنان ایران ، که ریشه در انجمن سپیدار دارد، از",
-  "decision": "pending",
+  "decision": "replaced",
   "kind": "bylaws",
   "pages_range": null,
-  "note": "۷ فصل، ۲۵ ماده، ۲۳ تبصره. متن از HTML."
+  "note": "The page holds the party's bylaws (47 articles) followed by the older bylaws of the Sepidar cultural association (25 articles, from the association's registration in Sweden, March 2021). The party links its own PDF of the bylaws from this page; that PDF is a slightly different edition, so it is the document used.",
+  "replaced_by": "338:784c83866c"
  }
 ]

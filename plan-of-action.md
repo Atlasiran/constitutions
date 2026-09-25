@@ -238,6 +238,14 @@ relations: [{"type": "member_of", "target": "310", "since": "", "until": "", "so
   - fa.wikipedia says PJAK is a «گروه همکار» (cooperating group), citing pjak.eu. Per the user's decision this is **not** recorded; if it is ever added, it needs the pjak.eu page read first-hand and status `self_declared`.
   - It was searched for in the org pages, the CSV and data.json, and was not listed.
 
+**Harvest pilot (5.3, 2026-09-25)**
+- Collection `org-documents`, `type: program`, `org_ids` from the Atlas entry that links the document. Reviewer decisions, corpus file names and registry fields live in `data/harvest/review.json`; `harvest.py ingest` writes the registry from it.
+- A web page enters as a reading-copy PDF of its main text; its corpus text is taken from the HTML and cut at the reading copy's page breaks (matched on a letter skeleton, since the copy's text layer turns «لا» into «ال»).
+- In: PDKI programme pp. 1–36 and bylaws pp. 37–56 (17th congress, Bahman 1403; pp. 57–60 history and cover), vision OCR. Fadaian (Majority) bylaws (12th congress, 1390), web page. Communist Party of Iran bylaws, one PDF linked by Atlas 276, 277 and 304, undated (reproduced October 2006). Iran Novin مرامنامه (adopted 6 Aban 1402), web page. Azerbaijan Democratic Party bylaws, web page, undated. Joint congress of democratic and federal republicans, «تفاهم‌نامه همکاری» (`charter`), undated (uploaded January 2026), vision OCR. Sepidar bylaws: the party's own PDF (August 2025, 47 articles), vision OCR.
+- Sepidar's web page holds the party's bylaws followed by the older bylaws of the Sepidar cultural association (25 articles); the party's PDF, linked from that page, is a slightly different edition and is the one used.
+- Fadaian's web page drops the article numbers (26 articles by its closing line), so it is audited by page.
+- Dead: 311 Yarsan (404), 210 rcoir.com (domain gone). Try archive.org later.
+
 ---
 
 ## 10. Work plan
@@ -291,7 +299,7 @@ Status values: ☐ to do · ◐ in progress · ☑ done
 |---|---|---|
 | 5.1 | Compare view limited to one comparison group; deep-link parameters | ☑ groups A/B/C + D (treatises); `#compare=a,b[,topic]`, `#search=…`, `#map` |
 | 5.2 | «مقایسه اساسنامه» / «مقایسه منشور» ("compare bylaws" / "compare charter") button on `/op/[page]`, shown only when a comparable document exists | ☐ |
-| 5.3 | Ingest the PJAK PDF from Atlas `static/docs/`; harvest the 104 `manifest`/`coc` links (download → classify → extract → link to organisation, with review) | ☐ |
+| 5.3 | Ingest the PJAK PDF from Atlas `static/docs/`; harvest the 104 `manifest`/`coc` links (download → classify → extract → link to organisation, with review) | ◐ `pipeline/harvest.py` (list → fetch → report → review → ingest). Pilot of 10 orgs: 8 documents in (see §9); 2 dead links. PJAK: programme pp. 1–53, bylaws pp. 54–65, garbled text layer, re-read with vision OCR (65 pages ≈ $1.3). The other 90 links next |
 | 5.4 | Benchmark audit through the batch pipeline; rights matrix with citations; methodology page; review workflow | ◐ `pipeline/audit.py` (submit/collect → `data/audits/<uid>.json`, review status `unreviewed`); first run pending |
 
 ### Phase 6: Atlas connections
@@ -320,6 +328,8 @@ Status values: ☐ to do · ◐ in progress · ☑ done
 - **`extract.py` and vision texts:** it used to keep only `source: "ocr"` texts, so a plain run would have overwritten the vision-read ones with `pdftotext` output. Fixed 2026-09-25 (it keeps `ocr` and `vision`).
 - **Adding an org to Atlas:** use the README flow, never a hand-written page (`/parties` reads `political_parties.json`, which only `csv_to_json.py` writes). Run `md_to_json.py` first, because `csv_to_json.py` takes `logo` from the stale committed `data.json`. The CSV export uses CRLF, has LF inside cells, and has no final newline; edit it byte-exact (`newline=''`).
 - **OG images:** `gen_org_og_images.py` needs Pillow's basic layout (fixed in Atlas `b0f9a6f`); with raqm the Persian came out reversed.
+- **«لا» in Word and InDesign PDFs:** `pdftotext` turns the ligature into «ال» («میالدی»، «تشکیالت»), which can't be undone by rule. Found in 6 older corpus texts (Banisadr 1398: 268 words; the CPI (ML) draft: 98; Banisadr 1397: 94; Nayeb Hashem provisional: 26; NCRI ten articles: 23; Mostashar: 15) and in the harvested PDKI, con-dfr, Sepidar and PJAK PDFs. Fix: vision OCR (all six re-read in full on 2026-09-25, 1,012 pages ≈ $20; the session-5 note that their text layer was right missed this). Check a new PDF for «الف/الع/الت» inside words before accepting its text layer.
+- **`articles.py` on unlabelled lists:** without «اصل/ماده» headings it now falls back to lines numbered «1.» when one clean run from 1 covers ≥ 80% of numbered lines (Azerbaijan Democratic Party: 31). A single stray «ماده N» (a cross-reference or the closing count) still yields one false article (Fadaian, Mostashar, Worker Unity, Khomeini); treating fewer than 3 as none would change existing counts, so it is left for review.
 - **Web summaries are not sources.** Verify facts such as membership, dates and URLs against primary sources before publishing (rule 5).
 
 ---
@@ -394,3 +404,6 @@ Status values: ☐ to do · ◐ in progress · ☑ done
   - 6.1–6.3 on Atlas branch `org-relations`; see §8. Tested with a temporary relation (Turkmens → joint congress): both pages render the section, the graph gets the edge, the CSV sync keeps the line, a sourceless relation stops the build. Fixture reverted; no relations are recorded.
   - Nothing pushed. Left alone: another session's uncommitted `pipeline/proofread.py`, `data/proof/`, `data/audits/` (first audit, iri-constitution-1979). Noticed for proofreading: the Parsa text ends 98 of 149 pages with the footer `www.ghanon.org`.
   - Redid 4.3 by the documented procedure (the hand-written page was discarded). The local CSV got the Democratic Platform row plus two values brought in line with hand edits: PJAK manifest `docs/pjak-constitution-7th-congress.pdf` and TCF website `https://transcf.org/about-us/` (the user mirrors these in the shared spreadsheet; backup in `data/`). Atlas `democratic-platform`: `b0f9a6f` OG layout fix, `14edc91` the org, `86e2516` regenerated OG images (footer now «AtlasIran.org»; PJAK's shows its logo).
+- **2026-09-25 (session 7):**
+  - 5.3 pilot ingested (§9): PDKI programme and bylaws, Fadaian (Majority) bylaws, CPI bylaws, Iran Novin ideology, Azerbaijan Democratic Party bylaws, con-dfr charter, Sepidar bylaws (the party PDF, not the web page, which mixes in the older association bylaws), PJAK programme and bylaws (org 310, not 95). 48 registry entries.
+  - Vision OCR: PDKI + con-dfr (64 pages), Sepidar (26), PJAK (65), and the six older texts with broken «لا» (1,012 pages in 11 batches).

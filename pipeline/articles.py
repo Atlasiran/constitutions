@@ -20,6 +20,8 @@ def repair(s):
         s = re.sub(rf'(?<=[{L}])\s*ـ+\s*(?=[{L}])', '', s)
     return s
 
+FA_DIGITS = str.maketrans("۰۱۲۳۴۵۶۷۸۹", "0123456789")
+
 UC = {1:'یک',2:'دو',3:'سه',4:'چهار',5:'پنج',6:'شش',7:'هفت',8:'هشت',9:'نه'}
 UO = {1:'اول',2:'دوم',3:'سوم',4:'چهارم',5:'پنجم',6:'ششم',7:'هفتم',8:'هشتم',9:'نهم'}
 TC = {10:'ده',11:'یازده',12:'دوازده',13:'سیزده',14:'چهارده',15:'پانزده',16:'شانزده',
@@ -166,6 +168,15 @@ def split(pages):
         keep = longest_run([n for _, _, n in ms])
         if best is None or len(keep) > len(best[1]):
             best = (kind, [ms[i] for i in keep])
+    if len(best[1]) < 3:
+        # no labelled headings: a list numbered «1.» … «31.» (a web page's <ol>) counts when one clean run
+        # covers most numbered lines, so scattered short lists are never read as articles
+        ms = [(m.start(), m.end(), int(m.group(1).translate(FA_DIGITS)))
+              for m in re.finditer(r'(?m)^[ \t]*([\d۰-۹]{1,3})\.[ \t]+', full) if not in_toc(m.start())]
+        keep = _chain([n for _, _, n in ms], [True]*len(ms))
+        nums = [ms[i][2] for i in keep]
+        if len(keep) >= 10 and len(keep) >= 0.8 * len(ms) and nums[0] == 1 and score(nums, range(len(nums))) >= 0.9:
+            best = ('بند', [ms[i] for i in keep])
     kind, ms = best
     ms = fill_gaps(ms, full, kind, in_toc)
     arts = []
