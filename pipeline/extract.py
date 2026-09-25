@@ -34,7 +34,7 @@ def main():
         dest = os.path.join(OUT, slug + ".json")
         if not force and os.path.exists(dest):
             prev = json.load(open(dest, encoding="utf-8"))
-            if prev.get("source") == "ocr":          # keep OCR output; --force to redo
+            if prev.get("source") in ("ocr", "vision"):   # keep OCR output; --force to redo
                 chars = sum(len(pg["text"]) for pg in prev["pages"])
                 manifest.append({"slug": slug, "source_pdf": base, "pages": len(prev["pages"]),
                                  "chars": chars, "needs_ocr": False})

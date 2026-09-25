@@ -16,7 +16,7 @@ def articles_by_source():
     idx = {}
     for p in glob.glob(os.path.join(D, "articles", "*.json")):
         a = json.load(open(p, encoding="utf-8"))
-        idx[a["source_pdf"]] = (p, a)
+        idx[a.get("uid") or a["source_pdf"]] = (p, a)   # a PDF split by `pages` has one file per uid
     return idx
 
 # `kind` decides what a document may be compared with (bylaws only with bylaws)
@@ -31,11 +31,13 @@ def main():
     out, missing = [], []
     for r in reg:
         if r.get("status") != "active": continue
-        hit = idx.get(r["source"])
+        hit = idx.get(r["uid"] if r.get("pages") else r["source"])
         if not hit: missing.append(r["uid"]); continue
         apath, art = hit
-        tpath = os.path.join(D, "text", os.path.basename(apath))
+        tpath = os.path.join(D, "text", r["legacy_slug"] + ".json")
         txt = json.load(open(tpath, encoding="utf-8")) if os.path.exists(tpath) else {"pages": []}
+        if r.get("pages"):
+            lo, hi = r["pages"]; txt["pages"] = [p for p in txt["pages"] if lo <= p["page"] <= hi]
         meta = {k: v for k, v in r.items() if k not in ("legacy_slug", "source")}
         out.append({**meta, "source_pdf": r["source"], "unit": art["unit"],
                     "n_articles": len(art["articles"]), "n_pages": len(txt["pages"]),

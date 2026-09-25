@@ -19,7 +19,7 @@ import json, os, sys, urllib.error, urllib.request
 from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from articles import repair
+from articles import repair, articles_name
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
@@ -72,7 +72,7 @@ def segments(entry):
     """Numbered segments for one registry entry, and how they were made."""
     slug = entry["legacy_slug"]
     pages = json.load(open(os.path.join(DATA, "text", slug + ".json"), encoding="utf-8"))["pages"]
-    arts = json.load(open(os.path.join(DATA, "articles", slug + ".json"), encoding="utf-8"))
+    arts = json.load(open(os.path.join(DATA, "articles", articles_name(entry) + ".json"), encoding="utf-8"))
     lo, hi = entry.get("pages") or (1, 10**9)
     pages = [p for p in pages if lo <= p["page"] <= hi]
 

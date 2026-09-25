@@ -902,5 +902,100 @@
    }
   ],
   "note": "Individual project of the jurist Jahan Asadi (naoruz.com); no organisation. Source PDF was printed without a usable text layer, so the text is OCR."
+ },
+ {
+  "uid": "dp-bylaws-2026",
+  "collection": "iran-drafts",
+  "status": "active",
+  "source": "پلتفرم دموکراتیک ایران - اساسنامه، منشور سیاسی و رئوس برنامه ۲۰۲۶.pdf",
+  "legacy_slug": "پلتفرم_دموکراتیک_ایران_اساسنامه،_منشور_سیاسی_و_رئوس_برنامه_۲۰۲۶",
+  "fa": "اساسنامه و نظام سازمانی پلتفرم دموکراتیک ایران",
+  "en": "Democratic Platform of Iran — Bylaws and Organisational Structure",
+  "author_fa": "پلتفرم دموکراتیک ایران",
+  "author_en": "Democratic Platform of Iran",
+  "org_en": "Democratic Platform of Iran",
+  "year": 2026,
+  "era": "۲۰۲۶",
+  "type": "program",
+  "kind": "bylaws",
+  "org_ids": [
+   "440"
+  ],
+  "pages": [
+   2,
+   21
+  ],
+  "doc_status": "draft",
+  "source_url": null,
+  "version": "1",
+  "tags": [
+   "democratic",
+   "secular"
+  ],
+  "note": "One PDF (Word export, 2026-09-21) titled «نسخه نهایی ممیزی‌شده برای بررسی و تصویب»: bylaws pp. 2–21, programme outline pp. 22–26, political charter pp. 27–75 (its contents list on 27–30). Its text layer is garbled, so the text is vision OCR. Not linked to any other organisation (plan rule 5)."
+ },
+ {
+  "uid": "dp-program-2026",
+  "collection": "iran-drafts",
+  "status": "active",
+  "source": "پلتفرم دموکراتیک ایران - اساسنامه، منشور سیاسی و رئوس برنامه ۲۰۲۶.pdf",
+  "legacy_slug": "پلتفرم_دموکراتیک_ایران_اساسنامه،_منشور_سیاسی_و_رئوس_برنامه_۲۰۲۶",
+  "fa": "رئوس برنامه سیاسی پلتفرم دموکراتیک ایران",
+  "en": "Democratic Platform of Iran — Political Programme Outline",
+  "author_fa": "پلتفرم دموکراتیک ایران",
+  "author_en": "Democratic Platform of Iran",
+  "org_en": "Democratic Platform of Iran",
+  "year": 2026,
+  "era": "۲۰۲۶",
+  "type": "program",
+  "kind": "program",
+  "org_ids": [
+   "440"
+  ],
+  "pages": [
+   22,
+   26
+  ],
+  "doc_status": "draft",
+  "source_url": null,
+  "version": "1",
+  "tags": [
+   "republic",
+   "democratic",
+   "secular"
+  ],
+  "note": "One PDF (Word export, 2026-09-21) titled «نسخه نهایی ممیزی‌شده برای بررسی و تصویب»: bylaws pp. 2–21, programme outline pp. 22–26, political charter pp. 27–75 (its contents list on 27–30). Its text layer is garbled, so the text is vision OCR. Not linked to any other organisation (plan rule 5)."
+ },
+ {
+  "uid": "dp-charter-2026",
+  "collection": "iran-drafts",
+  "status": "active",
+  "source": "پلتفرم دموکراتیک ایران - اساسنامه، منشور سیاسی و رئوس برنامه ۲۰۲۶.pdf",
+  "legacy_slug": "پلتفرم_دموکراتیک_ایران_اساسنامه،_منشور_سیاسی_و_رئوس_برنامه_۲۰۲۶",
+  "fa": "منشور سیاسی پلتفرم دموکراتیک ایران",
+  "en": "Democratic Platform of Iran — Political Charter",
+  "author_fa": "پلتفرم دموکراتیک ایران",
+  "author_en": "Democratic Platform of Iran",
+  "org_en": "Democratic Platform of Iran",
+  "year": 2026,
+  "era": "۲۰۲۶",
+  "type": "program",
+  "kind": "charter",
+  "org_ids": [
+   "440"
+  ],
+  "pages": [
+   27,
+   75
+  ],
+  "doc_status": "draft",
+  "source_url": null,
+  "version": "1",
+  "tags": [
+   "republic",
+   "democratic",
+   "secular"
+  ],
+  "note": "One PDF (Word export, 2026-09-21) titled «نسخه نهایی ممیزی‌شده برای بررسی و تصویب»: bylaws pp. 2–21, programme outline pp. 22–26, political charter pp. 27–75 (its contents list on 27–30). Its text layer is garbled, so the text is vision OCR. Not linked to any other organisation (plan rule 5)."
  }
 ]

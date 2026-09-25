@@ -150,40 +150,57 @@ def longest_run(nums):
     if not cands: return []
     return max(cands, key=lambda c: (round(score(nums, c), 2), len(c)))
 
+def split(pages):
+    """Articles of these pages: (unit, articles, seq_score)."""
+    full, offs, toc = "", [], []
+    for pg in pages:
+        offs.append((len(full), pg["page"]))
+        t = repair(pg["text"])
+        if toc_page(t): toc.append((len(full), len(full) + len(t)))
+        full += t + "\n"
+    in_toc = lambda i: any(a <= i < b for a, b in toc)
+    best = None
+    for kind in ('اص[سص]?ل', 'ماد[هدة]', 'بند', 'تبصره'):
+        # headings listed in a table of contents would otherwise compete with the real ones
+        ms = [m for m in markers(full, kind) if not in_toc(m[0])]
+        keep = longest_run([n for _, _, n in ms])
+        if best is None or len(keep) > len(best[1]):
+            best = (kind, [ms[i] for i in keep])
+    kind, ms = best
+    ms = fill_gaps(ms, full, kind, in_toc)
+    arts = []
+    for i, (s, e, n, inferred) in enumerate(ms):
+        stop = ms[i+1][0] if i+1 < len(ms) else len(full)
+        body = full[e:stop].strip(" :ـ-–—\n\t")
+        page = max((p for off, p in offs if off <= s), default=pages[0]["page"] if pages else 1)
+        arts.append({"n": n, "kind": kind, "page": page, "text": body} | ({"n_inferred": True} if inferred else {}))
+    nums_k = [a["n"] for a in arts]
+    conf = round(min(len(arts), max(nums_k))/max(len(arts), max(nums_k)), 3) if arts else 0.0
+    return kind, arts, conf
+
+def articles_name(entry):
+    """Articles file of a registry entry. A PDF split by `pages` into several documents gets one file per entry."""
+    return entry["legacy_slug"] + (f"__{entry['uid']}" if entry.get("pages") else "")
+
 def main():
+    registry = json.load(open(os.path.join(DATA, "registry.json"), encoding="utf-8"))
     rows, total = [], 0
     for path in sorted(glob.glob(os.path.join(DATA, "text", "*.json"))):
         doc = json.load(open(path, encoding="utf-8"))
-        full, offs, toc = "", [], []
-        for pg in doc["pages"]:
-            offs.append((len(full), pg["page"]))
-            t = repair(pg["text"])
-            if toc_page(t): toc.append((len(full), len(full) + len(t)))
-            full += t + "\n"
-        in_toc = lambda i: any(a <= i < b for a, b in toc)
-        best = None
-        for kind in ('اص[سص]?ل', 'ماد[هدة]', 'بند', 'تبصره'):
-            # headings listed in a table of contents would otherwise compete with the real ones
-            ms = [m for m in markers(full, kind) if not in_toc(m[0])]
-            keep = longest_run([n for _, _, n in ms])
-            if best is None or len(keep) > len(best[1]):
-                best = (kind, [ms[i] for i in keep])
-        kind, ms = best
-        ms = fill_gaps(ms, full, kind, in_toc)
-        arts = []
-        for i, (s, e, n, inferred) in enumerate(ms):
-            stop = ms[i+1][0] if i+1 < len(ms) else len(full)
-            body = full[e:stop].strip(" :ـ-–—\n\t")
-            page = max((p for off, p in offs if off <= s), default=1)
-            arts.append({"n": n, "kind": kind, "page": page, "text": body} | ({"n_inferred": True} if inferred else {}))
-        slug = os.path.basename(path)[:-5]
-        nums_k = [a["n"] for a in arts]
-        conf = round(min(len(arts), max(nums_k))/max(len(arts), max(nums_k)), 3) if arts else 0.0
-        json.dump({"source_pdf": doc["source_pdf"], "unit": kind, "seq_score": conf, "articles": arts},
-                  open(os.path.join(DATA, "articles", slug + ".json"), "w", encoding="utf-8"),
-                  ensure_ascii=False, indent=1)
-        rows.append((len(arts), kind, arts[-1]["n"] if arts else 0, doc["source_pdf"]))
-        total += len(arts)
+        parts = [r for r in registry if r["source"] == doc["source_pdf"] and r.get("pages")]
+        for r in parts or [None]:
+            if r:
+                lo, hi = r["pages"]
+                pages, name, extra = [p for p in doc["pages"] if lo <= p["page"] <= hi], articles_name(r), {"uid": r["uid"]}
+            else:
+                pages, name, extra = doc["pages"], os.path.basename(path)[:-5], {}
+            kind, arts, conf = split(pages)
+            json.dump({"source_pdf": doc["source_pdf"], **extra, "unit": kind, "seq_score": conf, "articles": arts},
+                      open(os.path.join(DATA, "articles", name + ".json"), "w", encoding="utf-8"),
+                      ensure_ascii=False, indent=1)
+            label = doc["source_pdf"] if not r else f"{r['uid']} (pp. {r['pages'][0]}–{r['pages'][1]})"
+            rows.append((len(arts), kind, arts[-1]["n"] if arts else 0, label))
+            total += len(arts)
     rows.sort(key=lambda r: -r[0])
     print(f"{'ARTS':>5} {'UNIT':<6}{'LAST':>5}  DOCUMENT"); print("-"*74)
     for n, k, last, src in rows: print(f"{n:>5} {k:<6}{last:>5}  {src[:50]}")

@@ -47,11 +47,12 @@ def tok(t):
 
 def main():
     cat = json.load(open(os.path.join(D,"catalog.json"), encoding="utf-8"))
-    by_src = {c["source_pdf"]: c for c in cat}          # uid is the public identity
+    by_src = {c["source_pdf"]: c for c in cat if not c.get("pages")}   # uid is the public identity
+    by_uid = {c["uid"]: c for c in cat}
     arts, docs = [], []
     for path in sorted(glob.glob(os.path.join(D,"articles","*.json"))):
         a = json.load(open(path, encoding="utf-8"))
-        c = by_src.get(a["source_pdf"])
+        c = by_uid.get(a["uid"]) if "uid" in a else by_src.get(a["source_pdf"])
         if not c: continue                               # not active in the registry
         uid = c["uid"]; docs.append(uid)
         for x in a["articles"]:
