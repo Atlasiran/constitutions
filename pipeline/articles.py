@@ -152,6 +152,17 @@ def longest_run(nums):
     if not cands: return []
     return max(cands, key=lambda c: (round(score(nums, c), 2), len(c)))
 
+def superseded(full):
+    """Spans of «(اصل سابق: …)»: an amended article's former wording, printed after the wording in force.
+    Some are never closed, so a span also ends where the next article heading starts."""
+    out = []
+    for m in re.finditer(r'\(\s*اصل سابق\s*:', full):
+        close = re.compile(r'\)[ \t]*(?=\n|$)').search(full, m.end())
+        head = re.compile(r'\n[ \t]*اص[سص]?ل[ \t]+[\d۰-۹]').search(full, m.end())
+        ends = [x.end() for x in (close,) if x] + [x.start() for x in (head,) if x]
+        out.append((m.start(), min(ends) if ends else len(full)))
+    return out
+
 def split(pages):
     """Articles of these pages: (unit, articles, seq_score)."""
     full, offs, toc = "", [], []
@@ -160,11 +171,13 @@ def split(pages):
         t = repair(pg["text"])
         if toc_page(t): toc.append((len(full), len(full) + len(t)))
         full += t + "\n"
-    in_toc = lambda i: any(a <= i < b for a, b in toc)
+    prev = superseded(full)
+    in_toc = lambda i: any(a <= i < b for a, b in toc + prev)
     best = None
     for kind in ('اص[سص]?ل', 'ماد[هدة]', 'بند', 'تبصره'):
-        # headings listed in a table of contents would otherwise compete with the real ones
-        ms = [m for m in markers(full, kind) if not in_toc(m[0])]
+        # headings listed in a table of contents, or quoted inside a superseded wording, would otherwise compete
+        # with the real ones; «اصل … به موجب اصلاحاتی …» is an editor's note about an article, not its heading
+        ms = [m for m in markers(full, kind) if not in_toc(m[0]) and not re.match(r'\s*به موجب اصلاح', full[m[1]:m[1] + 40])]
         keep = longest_run([n for _, _, n in ms])
         if best is None or len(keep) > len(best[1]):
             best = (kind, [ms[i] for i in keep])
@@ -182,9 +195,15 @@ def split(pages):
     arts = []
     for i, (s, e, n, inferred) in enumerate(ms):
         stop = ms[i+1][0] if i+1 < len(ms) else len(full)
-        body = full[e:stop].strip(" :ـ-–—\n\t")
+        # the wording in force is the article; a superseded wording printed after it is kept apart
+        old = [(a, b) for a, b in prev if e <= a < stop]
+        body, cut = "", e
+        for a, b in old: body, cut = body + full[cut:a], b
+        body = (body + full[cut:stop]).strip(" :ـ-–—\n\t")
         page = max((p for off, p in offs if off <= s), default=pages[0]["page"] if pages else 1)
-        arts.append({"n": n, "kind": kind, "page": page, "text": body} | ({"n_inferred": True} if inferred else {}))
+        arts.append({"n": n, "kind": kind, "page": page, "text": body}
+                    | ({"n_inferred": True} if inferred else {})
+                    | ({"superseded": "\n".join(full[a:b].strip() for a, b in old)} if old else {}))
     nums_k = [a["n"] for a in arts]
     conf = round(min(len(arts), max(nums_k))/max(len(arts), max(nums_k)), 3) if arts else 0.0
     return kind, arts, conf
