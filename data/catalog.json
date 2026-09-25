@@ -51,9 +51,9 @@
   "note": "Filename says ۱۲۵۸; the document's own text gives ۱۳۲۴ ه.ق. = ۱۲۸۵ ش. = 1906 CE. Byte-identical duplicate of the file labelled ۱۳۳۴.",
   "source_pdf": "قانون اساسی مشروطه ۱۲۵۸.pdf",
   "unit": "اص[سص]?ل",
-  "n_articles": 163,
+  "n_articles": 156,
   "n_pages": 15,
-  "confidence": 0.656,
+  "confidence": 0.686,
   "ocr": false
  },
  {
@@ -81,9 +81,9 @@
   "note": "Byte-identical (md5 c453887f…) to قانون اساسی مشروطه ۱۲۵۸.pdf.",
   "source_pdf": "قانون اساسی مشروطه ۱۳۳۴.pdf",
   "unit": "اص[سص]?ل",
-  "n_articles": 163,
+  "n_articles": 156,
   "n_pages": 15,
-  "confidence": 0.656,
+  "confidence": 0.686,
   "ocr": false
  },
  {
@@ -110,9 +110,9 @@
   ],
   "source_pdf": "متمم قانون اساسی مشروطه ۱۲۸۶.pdf",
   "unit": "اص[سص]?ل",
-  "n_articles": 104,
+  "n_articles": 110,
   "n_pages": 9,
-  "confidence": 0.972,
+  "confidence": 0.973,
   "ocr": false
  },
  {
@@ -168,9 +168,9 @@
   ],
   "source_pdf": "قانون-اساسی-جمهوری-اسلامی ۱۳۵۷.pdf",
   "unit": "اص[سص]?ل",
-  "n_articles": 161,
+  "n_articles": 176,
   "n_pages": 22,
-  "confidence": 0.91,
+  "confidence": 0.994,
   "ocr": false
  },
  {
@@ -197,10 +197,10 @@
   ],
   "source_pdf": "طرح-پیش‌نویس-قانون-اساسی-جمهوری-فدرال-ایران-شورای-موقت-سوسیالیست‌های-چپ-ایران ۱۳۸۱.pdf",
   "unit": "اص[سص]?ل",
-  "n_articles": 160,
+  "n_articles": 147,
   "n_pages": 63,
-  "confidence": 0.919,
-  "ocr": true
+  "confidence": 1.0,
+  "ocr": false
  },
  {
   "uid": "majame-eslami-1382",
@@ -230,7 +230,7 @@
   "n_articles": 0,
   "n_pages": 29,
   "confidence": 0.0,
-  "ocr": true
+  "ocr": false
  },
  {
   "uid": "pars-constitutional-republic-1383",
@@ -342,9 +342,9 @@
   "variant": "monarchy",
   "source_pdf": "پیش نویس قانون اساسی پادشاهی، آرمن ساگینیان ۱۳۸۷.pdf",
   "unit": "ماد[هدة]",
-  "n_articles": 23,
+  "n_articles": 44,
   "n_pages": 15,
-  "confidence": 1.0,
+  "confidence": 0.523,
   "ocr": false
  },
  {
@@ -404,7 +404,7 @@
   "n_articles": 153,
   "n_pages": 36,
   "confidence": 0.994,
-  "ocr": true
+  "ocr": false
  },
  {
   "uid": "jahanshahi-draft-1390",
@@ -456,10 +456,10 @@
   ],
   "source_pdf": "قانون اساسی حکومت پارلمانی ایران-نصراحمدی ۱۳۹۰.pdf",
   "unit": "ماد[هدة]",
-  "n_articles": 13,
+  "n_articles": 14,
   "n_pages": 161,
-  "confidence": 0.929,
-  "ocr": true
+  "confidence": 1.0,
+  "ocr": false
  },
  {
   "uid": "green-jurists-v3-1396",
@@ -542,9 +542,9 @@
   ],
   "source_pdf": "قانون اساسی جمهوری سکولار دموکراتیک ایران آینده - نیره انصاری ۱۳۹۷.pdf",
   "unit": "اص[سص]?ل",
-  "n_articles": 65,
+  "n_articles": 68,
   "n_pages": 19,
-  "confidence": 0.929,
+  "confidence": 0.971,
   "ocr": false
  },
  {
@@ -570,9 +570,9 @@
   ],
   "source_pdf": "حقوق پنج گانه (اصول قانون اساسی)-ابولحسن بنی‌صدر ۱۳۹۷.pdf",
   "unit": "اص[سص]?ل",
-  "n_articles": 225,
+  "n_articles": 233,
   "n_pages": 184,
-  "confidence": 0.966,
+  "confidence": 1.0,
   "ocr": false
  },
  {
@@ -744,9 +744,9 @@
   ],
   "source_pdf": "قانون اساسی براساس حقوق پنج گانه - ابولحسن بنی‌صدر ۱۳۹۸.pdf",
   "unit": "اص[سص]?ل",
-  "n_articles": 526,
+  "n_articles": 528,
   "n_pages": 379,
-  "confidence": 0.943,
+  "confidence": 0.939,
   "ocr": false
  },
  {
@@ -939,7 +939,7 @@
   "n_articles": 202,
   "n_pages": 48,
   "confidence": 1.0,
-  "ocr": true
+  "ocr": false
  },
  {
   "uid": "andishgah-provisional-fundamental",

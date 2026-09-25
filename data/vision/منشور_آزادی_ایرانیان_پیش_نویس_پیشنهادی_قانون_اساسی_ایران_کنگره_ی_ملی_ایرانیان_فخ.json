@@ -1,0 +1,436 @@
+{
+ "pages": {
+  "061b47f1d7039c2f:44:claude-opus-5:2576:v1": {
+   "raw": "service of the Iranian people while performing my\npresidential duties.\" The President- Elect may take\nthe oath of office by putting his/her hand on his/her\nHoly Book if he/she so chooses.\n\nSection 3: The President shall be answerable\nto the people and the Congress within the\nlimits of the powers and responsibilities that\nthe Constitution and the related laws have\nafforded him/her. The President shall present\ncongressional legislation that he has signed\nor the outcome of referendums to the proper\nauthorities for implementation. The Vice\nPresident, who is elected by indirect vote, shall\nbe the President of the Senate and shall assume\nthe role of President if for any reason (illness,\nresignation, death or dismissal) the President is\nnot able to complete his/her three-year term, for\nthe remainder of the term after being sworn in.\nIf for any reason, the Vice-President is unable\nto continue his/her term, the head of the House\nof Representatives shall be responsible for his/\nher duties. The President nominates the Cabinet\nof Ministers and submits them to the Senate for\napproval. All Ministers shall be approved by\nthe Senate before assuming their official roles.",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 360
+   },
+   "page": 44
+  },
+  "061b47f1d7039c2f:37:claude-opus-5:2576:v1": {
+   "raw": "Legislation arising from closed sessions\nrequires the approval of three-quarters of the\nRepresentatives. After the national security issues\nare resolved and upon such determination by two-\nthirds of Congress, minutes of these hearings and\nthe resulting legislation shall be published for\npublic consumption.\n\nSection 10: In the performance of their duties,\neach member of the House of Representatives and the\nSenate shall be free to vote on issues and comment\non them either in Congressional session or outside\nit. They shall not be subject to legal prosecution for\ntheir votes or comments as a member of Congress\neither during or after their term of office.\n\nSection 11: Congress shall have the power\nto investigate all matters of the country and the\nactions of the government and the judiciary.\n\nSection 12: Congress shall have the power to\nrefer for the people's direct vote in a referendum,\neconomic, political, social and cultural issues. A\nreferendum may be requested by the President, or\none-third of the House of Representatives, or one-\nthird of the Senate, or one-thirtieth of the eligible",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 328
+   },
+   "page": 37
+  },
+  "061b47f1d7039c2f:2:claude-opus-5:2576:v1": {
+   "raw": "منشور آزادی ایرانیان\n\nپیشنویس پیشنهادی\nقانون اساسی ایران\n\nNATIONAL IRANIAN CONGRESS\nکنگره ملی ایرانیان",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 73
+   },
+   "page": 2
+  },
+  "061b47f1d7039c2f:50:claude-opus-5:2576:v1": {
+   "raw": "submit his/her nominee to the Senate for\nconfirmation. The Attorney General shall be\nresponsible for appointing local prosecutors and\nsupervising criminal and civil cases with the\ncooperation of police forces. Only the Senate shall\nhave the power to impeach the Attorney General and\nhis/ her dismissal shall require 50% plus one votes.\n\n**Section 4:** The Supreme Court shall be the\nhighest judicial authority in the country. The\nSupreme Court shall also be the highest court of\nappeal. The following duties shall be assigned to\nthe Supreme Court:\n\n● Monitor the proper enforcement of laws in the\ncourts,\n● Jurisdictional uniformity,\n● Matching laws and court rulings with the\nconstitution.\n\nThe Supreme Court shall consist of thirty-three\nmembers, each of whom shall represent one Province\nand shall be selected from the senior Justices of that\nProvince. The term of service for members shall be\nunlimited and each member shall be nominated by\nthe Governor of that Province and shall be confirmed",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 335
+   },
+   "page": 50
+  },
+  "061b47f1d7039c2f:13:claude-opus-5:2576:v1": {
+   "raw": "نمایندگان هنگام بررسی این طرح ها و لوایح، الزامی\nاست که به تفصیل در قانون تعیین می گردد.\n\nطرحهای قانونی و پیشنهادها و اصلاحاتی که نمایندگان\nدر خصوص لوایح قانونی عنوان می کنند و به تقلیل درآمد\nعمومی یا افزایش هزینه های عمومی می انجامد، در\nصورتی قابل طرح در مجلس نمایندگان است که در آن\nطریق جبران کاهش درآمد یا تامین هزینه جدید نیز\nمعلوم شده باشد.\n\nتمام طرح ها و لوایحی که به تصویب مجلس\nنمایندگان و سنا می رسد برای تبدیل شدن به قانون،\nنیاز به تایید رییس دولت دارد. مصوبات کنگره که به\nامضای رییس دولت برسد، به قانون تبدیل می گردد.\nکنگره می تواند مصوباتی را که به تایید رییس دولت\nنرسیده است به رای دوباره بگذارد که در صورت تصویب\nبا رای بیش از دو سوم مجلس نمایندگان و سنا بدون نیاز\nبه تایید رییس دولت این مصوبات به قانون تبدیل می\nگردد و لازم الاجرا می باشد. همچنین دولت می تواند با\nقید اصلاحیه های پیشنهادی برای برخی از مصوبات، آنها\nرا پیش از تایید به کنگره بازگرداند تا اصلاحیه های مورد\nنظر دولت در آن مصوبات اعمال شود و در نهایت با تصویب\nمجدد مجلس و تایید رییس دولت این مصوبات به قانون\nتبدیل خواهد شد. رییس دولت نه روز از زمان وصول\nاین مصوبات از کنگره وقت دارد تا در مورد رد، تایید و یا\nدرخواست اصلاح تصمیم بگیرد.",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 686
+   },
+   "page": 13
+  },
+  "061b47f1d7039c2f:33:claude-opus-5:2576:v1": {
+   "raw": "office at their first session in Congress, as follows:\n\"I, swear in the presence of the people of Iran to\nprotect the Constitution of Iran, to defend national\ninterests and to always serve the Iranian people while\nfulfilling my duties as their elected Representative.\"\nRepresentatives may take the oath of office by\nputting their hand on their own Holy Book if they\nso choose. Representatives who do not attend the\nfirst session upon being elected shall take the oath\nof office at the first session they attend.\n\nSection 4: The House of Representatives is the\nonly branch that shall have the power to commence\nimpeachment proceedings of the Head of the\nExecutive Branch or the Head of the Judicial Branch.\nImpeachment of the Head of the Executive Branch\nrequires the approval of two-thirds and that of the\nJudiciary Head requires the vote of three-fourths of\nthe House. Upon passing, the House shall notify the\nSenate.\n\nSection 5: The Senate shall consist of one-\nhundred Senators. Each of the thirty-three Provinces\nshall have three Senators. All Iranian citizens above\nthe age of eighteen are eligible to vote and all Iranian\ncitizens above the age of thirty are eligible to become",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 386
+   },
+   "page": 33
+  },
+  "061b47f1d7039c2f:5:claude-opus-5:2576:v1": {
+   "raw": "اصل یک\nرای اکثریت مـردم ایـران کـه بازتـاب خـرد همگانـی ایرانیـان\nمـی باشـد، بالاتریـن جایـگاه را در تمـام تصمیـم گیـری هـا دارد\nو هیـچ فـرد، گـروه، مذهـب یـا ایدیولـوژی آسـمانی و زمینـی\nدر هیـچ شـرایطی بـر رای مـردم برتـری نـدارد. مـردم ایـران\nاز هـر گـروه آییـن، نـژاد و جنسـیت از حقـوق برابر برخـوردار\nهسـتند و بـه یـک میـزان حـق مشارکت مسـتقیم در اداره امور\nکشـور را دارنـد. حـق حیـات، حـق آزادی بیـان و عقیـده، حـق\nحفـظ حیثیـت و حـق دسترسـی بـه دادرسـی عادلانـه از حقوق\nاساسـی مـردم مـی باشـد و ایـن حقـوق را نمـی تـوان بـه استناد\nنظـر اکثریـت و یـا وضـع قوانین از آنهـا سـلب کـرد و یـا مـورد\nتعـرض قـرار داد. قانونگـذار حـق نـدارد قوانینـی وضـع کنـد\nکـه سـبب برتـری یـک مذهـب، آییـن و یـا اعتقـاد بـر دیگـر\nاعتقـادات و یـا ممنوعیـت پیـروی از هـر نـوع آییـن و عقیـده\nای باشـد. همچنیـن آزادی احـزاب ،رسـانه هـا، سـازمانهای مـردم",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 601
+   },
+   "page": 5
+  },
+  "061b47f1d7039c2f:18:claude-opus-5:2576:v1": {
+   "raw": "ماده سه: وکیل جمهور در حدود اختیارات و وظایفی که\nبه موجب قانون اساسی و قوانین موضوعه به عهده دارد در برابر\nمردم و کنگره قانونگذاران مسئول است. وکیل جمهور موظف\nاست مصوبات کنگره قانونگذاران یا نتیجه همه پرسی را پس\nاز طی مراحل قانونی و ابلاغ به وی امضا کند و برای اجرا\nدر اختیار مسئولان بگذارد. معاون وکیل جمهور که به همراه\nوی با رای مستقیم مردم انتخاب می شود، ریاست سنا را بر\nعهده دارد و در صورتی که به هر دلیل (بیماری، استعفا، فوت\nو یا برکناری) وکیل جمهور موفق به اتمام دوره سه ساله\nخود نشود، معاون وکیل جمهور پس از به جا آوردن سوگند\nوکیل جمهوری، این مسولیت را بر دوش می گیرد. اگر به هر\nدلیل معاون وکیل جمهور قادر به ادامه خدمت نباشد، رییس\nمجلس نمایندگان عهده دار مسئولیت های وی خواهد بود.\nوکیل جمهور برای انجام وظایف قانونی خود، هیئت وزیران را\nانتخاب و برای کسب رای اعتماد به سنا معرفی می کند. همه\nوزرا پیش از شروع کار، می بایست از سنا رای اعتماد بگیرند.\n\nماده چهار: وکیل جمهور مسئولیت امور خارجه و\nارتباط با دیگر کشور ها و سازمان های بین المللی را به\nعنوان نماینده رسمی مردم ایران بر عهده دارد. مسئولیت\nبرنامه و بودجه و امور اداری و استخدامی کشور نیز بر عهده\nوکیل جمهور می باشد و می تواند اداره آنها را به عهده\nدیگری بگذارد. امضای پیمانهای مربوط به اتحادیه های\nبین المللی، عهدنامه ها، مقاوله نامه ها، موافقتنامه ها\nو قراردادهای دولت ایران و هریک وزارتخانه ها و سازمان\nهای تابعه یا وابسته به دولت، با سایر دولتها یا بخش",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 822
+   },
+   "page": 18
+  },
+  "061b47f1d7039c2f:4:claude-opus-5:2576:v1": {
+   "raw": "پیشنویس پیشنهادی\nقانون اساسی ایران\n\nمــا مــردم ایــران، باهــدف تشــکیل جامعــه ای بهتــر و\nبرقرارکــردن آزادی، امنیــت، آرامــش و گســترش داد بــرای\nخودمــان و آینــدگان مــان، ایــن قانــون اساســی را بــرای\nایــران نگاشــته ایــم تا حکومتــی که شایســته ایرانیان باشد\nبــر پایــه آن شــکل گیــرد.",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 190
+   },
+   "page": 4
+  },
+  "061b47f1d7039c2f:22:claude-opus-5:2576:v1": {
+   "raw": "**مـاده سـه:** دادستان کل کشور پـس از انتخـاب از طـرف\nریاسـت رکـن دادگسـتری، بـه وکیـل جمهـور جهـت تاییـد معرفـی\nمـی شـود. وی پـس از تاییـد وکیـل جمهـور بایـد رای اعتمـاد سـنا\nرا کسـب کنـد. اگـر در مـدت سـه مـاه پـس از شـروع دوره سـه\nسـاله وکیـل جمهـور، روسـای دو رکـن دادگسـتری و دولـت نتواننـد\nدر انتخـاب دادسـتان کل توافـق کننـد، وکیـل جمهـور مـی توانـد\nگزینـه مـورد نظر خـود بـرای دادسـتانی کل کشـور را بـه سـنا جهـت\nکسـب رای اعتمـاد معرفـی کنـد. وظایـف دادسـتان کل کشـور انتخاب\nدادستان هـای اسـتانی و پیگیـری پرونده هـای قضایـی بـا همـکاری\nنیـروی پلیـس مـی باشـد. بازخواسـت دادسـتان کل کشـور در حیطـه\nاختیـارات سـنا مـی باشـد و برکنـاری وی بـه اکثریـت پنجـاه درصد\nافـزون بـر یـک رای کل اعضـای سـنا نیـاز دارد.\n\n**مـاده چهـار:** دیـوان عالـی کشـور، عالـی تریـن مرجـع قضایـی\nکشـور و دادگاه عالـی اسـتیناف مـی باشـد کـه نظـارت بـر اجـرای\nصحیـح قوانیـن در دادگاههـا و ایجـاد وحـدت رویـه قضایـی و انطبـاق\nقوانیـن موضوعـه و احـکام دادگاههـا بـا قانـون اساسـی بـه آن محـول\nمـی شـود.\n\nدیـوان عالـی کشـور متشـکل از سـی و سـه عضـو اسـت کـه هـر\nاستان یـک سـهمیه بـه عنـوان قاضـی ارشـد اسـتان خـود بـرای یـک\nدوره نامحـدود از خدمـت دارد کـه توسـط فرمانـدار استان برگزیـده\nو بـرای کسـب رای اعتمـاد بـه سـنا معرفـی مـی شـود. اگـر بـه هـر\nدلیلـی (بیمـاری، اسـتعفا، فـوت و یـا برکنـاری از سـمت) هـر یـک\nاز قضـات دیـوان عالـی کشـور امـکان ادامـه کار را نداشـته باشـد،",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 964
+   },
+   "page": 22
+  },
+  "061b47f1d7039c2f:34:claude-opus-5:2576:v1": {
+   "raw": "candidates for the Senate. Senators shall be elected\nfor a nine-year term.\n\nExceptionally, in the first Senate election after\nthe adoption of this Constitution, the term for the\ncandidate with the lowest number of votes from\neach province shall be three years; the second\nhighest, six years; and, the candidate with the\nhighest vote, nine years.\n\nThe Provincial Governor shall appoint a person as\nSenator if an elected Senator from that Province\nfails to complete his/her term for any reason. This\nperson shall hold the position until the next three-\nyear election. The elected Senator in this election\nshall only hold this position until the end of the\nprevious Senator's term.\n\nThe Vice President, who has been indirectly elected\nby the Iranian people along with the President,\nshall also act as the one hundredth Senator. His/her\nterm shall be three years and he/she shall also act\nas the President of the Senate. He/she shall manage\nthe prioritization of projects and bills and shall\ncommunicate with other branches of government",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 311
+   },
+   "page": 34
+  },
+  "061b47f1d7039c2f:53:claude-opus-5:2576:v1": {
+   "raw": "agencies, so all people may easily access the details\nof the negotiations between the Government and\nCongress. Any form of biased reporting for or\nagainst any person or organization in government-\nfunded media shall be strictly prohibited and shall\nhave legal consequences for violators.",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 81
+   },
+   "page": 53
+  },
+  "061b47f1d7039c2f:29:claude-opus-5:2576:v1": {
+   "raw": "Article I\nThe vote of the majority of the Iranian people,\nwhich is a reflection of their universal wisdom,\nshall be the utmost authority on all decision-making\nprocesses and no person, group, religion or ideology,\nwhether earthly or celestial, has precedence over it\nunder any circumstances. The people of Iran shall\nhave equal rights regardless of gender, ethnicity or\nreligious affiliation and have equal rights to directly\nparticipate in national affairs. The right to live, to\nexercise free speech, to guard one's reputation and to\nhave a fair trial are fundamental rights that shall not\nbe usurped or violated by popular vote or legislation.\nLegislators shall be prohibited from enacting laws\nthat extend preference to any religion or ideology\nor prohibit the practice of any religion or ideology.\nFreedom of the press, political party activism, non-\ngovernmental organization participation and the\nright to protest peacefully against the government\nshall be rights protected by law. Capital punishment,\ntorture of any kind and solitary confinement under\nany circumstances shall be strictly prohibited.",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 344
+   },
+   "page": 29
+  },
+  "061b47f1d7039c2f:9:claude-opus-5:2576:v1": {
+   "raw": "**ماده پنج:** سنا شامل یکصد سناتور می‌باشد که هر\nیک از سی و سه استان دارای سه سناتور هستند. تمام افراد\nبالای هجده سال که تابعیت ایرانی دارند می‌توانند انتخاب\nکنند و رأی بدهند و تمام افراد بالای سی سال که تابعیت\nایرانی دارند می‌توانند کاندیدای انتخابات سنا باشند. سناتورها\nبرای یک دوره نه ساله انتخاب می‌شوند. تنها در نخستین\nانتخابات سنا پس از تصویب این قانون اساسی، دوره خدمت\nمنتخبین سنا که کمترین رأی را در بین سه سناتور هر استان\nداشته باشد، سه سال و دوره خدمت سناتوری که دومین رأی\nرا کسب کرده باشد، شش سال خواهد بود. دوره خدمت برای\nمنتخبین مردم که بیشترین رأی را در هر استان در نخستین\nانتخابات سنا به دست می‌آورند، نه سال می‌باشد.\nدر صورتی که به هر دلیل یک سناتور نتواند دوره خود را\nبه پایان برساند، فرماندار استان فردی را به عنوان سناتور\nانتصابی به سنا معرفی خواهد کرد که تا زمان برگزاری\nنخستین انتخابات سه سالیانه، عهده دار این سمت خواهد بود\nو سناتوری که در این انتخابات برگزیده شود تنها تا پایان دوره\nسناتور پیشین این سمت را خواهد داشت.\nصدمین سناتور در انتخابات سراسری کشور ایران به\nهمراه رییس دولت به عنوان معاون وی با رأی اکثریت مردم\nبرگزیده می‌شود. دوره خدمت صدمین سناتور تنها سه سال\nمی‌باشد و وی ریاست سنا را به عهده خواهد داشت. رییس\nسنا حق رأی ندارد و تنها با انتخاب هیئت رییسه از بین\nسناتورهای انتخاب شده در هر دوره، اولویت بندی طرح‌ها و\nلوایح و ارتباط با دیگر ارکان حکومتی را مدیریت خواهد کرد.",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 800
+   },
+   "page": 9
+  },
+  "061b47f1d7039c2f:46:claude-opus-5:2576:v1": {
+   "raw": "● Commander-in-Chief of the Armed Forces,\n● Declarations of war and peace with the approval\nof Congress,\n● Appointing, dismissing and accepting the\nresignation of the Head of the Joint Chiefs of Staff,\nSupreme Commanders of the Armed Forces, with\nthe approval of the Congress,\n● Amnesty or reduced punishment for Convicts\nor sentenced persons upon the recommendation of\nthe Head of the Judicial Branch,\n● Granting government badges and medals.\n\nThe President may appoint an Administrator for up\nto three months for ministries that do not have a\nSenate-confirmed Minister. Each of the Ministers\nshall be answerable for his/her specific duties to\nthe President and Congress.\n\nSection 5: The President, Vice-President,\nMinisters, and employees of the executive branch\nshall not hold concurrent positions in government.\nThey also shall not hold any other concurrent\npositions at the time of their government service\nincluding positions in institutions that are partially\nor wholly funded by the government or public\nfoundations and institutions.",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 345
+   },
+   "page": 46
+  },
+  "061b47f1d7039c2f:39:claude-opus-5:2576:v1": {
+   "raw": "on legislation that has not been approved by the\nPresident and if more than two-thirds of the House\nand the Senate vote to pass the legislation, it shall\nno longer require the President's signature and shall\nbecome enforceable law. The government may\nreturn the legislation to Congress with a conditional\napproval subject to specified amendments. Upon\nthe approval of Congress, the amended legislation\nshall become law. The President shall have nine\ndays after receiving legislative proposals from\nCongress to decide on rejection, confirmation or\nrequesting amendments.\n\nSection 14: Treaties, conventions, protocols,\ncontracts and international agreements shall be\napproved by two-thirds of the House followed by\ntwo-thirds of the Senate. Receiving domestic or\nforeign loans or offering domestic or foreign aid\nshall be approved by two-thirds of House members\nand shall be publicly announced. Changes to\nnational boundaries are prohibited except for\nminor amendments considered in the national\ninterest and preserving the territorial integrity of\nthe country. Additionally, these amendments shall\nbe approved by four-fifths of the House and four-\nfifths of the Senate.",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 361
+   },
+   "page": 39
+  },
+  "061b47f1d7039c2f:35:claude-opus-5:2576:v1": {
+   "raw": "along with the Senate leadership who are elected\nfrom Senators in each term.\n\n**Section 6:** Approval of appointments made\nby the President, including ministers, political,\neconomic, judicial, security and military directors,\nshall be within the authority of the Senate. If the\nHouse passes a resolution to impeach the Head of\nthe Executive Branch or the Head of the Judicial\nBranch, the Senate shall have the sole power to\ntry the impeachment.  It is possible to remove the\nHead of State by A two-thirds majority vote of the\nSenate shall be required to remove the Head of\nthe Executive Branch and a three-fourths majority\nvote of the Senate shall be required to remove the\nHead of the Judicial Branch. The Senate shall only\nexonerate or, in case of conviction, remove the\ncharged individual from office. It shall not impose\npenalties on the individual or the affiliated party.\n\n**Section 7:** The Provincial Legislature shall\ndecide the time, place and manner of holding the\nSenate and House of Representatives elections in\neach Province. These elections shall be held under the\nsupervision of the National Electoral Commission.",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 359
+   },
+   "page": 35
+  },
+  "061b47f1d7039c2f:11:claude-opus-5:2576:v1": {
+   "raw": "برای یک دوره سه ساله انتخاب و به کمیسیون معرفی می\nشوند. شیوه کار و شرح وظایف کمیسیون ملی انتخابات را\nقانون مشخص می کند. اعضای رسمی و ناظر در کمیسیون\nملی انتخابات تنها یک دوره می توانند فعالیت کنند و این\nدوره قابل تمدید نمی باشد. اعضای ناظر از حق رای در این\nکمیسیون برخوردار نخواهند بود.\n\n**ماده نه**: مذاکرات مجلس نمایندگان و سنا باید علنی\nباشد و گزارش کامل آن از طریق رسانه ملی برای اطلاع\nعموم منتشر شود و به اطلاع عموم برسد. مصوبات جلسات\nعلنی در صورتی معتبر است که به تصویب اکثریت پنجاه\nدرصد افزون بر یک رای مجموع نمایندگان برسد.  در موارد\nاضطراری مرتبط با امنیت کشور، به درخواست وکیل جمهور\nیا نه نفر سناتور و یا سی نفر از اعضای مجلس نمایندگان،\nجلسه غیر علنی تشکیل می شود. مصوبات جلسه غیر علنی\nدر صورتی معتبر است که به تصویب سه چهارم مجموع\nنمایندگان برسد. گزارش و مصوبات این جلسات غیر علنی\nباید پس از برطرف شدن شرایط اضطراری به تشخیص\nاکثریت دو سوم کل مجلس نمایندگان، برای اطلاع عموم\nمنتشر گردد.\n\n**ماده ده**: هر عضو مجلس نمایندگان و سنا در برابر تمام\nملت مسئول است و حق دارد در همه مسائل داخلی و خارجی\nکشور اظهار نظر نماید. نمایندگان کنگره در مقام ایفای\nوظایف نمایندگی در اظهار نظر و رای خود در کنگره یا خارج\nاز آن کاملاً آزادند و نمی توان آنها را به سبب نظراتی که",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 743
+   },
+   "page": 11
+  },
+  "061b47f1d7039c2f:7:claude-opus-5:2576:v1": {
+   "raw": "حـق برخـورداری از ارتـش و برقـراری ارتبـاط بـا کشـورهای دیگـر\nتنهـا در اختیـار دولـت مرکـزی خواهـد بـود.\nاصل چهار\nمـاده یـک: تنها ارگان قانونگـذار کشـوری در ایـران کنگـره\nقانونگـذاران اسـت کـه شـامل مجلـس نماینـدگان و سـنا مـی باشـد.\nشـرح تمـام جلسـات کنگـره بایـد ثبـت و ضبـط شـده و بـا رعایـت\nاولویـت حفـظ امنیـت ملـی در اختیـار مـردم ایـران قـرار داشـته\nباشـد. محـل برگـزاری نشسـت هـای کنگـره تنهـا در سـاختمان\nکنگـره قانونگـذاران خواهـد بـود. جلسـات مجلـس نماینـدگان و سـنا\nبـا حضـور نصـف بعـلاوه یـک اعضا رسـمیت مـی یابـد. کنگـره نمـی\nتوانـد قوانینـی وضـع کنـد کـه بـا اصـول قانـون اساسـی مغایـرت\nداشـته باشـد. تشـخیص ایـن امـر در مـوارد اختـلاف بـر عهـده\nدیـوان عالـی کشـور اسـت. سـمت نمایندگـی قائـم بـه شـخص اسـت\nو قابـل واگـذاری بـه دیگـری نیسـت. کنگـره نمـی توانـد اختیـار\nقانونگـذاری را بـه شـخص یـا گروهـی واگـذار کنـد.\n\nمـاده دو: مجلس نماینـدگان ایـران سـیصد عضـو دارد کـه\nهـر یـک از سـی و سـه اسـتان کشـور بـه نسـبت جمعیـت در\nایـن مجلـس دارای نماینـده مـی باشـند. ایـن نماینـدگان بـا رای\nمسـتقیم مـردم بـرای مـدت سـه سـال انتخـاب مـی شـوند. تمـام\nافـراد بـالای هجـده سـال کـه تابعیـت ایرانـی دارنـد مـی تواننـد\nانتخـاب کننـد و رای بدهنـد و تمـام افـراد بـالای بیسـت و پنـج\nسـال کـه تابعیـت ایرانـی دارنـد مـی تواننـد کاندیـدای انتخابـات\nمجلـس نماینـدگان باشـند. انتخابـات هـر دوره بایـد پیـش از\nپایـان دوره قبـل برگـزار شـود تـا کشـور در هیـچ زمـان بـدون\n٦",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 975
+   },
+   "page": 7
+  },
+  "061b47f1d7039c2f:21:claude-opus-5:2576:v1": {
+   "raw": "دعاوی، پیشـگیری، کشـف جـرم و تعقیـب بزهـکاران بـا رعایـت\nاصـول حقوقـی برائـت، عطـف بـه ماسـبق نشـدن قوانیـن، قانونـی\nبـودن جـرم و مجـازات، تناسـب جـرم و مجـازات و علنـی بـودن\nدادرسـی و همچنیـن نظـارت بـر حسـن اجـرای قوانین، نظـارت بر\nاقدامـات دولـت و کنگـره قانونگـذاران و تهیـه لوایـح قضایـی و ارائـه\nآن بـه کنگـره قانونگـذاران بـر عهـده ایـن رکـن مـی باشـد.\n\n    مــاده دو: ریاسـت رکـن دادگسـتری بـر عهـده دادبـان/\nپادشـاه اسـت کــه بـا رای مسـتقیم مـردم و بـرای مـدت\nدوازده سـال انتخـاب مـی شـود. کاندیداتـوری مجـدد وی\nبـرای یـک دوره دیگـر از رای گیـری بلامانـع اسـت. رییـس\nرکـن قضایـی عهـده دار وظایـف ذیـل اسـت: ایجـاد تشـکیلات\nو سـازمان هـای مـورد نیـاز امـور قضایـی، اداری و اجرایـی\nرکـن دادگسـتری، تهیـه و تنظیـم لوایـح قضایـی و تقدیـم آن\nبـه کنگـره قانونگـذاران، تهیـه و تنظیـم بودجـه دادگسـتری و\nارایـه آن بـه مجلـس نماینـدگان، معرفـی و پیشـنهاد دادسـتان\nکل کشـور بـه وکیـل جمهـور و سـنا جهـت کسـب رای اعتمـاد،\nعـزل ونصـب روسـای دادگسـتری هـای کشـور و قضـات مطابـق\nبـا قوانیـن موضوعـه. اگـر بـه هـر دلیلـی (بیمـاری، اسـتعفا،\nفـوت و یـا برکنـاری از سـمت) ریاسـت رکـن دادگسـتری\nامـکان ادامـه کار را نداشـته باشـد، انتخابـات بـرای تعییـن\nرییـس رکـن قضایـی بـا رای مسـتقیم مـردم برگـزار خواهـد\nشـد. نظـارت بـر حسـن اجـرای قوانیـن، نظـارت بـر اقدامـات\nدولـت و کنگـره قانونگـذاران، انتخـاب دادسـتان کل کشـور\nو معرفـی وی بـه وکیـل جمهـور و سـنا جهـت کسـب رای\nاعتمــاد از وظایـف ریاسـت رکـن دادگسـتری مـی باشـد.",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 1033
+   },
+   "page": 21
+  },
+  "061b47f1d7039c2f:38:claude-opus-5:2576:v1": {
+   "raw": "voters and shall be conducted if approved by half of\nthe House of Representatives.\n\n**Section 13:** Congress shall legislate in all\nmatters of the country within the limits prescribed\nin the Constitution. Setting the government's budget,\nimposing taxes, receiving domestic and foreign\nloans, allocating resources for public defense and\npublic assistance shall be within the scope of the\nlegislative authority of the Congress. Bills proposed\nby the government shall be submitted to the House of\nRepresentatives for consideration. Legislative bills\nshall be proposed by at least fifteen members of the\nHouse for consideration. The time of the review for\neach proposed government bill shall be announced\nto the related ministry and a representative of that\nministry shall appear before the House for advisory\npurposes during the review. Further requirements\nshall be determined by law. Proposed legislation and\namendments that reduce public income or increase\npublic expenditures shall be accompanied by\npractical solutions for funding them.\n\nAll proposals and bills approved by the House of\nRepresentatives and the Senate shall be signed by the\nPresident to become law. Congress may vote again",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 352
+   },
+   "page": 38
+  },
+  "061b47f1d7039c2f:51:claude-opus-5:2576:v1": {
+   "raw": "by the Senate. If for any reason (illness, death, or\ndismissal) the member is unable to carry on his/\nher duties, another senior Judge shall replace him/\nher following the same procedures as mentioned\nabove. Only the House shall initiate impeachment\nproceedings against a Supreme Court Justice and the\ncase shall be tried in the Senate only if the articles\nof impeachment are approved by four-fifths of the\nHouse members. The Supreme Court Justice shall be\ndismissed from office if 50% plus one members vote\nto convict.\n\nSection 5: The organization of the court system,\nincluding district courts, superior courts, trial courts\nand courts of appeal, and the scope of their jurisdiction\nshall be determined by the laws and regulations of the\nJudicial Branch. Judges shall preside over hearings\nand trials. Judges shall be licensed lawyers and shall\nbe chosen according to their expertise in relevant\nareas. A judge shall not be temporarily dismissed\nor relocated absent conviction of criminal or civil\ncharges.\nSection 6: Double jeopardy shall apply to criminal\nprosecutions. Trials shall be held in public unless the\nlaw requires closed hearings. Court rulings shall be\nbased on the written law and religious, philosophical",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 408
+   },
+   "page": 51
+  },
+  "061b47f1d7039c2f:52:claude-opus-5:2576:v1": {
+   "raw": "and ideological doctrines shall not be the basis for\nany ruling issued by the courts.\n\n**Section 7:** Personal freedom and citizens'\nprivacy and personal property shall be protected\nby law from being violated, usurped or confiscated\nwithout lawful cause. A search warrant signed by\na Judge based on probable cause shall be obtained\nby the police force before conducting any searches.\nMoreover, an officer shall recite the defendant's\nright to remain silent and to an attorney at the time\nof arrest. A speedy trial and an impartial jury shall\nbe basic rights of the defendant. Warrantless arrests\nshall be prohibited and there shall be probable cause\nfor an arrest warrant based on evidence beyond\nmere suspicion. Any kind of confession under\nduress shall not be admissible against defendants\nin court.\n\n**Article VII**\nThe media shall be free to act within the framework\nof the law. None of the three branches of government\nshall allocate a budget for the media as a tool to\njustify their actions. Government funded media shall\nonly cover factual news about government actions,\nCongressional representatives, and government",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 354
+   },
+   "page": 52
+  },
+  "061b47f1d7039c2f:32:claude-opus-5:2576:v1": {
+   "raw": "concede its legislative powers to another individual\nor group.\n\nSection 2: The Iran House of Representatives\nshall have three-hundred members. Each of the\nthirty-three provinces has representatives relative to\nthe population of that province. These representatives\nare elected by direct vote of people for a term of three\nyears. All Iranian citizens above the age of eighteen\nare eligible to vote and all Iranian citizens above the\nage of twenty-five are eligible to become candidates\nfor the House of Representatives. Elections of each\nterm shall be held before the end of the previous\nterm to avoid lapses in Congressional activities.\nThe House Speaker and other Congressional leaders\nwill be elected according to the rules specified in\nthe internal regulations. If a Representative fails\nto complete his/her term for any reason (illness,\nresignation, death or discharge from duty), early\nelections shall be held for that constituency. The\nnewly elected representative shall complete the\nremainder of the term or longer, subject to reelection.\n\nSection 3: Congressional Representatives shall\ninclude the House of Representatives members and\nthe Senators. Each shall swear and sign the oath of",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 357
+   },
+   "page": 32
+  },
+  "061b47f1d7039c2f:19:claude-opus-5:2576:v1": {
+   "raw": "خصوصـی خارجـی پـس از تصویـب کنگـره قانونگـذاران بـا وکیـل\nجمهـور یـا نماینـده قانونـی وی مـی باشـد. وکیـل جمهـور مـی\nتوانـد در مـوارد خـاص ، بـر حسـب ضـرورت بـا تصویـب هیئـت\nوزیـران، نماینـده یـا نماینـدگان ویـژه بـا اختیـارات مشخص تعیـیـن\nنمایـد. در ایـن مـوارد تصمیمـات نماینـده یـا نماینـدگان مذکـور\nدر حکـم تصمیمـات رییـس جمهـور و هیئـت وزیـران خواهـد بـود.\nسـفیران بـه پیشـنهاد وزیـر امـور خارجـه و تصویـب وکیـل جمهـور\nتعییـن مـی شـوند. وکیـل جمهـور استوارنامه سـفیران را امضا مـی\nکنـد و اسـتوارنامه سـفیران کشـورهای دیگـر را مـی پذیـرد. عـلاوه\nبـر وظایفـی کـه بـه موجـب اصـول ایـن قانـون و قوانیـن عـادی\nبـر عهـده وکیـل جمهـور قـرار مـی گیـرد، فرماندهـی کل نیروهـای\nمسـلح، اعـلان جنـگ و صلح بـا تصویـب کنگـره قانونگـذاران، نصـب\nو عـزل رییـس سـتاد مشـترک نیروهـای مسـلح و فرماندهـان عالی\nنیروهـای نظامـی و انتظامـی بـا تصویـب کنگـره قانونگـذاران و قبـول\nاسـتعفای آنـان بـا اطـلاع ایـن کنگـره، عفـو یـا تخفیـف مجازات\nمحکومیـن پـس از پیشـنهاد ریاسـت رکـن دادگسـتری و اعطـای\nنشـانهای دولتـی، از دیگـر وظایـف اصلـی وکیـل جمهـور اسـت و\nنمـی توانـد آنهـا را بـه فـرد دیگـری بسـپارد. وکیـل جمهـور مـی\nتوانـد بـرای وزارتخانـه هایـی کـه وزیـر ندارنـد حداکثر بـرای مـدت\nسـه مـاه سرپرسـت تعییـن نمایـد. هـر یـک از وزیـران مسـئول\nوظایـف خـاص خویـش در برابـر وکیـل جمهـور و کنگـره است.\n\nمـــاده پنـــج: وکیـــل جمهـور، معاون وی، وزیـران و\nکارمنـــدان دولـــت نمـــی تواننـــد بیـــش از یـــک شـغل دولتـی\nداشـته باشـند و داشـتن هـر نـوع شـغل دیگـر در موسساتی کـه\nتمـام یـا قسـمتی از سـرمایه آن متعلـق بـه دولـت یـا نهادهـا و\n\n۱۸",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 1099
+   },
+   "page": 19
+  },
+  "061b47f1d7039c2f:10:claude-opus-5:2576:v1": {
+   "raw": "ماده شش: تاییید وزرا یا سلب اعتماد از وزرا، مدیران عالی\nرتبه سیاسی، اقتصادی، قضایی، امنیتی و نظامی کشور که توسط\nرییس دولت به کنگره پیشنهاد می شوند، از اختیارات سنا می\nباشد. در صورت تصویب طرح بازخواست رییس دولت و همچنین\nطرح بازخواست رئیس رکن قضایی در مجلس نمایندگان، سنا تنها\nارگانی است که حق بازجویی و محاکمه رییس دولت و رییس\nرکن قضایی را دارد. برکناری رییس دولت با رای دو سوم و برکناری\nرییس رکن قضایی با رای سه چهارم ازمجموع آراء کل سناتورها\nامکان پذیر خواهد بود. حکم سنا پس از این محاکمه تنها می\nتواند تبرئه و یا برکناری از سمت باشد و مجازات های تنبیهی برای\nفرد محاکمه شده و حزب و سازمانی که وی به آن تعلق داشته\nاست از حدود اختیارات سنا خارج می باشد. تایید یا سلب اعتماد\nدر موارد مذکور نیاز به رای اکثریت پنجاه درصد افزون بر یک از\nکل اعضای سنا دارد.\n\nماده هفت: زمان، مکان و نحوه برگزاری انتخابات سنا و\nمجلس نمایندگان در هر استان بر عهده قانونگذاران استانی خواهد\nبود. این انتخابات باید زیر نظر کمیسیون ملی انتخابات برگزار شود.\n\nماده هشت: کمیسیون ملی انتخابات دارای نه عضو رسمی\nو سی و سه عضو ناظر می باشد. اعضای رسمی کمیسیون ملی\nانتخابات توسط رییس دولت برای یک دوره شش ساله انتخاب\nمی شوند و پس از کسب رای اعتماد از سنا می توانند کار\nخود را شروع کنند. هر استان یک سهمیه در شورای ناظران\nکمیسیون ملی انتخابات دارد که توسط فرماندار هر استان",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 777
+   },
+   "page": 10
+  },
+  "061b47f1d7039c2f:40:claude-opus-5:2576:v1": {
+   "raw": "**Section 15:** Provincial Parliaments shall be\nformed to provide for the direct participation of people\nin supervising the implementation of programs and\nmonitoring the rapid progress of social, economic,\ndevelopmental, health, cultural, educational and\nwelfare programs. The members of these Provincial\nParliaments shall be directly elected by the people of\nthe same Province. The requirements for voters and\nelected members, their scope of responsibility and\nsupervisory authority and the election proceedings\nshall comply with the principles of national unity and\nterritorial integrity of the country and shall remain\nwithin the framework of this Constitution. The set of\nlaws passed by Provincial Parliaments shall not be\nout of the Constitution's boundary or be contrary to\nlegislation passed by Congress. The impact of laws\npassed by Provincial Parliaments shall not be out of\nthe geographical and judicial scope of that Province.\nMoreover, Provincial Parliaments shall not have the\npower to ratify any bill, proposal, or plan that directly\nor indirectly sets the grounds for the separation of\none or more Provinces or parts of Provinces from\nIran. Provincial Parliaments shall be dissolved in the\nevent of such an action and the national government\nshall control the Province until new Provincial\nParliamentary elections are held.",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 418
+   },
+   "page": 40
+  },
+  "061b47f1d7039c2f:6:claude-opus-5:2576:v1": {
+   "raw": "نهـاد و آزادی اعتـراض مسـالمت آمیـز مـردم بـه رفتـار حکومـت از\nحقـوق حفاظـت شـده مـردم در ایـن قانـون مـی باشـد. مجازاتهـای\nخشـن و غیـر معمـول، اعـدام و همچنیـن شـکنجه در تمامـی اشـکال\nآن و نگهـداری افـراد بـه هـر بهانـه ای در سـلول هـای انفـرادی\nممنـوع اسـت.\n\nاصل دو\nنـوع حکومـت ایـران جمهـوری/ پادشـاهی مشـروطه مـی\nباشـد کـه بـا رای مسـتقیم اکثریت مـردم ایـران مقـرر گردیـده\nاست. حکومت ایـران شـامل سـه رکـن اساسـی دولت، کنگـره\nو دادگسـتری مـی باشـد کـه در عیـن همـکاری بـا یکدیگـر، از\nاسـتقلال کامـل برخوردارنـد و اصـل تفکیـک ارکان حکومتـی در\nمـورد آنهـا برقـرار اسـت. سـران هـر سـه رکـن بـا رای مسـتقیم\nمـردم ایـران انتخـاب مـی شـوند.\n\nاصل سه\nتقسـیمات کشـوری بـر اسـاس اسـتان مـی باشـد. کشـور\nایـران دارای سـی و سـه اسـتان اسـت بـه نـام هـای: آذربایجـان\nشـرقی، آذربایجـان غربـی، اردبیـل، اصفهـان، البـرز، ایـلام،\nبلوچسـتان، بوشـهر، پرسپولیس، تهران، چهارمحـال و بختیـاری،\nخراسـان رضـوی، خراسـان جنوبـی، خراسـان شـمالی، خوزسـتان،\nزنجـان، سـمنان، سیسـتان، شـیراز، قزویـن، قـم، کردسـتان،\nکرمـان، کرمانشـاه، کهگیلویـه و بویراحمـد، گلسـتان، گیـلان،\nلرسـتان، مازنـدران، مرکـزی، هرمـزگان، همـدان و یـزد. هـر\nاستان در چهارچـوب ایـن قانـون اساسـی حـق دارد پارلمـان\nاسـتانی، فرمانـداری و دادگسـتری اسـتانی داشـته باشـد امـا",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 886
+   },
+   "page": 6
+  },
+  "061b47f1d7039c2f:20:claude-opus-5:2576:v1": {
+   "raw": "موسسات عمومی است، ممنوع می باشد. همچنین نمایندگی\nکنگـره، وکالـت دادگسـتری، مشـاوره حقوقـی و نیـز ریاست\nو مدیریـت عامـل یـا عضویـت در هیئـت مدیـره انـواع مختلـف\nشـرکتهای دولتـی و خصوصـی بـرای آنـان ممنـوع است.\nرسـیدگی بـه اتهـام وکیـل جمهـور، معـاون وی و وزیـران، در مـورد\nجرائـم خـارج از حیطـه اختیـارات و وظایـف آنهـا در دادگاههـای\nعمومـی دادگسـتری و بـا اطـلاع کنگـره قانونگـذاران انجـام مـی\nشـود. دارایـی وکیـل جمهـور، معـاون وکیـل جمهـور، وزیـران و\nهمسـر و فرزنـدان آنـان قبـل و بعـد از خدمـت، توسـط کنگـره\nقانونگـذاران بررسـی مـی شـود کـه بـر خـلاف حـق، افزایـش\nنیافتـه باشـد.\n\n    مــاده شــش: فرمانـدار هـر اسـتان بـرای مـدت سـه\nسـال بـا رای مسـتقیم مـردم اسـتان مربوطـه انتخـاب مـی\nشـود. احـراز پسـت فرمانـداری بـرای بیـش از دو دوره بـه\nطـور کل ممنـوع مـی باشـد. فرمانـدار نمـی توانـد تصمیمـات\nمخالـف نظـر وکیـل جمهـور اتخـاذ کنـد و وکیـل جمهـور در\nهرصـورت حـق وتـو تصمیمـات فرمانـدار را خواهـد داشـت.\nعـزل فرمانـدار بـه درخواسـت وکیـل جمهـور از طریـق پنجـاه\nدرصـد افـزون بـر یـک رای اعضـای سـنا انجـام مـی گیـرد.\n\nاصل شش\nمـاده یک: رکن دادگستری بـه منظور گسترش عدل و داد تاسیس\nشـده است که شـامل دیوان عالی کشـور، دادگاه ها و دادستانی ها می باشد.\nرسـیدگی و صـدور حکـم در مورد تعدیـات و تظلمات و شـکایات، حل و فصل",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 863
+   },
+   "page": 20
+  },
+  "061b47f1d7039c2f:43:claude-opus-5:2576:v1": {
+   "raw": "presidential elections. The President and Vice\nPresident are elected by at least 50% plus one votes\ncast. If none of the candidates attains such a majority\nin the first round, a second round of voting shall\noccur two weeks later. In the second round, only\nthe two presidential candidates who obtained the\nmost votes in the first round shall run. The candidate\nwith the most votes cast in this second round shall\nbe elected President. If one of the two candidates\nwithdraws during the time between the first round\nand the second round, the remaining candidate in\nthe electoral campaign shall be President with the\nVice President. The election of a new President\nshall be concluded two months before the end of\nthe preceding presidential term. At no time shall\nthe country have two presidents. The incumbent\npresident shall remain in office until the time of the\nswearing in of the President-Elect.\n\nThe President-Elect shall be sworn in with the\nattendance of members of the House and Senate,\nand the Head of the Judicial Branch and shall sign\nthe oath of office as follows: **\"I, as the President\nof Iran, swear to the people of Iran, to be the\nimplementer, guardian, and defender of the\nConstitution of Iran and to always be in the**",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 369
+   },
+   "page": 43
+  },
+  "061b47f1d7039c2f:15:claude-opus-5:2576:v1": {
+   "raw": "مستقیم و یا غیر مستقیم شرایط را برای جدایی یک یا چند\nاستان و یا بخشی از استان ها از کشور ایران را فراهم می کند،\nندارد و چنین اقدامی در حکم انحلال پارلمان استانی مورد\nنظر تلقی شده و دولت مرکزی کنترل آن استان را تا برگزاری\nانتخابات جدید پارلمان استانی به دست خواهد گرفت.\n\nماده شانزده: هیچیک از استان های سی و سه گانه\nایران حق داشتن ارتش و یا اعلام جنگ به دیگر استان ها و\nکشور های خارجی را ندارند. همچنین بستن قراردادهای بین\nالمللی و تصویب قوانین صادرات و واردات از اختیارات کنگره\nقانونگذاران ایران می باشد و از محدوده اختیارات پارلمان\nهای استانی خارج است. پارلمان های استانی تنها با اجازه\nو نظارت مستقیم کنگره قانونگذاران می توانند جهت تسهیل\nامور مربوط به صادرات و واردات در هر استان قوانین استانی\nو در چهارچوب اختیاراتی که این قانون اساسی به آنها داده\nاست، عمل کنند.\n\nماده هفده: تفسیر قانون اساسی و تشخیص تعارض\nقوانین عادی با قانون اساسی برعهده دیوان عالی کشور\nاست. درخواست تفسیر قانون اساسی باید توسط رییس دولت\nو ریاست مجلس نمایندگان و سنا برای دیوان عالی فرستاده\nشود.\n\nماده هجده: حذف، الحاق و اصلاح بخش هایی\nبه این قانون اساسی بوسیله اکثریت چهار پنجم\nاعضای مجلس نمایندگان و سنا امکانپذیر می باشد.\n\n۱٤",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 665
+   },
+   "page": 15
+  },
+  "061b47f1d7039c2f:27:claude-opus-5:2576:v1": {
+   "raw": "Declaration of Freedom\n\nThe people of Iran have campaigned in the quest of freedom\nand democracy for over a century. Such has been a battle\nto cut short the hands of celestial and terrestrial ideologies\nfrom the people's lives, affording them proprietorship of\ntheir destiny. In an era when civilized citizens of the globe\nhand in hand with their wise and elected governments\nstrive for welfare, happiness, peace and security, we the\npeople of Iran seek the opportunity to reinstitute love,\nhope, and sanctity of life to our homeland, a land which\nhas for millennia served as the cradle of human civilization.\nDeriving guidance from the ancient Persian principles of\nrighteousness of thought, of utterance, and of deed, our\nbelief is predicated upon the creative essence of freedom\nfor all mankind, hence the unalienable right of all Iranian to\nlive free of oppression and discrimination with justice and\nequality in structuring the path of our country. In this spirit\na mass endeavor is underway in which Iranian patriots,\nliving in Iran or abroad, have equal determination of rights\nand are in pursuit of three goals, any success obtained in\nthe course of which will be preserved to the last breath:\n\n1. Establishment of a Democratic Government befitting\nIranians\n2. Drafting a Constitution to define a Free, and Democratic Iran\n3. A Free, and Democratic Iran as an honorable member of\ninternational community",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 462
+   },
+   "page": 27
+  },
+  "061b47f1d7039c2f:54:claude-opus-5:2576:v1": {
+   "raw": "Declaration\nof Freedom\n\nand Proposed Draft\nConstitution\nof IRAN\n\nNATIONAL IRANIAN CONGRESS\nکنگره ملی ایرانیان",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 65
+   },
+   "page": 54
+  },
+  "061b47f1d7039c2f:24:claude-opus-5:2576:v1": {
+   "raw": "**مـاده هفـت:** آزادی هـای فـردی و حریـم خصوصی شـهروندان\nاز هرگونـه تعـرض و تفتیـش مصـون مـی باشـد. همچنیـن توقیـف و\nمصـادره امـوال بـدون حکـم قضایـی ممنـوع است. پلیـس بایسـتی\nمـوارد اتهامـی را در جرایـم غیـر مشـهود مسـتند بـه اوراق قضایـی،\nبهنـگام بازداشـت افـراد اعـلام کنـد و بـه متهـم یـادآور شـود کـه\nحـق سـکوت در برابـر پلیـس تـا حضـور وکیـل را دارد. در مـوارد\nجرایـم مشـهود بـه حکـم قضایـی بـرای بازداشـت نیـاز نیسـت ولـی\nحـق سـکوت در برابـر پلیـس تـا حضـور وکیـل بایـد بـه وی یـادآوری\nشـود. حـق محاکمـه سـریع بـرای متهـم بایـد محتـرم شـمرده شـود.\nدر مـواردی کـه قانـون مشـخص مـی کنـد، حضـور هیئـت منصفـه\nالزامـی مـی باشـد.\n\n**اصل هفت**\n\nرسـانه هـا آزاد هسـتند تـا در چهارچـوب قوانیـن قوانیـن فعالیـت کنند.\nهیچیـک از ارکان سـه گانـه حکومـت حـق ندارنـد بـا اختصـاص\nبودجـه بـرای رسـانه هـا از آنهـا بـه عنـوان ابـزاری بـرای توجیـه\nقـدرت اسـتفاده کننـد. رسـانه هایـی کـه از بودجـه دولتـی اسـتفاده\nمـی کننـد، بایـد تنهـا پوشـش دهنـده اخبـار مربـوط بـه اقدامـات\nدولـت، نماینـدگان کنگـره و سـازمان هـای حکومتـی باشـد تـا همـه\nمـردم بـه راحتـی بـه شـرح مذاکـرات دولـت و کنگـره دسترسـی\nداشـته باشـند. هـر نـوع تبلیـغ بـه نفـع و یـا علیـه یـک فـرد یـا\nسـازمان حقیقـی و یـا حقوقـی در رسـانه هایـی کـه از بودجـه هـای\nدولتـی بهـره منـد هسـتند، ممنـوع مـی باشـد و پیگـرد قضایـی دارد.",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 922
+   },
+   "page": 24
+  },
+  "061b47f1d7039c2f:14:claude-opus-5:2576:v1": {
+   "raw": "ماده چهارده: عهدنامه ها، مقاوله نامه ها، قراردادها\nو موافقتنامه های بین المللی باید به ترتیب به تصویب دو\nسوم اعضای مجلس نمایندگان و سنا برسد. گرفتن و دادن وام\nیا کمکهای بدون عوض داخلی و خارجی از طرف دولت، به\nتصویب دو سوم اعضای مجلس نمایندگان نیازمند است، که از\nطریق روزنامه ها و رسانه ملی باید به اطلاع عموم برسد. هر\nگونه تغییر در خطوط مرزی ممنوع است مگر اصلاحات جزئی\nبا رعایت مصالح کشور به شرط این که یک طرفه نباشد و\nبه استقلال و تمامیت ارضی کشور لطمه نزند و به تصویب\nچهار پنجم اعضای مجلس نمایندگان و سنا برسد.\n\nماده پانزده: برای مشارکت مستقیم مردم در نظارت بر\nحسن اجرای امور و پیشبرد سریع برنامه های اجتماعی، اقتصادی،\nعمرانی، بهداشتی، فرهنگی، آموزشی و سایر امور رفاهی، با توجه\nبه مقتضیات محلی اداره امور هر استان، پارلمان های استانی\nتشکیل می شود که اعضای آن را مردم همان استان به طور\nمستقیم انتخاب می کنند. شرایط انتخاب کنندگان و انتخاب\nشوندگان و حدود وظایف و اختیارات نظارتی و نحوه انتخاب و\nنظارت بر پارلمان هر استان و سلسله مراتب آنها باید با رعایت\nاصول وحدت ملی و تمامیت ارضی کشور و در چهارچوب این قانون\nاساسی باشد. مجموعه قوانین تصویب شده توسط پارلمان هر استان\nبه هیچ عنوان نمی تواند خارج از چهارچوب قانون اساسی کشور\nیا مغایر با قوانین موضوعه کشوری مصوب کنگره قانونگذاران باشد.\nدامنه تاثیر قوانین مصوب کنگره هر استان نمی تواند خارج از\nمحدوده جغرافیایی و حوزه قضایی آن استان باشد. همچنین\nپارلمان های استانی حق تصویب هیچ طرح و لایحه ای که",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 855
+   },
+   "page": 14
+  },
+  "061b47f1d7039c2f:47:claude-opus-5:2576:v1": {
+   "raw": "They shall not concurrently assume any positions\nin the legislative or judicial branch, nor sit on the\nboard of or serve as legal advisor at any private or\npublic institution.\n\nCriminal charges against the President, Vice\nPresident and any of the Ministers that are\nunrelated to their government position will be\nprosecuted in public courts. Congress shall review\nthe assets of the President, Vice President and their\nCabinet and each of these individual's spouse and\nchildren at the start and finish of their term and\nshall investigate any irregularities.\n\nSection 6: The Governor of each Province\nshall be elected by the direct vote of the people of\nthat Province for a term of three years. Provincial\nGovernors shall serve no more than two terms.\nProvincial Governors shall be responsible for the\nconduct of affairs within their respective Provincial\nborders, but their decisions shall not be in conflict\nwith the national government. If the President of Iran\ndoes not agree with a decision made by a Provincial\nGovernor, the President shall have the power to\nveto the decision of any Provincial Governor. The\nPresident also shall have the authority to request that",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 344
+   },
+   "page": 47
+  },
+  "061b47f1d7039c2f:16:claude-opus-5:2576:v1": {
+   "raw": "باشـــد. ایـــن تغییـــرات پـــس از تصویــب کنگــره درهمــه پرســی\nسراسـری بـه رای مسـتقیم مـردم کشـور گذاشـته مـی شـود و مـی\nبایسـت اکثریـت پنجـاه درصـد افـزون بـر یـک رای را کسـب کنـد\nکـه در چنیـن شـرایطی بخـش اضافـه شـده، متمـم قانـون اساسـی\nو لازم الاجـرا خواهــد بــود.\n\nاصل پنج\nمـاده یـک: قـدرت اجرایـی کشـور در اختیـار دولـت مـی باشـد\nکـه ریاسـت آنـرا وکیـل جمهـور بـه عهـده دارد. وکیـل جمهـور و\nمعـاون وکیـل جمهـور بـرای مـدت سـه سـال بـا رای مسـتقیم مـردم\nانتخـاب مـی شـوند و انتخـاب دوبـاره وکیـل جمهـور تنهـا بـرای\nیـک دوره دیگـر ممکـن اسـت. احـراز پسـت وکیـل جمهـوری بـرای\nبیـش از دو دوره بطـور کل ممنـوع اسـت.\n\nمـاده دو: همــه افـراد ایرانـی الاصـل کـه تابعیـت ایـران را\nدارنـد، بـه شـرطی کـه دسـت کـم سـی و پنـج سـال سـن داشـته\nباشـند، مـی تواننـد کاندیـدای وکیـل جمهـوری شـوند. کاندیدهـای\nوکیـل جمهـوری بایـد قبـل از شـروع انتخابـات بـا ثبـت نـام از\nطریـق کمیسـیون ملـی انتخابـات آمادگـی خـود را رسـماً اعـلام\nکننـد. هـر کاندیـدای وکیـل جمهـوری مـی توانـد یـک معـاون\nکـه از شـرایط ویـژه کاندیداتـوری بـرای وکیـل جمهـور شـدن\nکـه در بـالا قیـد شـده اسـت برخـوردار باشـد، بـه کمیسـیون ملی\nانتخابـات معرفـی کنـد. نحـوه برگـزاری انتخابـات وکیـل جمهوری\nرا قانـون معیـن مـی کنـد. وکیـل جمهـور و معـاون وکیـل جمهـور\nبـا اکثریـت پنجـاه درصـد افـزون بـر یـک رای شـرکت کننـدگان در",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 921
+   },
+   "page": 16
+  },
+  "061b47f1d7039c2f:1:claude-opus-5:2576:v1": {
+   "raw": "منشور آزادی ایرانیان\n\nپیشنویس پیشنهادی\nقانون اساسی ایران\n\nNATIONAL IRANIAN CONGRESS\nکنگره ملی ایرانیان",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 73
+   },
+   "page": 1
+  },
+  "061b47f1d7039c2f:45:claude-opus-5:2576:v1": {
+   "raw": "**Section 4:** The President shall be responsible\nfor foreign affairs and communication with other\ncountries and international organizations as the\nofficial representative of the people of Iran. The\nPresident shall be in charge of the country's\nshort-term plans, budget and the government's\nadministrative and employment affairs, and he/\nshe can delegate these authorities. The President or\nhis/her legal representative shall sign agreements\nrelating to international unions, protocols, treaties,\nIranian government and any of its ministries'\ncontracts with other governments or the private\nsector after Congressional approval. In special cases\nand if circumstances necessitate it, the President\nmay appoint Special Representatives with specified\nauthorities. Under these conditions, the Special\nRepresentatives' decisions will be deemed as those\nof the President. Ambassadors are nominated by\nthe Foreign Minister and shall be approved by the\nPresident. The President signs the credentials of\nthe Ambassadors and accepts the credentials of the\nAmbassadors of other countries. In addition to the\nduties assigned to the President by the principles\nof this law and ordinary laws, the following duties\nalso shall be the responsibility of the President and\nhe/she shall not delegate them to another person:",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 375
+   },
+   "page": 45
+  },
+  "061b47f1d7039c2f:42:claude-opus-5:2576:v1": {
+   "raw": "a majority of fifty percent plus one vote in a national\nreferendum for an amendment to the Constitution to\ncome into force.\n\nArticle V\nSection 1: The Executive branch shall be the\nonly branch that has the responsibility for executive\npower, and the President shall be the head of this\nbranch. The President and Vice President shall be\nelected by direct vote for a term of three years, and\nthe President's re-election is only possible just for\nanother three-year term. Serving as President for\nmore than two terms is strictly prohibited.\n\nSection 2: All Iranian-born people who have\nIranian citizenship shall be eligible to become\npresidential candidates as long as they are at least\nthirty-five years of age. All candidates shall officially\ndeclare their candidacy before the start of the\nelection by registering with the National Electoral\nCommission. Each presidential candidate shall\nnominate a candidate for vice president who meets the\nrequirements listed above for presidential candidacy\nto the National Electoral Commission. The law shall\ndetermine the procedures governing the conduct of",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 324
+   },
+   "page": 42
+  },
+  "061b47f1d7039c2f:28:claude-opus-5:2576:v1": {
+   "raw": "Proposed Draft\nConstitution of Iran\n\nWe the People of Iran, for the purpose of\nforming a better society and establishing\nliberty, security, peace and justice for ourselves\nand our future generations, have penned this\nconstitution as a basis upon which a government\nworthy of the Iranian people can be founded.",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 100
+   },
+   "page": 28
+  },
+  "061b47f1d7039c2f:17:claude-opus-5:2576:v1": {
+   "raw": "انتخابات، برگزیده می شود. هر گاه در دور نخست هیچ\nیک از نامزدها چنین اکثریتی به دست نیاورد، دو هفته\nبعد برای بار دوم رای گرفته می شود. در دور دوم تنها دو\nنفر از نامزدهای وکیل جمهوری به همراه معاون کاندیدای\nمزبور که در دور نخست آرا بیشتری داشته اند شرکت می\nکنند و در این مرحله کسی که بیشترین آراء را کسب کند\nوکیل جمهور خواهد بود. در صورت اعلام انصراف یکی از\nدو کاندیداهای وکیل جمهوری در طول زمان بین دور اول و\nدور دوم، کاندیدای باقی مانده در رقابت انتخاباتی به عنوان\nوکیل جمهور به همراه معاون وکیل جمهور معرفی می\nشوند. انتخاب وکیل جمهور جدید باید دو ماه پیش از\nپایان دوره وکیل جمهوری قبلی انجام شده باشد. کشور\nدر هیچ زمانی دو وکیل جمهور نخواهد داشت و تا زمان\nبرگزاری سوگند وکیل جمهور منتخب، وکیل جمهور دوره\nپیشین همچنان ریاست دولت را بر عهده خواهد داشت.\n\nوکیل جمهور در مقابل کنگره قانونگذاران، اعضای\nسنا و در حضور پادشاه / دادبان کل به ترتیب زیر سوگند\nیاد می کند و سوگندنامه را امضا می نماید: \"من در\nمقام وکیل جمهور در پیشگاه مردم ایران سوگند\nیاد می کنم که در انجام وظایف وکیل جمهوری،\nمجری، نگهبان و مدافع قانون اساسی ایران و\nهمواره در خدمت مردم ایران باشم.\" وکیل جمهور\nدر صورت تمایل می تواند با گذاشتن دست بر کتاب\nمقدس دین خود، مراسم سوگند را به جای آورد.",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 733
+   },
+   "page": 17
+  },
+  "061b47f1d7039c2f:26:claude-opus-5:2576:v1": {
+   "raw": "Declaration\nof Freedom\n\nand Proposed Draft\nConstitution\nof IRAN\n\nNATIONAL IRANIAN CONGRESS\nکنگره ملی ایران",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 62
+   },
+   "page": 26
+  },
+  "061b47f1d7039c2f:48:claude-opus-5:2576:v1": {
+   "raw": "the Senate remove a Provincial Governor if he/she\ndetermines that the Provincial Governor's decision\nviolates national law.\n\nArticle VI\nSection 1: The Judicial Branch shall be\nestablished to serve justice and includes the Supreme\nCourt, Appeals Court, Trial Court and the office of\nthe Attorney General. The Judiciary shall conduct\ntrials in criminal or civil proceedings, prevention\nand discovery of criminal activity, prosecution of\ncriminals within the legal confines of statute of\nlimitations and the proportionality of crime and\npunishment. Trials shall be public. Supervision of\nthe Executive and Legislative Branch, monitoring\nproper implementation of the law in general and\npreparation of judicial bills and introducing them to\nCongress for approval also shall be within the scope\nof the Judicial Branch's responsibilities.\n\nSection2: The Head of the Judicial\nBranch, Chief Justice under a Republic or\nKing under a Constitutional Monarchy, shall\nbe elected by the Iranian people for a term\nof twelve years and may run for reelection.\nThe Head of the Judicial Branch shall",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 367
+   },
+   "page": 48
+  },
+  "061b47f1d7039c2f:23:claude-opus-5:2576:v1": {
+   "raw": "به همان ترتیب انتخاب قاضی ارشد استانی جانشین وی\nبرگزیده می شود. قضات دیوانعالی کشور از میان خود یک\nنفر را به عنوان رئیس دیوان عالی کشور انتخاب میکنند.\nحق درخواست استیضاح (بازخواست) از قضات دیوان عالی\nکشور، بر عهده مجلس نمایندگان است که در صورت تصویب\nچهار پنجم کل نمایندگان مردم به سنا برای تصمیم گیری\nفرستاده خوَاهد شد و سنا با اکثریت پنجاه درصد افزون\nبر یک آرای کل اعضای سنا رای به برکناری قاضی مربوطه\nخواهد داد.\n\nمـاده پنـج: تقسیمات دادگاههای عالی و بدوی و\nحوزه قضایی آنان توسط قوانین آیین دادرسی کشور\nتعیین می گردد. دادگاه ها به ریاست قضات تشکیل می\nشوند. قضات از بین حقوقدانان، بر پایه ی قوانین موضوعه\nکشوری انتخاب می شوند. قاضی را نمی توان از مقامی\nکه شاغل آن است بدون دادرسی و ثبوت بزه یا تخلفی\nکه باعث برکناری می شود به طور موقت یا دایم برکنار\nکرد یا بدون رضای او محل خدمت یا سمتش را تغییر\nداد.\n\nمـاده شـش: افراد را نباید برای ارتکاب یک جرم دوبار\nمحاکمه و مجازات کرد. دادرسی ها باید علنی انجام شود، مگر\nبه حکم قانون. احکام دادگاه ها باید مستدل و مستند به مواد\nقانون و اصولی باشد که بر اساس آن حکم صادر شده است\nو متون مذهبی، فلسفی و ایدئولوژیک نمی توانند منبع صدور\nاحکام دادگستری باشند.\n\n۲۲",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 702
+   },
+   "page": 23
+  },
+  "061b47f1d7039c2f:12:claude-opus-5:2576:v1": {
+   "raw": "اظهـار کـرده انـد یـا آرایـی کـه در مقـام ایفـای وظایـف نماینـدگـی\nخـود داده انـد، چـه در حیـن نماینـدگـی و چـه پـس از آن مـورد\nپیگـرد و مجـازات قـرار داد.\n\n**مـاده یـازده:** کنگـره قانونگـذاران حـق تحقیـق و تفحـص در\nتمـام امـور کشـور و اقدامـات دولـت و دادگسـتری را دارد.\n\n**مـاده دوازده:** در مسـائل اقتصـادی، سیاسـی، اجتماعـی\nو فرهنگـی ممکـن اسـت اعمـال قـوه مقننـه از راه همـه پرسـی\nو مراجعـه مسـتقیم بـه آرا مـردم صـورت گیـرد. مراجعـه بـه آرا\nعمومـی، بـه درخواسـت وکیـل جمهـور یـا یـک سـوم از اعضـای\nمجلـس نماینـدگان و یـا یـک سـوم سـنا و یـا از سـوی یـک سـی ام\nکل جمعیـت واجدیـن شـرایط رای دادن، بایـد بـه تصویـب دو سـوم\nمجمـوع مجلـس نماینـدگان برسـد.\n\n**مـاده سـیزده:** کنگـره قانونگـذاران در همـه مسـائل کشـور در\nحـدود مقـرر در قانـون اساسـی مـی توانـد قانـون وضـع کنـد. تدویـن\nبودجـه کشـور و نحـوه جمـع آوری و مصـرف مالیـات، دریافـت وام\nداخلـی و خارجـی، دفـاع عمومـی و کمـک هـای همگانـی، در\nمحـدوده اختیـارات کنگـره قانونگـذاران ایـران مـی باشـد. لوایـح\nدولـت توسـط وکیـل جمهـور بـه مجلـس نماینـدگان تقدیـم مـی\nشـود و طرحهـای قانونـی بـه پیشـنهاد حداقـل پانـزده نفـر از\nنماینـدگان، در مجلـس نماینـدگان قابـل طـرح اسـت. اعـلام زمـان\nرسـیدگی بـه طـرح هـا و لوایـح مربـوط بـه هـر یـک از وزارتخانـه هـا\nو دسـتگاه هـای دولتـی، قبـلَ از بررسـی و نیـز حضـور نماینـدگانـی\nاز وزارتخانـه هـای مربوطـه جهـت اظهـار نظـر مشـورتی، در مجلـس",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 949
+   },
+   "page": 12
+  },
+  "061b47f1d7039c2f:8:claude-opus-5:2576:v1": {
+   "raw": "مجلـس نماینـدگان نباشـد. رییـس مجلس نماینـدگان و اعضـای\nمدیریـت ایـن مجلـس بـه ترتیبـی کـه در آییـن نامـه داخلـی آن\nمشـخص مـی گـردد انتخاب خواهنـد شـد. اگـر بـه هـر دلیـل\n(بیمـاری، اسـتعفا، فـوت و یـا برکنـاری از سـمت) نماینـده ای\nنتوانـد دوره خـود را بـه پایـان برسـاند، بـرای حـوزه انتخابیـه وی\nانتخابات زودهنگام بـه ترتیبـی کـه در قانـون مشخص مـی شـود\nبایـد برگـزار گـردد، تـا نماینـده منتخـب بـرای بـه پایـان رسـاندن\nدوره نماینـده پیشـین برگزیـده شـود.\n\nمـاده سـه: نماینـدگان کنگـره شامل مجلس نماینـدگان و\nسـنا، بایـد در نخسـتین جلسـه مجلس نماینـدگان بـه ترتیـب زیـر\nسـوگند یـاد کننـد و متـن سـوگندنامه را امضا نماینـد: \"مـن در\nپیشگاه مـردم ایران سـوگند یاد مـی کنـم کـه در انجـام وظایف\nوکالـت، نگهبـان قانـون اساسـی ایـران، منافـع ملـی و همـواره در\nخدمـت مـردم ایـران باشـم.\" نماینـدگان در صـورت تمایـل مـی\nتواننـد بـا گذاشـتن دسـت بـر کتـاب مقدس دیـن خـود، تحلیـف\nرا انجام دهنـد. نمایندگانـی کـه در جلسـه نخسـت شـرکت ندارنـد\nبایـد در اولیـن جلسـه ای کـه حضـور پیدا مـی کننـد مراسـم\nسـوگند را بجـای آورنـد.\n\nمـاده چهـار: مجلس نماینـدگان تنهـا ارگانـی اسـت کـه\nحـق دارد بازخواسـت از رییـس دولـت و رییـس رکـن قضایـی را\nدرخواست کنـد. طـرح بازخواسـت رییـس دولت در صـورت تصویب\nتوسط دو سـوم از کل تعـداد نمایندگان و طـرح بازخواست رئیس\nرکـن قضایـی در صـورت تصویب سـه چهـارم کل نماینـدگان مـردم\nبـرای تصمیـم گیـری بـه سـنا فرسـتاده خواهـد شـد.",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 949
+   },
+   "page": 8
+  },
+  "061b47f1d7039c2f:31:claude-opus-5:2576:v1": {
+   "raw": "Each Province shall elect a Provincial Parliament,\nProvincial Governor, and Provincial Judiciary\nwithin the framework of this Constitution.\nHowever, the right to form an army and to\ncommunicate with other countries shall remain\nexclusive to the national government.\n\nArticle IV\nSection 1: The sole institution that shall have\nthe power to legislate is the Congress which\nconsists of the House of Representatives and the\nSenate. Congressional hearings will be open to\nthe public, subject to the priority of protecting\nnational security information. The venue for\ncongressional meetings will only be in the official\ncongress building. Hearings shall be convened\nwith the presence of at least one more than half\nthe members.\n\nCongress shall not enact laws that are inconsistent\nwith the principles of this Constitution. In cases of\ndispute, the Supreme Court shall be responsible for\nsettling the issue.\nBeing a member of Congress is a position that\nbelongs to an elected official and shall not be\ntransferable to another person. Congress shall not",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 313
+   },
+   "page": 31
+  },
+  "061b47f1d7039c2f:36:claude-opus-5:2576:v1": {
+   "raw": "**Section 8:** The National Electoral Commission\nshall have nine official members and thirty three\nobserver members. Official members of the National\nElectoral Commission are nominated by the\nPresident for a six-year term. They shall start their\nwork only after receiving Senate approval. Each\nProvince shall have one member in the National\nElectoral Commission's Observers Council. They\nshall be appointed by Provincial Governors to the\nNational Electoral Commission for a three-year\nterm. The law shall specify the duties of the National\nElectoral Commission and its procedures. Each\nofficial or observer member of the National Electoral\nCommission shall serve one non-renewable term.\nObserver members shall not vote in this Commission.\n\n**Section 9:** The House of Representatives and\nSenate sessions shall be open to the public and these\nhearings shall be broadcast through the national\nmedia to inform the public. Proposed legislation\nshall pass only if approved by more than half the\ntotal members.\nIn urgent circumstances related to national security,\nclosed sessions may be held upon the request of\nthe President, or nine members of the Senate, or\nthirty members of the House of Representatives.",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 355
+   },
+   "page": 36
+  },
+  "061b47f1d7039c2f:3:claude-opus-5:2576:v1": {
+   "raw": "منشور آزادی ایرانیان\n\nبیـش از یکصـد سـال اسـت کـه ایرانیـان دوش بـه دوش\nیکدیگـر بـرای رسـیدن بـه آزادی و دموکراسـی پیـکار مـی\nکننـد. نبـردی بـرای کوتـاه کـردن دستان ایدئولـوژی هـای\nآسـمانی و زمینـی از سرنوشـت مـردم و سـپردن آن بـه مـردم\nکـه تنهـا مالـکان سرنوشـت خویـش هسـتند. امـروز زمان\nآن فـرا رسـیده اسـت تـا در دنیایـی کـه مردمـان متمدن\nدسـت در دسـت حکومـت هـای دانـا و منتخـب خـود، بـرای\nرفـاه، شـادی، آسـایش و امنیـت بیشـتر تلاش مـی کننـد، ما\nمـردم ایـران هـم بتوانیـم فرصـت یابیـم تـا امنیـت، عشـق،\nامیـد و زندگـی را بـه سـرزمینمان کـه گاهواره تمدن بشـری\nبـوده اسـت، بازگردانیـم. نیکـی را سـرلوحه پنـدار، گفتـار و\nکردارمـان قـرار دهیـم بـا بـاور بـه اینکـه همـه انسـانها در\nسراسـر دنیـا آزاد سرشـته شـده اند. مـا ایرانیـان کـه در هـر\nکجـای دنیـا بـه یـک انـدازه در تعییـن سرنوشـت کشـورمان\nسـهم و حـق داریـم، تلاشهایمان را تـا دسـتیابی بـه ایـن سـه\nهـدف ادامـه خواهیـم داد و پـس از دسـتیابی در نگهـداری آن\nتـا آخریـن نفـس خواهیـم ایسـتاد.\n\nیـک: جایگزینـی حکومتـی دموکراتیـک کـه شایسـته\nایرانیـان باشـد،\nدو: تدویـن حقـوق اساسـی نویـن، بـرای ایـران آزاد و\nدموکراتیـک،\nسـه: ایـران آزاد و دموکراتیـک همسـایه ای خـوب و\nعزتمنـد در جامعـه جهانـی.\n\n۲",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 837
+   },
+   "page": 3
+  },
+  "061b47f1d7039c2f:41:claude-opus-5:2576:v1": {
+   "raw": "**Section 16:** None of Iran's thirty-three Provinces\nshall have the power to establish an army or to declare\nwar on other Provinces or any foreign countries.\nSigning international treaties and regulating imports\nand exports shall be within the exclusive bounds of the\nauthority of the Congress of Iran and outside the scope\nof the Provincial Parliament's authority. Provincial\nParliaments shall act only within the framework\nprovided by the Constitution to facilitate the export and\nimport affairs in each Province and shall only do so with\ndirect permission and direct monitoring of Congress.\n\n**Section 17:** The Supreme Court shall interpret the\nConstitution and determine the existence of any conflict\nbetween passed legislation and the Constitution.\nRequests for interpretation of the Constitution shall\nbe sent to the Supreme Court by the President or the\nleadership of the House of Representatives and the\nSenate.\n\n**Section 18:** Proposing an amendment or\namendments removing, adding, or editing\nparts of this Constitution shall require a\nmajority of four-fifths of both the House of\nRepresentatives and the Senate. These changes,\nafter approval of the Congress, shall require",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 377
+   },
+   "page": 41
+  },
+  "061b47f1d7039c2f:30:claude-opus-5:2576:v1": {
+   "raw": "Article II\nThe form of Iranian government, Republic\nor Constitutional Monarchy, shall be determined\nthrough a referendum by a majority vote of the\nIranian people. Iran's government shall consist\nof three branches: executive, legislative and\njudicial. While working in unison, each branch\nshall maintain its independence and the principle\nof separation of powers shall be consistently\nobserved. The Head of the Executive Branch and\nall members of the Judicial Branch are elected\ndirectly by Iranian voters.\n\nArticle III\nCurrent provincial boundaries shall be\ncomplied with. Iran has thirty three provinces:\nEast Azarbaijan, West Azarbaijan, Alborz,\nIlam, Baluchestan, Bushehr, Persepolis, Tehran,\nChaharmahak and Bakhriari, Khorasan Razavi,\nSouthern Khorasan, North Khorasan, Khuzestan,\nZanjan, Semnan, Sistan, Shiraz, Qazvin, Qom,\nKurdistan, Kerman, Kermanshah, Kohkiluyeh\nand Boyerahmad, Golestan, Gilan, Lorestan,\nMazandaran, Central, Hormozgan, Hamedan and\nYazd.",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 417
+   },
+   "page": 30
+  },
+  "061b47f1d7039c2f:25:claude-opus-5:2576:v1": {
+   "raw": "(blank page — no text)",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 10
+   },
+   "page": 25
+  },
+  "061b47f1d7039c2f:49:claude-opus-5:2576:v1": {
+   "raw": "have the following responsibilities: administering\nthe court system and all institutions and offices\nrequired by the Judicial Branch in its legal,\nadministrative and executive affairs, preparation and\nsubmission of judicial bills to Congress, nomination\nof Attorney General to the President and the Senate\nfor confirmation, preparation and submission of\nthe judicial budget to the House for approval,\nappointment and dismissal of Judges and local\nAttorneys General in accordance with related laws.\nIf, for any reason (illness, death, or dismissal) the\nHead of the Judicial Branch is not able to fulfill his\nterm in office, elections shall be held for a new Head\nof the Judicial Branch. Monitoring the appropriate\nimplementation of the law, monitoring the actions\nof the government and the Congress shall also be\nwithin the scope of the responsibilities of the Head\nof the Judicial Branch.\n\nSection 3: The Attorney General is nominated by\nthe Head of the Judicial Branch and the nomination\nis presented to the President. If approved by the\nPresident, his/her nomination shall be submitted\nto the Senate for confirmation. If the Head of the\nJudicial Branch and the President cannot agree on\na nominee within three months, the President shall",
+   "usage": {
+    "input_tokens": 5132,
+    "output_tokens": 391
+   },
+   "page": 49
+  }
+ }
+}
