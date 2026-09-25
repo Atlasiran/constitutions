@@ -375,3 +375,11 @@ Status values: ☐ to do · ◐ in progress · ☑ done
   - Atlas submodule bumped to `4c58f17` (Atlas `8fe2418`): naoruz and the fuller texts are live after the Pages deploy.
   - Vision OCR (`vision_ocr.py`, see Pitfalls) for Pars, Shajarian and Tabriz: 120 pages, 615K input / 94K output tokens, ≈ $2.70 at batch price, no failures. Articles: Pars 60 → 199 (1–200; the draft itself skips 199), Tabriz 95 → 113 (1–113, none inferred), Shajarian 57 → 58 (no gap fills). Corpus: 4,203 catalog articles, 4,001 in the site data, 480 edges. These three are ready to audit.
   - Not OCR problems, left open: Majame is prose in numbered points, so it has no articles; Nasrahmadi (13 articles from 161 pages) nests «ماده» inside «بند «اصل» N», which `articles.py` doesn't model.
+  - Vision OCR for 20 more documents (886 pages, ≈ $20, one page retried): the five Tesseract texts (naoruz, Green Jurists 1388, Left Socialists, Majame, Nasrahmadi) and every PDF-text document with extraction errors (reversed or lost «لا», dropped letters): Mashruteh supplement, Fakhravar, Aryanpour, Nayebhashem amendment, Iran-e No r12 and r13, Parsa, Pan-Iranist, both Andishgah texts, Ansari, Green Jurists 1396, Juya, WCUP, Jahanshahi. Left as PDF text, because their text layer is right and their odd words are vocabulary, author typos or lost ZWNJ: Mostashar, Khomeini, CPI-MLM, NCRI, both Bani-Sadr texts, both Saginian drafts, Nayebhashem provisional, Mashruteh 1906, the 1979 constitution. naoruz now reads «کوئیر» (queer), not «کوثیر».
+  - `vision_ocr.py` clean-up also strips the markdown bold the model sometimes puts on headings.
+  - `articles.py`:
+    - compound ordinals ending «یکم»/«سیم» («هشتاد و یکم», «سی و سیم»);
+    - a law printed with its supplement (Mashruteh 1906 editions: 51 + 107) or a part that restarts numbering (Saginian monarchy «بخش دوم») is split at the restart when both sides are long clean runs;
+    - contents pages with dot leaders are skipped.
+    
+    Changes: 1979 constitution 161 → 176 of 177; Mashruteh 1906 163 (mixed) → 156; supplement 104 → 110 (107 plus the amended 36–40, headed again; its 14 and 95 are headed «فصل» in the source); Saginian monarchy 23 → 44; Left Socialists 160 (with duplicates) → 147 clean; inferred numbers fall across the corpus (e.g. Green Jurists 21 → 8). Corpus: 4,232 catalog articles, 4,226 in the site data, 525 edges.

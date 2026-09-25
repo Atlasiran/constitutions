@@ -52,6 +52,10 @@ def build():
             for u, uc in UC.items(): add(h+t+u, f'{hc} و {tc} و {uc}')
     for s, n in list(m.items()):
         if s.startswith('صد'): m.setdefault('یک'+s, n)
+    for s, n in list(m.items()):
+        # compound ordinals also end in «یکم» and, in older texts, «سیم»: «هشتاد و یکم», «سی و سیم»
+        if ' و ' in s and s.endswith('اول'): m.setdefault(s[:-3] + 'یکم', n)
+        if ' و ' in s and s.endswith('سوم'): m.setdefault(s[:-3] + 'سیم', n)
     return m
 
 WORDS = build()
@@ -72,7 +76,9 @@ def markers(text, kind):
 
 def toc_page(text):
     """A contents page: most of its lines end in a page number."""
-    lines = [l.strip(" .") for l in text.split("\n") if l.strip(" .")]
+    raw = [l for l in text.split("\n") if l.strip(" .")]
+    if sum(bool(re.search(r'[.…]{4,}\s*[\d۰-۹]{1,3}\s*$', l)) for l in raw) >= 5: return True   # dot leaders
+    lines = [l.strip(" .") for l in raw]
     return len(lines) >= 5 and sum(bool(re.search(r'\s[\d۰-۹]{1,3}$', l)) for l in lines) >= 0.6 * len(lines)
 
 def _chain(nums, live):
@@ -119,10 +125,26 @@ def fill_gaps(ms, full, kind, skip):
                 out += [(m.start(1), m.end(), n + k + 1, True) for k, m in enumerate(between)]
     return out
 
+def _sequences(nums):
+    """Two whole numbered texts printed one after the other (a law and its supplement). Try each
+    restart at 1 as the split; keep it only if both sides hold a long clean run from the start."""
+    def run(lo, hi):
+        c = _chain(nums, [lo <= i < hi for i in range(len(nums))])
+        if len(c) < 20 or nums[c[0]] > 3: return None
+        return c if len(c) >= 0.8 * max(nums[i] for i in c) else None
+    best = []
+    for p in range(1, len(nums)):
+        if nums[p] != 1: continue
+        a, b = run(0, p), run(p, len(nums))
+        if a and b and len(a) + len(b) > len(best): best = a + b
+    return best
+
 def longest_run(nums):
     """Pick whichever strategy yields the most sequence-like numbering."""
     if not nums: return []
     single = _chain(nums, [True]*len(nums))
+    seq = _sequences(nums)
+    if seq: return seq      # its own test is stricter than the score, which can't see two texts
     multi  = _segments(nums)
     cands = [c for c in (single, multi) if c]
     if not cands: return []

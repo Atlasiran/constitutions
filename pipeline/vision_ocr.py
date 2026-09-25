@@ -113,6 +113,7 @@ AR_DIGITS = str.maketrans("٠١٢٣٤٥٦٧٨٩", "۰۱۲۳۴۵۶۷۸۹")
 def clean(raw):
     """Corpus form of a page. Applied when writing, so changes here never need a new reading."""
     s = normalize_fa(raw).translate(AR_DIGITS)
+    s = re.sub(r"(?m)^#+ +", "", s.replace("**", ""))   # markdown the model sometimes adds to headings
     s = re.sub(r"(?<=\S) ـ+ (?=\S)", " - ", s)        # a spaced tatweel is a dash; repair() would join the words
     lines = s.split("\n")
     while lines and re.fullmatch(r"[\s۰-۹\d\-–—.()]*", lines[-1]): lines.pop()   # page number left in
