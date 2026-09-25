@@ -8,6 +8,8 @@
   --line:#dde1e8; --line-2:#eef0f4;
   --accent:#1e4fa3; --accent-soft:#e8eefb;
   --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a;
+  --v-ok:#17875f; --v-ok-bg:#e3f4ec; --v-part:#a15c00; --v-part-bg:#fcefd9;
+  --v-bad:#b3261e; --v-bad-bg:#fbe5e3; --v-none:#5d6675; --v-none-bg:#eceef2;
   --shadow:0 1px 2px rgba(18,22,29,.06),0 8px 24px -12px rgba(18,22,29,.14);
   --f-display:"Newsreader",Georgia,"Times New Roman",serif;
   --f-ui:"Vazirmatn",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
@@ -20,6 +22,8 @@
   --line:#242a35; --line-2:#1d222c;
   --accent:#7ea6ff; --accent-soft:#1a2740;
   --s1:#3987e5; --s2:#d95926; --s3:#199e70;
+  --v-ok:#5fd3a4; --v-ok-bg:#12352a; --v-part:#f2b45a; --v-part-bg:#3a2a10;
+  --v-bad:#ff8a80; --v-bad-bg:#401a18; --v-none:#a3adbd; --v-none-bg:#232833;
   --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
 }}
 .qa-root[data-theme="dark"]{
@@ -29,6 +33,8 @@
   --line:#242a35; --line-2:#1d222c;
   --accent:#7ea6ff; --accent-soft:#1a2740;
   --s1:#3987e5; --s2:#d95926; --s3:#199e70;
+  --v-ok:#5fd3a4; --v-ok-bg:#12352a; --v-part:#f2b45a; --v-part-bg:#3a2a10;
+  --v-bad:#ff8a80; --v-bad-bg:#401a18; --v-none:#a3adbd; --v-none-bg:#232833;
   --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
 }
 .qa-root,.qa-root *{box-sizing:border-box}
@@ -52,7 +58,9 @@
 .qa-root.qa-embedded .tabs{margin-inline-end:auto}
 .qa-root .brand b{font-family:var(--f-display);font-size:20px;font-weight:600;letter-spacing:-.01em}
 .qa-root .brand span{font-size:11.5px;color:var(--ink-3);letter-spacing:.06em;text-transform:uppercase}
-.qa-root .tabs{display:flex;gap:2px;background:var(--surface-2);padding:3px;border-radius:9px;border:1px solid var(--line)}
+.qa-root .tabs{display:flex;gap:2px;background:var(--surface-2);padding:3px;border-radius:9px;border:1px solid var(--line);
+  max-width:100%;overflow-x:auto;scrollbar-width:none}
+.qa-root .tabs button{flex:none;white-space:nowrap}
 .qa-root .tabs button{border:0;background:transparent;padding:6px 13px;border-radius:6px;cursor:pointer;
   color:var(--ink-2);font-size:13px;font-weight:500;white-space:nowrap}
 .qa-root .tabs button[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
@@ -155,3 +163,48 @@
   .qa-root .brand span{display:none}
   .qa-root .tabs{width:100%;overflow-x:auto}
 }
+
+/* ---------- human-rights audit ---------- */
+.qa-root .aud-head{margin-block:4px 14px}
+.qa-root .aud-head h3{font-family:var(--f-display);font-size:19px}
+.qa-root .aud-meta{color:var(--ink-3);font-size:12.5px;margin-block:4px 10px}
+.qa-root .aud-flag{display:inline-block;margin-block:6px 10px;padding:4px 10px;border-radius:7px;font-size:12.5px;font-weight:600;
+  background:var(--v-part-bg);color:var(--v-part)}
+.qa-root .aud-sum{line-height:1.75;color:var(--ink-2);max-width:78ch;margin:0}
+.qa-root .aud-tally{display:flex;flex-wrap:wrap;gap:8px;margin-block:14px 12px}
+.qa-root .vchip{display:inline-flex;align-items:center;gap:6px;border:1px solid transparent;border-radius:999px;
+  padding:3px 10px;font-size:12.5px;font-weight:600;white-space:nowrap;background:var(--surface-2);color:var(--ink-2)}
+.qa-root button.vchip{cursor:pointer;border-color:var(--line)}
+.qa-root button.vchip.on{outline:2px solid var(--accent);outline-offset:1px}
+.qa-root .vchip b{font-weight:700}
+.qa-root .v-guaranteed{background:var(--v-ok-bg);color:var(--v-ok)}
+.qa-root .v-restricted_clawback{background:var(--v-part-bg);color:var(--v-part)}
+.qa-root .v-contradicted{background:var(--v-bad-bg);color:var(--v-bad)}
+.qa-root .v-silent{background:var(--v-none-bg);color:var(--v-none)}
+.qa-root .aud-rows{border-top:1px solid var(--line)}
+.qa-root .aud-row{border-bottom:1px solid var(--line)}
+.qa-root .aud-row > summary{display:grid;grid-template-columns:minmax(0,1.3fr) auto minmax(0,1fr);gap:10px;align-items:center;
+  padding:11px 4px;cursor:pointer;list-style:none}
+.qa-root .aud-row > summary::-webkit-details-marker{display:none}
+.qa-root .aud-row > summary:hover{background:var(--surface-2)}
+.qa-root .aud-right{font-weight:600}
+.qa-root .aud-cites{color:var(--ink-3);font-size:12.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.qa-root .aud-body{padding:4px 4px 16px;line-height:1.75;max-width:82ch}
+.qa-root .aud-body h4{font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-3);margin:14px 0 6px}
+.qa-root .aud-body blockquote{margin:10px 0;padding:8px 12px;border-inline-start:3px solid var(--accent);background:var(--surface-2);border-radius:6px}
+.qa-root .aud-art,.qa-root .aud-prov{border:1px solid var(--line-2);border-radius:8px;padding:6px 10px;margin-block:6px;background:var(--surface-2)}
+.qa-root .aud-art > summary,.qa-root .aud-prov > summary{cursor:pointer;font-size:13px}
+.qa-root .aud-art > div,.qa-root .aud-prov > div{margin-top:6px;white-space:pre-line;font-size:13.5px}
+.qa-root .aud-prov code{font-family:var(--f-mono);font-size:12px}
+.qa-root .aud-prov a{font-size:12px;color:var(--accent)}
+.qa-root .aud-defs{display:grid;grid-template-columns:auto 1fr;gap:8px 14px;align-items:baseline;margin:10px 0 14px}
+.qa-root .aud-defs dd{margin:0;color:var(--ink-2);line-height:1.6}
+.qa-root .aud-method{margin:0;padding-inline-start:20px;line-height:1.75;color:var(--ink-2)}
+@media (max-width:640px){
+  .qa-root .tabs{order:3;flex-basis:100%}
+  .qa-root .tabs button{padding:6px 10px}
+  .qa-root .aud-row > summary{grid-template-columns:1fr auto}
+  .qa-root .aud-cites{grid-column:1 / -1}
+  .qa-root .aud-defs{grid-template-columns:1fr}
+}
+.qa-root .aud-meta a{color:var(--accent)}

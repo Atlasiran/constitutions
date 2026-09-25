@@ -11,11 +11,33 @@
      theme     "atlas" adds .qa-atlas (see atlas-theme.css)
      hash      keep the view in location.hash for deep links (default true)
 
-   Deep links: #corpus, #map, #search=<text>, #compare=<uid>,<uid>[,<topic>]
+   Deep links: #corpus, #map, #search=<text>, #compare=<uid>,<uid>[,<topic>], #rights=<uid>[,<right>]
    Only documents in the same comparison group can be compared (rule: like with like). */
 
 const T={
- en:{corpus:"Corpus",map:"Similarity",compare:"Compare",search:"Search",
+ en:{corpus:"Corpus",map:"Similarity",compare:"Compare",search:"Search",rights:"Human rights",
+   rtitle:"Measured against international human-rights law",
+   rsub:"Each document is read against 31 rights drawn from the Universal Declaration, the two Covenants and the core UN conventions. Every verdict cites the document's articles and the treaty provisions it rests on.",
+   rnone:"No audit has been reviewed and published yet.",
+   rpick:"Document",rreviewed:(who,d)=>"Reviewed"+(who?" by "+who:"")+(d?" on "+d:""),
+   rpreview:"Preview: not yet reviewed. Not for publication.",
+   rsrc:"Source of the text",rscope:n=>n+" articles read; the wording in force of amended articles.",
+   runrev:"Not yet reviewed: these verdicts come from the automated reading and its citation checks; no person has confirmed them yet.",
+   rarts:"Articles cited",rbench:"Benchmark provisions",rquote:"Decisive words",rnoarts:"No article addresses this right.",
+   ren:"English text; the Persian translation is pending.",rall:"All",
+   v:{guaranteed:"Guaranteed",restricted_clawback:"Restricted",contradicted:"Contradicted",silent:"Silent"},
+   vd:{guaranteed:"The document protects the right explicitly, at the level the treaties require.",
+       restricted_clawback:"The document names the right, then takes it back: an open-ended condition (such as “Islamic standards” or “the law”), limiting it to some people, or restricting it beyond what the treaties allow.",
+       contradicted:"The document goes against the right, e.g. by establishing discrimination, allowing a prohibited punishment, or placing an office above the right.",
+       silent:"The document does not address the right. Silence is itself a finding."},
+   mtitle:"How this was made",
+   m:["The benchmark is international human-rights law, stored word for word with a stable ID for every paragraph (e.g. ICCPR.19.3). No national constitution is used as a standard; every document is only the object of assessment.",
+      "Claude (Anthropic) reads the document article by article and gives one verdict per right, citing the articles and the treaty paragraphs it rests on and quoting the decisive words.",
+      "Every citation is checked automatically: a verdict citing an article or treaty paragraph that does not exist is rejected, and a quote not found in the document is flagged.",
+      "A person then reviews the verdicts. Until that is done, a document's page says it is not yet reviewed.",
+      "The document's text comes from its PDF and was checked against the page images; the article list shows exactly what was read. Where an article was amended, only the wording in force is assessed.",
+      "This is an analytical reading, not legal advice or a ruling."],
+   mmodel:(m,b)=>"Model: "+m+" · benchmark version "+b,
    title:"Qanun Atlas",
    lede:"Every known draft constitution for Iran, from the 1906 Fundamental Law to the transitional charters of 2020 — <em>extracted, split into articles, and made comparable</em>. Texts appear exactly as their authors wrote them; nothing here is ranked or endorsed.",
    sub:"Iranian constitutional drafts",
@@ -33,7 +55,29 @@ const T={
    group:"Compared only with",alone:"No other document of this kind in the corpus yet.",
    groups:{A:"constitutions and draft constitutions",B:"bylaws",C:"charters, programmes and ideological statements",D:"treatises"},
    note:"Article counts come from automated parsing of the source PDFs and may miss or over-split articles in poorly typeset documents. Every article links back to its page in the original. Topic labels are keyword-based and shown for navigation, not as legal classification."},
- fa:{corpus:"پیکره",map:"شباهت",compare:"مقایسه",search:"جست‌وجو",
+ fa:{corpus:"پیکره",map:"شباهت",compare:"مقایسه",search:"جست‌وجو",rights:"حقوق بشر",
+   rtitle:"سنجش با حقوق بین‌الملل بشر",
+   rsub:"هر سند درباره‌ی ۳۱ حق برگرفته از اعلامیه‌ی جهانی حقوق بشر، دو میثاق بین‌المللی و کنوانسیون‌های اصلی سازمان ملل خوانده می‌شود. هر حکم به اصول خود سند و به بندهای معاهده‌ای که بر آن استوار است استناد می‌کند.",
+   rnone:"هنوز هیچ سنجشی بازبینی و منتشر نشده است.",
+   rpick:"سند",rreviewed:(who,d)=>"بازبینی‌شده"+(who?" به دست "+who:"")+(d?" در "+d:""),
+   rpreview:"پیش‌نمایش: هنوز بازبینی نشده. برای انتشار نیست.",
+   rsrc:"منبع متن",rscope:n=>n+" اصل خوانده شد؛ در اصول اصلاح‌شده، متن معتبر کنونی.",
+   runrev:"هنوز بازبینی نشده: این حکم‌ها حاصل خوانش خودکار و وارسی خودکار استنادهاست و هنوز کسی آن‌ها را تأیید نکرده است.",
+   rarts:"اصول استنادشده",rbench:"بندهای متن بالادستی",rquote:"عبارت تعیین‌کننده",rnoarts:"هیچ اصلی به این حق نپرداخته است.",
+   ren:"متن انگلیسی؛ ترجمه‌ی فارسی در دست تهیه است.",rall:"همه",
+   v:{guaranteed:"تضمین‌شده",restricted_clawback:"مشروط‌شده",contradicted:"نقض‌شده",silent:"مسکوت"},
+   vd:{guaranteed:"سند این حق را صریحاً و در سطحی که معاهده‌ها می‌خواهند حمایت می‌کند.",
+       restricted_clawback:"سند نام حق را می‌آورد و سپس آن را پس می‌گیرد: با قیدی باز (مانند «موازین اسلامی» یا «طبق قانون»)، با محدود کردن آن به گروهی از مردم، یا با محدودیتی فراتر از آنچه معاهده‌ها روا می‌دارند.",
+       contradicted:"سند برخلاف این حق است؛ برای نمونه تبعیض برقرار می‌کند، مجازاتی ممنوع را روا می‌دارد یا مقامی را بالاتر از حق می‌نشاند.",
+       silent:"سند به این حق نپرداخته است. سکوت خود یک یافته است."},
+   mtitle:"روش کار",
+   m:["متن بالادستی حقوق بین‌الملل بشر است که عین متن آن با شناسه‌ای پایدار برای هر بند نگهداری می‌شود (مانند ICCPR.19.3). هیچ قانون اساسی ملی معیار نیست؛ همه‌ی اسناد تنها موضوع سنجش‌اند.",
+      "Claude (ساخت Anthropic) سند را اصل به اصل می‌خواند و برای هر حق یک حکم می‌دهد، با استناد به اصول سند و بندهای معاهده و نقل عبارت تعیین‌کننده.",
+      "همه‌ی استنادها خودکار وارسی می‌شوند: حکمی که به اصل یا بندی ناموجود استناد کند رد می‌شود و نقل‌قولی که در سند یافت نشود علامت می‌خورد.",
+      "سپس یک انسان حکم‌ها را بازبینی می‌کند. تا آن زمان، صفحه‌ی سند اعلام می‌کند که هنوز بازبینی نشده است.",
+      "متن سند از فایل PDF آن گرفته و با تصویر صفحه‌ها مقابله شده است؛ فهرست اصول دقیقاً همان است که خوانده شده. در اصول اصلاح‌شده تنها متن معتبر کنونی سنجیده می‌شود.",
+      "این یک خوانش تحلیلی است، نه مشاوره‌ی حقوقی یا حکم قضایی."],
+   mmodel:(m,b)=>"مدل: "+m+" · نسخه‌ی متن بالادستی "+b,
    title:"اسناد بنیادین",
    lede:"همه‌ی پیش‌نویس‌های شناخته‌شده‌ی قانون اساسی برای ایران، از قانون اساسی مشروطه تا منشورهای دوران گذار — <em>استخراج‌شده، تفکیک‌شده به اصول، و قابل مقایسه</em>. متن‌ها همان‌گونه‌اند که نویسندگانشان نوشته‌اند؛ هیچ‌چیز در اینجا رتبه‌بندی یا تأیید نشده است.",
    sub:"پیش‌نویس‌های قانون اساسی ایران",
@@ -57,8 +101,10 @@ const BCOL=["var(--s1)","var(--s2)","var(--s3)"];
 // Comparison groups (plan §6): bylaws are never compared with constitutions.
 export const GROUP={constitution:"A",constitution_proposal:"A",bylaws:"B",
   charter:"C",program:"C",ideology:"C",treatise:"D"};
-const VIEWS=["corpus","map","compare","search"];
+const VIEWS=["corpus","map","compare","search","rights"];
 
+// articles.json keeps the splitter's pattern for the unit; this is the word to show
+const UNITW={"اص[سص]?ل":["اصل","Art."],"ماد[هدة]":["ماده","Art."],"بند":["بند","Clause"],"تبصره":["تبصره","Note"]};
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e};
 
@@ -66,11 +112,13 @@ export function mount(root, opts={}){
   const embedded=!!opts.embedded, useHash=opts.hash!==false;
   const dataUrl=new URL(opts.dataUrl||"data/", new URL(".", import.meta.url));
   let L=opts.lang||(embedded?"fa":"en"), CAT=[], AN=null, ARTS=[], view="corpus";
-  let cmpA=null,cmpB=null,cmpT=null,q="";
+  let cmpA=null,cmpB=null,cmpT=null,q="",AUD=null,audDoc=null,audRight=null,audFilter=null;
   const t=k=>T[L][k];
   const title=d=>L==="fa"?d.fa:d.en;
   const author=d=>L==="fa"?(d.author_fa||""):(d.author_en||"");
   const group=d=>GROUP[d.kind]||"A";
+  const num=n=>L==="fa"?Number(n).toLocaleString("fa-IR",{useGrouping:false}):String(n);
+  const unitw=u=>(UNITW[u]||[u,u])[L==="fa"?0:1];
   const width=()=>root.clientWidth||innerWidth;
 
   root.classList.add("qa-root");
@@ -118,12 +166,14 @@ export function mount(root, opts={}){
     view=k;
     if(k==="search")q=v;
     if(k==="compare"){const [a,b,tp]=v.split(",");cmpA=a||null;cmpB=b||null;cmpT=tp||null;}
+    if(k==="rights"){const [a,r]=v.split(",");audDoc=a||null;audRight=r||null;}
   }
   function writeHash(){
     if(!useHash)return;
     let h=view;
     if(view==="search"&&q)h+="="+q;
     if(view==="compare"&&cmpA)h+="="+[cmpA,cmpB,cmpT].filter(Boolean).join(",");
+    if(view==="rights"&&audDoc)h+="="+[audDoc,audRight].filter(Boolean).join(",");
     if(decodeURIComponent(location.hash.slice(1))!==h)
       history.replaceState(history.state,"","#"+encodeURIComponent(h).replace(/%2C/g,",").replace(/%3D/g,"="));
   }
@@ -132,8 +182,9 @@ export function mount(root, opts={}){
 
   /* ---------- boot ---------- */
   const get=n=>fetch(new URL(n,dataUrl)).then(r=>{if(!r.ok)throw new Error(n+": "+r.status);return r.json()});
-  Promise.all([get("catalog.json"),get("analysis.json"),get("articles.json")])
-    .then(([c,a,ar])=>{CAT=c;AN=a;ARTS=ar;render()})
+  // audits.json is optional: a module built before audits existed still loads
+  Promise.all([get("catalog.json"),get("analysis.json"),get("articles.json"),get("audits.json").catch(()=>null)])
+    .then(([c,a,ar,au])=>{CAT=c;AN=a;ARTS=ar;AUD=au;render()})
     .catch(e=>{root.setAttribute("lang",L);V("corpus").hidden=false;
       V("corpus").innerHTML=`<div class="empty">${esc(t("loadfail"))}</div>`;console.error(e)});
 
@@ -150,7 +201,7 @@ export function mount(root, opts={}){
       b.onclick=()=>{view=k;render()};tb.append(b);});
     VIEWS.forEach(k=>V(k).hidden=view!==k);
     if(!CAT.length)return;
-    ({corpus:corpusView,map:mapView,compare:compareView,search:searchView})[view]();
+    ({corpus:corpusView,map:mapView,compare:compareView,search:searchView,rights:rightsView})[view]();
     writeHash();
   }
 
@@ -313,7 +364,7 @@ export function mount(root, opts={}){
   }
   function artCard(a){
     const c=el("div","art");
-    c.innerHTML=`<div class="art-h"><span class="art-n">${esc(a.unit)} ${a.n}</span>
+    c.innerHTML=`<div class="art-h"><span class="art-n">${esc(unitw(a.unit))} ${num(a.n)}</span>
       <span class="art-p">p.${a.page}</span></div><div class="fa" dir="rtl" lang="fa">${esc(a.text)}</div>`;
     if(a.text.length>320){const b=el("button","more");
       b.textContent=t("more");
@@ -341,13 +392,97 @@ export function mount(root, opts={}){
         const i=a.text.indexOf(q),s=Math.max(0,i-110);
         const snip=(s?"…":"")+esc(a.text.slice(s,i))+"<mark>"+esc(q)+"</mark>"+esc(a.text.slice(i+q.length,i+q.length+180))+"…";
         const h=el("div","hit");
-        h.innerHTML=`<div class="hit-src"><b>${esc(title(d))}</b> · ${esc(a.unit)} ${a.n} · p.${a.page}</div>
+        h.innerHTML=`<div class="hit-src"><b>${esc(title(d))}</b> · ${esc(unitw(a.unit))} ${num(a.n)} · p.${num(a.page)}</div>
           <div class="fa" dir="rtl" lang="fa">${snip}</div>`;
         res.append(h);});};
     inp.oninput=run;run();
     setTimeout(()=>inp.focus({preventScroll:true}),0);
     p.append(el("div","note",esc(t("note"))));
     v.append(p);
+  }
+
+  /* ================= HUMAN RIGHTS AUDIT ================= */
+  const VORDER=["guaranteed","restricted_clawback","contradicted","silent"];
+  function rightsView(){
+    const v=V("rights");v.innerHTML="";
+    const p=el("div","panel");
+    p.append(el("h2",null,esc(t("rtitle"))),el("div","sub",esc(t("rsub"))));
+    v.append(p);
+    const list=(AUD&&AUD.audits)||[];
+    if(!list.length){p.append(el("div","empty",esc(t("rnone"))));v.append(method(null));return}
+    if(!list.some(a=>a.uid===audDoc))audDoc=list[0].uid;
+    const A=list.find(a=>a.uid===audDoc), d=CAT.find(c=>c.uid===A.uid)||{};
+    if(list.length>1){
+      const row=el("div","row"),s=el("select");s.setAttribute("aria-label",t("rpick"));
+      list.forEach(a=>{const o=el("option",null,esc(title(CAT.find(c=>c.uid===a.uid)||{fa:a.uid,en:a.uid})));o.value=a.uid;o.selected=a.uid===audDoc;s.append(o)});
+      s.onchange=()=>{audDoc=s.value;audRight=null;audFilter=null;render()};
+      row.append(el("span","sub",esc(t("rpick"))),s);p.append(row);
+    }
+    const head=el("div","aud-head");
+    head.append(el("h3",null,esc(title(d))));
+    const rv=A.review||{};
+    head.append(el("div",A.preview||A.unreviewed?"aud-flag":"aud-meta",
+      esc(A.preview?t("rpreview"):A.unreviewed?t("runrev"):t("rreviewed")(rv.reviewer,rv.date))));
+    const meta=el("div","aud-meta",esc(t("rscope")(num(d.n_articles||0))));
+    if(d.source_url){meta.append(" · ");const ln=el("a",null,esc(t("rsrc")));ln.href=d.source_url;ln.target="_blank";ln.rel="noopener";meta.append(ln)}
+    head.append(meta);
+    head.append(el("p","aud-sum",esc(L==="fa"?A.summary_fa:A.summary_en)));
+    p.append(head);
+    // tally: one chip per verdict, click to filter
+    const counts={};Object.values(A.rights).forEach(r=>counts[r.verdict]=(counts[r.verdict]||0)+1);
+    const tally=el("div","aud-tally");
+    const all=el("button","vchip"+(audFilter?"":" on"),`${esc(t("rall"))} <b>${num(Object.keys(A.rights).length)}</b>`);
+    all.onclick=()=>{audFilter=null;render()};tally.append(all);
+    VORDER.forEach(k=>{const b=el("button",`vchip v-${k}`+(audFilter===k?" on":""),`${esc(t("v")[k])} <b>${num(counts[k]||0)}</b>`);
+      b.title=t("vd")[k];b.onclick=()=>{audFilter=audFilter===k?null:k;render()};tally.append(b)});
+    p.append(tally);
+    // one row per right, in the rubric's order
+    const rows=el("div","aud-rows");
+    AUD.rights.forEach(R=>{
+      const r=A.rights[R.id];if(!r||(audFilter&&r.verdict!==audFilter))return;
+      const det=el("details","aud-row");det.open=audRight===R.id;
+      det.ontoggle=()=>{if(det.open){audRight=R.id;writeHash()}};
+      const arts=r.segments.map(sid=>seg(A,sid)).filter(Boolean);
+      det.append(el("summary",null,
+        `<span class="aud-right">${esc(L==="fa"?R.fa:R.en)}</span>`+
+        `<span class="vchip v-${r.verdict}">${esc(t("v")[r.verdict])}</span>`+
+        `<span class="aud-cites">${arts.map(a=>esc(a.short)).join(L==="fa"?"، ":", ")}</span>`));
+      const body=el("div","aud-body");
+      body.append(el("p",null,esc(L==="fa"?r.note_fa:r.note_en)));
+      if(r.quote){const bq=el("blockquote","fa",esc(r.quote));bq.dir="rtl";bq.lang="fa";bq.title=t("rquote");body.append(bq)}
+      const h1=el("h4",null,esc(t("rarts")));body.append(h1);
+      if(!arts.length)body.append(el("div","sub",esc(t("rnoarts"))));
+      arts.forEach(a=>{const x=el("details","aud-art");
+        x.append(el("summary",null,esc(a.label)),el("div","fa",esc(a.text||"")));x.lastChild.dir="rtl";body.append(x)});
+      body.append(el("h4",null,esc(t("rbench"))));
+      r.provisions.forEach(id=>{const P=AUD.provisions[id]||{},I=AUD.instruments[P.i]||{};
+        const x=el("details","aud-prov");
+        x.append(el("summary",null,`<code>${esc(id)}</code> ${esc(L==="fa"?I.fa||"":I.en||"")}${P.h?" · "+esc(P.h):""}`));
+        const tx=L==="fa"&&P.fa?P.fa:P.en||"";
+        x.append(el("div",null,esc(tx)));
+        if(L==="fa"&&!P.fa){x.lastChild.dir="ltr";x.append(el("div","sub",esc(t("ren"))))}
+        if(I.url){const ln=el("a",null,esc(I.en||P.i));ln.href=I.url;ln.target="_blank";ln.rel="noopener";x.append(ln)}
+        body.append(x)});
+      det.append(body);rows.append(det);});
+    p.append(rows);
+    v.append(method(A));
+  }
+  function seg(A,sid){
+    const m=/^a(\d+)$/.exec(sid), label=(A.segment_labels||{})[sid]||sid;
+    if(!m)return {short:label,label,text:""};
+    const a=ARTS.find(x=>x.doc===A.uid&&x.n===+m[1]);
+    const unit=unitw(a?a.unit:"اص[سص]?ل");
+    return {short:`${unit} ${num(m[1])}`,label:`${unit} ${num(m[1])}${a?" · p."+num(a.page):""}`,text:a?a.text:""};
+  }
+  function method(A){
+    const p=el("div","panel");
+    p.append(el("h2",null,esc(t("mtitle"))));
+    const dl=el("dl","aud-defs");
+    VORDER.forEach(k=>{dl.append(el("dt",null,`<span class="vchip v-${k}">${esc(t("v")[k])}</span>`),el("dd",null,esc(t("vd")[k])))});
+    p.append(dl);
+    const ul=el("ul","aud-method");t("m").forEach(s=>ul.append(el("li",null,esc(s))));p.append(ul);
+    if(A)p.append(el("div","note",esc(t("mmodel")(A.model,A.benchmark))));
+    return p;
   }
 
   return {
