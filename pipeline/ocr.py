@@ -27,7 +27,7 @@ OK = re.compile(r'[ء-غف-يٰ-ۓ۰-۹A-Za-z]')
 
 def needs_ocr(path):
     doc = json.load(open(path, encoding="utf-8"))
-    if doc.get("source") == "ocr": return False
+    if doc.get("source") in ("ocr", "vision"): return False
     # tatweel-justified text is good text; don't count the stretch marks
     nz = "".join("".join(p["text"] for p in doc["pages"]).split()).replace("\u0640", "")
     if len(nz) < 500: return True
