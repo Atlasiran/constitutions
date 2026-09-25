@@ -1,0 +1,451 @@
+{
+ "pages": {
+  "45dc22671548ed8b:1:e08825e1efdd0d34:claude-opus-5:v1": {
+   "corrections": [],
+   "usage": {
+    "input_tokens": 7208,
+    "output_tokens": 10
+   },
+   "page": 1
+  },
+  "45dc22671548ed8b:2:97d34216cf19ffe5:claude-opus-5:v1": {
+   "corrections": [],
+   "usage": {
+    "input_tokens": 7135,
+    "output_tokens": 9
+   },
+   "page": 2
+  },
+  "45dc22671548ed8b:3:8acc1f930b0bec14:claude-opus-5:v1": {
+   "corrections": [
+    {
+     "find": "و دعاوی مربوط به آن در دادگاه‌های رسمیت دارند",
+     "replace": "و دعاوی مربوط به آن در دادگاه‌ها رسمیت دارند",
+     "kind": "wrong_letters"
+    }
+   ],
+   "usage": {
+    "input_tokens": 7324,
+    "output_tokens": 94
+   },
+   "page": 3
+  },
+  "45dc22671548ed8b:4:a77e152c2cad5f4c:claude-opus-5:v1": {
+   "corrections": [
+    {
+     "find": "حقوق، مسکن، و شغل اشخاص",
+     "replace": "حقوق، مسکن و شغل اشخاص",
+     "kind": "punctuation"
+    }
+   ],
+   "usage": {
+    "input_tokens": 6877,
+    "output_tokens": 68
+   },
+   "page": 4
+  },
+  "45dc22671548ed8b:5:93116b6ee73d714a:claude-opus-5:v1": {
+   "corrections": [],
+   "usage": {
+    "input_tokens": 6853,
+    "output_tokens": 10
+   },
+   "page": 5
+  },
+  "45dc22671548ed8b:6:5acdcc90534a802d:claude-opus-5:v1": {
+   "corrections": [
+    {
+     "find": "بلافاصله کتبا به متهم",
+     "replace": "بلافاصله کتباً به متهم",
+     "kind": "wrong_letters"
+    }
+   ],
+   "usage": {
+    "input_tokens": 6876,
+    "output_tokens": 61
+   },
+   "page": 6
+  },
+  "45dc22671548ed8b:7:65fd8f2e61afef57:claude-opus-5:v1": {
+   "corrections": [],
+   "usage": {
+    "input_tokens": 7431,
+    "output_tokens": 9
+   },
+   "page": 7
+  },
+  "45dc22671548ed8b:8:6d8027fcea03a921:claude-opus-5:v1": {
+   "corrections": [
+    {
+     "find": "است. تفصیل ضوابط و قلمرو و شرایط",
+     "replace": "است. تفصیل ضوابط و قلمرو و شرایط",
+     "kind": "missing_text"
+    }
+   ],
+   "usage": {
+    "input_tokens": 7047,
+    "output_tokens": 77
+   },
+   "page": 8
+  },
+  "45dc22671548ed8b:9:ae4e065c86a1e53f:claude-opus-5:v1": {
+   "corrections": [
+    {
+     "find": "جمهوری اسلامی ایران عبارتند از: قوه مقننه، قوه مجریه و قوه قضاییه که زیر\nنظر ولایت امر و امامت امت، بر طبق اصول آینده این قانون اعمال می‌گردند.",
+     "replace": "جمهوری اسلامی ایران عبارتند از: قوه مقننه، قوه مجریه و قوه قضاییه که زیر\nنظر ولایت امر و امامت امت، بر طبق اصول آینده این قانون اعمال می‌گردند.",
+     "kind": "wrong_letters"
+    }
+   ],
+   "usage": {
+    "input_tokens": 7036,
+    "output_tokens": 217
+   },
+   "page": 9
+  },
+  "45dc22671548ed8b:10:d8bb6672cf1d78f1:claude-opus-5:v1": {
+   "corrections": [],
+   "usage": {
+    "input_tokens": 7120,
+    "output_tokens": 9
+   },
+   "page": 10
+  },
+  "45dc22671548ed8b:11:74c65136670e174c:claude-opus-5:v1": {
+   "corrections": [],
+   "usage": {
+    "input_tokens": 7501,
+    "output_tokens": 10
+   },
+   "page": 11
+  },
+  "45dc22671548ed8b:12:450e340346d3c163:claude-opus-5:v1": {
+   "corrections": [],
+   "usage": {
+    "input_tokens": 6859,
+    "output_tokens": 9
+   },
+   "page": 12
+  },
+  "45dc22671548ed8b:13:46d8995e76c6b7b0:claude-opus-5:v1": {
+   "corrections": [],
+   "usage": {
+    "input_tokens": 7028,
+    "output_tokens": 10
+   },
+   "page": 13
+  },
+  "45dc22671548ed8b:14:cac1dd8c62217f7a:claude-opus-5:v1": {
+   "corrections": [
+    {
+     "find": "اگر مجلس رأی اعتماد نداد هیأت وزیـران یـا وزیـران یـا",
+     "replace": "اگر مجلس رأی اعتماد نداد هیأت وزیـران یـا وزیـر",
+     "kind": "extra_text",
+     "rejected": "the page prints «هیأت وزیران یا وزیران یا / وزیر»; the correction would double «وزیر»"
+    }
+   ],
+   "usage": {
+    "input_tokens": 7398,
+    "output_tokens": 106
+   },
+   "page": 14
+  },
+  "45dc22671548ed8b:15:d486b6b36123938c:claude-opus-5:v1": {
+   "corrections": [],
+   "usage": {
+    "input_tokens": 7538,
+    "output_tokens": 10
+   },
+   "page": 15
+  },
+  "45dc22671548ed8b:16:ab54dfe6b8a8a822:claude-opus-5:v1": {
+   "corrections": [
+    {
+     "find": "مصوبه قابل اجرا است",
+     "replace": "مصوبه قابل اجرا است",
+     "kind": "missing_text"
+    }
+   ],
+   "usage": {
+    "input_tokens": 7107,
+    "output_tokens": 57
+   },
+   "page": 16
+  },
+  "45dc22671548ed8b:17:4ae92719c69170f8:claude-opus-5:v1": {
+   "corrections": [
+    {
+     "find": "می‌کنند هر گاه یکی را اعلم",
+     "replace": "می‌کنند هر گاه یکی از آنان را اعلم",
+     "kind": "missing_text"
+    }
+   ],
+   "usage": {
+    "input_tokens": 7269,
+    "output_tokens": 73
+   },
+   "page": 17
+  },
+  "45dc22671548ed8b:18:21a502f103d159ce:claude-opus-5:v1": {
+   "corrections": [
+    {
+     "find": "- رییس ستاد مشترک.",
+     "replace": "- رییییس ستاد مشترک.",
+     "kind": "wrong_letters",
+     "rejected": "the page prints «ریییس»; the correction adds a fourth «ی»"
+    }
+   ],
+   "usage": {
+    "input_tokens": 7201,
+    "output_tokens": 60
+   },
+   "page": 18
+  },
+  "45dc22671548ed8b:19:ae4a59a8ae3291a5:claude-opus-5:v1": {
+   "corrections": [
+    {
+     "find": "نگهبان انتخاب مجمـع تشخیص مصلحت نظام",
+     "replace": "نگهبان انتخاب مجمـع تشخیص مصلحت نظام",
+     "kind": "missing_text"
+    },
+    {
+     "find": "هر گاه رهبر یا یکی از اعضای شورای رهبر یا یکی از اعضای شورای رهبری از انجام وظـایف",
+     "replace": "هر گاه رهبر یا یکی از اعضای شورای رهبری از انجام وظـایف",
+     "kind": "extra_text",
+     "rejected": "the repetition is printed (text layer: «رریر یا یکی از اعضای اورای رریر یا یکی از اعضای اورای رریری»)"
+    },
+    {
+     "find": "مجمع تشخیص مصلحت نظام برای تشخیص مصلحت نظام برای تشخیص مصلحت در مواردی که مصـوبه",
+     "replace": "مجمع تشخیص مصلحت نظام برای تشخیص مصلحت در مواردی که مصـوبه",
+     "kind": "extra_text",
+     "rejected": "the repetition is printed (text layer: «برای رخیص مولحت نظاخ برای رخیص موحلت»)"
+    }
+   ],
+   "usage": {
+    "input_tokens": 7924,
+    "output_tokens": 313
+   },
+   "page": 19
+  },
+  "45dc22671548ed8b:20:8239793436d58469:claude-opus-5:v1": {
+   "corrections": [
+    {
+     "find": "پس از مقام رهبری ریس جمهور عالیترین مقام رسمی کشور است",
+     "replace": "پس از مقام رهبری ریس جمهور عالیترین مقام رسمی کشور است",
+     "kind": "wrong_letters"
+    },
+    {
+     "find": "ریس جمهور برای مدت چهار سال",
+     "replace": "رییس جمهور برای مدت چهار سال",
+     "kind": "wrong_letters"
+    },
+    {
+     "find": "برای انتخاب مجدد معرف می‌شوند",
+     "replace": "برای انتخاب مجدد معرفی می‌شوند",
+     "kind": "wrong_letters",
+     "rejected": "the page prints «معرف» (text layer: «معرف میاون»)"
+    }
+   ],
+   "usage": {
+    "input_tokens": 7002,
+    "output_tokens": 220
+   },
+   "page": 20
+  },
+  "45dc22671548ed8b:21:1f533f8d8974a353:claude-opus-5:v1": {
+   "corrections": [
+    {
+     "find": "به خداوند متعال قادر متعال سـوگند",
+     "replace": "به خداوند قادر متعال سـوگند",
+     "kind": "extra_text"
+    }
+   ],
+   "usage": {
+    "input_tokens": 7587,
+    "output_tokens": 66
+   },
+   "page": 21
+  },
+  "45dc22671548ed8b:22:2e0bd6c529988902:claude-opus-5:v1": {
+   "corrections": [],
+   "usage": {
+    "input_tokens": 6970,
+    "output_tokens": 10
+   },
+   "page": 22
+  },
+  "45dc22671548ed8b:23:c858804258469548:claude-opus-5:v1": {
+   "corrections": [
+    {
+     "find": "جمهور یا موافقت رهبری اختیارات",
+     "replace": "جمهور با موافقت رهبری اختیارات",
+     "kind": "wrong_letters",
+     "rejected": "the page prints «یا» (text layer: «یا موافقت رریری»)"
+    }
+   ],
+   "usage": {
+    "input_tokens": 7436,
+    "output_tokens": 70
+   },
+   "page": 23
+  },
+  "45dc22671548ed8b:24:58fdcd6940a62d14:claude-opus-5:v1": {
+   "corrections": [],
+   "usage": {
+    "input_tokens": 7578,
+    "output_tokens": 10
+   },
+   "page": 24
+  },
+  "45dc22671548ed8b:25:47df2be205004606:claude-opus-5:v1": {
+   "corrections": [],
+   "usage": {
+    "input_tokens": 7419,
+    "output_tokens": 10
+   },
+   "page": 25
+  },
+  "45dc22671548ed8b:26:0adf40fe35c7a259:claude-opus-5:v1": {
+   "corrections": [],
+   "usage": {
+    "input_tokens": 6851,
+    "output_tokens": 9
+   },
+   "page": 26
+  },
+  "45dc22671548ed8b:27:e208bddb8c4aef19:claude-opus-5:v1": {
+   "corrections": [
+    {
+     "find": "وظایف رییس قوه قضاییه به شرح زیر است:",
+     "replace": "وظایف رییس رییس قوه قضاییه به شرح زیر است:",
+     "kind": "missing_text"
+    }
+   ],
+   "usage": {
+    "input_tokens": 7228,
+    "output_tokens": 82
+   },
+   "page": 27
+  },
+  "45dc22671548ed8b:28:4edb1c14f9b6463b:claude-opus-5:v1": {
+   "corrections": [
+    {
+     "find": "با مشورت قضایت دیوان عالی کشور",
+     "replace": "با مشورت قضات دیوان عالی کشور",
+     "kind": "wrong_letters",
+     "rejected": "the page prints «قضایت» (text layer: «قضایت»)"
+    }
+   ],
+   "usage": {
+    "input_tokens": 7141,
+    "output_tokens": 70
+   },
+   "page": 28
+  },
+  "45dc22671548ed8b:29:1da927f2a098b17e:claude-opus-5:v1": {
+   "corrections": [
+    {
+     "find": "با تصمیم ریس قوه قضاییه",
+     "replace": "با تصمیم رییس قوه قضاییه",
+     "kind": "wrong_letters"
+    },
+    {
+     "find": "در صورت تقصر، مقصر طبق",
+     "replace": "در صورت تقصیر، مقصر طبق",
+     "kind": "wrong_letters",
+     "rejected": "the page prints «تقصر» (text layer: «قور، مقور»)"
+    }
+   ],
+   "usage": {
+    "input_tokens": 7158,
+    "output_tokens": 123
+   },
+   "page": 29
+  },
+  "45dc22671548ed8b:30:f00c154755801385:claude-opus-5:v1": {
+   "corrections": [
+    {
+     "find": "واحدها یا آیین‌نامه‌های دولتی یا احقاق حقوق آنها دیوانی",
+     "replace": "واحدها یا آیین‌نامه‌های دولتی و احقاق حقوق آنها دیوانی",
+     "kind": "wrong_letters"
+    }
+   ],
+   "usage": {
+    "input_tokens": 7440,
+    "output_tokens": 110
+   },
+   "page": 30
+  },
+  "45dc22671548ed8b:31:e0da3b14857f9dc1:claude-opus-5:v1": {
+   "corrections": [
+    {
+     "find": "اطلاعاتی، اجتماعی، فرهنگی",
+     "replace": "اطلاعاتی، اجتماعی، فرهنگی",
+     "kind": "missing_text"
+    },
+    {
+     "find": "اصل یک صد و هفتاد و ششم",
+     "replace": "اصل یک صد و هفتاد و ششم",
+     "kind": "wrong_letters"
+    }
+   ],
+   "usage": {
+    "input_tokens": 7266,
+    "output_tokens": 132
+   },
+   "page": 31
+  },
+  "45dc22671548ed8b:32:024bd3b24274cabd:claude-opus-5:v1": {
+   "corrections": [],
+   "usage": {
+    "input_tokens": 5937,
+    "output_tokens": 10
+   },
+   "page": 32
+  },
+  "45dc22671548ed8b:3:278b97aa514d87a7:claude-opus-5:v1": {
+   "corrections": [],
+   "page": 3,
+   "after_apply": true
+  },
+  "45dc22671548ed8b:4:f09cf3fadf9ea269:claude-opus-5:v1": {
+   "corrections": [],
+   "page": 4,
+   "after_apply": true
+  },
+  "45dc22671548ed8b:6:a36692c0b8c126b0:claude-opus-5:v1": {
+   "corrections": [],
+   "page": 6,
+   "after_apply": true
+  },
+  "45dc22671548ed8b:17:0cdb2681a9382ca6:claude-opus-5:v1": {
+   "corrections": [],
+   "page": 17,
+   "after_apply": true
+  },
+  "45dc22671548ed8b:20:93946345067ec7f9:claude-opus-5:v1": {
+   "corrections": [],
+   "page": 20,
+   "after_apply": true
+  },
+  "45dc22671548ed8b:21:d8a7957fbdccbfa2:claude-opus-5:v1": {
+   "corrections": [],
+   "page": 21,
+   "after_apply": true
+  },
+  "45dc22671548ed8b:27:d8f8c0ca758fa10e:claude-opus-5:v1": {
+   "corrections": [],
+   "page": 27,
+   "after_apply": true
+  },
+  "45dc22671548ed8b:29:0406b5dbf0b1d214:claude-opus-5:v1": {
+   "corrections": [],
+   "page": 29,
+   "after_apply": true
+  },
+  "45dc22671548ed8b:30:b6d211aac9358f1c:claude-opus-5:v1": {
+   "corrections": [],
+   "page": 30,
+   "after_apply": true
+  }
+ }
+}
