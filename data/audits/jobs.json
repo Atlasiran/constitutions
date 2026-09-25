@@ -20,9 +20,28 @@
  {
   "job": "d7078f69-19b2-4ecc-90d3-ded65049a412",
   "rubric": "audit-constitution",
-  "status": "processing",
+  "status": "ended",
   "docs": {
    "iri-constitution-1979": "articles"
-  }
+  },
+  "collected": "2026-09-25T05:54:18+00:00"
+ },
+ {
+  "job": "dfa527f4-72ae-46c0-a9a3-9e4d2b0ba4dd",
+  "rubric": "audit-constitution",
+  "status": "ended",
+  "docs": {
+   "iri-constitution-1979": "articles"
+  },
+  "collected": "2026-09-25T15:24:29+00:00"
+ },
+ {
+  "job": "987ff7c1-c146-4bdd-b011-183342e30b90",
+  "rubric": "audit-constitution",
+  "status": "ended",
+  "docs": {
+   "iri-constitution-1979": "articles"
+  },
+  "collected": "2026-09-25T15:46:12+00:00"
  }
 ]

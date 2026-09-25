@@ -1,0 +1,842 @@
+{
+ "uid": "iri-constitution-1979",
+ "doc_version": "2",
+ "segmented_by": "articles",
+ "segment_labels": {
+  "pre": "مقدمه / preamble",
+  "a1": "اصل 1 (p. 1)",
+  "a2": "اصل 2 (p. 1)",
+  "a3": "اصل 3 (p. 1)",
+  "a4": "اصل 4 (p. 2)",
+  "a5": "اصل 5 (p. 2)",
+  "a6": "اصل 6 (p. 2)",
+  "a7": "اصل 7 (p. 2)",
+  "a8": "اصل 8 (p. 2)",
+  "a9": "اصل 9 (p. 3)",
+  "a10": "اصل 10 (p. 3)",
+  "a11": "اصل 11 (p. 3)",
+  "a12": "اصل 12 (p. 3)",
+  "a13": "اصل 13 (p. 3)",
+  "a14": "اصل 14 (p. 3)",
+  "a15": "اصل 15 (p. 4)",
+  "a16": "اصل 16 (p. 4)",
+  "a17": "اصل 17 (p. 4)",
+  "a18": "اصل 18 (p. 4)",
+  "a19": "اصل 19 (p. 4)",
+  "a20": "اصل 20 (p. 4)",
+  "a21": "اصل 21 (p. 4)",
+  "a22": "اصل 22 (p. 4)",
+  "a23": "اصل 23 (p. 5)",
+  "a24": "اصل 24 (p. 5)",
+  "a25": "اصل 25 (p. 5)",
+  "a26": "اصل 26 (p. 5)",
+  "a27": "اصل 27 (p. 5)",
+  "a28": "اصل 28 (p. 5)",
+  "a29": "اصل 29 (p. 5)",
+  "a30": "اصل 30 (p. 5)",
+  "a31": "اصل 31 (p. 5)",
+  "a32": "اصل 32 (p. 6)",
+  "a33": "اصل 33 (p. 6)",
+  "a34": "اصل 34 (p. 6)",
+  "a35": "اصل 35 (p. 6)",
+  "a36": "اصل 36 (p. 6)",
+  "a37": "اصل 37 (p. 6)",
+  "a38": "اصل 38 (p. 6)",
+  "a39": "اصل 39 (p. 6)",
+  "a40": "اصل 40 (p. 7)",
+  "a41": "اصل 41 (p. 7)",
+  "a42": "اصل 42 (p. 7)",
+  "a43": "اصل 43 (p. 7)",
+  "a44": "اصل 44 (p. 7)",
+  "a45": "اصل 45 (p. 8)",
+  "a46": "اصل 46 (p. 8)",
+  "a47": "اصل 47 (p. 8)",
+  "a48": "اصل 48 (p. 8)",
+  "a49": "اصل 49 (p. 8)",
+  "a50": "اصل 50 (p. 8)",
+  "a51": "اصل 51 (p. 8)",
+  "a52": "اصل 52 (p. 8)",
+  "a53": "اصل 53 (p. 9)",
+  "a54": "اصل 54 (p. 9)",
+  "a55": "اصل 55 (p. 9)",
+  "a56": "اصل 56 (p. 9)",
+  "a57": "اصل 57 (p. 9)",
+  "a58": "اصل 58 (p. 9)",
+  "a59": "اصل 59 (p. 9)",
+  "a60": "اصل 60 (p. 10)",
+  "a61": "اصل 61 (p. 10)",
+  "a62": "اصل 62 (p. 10)",
+  "a63": "اصل 63 (p. 10)",
+  "a64": "اصل 64 (p. 10)",
+  "a65": "اصل 65 (p. 10)",
+  "a66": "اصل 66 (p. 11)",
+  "a67": "اصل 67 (p. 11)",
+  "a68": "اصل 68 (p. 11)",
+  "a69": "اصل 69 (p. 11)",
+  "a70": "اصل 70 (p. 11)",
+  "a71": "اصل 71 (p. 12)",
+  "a72": "اصل 72 (p. 12)",
+  "a73": "اصل 73 (p. 12)",
+  "a74": "اصل 74 (p. 12)",
+  "a75": "اصل 75 (p. 12)",
+  "a76": "اصل 76 (p. 12)",
+  "a77": "اصل 77 (p. 12)",
+  "a78": "اصل 78 (p. 12)",
+  "a79": "اصل 79 (p. 13)",
+  "a80": "اصل 80 (p. 13)",
+  "a81": "اصل 81 (p. 13)",
+  "a82": "اصل 82 (p. 13)",
+  "a83": "اصل 83 (p. 13)",
+  "a84": "اصل 84 (p. 13)",
+  "a85": "اصل 85 (p. 13)",
+  "a86": "اصل 86 (p. 14)",
+  "a87": "اصل 87 (p. 14)",
+  "a88": "اصل 88 (p. 14)",
+  "a89": "اصل 89 (p. 14)",
+  "a90": "اصل 90 (p. 15)",
+  "a91": "اصل 91 (p. 15)",
+  "a92": "اصل 92 (p. 15)",
+  "a93": "اصل 93 (p. 15)",
+  "a94": "اصل 94 (p. 16)",
+  "a95": "اصل 95 (p. 16)",
+  "a96": "اصل 96 (p. 16)",
+  "a97": "اصل 97 (p. 16)",
+  "a98": "اصل 98 (p. 16)",
+  "a99": "اصل 99 (p. 16)",
+  "a100": "اصل 100 (p. 16)",
+  "a101": "اصل 101 (p. 17)",
+  "a102": "اصل 102 (p. 17)",
+  "a103": "اصل 103 (p. 17)",
+  "a104": "اصل 104 (p. 17)",
+  "a105": "اصل 105 (p. 17)",
+  "a106": "اصل 106 (p. 17)",
+  "a107": "اصل 107 (p. 17)",
+  "a108": "اصل 108 (p. 18)",
+  "a109": "اصل 109 (p. 18)",
+  "a110": "اصل 110 (p. 18)",
+  "a111": "اصل 111 (p. 19)",
+  "a112": "اصل 112 (p. 19)",
+  "a113": "اصل 113 (p. 20)",
+  "a114": "اصل 114 (p. 20)",
+  "a115": "اصل 115 (p. 20)",
+  "a116": "اصل 116 (p. 20)",
+  "a117": "اصل 117 (p. 20)",
+  "a118": "اصل 118 (p. 20)",
+  "a119": "اصل 119 (p. 20)",
+  "a120": "اصل 120 (p. 21)",
+  "a121": "اصل 121 (p. 21)",
+  "a122": "اصل 122 (p. 21)",
+  "a123": "اصل 123 (p. 21)",
+  "a124": "اصل 124 (p. 22)",
+  "a125": "اصل 125 (p. 22)",
+  "a126": "اصل 126 (p. 22)",
+  "a127": "اصل 127 (p. 22)",
+  "a128": "اصل 128 (p. 22)",
+  "a129": "اصل 129 (p. 22)",
+  "a130": "اصل 130 (p. 22)",
+  "a131": "اصل 131 (p. 23)",
+  "a132": "اصل 132 (p. 23)",
+  "a133": "اصل 133 (p. 23)",
+  "a134": "اصل 134 (p. 23)",
+  "a135": "اصل 135 (p. 24)",
+  "a136": "اصل 136 (p. 24)",
+  "a137": "اصل 137 (p. 24)",
+  "a138": "اصل 138 (p. 24)",
+  "a139": "اصل 139 (p. 25)",
+  "a140": "اصل 140 (p. 25)",
+  "a141": "اصل 141 (p. 25)",
+  "a142": "اصل 142 (p. 25)",
+  "a143": "اصل 143 (p. 25)",
+  "a144": "اصل 144 (p. 26)",
+  "a145": "اصل 145 (p. 26)",
+  "a146": "اصل 146 (p. 26)",
+  "a147": "اصل 147 (p. 26)",
+  "a148": "اصل 148 (p. 26)",
+  "a149": "اصل 149 (p. 26)",
+  "a150": "اصل 150 (p. 26)",
+  "a151": "اصل 151 (p. 26)",
+  "a152": "اصل 152 (p. 26)",
+  "a153": "اصل 153 (p. 27)",
+  "a154": "اصل 154 (p. 27)",
+  "a155": "اصل 155 (p. 27)",
+  "a156": "اصل 156 (p. 27)",
+  "a157": "اصل 157 (p. 27)",
+  "a158": "اصل 158 (p. 27)",
+  "a159": "اصل 159 (p. 28)",
+  "a160": "اصل 160 (p. 28)",
+  "a161": "اصل 161 (p. 28)",
+  "a162": "اصل 162 (p. 28)",
+  "a163": "اصل 163 (p. 28)",
+  "a164": "اصل 164 (p. 28)",
+  "a165": "اصل 165 (p. 29)",
+  "a166": "اصل 166 (p. 29)",
+  "a167": "اصل 167 (p. 29)",
+  "a168": "اصل 168 (p. 29)",
+  "a169": "اصل 169 (p. 29)",
+  "a170": "اصل 170 (p. 29)",
+  "a171": "اصل 171 (p. 29)",
+  "a172": "اصل 172 (p. 30)",
+  "a173": "اصل 173 (p. 30)",
+  "a174": "اصل 174 (p. 30)",
+  "a175": "اصل 175 (p. 30)",
+  "a176": "اصل 176 (p. 31)",
+  "a177": "اصل 177 (p. 31)"
+ },
+ "hash": "72c52b72595342ed65628772e5df3e70fcc6b27f206a5592a68bf71910075e76",
+ "rubric": "audit-constitution",
+ "rubric_version": "audit-constitution-16fda2964fda",
+ "benchmark": "f04ecff03b434da0",
+ "model": "claude-opus-5",
+ "audited_at": "2026-09-25T15:46:12.289Z",
+ "batch_id": "msgbatch_01WSiPob6aJ1gbAwFYc4c5ng",
+ "rights": {
+  "equality": {
+   "verdict": "contradicted",
+   "segments": [
+    "a4",
+    "a13",
+    "a14",
+    "a19",
+    "a20",
+    "a115"
+   ],
+   "provisions": [
+    "UDHR.2",
+    "UDHR.7",
+    "ICCPR.2.1",
+    "ICCPR.26",
+    "ICERD.1.1",
+    "ICERD.2.1"
+   ],
+   "quote": "ایرانیان زرتشتی، کلیمی و مسیحی تنها اقلیت های دینی شناخته می‌شوند",
+   "note_en": "Article 19 bars ethnic, racial, colour and language privilege and Article 20 promises equal protection, but only \"with observance of Islamic criteria\" (a20), only three religious minorities are recognised (a13), decent treatment of non‑Muslims is conditioned on their not acting against Islam (a14), the presidency is reserved for believers in the official creed (a115), and Article 4 subordinates every law to Islamic criteria. This establishes discrimination on religious grounds rather than equal protection.",
+   "note_fa": "اصل ۱۹ تبعیض قومی و نژادی را نفی می‌کند و اصل ۲۰ از حمایت یکسان قانون سخن می‌گوید، اما مشروط به «رعایت موازین اسلام» است؛ اصل ۱۳ تنها سه اقلیت دینی را می‌شناسد، اصل ۱۴ رعایت حقوق غیرمسلمانان را مشروط می‌کند و اصل ۱۱۵ ریاست‌جمهوری را به معتقدان مذهب رسمی محدود می‌سازد. بنابراین متن تبعیض دینی را نهادینه کرده است.",
+   "check": "ok",
+   "problems": []
+  },
+  "gender_equality": {
+   "verdict": "restricted_clawback",
+   "segments": [
+    "a3",
+    "a20",
+    "a21",
+    "a10",
+    "a115",
+    "a4"
+   ],
+   "provisions": [
+    "ICCPR.3",
+    "ICESCR.3",
+    "CEDAW.1",
+    "CEDAW.2",
+    "CEDAW.15",
+    "CEDAW.16"
+   ],
+   "quote": "دولت موظف است حقوق زن را در تمام جهات با رعایت موازین اسلامی تضمین نماید",
+   "note_en": "Article 3(14) and Article 20 speak of the rights of \"men and women\" and equality before the law, but Articles 20 and 21 expressly condition women's rights on \"Islamic criteria\", and Article 4 makes those criteria supreme over all law, leaving family, inheritance and testimony inequalities intact. The presidency is limited to \"rijal\" (a115), which has been read to exclude women.",
+   "note_fa": "اصل ۳ بند ۱۴ و اصل ۲۰ از حقوق زن و مرد و تساوی در برابر قانون سخن می‌گویند، اما اصول ۲۰ و ۲۱ آن را به «رعایت موازین اسلام/اسلامی» مشروط می‌کنند و اصل ۴ این موازین را بر همه قوانین حاکم می‌سازد. شرط «رجال» در اصل ۱۱۵ نیز دسترسی زنان به ریاست‌جمهوری را محدود کرده است.",
+   "check": "ok",
+   "problems": []
+  },
+  "sogi": {
+   "verdict": "silent",
+   "segments": [
+    "a4"
+   ],
+   "provisions": [
+    "YP.2.A",
+    "YP.2.C",
+    "YP.6.B",
+    "YP10.33.A"
+   ],
+   "quote": "",
+   "note_en": "The text never mentions sexual orientation or gender identity, and offers no non-discrimination ground covering them; Article 4's supremacy of Islamic criteria over all penal law is the only indirectly relevant clause.",
+   "note_fa": "متن هیچ اشاره‌ای به گرایش جنسی یا هویت جنسیتی ندارد و هیچ مبنای عدم تبعیضی برای آنها پیش‌بینی نکرده است؛ تنها اصل ۴ که همه قوانین جزایی را تابع موازین اسلامی می‌کند به‌طور غیرمستقیم مرتبط است.",
+   "check": "ok",
+   "problems": []
+  },
+  "life": {
+   "verdict": "restricted_clawback",
+   "segments": [
+    "a22",
+    "a61",
+    "a156",
+    "a110"
+   ],
+   "provisions": [
+    "UDHR.3",
+    "ICCPR.6.1",
+    "ICCPR.6.2",
+    "ICCPR.6.5",
+    "CRC.37"
+   ],
+   "quote": "حیثیت، جان، مال، حقوق، مسکن و شغل اشخاص از تعرض مصون است مگر در مواردی که قانون تجویز کند.",
+   "note_en": "Life is protected only \"except in cases permitted by law\" (a22), and Articles 61 and 156 make the courts responsible for executing the Islamic hudud, with no limitation of the death penalty to the most serious crimes, no bar on execution of juveniles, and pardon available only \"within Islamic criteria\" (a110.11).",
+   "note_fa": "جان اشخاص تنها «مگر در مواردی که قانون تجویز کند» مصون دانسته شده و اصول ۶۱ و ۱۵۶ اجرای حدود الهی را بر عهده دادگاه‌ها می‌گذارند. هیچ محدودیتی بر مجازات اعدام، منع اعدام کودکان یا حق عفو بدون قید «موازین اسلامی» پیش‌بینی نشده است.",
+   "check": "ok",
+   "problems": []
+  },
+  "torture": {
+   "verdict": "restricted_clawback",
+   "segments": [
+    "a38",
+    "a39",
+    "a61",
+    "a156"
+   ],
+   "provisions": [
+    "UDHR.5",
+    "ICCPR.7",
+    "CAT.1.1",
+    "CAT.2.1",
+    "CAT.15",
+    "CAT.16.1"
+   ],
+   "quote": "هرگونه شکنجه برای گرفتن اقرار و یا کسب اطلاع ممنوع است.",
+   "note_en": "Article 38 bans torture but only when used \"to obtain a confession or information\", and invalidates coerced confessions; Article 39 protects the dignity of detainees. However the ban is narrower than CAT Article 1, and Articles 61 and 156 mandate the enforcement of hudud corporal punishments, which fall under cruel, inhuman or degrading punishment.",
+   "note_fa": "اصل ۳۸ شکنجه را تنها «برای گرفتن اقرار یا کسب اطلاع» ممنوع می‌کند و اقرار اجباری را بی‌اعتبار می‌داند و اصل ۳۹ هتک حرمت بازداشت‌شدگان را منع می‌کند. اما این تعریف محدودتر از ماده ۱ کنوانسیون منع شکنجه است و اصول ۶۱ و ۱۵۶ اجرای حدود (مجازات‌های بدنی) را تکلیف می‌کنند.",
+   "check": "ok",
+   "problems": []
+  },
+  "slavery": {
+   "verdict": "restricted_clawback",
+   "segments": [
+    "a43"
+   ],
+   "provisions": [
+    "UDHR.4",
+    "ICCPR.8.1",
+    "ICCPR.8.3"
+   ],
+   "quote": "رعایت آزادی انتخاب شغل، و عدم اجبار افراد به کاری معین و جلوگیری از بهره‌کشی از کار دیگری.",
+   "note_en": "Slavery and servitude are never mentioned; the only relevant clause is an economic-policy principle in Article 43(4) against compelling persons to specific work and against exploitation of others' labour, which is not framed as an enforceable individual right.",
+   "note_fa": "بردگی و بندگی اصلاً ذکر نشده است؛ تنها بند ۴ اصل ۴۳ به‌عنوان یک اصل سیاست اقتصادی از عدم اجبار افراد به کار معین و منع بهره‌کشی سخن می‌گوید که به‌صورت حق فردی قابل مطالبه تنظیم نشده است.",
+   "check": "ok",
+   "problems": []
+  },
+  "liberty": {
+   "verdict": "restricted_clawback",
+   "segments": [
+    "a32",
+    "a33",
+    "a39",
+    "a22"
+   ],
+   "provisions": [
+    "UDHR.9",
+    "ICCPR.9.1",
+    "ICCPR.9.3",
+    "ICCPR.9.4",
+    "ICCPR.9.5",
+    "ICCPR.10.1"
+   ],
+   "quote": "هیچ‌کس را نمی‌توان دستگیر کرد مگر به حکم و ترتیبی که قانون معین می‌کند.",
+   "note_en": "Article 32 requires a legal basis for arrest, written notice of charges and transfer of the file to judicial authorities within 24 hours, and Article 39 protects detainees' dignity. But there is no habeas corpus procedure, no right to compensation for unlawful detention, and Articles 33 and 39 accept exile \"in cases provided by law\", contrary to UDHR.9.",
+   "note_fa": "اصل ۳۲ دستگیری را منوط به حکم قانون و ابلاغ کتبی اتهام و ارسال پرونده ظرف ۲۴ ساعت می‌کند و اصل ۳۹ حرمت بازداشت‌شدگان را حفظ می‌کند، اما سازوکار اعتراض قضایی به بازداشت و حق جبران خسارت بازداشت غیرقانونی پیش‌بینی نشده و اصول ۳۳ و ۳۹ تبعید «به موجب قانون» را می‌پذیرند.",
+   "check": "ok",
+   "problems": []
+  },
+  "disappearance": {
+   "verdict": "silent",
+   "segments": [
+    "a32"
+   ],
+   "provisions": [
+    "CED.1.1",
+    "CED.2",
+    "CED.17.1"
+   ],
+   "quote": "",
+   "note_en": "Enforced disappearance and secret detention are not addressed anywhere; Article 32's 24-hour rule for transmitting the case file is the only partially related safeguard, and there is no register of detainees or family-notification duty.",
+   "note_fa": "ناپدیدسازی قهری و بازداشت مخفی در هیچ اصلی مطرح نشده است؛ تنها مهلت ۲۴ ساعته اصل ۳۲ تا حدی مرتبط است و هیچ تکلیفی به ثبت بازداشت‌شدگان یا اطلاع خانواده وجود ندارد.",
+   "check": "ok",
+   "problems": []
+  },
+  "fair_trial": {
+   "verdict": "restricted_clawback",
+   "segments": [
+    "a34",
+    "a35",
+    "a36",
+    "a37",
+    "a165",
+    "a166",
+    "a167",
+    "a168",
+    "a169",
+    "a157",
+    "a163"
+   ],
+   "provisions": [
+    "UDHR.10",
+    "UDHR.11.1",
+    "UDHR.11.2",
+    "ICCPR.14.1",
+    "ICCPR.14.2",
+    "ICCPR.14.3",
+    "ICCPR.15.2"
+   ],
+   "quote": "با استناد به منابع معتبر اسلامی یا فتاوای معتبر، حکم قضیه را صادر نماید",
+   "note_en": "Presumption of innocence (a37), counsel (a35), public hearings (a165), reasoned judgments (a166) and non-retroactivity (a169) are stated, but Article 167 obliges judges to decide on \"authoritative Islamic sources or fatwas\" where statute is silent, defeating legality; judicial qualifications follow fiqh (a163) and the head of the judiciary is appointed by the Leader (a157), weakening independence.",
+   "note_fa": "اصل برائت (۳۷)، حق وکیل (۳۵)، علنی بودن محاکمات (۱۶۵)، مستدل بودن احکام (۱۶۶) و عطف‌بماسبق نشدن قوانین جزایی (۱۶۹) پیش‌بینی شده‌اند، اما اصل ۱۶۷ قاضی را در سکوت قانون به استناد به «منابع معتبر اسلامی یا فتاوای معتبر» موظف می‌کند که اصل قانونی بودن جرم را نقض می‌کند؛ شرایط قاضی طبق موازین فقهی (۱۶۳) و انتصاب رئیس قوه قضاییه توسط رهبر (۱۵۷) استقلال را تضعیف می‌کند.",
+   "check": "ok",
+   "problems": []
+  },
+  "remedy": {
+   "verdict": "guaranteed",
+   "segments": [
+    "a34",
+    "a90",
+    "a171",
+    "a173",
+    "a170"
+   ],
+   "provisions": [
+    "UDHR.8",
+    "ICCPR.2.3"
+   ],
+   "quote": "دادخواهی حق مسلم هر فرد است و هر کس می‌تواند به منظور دادخواهی به دادگاه‌های صالح رجوع نماید.",
+   "note_en": "Article 34 makes recourse to competent courts an absolute right, Article 171 provides compensation by the State for judicial error, Article 173 creates the Court of Administrative Justice against official acts, and Article 90 allows written complaints against any branch. The remedy structure is stated, though it operates inside the Islamic-criteria framework of Article 4.",
+   "note_fa": "اصل ۳۴ دادخواهی را حق مسلم هر فرد می‌داند، اصل ۱۷۱ جبران خسارت ناشی از اشتباه قاضی را پیش‌بینی می‌کند، اصل ۱۷۳ دیوان عدالت اداری را برای شکایت از مأموران دولتی تأسیس می‌کند و اصل ۹۰ امکان شکایت کتبی از هر سه قوه را می‌دهد. سازوکار جبران بیان شده است، هرچند در چارچوب حاکمیت موازین اسلامی اصل ۴ عمل می‌کند.",
+   "check": "ok",
+   "problems": []
+  },
+  "privacy": {
+   "verdict": "restricted_clawback",
+   "segments": [
+    "a25",
+    "a22",
+    "a23",
+    "a8"
+   ],
+   "provisions": [
+    "UDHR.12",
+    "ICCPR.17.1",
+    "ICCPR.17.2"
+   ],
+   "quote": "سانسور، عدم مخابره و نرساندن آنها، استراق سمع و هر گونه تجسس ممنوع است مگر به حکم قانون.",
+   "note_en": "Article 25 forbids opening mail, wiretapping, censorship and any form of spying, and Article 22 protects the home, but both are subject to the open-ended exception \"except by order of the law\" with no necessity or proportionality test; Article 8 further imposes a mutual duty of enjoining good and forbidding wrong.",
+   "note_fa": "اصل ۲۵ بازرسی نامه‌ها، استراق سمع، سانسور و هر گونه تجسس را ممنوع می‌کند و اصل ۲۲ مسکن را مصون می‌داند، اما هر دو با قید باز «مگر به حکم قانون» مشروط شده‌اند و معیار ضرورت و تناسب ندارند؛ اصل ۸ نیز وظیفه متقابل امر به معروف و نهی از منکر را مقرر می‌کند.",
+   "check": "ok",
+   "problems": []
+  },
+  "movement": {
+   "verdict": "restricted_clawback",
+   "segments": [
+    "a33",
+    "a155",
+    "a42"
+   ],
+   "provisions": [
+    "UDHR.13.1",
+    "UDHR.13.2",
+    "UDHR.14.1",
+    "ICCPR.12.1",
+    "ICCPR.12.2",
+    "ICCPR.12.3"
+   ],
+   "quote": "می‌تواند به کسانی که پناهندگی سیاسی بخواهند پناه دهد مگر این که بر طبق قوانین ایران خائن و تبهکار شناخته شوند",
+   "note_en": "Article 33 protects residence and bars exile only \"except in cases provided by law\"; there is no right to leave or return to the country at all, and asylum in Article 155 is a discretionary power of the state (\"may grant\") with an exception defined by Iranian law rather than by the political-offence standard.",
+   "note_fa": "اصل ۳۳ آزادی اقامت و منع تبعید را تنها «مگر در مواردی که قانون مقرر می‌دارد» تضمین می‌کند؛ حق خروج از کشور و بازگشت به آن اصلاً ذکر نشده و پناهندگی در اصل ۱۵۵ یک اختیار دولت («می‌تواند پناه دهد») با استثنای تعریف‌شده در قوانین ایران است.",
+   "check": "ok",
+   "problems": []
+  },
+  "nationality": {
+   "verdict": "guaranteed",
+   "segments": [
+    "a41",
+    "a42"
+   ],
+   "provisions": [
+    "UDHR.15.1",
+    "UDHR.15.2"
+   ],
+   "quote": "تابعیت کشور ایران حق مسلم هر فرد ایرانی و دولت نمی‌تواند از هیچ ایرانی سلب تابعیت کند",
+   "note_en": "Article 41 declares Iranian nationality an inalienable right that the state may not withdraw except at the person's own request or on acquisition of another nationality, and Article 42 regulates naturalisation and its withdrawal restrictively. The text says nothing about women's equal right to transmit nationality to children (CEDAW.9).",
+   "note_fa": "اصل ۴۱ تابعیت ایرانی را حق مسلم هر ایرانی می‌داند که جز به درخواست خود فرد یا پذیرش تابعیت دیگر سلب نمی‌شود و اصل ۴۲ سلب تابعیت اتباع تحصیل‌شده را محدود می‌کند. درباره حق برابر زنان در انتقال تابعیت به فرزندان چیزی گفته نشده است.",
+   "check": "ok",
+   "problems": []
+  },
+  "religion": {
+   "verdict": "contradicted",
+   "segments": [
+    "a12",
+    "a13",
+    "a14",
+    "a23",
+    "a4",
+    "a177"
+   ],
+   "provisions": [
+    "UDHR.18",
+    "ICCPR.18.1",
+    "ICCPR.18.2",
+    "ICCPR.18.3"
+   ],
+   "quote": "دین رسمی ایران، اسلام و مذهب جعفری اثنی‌عشری است و این اصل الی‌الابد غیر قابل تغییر است",
+   "note_en": "An unchangeable official creed is established (a12, a177); only Zoroastrians, Jews and Christians are recognised as religious minorities and only \"within the limits of the law\" (a13); other beliefs (e.g. Baha'is, atheists) are unrecognised; Article 14's decent treatment of non-Muslims is conditional. Article 23 bars inquisition into beliefs but no freedom to change or leave a religion is recognised.",
+   "note_fa": "مذهب رسمی تغییرناپذیر اعلام شده (اصول ۱۲ و ۱۷۷)، تنها زرتشتیان، کلیمیان و مسیحیان آن هم «در حدود قانون» به‌عنوان اقلیت دینی شناخته می‌شوند (اصل ۱۳) و سایر باورها به رسمیت شناخته نمی‌شوند؛ اصل ۱۴ نیز رعایت حقوق غیرمسلمانان را مشروط می‌کند. اصل ۲۳ تفتیش عقاید را منع می‌کند اما آزادی تغییر دین یا بی‌دینی به رسمیت شناخته نشده است.",
+   "check": "ok",
+   "problems": []
+  },
+  "expression": {
+   "verdict": "restricted_clawback",
+   "segments": [
+    "a24",
+    "a175",
+    "a23",
+    "a9",
+    "a168"
+   ],
+   "provisions": [
+    "UDHR.19",
+    "ICCPR.19.1",
+    "ICCPR.19.2",
+    "ICCPR.19.3"
+   ],
+   "quote": "نشریات و مطبوعات در بیان مطالب آزادند مگر آن که مخل به مبانی اسلام یا حقوق عمومی باشد.",
+   "note_en": "Press freedom is granted but withdrawn where publications are \"detrimental to the fundamentals of Islam or public rights\" (a24), and broadcasting freedom must observe \"Islamic criteria and the interests of the country\" (a175), with the broadcaster's head appointed by the Leader. These open-ended conditions exceed the limits allowed by ICCPR.19.3.",
+   "note_fa": "آزادی مطبوعات اعطا شده اما با قید «مخل به مبانی اسلام یا حقوق عمومی» پس گرفته می‌شود (اصل ۲۴) و آزادی بیان در صدا و سیما مشروط به «رعایت موازین اسلامی و مصالح کشور» است (اصل ۱۷۵) که رئیس آن را رهبر منصوب می‌کند. این قیود باز فراتر از محدودیت‌های مجاز در ماده ۱۹(۳) میثاق است.",
+   "check": "ok",
+   "problems": []
+  },
+  "incitement": {
+   "verdict": "silent",
+   "segments": [],
+   "provisions": [
+    "ICCPR.20.1",
+    "ICCPR.20.2",
+    "ICERD.4"
+   ],
+   "quote": "",
+   "note_en": "There is no prohibition of war propaganda or of advocacy of national, racial or religious hatred; the text only bars ethnic privilege (a19) and calls for fraternity, without any duty to outlaw incitement.",
+   "note_fa": "هیچ ممنوعیتی برای تبلیغ جنگ یا تحریک به نفرت ملی، نژادی و دینی پیش‌بینی نشده است؛ متن تنها امتیاز قومی را نفی می‌کند (اصل ۱۹) و از برادری سخن می‌گوید، بدون تکلیف به جرم‌انگاری تحریک.",
+   "check": "ok",
+   "problems": []
+  },
+  "assembly": {
+   "verdict": "restricted_clawback",
+   "segments": [
+    "a27"
+   ],
+   "provisions": [
+    "UDHR.20.1",
+    "ICCPR.21"
+   ],
+   "quote": "تشکیل اجتماعات و راهپیمایی‌ها، بدون حمل سلاح، به شرط آن که مخل به مبانی اسلام نباشد آزاد است.",
+   "note_en": "Peaceful assembly is recognised but conditioned on not being \"detrimental to the fundamentals of Islam\", an open-ended religious test that is not among the permissible grounds in ICCPR.21.",
+   "note_fa": "آزادی اجتماعات و راهپیمایی‌های بدون سلاح به شرط «مخل نبودن به مبانی اسلام» شناخته شده است؛ این قید باز دینی جزو محدودیت‌های مجاز ماده ۲۱ میثاق نیست.",
+   "check": "ok",
+   "problems": []
+  },
+  "association": {
+   "verdict": "restricted_clawback",
+   "segments": [
+    "a26",
+    "a104",
+    "a28"
+   ],
+   "provisions": [
+    "UDHR.20",
+    "UDHR.23.4",
+    "ICCPR.22.1",
+    "ICCPR.22.2",
+    "ICESCR.8.1"
+   ],
+   "quote": "آزادند، مشروط به این که اصول استقلال، آزادی، وحدت ملی، موازین اسلامی و اساس جمهوری اسلامی را نقض نکنند",
+   "note_en": "Parties, associations and guilds are free but only if they do not violate \"Islamic criteria\" and \"the foundation of the Islamic Republic\" (a26); no one may be compelled to join. Independent trade unions and the right to strike are absent, replaced by state-defined workplace councils (a104).",
+   "note_fa": "احزاب و انجمن‌ها آزادند مشروط به عدم نقض «موازین اسلامی» و «اساس جمهوری اسلامی» (اصل ۲۶) و کسی به عضویت مجبور نمی‌شود. اما از اتحادیه‌های کارگری مستقل و حق اعتصاب خبری نیست و به‌جای آن شوراهای کارگری قانونی (اصل ۱۰۴) پیش‌بینی شده است.",
+   "check": "ok",
+   "problems": []
+  },
+  "participation": {
+   "verdict": "contradicted",
+   "segments": [
+    "a6",
+    "a57",
+    "a62",
+    "a99",
+    "a110",
+    "a115",
+    "a107"
+   ],
+   "provisions": [
+    "UDHR.21.1",
+    "UDHR.21.2",
+    "UDHR.21.3",
+    "ICCPR.25",
+    "CEDAW.7",
+    "ICERD.5"
+   ],
+   "quote": "رییس جمهور باید از میان رجال مذهبی و سیاسی که واجد شرایط زیر باشند انتخاب گردد",
+   "note_en": "Elections for parliament and president are provided (a6, a62, a114), but candidacy is vetted by the unelected Guardian Council (a99, a110.9), the presidency requires belief in the official creed and \"rijal\" status (a115), and all three branches operate under the Leader's absolute guardianship (a57), who is not popularly elected. Equal access to the highest offices is therefore denied on religious and gender grounds.",
+   "note_fa": "انتخابات مجلس و ریاست‌جمهوری پیش‌بینی شده است (اصول ۶، ۶۲ و ۱۱۴)، اما صلاحیت نامزدها را شورای نگهبان انتصابی تأیید می‌کند (اصول ۹۹ و ۱۱۰) و ریاست‌جمهوری مشروط به «رجال» بودن و اعتقاد به مذهب رسمی است (اصل ۱۱۵)؛ همه قوا زیر نظر «ولایت مطلقه امر» عمل می‌کنند (اصل ۵۷) که با رأی مستقیم مردم انتخاب نمی‌شود.",
+   "check": "ok",
+   "problems": []
+  },
+  "self_determination": {
+   "verdict": "restricted_clawback",
+   "segments": [
+    "a56",
+    "a3",
+    "a57",
+    "a177",
+    "a45"
+   ],
+   "provisions": [
+    "ICCPR.1.1",
+    "ICCPR.1.2",
+    "ICESCR.1.1"
+   ],
+   "quote": "هم او، انسان را بر سرنوشت اجتماعی خویش حاکم ساخته است. هیچ‌کس نمی‌تواند این حق الهی را از انسان سلب کند",
+   "note_en": "Article 56 declares that God has made man master of his own social destiny and Article 3(8) promises general participation in determining political and economic destiny, but Article 57 places all powers under the absolute guardianship of the jurist, Article 177 makes the Islamic character of the system unamendable, and Article 45 vests public natural wealth in the Islamic government.",
+   "note_fa": "اصل ۵۶ انسان را حاکم بر سرنوشت اجتماعی خویش می‌داند و بند ۸ اصل ۳ مشارکت عامه در تعیین سرنوشت را وعده می‌دهد، اما اصل ۵۷ همه قوا را زیر «ولایت مطلقه امر» قرار می‌دهد، اصل ۱۷۷ اسلامی بودن نظام را تغییرناپذیر می‌کند و اصل ۴۵ ثروت‌های عمومی را در اختیار حکومت اسلامی می‌گذارد.",
+   "check": "ok",
+   "problems": []
+  },
+  "minorities": {
+   "verdict": "restricted_clawback",
+   "segments": [
+    "a15",
+    "a19",
+    "a12",
+    "a13",
+    "a64",
+    "a16"
+   ],
+   "provisions": [
+    "ICCPR.27",
+    "ICERD.5"
+   ],
+   "quote": "استفاده از زبان های محلی و قومی در مطبوعات و رسانه‌های گروهی و تدریس ادبیات آنها در مدارس، در کنار زبان فارسی آزاد است.",
+   "note_en": "Local and ethnic languages may be used in the media and their literature taught alongside Persian (a15), Sunni schools of law are respected (a12) and recognised minorities hold reserved seats (a64). But Persian is the compulsory language of official documents and textbooks, Arabic teaching is mandatory (a16), and only three religious minorities are recognised, excluding others from the protection of Article 27.",
+   "note_fa": "استفاده از زبان‌های محلی و قومی در رسانه‌ها و تدریس ادبیات آنها در کنار فارسی آزاد است (اصل ۱۵)، مذاهب اهل سنت محترم شمرده شده‌اند (اصل ۱۲) و اقلیت‌های شناخته‌شده نماینده دارند (اصل ۶۴). اما زبان اسناد و کتب درسی الزاماً فارسی است، تدریس عربی اجباری است (اصل ۱۶) و تنها سه اقلیت دینی شناخته می‌شوند.",
+   "check": "ok",
+   "problems": []
+  },
+  "family": {
+   "verdict": "restricted_clawback",
+   "segments": [
+    "a10",
+    "a21",
+    "a4"
+   ],
+   "provisions": [
+    "UDHR.16.1",
+    "UDHR.16.2",
+    "UDHR.16.3",
+    "ICCPR.23.2",
+    "ICCPR.23.3",
+    "ICCPR.23.4",
+    "CEDAW.16.1"
+   ],
+   "quote": "همه قوانین ... باید در جهت آسان کردن تشکیل خانواده، پاسداری از قداست آن و استواری روابط خانوادگی بر پایه حقوق و اخلاق اسلامی باشد",
+   "note_en": "Article 10 protects the family and requires laws to facilitate its formation, but expressly on the basis of \"Islamic law and ethics\", and Article 21 conditions women's family rights on Islamic criteria. Free and full consent to marriage, a minimum marriage age and equality of spouses during and at dissolution of marriage are nowhere guaranteed.",
+   "note_fa": "اصل ۱۰ خانواده را واحد بنیادی می‌داند و قوانین را موظف به تسهیل تشکیل آن می‌کند، اما صریحاً «بر پایه حقوق و اخلاق اسلامی»؛ اصل ۲۱ نیز حقوق خانوادگی زن را مشروط به موازین اسلامی می‌کند. رضایت آزادانه و کامل برای ازدواج، حداقل سن ازدواج و برابری زوجین در هنگام ازدواج و انحلال آن تضمین نشده است.",
+   "check": "ok",
+   "problems": [
+    "quote not found in the document"
+   ]
+  },
+  "children": {
+   "verdict": "restricted_clawback",
+   "segments": [
+    "a21",
+    "a30",
+    "a29",
+    "a43"
+   ],
+   "provisions": [
+    "ICCPR.24.1",
+    "CRC.2.1",
+    "CRC.3.1",
+    "CRC.19.1",
+    "CRC.37",
+    "CRC.40"
+   ],
+   "quote": "حمایت مادران، بالخصوص در دوران بارداری و حضانت فرزند، و حمایت از کودکان بی‌سرپرست.",
+   "note_en": "Only fragments appear: support for mothers and for children without guardians (a21.2), custody to fit mothers where there is no \"shar'i guardian\" (a21.5), and free schooling (a30). The best interests principle, protection from violence, juvenile justice guarantees, a ban on capital punishment for minors and birth registration are all absent.",
+   "note_fa": "تنها اجزای پراکنده‌ای وجود دارد: حمایت از مادران و کودکان بی‌سرپرست (بند ۲ اصل ۲۱)، سپردن قیمومت به مادر شایسته در صورت نبود «ولی شرعی» (بند ۵) و آموزش رایگان (اصل ۳۰). اصل مصلحت عالیه کودک، حمایت از کودک در برابر خشونت، دادرسی ویژه نوجوانان، منع اعدام کودکان و ثبت ولادت غایب‌اند.",
+   "check": "ok",
+   "problems": []
+  },
+  "disability": {
+   "verdict": "silent",
+   "segments": [
+    "a29"
+   ],
+   "provisions": [
+    "CRPD.3",
+    "CRPD.5.1",
+    "CRPD.12.2"
+   ],
+   "quote": "",
+   "note_en": "Disability appears only as a social-insurance category (\"ازکارافتادگی\") in Article 29; there is no provision on non-discrimination, accessibility, legal capacity or inclusion of persons with disabilities.",
+   "note_fa": "معلولیت تنها به‌عنوان یکی از عناوین بیمه‌ای («ازکارافتادگی») در اصل ۲۹ آمده است؛ هیچ حکمی درباره منع تبعیض، دسترس‌پذیری، اهلیت قانونی یا مشارکت افراد دارای معلولیت وجود ندارد.",
+   "check": "ok",
+   "problems": []
+  },
+  "work": {
+   "verdict": "restricted_clawback",
+   "segments": [
+    "a28",
+    "a29",
+    "a43",
+    "a104"
+   ],
+   "provisions": [
+    "UDHR.22",
+    "UDHR.23.1",
+    "UDHR.23.2",
+    "UDHR.23.4",
+    "ICESCR.6.1",
+    "ICESCR.7",
+    "ICESCR.9"
+   ],
+   "quote": "هر کس حق دارد شغلی را که بدان مایل است و مخالف اسلام و مصالح عمومی و حقوق دیگران نیست برگزیند",
+   "note_en": "Free choice of occupation is granted but only for work \"not contrary to Islam and public interests\" (a28); Article 29 makes social security a universal right and Article 43 promises full employment and limits on working hours. Equal pay for equal work, safe conditions and independent unions or the right to strike are not guaranteed.",
+   "note_fa": "آزادی انتخاب شغل تنها برای کاری که «مخالف اسلام و مصالح عمومی» نباشد شناخته شده است (اصل ۲۸)؛ اصل ۲۹ تأمین اجتماعی را حقی همگانی می‌داند و اصل ۴۳ اشتغال کامل و تنظیم ساعات کار را وعده می‌دهد. اما دستمزد برابر برای کار برابر، شرایط ایمن کار و اتحادیه‌های مستقل و حق اعتصاب تضمین نشده‌اند.",
+   "check": "ok",
+   "problems": [
+    "quote not found in the document"
+   ]
+  },
+  "living_standard": {
+   "verdict": "restricted_clawback",
+   "segments": [
+    "a31",
+    "a43",
+    "a3"
+   ],
+   "provisions": [
+    "UDHR.25.1",
+    "ICESCR.11.1",
+    "ICESCR.11.2"
+   ],
+   "quote": "داشتن مسکن متناسب با نیاز، حق هر فرد و خانواده ایرانی است.",
+   "note_en": "Article 43(1) lists housing, food, clothing, health care and education as basic needs to be secured for all, and Article 31 makes adequate housing a right, but the housing right is expressly limited to \"every Iranian individual and family\", and the whole economic order must stay \"within the bounds of Islamic law\" (a44) and Article 4.",
+   "note_fa": "بند ۱ اصل ۴۳ مسکن، خوراک، پوشاک، بهداشت و آموزش را از نیازهای اساسی «برای همه» می‌داند و اصل ۳۱ مسکن متناسب را حق می‌شناسد، اما این حق صریحاً به «هر فرد و خانواده ایرانی» محدود شده و کل نظام اقتصادی باید در «محدوده قوانین اسلام» (اصل ۴۴) و اصل ۴ بماند.",
+   "check": "ok",
+   "problems": []
+  },
+  "health": {
+   "verdict": "guaranteed",
+   "segments": [
+    "a29",
+    "a43",
+    "a3"
+   ],
+   "provisions": [
+    "ICESCR.12.1",
+    "ICESCR.12.2"
+   ],
+   "quote": "نیاز به خدمات بهداشتی‌درمانی و مراقبت های پزشکی به صورت بیمه و غیره، حقی است همگانی",
+   "note_en": "Article 29 declares access to health and medical care a universal right and obliges the state to fund it for every individual in the country; Article 43(1) counts health and treatment among the basic needs to be met, and Article 50 protects the environment.",
+   "note_fa": "اصل ۲۹ برخورداری از خدمات بهداشتی‌درمانی را «حقی همگانی» می‌داند و دولت را موظف می‌کند آن را برای یک‌یک افراد کشور تأمین کند؛ بند ۱ اصل ۴۳ نیز بهداشت و درمان را جزو نیازهای اساسی می‌شمارد و اصل ۵۰ از محیط زیست حفاظت می‌کند.",
+   "check": "ok",
+   "problems": []
+  },
+  "education": {
+   "verdict": "restricted_clawback",
+   "segments": [
+    "a30",
+    "a3",
+    "a16",
+    "a4"
+   ],
+   "provisions": [
+    "UDHR.26.1",
+    "UDHR.26.2",
+    "UDHR.26.3",
+    "ICESCR.13.1",
+    "ICESCR.13.2",
+    "ICESCR.13.3"
+   ],
+   "quote": "دولت موظف است وسایل آموزش و پرورش رایگان را برای همه ملت تا پایان دوره متوسطه فراهم سازد",
+   "note_en": "Free education to the end of secondary school and expansion of free higher education are promised (a30, a3.3), but the entitlement runs to \"the whole nation\" (citizens), Arabic instruction is compulsory in all classes and fields (a16), educational content is bound by Islamic criteria (a4), and parents' liberty to choose their children's moral and religious education is not recognised.",
+   "note_fa": "آموزش رایگان تا پایان متوسطه و گسترش رایگان تحصیلات عالی وعده داده شده است (اصول ۳۰ و ۳ بند ۳)، اما این حق به «همه ملت» محدود است، تدریس عربی در همه کلاس‌ها و رشته‌ها اجباری است (اصل ۱۶)، محتوای آموزش تابع موازین اسلامی (اصل ۴) است و حق والدین در انتخاب تربیت دینی و اخلاقی فرزندان به رسمیت شناخته نشده است.",
+   "check": "ok",
+   "problems": []
+  },
+  "culture": {
+   "verdict": "silent",
+   "segments": [
+    "a3",
+    "a15"
+   ],
+   "provisions": [
+    "UDHR.27.1",
+    "UDHR.27.2",
+    "ICESCR.15.1"
+   ],
+   "quote": "",
+   "note_en": "There is no right to take part in cultural life, to enjoy scientific progress or to protection of authors' moral and material interests; the text only sets state duties to found research centres and encourage researchers (a3.4) and allows local-language literature in schools (a15).",
+   "note_fa": "حقی برای مشارکت در حیات فرهنگی، بهره‌مندی از پیشرفت علمی یا حمایت از منافع مادی و معنوی پدیدآورندگان پیش‌بینی نشده است؛ متن تنها وظایف دولت در تأسیس مراکز تحقیق و تشویق محققان (بند ۴ اصل ۳) و تدریس ادبیات محلی (اصل ۱۵) را بیان می‌کند.",
+   "check": "ok",
+   "problems": []
+  },
+  "emergency": {
+   "verdict": "restricted_clawback",
+   "segments": [
+    "a79",
+    "a68",
+    "a69",
+    "a176"
+   ],
+   "provisions": [
+    "ICCPR.4.2",
+    "ICCPR.4.3"
+   ],
+   "quote": "برقراری حکومت نظامی ممنوع است. در حالت جنگ و شرایط اضطراری نظیر آن، دولت حق دارد با تصویب مجلس شورای اسلامی موقتا محدودیت های ضروری را برقرار نماید",
+   "note_en": "Article 79 bans martial law and caps emergency restrictions at thirty days with parliamentary approval, a real procedural safeguard, but it lists no non-derogable rights as ICCPR.4.2 requires, and Article 68 allows elections to be suspended nationwide during war.",
+   "note_fa": "اصل ۷۹ حکومت نظامی را ممنوع و محدودیت‌های اضطراری را به سی روز با تصویب مجلس محدود می‌کند که تضمینی شکلی است، اما هیچ فهرستی از حقوق غیرقابل‌تعلیق مطابق ماده ۴(۲) میثاق ندارد و اصل ۶۸ امکان تعطیلی انتخابات در سراسر کشور را در زمان جنگ می‌دهد.",
+   "check": "ok",
+   "problems": []
+  },
+  "atrocity_crimes": {
+   "verdict": "silent",
+   "segments": [
+    "a107"
+   ],
+   "provisions": [
+    "GENOCIDE.1",
+    "GENOCIDE.4",
+    "ROME.6",
+    "ROME.7.1",
+    "ROME.27",
+    "CED.5"
+   ],
+   "quote": "",
+   "note_en": "Genocide, crimes against humanity and war crimes are not mentioned, and no duty to prevent or punish them or to deny immunity to officials is created; Article 107's statement that the Leader is equal before the law is the only related clause, with no enforcement mechanism.",
+   "note_fa": "نسل‌کشی، جنایات علیه بشریت و جنایات جنگی ذکر نشده‌اند و هیچ تکلیفی به پیشگیری، مجازات یا نفی مصونیت مقامات پیش‌بینی نشده است؛ تنها جمله «رهبر در برابر قوانین با سایر افراد کشور مساوی است» در اصل ۱۰۷ مرتبط است که سازوکار اجرایی ندارد.",
+   "check": "ok",
+   "problems": []
+  }
+ },
+ "summary_en": "The document contains a recognisable catalogue of civil rights — a ban on inquisition into beliefs, a torture prohibition with exclusion of coerced confessions, presumption of innocence, right of access to courts and counsel, compensation for judicial error, administrative review, free education and universal health and social-security entitlements, an inalienable nationality, and a prohibition of martial law. Nearly all of these, however, are taken back by open-ended conditions: Article 4 makes Islamic criteria supreme over every article of the constitution and all legislation, with the Guardian Council as arbiter, while individual articles add \"with observance of Islamic criteria\" (women's rights, equality), \"detrimental to the fundamentals of Islam\" (press, assembly), \"Islamic criteria and the interests of the country\" (broadcasting), and \"except by order of the law\" (privacy, arrest, residence, life and property). The most serious contradictions are the entrenchment of an unchangeable official creed with only three recognised religious minorities, the conditioning of non-Muslims' rights on political loyalty, the reservation of the presidency to believing \"rijal\" with candidate vetting by an unelected body, and the subordination of all three branches to the Leader's absolute guardianship. Judicial rulings on \"authoritative fatwas\" where statute is silent defeats the legality principle, and enforcement of hudud conflicts with the ban on cruel punishment. The gravest silences are sexual orientation and gender identity, enforced disappearance, incitement and war propaganda, freedom to leave and return to the country, the rights of persons with disabilities and of the child as such, cultural rights, non-derogable rights in emergencies, and any provision on genocide, crimes against humanity or official immunity.",
+ "summary_fa": "این متن فهرستی از حقوق مدنی را در بر دارد: منع تفتیش عقاید، منع شکنجه و بی‌اعتباری اقرار اجباری، اصل برائت، حق دادخواهی و وکیل، جبران خسارت ناشی از اشتباه قاضی، دیوان عدالت اداری، آموزش رایگان، حق همگانی بهداشت و تأمین اجتماعی، تابعیت غیرقابل‌سلب و ممنوعیت حکومت نظامی. اما تقریباً همه اینها با قیود باز پس گرفته می‌شوند: اصل ۴ موازین اسلامی را بر اطلاق و عموم همه اصول و قوانین حاکم می‌کند و تشخیص را به فقهای شورای نگهبان می‌سپارد، و اصول جداگانه قیودی چون «با رعایت موازین اسلام»، «مخل به مبانی اسلام»، «موازین اسلامی و مصالح کشور» و «مگر به حکم قانون» را می‌افزایند. جدی‌ترین تعارض‌ها عبارت‌اند از تثبیت مذهب رسمی تغییرناپذیر و شناسایی تنها سه اقلیت دینی، مشروط‌کردن حقوق غیرمسلمانان به عدم اقدام علیه نظام، محدودکردن ریاست‌جمهوری به «رجال» معتقد به مذهب رسمی همراه با نظارت استصوابی، و قرار گرفتن هر سه قوه زیر ولایت مطلقه. حکم بر پایه «فتاوای معتبر» در سکوت قانون اصل قانونی بودن جرم را نقض می‌کند و اجرای حدود با منع مجازات‌های ظالمانه ناسازگار است. مهم‌ترین سکوت‌ها: گرایش جنسی و هویت جنسیتی، ناپدیدسازی قهری، منع تحریک به نفرت و تبلیغ جنگ، حق خروج و بازگشت، حقوق افراد دارای معلولیت و حقوق کودک، حقوق فرهنگی، حقوق غیرقابل‌تعلیق در وضعیت اضطراری و هرگونه حکم درباره نسل‌کشی و جنایات علیه بشریت.",
+ "rejected": 0,
+ "warnings": 2,
+ "usage": {
+  "input_tokens": 38097,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 28613,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 23598,
+  "output_tokens_details": {
+   "thinking_tokens": 8820
+  },
+  "service_tier": "batch",
+  "inference_geo": "global"
+ },
+ "review": {
+  "status": "unreviewed",
+  "reviewer": null,
+  "date": null,
+  "publish": true,
+  "notes": "Published before review at the user's decision (2026-09-25). Quote for «work» corrected from «…نیست برگزید» to the article's «…نیست برگزیند» (art. 28); the «family» quote is article 10 abridged with «…»."
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "pages": {
+  "157e9712beaed7c5:3:475cc8d26d995034:claude-opus-5:v1": {
+   "corrections": [
+    {
+     "find": "تضمین استقلال قوه قضایی کشور",
+     "replace": "تضمین استقلال قوه قضایی کشور",
+     "kind": "wrong_letters"
+    }
+   ],
+   "usage": {
+    "input_tokens": 6724,
+    "output_tokens": 69
+   },
+   "page": 3
+  }
+ }
+}

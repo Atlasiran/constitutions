@@ -118,6 +118,7 @@ export function mount(root, opts={}){
   const author=d=>L==="fa"?(d.author_fa||""):(d.author_en||"");
   const group=d=>GROUP[d.kind]||"A";
   const num=n=>L==="fa"?Number(n).toLocaleString("fa-IR",{useGrouping:false}):String(n);
+  const pg=n=>(L==="fa"?"ص. ":"p. ")+num(n);
   const unitw=u=>(UNITW[u]||[u,u])[L==="fa"?0:1];
   const width=()=>root.clientWidth||innerWidth;
 
@@ -392,7 +393,7 @@ export function mount(root, opts={}){
         const i=a.text.indexOf(q),s=Math.max(0,i-110);
         const snip=(s?"…":"")+esc(a.text.slice(s,i))+"<mark>"+esc(q)+"</mark>"+esc(a.text.slice(i+q.length,i+q.length+180))+"…";
         const h=el("div","hit");
-        h.innerHTML=`<div class="hit-src"><b>${esc(title(d))}</b> · ${esc(unitw(a.unit))} ${num(a.n)} · p.${num(a.page)}</div>
+        h.innerHTML=`<div class="hit-src"><b>${esc(title(d))}</b> · ${esc(unitw(a.unit))} ${num(a.n)} · ${pg(a.page)}</div>
           <div class="fa" dir="rtl" lang="fa">${snip}</div>`;
         res.append(h);});};
     inp.oninput=run;run();
@@ -472,7 +473,7 @@ export function mount(root, opts={}){
     if(!m)return {short:label,label,text:""};
     const a=ARTS.find(x=>x.doc===A.uid&&x.n===+m[1]);
     const unit=unitw(a?a.unit:"اص[سص]?ل");
-    return {short:`${unit} ${num(m[1])}`,label:`${unit} ${num(m[1])}${a?" · p."+num(a.page):""}`,text:a?a.text:""};
+    return {short:`${unit} ${num(m[1])}`,label:`${unit} ${num(m[1])}${a?" · "+pg(a.page):""}`,text:a?a.text:""};
   }
   function method(A){
     const p=el("div","panel");

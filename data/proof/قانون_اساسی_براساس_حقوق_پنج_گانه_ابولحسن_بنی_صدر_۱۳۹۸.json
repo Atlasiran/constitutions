@@ -1,0 +1,12 @@
+{
+ "pages": {
+  "2d2516707b7f60ea:50:e99875d662f5d49f:claude-opus-5:v1": {
+   "corrections": [],
+   "usage": {
+    "input_tokens": 6705,
+    "output_tokens": 9
+   },
+   "page": 50
+  }
+ }
+}
