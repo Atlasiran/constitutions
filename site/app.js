@@ -6,6 +6,7 @@
    Options:
      lang      "fa" | "en"            first language (default "en" standalone, "fa" embedded)
      dataUrl   base URL of the JSON data (default: data/ next to this file)
+     pdfUrl    base URL of the source PDFs (default: pdf/ next to this file)
      embedded  true inside another site: no brand bar, no theme button, follows the
                host's dark mode (.dark on <html>), keeps its hands off <html>/<body>
      theme     "atlas" adds .qa-atlas (see atlas-theme.css)
@@ -21,7 +22,7 @@ const T={
    rnone:"No audit has been reviewed and published yet.",
    rpick:"Document",rreviewed:(who,d)=>"Reviewed"+(who?" by "+who:"")+(d?" on "+d:""),
    rpreview:"Preview: not yet reviewed. Not for publication.",
-   rsrc:"Source of the text",rscope:n=>n+" articles read; the wording in force of amended articles.",
+   rsrc:"Source of the text",rpdf:"The PDF",rpage:n=>"Open page "+n+" of the PDF",rscope:n=>n+" articles read; the wording in force of amended articles.",
    runrev:"Not yet reviewed: these verdicts come from the automated reading and its citation checks; no person has confirmed them yet.",
    rarts:"Articles cited",rbench:"Benchmark provisions",rquote:"Decisive words",rnoarts:"No article addresses this right.",
    ren:"English text; the Persian translation is pending.",rall:"All",
@@ -54,14 +55,14 @@ const T={
    more:"Show more",less:"Show less",loadfail:"Could not load corpus data.",
    group:"Compared only with",alone:"No other document of this kind in the corpus yet.",
    groups:{A:"constitutions and draft constitutions",B:"bylaws",C:"charters, programmes and ideological statements",D:"treatises"},
-   note:"Article counts come from automated parsing of the source PDFs and may miss or over-split articles in poorly typeset documents. Every article links back to its page in the original. Topic labels are keyword-based and shown for navigation, not as legal classification."},
+   note:"Article counts come from automated parsing of the source PDFs and may miss or over-split articles in poorly typeset documents. Every article links to its page in the original PDF. Topic labels are keyword-based and shown for navigation, not as legal classification."},
  fa:{corpus:"پیکره",map:"شباهت",compare:"مقایسه",search:"جست‌وجو",rights:"حقوق بشر",
    rtitle:"سنجش با حقوق بین‌الملل بشر",
    rsub:"هر سند درباره‌ی ۳۱ حق برگرفته از اعلامیه‌ی جهانی حقوق بشر، دو میثاق بین‌المللی و کنوانسیون‌های اصلی سازمان ملل خوانده می‌شود. هر حکم به اصول خود سند و به بندهای معاهده‌ای که بر آن استوار است استناد می‌کند.",
    rnone:"هنوز هیچ سنجشی بازبینی و منتشر نشده است.",
    rpick:"سند",rreviewed:(who,d)=>"بازبینی‌شده"+(who?" به دست "+who:"")+(d?" در "+d:""),
    rpreview:"پیش‌نمایش: هنوز بازبینی نشده. برای انتشار نیست.",
-   rsrc:"منبع متن",rscope:n=>n+" اصل خوانده شد؛ در اصول اصلاح‌شده، متن معتبر کنونی.",
+   rsrc:"منبع متن",rpdf:"فایل PDF",rpage:n=>"صفحه‌ی "+Number(n).toLocaleString("fa-IR",{useGrouping:false})+" در فایل PDF",rscope:n=>n+" اصل خوانده شد؛ در اصول اصلاح‌شده، متن معتبر کنونی.",
    runrev:"هنوز بازبینی نشده: این حکم‌ها حاصل خوانش خودکار و وارسی خودکار استنادهاست و هنوز کسی آن‌ها را تأیید نکرده است.",
    rarts:"اصول استنادشده",rbench:"بندهای متن بالادستی",rquote:"عبارت تعیین‌کننده",rnoarts:"هیچ اصلی به این حق نپرداخته است.",
    ren:"متن انگلیسی؛ ترجمه‌ی فارسی در دست تهیه است.",rall:"همه",
@@ -111,6 +112,7 @@ const el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=nu
 export function mount(root, opts={}){
   const embedded=!!opts.embedded, useHash=opts.hash!==false;
   const dataUrl=new URL(opts.dataUrl||"data/", new URL(".", import.meta.url));
+  const pdfUrl=new URL(opts.pdfUrl||"pdf/", new URL(".", import.meta.url));
   let L=opts.lang||(embedded?"fa":"en"), CAT=[], AN=null, ARTS=[], view="corpus";
   let cmpA=null,cmpB=null,cmpT=null,q="",AUD=null,audDoc=null,audRight=null,audFilter=null;
   const t=k=>T[L][k];
@@ -120,6 +122,11 @@ export function mount(root, opts={}){
   const num=n=>L==="fa"?Number(n).toLocaleString("fa-IR",{useGrouping:false}):String(n);
   const pg=n=>(L==="fa"?"ص. ":"p. ")+num(n);
   const unitw=u=>(UNITW[u]||[u,u])[L==="fa"?0:1];
+  // a link into the document's PDF, at a page when given; plain text when the PDF is not published
+  const docOf=uid=>CAT.find(x=>x.uid===uid)||{};
+  const pdfLink=(d,page,label)=>d.pdf
+    ?`<a href="${esc(new URL(d.pdf,pdfUrl).href+(page?"#page="+page:""))}" target="_blank" rel="noopener">${esc(label)}</a>`
+    :esc(label);
   const width=()=>root.clientWidth||innerWidth;
 
   root.classList.add("qa-root");
@@ -262,7 +269,7 @@ export function mount(root, opts={}){
       tr.innerHTML=`<td class="num">${d.year||"—"}</td>
         <td class="ttl"><span class="dot" style="background:${BCOL[b]}"></span>${esc(title(d))}
           ${d.ocr?`<span class="flag">${t("ocr")}</span>`:""}${d.duplicate_of?`<span class="flag">${t("dup")}</span>`:""}${(d.confidence<0.8&&["draft","in_force","historical","transitional"].includes(d.type))?`<span class="flag quiet">${t("partial")}</span>`:""}
-          <small>${esc(d.source_pdf)}</small></td>
+          <small>${pdfLink(d,0,d.source_pdf)}</small></td>
         <td>${esc(author(d))}</td><td class="num">${d.n_articles}</td><td class="num">${d.n_pages}</td>`;
       body.append(tr);});
     tb.append(body);return tb;
@@ -366,7 +373,7 @@ export function mount(root, opts={}){
   function artCard(a){
     const c=el("div","art");
     c.innerHTML=`<div class="art-h"><span class="art-n">${esc(unitw(a.unit))} ${num(a.n)}</span>
-      <span class="art-p">p.${a.page}</span></div><div class="fa" dir="rtl" lang="fa">${esc(a.text)}</div>`;
+      <span class="art-p">${pdfLink(docOf(a.doc),a.page,pg(a.page))}</span></div><div class="fa" dir="rtl" lang="fa">${esc(a.text)}</div>`;
     if(a.text.length>320){const b=el("button","more");
       b.textContent=t("more");
       b.onclick=()=>{c.classList.toggle("open");b.textContent=c.classList.contains("open")?t("less"):t("more")};
@@ -393,7 +400,7 @@ export function mount(root, opts={}){
         const i=a.text.indexOf(q),s=Math.max(0,i-110);
         const snip=(s?"…":"")+esc(a.text.slice(s,i))+"<mark>"+esc(q)+"</mark>"+esc(a.text.slice(i+q.length,i+q.length+180))+"…";
         const h=el("div","hit");
-        h.innerHTML=`<div class="hit-src"><b>${esc(title(d))}</b> · ${esc(unitw(a.unit))} ${num(a.n)} · ${pg(a.page)}</div>
+        h.innerHTML=`<div class="hit-src"><b>${esc(title(d))}</b> · ${esc(unitw(a.unit))} ${num(a.n)} · ${pdfLink(d,a.page,pg(a.page))}</div>
           <div class="fa" dir="rtl" lang="fa">${snip}</div>`;
         res.append(h);});};
     inp.oninput=run;run();
@@ -425,6 +432,7 @@ export function mount(root, opts={}){
     head.append(el("div",A.preview||A.unreviewed?"aud-flag":"aud-meta",
       esc(A.preview?t("rpreview"):A.unreviewed?t("runrev"):t("rreviewed")(rv.reviewer,rv.date))));
     const meta=el("div","aud-meta",esc(t("rscope")(num(d.n_articles||0))));
+    if(d.pdf)meta.append(" · ",el("span",null,pdfLink(d,0,t("rpdf"))));
     if(d.source_url){meta.append(" · ");const ln=el("a",null,esc(t("rsrc")));ln.href=d.source_url;ln.target="_blank";ln.rel="noopener";meta.append(ln)}
     head.append(meta);
     head.append(el("p","aud-sum",esc(L==="fa"?A.summary_fa:A.summary_en)));
@@ -454,7 +462,9 @@ export function mount(root, opts={}){
       const h1=el("h4",null,esc(t("rarts")));body.append(h1);
       if(!arts.length)body.append(el("div","sub",esc(t("rnoarts"))));
       arts.forEach(a=>{const x=el("details","aud-art");
-        x.append(el("summary",null,esc(a.label)),el("div","fa",esc(a.text||"")));x.lastChild.dir="rtl";body.append(x)});
+        x.append(el("summary",null,esc(a.label)),el("div","fa",esc(a.text||"")));x.lastChild.dir="rtl";
+        if(a.page&&d.pdf)x.append(el("div","sub",pdfLink(d,a.page,t("rpage")(a.page))));
+        body.append(x)});
       body.append(el("h4",null,esc(t("rbench"))));
       r.provisions.forEach(id=>{const P=AUD.provisions[id]||{},I=AUD.instruments[P.i]||{};
         const x=el("details","aud-prov");
@@ -473,7 +483,7 @@ export function mount(root, opts={}){
     if(!m)return {short:label,label,text:""};
     const a=ARTS.find(x=>x.doc===A.uid&&x.n===+m[1]);
     const unit=unitw(a?a.unit:"اص[سص]?ل");
-    return {short:`${unit} ${num(m[1])}`,label:`${unit} ${num(m[1])}${a?" · "+pg(a.page):""}`,text:a?a.text:""};
+    return {short:`${unit} ${num(m[1])}`,label:`${unit} ${num(m[1])}${a?" · "+pg(a.page):""}`,text:a?a.text:"",page:a?.page};
   }
   function method(A){
     const p=el("div","panel");

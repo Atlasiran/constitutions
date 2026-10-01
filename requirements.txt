@@ -1,2 +1,3 @@
 numpy>=1.24
 anthropic>=1.8
+pymupdf>=1.24.12   # publish_pdfs.py only

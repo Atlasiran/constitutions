@@ -3,7 +3,7 @@
 
     python3 pipeline/build_module.py [--out DIR]     # default: dist/
 
-Copies site/app.js, app.css, atlas-theme.css and site/data/*.json into DIR, and
+Copies site/app.js, app.css, atlas-theme.css, site/data/*.json and site/pdf/ into DIR, and
 writes DIR/data/org-index.json: Atlas organisation id -> its documents, with the
 comparison group each belongs to and how many other documents share that group
 (Atlas shows a compare button only when there is one). Standard library only,
@@ -50,6 +50,9 @@ def main():
     for f in sorted(os.listdir(os.path.join(SITE, "data"))):
         if f.endswith(".json"):
             shutil.copy2(os.path.join(SITE, "data", f), os.path.join(out, "data", f))
+    pdf = os.path.join(SITE, "pdf")
+    if os.path.isdir(pdf):
+        shutil.copytree(pdf, os.path.join(out, "pdf"))
     catalog = json.load(open(os.path.join(SITE, "data", "catalog.json"), encoding="utf-8"))
     idx = org_index(catalog)
     json.dump(idx, open(os.path.join(out, "data", "org-index.json"), "w", encoding="utf-8"),

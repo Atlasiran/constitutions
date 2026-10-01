@@ -208,3 +208,6 @@
   .qa-root .aud-defs{grid-template-columns:1fr}
 }
 .qa-root .aud-meta a{color:var(--accent)}
+/* links into the source PDFs: quiet until hovered */
+.qa-root .ttl small a,.qa-root .art-p a,.qa-root .hit-src a{color:inherit;text-decoration:underline dotted;text-underline-offset:2px}
+.qa-root .ttl small a:hover,.qa-root .art-p a:hover,.qa-root .hit-src a:hover,.qa-root .aud-art .sub a{color:var(--accent)}

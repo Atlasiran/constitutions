@@ -8,6 +8,11 @@ an =json.load(open(D+"/analysis.json",encoding="utf-8"))
 ar =json.load(open(D+"/articles_all.json",encoding="utf-8"))
 an["topics"]={k:{"fa":v["fa"],"en":v["en"]} for k,v in an["topics"].items()}
 uids={c["uid"] for c in cat}
+# The copies publish_pdfs.py put in site/pdf/; a document without one gets no link
+import sys; sys.path.insert(0,R+"/pipeline"); from publish_pdfs import pdf_names
+PDF=pdf_names(cat)
+for c in cat:
+    if os.path.exists(R+"/site/pdf/"+PDF[c["source_pdf"]]):c["pdf"]=PDF[c["source_pdf"]]
 an["edges"]=[e for e in an["edges"] if e["a"] in uids and e["b"] in uids]
 slim=[{"doc":a["doc"],"n":a["n"],"unit":a["unit"],"page":a["page"],
        "topics":a["topics"],"text":a["text"][:2600]} for a in ar if a["doc"] in uids]

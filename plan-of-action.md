@@ -412,3 +412,5 @@ Status values: ☐ to do · ◐ in progress · ☑ done
 - **2026-09-25 (session 7):**
   - 5.3 pilot ingested (§9): PDKI programme and bylaws, Fadaian (Majority) bylaws, CPI bylaws, Iran Novin ideology, Azerbaijan Democratic Party bylaws, con-dfr charter, Sepidar bylaws (the party PDF, not the web page, which mixes in the older association bylaws), PJAK programme and bylaws (org 310, not 95). 48 registry entries.
   - Vision OCR: PDKI + con-dfr (64 pages), Sepidar (26), PJAK (65), and the six older texts with broken «لا» (1,012 pages in 11 batches).
+- **2026-10-01:**
+  - Source PDFs published with the site: `pipeline/publish_pdfs.py` writes `site/pdf/<uid>.pdf` (shared PDFs take the common uid parts: `dp-2026.pdf`), images downsampled to 150 dpi, original kept where that is not smaller (57.7 → 50.9 MB, 41 files; Parsa alone 18.2 MB, under Cloudflare's 25 MiB per-file limit). `build_site.py` adds `pdf` to the catalog; `build_module.py` copies `pdf/`. The catalog filename, each article's page, search hits and cited articles in «حقوق بشر» link to the PDF at `#page=N`; the embed takes `pdfUrl`. Rehosting the party documents is cleared by the user.
