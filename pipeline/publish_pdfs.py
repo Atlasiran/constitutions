@@ -5,8 +5,9 @@
 
 Each file is named after its documents' uids (documents split from one PDF share the parts their uids have
 in common: dp-bylaws-2026, dp-charter-2026 -> dp-2026.pdf). Images are downsampled to 150 dpi and the file
-rewritten; where that does not make it smaller, the original is copied as it is. Page numbers never change,
-so the page an article cites is the page the link opens. Needs PyMuPDF; build_site.py only reads the names.
+rewritten; where that does not make it smaller, or changes how any page looks (some image encodings come
+out black), the original is copied as it is. Page numbers never change, so the page an article cites is the
+page the link opens. Needs PyMuPDF; build_site.py only reads the names.
 """
 import json, os, shutil
 
@@ -30,6 +31,16 @@ def pdf_names(catalog):
     return names
 
 
+def looks_same(a, b, tol=15):
+    """Every page of b renders like the same page of a: mean grey within tol (0-255) at a coarse resolution."""
+    import pymupdf
+    da, db = pymupdf.open(a), pymupdf.open(b)
+    if da.page_count != db.page_count:
+        return False
+    grey = lambda d, p: (lambda s: sum(s) / len(s))(d[p].get_pixmap(dpi=30, colorspace=pymupdf.csGRAY).samples)
+    return all(abs(grey(da, p) - grey(db, p)) <= tol for p in range(da.page_count))
+
+
 def main():
     import pymupdf
     pymupdf.TOOLS.mupdf_display_errors(False)
@@ -49,7 +60,7 @@ def main():
         doc.rewrite_images(dpi_threshold=160, dpi_target=150, quality=70)
         doc.save(out, garbage=4, deflate=True, deflate_fonts=True, clean=True)
         doc.close()
-        if os.path.getsize(out) >= os.path.getsize(inp):
+        if os.path.getsize(out) >= os.path.getsize(inp) or not looks_same(inp, out):
             shutil.copyfile(inp, out)
         a, b = os.path.getsize(inp), os.path.getsize(out)
         before += a; after += b
