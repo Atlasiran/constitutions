@@ -211,3 +211,15 @@
 /* links into the source PDFs: quiet until hovered */
 .qa-root .ttl small a,.qa-root .art-p a,.qa-root .hit-src a{color:inherit;text-decoration:underline dotted;text-underline-offset:2px}
 .qa-root .ttl small a:hover,.qa-root .art-p a:hover,.qa-root .hit-src a:hover,.qa-root .aud-art .sub a{color:var(--accent)}
+/* compare: the profile of each chosen document */
+.qa-root .profile{margin-block-start:8px;padding:10px 12px;border:1px solid var(--line);border-inline-start:3px solid var(--line);border-radius:8px;background:var(--surface-2);font-size:12.5px}
+.qa-root .profile dl{display:grid;grid-template-columns:auto 1fr;gap:3px 12px;margin:0}
+.qa-root .profile dt{color:var(--ink-3)}
+.qa-root .profile dd{margin:0;color:var(--ink)}
+.qa-root .profile .tags{display:flex;flex-wrap:wrap;gap:4px;margin-block-start:8px}
+.qa-root .profile .tag{font-size:11px;padding:1px 7px;border-radius:999px;background:var(--line-2);color:var(--ink-2)}
+.qa-root .profile .links{margin-block-start:8px}
+.qa-root .profile .links a{color:var(--accent)}
+.qa-root .cmp-row{align-items:stretch}
+.qa-root .cmp-row>div{display:flex;flex-direction:column}
+.qa-root .cmp-row .profile{flex:1}

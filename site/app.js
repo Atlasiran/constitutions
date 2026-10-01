@@ -54,6 +54,16 @@ const T={
    arcount:n=>n+" articles",ocr:"OCR",dup:"duplicate",partial:"partial",results:n=>n+" results",
    more:"Show more",less:"Show less",loadfail:"Could not load corpus data.",
    group:"Compared only with",alone:"No other document of this kind in the corpus yet.",
+   date:"Date",len:"Length",rev:n=>"revision "+n,size:(a,p)=>a+" articles · "+p+" pages",
+   kinds:{constitution:"Constitution",constitution_proposal:"Draft constitution",bylaws:"Bylaws",program:"Programme",
+     charter:"Charter",ideology:"Statement of principles",treatise:"Treatise"},
+   dstat:{adopted:"adopted",draft:"draft",in_force:"in force"},
+   tags:{republic:"republic",secular:"secular",monarchy:"monarchy",constitutional:"constitutional",transitional:"transitional",
+     federal:"federal",democratic:"democratic",islamic:"Islamic",socialist:"socialist","rights-based":"rights-based",
+     "rule-of-law":"rule of law",foundational:"foundational",rights:"rights","clerical-rule":"clerical rule",
+     "velayat-e-faqih":"velayat-e faqih","council-based":"council-based",parliamentary:"parliamentary",
+     "opposition-in-exile":"opposition in exile",nationalist:"nationalist",unitary:"unitary","ethnic-federalism":"ethnic federalism",
+     pluralist:"pluralist",revolutionary:"revolutionary",reformist:"reformist"},
    groups:{A:"constitutions and draft constitutions",B:"bylaws",C:"charters, programmes and ideological statements",D:"treatises"},
    note:"Article counts come from automated parsing of the source PDFs and may miss or over-split articles in poorly typeset documents. Every article links to its page in the original PDF. Topic labels are keyword-based and shown for navigation, not as legal classification."},
  fa:{corpus:"پیکره",map:"شباهت",compare:"مقایسه",search:"جست‌وجو",rights:"حقوق بشر",
@@ -94,6 +104,17 @@ const T={
    arcount:n=>n+" اصل",ocr:"نویسه‌خوانی",dup:"تکراری",partial:"ناقص",results:n=>n+" نتیجه",
    more:"بیشتر",less:"کمتر",loadfail:"بارگذاری داده‌های پیکره ممکن نشد.",
    group:"تنها قابل مقایسه با",alone:"هنوز سند دیگری از این گونه در پیکره نیست.",
+   date:"تاریخ",len:"حجم",rev:n=>"ویرایش "+Number(n).toLocaleString("fa-IR"),
+   size:(a,p,u)=>Number(a).toLocaleString("fa-IR",{useGrouping:false})+" "+u+" · "+Number(p).toLocaleString("fa-IR",{useGrouping:false})+" صفحه",
+   kinds:{constitution:"قانون اساسی",constitution_proposal:"پیش‌نویس قانون اساسی",bylaws:"اساسنامه",program:"برنامه",
+     charter:"منشور",ideology:"مرامنامه",treatise:"رساله"},
+   dstat:{adopted:"مصوب",draft:"پیش‌نویس",in_force:"در حال اجرا"},
+   tags:{republic:"جمهوری",secular:"سکولار",monarchy:"پادشاهی",constitutional:"مشروطه",transitional:"دوران گذار",
+     federal:"فدرال",democratic:"دموکراتیک",islamic:"اسلامی",socialist:"سوسیالیستی","rights-based":"حق‌بنیاد",
+     "rule-of-law":"حاکمیت قانون",foundational:"بنیادین",rights:"حقوق","clerical-rule":"حکومت روحانیان",
+     "velayat-e-faqih":"ولایت فقیه","council-based":"شورایی",parliamentary:"پارلمانی",
+     "opposition-in-exile":"اپوزیسیون در تبعید",nationalist:"ملی‌گرا",unitary:"یکپارچه","ethnic-federalism":"فدرالیسم قومی",
+     pluralist:"کثرت‌گرا",revolutionary:"انقلابی",reformist:"اصلاح‌طلب"},
    groups:{A:"قانون‌های اساسی و پیش‌نویس‌ها",B:"اساسنامه‌ها",C:"منشورها، برنامه‌ها و مرامنامه‌ها",D:"رساله‌ها"},
    note:"شمار اصول از تجزیه‌ی خودکار فایل‌های اصلی به‌دست آمده و ممکن است در اسنادِ بدحروف‌چینی‌شده کم یا زیاد باشد. هر اصل به صفحه‌ی اصلی خود پیوند دارد. برچسب‌های موضوعی بر پایه‌ی کلیدواژه‌اند و برای گشت‌وگذار آمده‌اند، نه طبقه‌بندی حقوقی."}};
 
@@ -328,7 +349,7 @@ export function mount(root, opts={}){
     if(!peers.some(d=>d.uid===cmpB))cmpB=(peers.find(d=>d.type==="draft")||peers[0]||{}).uid||null;
     const p=el("div","panel");
     p.append(el("h2",null,esc(t("cmp"))),el("div","sub",esc(t("cmpsub"))));
-    const row=el("div","row");
+    const row=el("div","row cmp-row");
     [["A",cmpA,withArts,i=>{cmpA=i}],["B",cmpB,peers,i=>{cmpB=i}]].forEach(([k,cur,list,set],n)=>{
       const s=el("select");
       list.forEach(d=>{const o=el("option",null,esc(title(d))+" ("+d.n_articles+")");o.value=d.uid;
@@ -337,6 +358,7 @@ export function mount(root, opts={}){
       s.onchange=()=>{set(s.value);cmpT=null;compareView();writeHash()};
       const wrap=el("div");wrap.style.flex="1";wrap.style.minWidth="220px";
       wrap.append(el("div",null,`<span class="dot" style="background:${n?"var(--s2)":"var(--s1)"}"></span><small style="color:var(--ink-3)">${k}</small>`),s);
+      const d=list.find(x=>x.uid===cur);if(d)wrap.append(profile(d,n?"var(--s2)":"var(--s1)"));
       row.append(wrap);});
     p.append(row);
     p.append(el("div","group-note",esc(peers.length?`${t("group")} ${t("groups")[group(A0)]}`:t("alone"))));
@@ -369,6 +391,26 @@ export function mount(root, opts={}){
       p.append(g);}
     p.append(el("div","note",esc(t("note"))));
     v.append(p);
+  }
+  // who wrote it, when, what kind of document, how much was read, and where the text comes from
+  function profile(d,col){
+    const c=el("div","profile");c.style.borderInlineStartColor=col;
+    const st=d.type==="in_force"?"in_force":d.kind==="constitution_proposal"&&d.doc_status==="draft"?null:d.doc_status;
+    const date=L==="fa"?(d.era||(d.year?num(d.year):"")):(d.year?String(d.year):"");
+    const rows=[[t("author"),author(d)],[t("date"),date],
+      [t("kind"),[t("kinds")[d.kind]||d.kind,st&&t("dstat")[st],+d.version>1&&t("rev")(d.version)].filter(Boolean).join(" · ")],
+      [t("len"),t("size")(d.n_articles,d.n_pages,unitw(d.unit))]];
+    const dl=el("dl");
+    rows.forEach(([k,v])=>{if(v)dl.append(el("dt",null,esc(k)),el("dd",null,esc(v)))});
+    c.append(dl);
+    const flags=[d.duplicate_of&&t("dup"),d.confidence<0.8&&["draft","in_force","historical","transitional"].includes(d.type)&&t("partial")].filter(Boolean);
+    const tags=(d.tags||[]).map(x=>`<span class="tag">${esc(t("tags")[x]||x)}</span>`)
+      .concat(flags.map(x=>`<span class="flag quiet">${esc(x)}</span>`));
+    if(tags.length)c.append(el("div","tags",tags.join("")));
+    const links=[d.pdf&&pdfLink(d,0,t("rpdf")),
+      d.source_url&&`<a href="${esc(d.source_url)}" target="_blank" rel="noopener">${esc(t("rsrc"))}</a>`].filter(Boolean);
+    if(links.length)c.append(el("div","links",links.join(" · ")));
+    return c;
   }
   function artCard(a){
     const c=el("div","art");
