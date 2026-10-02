@@ -1,0 +1,93 @@
+[
+ {
+  "uid": "juya-transitional-1393",
+  "file": "پیش نویس قانون اساسی موقت ایران پس از سرنگونی جمهوری اسلامی - کاوه جویا ۱۳۹۳.pdf",
+  "fa": "پیش‌نویس قانون اساسی موقت ایران پس از سرنگونی جمهوری اسلامی",
+  "en": "Draft Provisional Constitution of Iran after the Fall of the Islamic Republic",
+  "author_fa": "کاوه جویا",
+  "author_en": "Kaveh Juya",
+  "year": 2014,
+  "era": "۱۳۹۳",
+  "type": "transitional",
+  "kind": "constitution_proposal",
+  "source_url": "https://www.pezhvakeiran.com/maghaleh-60770.html",
+  "version": "1",
+  "tags": [
+   "transitional",
+   "republic"
+  ],
+  "series": "juya",
+  "rev": 1,
+  "keep_from": "پیش نویس قانون اساسی موقت ایران پس از سرنگونی جمهوری اسلامی",
+  "keep_until": "منبع:\\s*پژواک ایران",
+  "note": "Web page on Pezhvak-e Iran, listed in the author's articles under May 2014. The earlier edition of juya-transitional-1397: the same 70 «اصل» in the same order, in plainer wording (منصوب, عزل, ممکن است where 1397 has برگمارده, برکناری, شدنی است) and without 1397's cross-references. The text is taken from the HTML; the PDF is a reading copy."
+ },
+ {
+  "uid": "parsa-adlan-1382",
+  "file": "پیش نویس قانون اساسی جمهوری ایران - عدلان پارسا ۱۳۸۲.pdf",
+  "fetch_url": "http://web.archive.org/web/20050515111500id_/http://www.iransolidarity.com:80/Ghanoon/gha_AP_constitution.pdf",
+  "fa": "پیش‌نویس قانون اساسی جمهوری ایران",
+  "en": "Draft Constitution of the Republic of Iran",
+  "author_fa": "عدلان پارسا",
+  "author_en": "Adlan Parsa",
+  "year": 2003,
+  "era": "آذر ۱۳۸۲",
+  "type": "draft",
+  "kind": "constitution_proposal",
+  "source_url": "http://web.archive.org/web/20050515111500/http://www.iransolidarity.com:80/Ghanoon/gha_AP_constitution.pdf",
+  "version": "1",
+  "tags": [
+   "republic",
+   "secular",
+   "parliamentary"
+  ],
+  "companions": [
+   {
+    "fa": "احمدرضا کمره‌ای، «تدوین قانون اساسی نوین ایران» (ایران امروز، ۱۳۸۴)، که به این پیش‌نویس پیوند می‌دهد",
+    "en": "Ahmadreza Kamarei, “Drafting a new constitution for Iran” (Iran Emrooz, 2005), which links to this draft",
+    "role": "commentary",
+    "url": "https://www.iran-emrooz.net/index.php/politic/print/1603/"
+   }
+  ],
+  "note": "Found through Kamarei's 2005 essay, which links it on iransolidarity.com; that domain is now parked, so the source is the Wayback Machine copy of 2005-05-15. PDF dated 2003-12-18 (27 Azar 1382). A ceremonial president, a «صدر اعظم» and a senate; article 9 makes the state secular. Text layer in Arabic presentation forms."
+ },
+ {
+  "uid": "draft-constitution-1358",
+  "file": "پیش‌نویس قانون اساسی جمهوری اسلامی ایران ۱۳۵۸ - راهنمای صورت مشروح مذاکرات مجلس بررسی نهائی قانون اساسی.pdf",
+  "fetch_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/%D8%B1%D8%A7%D9%87%D9%86%D9%85%D8%A7%DB%8C_%D8%A7%D8%B3%D8%AA%D9%81%D8%A7%D8%AF%D9%87_%D8%A7%D8%B2_%D8%B5%D9%88%D8%B1%D8%AA_%D9%85%D8%B4%D8%B1%D9%88%D8%AD_%D9%85%D8%B0%D8%A7%DA%A9%D8%B1%D8%A7%D8%AA_%D9%85%D8%AC%D9%84%D8%B3_%D8%A8%D8%B1%D8%B1%D8%B3%DB%8C_%D9%86%D9%87%D8%A7%D8%A6%DB%8C_%D9%82%D8%A7%D9%86%D9%88%D9%86_%D8%A7%D8%B3%D8%A7%D8%B3%DB%8C_%D8%AC%D9%85%D9%87%D9%88%D8%B1%DB%8C_%D8%A7%D8%B3%D9%84%D8%A7%D9%85%DB%8C_%D8%A7%DB%8C%D8%B1%D8%A7%D9%86.pdf",
+  "fa": "پیش‌نویس قانون اساسی جمهوری اسلامی ایران",
+  "en": "Draft Constitution of the Islamic Republic of Iran (1979)",
+  "author_fa": "دولت موقت و شورای انقلاب",
+  "author_en": "Provisional Government and Revolutionary Council",
+  "year": 1979,
+  "era": "خرداد ۱۳۵۸",
+  "type": "historical",
+  "kind": "constitution_proposal",
+  "doc_status": "draft",
+  "pages": [
+   12,
+   30
+  ],
+  "source_url": "https://commons.wikimedia.org/wiki/File:%D8%B1%D8%A7%D9%87%D9%86%D9%85%D8%A7%DB%8C_%D8%A7%D8%B3%D8%AA%D9%81%D8%A7%D8%AF%D9%87_%D8%A7%D8%B2_%D8%B5%D9%88%D8%B1%D8%AA_%D9%85%D8%B4%D8%B1%D9%88%D8%AD_%D9%85%D8%B0%D8%A7%DA%A9%D8%B1%D8%A7%D8%AA_%D9%85%D8%AC%D9%84%D8%B3_%D8%A8%D8%B1%D8%B1%D8%B3%DB%8C_%D9%86%D9%87%D8%A7%D8%A6%DB%8C_%D9%82%D8%A7%D9%86%D9%88%D9%86_%D8%A7%D8%B3%D8%A7%D8%B3%DB%8C_%D8%AC%D9%85%D9%87%D9%88%D8%B1%DB%8C_%D8%A7%D8%B3%D9%84%D8%A7%D9%85%DB%8C_%D8%A7%DB%8C%D8%B1%D8%A7%D9%86.pdf",
+  "version": "1",
+  "tags": [
+   "republic",
+   "islamic"
+  ],
+  "companions": [
+   {
+    "fa": "متن در ویکی‌نبشته",
+    "en": "Transcription on Persian Wikisource",
+    "role": "web",
+    "url": "https://fa.wikisource.org/wiki/%D9%BE%DB%8C%D8%B4%E2%80%8C%D9%86%D9%88%DB%8C%D8%B3_%D9%82%D8%A7%D9%86%D9%88%D9%86_%D8%A7%D8%B3%D8%A7%D8%B3%DB%8C_%D8%AC%D9%85%D9%87%D9%88%D8%B1%DB%8C_%D8%A7%D8%B3%D9%84%D8%A7%D9%85%DB%8C"
+   },
+   {
+    "fa": "متن در تارنمای عباس امیرانتظام (بایگانی)",
+    "en": "Text on Abbas Amir-Entezam's website (archived)",
+    "role": "web",
+    "url": "https://web.archive.org/web/20100307035737/http://www.iran-amirentezam.com/node/31"
+   }
+  ],
+  "note": "The provisional government's draft, published in Khordad 1358 and put before the Assembly of Experts, which replaced it with the constitution adopted in Azar 1358. Source: the scan, on Wikimedia Commons (public domain), of «راهنمای استفاده از صورت مشروح مذاکرات مجلس بررسی نهائی قانون اساسی جمهوری اسلامی ایران», the Majlis's guide to the Assembly's proceedings (National Bibliography no. 2060507), via majlesekhobregan.ir. The draft is pages 12–30 of the book. Historical document: the object of comparison, never a standard."
+ }
+]
