@@ -367,8 +367,8 @@ Source: the user's ideas in `local/notes.md` (gitignored), sorted and checked ag
 
 ### Decisions needed
 1. **What we co-author.** Annotations and amendments on the existing drafts, or one community draft? IOCCI (ghanoonasasi.org) already runs an open co-drafting wiki and forum for one text, and iran4all compares drafts. Recommendation: talk to both before Phase 10; build comments (Phase 9) regardless, since annotation of all drafts against the benchmark is what we have that they don't.
-2. "An AI input at the bottom like open alice": which product is meant?
-3. "Center for transitional justice": ICTJ, or a specific Iranian centre?
+2. ~~"An AI input at the bottom like open alice": which product is meant?~~ Answered 2026-10-02: a chat box, a text input like a chat assistant's, to talk with the texts (answers cite stored articles). Deferred to a later phase: it costs API money per question.
+3. ~~"Center for transitional justice": ICTJ, or a specific Iranian centre?~~ Answered 2026-10-02: **Center for Transitional Justice for Iran** («مرکز عدالت انتقالی برای ایران», ctjcenter.org, Canada); more from the user later. Besides outreach, its "Democratic Constitutional Design" programme is worth checking for documents and resources.
 4. Comment languages (Persian only, or also English, Kurdish, Azerbaijani Turkish…) and the moderation policy text, published before launch.
 
 ### Phase 7: more drafts
