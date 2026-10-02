@@ -5,7 +5,9 @@
 
 The spec (data/additions/*.json) holds one object per document: its registry fields, plus `file` (the corpus
 file name) and optionally `fetch_url` (where to download it, when that differs from `source_url`) and
-`drop_lines` (a regex; matching lines of a web page are left out, e.g. "read more" links). A PDF is copied into
+`drop_lines` (a regex; matching lines of a web page are left out, e.g. "read more" links), `keep_from` and
+`keep_until` (regexes; a web page's text starts at the first line matching keep_from and stops before the first
+later line matching keep_until, which cuts a site's menus and article lists). A PDF is copied into
 the corpus as it is; a web page becomes a reading-copy PDF whose corpus text comes from the HTML, cut at the
 copy's page breaks (as in harvest.py). Downloads stay in local/additions/ (gitignored). Afterwards run
 extract.py; a PDF with a broken text layer goes through vision_ocr.py.
@@ -17,7 +19,7 @@ from harvest import ROOT, CORPUS, TEXT, REGISTRY, fetch_one, html_text, reading_
 from extract import slug_of
 
 STORE = os.path.join(ROOT, "local", "additions")
-SPEC_ONLY = {"file", "fetch_url", "drop_lines"}
+SPEC_ONLY = {"file", "fetch_url", "drop_lines", "keep_from", "keep_until"}
 ORDER = ["uid", "collection", "status", "source", "legacy_slug", "fa", "en", "author_fa", "author_en", "year", "era",
          "type", "kind", "org_ids", "pages", "doc_status", "source_url", "version", "tags"]
 
@@ -43,6 +45,12 @@ def add(spec):
         print(f"{uid}: pdf -> {spec['file']}")
     else:
         text, title, h1 = html_text(raw)
+        lines = text.split("\n")
+        if spec.get("keep_from"):
+            lines = lines[next(i for i, l in enumerate(lines) if re.fullmatch(spec["keep_from"], l.strip())):]
+        if spec.get("keep_until"):
+            lines = lines[:next(i for i, l in enumerate(lines) if re.fullmatch(spec["keep_until"], l.strip()))]
+        text = "\n".join(lines).strip()
         if spec.get("drop_lines"):
             text = "\n".join(l for l in text.split("\n") if not re.fullmatch(spec["drop_lines"], l.strip()))
             text = re.sub(r"\n{3,}", "\n\n", text).strip()

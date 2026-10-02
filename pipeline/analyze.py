@@ -4,7 +4,7 @@ import json, glob, os, re, math, sys
 import numpy as np
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); D = os.path.join(ROOT, "data")
-sys.path.insert(0, os.path.join(ROOT,"pipeline")); from articles import repair
+sys.path.insert(0, os.path.join(ROOT,"pipeline")); from articles import repair; from catalog import GROUP
 
 STOP = set("""و در به از که این را با است های برای آن یک می بر not های شود کنند خود تا
 کرد بود شده هر یا نیز اگر همه باید کند دارد شد ای ها او ما آنها بین وی هم مورد اين
@@ -102,9 +102,12 @@ def main():
     # cross-document nearest articles — one matmul, then read off rows
     SA = X @ X.T
     same = np.array([hash(a["doc"]) for a in arts])
+    # like with like: an article's neighbours come only from documents of its comparison group
+    grp = np.array([GROUP.get(cat[a["doc"]].get("kind"), "A") for a in arts])
     for i, a in enumerate(arts):
         sims = SA[i].copy()
         sims[same == same[i]] = -1
+        sims[grp != grp[i]] = -1
         top = np.argpartition(sims, -4)[-4:]
         top = top[np.argsort(sims[top])][::-1]
         a["near"] = [{"doc": arts[j]["doc"], "n": arts[j]["n"], "s": round(float(sims[j]), 3)}
@@ -113,7 +116,8 @@ def main():
 
     # edge list keyed by uid — deleting a document is just dropping its rows
     edges = [{"a": docs[i], "b": docs[j], "s": round(float(S[i, j]), 3)}
-             for i in range(len(docs)) for j in range(i+1, len(docs)) if S[i, j] > 0.10]
+             for i in range(len(docs)) for j in range(i+1, len(docs))
+             if S[i, j] > 0.10 and GROUP.get(cat[docs[i]].get("kind"), "A") == GROUP.get(cat[docs[j]].get("kind"), "A")]
     edges.sort(key=lambda e: -e["s"])
     json.dump({"topics": {k: {"fa": v[0], "en": v[1], "kw": v[2].split()} for k, v in TOPICS.items()},
                "edges": edges},

@@ -22,6 +22,10 @@ def articles_by_source():
 # `kind` decides what a document may be compared with (bylaws only with bylaws)
 KINDS = {"constitution", "constitution_proposal", "bylaws", "charter", "program",
          "ideology", "treatise", "benchmark"}
+# comparison groups (plan §6): documents are compared, linked and listed only within their group;
+# site/app.js holds the same table
+GROUP = {"constitution": "A", "constitution_proposal": "A", "bylaws": "B",
+         "charter": "C", "program": "C", "ideology": "C", "treatise": "D"}
 
 def main():
     reg = load_registry()

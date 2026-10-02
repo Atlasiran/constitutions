@@ -12,11 +12,18 @@
      theme     "atlas" adds .qa-atlas (see atlas-theme.css)
      hash      keep the view in location.hash for deep links (default true)
 
-   Deep links: #corpus, #map, #search=<text>, #compare=<uid>,<uid>[,<topic>], #rights=<uid>[,<right>]
+   Deep links: #corpus, #map, #search=<text>, #compare=<uid>,<uid>[,<topic>], #editions=<series>[,<uid>,<uid>],
+   #rights=<uid>[,<right>]
    Only documents in the same comparison group can be compared (rule: like with like). */
 
 const T={
- en:{corpus:"Corpus",map:"Similarity",compare:"Compare",search:"Search",rights:"Human rights",
+ en:{corpus:"Corpus",map:"Similarity",compare:"Compare",editions:"Editions",search:"Search",rights:"Human rights",
+   ed:"Edition to edition",edsub:"Some drafts were revised and republished. Pick two editions of one draft: articles are matched across them, and each changed article shows what was removed (red) and added (green).",
+   edpick:"Draft",edfrom:"Earlier",edto:"Later",
+   edsum:(m,s,a,d)=>m+" articles in both, "+s+" of them unchanged · "+a+" added · "+d+" dropped",
+   edcount:n=>n+" editions",edchanged:"Changed only",edall:"All articles",edsame:"Unchanged",edadd:"Added",eddrop:"Dropped",
+   ednone:"No changes between these two editions.",
+   ednote:"Articles are matched by their words, in order, so renumbered articles still line up. Differences in spelling, digits and spacing count as changes, and where a text was read from page images a difference can be a reading error: the PDF page is linked on every article.",
    rtitle:"Measured against international human-rights law",
    rsub:"Each document is read against 31 rights drawn from the Universal Declaration, the two Covenants and the core UN conventions. Every verdict cites the document's articles and the treaty provisions it rests on.",
    rnone:"No audit has been reviewed and published yet.",
@@ -40,7 +47,7 @@ const T={
       "This is an analytical reading, not legal advice or a ruling."],
    mmodel:(m,b)=>"Model: "+m+" · benchmark version "+b,
    title:"Qanun Atlas",
-   lede:"Every known draft constitution for Iran, from the 1906 Fundamental Law to the transitional charters of 2020 — <em>extracted, split into articles, and made comparable</em>. Texts appear exactly as their authors wrote them; nothing here is ranked or endorsed.",
+   lede:"Every known draft constitution for Iran, from the 1906 Fundamental Law to the transitional charters of 2020 — <em>extracted, split into articles, and made comparable</em>. Texts appear exactly as their authors wrote them; nothing here is ranked or endorsed. Alongside them, and kept apart: the bylaws, programmes and charters of organisations in Atlas, and two treatises, each compared only with its own kind.",
    sub:"Iranian constitutional drafts",
    enacted:"Enacted or historical",proposed:"Proposed constitutions",trans:"Transitional & programmatic",
    tl:"The constitutional century",tlsub:"Each mark is one document, placed by year and sized by article count.",
@@ -65,8 +72,19 @@ const T={
      "opposition-in-exile":"opposition in exile",nationalist:"nationalist",unitary:"unitary","ethnic-federalism":"ethnic federalism",
      pluralist:"pluralist",revolutionary:"revolutionary",reformist:"reformist"},
    groups:{A:"constitutions and draft constitutions",B:"bylaws",C:"charters, programmes and ideological statements",D:"treatises"},
+   gtitle:{A:"Constitutions and draft constitutions",B:"Bylaws of organisations",C:"Programmes, charters and statements of principle",D:"Treatises"},
+   gnote:{B:"The internal rules of parties and organisations listed in Atlas. They govern an organisation, not a state, so they are compared only with each other.",
+     C:"Political programmes, charters and statements of principle of organisations. Compared only with each other.",
+     D:"Treatises on government. Compared only with each other."},
+   show:"Show",kindf:"Type",
    note:"Article counts come from automated parsing of the source PDFs and may miss or over-split articles in poorly typeset documents. Every article links to its page in the original PDF. Topic labels are keyword-based and shown for navigation, not as legal classification."},
- fa:{corpus:"پیکره",map:"شباهت",compare:"مقایسه",search:"جست‌وجو",rights:"حقوق بشر",
+ fa:{corpus:"پیکره",map:"شباهت",compare:"مقایسه",editions:"ویرایش‌ها",search:"جست‌وجو",rights:"حقوق بشر",
+   ed:"ویرایش به ویرایش",edsub:"برخی پیش‌نویس‌ها بازنگری و دوباره منتشر شده‌اند. دو ویرایش از یک پیش‌نویس را برگزینید: اصول دو متن با هم جفت می‌شوند و در هر اصل تغییرکرده، آن‌چه حذف شده سرخ و آن‌چه افزوده شده سبز است.",
+   edpick:"پیش‌نویس",edfrom:"ویرایش پیشین",edto:"ویرایش پسین",
+   edsum:(m,s,a,d)=>[m+" اصل در هر دو، "+s+" تا بی‌تغییر",a+" افزوده",d+" حذف‌شده"].map(x=>x.replace(/\d+/g,n=>Number(n).toLocaleString("fa-IR"))).join(" · "),
+   edcount:n=>Number(n).toLocaleString("fa-IR")+" ویرایش",edchanged:"فقط تغییرها",edall:"همه‌ی اصول",edsame:"بی‌تغییر",edadd:"افزوده",eddrop:"حذف‌شده",
+   ednone:"این دو ویرایش تفاوتی ندارند.",
+   ednote:"اصول بر پایه‌ی واژه‌هایشان و به ترتیب جفت می‌شوند، پس اصلی که شماره‌اش عوض شده باز هم با همتایش جفت می‌شود. تفاوت در املا، رقم و فاصله هم تغییر به شمار می‌آید، و آن‌جا که متن از روی تصویر صفحه خوانده شده، یک تفاوت ممکن است خطای خوانش باشد: صفحه‌ی PDF هر اصل پیوند داده شده است.",
    rtitle:"سنجش با حقوق بین‌الملل بشر",
    rsub:"هر سند درباره‌ی ۳۱ حق برگرفته از اعلامیه‌ی جهانی حقوق بشر، دو میثاق بین‌المللی و کنوانسیون‌های اصلی سازمان ملل خوانده می‌شود. هر حکم به اصول خود سند و به بندهای معاهده‌ای که بر آن استوار است استناد می‌کند.",
    rnone:"هنوز هیچ سنجشی بازبینی و منتشر نشده است.",
@@ -90,7 +108,7 @@ const T={
       "این یک خوانش تحلیلی است، نه مشاوره‌ی حقوقی یا حکم قضایی."],
    mmodel:(m,b)=>"مدل: "+m+" · نسخه‌ی متن بالادستی "+b,
    title:"اسناد بنیادین",
-   lede:"همه‌ی پیش‌نویس‌های شناخته‌شده‌ی قانون اساسی برای ایران، از قانون اساسی مشروطه تا منشورهای دوران گذار — <em>استخراج‌شده، تفکیک‌شده به اصول، و قابل مقایسه</em>. متن‌ها همان‌گونه‌اند که نویسندگانشان نوشته‌اند؛ هیچ‌چیز در اینجا رتبه‌بندی یا تأیید نشده است.",
+   lede:"همه‌ی پیش‌نویس‌های شناخته‌شده‌ی قانون اساسی برای ایران، از قانون اساسی مشروطه تا منشورهای دوران گذار — <em>استخراج‌شده، تفکیک‌شده به اصول، و قابل مقایسه</em>. متن‌ها همان‌گونه‌اند که نویسندگانشان نوشته‌اند؛ هیچ‌چیز در اینجا رتبه‌بندی یا تأیید نشده است. در کنار آن‌ها و جدا از آن‌ها: اساس‌نامه‌ها، برنامه‌ها و منشورهای سازمان‌های اطلس و دو رساله، که هر یک تنها با هم‌گونه‌های خود سنجیده می‌شوند.",
    sub:"پیش‌نویس‌های قانون اساسی ایران",
    enacted:"مصوب یا تاریخی",proposed:"پیش‌نویس‌های پیشنهادی",trans:"دوران گذار و برنامه‌ها",
    tl:"یک سده قانون‌نویسی",tlsub:"هر نشانه یک سند است؛ جای آن بر پایه‌ی سال و اندازه‌اش بر پایه‌ی شمار اصول.",
@@ -101,13 +119,13 @@ const T={
    year:"سال",doc:"سند",author:"نویسنده",arts:"اصول",pages:"صفحه",kind:"گونه",
    ph:"برای نمونه: آزادی بیان، حقوق زنان، فدرال",nores:"اصلی یافت نشد.",
    typein:"برای جست‌وجو واژه‌ای به فارسی بنویسید.",
-   arcount:n=>n+" اصل",ocr:"نویسه‌خوانی",dup:"تکراری",partial:"ناقص",results:n=>n+" نتیجه",
+   arcount:n=>Number(n).toLocaleString("fa-IR")+" اصل",ocr:"نویسه‌خوانی",dup:"تکراری",partial:"ناقص",results:n=>Number(n).toLocaleString("fa-IR")+" نتیجه",
    more:"بیشتر",less:"کمتر",loadfail:"بارگذاری داده‌های پیکره ممکن نشد.",
    group:"تنها قابل مقایسه با",alone:"هنوز سند دیگری از این گونه در پیکره نیست.",
    date:"تاریخ",len:"حجم",rev:n=>"ویرایش "+Number(n).toLocaleString("fa-IR"),
    size:(a,p,u)=>Number(a).toLocaleString("fa-IR",{useGrouping:false})+" "+u+" · "+Number(p).toLocaleString("fa-IR",{useGrouping:false})+" صفحه",
-   kinds:{constitution:"قانون اساسی",constitution_proposal:"پیش‌نویس قانون اساسی",bylaws:"اساسنامه",program:"برنامه",
-     charter:"منشور",ideology:"مرامنامه",treatise:"رساله"},
+   kinds:{constitution:"قانون اساسی",constitution_proposal:"پیش‌نویس قانون اساسی",bylaws:"اساس‌نامه",program:"برنامه",
+     charter:"منشور",ideology:"مرام‌نامه",treatise:"رساله"},
    dstat:{adopted:"مصوب",draft:"پیش‌نویس",in_force:"در حال اجرا"},
    tags:{republic:"جمهوری",secular:"سکولار",monarchy:"پادشاهی",constitutional:"مشروطه",transitional:"دوران گذار",
      federal:"فدرال",democratic:"دموکراتیک",islamic:"اسلامی",socialist:"سوسیالیستی","rights-based":"حق‌بنیاد",
@@ -115,7 +133,12 @@ const T={
      "velayat-e-faqih":"ولایت فقیه","council-based":"شورایی",parliamentary:"پارلمانی",
      "opposition-in-exile":"اپوزیسیون در تبعید",nationalist:"ملی‌گرا",unitary:"یکپارچه","ethnic-federalism":"فدرالیسم قومی",
      pluralist:"کثرت‌گرا",revolutionary:"انقلابی",reformist:"اصلاح‌طلب"},
-   groups:{A:"قانون‌های اساسی و پیش‌نویس‌ها",B:"اساسنامه‌ها",C:"منشورها، برنامه‌ها و مرامنامه‌ها",D:"رساله‌ها"},
+   groups:{A:"قانون‌های اساسی و پیش‌نویس‌ها",B:"اساس‌نامه‌ها",C:"منشورها، برنامه‌ها و مرام‌نامه‌ها",D:"رساله‌ها"},
+   gtitle:{A:"قانون‌های اساسی و پیش‌نویس‌ها",B:"اساس‌نامه‌های سازمان‌ها",C:"برنامه‌ها، منشورها و مرام‌نامه‌ها",D:"رساله‌ها"},
+   gnote:{B:"قواعد درونی حزب‌ها و سازمان‌هایی که در اطلس آمده‌اند. این متن‌ها یک سازمان را اداره می‌کنند، نه یک کشور را؛ پس تنها با یکدیگر سنجیده می‌شوند.",
+     C:"برنامه‌های سیاسی، منشورها و مرام‌نامه‌های سازمان‌ها. تنها با یکدیگر سنجیده می‌شوند.",
+     D:"رساله‌هایی درباره‌ی حکومت. تنها با یکدیگر سنجیده می‌شوند."},
+   show:"نمایش",kindf:"گونه",
    note:"شمار اصول از تجزیه‌ی خودکار فایل‌های اصلی به‌دست آمده و ممکن است در اسنادِ بدحروف‌چینی‌شده کم یا زیاد باشد. هر اصل به صفحه‌ی اصلی خود پیوند دارد. برچسب‌های موضوعی بر پایه‌ی کلیدواژه‌اند و برای گشت‌وگذار آمده‌اند، نه طبقه‌بندی حقوقی."}};
 
 const BUCKET={in_force:0,historical:0,draft:1,transitional:2,program:2,treatise:2};
@@ -123,7 +146,7 @@ const BCOL=["var(--s1)","var(--s2)","var(--s3)"];
 // Comparison groups (plan §6): bylaws are never compared with constitutions.
 export const GROUP={constitution:"A",constitution_proposal:"A",bylaws:"B",
   charter:"C",program:"C",ideology:"C",treatise:"D"};
-const VIEWS=["corpus","map","compare","search","rights"];
+const VIEWS=["corpus","map","compare","editions","search","rights"];
 
 // articles.json keeps the splitter's pattern for the unit; this is the word to show
 const UNITW={"شماره":["","Art."],"اص[سص]?ل":["اصل","Art."],"ماد[هدة]":["ماده","Art."],"بند":["بند","Clause"],"تبصره":["تبصره","Note"]};
@@ -136,6 +159,7 @@ export function mount(root, opts={}){
   const pdfUrl=new URL(opts.pdfUrl||"pdf/", new URL(".", import.meta.url));
   let L=opts.lang||(embedded?"fa":"en"), CAT=[], AN=null, ARTS=[], view="corpus";
   let cmpA=null,cmpB=null,cmpT=null,q="",AUD=null,audDoc=null,audRight=null,audFilter=null;
+  let ED=null,edS=null,edA=null,edB=null,edAll=false,mapG="A",srchG=null;
   const t=k=>T[L][k];
   const title=d=>L==="fa"?d.fa:d.en;
   const author=d=>L==="fa"?(d.author_fa||""):(d.author_en||"");
@@ -196,15 +220,19 @@ export function mount(root, opts={}){
     if(!VIEWS.includes(k))return;
     view=k;
     if(k==="search")q=v;
+    if(k==="map"&&"ABCD".includes(v)&&v)mapG=v;
     if(k==="compare"){const [a,b,tp]=v.split(",");cmpA=a||null;cmpB=b||null;cmpT=tp||null;}
     if(k==="rights"){const [a,r]=v.split(",");audDoc=a||null;audRight=r||null;}
+    if(k==="editions"){const [s,a,b]=v.split(",");edS=s||null;edA=a||null;edB=b||null;}
   }
   function writeHash(){
     if(!useHash)return;
     let h=view;
     if(view==="search"&&q)h+="="+q;
+    if(view==="map"&&mapG!=="A")h+="="+mapG;
     if(view==="compare"&&cmpA)h+="="+[cmpA,cmpB,cmpT].filter(Boolean).join(",");
     if(view==="rights"&&audDoc)h+="="+[audDoc,audRight].filter(Boolean).join(",");
+    if(view==="editions"&&edS)h+="="+[edS,edA,edB].filter(Boolean).join(",");
     if(decodeURIComponent(location.hash.slice(1))!==h)
       history.replaceState(history.state,"","#"+encodeURIComponent(h).replace(/%2C/g,",").replace(/%3D/g,"="));
   }
@@ -213,9 +241,10 @@ export function mount(root, opts={}){
 
   /* ---------- boot ---------- */
   const get=n=>fetch(new URL(n,dataUrl)).then(r=>{if(!r.ok)throw new Error(n+": "+r.status);return r.json()});
-  // audits.json is optional: a module built before audits existed still loads
-  Promise.all([get("catalog.json"),get("analysis.json"),get("articles.json"),get("audits.json").catch(()=>null)])
-    .then(([c,a,ar,au])=>{CAT=c;AN=a;ARTS=ar;AUD=au;render()})
+  // audits.json and editions.json are optional: a module built before they existed still loads
+  Promise.all([get("catalog.json"),get("analysis.json"),get("articles.json"),get("audits.json").catch(()=>null),
+               get("editions.json").catch(()=>null)])
+    .then(([c,a,ar,au,ed])=>{CAT=c;AN=a;ARTS=ar;AUD=au;ED=ed;render()})
     .catch(e=>{root.setAttribute("lang",L);V("corpus").hidden=false;
       V("corpus").innerHTML=`<div class="empty">${esc(t("loadfail"))}</div>`;console.error(e)});
 
@@ -227,12 +256,13 @@ export function mount(root, opts={}){
     $(".lede").innerHTML=t("lede");
     const tb=$(".tabs");tb.innerHTML="";
     VIEWS.forEach(k=>{
+      if(k==="editions"&&!(ED&&Object.keys(ED).length))return;
       const b=el("button",null,esc(t(k)));b.setAttribute("role","tab");
       b.setAttribute("aria-selected",view===k);
       b.onclick=()=>{view=k;render()};tb.append(b);});
     VIEWS.forEach(k=>V(k).hidden=view!==k);
     if(!CAT.length)return;
-    ({corpus:corpusView,map:mapView,compare:compareView,search:searchView,rights:rightsView})[view]();
+    ({corpus:corpusView,map:mapView,compare:compareView,editions:editionsView,search:searchView,rights:rightsView})[view]();
     writeHash();
   }
 
@@ -245,7 +275,12 @@ export function mount(root, opts={}){
     v.append(p1);
     const p2=el("div","panel");
     p2.append(el("h2",null,esc(t("tbl"))),el("div","sub",esc(t("tblsub"))));
-    const w=el("div","tbl-wrap");w.append(table());p2.append(w);
+    "ABCD".split("").forEach(g=>{
+      const docs=CAT.filter(d=>group(d)===g);if(!docs.length)return;
+      const sec=el("div","grp-sec");
+      sec.append(el("h3",null,esc(t("gtitle")[g])+` <small>${esc(num(docs.length))}</small>`));
+      if(t("gnote")[g])sec.append(el("div","sub",esc(t("gnote")[g])));
+      const w=el("div","tbl-wrap");w.append(table(docs));sec.append(w);p2.append(sec);});
     p2.append(el("div","note",esc(t("note"))));
     v.append(p2);
   }
@@ -267,6 +302,7 @@ export function mount(root, opts={}){
       s.push(`<text class="lane-t" x="${L==="fa"?W-8:8}" y="${ty}" text-anchor="${L==="fa"?"end":"start"}">${esc(n)}</text>`);});
     const placed=[];
     CAT.forEach((d,i)=>{
+      if(group(d)!=="A")return;   // the timeline is of constitutions; the other groups are listed below it
       const b=BUCKET[d.type]??2, cx=x(d.year||1900), r=Math.max(4.5,Math.min(17,Math.sqrt(d.n_articles||1)*1.25));
       let cy=26+b*LH+LH/2+8, dir=1, k=0;
       while(placed.some(p=>p.b===b&&Math.hypot(p.cx-cx,p.cy-cy)<p.r+r+3)&&k<28){k++;cy=26+b*LH+LH/2+8+dir*Math.ceil(k/2)*(r+5);dir*=-1;}
@@ -281,12 +317,12 @@ export function mount(root, opts={}){
       n.onmouseleave=hideTip;});
     return w;
   }
-  function table(){
+  function table(docs){
     const tb=el("table");
     tb.innerHTML=`<thead><tr><th>${t("year")}</th><th>${t("doc")}</th><th>${t("author")}</th>
       <th style="text-align:end">${t("arts")}</th><th style="text-align:end">${t("pages")}</th></tr></thead>`;
     const body=el("tbody");
-    CAT.forEach(d=>{
+    docs.forEach(d=>{
       const b=BUCKET[d.type]??2;
       const tr=el("tr");
       tr.innerHTML=`<td class="num">${d.year||"—"}</td>
@@ -302,14 +338,20 @@ export function mount(root, opts={}){
   function mapView(){
     const v=V("map");v.innerHTML="";
     const p=el("div","panel");
-    p.append(el("h2",null,esc(t("gr"))),el("div","sub",esc(t("grsub"))),legend());
-    p.append(graph());
+    p.append(el("h2",null,esc(t("gr"))),el("div","sub",esc(t("grsub"))));
+    const gs=el("div","aud-tally");
+    "ABCD".split("").filter(g=>CAT.some(d=>group(d)===g)).forEach(g=>{
+      const b=el("button","vchip"+(mapG===g?" on":""),`${esc(t("gtitle")[g])} <b>${esc(num(CAT.filter(d=>group(d)===g).length))}</b>`);
+      b.onclick=()=>{mapG=g;mapView();writeHash()};gs.append(b)});
+    p.append(gs);
+    if(mapG==="A")p.append(legend());else if(t("gnote")[mapG])p.append(el("div","sub",esc(t("gnote")[mapG])));
+    p.append(graph(CAT.filter(d=>group(d)===mapG)));
     p.append(el("div","note",esc(t("note"))));
     v.append(p);
   }
-  function graph(){
-    const W=Math.max(620,Math.min(1100,width()-44)),H=520;
-    const ids=CAT.map(c=>c.uid), idx={};ids.forEach((d,i)=>idx[d]=i);
+  function graph(docs){
+    const W=Math.max(620,Math.min(1100,width()-44)),H=docs.length>20?520:380;
+    const ids=docs.map(c=>c.uid), idx={};ids.forEach((d,i)=>idx[d]=i);
     const nodes=ids.map((id,i)=>{const d=CAT.find(c=>c.uid===id)||{n_articles:1,type:"draft"};
       return{id,d,b:BUCKET[d.type]??2,r:Math.max(5,Math.min(16,Math.sqrt(d.n_articles||1)*1.15)),
         x:W/2+Math.cos(i*2.4)*180,y:H/2+Math.sin(i*2.4)*150,vx:0,vy:0};});
@@ -425,6 +467,91 @@ export function mount(root, opts={}){
     return c;
   }
 
+  /* ================= EDITIONS ================= */
+  // the articles of each document in articles.json order: editions.json indexes into these
+  const docArts=uid=>ARTS.filter(a=>a.doc===uid);
+  function editionsView(){
+    const v=V("editions");v.innerHTML="";
+    const p=el("div","panel");
+    p.append(el("h2",null,esc(t("ed"))),el("div","sub",esc(t("edsub"))));
+    v.append(p);
+    const S=ED||{}, names=Object.keys(S);
+    if(!names.length)return;
+    if(!S[edS])edS=names.find(n=>S[n].docs.length>2)||names[0];
+    const docs=S[edS].docs;
+    if(!docs.includes(edA)||!docs.includes(edB)||edA===edB){edA=docs[docs.length-2];edB=docs[docs.length-1]}
+    // the earlier of the two always on the right-hand (start) side: pairs are stored in series order
+    if(docs.indexOf(edA)>docs.indexOf(edB))[edA,edB]=[edB,edA];
+    const row=el("div","row cmp-row");
+    const pick=(label,cur,list,set)=>{
+      const s=el("select");s.setAttribute("aria-label",label);
+      list.forEach(([val,txt])=>{const o=el("option",null,esc(txt));o.value=val;o.selected=val===cur;s.append(o)});
+      s.onchange=()=>{set(s.value);editionsView();writeHash()};
+      const w=el("div");w.style.flex="1";w.style.minWidth="220px";
+      w.append(el("div",null,`<small style="color:var(--ink-3)">${esc(label)}</small>`),s);return w;};
+    const dlabel=uid=>{const d=docOf(uid);return title(d)+(d.era||d.year?" ("+(L==="fa"?(d.era||num(d.year)):d.year)+")":"")};
+    row.append(pick(t("edpick"),edS,names.map(n=>{const d=docOf(S[n].docs[0]);
+      return [n,author(d)+" — "+t("edcount")(S[n].docs.length)]}),x=>{edS=x;edA=edB=null}));
+    row.append(pick(t("edfrom"),edA,docs.map(u=>[u,dlabel(u)]),x=>{edA=x}));
+    row.append(pick(t("edto"),edB,docs.map(u=>[u,dlabel(u)]),x=>{edB=x}));
+    p.append(row);
+    const prof=el("div","row cmp-row");
+    [[edA,"var(--v-bad)"],[edB,"var(--v-ok)"]].forEach(([u,c])=>{const w=el("div");w.style.flex="1";w.style.minWidth="220px";
+      w.append(profile(docOf(u),c));prof.append(w)});
+    p.append(prof);
+
+    const rows=S[edS].pairs[edA+"|"+edB]||[], A=docArts(edA), B=docArts(edB);
+    const both=rows.filter(r=>r[0]!=null&&r[1]!=null);
+    const same=both.filter(r=>sameText(A[r[0]].text,B[r[1]].text)).length;
+    const added=rows.filter(r=>r[0]==null).length, dropped=rows.filter(r=>r[1]==null).length;
+    p.append(el("div","group-note",esc(t("edsum")(both.length,same,added,dropped))));
+    const tg=el("div","aud-tally");
+    [[false,t("edchanged")],[true,t("edall")]].forEach(([k,lbl])=>{const b=el("button","vchip"+(edAll===k?" on":""),esc(lbl));
+      b.onclick=()=>{edAll=k;editionsView()};tg.append(b)});
+    p.append(tg);
+    const list=el("div","ed-list");let shown=0;
+    rows.forEach(([i,j])=>{
+      const a=i!=null?A[i]:null, b=j!=null?B[j]:null;
+      const unchanged=a&&b&&sameText(a.text,b.text);
+      if(unchanged&&!edAll)return;
+      shown++;
+      const c=el("div","art ed-art"+(unchanged?" ed-same":""));
+      const tagc=!a?"v-ok":!b?"v-bad":unchanged?"v-none":"v-part";
+      const tag=!a?t("edadd"):!b?t("eddrop"):unchanged?t("edsame"):"";
+      const ref=(x,d)=>x?`${esc(artn(x))} <span class="art-p">${pdfLink(docOf(d),x.page,pg(x.page))}</span>`:"—";
+      c.innerHTML=`<div class="art-h ed-h"><span class="art-n">${ref(a,edA)}</span><span class="ed-arrow">${L==="fa"?"←":"→"}</span>
+        <span class="art-n">${ref(b,edB)}</span>${tag?`<span class="vchip ${tagc}">${esc(tag)}</span>`:""}</div>`;
+      const body=el("div","fa ed-text");body.dir="rtl";body.lang="fa";
+      body.innerHTML=!a?`<ins>${esc(b.text)}</ins>`:!b?`<del>${esc(a.text)}</del>`:unchanged?esc(b.text):wordDiff(a.text,b.text);
+      c.append(body);list.append(c);});
+    if(!shown)list.append(el("div","empty",esc(t("ednone"))));
+    p.append(list);
+    p.append(el("div","note",esc(t("ednote"))));
+  }
+  // compare words without the marks that vary between typesettings: kashida, ZWNJ, vowel marks, Arabic yeh and kaf, digits
+  const DIG="۰۱۲۳۴۵۶۷۸۹",ADIG="٠١٢٣٤٥٦٧٨٩";
+  const key=w=>w.replace(/[\u0640\u200c\u064b-\u0652]/g,"").replace(/ي|ى/g,"ی").replace(/ك/g,"ک")
+    .replace(/[۰-۹]/g,d=>DIG.indexOf(d)).replace(/[٠-٩]/g,d=>ADIG.indexOf(d));
+  // unchanged: the same letters and punctuation, whatever the spacing («اداره ی» = «اداره‌ی»)
+  const sameText=(x,y)=>key(x).replace(/\s+/g,"")===key(y).replace(/\s+/g,"");
+  // words and punctuation marks as separate tokens, each with the space that follows it
+  const PUNCT="،؛:.!؟?«»\"'()\\[\\]{}\\-–—/";
+  const toks=x=>[...x.matchAll(new RegExp(`([${PUNCT}]|[^\\s${PUNCT}]+)(\\s*)`,"g"))].map(m=>({w:m[1],sp:m[2],k:key(m[1])}));
+  // a word-level diff (longest common subsequence): removed words in <del>, added words in <ins>
+  function wordDiff(x,y){
+    const a=toks(x),b=toks(y),n=a.length,m=b.length,L2=Array.from({length:n+1},()=>new Uint16Array(m+1));
+    for(let i=n-1;i>=0;i--)for(let j=m-1;j>=0;j--)L2[i][j]=a[i].k===b[j].k?L2[i+1][j+1]+1:Math.max(L2[i+1][j],L2[i][j+1]);
+    const out=[];let i=0,j=0,run=null,buf="";
+    const flush=()=>{if(!buf)return;const s=buf.trimEnd(),tail=buf.slice(s.length);
+      out.push((run==="d"?`<del>${esc(s)}</del>`:run==="i"?`<ins>${esc(s)}</ins>`:esc(s))+tail);buf=""};
+    const push=(k,t)=>{if(k!==run){flush();run=k}buf+=t.w+(t.sp?" ":"")};
+    while(i<n||j<m){
+      if(i<n&&j<m&&a[i].k===b[j].k){push("=",b[j]);i++;j++}
+      else if(j<m&&(i===n||L2[i][j+1]>=L2[i+1][j])){push("i",b[j]);j++}
+      else{push("d",a[i]);i++}}
+    flush();return out.join("").replace(/(<\/(?:del|ins)>)(?=<(?:del|ins)>)/g,"$1 ");
+  }
+
   /* ================= SEARCH ================= */
   function searchView(){
     const v=V("search");v.innerHTML="";
@@ -434,17 +561,23 @@ export function mount(root, opts={}){
     const inp=el("input");inp.placeholder=t("ph");inp.value=q;
     inp.dir="rtl";inp.setAttribute("lang","fa");inp.setAttribute("aria-label",t("srch"));
     bar.append(inp);p.append(bar);
+    // which kinds of document to search: all, or one comparison group
+    const gf=el("div","aud-tally");
+    [null,..."ABCD".split("").filter(g=>CAT.some(d=>group(d)===g))].forEach(g=>{
+      const b=el("button","vchip"+(srchG===g?" on":""),esc(g?t("gtitle")[g]:t("rall")));
+      b.onclick=()=>{srchG=g;gf.querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===b));run()};gf.append(b)});
+    p.append(gf);
     const res=el("div");p.append(res);
     const run=()=>{q=inp.value.trim();res.innerHTML="";writeHash();
       if(q.length<2){res.append(el("div","empty",esc(t("typein"))));return}
-      const hits=ARTS.filter(a=>a.text.includes(q)).slice(0,60);
+      const hits=ARTS.filter(a=>a.text.includes(q)&&(!srchG||group(docOf(a.doc))===srchG)).slice(0,60);
       if(!hits.length){res.append(el("div","empty",esc(t("nores"))));return}
       res.append(el("div","sub",esc(t("results")(hits.length))));
       hits.forEach(a=>{const d=CAT.find(c=>c.uid===a.doc)||{};
         const i=a.text.indexOf(q),s=Math.max(0,i-110);
         const snip=(s?"…":"")+esc(a.text.slice(s,i))+"<mark>"+esc(q)+"</mark>"+esc(a.text.slice(i+q.length,i+q.length+180))+"…";
         const h=el("div","hit");
-        h.innerHTML=`<div class="hit-src"><b>${esc(title(d))}</b> · ${esc(artn(a))} · ${pdfLink(d,a.page,pg(a.page))}</div>
+        h.innerHTML=`<div class="hit-src"><span class="kind-tag">${esc(t("kinds")[d.kind]||d.kind)}</span><b>${esc(title(d))}</b> · ${esc(artn(a))} · ${pdfLink(d,a.page,pg(a.page))}</div>
           <div class="fa" dir="rtl" lang="fa">${snip}</div>`;
         res.append(h);});};
     inp.oninput=run;run();

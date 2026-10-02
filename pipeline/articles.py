@@ -2,6 +2,7 @@
 """Split documents into articles. Handles digits, ordinals, cardinals,
 tatweel-justified text, and filters cross-references via longest increasing run."""
 import re, json, glob, os, unicodedata
+from collections import Counter
 
 DATA = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
 L = r'ء-غف-يٰ-ۓ'          # Persian letters, no tatweel/digits
@@ -247,6 +248,24 @@ def articles_name(entry):
     """Articles file of a registry entry. A PDF split by `pages` into several documents gets one file per entry."""
     return entry["legacy_slug"] + (f"__{entry['uid']}" if entry.get("pages") else "")
 
+def running_lines(pages):
+    """Drop running headers and footers that a reading kept: lines of 15+ characters found at the top or bottom of
+    at least 3 pages and a fifth of the document's pages, and lines made only of such lines (a header and footer
+    joined by «|», perhaps around a page number)."""
+    def edges(text):   # a page's first and last three lines: where running headers and footers sit
+        ls = [x.strip() for x in text.split("\n") if x.strip()]
+        return set(ls[:3] + ls[-3:])
+    seen = Counter(l for p in pages for l in edges(p["text"]) if len(l) >= 15)
+    run = sorted((l for l, n in seen.items() if n >= max(3, len(pages) / 5) and not re.match(r"\s*(?:اص[سص]?ل|ماد[هدة]|فصل|بند|تبصره)", l)), key=len, reverse=True)
+    if not run: return pages
+    def keep(line):
+        rest = line.strip()
+        for l in run: rest = rest.replace(l, "")
+        # what is left besides separators and a page number between the parts
+        return rest == line.strip() or re.sub(r"[\s|–—\-\d۰-۹]+", "", rest) != ""
+    return [{**p, "text": "\n".join(x for x in p["text"].split("\n") if keep(x))} for p in pages]
+
+
 def main():
     registry = json.load(open(os.path.join(DATA, "registry.json"), encoding="utf-8"))
     rows, total = [], 0
@@ -260,7 +279,7 @@ def main():
                 pages, name, extra = [p for p in doc["pages"] if lo <= p["page"] <= hi], articles_name(r), {"uid": r["uid"]}
             else:
                 pages, name, extra = doc["pages"], os.path.basename(path)[:-5], {}
-            kind, arts, conf = split(pages, (r or whole).get("split_unit"))
+            kind, arts, conf = split(running_lines(pages), (r or whole).get("split_unit"))
             json.dump({"source_pdf": doc["source_pdf"], **extra, "unit": kind, "seq_score": conf, "articles": arts},
                       open(os.path.join(DATA, "articles", name + ".json"), "w", encoding="utf-8"),
                       ensure_ascii=False, indent=1)

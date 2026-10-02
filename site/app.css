@@ -223,3 +223,21 @@
 .qa-root .cmp-row{align-items:stretch}
 .qa-root .cmp-row>div{display:flex;flex-direction:column}
 .qa-root .cmp-row .profile{flex:1}
+/* editions: what one edition of a draft changed in the next */
+.qa-root .ed-list{margin-block-start:12px}
+.qa-root .ed-h{flex-wrap:wrap}
+.qa-root .ed-h .art-p{margin-inline-start:4px}
+.qa-root .ed-arrow{color:var(--ink-3);font-size:12px}
+.qa-root .ed-h .vchip{margin-inline-start:auto;font-size:11px;padding:1px 8px}
+.qa-root .ed-text{line-height:2}
+.qa-root .ed-same .ed-text{color:var(--ink-3)}
+.qa-root .ed-text del{background:var(--v-bad-bg);color:var(--v-bad);text-decoration:line-through;text-decoration-thickness:1px;border-radius:2px;padding:0 2px}
+.qa-root .ed-text ins{background:var(--v-ok-bg);color:var(--v-ok);text-decoration:none;border-radius:2px;padding:0 2px}
+.qa-root .ed-art .fa{max-height:none;overflow:visible}
+/* documents of each comparison group are listed apart (plan §6) */
+.qa-root .grp-sec{margin-block-start:22px}
+.qa-root .grp-sec:first-of-type{margin-block-start:10px}
+.qa-root .grp-sec h3{font-size:15px;margin:0 0 4px}
+.qa-root .grp-sec h3 small{font-weight:400;color:var(--ink-3);font-size:12px;margin-inline-start:4px}
+.qa-root .grp-sec .sub{margin-block-end:8px}
+.qa-root .kind-tag{display:inline-block;font-size:10.5px;padding:0 7px;margin-inline-end:6px;border-radius:999px;background:var(--line-2);color:var(--ink-2)}
