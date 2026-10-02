@@ -1,0 +1,243 @@
+[
+ {
+  "uid": "iocci-interim-v3-1405",
+  "file": "قانون دوره گذار ایران (قانون اساسی موقت) نسخه ۳ - همکاری باز قانون اساسی ایران ۱۴۰۵.pdf",
+  "fa": "قانون دوره‌ی گذار ایران (قانون اساسی موقت) — نسخه‌ی ۳",
+  "en": "Iran Transitional Period Law (Interim Constitution), version 3",
+  "author_fa": "ابتکار همکاری باز قانون اساسی ایران (IOCCI)",
+  "author_en": "Iran Open Collaborative Constitution Initiative (IOCCI)",
+  "year": 2026,
+  "era": "فروردین ۱۴۰۵",
+  "type": "transitional",
+  "kind": "constitution_proposal",
+  "source_url": "https://ghanoonasasi.org/attachdownload/%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A7%D8%B3%D8%A7%D8%B3%DB%8C%20%D9%85%D9%88%D9%82%D8%AA%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%20-%20%D9%87%D9%85%DA%A9%D8%A7%D8%B1%DB%8C%20%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A7%D8%B3%D8%A7%D8%B3%DB%8C%20-%20%D9%86%D8%B3%D8%AE%D9%87%203.pdf?page=iran_interim_constitution&file=03.1%20Iran%20Interim%20Constitution%20-%20IOCCI.pdf",
+  "version": "3",
+  "tags": [
+   "transitional"
+  ],
+  "series": "iocci",
+  "rev": 3,
+  "companions": [
+   {
+    "fa": "متن یکپارچه در ویکی همکاری باز قانون اساسی",
+    "en": "Consolidated text on the IOCCI wiki",
+    "role": "web",
+    "url": "https://ghanoonasasi.org/wiki?name=iran_interim_constitution"
+   },
+   {
+    "fa": "پشت پرده‌ی «قانون دوره‌ی گذار ایران»: گفت‌وگو با طراحان (ره‌گشا، محمد منظرپور)",
+    "en": "Behind the Iran Transitional Period Law: interview with its drafters (Rahgosha, Mohammad Manzarpour)",
+    "role": "interview",
+    "url": "https://www.youtube.com/watch?v=ESU9V5B4AYk"
+   }
+  ],
+  "note": "From ghanoonasasi.org, an open drafting wiki; the PDF says the text is still under consultation and revision. Date from the PDF (created 2026-03-21). Broken text layer, so the text is vision OCR."
+ },
+ {
+  "uid": "iran4all-federal-v3-1405",
+  "file": "قانون اساسی جمهوری فدرال ایران نسخه ۳٫۰۰ - انجمن ایران برای همه ۱۴۰۵.pdf",
+  "fa": "قانون اساسی جمهوری فدرال ایران — نسخه‌ی ۳٫۰۰",
+  "en": "Constitution of the Federal Republic of Iran, version 3.00",
+  "author_fa": "انجمن ایران برای همه",
+  "author_en": "Iran for All Association (iran4all.org)",
+  "year": 2026,
+  "era": "فروردین ۱۴۰۵",
+  "type": "draft",
+  "kind": "constitution_proposal",
+  "source_url": "https://iran4all.org/wp-content/uploads/2026/03/iran4all.org-cl-3.00.pdf",
+  "version": "3.0.0",
+  "tags": [
+   "republic",
+   "federal"
+  ],
+  "series": "iran4all",
+  "rev": 3,
+  "companions": [
+   {
+    "fa": "نسخه‌ی ۲٫۰۰",
+    "en": "Version 2.00",
+    "role": "earlier_version",
+    "url": "https://iran4all.org/cl/v200/"
+   },
+   {
+    "fa": "نسخه‌ی ۱٫۰۱",
+    "en": "Version 1.01",
+    "role": "earlier_version",
+    "url": "https://iran4all.org/cl/v101/"
+   },
+   {
+    "fa": "نسخه‌ی ۱٫۰۰",
+    "en": "Version 1.00",
+    "role": "earlier_version",
+    "url": "https://iran4all.org/cl/v100/"
+   }
+  ],
+  "note": "Marked «پیش‌نویس برای انتشار عمومی». Broken text layer, so the text is vision OCR."
+ },
+ {
+  "uid": "arshadnejad-federal-1405",
+  "file": "پیش‌نویس قانون اساسی جمهوری دموکراتیک و فدرال ایران - شهرام ارشدنژاد ۱۴۰۵.pdf",
+  "fa": "پیش‌نویس قانون اساسی جمهوری دموکراتیک و فدرال ایران",
+  "en": "Draft Constitution of the Democratic and Federal Republic of Iran",
+  "author_fa": "شهرام ارشدنژاد",
+  "author_en": "Shahram Arshadnejad",
+  "year": 2026,
+  "era": "خرداد ۱۴۰۵",
+  "type": "draft",
+  "kind": "constitution_proposal",
+  "source_url": "https://news.gooya.com/2026/06/11/arshadnejad.pdf",
+  "version": "1",
+  "tags": [
+   "republic",
+   "federal",
+   "democratic"
+  ],
+  "companions": [
+   {
+    "fa": "پیش‌درآمد (خلاصه‌ی ویراسته در خبرنامه‌ی گویا)",
+    "en": "Introduction (edited summary, Gooya News)",
+    "role": "commentary",
+    "url": "https://news.gooya.com/2026/06/post-110378.php"
+   },
+   {
+    "fa": "میثاق حقوق ذاتی، طبیعی و بنیادین ایرانیان",
+    "en": "Covenant of the inherent, natural and fundamental rights of Iranians",
+    "role": "charter",
+    "url": "https://news.gooya.com/2026/04/post-108377.php"
+   }
+  ],
+  "note": "Published by Gooya News on 2026-06-11. The PDF's metadata names another person (Ramin Parsian); the author is taken from the publication. Broken text layer, so the text is vision OCR."
+ },
+ {
+  "uid": "shirzad-proposed-1384",
+  "file": "قانون اساسی پیشنهادی برای حکومت آینده - کاوه شیرزاد ۱۳۸۴.pdf",
+  "fa": "قانون اساسی پیشنهادی برای حکومت آینده",
+  "en": "A Proposed Constitution for the Future Government",
+  "author_fa": "کاوه شیرزاد",
+  "author_en": "Kaveh Shirzad",
+  "year": 2005,
+  "era": "فروردین ۱۳۸۴",
+  "type": "draft",
+  "kind": "constitution_proposal",
+  "source_url": "http://www.ghandchi.com/IONA/ConstShirzad.htm",
+  "version": "1",
+  "tags": [
+   "parliamentary",
+   "secular"
+  ],
+  "note": "Web page; first published on Cyrusnews.com in Farvardin 1384. Also on the IOCCI wiki (const_sample30). The text is taken from the HTML; the PDF is a reading copy."
+ },
+ {
+  "uid": "inc-new-constitution-1399",
+  "file": "پیش‌نویس پیشنهادی قانون اساسی نوین ایران - کنگره ملی ایرانیان ۱۳۹۹.pdf",
+  "fa": "پیش‌نویس پیشنهادی قانون اساسی نوین ایران",
+  "en": "Proposed Draft of a New Constitution of Iran",
+  "author_fa": "کنگره‌ی ملی ایرانیان",
+  "author_en": "Iranian National Congress",
+  "year": 2021,
+  "era": "اسفند ۱۳۹۹",
+  "type": "draft",
+  "kind": "constitution_proposal",
+  "source_url": "https://iran-archive.com/sites/default/files/2021-08/tarhe-ghanune-asasi-pishnevise-ghanune-asasi-kongereye-melleie-iranian.pdf",
+  "version": "1",
+  "tags": [
+   "secular"
+  ],
+  "note": "Not the same text as the Congress's «منشور آزادی ایرانیان» (fakhravar-charter-1397). Leaves the form of state open («جمهوری / پادشاهی مشروطه»). Seven «اصل», of which the 4th–6th hold «ماده» numbered from 1 in each, so it is split by «اصل». Date from the PDF (created 2021-03-14). Its text layer breaks «لا», so the text is vision OCR.",
+  "split_unit": "اصل"
+ },
+ {
+  "uid": "green-jurists-v2-1388",
+  "file": "پیش به سوی قانون اساسی نوین ایران-نگارش دوم-حقوق‌دانان سبز-۱۳۸۸.pdf",
+  "fa": "پیش به سوی قانون اساسی نوین ایران — نگارش دوم",
+  "en": "Towards a New Constitution of Iran — Second Edition",
+  "author_fa": "حقوق‌دانان سبز",
+  "author_en": "Green Jurists",
+  "year": 2010,
+  "era": "دی ۱۳۸۸",
+  "type": "draft",
+  "kind": "constitution_proposal",
+  "source_url": "https://greenlawyers.wordpress.com/wp-content/uploads/2010/01/irans-new-constitution_2nd-draft-for-comments.pdf",
+  "version": "2",
+  "tags": [
+   "republic",
+   "secular"
+  ],
+  "series": "green-jurists",
+  "rev": 2,
+  "note": "The draft for comments, with the prefaces of both editions and the «اتحاد برای دمکراسی» resolution. Broken text layer, so the text is vision OCR."
+ },
+ {
+  "uid": "green-jurists-v4-1403",
+  "file": "پیش به سوی قانون اساسی نوین ایران-نگارش چهارم-کانون حقوقدانان ایران-۱۴۰۳.pdf",
+  "fa": "پیش به سوی قانون اساسی نوین ایران — نگارش چهارم",
+  "en": "Towards a New Constitution of Iran — Fourth Edition",
+  "author_fa": "کانون حقوقدانان ایران (شهاب شباهنگ)",
+  "author_en": "Iranian Lawyers Association (Shahab Shabahang)",
+  "year": 2024,
+  "era": "تیر ۱۴۰۳",
+  "type": "draft",
+  "kind": "constitution_proposal",
+  "pages": [
+   58,
+   100
+  ],
+  "source_url": "https://greenlawyers.wordpress.com/wp-content/uploads/2024/07/1_irans-new-constitution_4th_en-fa_ordpdf_20240709.pdf",
+  "version": "4",
+  "tags": [],
+  "series": "green-jurists",
+  "rev": 4,
+  "companions": [
+   {
+    "fa": "متن انگلیسی (صفحه‌های ۱ تا ۵۳ همین فایل)",
+    "en": "English text (pages 1–53 of the same file)",
+    "role": "translation",
+    "url": "https://greenlawyers.wordpress.com/wp-content/uploads/2024/07/1_irans-new-constitution_4th_en-fa_ordpdf_20240709.pdf"
+   }
+  ],
+  "note": "Book «Advancing a Modern Constitution for a Democratic Iran» (ISBN 978-1-0689235-0-0), English pp. 1–53, Persian pp. 54–111. The document is the Persian preface and text, pp. 58–100; pp. 101–111 reprint the «اتحاد برای دمکراسی» resolution and the earlier prefaces. Article 1 leaves the form of state to a referendum; the text gives provisions for a monarchy (prime minister chosen by parliament) and a presidential republic. The book permits free distribution of the PDF. The Persian pages are drawn without a text layer, so they are vision OCR."
+ },
+ {
+  "uid": "wtp-monarchy-1404",
+  "file": "قانون اساسی پیشنهادی ایران - We The People of Iran ۱۴۰۴.pdf",
+  "fetch_url": "https://wethepeopleofiran.org/",
+  "drop_lines": "منطق و چرایی(…|\\.\\.\\.)",
+  "fa": "قانون اساسی پیشنهادی ایران",
+  "en": "Proposed Constitution of Iran (We The People of Iran)",
+  "author_fa": "سپهر هخامنش (نام مستعار) / We The People of Iran",
+  "author_en": "Sepehr Hakhamanesh (pseudonym) / We The People of Iran",
+  "year": 2026,
+  "era": "بهمن ۱۴۰۴",
+  "type": "draft",
+  "kind": "constitution_proposal",
+  "source_url": "https://wethepeopleofiran.org/",
+  "version": "1",
+  "tags": [
+   "monarchy",
+   "constitutional",
+   "parliamentary",
+   "secular"
+  ],
+  "companions": [
+   {
+    "fa": "منطق انتخاب نظام حکمرانی",
+    "en": "Rationale for the system of government",
+    "role": "commentary",
+    "url": "https://wethepeopleofiran.org/governance-selection-rationale/"
+   },
+   {
+    "fa": "قانون اجرای انتخابات",
+    "en": "Election procedure law",
+    "role": "law",
+    "url": "https://wethepeopleofiran.org/election-procedure/"
+   },
+   {
+    "fa": "تعاریف و اصطلاحات حقوقی",
+    "en": "Legal terms",
+    "role": "glossary",
+    "url": "https://wethepeopleofiran.org/legal-terms/"
+   }
+  ],
+  "note": "Web site (published 2026-02-01, revised 2026-04-13), also in English and Hebrew. Its about page names the author only by a pseudonym. The home page holds the full text (112 articles); the «منطق و چرایی» links to each article's rationale are left out. The text is taken from the HTML; the PDF is a reading copy."
+ }
+]

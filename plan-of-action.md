@@ -1,7 +1,7 @@
 # Plan of action: Atlas × constitutions × normalcy
 
 This is the reference for anyone, human or agent, continuing this work. It records what exists, what has been decided, which rules are not negotiable, and what comes next.
-Last updated: 2026-09-25. Update the **Status** column and the **Log** at the bottom as work lands.
+Last updated: 2026-10-02. Update the **Status** column and the **Log** at the bottom as work lands.
 
 ---
 
@@ -331,11 +331,103 @@ Status values: ☐ to do · ◐ in progress · ☑ done
 - **OG images:** `gen_org_og_images.py` needs Pillow's basic layout (fixed in Atlas `b0f9a6f`); with raqm the Persian came out reversed.
 - **«لا» in Word and InDesign PDFs:** `pdftotext` turns the ligature into «ال» («میالدی»، «تشکیالت»), which can't be undone by rule. Found in 6 older corpus texts (Banisadr 1398: 268 words; the CPI (ML) draft: 98; Banisadr 1397: 94; Nayeb Hashem provisional: 26; NCRI ten articles: 23; Mostashar: 15) and in the harvested PDKI, con-dfr, Sepidar and PJAK PDFs. Fix: vision OCR (all six re-read in full on 2026-09-25, 1,012 pages ≈ $20; the session-5 note that their text layer was right missed this). Check a new PDF for «الف/الع/الت» inside words before accepting its text layer.
 - **`articles.py` on unlabelled lists:** without «اصل/ماده» headings it now falls back to lines numbered «1.» when one clean run from 1 covers ≥ 80% of numbered lines (Azerbaijan Democratic Party: 31). A single stray «ماده N» (a cross-reference or the closing count) still yields one false article (Fadaian, Mostashar, Worker Unity, Khomeini); treating fewer than 3 as none would change existing counts, so it is left for review.
+- **A stalled batch may be an empty credit balance.** On 2026-10-02 two vision batches sat at 0 pages read for almost five hours; direct calls then failed with «credit balance is too low». Check the balance before waiting on a batch; `vision_ocr.py read <uid>` reads the remaining pages directly (full price, 6 in parallel, same cache).
+- **Heading variants `articles.py` now accepts:** «بیست وششم» (no space after «و»; Green Jurists v1–v4, Andishgah, Mashruteh, Ansari, Banisadr, whose inferred headings are now read), «دویست سی ام» (no «و» after the hundreds; Shirzad), «مادهٔ ۱» (small hamza; IOCCI), and «۲-۸:» chapter-article numbers without a unit word, used only when fewer than 10 labelled headings exist (iran4all; `n` is the running number, `label` the printed one, and the site shows the label). A document whose lower level restarts inside each higher one sets `split_unit` in the registry (INC: «اصل»).
+- **More heading spellings in vision text:** the hundreds split by a ZWNJ or space («یک‌صد», «سی صد»; the old text layers had «یکصد») and «شست» for «شصت». Without them Banisadr 1398 fell from 529 to 149 articles after its re-read. Compare article counts before and after any re-read.
+- **Vision readings can carry HTML** (`<u>`, `<sup>` around underlined headings and footnote marks; Banisadr, Parsa, Mostashar). `clean()` strips them at write time.
+- **Kashida («ـ») stays in the stored readings,** as printed, and `repair()` removes it wherever text is used (articles, similarity, audits). Measure text quality on repaired text: raw PDKI/PJAK score 0.64–0.70 word coverage only because of kashida. Side effect: a word-final kashida before a space joins two words (about a dozen cases, e.g. Banisadr «شودـ برقرار»), the same rule that correctly rejoins Khomeini's split words («سـ همی»).
 - **Web summaries are not sources.** Verify facts such as membership, dates and URLs against primary sources before publishing (rule 5).
 
 ---
 
-## 12. Log
+## 12. Expansion: more drafts, article wiring, participation (proposed 2026-10-02)
+
+Source: the user's ideas in `local/notes.md` (gitignored), sorted and checked against the registry on 2026-10-02. Nothing here is built yet.
+
+### Design
+
+**Article graph ("wiring")**
+- Three edge types, each with its evidence: `xref` (an article cites another in the same document: «طبق اصل ۱۱۰», parsed by rule), `similar` (two proposals word the same provision alike: today's TF-IDF edges, later multilingual embeddings computed locally, so no text leaves the pipeline), `power` (checks and balances, below). Every edge gets a stable id (`<uid>:<art>→<uid>:<art>:<type>`) so comments can attach to it.
+- **Checks and balances:** for each `constitution` / `constitution_proposal`, extract organs (parliament, head of state, government, courts, constitutional court, leader, councils) and their powers over each other: appoints, removes, vetoes, approves, oversees, judges, dissolves, amends. Each power cites its article (rule 6: an unknown article id rejects the item). Done through the Batch API, cached by content hash like the audits. Output per document: a power graph plus measures: organs no other organ can remove or review, appointment chains, judicial review, the amendment procedure.
+- **The "PCB" view:** the document as a wall of articles; edges drawn behind as orthogonal circuit traces; hover lights a trace, click opens the linked article and its comments. One document (or a pair) at a time, not the whole corpus.
+
+**Participation**
+- A separate Worker in this repo (`worker/`, Cloudflare D1), not in normalcy: normalcy stays the benchmark service. It calls normalcy for screening.
+- No login. Turnstile + per-IP rate limit (the code pattern already exists in normalcy, 1.2). Store no raw IP: a salted hash, salt rotated daily. No email asked.
+- Comment targets: a document, an article or an edge.
+- A **cron job** (Cloudflare Cron Trigger) processes the queue: spam and language filters, a normalcy check (the Gate 2 `gate2-post` rubric, enabled for a `constitutions` key, still off for Jomhoor), dedup against existing comments. Then `pending` → `visible` / `rejected`, with the reason kept.
+- The site reads visible comments live from the Worker, cached. A daily GitHub Action exports them as JSON into the repo: archive and transparency, and the static build keeps working if the Worker is down.
+- **Contributions** (the **+** button): a new article, an amendment to one, or a new link. Same screening, plus: similar existing articles, a diff against the base text (additions green, removals red), and links suggested automatically. Shown grey beside their target until confirmed.
+- **Votes:** up and down, one per browser. Without identity a vote is a signal, not a decision. The AI's assessment (duplication, language, normalcy) is shown as one labelled advisory score, never counted as a voter.
+- **Who decides:** admins confirm, guided by votes, until Jomhoor can verify real, unique Iranians; then referendum-like votes decide (Phase 11).
+- **AI assistant** at the bottom of the page: questions about the corpus, answered only with citations to stored articles (rule 6), behind Turnstile and a rate limit, with answers cached.
+
+### Decisions needed
+1. **What we co-author.** Annotations and amendments on the existing drafts, or one community draft? IOCCI (ghanoonasasi.org) already runs an open co-drafting wiki and forum for one text, and iran4all compares drafts. Recommendation: talk to both before Phase 10; build comments (Phase 9) regardless, since annotation of all drafts against the benchmark is what we have that they don't.
+2. "An AI input at the bottom like open alice": which product is meant?
+3. "Center for transitional justice": ICTJ, or a specific Iranian centre?
+4. Comment languages (Persian only, or also English, Kurdish, Azerbaijani Turkish…) and the moderation policy text, published before launch.
+
+### Phase 7: more drafts
+| # | Task | Status |
+|---|---|---|
+| 7.1 | Ingest the new drafts (sources and dedup in `local/notes.md` §1): IOCCI interim law v3 (37 pp.), iran4all federal constitution v3.0.0 (98 pp.), Arshadnejad federal draft (8 pp.), all three with garbled text layers → vision OCR (≈ $3); Kaveh Shirzad 1384 and the Iranian National Congress draft (web text; prefer the original host); Green Jurists v2 (Dey 1388, the missing edition); We The People of Iran (web, constitutional monarchy) | ☑ 8 documents (2026-10-02): the seven named plus **Green Jurists v4** (Tir 1403, Iranian Lawyers Association / Shahab Shabahang; found on their blog), via `pipeline/add_docs.py` + `data/additions/2026-10.json`. Articles: Shirzad 267, iran4all 258 (numbered «فصل-ماده», shown as «۲-۸»), Green Jurists v2 and v4 154 each, WTP 112, IOCCI 74, Arshadnejad 13 («اصل» › «ماده»), INC 7 (`split_unit: اصل`). Word coverage 0.92–1.00, no broken «لا» |
+| 7.2 | Duplicates: Juya on pezhvakeiran.com → second `source_url` of `juya-transitional-1397` (check for a revision) | ☐ |
+| 7.3 | Editions: a `series` field linking versions of one draft (Green Jurists v1–v3, Iran-e No r12/r13, iran4all 1.00–3.00, IOCCI 1–3); a version diff view (green/red), which Phase 10 reuses | ☐ |
+| 7.4 | Companions: the Rahgosha interview with the IOCCI drafters (YouTube); Arshadnejad's «میثاق حقوق ذاتی، طبیعی و بنیادین ایرانیان» | ☐ |
+| 7.5 | Leads: the 1358 draft constitution (find a primary source); the iransolidarity.com PDF linked by Kamarei (2005); the «جمهوری پادشاهی» draft | ☐ |
+| 7.6 | Comparative Constitutions Project / Constitute: assess its topic ontology against our 25 topics; licence check before any reuse | ☐ |
+
+### Phase 8: article graph
+| # | Task | Status |
+|---|---|---|
+| 8.1 | `xref` edges: parse cross-references within each document; precision check on 3 documents by hand | ☐ |
+| 8.2 | Stable edge ids; `edges.json` with type and evidence; existing similarity edges migrated | ☐ |
+| 8.3 | Checks and balances: extraction rubric, pilot on one document (cost measured), then the constitution group; power graph + measures | ☐ |
+| 8.4 | "PCB" view in the site: traces, hover, click-through; Persian RTL; works embedded in Atlas | ☐ |
+
+### Phase 9: comments (no login)
+| # | Task | Status |
+|---|---|---|
+| 9.1 | `worker/`: D1 schema (comments, targets, votes, moderation log), `POST /comments` (Turnstile, rate limit, size limit), `GET /comments?target=` | ☐ |
+| 9.2 | Cron moderation: filters, normalcy Gate 2 check for the `constitutions` key, dedup; reasons kept | ☐ |
+| 9.3 | Site: comments under each article, then on edges (needs 8.2) | ☐ |
+| 9.4 | Daily export of visible comments to the repo (GitHub Action) | ☐ |
+| 9.5 | Moderation policy and privacy note, published; check that Turnstile works from inside Iran (with and without VPN) | ☐ |
+| 9.6 | Deploy *(ask before deploying)* | ☐ |
+
+### Phase 10: contributions and co-authoring (after decision 1)
+| # | Task | Status |
+|---|---|---|
+| 10.1 | **+** button: new article / amendment / link; compose mode with the page faded to 10% | ☐ |
+| 10.2 | Live suggestions while typing: similar articles, normalcy issues, diff against the base text | ☐ |
+| 10.3 | Lifecycle: submitted → screened → pending (grey) → voted → confirmed / rejected | ☐ |
+| 10.4 | Votes; AI advisory score shown separately | ☐ |
+| 10.5 | Admin console (confirm, reject with reason, merge duplicates) | ☐ |
+| 10.6 | AI assistant with validated citations | ☐ |
+
+### Phase 11: verified voting
+| # | Task | Status |
+|---|---|---|
+| 11.1 | Jomhoor identity (real, unique Iranians) as the gate for binding votes; referendum-like procedure. **Waits on Jomhoor** | ☐ |
+
+### Phase 12: simulation
+| # | Task | Status |
+|---|---|---|
+| 12.1 | 5,000 synthetic users and entries (legit and abusive) in a **staging** database only, labelled synthetic, never shown as real participation: moderation throughput, AI cost per entry, sybil resistance of votes, UI performance | ☐ |
+
+### Phase 13: outreach
+| # | Task | Status |
+|---|---|---|
+| 13.1 | Contact list in `local/` (personal data, never in git): authors of corpus documents, Atlas organisations, IOCCI, iran4all, CCP, a transitional justice centre | ☐ |
+| 13.2 | Talk to IOCCI and iran4all (decision 1) *(ask before contacting anyone)* | ☐ |
+| 13.3 | Invitations to the platform once Phase 9 is live; a conference of drafters | ☐ |
+
+**Order:** 7 and 13.1 now (cheap, unblock the rest); 8.1–8.2 and 9 next, in parallel (9.3 on edges needs 8.2); 8.3 after a costed pilot; 10 after decision 1 and 12; 11 when Jomhoor is ready.
+
+---
+
+## 13. Log
 - **2026-09-24:**
   - Plan agreed.
   - normalcy: `scafolding-mvp` fast-forwarded into `main` and pushed.
@@ -414,3 +506,14 @@ Status values: ☐ to do · ◐ in progress · ☑ done
   - Vision OCR: PDKI + con-dfr (64 pages), Sepidar (26), PJAK (65), and the six older texts with broken «لا» (1,012 pages in 11 batches).
 - **2026-10-01:**
   - Source PDFs published with the site: `pipeline/publish_pdfs.py` writes `site/pdf/<uid>.pdf` (shared PDFs take the common uid parts: `dp-2026.pdf`), images downsampled to 150 dpi, original kept where that is not smaller or a page renders differently (three came out black: Nasrahmadi, both Banisadr) (57.7 → 51.9 MB, 41 files; Parsa alone 18.2 MB, under Cloudflare's 25 MiB per-file limit). `build_site.py` adds `pdf` to the catalog; `build_module.py` copies `pdf/`. The catalog filename, each article's page, search hits and cited articles in «حقوق بشر» link to the PDF at `#page=N`; the embed takes `pdfUrl`. Rehosting the party documents is cleared by the user.
+- **2026-10-02:**
+  - Sorted the user's expansion notes into §12 (phases 7–13): new drafts, article wiring and checks and balances, comments and co-authoring, verified voting, simulation, outreach. New sources checked against the registry: 7 new documents or editions, 1 duplicate (Juya on Pezhvak), the rest companions or leads. ghanoonasasi.org (IOCCI) and iran4all are projects like this one; talk to them before building co-authoring (decision 1). Nothing built.
+- **2026-10-02 (7.1):**
+  - Eight documents added (see 7.1). Green Jurists v4 is a bilingual book: the corpus document is the Persian preface and text (pp. 58–100, registry `pages`); its English half is a companion. Its article 1 leaves the form of state to a referendum, so it has no form-of-state tags. Arshadnejad's PDF metadata names another person; the author is taken from the Gooya publication.
+  - Vision OCR for 229 pages: 100 by batch; two batches stalled (empty credit balance) and were cancelled; the rest read directly with the new `vision_ocr.py read`. `vision_ocr.py` now honours registry `pages`.
+  - `articles.py` heading fixes (see Pitfalls) also restored article 26 in Green Jurists v1 and v3 and in Andishgah, Banisadr 1398's article 497, and cleaned headings in Mashruteh, its supplement and Ansari. Nayeb Hashem provisional picked up its earlier vision text.
+  - Corpus: 56 registry entries, 51 active, 5,445 articles in the site data, 1,027 edges; site, PDFs and `dist/` rebuilt. Not committed.
+- **2026-10-02 (text quality pass):**
+  - Corpus-wide check found 9 older documents whose vision readings had stopped a few pages short when the credit ran out (2026-09-25), so their broken PDF text was still in use: Banisadr 1397 and 1398, CPI-MLM, Mostashar, NCRI (active), PDKI, PJAK, con-dfr (inactive). The 48 missing pages were read directly and the texts written. PDKI, PJAK and con-dfr, inactive "until re-read", are active again.
+  - Fixes from that pass: split hundreds and «شست» in `articles.py`; HTML tags stripped in `vision_ocr.py` `clean()`; proofreading re-check (only the 1368 constitution has applied corrections, and it was not rewritten).
+  - Result: 56 of 56 documents active; text from vision 45, HTML 5, PDF text layer 6 (checked clean); no unfinished readings, no broken «لا», word coverage ≥ 0.85 except Mostashar 0.79 and Khomeini 0.81 (Qajar prose, Arabic quotations). 5,476 articles in the site data, 1,154 edges. Not committed.
