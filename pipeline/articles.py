@@ -55,21 +55,37 @@ def build():
     for s, n in list(m.items()):
         if s.startswith('صد'): m.setdefault('یک'+s, n)
     for s, n in list(m.items()):
+        # «شست» is a common spelling of «شصت» (sixty): «دویست و شست و یکم» (Banisadr 1398)
+        if 'شصت' in s: m.setdefault(s.replace('شصت', 'شست'), n)
+    for s, n in list(m.items()):
+        # the hundreds also come split, with a ZWNJ or a space: «یک‌صد», «سی صد» (vision readings of Banisadr)
+        for joined, head in (('یکصد', 'یک'), ('سیصد', 'سی'), ('چهارصد', 'چهار'), ('ششصد', 'شش'), ('هفتصد', 'هفت')):
+            if s.startswith(joined):
+                for sep in ('‌', ' '): m.setdefault(head + sep + s[len(head):], n)
+    tens = tuple(DC.values())
+    for s, n in list(m.items()):
+        # some authors drop the «و» after the hundreds: «دویست سی ام», «دویست سی و یکم» (Shirzad 1384)
+        h, sep, rest = s.partition(' و ')
+        if sep and h in HC.values() and rest.startswith(tens): m.setdefault(f'{h} {rest}', n)
+    for s, n in list(m.items()):
         # compound ordinals also end in «یکم» and, in older texts, «سیم»: «هشتاد و یکم», «سی و سیم»
         if ' و ' in s and s.endswith('اول'): m.setdefault(s[:-3] + 'یکم', n)
         if ' و ' in s and s.endswith('سوم'): m.setdefault(s[:-3] + 'سیم', n)
     return m
 
 WORDS = build()
-ALT = "|".join(map(re.escape, sorted(WORDS, key=len, reverse=True)))
+# «بیست وششم»: some texts print the «و» joined to the next word, so the spaces around it are optional
+ALT = "|".join(re.escape(w).replace(r"\ و\ ", r"\s+و\s*") for w in sorted(WORDS, key=len, reverse=True))
+word_n = lambda w: WORDS[re.sub(r"\s+و\s*", " و ", w)]
 
 def markers(text, kind):
     """All (start, end, number) for `kind` followed by a number."""
     out = []
-    for m in re.finditer(rf'{kind}\s*[یى]?\s*[:)(\-–—.,،]?\s*(\d{{1,3}})(?![\d۰-۹])', text):
+    # «مادهٔ ۱»: the ezafe may be written with a small hamza (ٔ) or «ی»
+    for m in re.finditer(rf'{kind}\s*[یىٔ]?\s*[:)(\-–—.,،]?\s*(\d{{1,3}})(?![\d۰-۹])', text):
         out.append((m.start(), m.end(), int(m.group(1))))
-    for m in re.finditer(rf'{kind}\s+({ALT})(?![{L}])', text):
-        out.append((m.start(), m.end(), WORDS[m.group(1)]))
+    for m in re.finditer(rf'{kind}ٔ?\s+({ALT})(?![{L}])', text):
+        out.append((m.start(), m.end(), word_n(m.group(1))))
     out.sort()
     ded, last = [], -1
     for s, e, n in out:
@@ -163,8 +179,11 @@ def superseded(full):
         out.append((m.start(), min(ends) if ends else len(full)))
     return out
 
-def split(pages):
-    """Articles of these pages: (unit, articles, seq_score)."""
+UNITS = {"اصل": 'اص[سص]?ل', "ماده": 'ماد[هدة]', "بند": 'بند', "تبصره": 'تبصره'}
+
+def split(pages, unit=None):
+    """Articles of these pages: (unit, articles, seq_score). `unit` (registry `split_unit`) fixes the heading level
+    for a document whose lower level restarts inside each higher one («اصل ۴ › ماده ۱…۱۸, اصل ۵ › ماده ۱…»)."""
     full, offs, toc = "", [], []
     for pg in pages:
         offs.append((len(full), pg["page"]))
@@ -174,7 +193,7 @@ def split(pages):
     prev = superseded(full)
     in_toc = lambda i: any(a <= i < b for a, b in toc + prev)
     best = None
-    for kind in ('اص[سص]?ل', 'ماد[هدة]', 'بند', 'تبصره'):
+    for kind in [UNITS[unit]] if unit else UNITS.values():
         # headings listed in a table of contents, or quoted inside a superseded wording, would otherwise compete
         # with the real ones; «اصل … به موجب اصلاحاتی …» is an editor's note about an article, not its heading
         ms = [m for m in markers(full, kind) if not in_toc(m[0]) and not re.match(r'\s*به موجب اصلاح', full[m[1]:m[1] + 40])]
@@ -190,8 +209,25 @@ def split(pages):
         nums = [ms[i][2] for i in keep]
         if len(keep) >= 10 and len(keep) >= 0.8 * len(ms) and nums[0] == 1 and score(nums, range(len(nums))) >= 0.9:
             best = ('بند', [ms[i] for i in keep])
+    # «۲-۸: تعطیلات»: chapter-article numbers with no unit word, restarting in each chapter (iran4all). Used when
+    # labelled headings are (nearly) absent: «ماده ۲» with clauses «۲-۱:» keeps its «ماده» (Sepidar). `n` is then the
+    # running number, `label` the printed one
+    ca = [(m.start(), m.end(), int(m.group(1).translate(FA_DIGITS)), int(m.group(2).translate(FA_DIGITS)))
+          for m in re.finditer(r'(?m)^[ \t]*([\d۰-۹]{1,2})[ \t]*-[ \t]*([\d۰-۹]{1,3})[ \t]*:', full) if not in_toc(m.start())]
+    ok = sum(1 for (_, _, c0, a0), (_, _, c1, a1) in zip([(0, 0, 0, 0)] + ca, ca)
+             if (c1 == c0 and a1 == a0 + 1) or (c1 > c0 and a1 == 1))
+    if len(best[1]) < 10 and len(ca) >= 10 and ok >= 0.9 * len(ca):
+        return "شماره", chunk(full, offs, pages, [(s, e, i + 1, False) for i, (s, e, _, _) in enumerate(ca)], "شماره", [],
+                              [f"{c}-{a}" for _, _, c, a in ca]), round(ok / len(ca), 3)
     kind, ms = best
     ms = fill_gaps(ms, full, kind, in_toc)
+    arts = chunk(full, offs, pages, ms, kind, prev)
+    nums_k = [a["n"] for a in arts]
+    conf = round(min(len(arts), max(nums_k))/max(len(arts), max(nums_k)), 3) if arts else 0.0
+    return kind, arts, conf
+
+def chunk(full, offs, pages, ms, kind, prev, labels=None):
+    """The text between consecutive headings, with each article's page."""
     arts = []
     for i, (s, e, n, inferred) in enumerate(ms):
         stop = ms[i+1][0] if i+1 < len(ms) else len(full)
@@ -202,11 +238,10 @@ def split(pages):
         body = (body + full[cut:stop]).strip(" :ـ-–—\n\t")
         page = max((p for off, p in offs if off <= s), default=pages[0]["page"] if pages else 1)
         arts.append({"n": n, "kind": kind, "page": page, "text": body}
+                    | ({"label": labels[i]} if labels else {})
                     | ({"n_inferred": True} if inferred else {})
                     | ({"superseded": "\n".join(full[a:b].strip() for a, b in old)} if old else {}))
-    nums_k = [a["n"] for a in arts]
-    conf = round(min(len(arts), max(nums_k))/max(len(arts), max(nums_k)), 3) if arts else 0.0
-    return kind, arts, conf
+    return arts
 
 def articles_name(entry):
     """Articles file of a registry entry. A PDF split by `pages` into several documents gets one file per entry."""
@@ -218,13 +253,14 @@ def main():
     for path in sorted(glob.glob(os.path.join(DATA, "text", "*.json"))):
         doc = json.load(open(path, encoding="utf-8"))
         parts = [r for r in registry if r["source"] == doc["source_pdf"] and r.get("pages")]
+        whole = next((r for r in registry if r["source"] == doc["source_pdf"] and not r.get("pages")), {})
         for r in parts or [None]:
             if r:
                 lo, hi = r["pages"]
                 pages, name, extra = [p for p in doc["pages"] if lo <= p["page"] <= hi], articles_name(r), {"uid": r["uid"]}
             else:
                 pages, name, extra = doc["pages"], os.path.basename(path)[:-5], {}
-            kind, arts, conf = split(pages)
+            kind, arts, conf = split(pages, (r or whole).get("split_unit"))
             json.dump({"source_pdf": doc["source_pdf"], **extra, "unit": kind, "seq_score": conf, "articles": arts},
                       open(os.path.join(DATA, "articles", name + ".json"), "w", encoding="utf-8"),
                       ensure_ascii=False, indent=1)

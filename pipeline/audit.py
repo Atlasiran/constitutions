@@ -28,7 +28,7 @@ JOBS = os.path.join(OUT, "jobs.json")
 RUBRICS = os.environ.get("NORMALCY_RUBRICS") or os.path.join(ROOT, "vendor", "normalcy", "public", "data", "rubrics.json")
 API = os.environ.get("NORMALCY_URL", "https://normalcy.is").rstrip("/")
 
-UNIT = {"اص[سص]?ل": "اصل", "ماد[هدة]": "ماده", "بند": "بند", "تبصره": "تبصره"}
+UNIT = {"شماره": "", "اص[سص]?ل": "اصل", "ماد[هدة]": "ماده", "بند": "بند", "تبصره": "تبصره"}
 MAX_BATCH_DOCS, MAX_BATCH_CHARS = 10, 1_500_000
 MAX_MEAN_ARTICLE = 4000  # longer "articles" mean the markers were missed: cite pages instead
 
@@ -88,7 +88,7 @@ def segments(entry):
         for a in chosen:
             seen[a["n"]] = seen.get(a["n"], 0) + 1
             sid = f"a{a['n']}" + (f"-{seen[a['n']]}" if seen[a["n"]] > 1 else "")
-            segs.append({"id": sid, "label": f"{word} {a['n']} (p. {a['page']})", "text": a["text"]})
+            segs.append({"id": sid, "label": f"{word} {a.get('label', a['n'])} (p. {a['page']})".strip(), "text": a["text"]})
         return segs, "articles"
     segs = [{"id": f"p{p['page']}", "label": f"p. {p['page']}", "text": repair(p["text"]).strip()}
             for p in pages if p["text"].strip()]

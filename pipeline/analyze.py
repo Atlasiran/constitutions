@@ -57,7 +57,7 @@ def main():
         uid = c["uid"]; docs.append(uid)
         for x in a["articles"]:
             if len(x["text"]) < 25: continue
-            arts.append({"doc": uid, "n": x["n"], "unit": x["kind"], "page": x["page"],
+            arts.append({"doc": uid, "n": x["n"], "unit": x["kind"], "page": x["page"]} | ({"label": x["label"]} if "label" in x else {}) | {
                          "text": x["text"][:4000], "toks": tok(x["text"])})
     cat = {c["uid"]: c for c in cat}
     print(f"{len(arts)} articles with substantive text, {len(docs)} documents")

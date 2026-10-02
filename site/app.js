@@ -126,7 +126,7 @@ export const GROUP={constitution:"A",constitution_proposal:"A",bylaws:"B",
 const VIEWS=["corpus","map","compare","search","rights"];
 
 // articles.json keeps the splitter's pattern for the unit; this is the word to show
-const UNITW={"اص[سص]?ل":["اصل","Art."],"ماد[هدة]":["ماده","Art."],"بند":["بند","Clause"],"تبصره":["تبصره","Note"]};
+const UNITW={"شماره":["","Art."],"اص[سص]?ل":["اصل","Art."],"ماد[هدة]":["ماده","Art."],"بند":["بند","Clause"],"تبصره":["تبصره","Note"]};
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e};
 
@@ -143,6 +143,8 @@ export function mount(root, opts={}){
   const num=n=>L==="fa"?Number(n).toLocaleString("fa-IR",{useGrouping:false}):String(n);
   const pg=n=>(L==="fa"?"ص. ":"p. ")+num(n);
   const unitw=u=>(UNITW[u]||[u,u])[L==="fa"?0:1];
+  // an article's printed number: «۲-۸» where the document numbers by chapter, else its unit word and number
+  const artn=a=>[unitw(a.unit),a.label?a.label.split("-").map(num).join("-"):num(a.n)].filter(Boolean).join(" ");
   // a link into the document's PDF, at a page when given; plain text when the PDF is not published
   const docOf=uid=>CAT.find(x=>x.uid===uid)||{};
   const pdfLink=(d,page,label)=>d.pdf
@@ -414,7 +416,7 @@ export function mount(root, opts={}){
   }
   function artCard(a){
     const c=el("div","art");
-    c.innerHTML=`<div class="art-h"><span class="art-n">${esc(unitw(a.unit))} ${num(a.n)}</span>
+    c.innerHTML=`<div class="art-h"><span class="art-n">${esc(artn(a))}</span>
       <span class="art-p">${pdfLink(docOf(a.doc),a.page,pg(a.page))}</span></div><div class="fa" dir="rtl" lang="fa">${esc(a.text)}</div>`;
     if(a.text.length>320){const b=el("button","more");
       b.textContent=t("more");
@@ -442,7 +444,7 @@ export function mount(root, opts={}){
         const i=a.text.indexOf(q),s=Math.max(0,i-110);
         const snip=(s?"…":"")+esc(a.text.slice(s,i))+"<mark>"+esc(q)+"</mark>"+esc(a.text.slice(i+q.length,i+q.length+180))+"…";
         const h=el("div","hit");
-        h.innerHTML=`<div class="hit-src"><b>${esc(title(d))}</b> · ${esc(unitw(a.unit))} ${num(a.n)} · ${pdfLink(d,a.page,pg(a.page))}</div>
+        h.innerHTML=`<div class="hit-src"><b>${esc(title(d))}</b> · ${esc(artn(a))} · ${pdfLink(d,a.page,pg(a.page))}</div>
           <div class="fa" dir="rtl" lang="fa">${snip}</div>`;
         res.append(h);});};
     inp.oninput=run;run();

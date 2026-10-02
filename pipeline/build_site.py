@@ -14,7 +14,7 @@ PDF=pdf_names(cat)
 for c in cat:
     if os.path.exists(R+"/site/pdf/"+PDF[c["source_pdf"]]):c["pdf"]=PDF[c["source_pdf"]]
 an["edges"]=[e for e in an["edges"] if e["a"] in uids and e["b"] in uids]
-slim=[{"doc":a["doc"],"n":a["n"],"unit":a["unit"],"page":a["page"],
+slim=[{"doc":a["doc"],"n":a["n"],"unit":a["unit"],"page":a["page"],**({"label":a["label"]} if "label" in a else {}),
        "topics":a["topics"],"text":a["text"][:2600]} for a in ar if a["doc"] in uids]
 # Benchmark audits (plan 5.4): published when a person approved them, or when review.publish is set, which
 # shows them marked as not yet reviewed. --preview adds all the others, for a local look; build_module.py

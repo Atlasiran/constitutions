@@ -4,7 +4,10 @@
     vision_ocr.py test <uid> <page> ...   # read these pages now (full price), print them
     vision_ocr.py submit <uid> ...        # queue every uncached page of these documents (Batch API, half price)
     vision_ocr.py collect                 # fetch finished batches; rewrite data/text for complete documents
+    vision_ocr.py read <uid> ...          # read every uncached page now, in parallel (full price; when a batch stalls)
     vision_ocr.py write <uid> ...         # rewrite data/text from the cache only
+
+A registry `pages` range limits the reading to those pages; the rest of the PDF keeps its text layer.
 
 Each page is cached in data/vision/<slug>.json under a key made of the PDF's hash, the page,
 the model and the prompt version, so unchanged input is never sent twice. The Anthropic key
@@ -65,6 +68,12 @@ def doc_for(uid):
     return slug, os.path.join(SRC, text["source_pdf"])
 
 
+def page_range(uid, n):
+    """The pages to read: the registry `pages` range when set (the rest of the PDF keeps its text layer), else all."""
+    a, b = registry()[uid].get("pages") or (1, n)
+    return range(a, b + 1)
+
+
 def pdf_hash(pdf):
     return hashlib.sha256(open(pdf, "rb").read()).hexdigest()[:16]
 
@@ -114,6 +123,7 @@ def clean(raw):
     """Corpus form of a page. Applied when writing, so changes here never need a new reading."""
     s = normalize_fa(raw).translate(AR_DIGITS)
     s = re.sub(r"(?m)^#+ +", "", s.replace("**", ""))   # markdown the model sometimes adds to headings
+    s = re.sub(r"</?(?:u|sup|sub|b|i)>", "", s)        # and HTML underline / superscript tags (Banisadr, Parsa)
     s = re.sub(r"(?<=\S) ـ+ (?=\S)", " - ", s)        # a spaced tatweel is a dash; repair() would join the words
     lines = s.split("\n")
     while lines and re.fullmatch(r"[\s۰-۹\d\-–—.()]*", lines[-1]): lines.pop()   # page number left in
@@ -142,7 +152,7 @@ def cmd_submit(uids):
     for uid in uids:
         slug, pdf = doc_for(uid)
         sha, n, cache = pdf_hash(pdf), page_count(pdf), load_cache(slug)
-        todo = [p for p in range(1, n + 1) if page_key(sha, p) not in cache["pages"]]
+        todo = [p for p in page_range(uid, n) if page_key(sha, p) not in cache["pages"]]
         print(f"{uid}: {len(todo)} of {n} pages to read")
         reqs += [(uid, pdf, p, n) for p in todo]
     jobs = json.load(open(JOBS)) if os.path.exists(JOBS) else []
@@ -154,6 +164,28 @@ def cmd_submit(uids):
         print(f"batch {batch.id}: {len(chunk)} pages")
     os.makedirs(CACHE, exist_ok=True)
     json.dump(jobs, open(JOBS, "w"), indent=1)
+
+
+def cmd_read(uids, workers=6):
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+    c = client()
+    for uid in uids:
+        slug, pdf = doc_for(uid)
+        sha, n, cache = pdf_hash(pdf), page_count(pdf), load_cache(slug)
+        todo = [p for p in page_range(uid, n) if page_key(sha, p) not in cache["pages"]]
+        print(f"{uid}: {len(todo)} pages to read")
+        failed = []
+        with ThreadPoolExecutor(workers) as pool:
+            futs = {pool.submit(c.messages.create, **params(pdf, p, n)): p for p in todo}
+            for f in as_completed(futs):
+                p = futs[f]
+                try: entry, why = result_entry(f.result())
+                except Exception as ex: entry, why = None, f"{type(ex).__name__}: {ex}"[:200]
+                if not entry: failed.append(f"p{p}: {why}"); continue
+                cache["pages"][page_key(sha, p)] = entry | {"page": p}
+                save_cache(slug, cache)      # only this thread writes the cache
+        print(f"{uid}: {len(todo) - len(failed)} read, {len(failed)} failed" + "".join(f"\n    {x}" for x in failed))
+        if not failed: cmd_write([uid])
 
 
 def cmd_collect():
@@ -187,17 +219,18 @@ def cmd_write(uids):
     for uid in uids:
         slug, pdf = doc_for(uid)
         sha, n, cache = pdf_hash(pdf), page_count(pdf), load_cache(slug)
-        got = {p: cache["pages"].get(page_key(sha, p)) for p in range(1, n + 1)}
+        got = {p: cache["pages"].get(page_key(sha, p)) for p in page_range(uid, n)}
         missing = [p for p, e in got.items() if e is None]
         if missing:
             print(f"{uid}: not written, pages missing {missing}"); continue
         path = os.path.join(DATA, "text", slug + ".json")
         doc = json.load(open(path, encoding="utf-8"))
-        doc["pages"] = [{"page": p, "text": clean(got[p]["raw"])} for p in range(1, n + 1)]
+        old = {pg["page"]: pg["text"] for pg in doc["pages"]}
+        doc["pages"] = [{"page": p, "text": clean(got[p]["raw"]) if p in got else old.get(p, "")} for p in range(1, n + 1)]
         doc["source"] = "vision"; doc["vision_model"] = MODEL
         json.dump(doc, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         use = [e["usage"] for e in got.values()]
-        print(f"{uid}: wrote {n} pages, {sum(len(clean(e['raw'])) for e in got.values()):,} chars "
+        print(f"{uid}: wrote {len(got)} of {n} pages, {sum(len(clean(e['raw'])) for e in got.values()):,} chars "
               f"(in {sum(u['input_tokens'] for u in use):,} / out {sum(u['output_tokens'] for u in use):,} tokens)")
 
 
@@ -207,5 +240,6 @@ if __name__ == "__main__":
     if a[0] == "test" and len(a) >= 3: cmd_test(a[1], [int(x) for x in a[2:]])
     elif a[0] == "submit" and len(a) >= 2: cmd_submit(a[1:])
     elif a[0] == "collect": cmd_collect()
+    elif a[0] == "read" and len(a) >= 2: cmd_read(a[1:])
     elif a[0] == "write" and len(a) >= 2: cmd_write(a[1:])
     else: sys.exit(__doc__)
