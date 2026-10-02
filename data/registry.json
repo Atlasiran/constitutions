@@ -376,7 +376,7 @@
  {
   "uid": "mashruteh-fundamental-1906-dup",
   "collection": "iran-drafts",
-  "status": "active",
+  "status": "inactive",
   "source": "قانون اساسی مشروطه ۱۳۳۴.pdf",
   "legacy_slug": "قانون_اساسی_مشروطه_۱۳۳۴",
   "fa": "قانون اساسی مشروطه و متمم‌های آن (نسخه تکراری)",
@@ -428,7 +428,7 @@
  {
   "uid": "green-jurists-v1-1388",
   "collection": "iran-drafts",
-  "status": "active",
+  "status": "inactive",
   "source": "قانون اساسی نوین - حقوقدانان سبز ۱۳۸۸.pdf",
   "legacy_slug": "قانون_اساسی_نوین_حقوقدانان_سبز_۱۳۸۸",
   "fa": "قانون اساسی نوین — نگارش اول",
@@ -449,7 +449,9 @@
    "secular"
   ],
   "series": "green-jurists",
-  "rev": 1
+  "rev": 1,
+  "duplicate_of": "green-jurists-v2-1388",
+  "note": "Duplicate (2026-10-03): despite the title, every page of this file carries the footer «نسخه دوم»; its text matches green-jurists-v2-1388 (99.4%, the differences are reading noise and page footers). No copy of the first edition is in the corpus."
  },
  {
   "uid": "aryanpour-fundamental-rights-1387",
@@ -759,7 +761,7 @@
  {
   "uid": "andishgah-provisional-fundamental",
   "collection": "iran-drafts",
-  "status": "active",
+  "status": "inactive",
   "source": "پیش نویس قانون بنیادین موقت - اندیشگاه ملی ایرانیان - .pdf",
   "legacy_slug": "پیش_نویس_قانون_بنیادین_موقت_اندیشگاه_ملی_ایرانیان",
   "fa": "پیش‌نویس قانون بنیادین موقت",
@@ -775,7 +777,9 @@
   "version": "1",
   "tags": [
    "transitional"
-  ]
+  ],
+  "duplicate_of": "juya-transitional-1397",
+  "note": "Duplicate (user, 2026-10-03): the same 70 articles as juya-transitional-1397, re-edited («قانون اساسی» → «قانون بنیادین», «پایدار» → «دائمی»). The newer is kept: by the PDFs' creation dates, this one is from 6 Sep 2018, Juya's 1397 edition from 17 Nov 2018."
  },
  {
   "uid": "nayebhashem-amend-iri",

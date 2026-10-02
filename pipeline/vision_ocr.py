@@ -23,7 +23,9 @@ JOBS = os.path.join(CACHE, "jobs.json")
 sys.path.insert(0, os.path.join(ROOT, "pipeline"))
 from extract import normalize_fa, page_count
 
-MODEL = "claude-opus-5"
+MODEL = "claude-opus-5-5"     # user, 2026-10-03: cheaper than Opus 5; its thinking can't be turned off
+EFFORT = "low"                # transcription needs little reasoning
+EARLIER = ("claude-opus-5",)  # pages these models read stay valid: a page is never read twice (rule 7)
 LONG_EDGE = 2576          # the model's full resolution; larger images are scaled down server side
 MAX_BATCH = 100           # requests per batch, well under the 256 MB limit at ~1 MB a page
 PROMPT_V = 1
@@ -78,8 +80,15 @@ def pdf_hash(pdf):
     return hashlib.sha256(open(pdf, "rb").read()).hexdigest()[:16]
 
 
-def page_key(sha, page):
-    return f"{sha}:{page}:{MODEL}:{LONG_EDGE}:v{PROMPT_V}"
+def page_key(sha, page, model=MODEL):
+    return f"{sha}:{page}:{model}:{LONG_EDGE}:v{PROMPT_V}"
+
+
+def cached(cache, sha, page):
+    """The cached reading of a page, by the current model or an earlier one; None if there is none."""
+    for m in (MODEL,) + EARLIER:
+        if page_key(sha, page, m) in cache["pages"]: return cache["pages"][page_key(sha, page, m)]
+    return None
 
 
 def load_cache(slug):
@@ -103,7 +112,7 @@ def render(pdf, page):
 
 def params(pdf, page, n):
     img = base64.standard_b64encode(render(pdf, page)).decode()
-    return {"model": MODEL, "max_tokens": 8000, "thinking": {"type": "disabled"}, "system": SYSTEM,
+    return {"model": MODEL, "max_tokens": 16000, "output_config": {"effort": EFFORT}, "system": SYSTEM,
             "messages": [{"role": "user", "content": [
                 {"type": "image", "source": {"type": "base64", "media_type": "image/jpeg", "data": img}},
                 {"type": "text", "text": f"Page {page} of {n}. Transcribe it."}]}]}
@@ -114,7 +123,7 @@ def result_entry(msg):
     usage = {k: getattr(msg.usage, k, 0) or 0 for k in ("input_tokens", "output_tokens")}
     if msg.stop_reason != "end_turn":
         return None, f"stop_reason {msg.stop_reason}"
-    return {"raw": "".join(b.text for b in msg.content if b.type == "text"), "usage": usage}, None
+    return {"raw": "".join(b.text for b in msg.content if b.type == "text"), "usage": usage, "model": msg.model}, None
 
 
 AR_DIGITS = str.maketrans("٠١٢٣٤٥٦٧٨٩", "۰۱۲۳۴۵۶۷۸۹")
@@ -135,14 +144,13 @@ def cmd_test(uid, pages):
     slug, pdf = doc_for(uid)
     sha, n, cache, c = pdf_hash(pdf), page_count(pdf), load_cache(slug), client()
     for p in pages:
-        key = page_key(sha, p)
-        if key in cache["pages"]:
-            print(f"--- page {p} (cached)"); print(clean(cache["pages"][key]["raw"])); continue
+        if hit := cached(cache, sha, p):
+            print(f"--- page {p} (cached)"); print(clean(hit["raw"])); continue
         msg = c.messages.create(**params(pdf, p, n))
         entry, why = result_entry(msg)
         if not entry:
             print(f"--- page {p}: {why}"); continue
-        cache["pages"][key] = entry | {"page": p}
+        cache["pages"][page_key(sha, p)] = entry | {"page": p}
         save_cache(slug, cache)
         print(f"--- page {p}  {entry['usage']}"); print(clean(entry["raw"]))
 
@@ -152,7 +160,7 @@ def cmd_submit(uids):
     for uid in uids:
         slug, pdf = doc_for(uid)
         sha, n, cache = pdf_hash(pdf), page_count(pdf), load_cache(slug)
-        todo = [p for p in page_range(uid, n) if page_key(sha, p) not in cache["pages"]]
+        todo = [p for p in page_range(uid, n) if not cached(cache, sha, p)]
         print(f"{uid}: {len(todo)} of {n} pages to read")
         reqs += [(uid, pdf, p, n) for p in todo]
     jobs = json.load(open(JOBS)) if os.path.exists(JOBS) else []
@@ -172,7 +180,7 @@ def cmd_read(uids, workers=6):
     for uid in uids:
         slug, pdf = doc_for(uid)
         sha, n, cache = pdf_hash(pdf), page_count(pdf), load_cache(slug)
-        todo = [p for p in page_range(uid, n) if page_key(sha, p) not in cache["pages"]]
+        todo = [p for p in page_range(uid, n) if not cached(cache, sha, p)]
         print(f"{uid}: {len(todo)} pages to read")
         failed = []
         with ThreadPoolExecutor(workers) as pool:
@@ -219,7 +227,7 @@ def cmd_write(uids):
     for uid in uids:
         slug, pdf = doc_for(uid)
         sha, n, cache = pdf_hash(pdf), page_count(pdf), load_cache(slug)
-        got = {p: cache["pages"].get(page_key(sha, p)) for p in page_range(uid, n)}
+        got = {p: cached(cache, sha, p) for p in page_range(uid, n)}
         missing = [p for p, e in got.items() if e is None]
         if missing:
             print(f"{uid}: not written, pages missing {missing}"); continue
@@ -227,7 +235,7 @@ def cmd_write(uids):
         doc = json.load(open(path, encoding="utf-8"))
         old = {pg["page"]: pg["text"] for pg in doc["pages"]}
         doc["pages"] = [{"page": p, "text": clean(got[p]["raw"]) if p in got else old.get(p, "")} for p in range(1, n + 1)]
-        doc["source"] = "vision"; doc["vision_model"] = MODEL
+        doc["source"] = "vision"; doc["vision_model"] = ", ".join(sorted({e.get("model", EARLIER[0]) for e in got.values()}))
         json.dump(doc, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         use = [e["usage"] for e in got.values()]
         print(f"{uid}: wrote {len(got)} of {n} pages, {sum(len(clean(e['raw'])) for e in got.values()):,} chars "

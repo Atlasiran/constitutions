@@ -1,0 +1,1631 @@
+{
+ "uid": "naoruz-usi-2026",
+ "ontology_version": "bda4ef8caa29",
+ "prompt_version": "session-1",
+ "model": "claude-opus-5-5",
+ "by": "claude-code session 2026-10-03",
+ "note": "Tagged in a Claude Code session from the proofread text (data/proof); each tag names a provision the article makes, not a passing mention. Not yet reviewed.",
+ "document": [
+  "preamble"
+ ],
+ "articles": [
+  {
+   "n": 1,
+   "sha": "bee51aead416ffde",
+   "topics": [
+    "sub",
+    "seccess",
+    "auth",
+    "system",
+    "capital",
+    "tranprov",
+    "referen"
+   ]
+  },
+  {
+   "n": 2,
+   "sha": "2c81654d904b6ff7",
+   "topics": [
+    "env",
+    "equal",
+    "equalgr1",
+    "lhquota",
+    "uhquota"
+   ]
+  },
+  {
+   "n": 3,
+   "sha": "3cd2950b36fffbf0",
+   "topics": [
+    "system",
+    "execnum",
+    "levjud",
+    "housenum"
+   ]
+  },
+  {
+   "n": 4,
+   "sha": "af8f82672260291d",
+   "topics": [
+    "sub",
+    "fedsep"
+   ]
+  },
+  {
+   "n": 5,
+   "sha": "900b6a89e37c8abb",
+   "topics": [
+    "lang"
+   ]
+  },
+  {
+   "n": 6,
+   "sha": "688eeb6e6aad39fd",
+   "topics": [
+    "intlaw"
+   ]
+  },
+  {
+   "n": 7,
+   "sha": "1189c6487379476d",
+   "topics": []
+  },
+  {
+   "n": 8,
+   "sha": "ecbff6b5608aecc2",
+   "topics": [
+    "dignity"
+   ]
+  },
+  {
+   "n": 9,
+   "sha": "34e39c6e021b0106",
+   "topics": [
+    "equal",
+    "equalgr1",
+    "equalgr2",
+    "equalgr3",
+    "equalgr5",
+    "equalgr6",
+    "equalgr7",
+    "equalgr8",
+    "equalgr9",
+    "equalgr11",
+    "equalgr12",
+    "equalgr15",
+    "matequal",
+    "remuner"
+   ]
+  },
+  {
+   "n": 10,
+   "sha": "489a0d04ad7e9187",
+   "topics": []
+  },
+  {
+   "n": 11,
+   "sha": "adfa5c5b94b2d96c",
+   "topics": [
+    "life",
+    "cappun",
+    "freemove",
+    "torture",
+    "cruelty"
+   ]
+  },
+  {
+   "n": 12,
+   "sha": "ae9f82fea456054e",
+   "topics": [
+    "childpro",
+    "equalgr16"
+   ]
+  },
+  {
+   "n": 13,
+   "sha": "1bf345d8dbd3156d",
+   "topics": []
+  },
+  {
+   "n": 14,
+   "sha": "72f89d39bba0db87",
+   "topics": [
+    "standliv"
+   ]
+  },
+  {
+   "n": 15,
+   "sha": "b924d32e84186cea",
+   "topics": [
+    "privacy"
+   ]
+  },
+  {
+   "n": 16,
+   "sha": "1bbb12cab4464a02",
+   "topics": [
+    "fndfam",
+    "marriage",
+    "civmar"
+   ]
+  },
+  {
+   "n": 17,
+   "sha": "530aa5f3c914c411",
+   "topics": [
+    "freerel",
+    "opinion",
+    "nomil"
+   ]
+  },
+  {
+   "n": 18,
+   "sha": "f288e35419d0d370",
+   "topics": [
+    "express",
+    "opinion",
+    "infoacc"
+   ]
+  },
+  {
+   "n": 19,
+   "sha": "0cb653395ca31922",
+   "topics": [
+    "press",
+    "radio",
+    "tv"
+   ]
+  },
+  {
+   "n": 20,
+   "sha": "31e1e59ca905f7c9",
+   "topics": [
+    "langprot"
+   ]
+  },
+  {
+   "n": 21,
+   "sha": "a940c9f3c426dde0",
+   "topics": [
+    "edfree",
+    "achighed"
+   ]
+  },
+  {
+   "n": 22,
+   "sha": "63ac52a0ee27664d",
+   "topics": [
+    "acfree"
+   ]
+  },
+  {
+   "n": 23,
+   "sha": "27daf1ada4a08877",
+   "topics": [
+    "artists"
+   ]
+  },
+  {
+   "n": 24,
+   "sha": "7bb5dae02c789c63",
+   "topics": [
+    "assem"
+   ]
+  },
+  {
+   "n": 25,
+   "sha": "a0eff475d263d5bc",
+   "topics": [
+    "assoc"
+   ]
+  },
+  {
+   "n": 26,
+   "sha": "3ec8fcd74052bae3",
+   "topics": [
+    "freemove",
+    "resenex"
+   ]
+  },
+  {
+   "n": 27,
+   "sha": "a561a1169d446603",
+   "topics": [
+    "citdep",
+    "excrim"
+   ]
+  },
+  {
+   "n": 28,
+   "sha": "9f51de9de6913500",
+   "topics": [
+    "proprght",
+    "exprop"
+   ]
+  },
+  {
+   "n": 29,
+   "sha": "572f5dde30646669",
+   "topics": [
+    "busines",
+    "occupate"
+   ]
+  },
+  {
+   "n": 30,
+   "sha": "fd2f4427d1fddbd0",
+   "topics": [
+    "jointrde",
+    "strike"
+   ]
+  },
+  {
+   "n": 31,
+   "sha": "9a70cef4b3be9e25",
+   "topics": [
+    "fairtri",
+    "speedtri",
+    "dueproc",
+    "couns"
+   ]
+  },
+  {
+   "n": 32,
+   "sha": "015e01c814b1e5b9",
+   "topics": [
+    "fairtri"
+   ]
+  },
+  {
+   "n": 33,
+   "sha": "1fd2766e023d5f2c",
+   "topics": [
+    "judind",
+    "pubtri",
+    "fairtri"
+   ]
+  },
+  {
+   "n": 34,
+   "sha": "356e897c945b59b8",
+   "topics": [
+    "habcorp",
+    "falseimp",
+    "dueproc"
+   ]
+  },
+  {
+   "n": 35,
+   "sha": "06996d5227c37bab",
+   "topics": [
+    "presinoc",
+    "appeal",
+    "dueproc"
+   ]
+  },
+  {
+   "n": 36,
+   "sha": "e9eaebb7d342a6d0",
+   "topics": [
+    "petition"
+   ]
+  },
+  {
+   "n": 37,
+   "sha": "dd28ad3c0ad2c9f7",
+   "topics": [
+    "voteun"
+   ]
+  },
+  {
+   "n": 38,
+   "sha": "014e4286f44b6b8e",
+   "topics": [
+    "binding"
+   ]
+  },
+  {
+   "n": 39,
+   "sha": "e479f20dcbbbd766",
+   "topics": [
+    "binding"
+   ]
+  },
+  {
+   "n": 40,
+   "sha": "43c5a6c3193f4fbf",
+   "topics": [
+    "citizen"
+   ]
+  },
+  {
+   "n": 41,
+   "sha": "76ed3767d44b4414",
+   "topics": [
+    "citizen",
+    "natcit",
+    "citrev",
+    "asylum"
+   ]
+  },
+  {
+   "n": 42,
+   "sha": "6f341efb9aceeed5",
+   "topics": [
+    "voteres"
+   ]
+  },
+  {
+   "n": 43,
+   "sha": "988c90bdba083c74",
+   "topics": [
+    "camppubf",
+    "partreg"
+   ]
+  },
+  {
+   "n": 44,
+   "sha": "f9cdfad27141c312",
+   "topics": []
+  },
+  {
+   "n": 45,
+   "sha": "6e33368967159ed2",
+   "topics": [
+    "health",
+    "finsup1",
+    "finsup2",
+    "finsup3",
+    "finsup4",
+    "standliv"
+   ]
+  },
+  {
+   "n": 46,
+   "sha": "f3c010cf1ab0521d",
+   "topics": [
+    "fedsep"
+   ]
+  },
+  {
+   "n": 47,
+   "sha": "369b441d0ab27dfa",
+   "topics": [
+    "fedsep"
+   ]
+  },
+  {
+   "n": 48,
+   "sha": "7e47e41563061c8e",
+   "topics": [
+    "fedsep",
+    "sub"
+   ]
+  },
+  {
+   "n": 49,
+   "sha": "8dad782d5f6cd65e",
+   "topics": [
+    "fedsep",
+    "sub"
+   ]
+  },
+  {
+   "n": 50,
+   "sha": "0de997f899baaf47",
+   "topics": [
+    "sub"
+   ]
+  },
+  {
+   "n": 51,
+   "sha": "caef1605ecc00f06",
+   "topics": [
+    "fedsep"
+   ]
+  },
+  {
+   "n": 52,
+   "sha": "2d7d3576359b4620",
+   "topics": [
+    "sub"
+   ]
+  },
+  {
+   "n": 53,
+   "sha": "df01464b9d881a7a",
+   "topics": [
+    "sub"
+   ]
+  },
+  {
+   "n": 54,
+   "sha": "ac5aeb8e50db1d78",
+   "topics": [
+    "fedsep",
+    "fedrev"
+   ]
+  },
+  {
+   "n": 55,
+   "sha": "c605cc77e5785102",
+   "topics": [
+    "mun"
+   ]
+  },
+  {
+   "n": 56,
+   "sha": "21eeb37a408a3876",
+   "topics": [
+    "sub",
+    "fedrev"
+   ]
+  },
+  {
+   "n": 57,
+   "sha": "8da4efa60c41a47a",
+   "topics": [
+    "sub"
+   ]
+  },
+  {
+   "n": 58,
+   "sha": "20c24914cf7e464a",
+   "topics": [
+    "sub",
+    "referen"
+   ]
+  },
+  {
+   "n": 59,
+   "sha": "7ef6ca34c30e0559",
+   "topics": [
+    "headforn"
+   ]
+  },
+  {
+   "n": 60,
+   "sha": "39dd4b35aeb1fdae",
+   "topics": [
+    "sub"
+   ]
+  },
+  {
+   "n": 61,
+   "sha": "fc5ebd8ee85e246c",
+   "topics": [
+    "treat",
+    "sub"
+   ]
+  },
+  {
+   "n": 62,
+   "sha": "448d45182c59ddc0",
+   "topics": []
+  },
+  {
+   "n": 63,
+   "sha": "bb212bab654f8831",
+   "topics": [
+    "milrest",
+    "em"
+   ]
+  },
+  {
+   "n": 64,
+   "sha": "e70645ebaa6a48f3",
+   "topics": [
+    "milserv",
+    "nomil"
+   ]
+  },
+  {
+   "n": 65,
+   "sha": "4a6e36c80aa19fbd",
+   "topics": [
+    "milcom"
+   ]
+  },
+  {
+   "n": 66,
+   "sha": "6cbe900759ec86a7",
+   "topics": [
+    "em"
+   ]
+  },
+  {
+   "n": 67,
+   "sha": "7fbf7c778e02715e",
+   "topics": []
+  },
+  {
+   "n": 68,
+   "sha": "63429204a5cf4170",
+   "topics": [
+    "edcomp",
+    "edfree"
+   ]
+  },
+  {
+   "n": 69,
+   "sha": "e74fded167d8d38c",
+   "topics": []
+  },
+  {
+   "n": 70,
+   "sha": "c62ce5bbe69c2571",
+   "topics": [
+    "achighed"
+   ]
+  },
+  {
+   "n": 71,
+   "sha": "ee387441ef53fada",
+   "topics": [
+    "science"
+   ]
+  },
+  {
+   "n": 72,
+   "sha": "5fe7fec5d447a1ca",
+   "topics": []
+  },
+  {
+   "n": 73,
+   "sha": "c347829deaaa5f6a",
+   "topics": [
+    "achighed"
+   ]
+  },
+  {
+   "n": 74,
+   "sha": "4a8c791424edc676",
+   "topics": [
+    "childpro"
+   ]
+  },
+  {
+   "n": 75,
+   "sha": "4da59f8e1dd8c373",
+   "topics": [
+    "artists"
+   ]
+  },
+  {
+   "n": 76,
+   "sha": "46bfe0a2472d8b8f",
+   "topics": []
+  },
+  {
+   "n": 77,
+   "sha": "ac3749a77bd618d5",
+   "topics": [
+    "cultrght"
+   ]
+  },
+  {
+   "n": 78,
+   "sha": "0e89e7b17b8c448a",
+   "topics": [
+    "lang",
+    "langprot"
+   ]
+  },
+  {
+   "n": 79,
+   "sha": "e9adc38140e38dcb",
+   "topics": [
+    "artists"
+   ]
+  },
+  {
+   "n": 80,
+   "sha": "de97ad4c58b396e6",
+   "topics": [
+    "seprel"
+   ]
+  },
+  {
+   "n": 81,
+   "sha": "03803e64a5198e99",
+   "topics": [
+    "census"
+   ]
+  },
+  {
+   "n": 82,
+   "sha": "4ab1587937930ef6",
+   "topics": [
+    "env"
+   ]
+  },
+  {
+   "n": 83,
+   "sha": "f7293912269ff36b",
+   "topics": [
+    "env"
+   ]
+  },
+  {
+   "n": 84,
+   "sha": "46f0ca5aae8d2092",
+   "topics": [
+    "env"
+   ]
+  },
+  {
+   "n": 85,
+   "sha": "50d7610f7b9430b0",
+   "topics": []
+  },
+  {
+   "n": 86,
+   "sha": "a7e75c4e6275157d",
+   "topics": [
+    "env"
+   ]
+  },
+  {
+   "n": 87,
+   "sha": "4d10278ce5d97960",
+   "topics": [
+    "env"
+   ]
+  },
+  {
+   "n": 88,
+   "sha": "d0bb8ef3376ed48d",
+   "topics": [
+    "env",
+    "cultrght"
+   ]
+  },
+  {
+   "n": 89,
+   "sha": "c0059d29271fd05d",
+   "topics": [
+    "env"
+   ]
+  },
+  {
+   "n": 90,
+   "sha": "a9948d3c22de7636",
+   "topics": [
+    "env"
+   ]
+  },
+  {
+   "n": 91,
+   "sha": "9a790b5bec66b367",
+   "topics": []
+  },
+  {
+   "n": 92,
+   "sha": "d9da937138449d85",
+   "topics": []
+  },
+  {
+   "n": 93,
+   "sha": "34c4ef2c90c181f6",
+   "topics": []
+  },
+  {
+   "n": 94,
+   "sha": "a1504fc8de6035f8",
+   "topics": []
+  },
+  {
+   "n": 95,
+   "sha": "d136d4393795f2a2",
+   "topics": []
+  },
+  {
+   "n": 96,
+   "sha": "a5179bf28dfb210a",
+   "topics": []
+  },
+  {
+   "n": 97,
+   "sha": "0305a7ed8b19dd2b",
+   "topics": []
+  },
+  {
+   "n": 98,
+   "sha": "25d3fda721e10256",
+   "topics": [
+    "env"
+   ]
+  },
+  {
+   "n": 99,
+   "sha": "3bd429c1db350c6c",
+   "topics": []
+  },
+  {
+   "n": 100,
+   "sha": "3ce3a7bc11c58a63",
+   "topics": []
+  },
+  {
+   "n": 101,
+   "sha": "8138c5c3cddccbff",
+   "topics": [
+    "telecom"
+   ]
+  },
+  {
+   "n": 102,
+   "sha": "db5cc7486b429bb2",
+   "topics": [
+    "radio",
+    "tv",
+    "medcom"
+   ]
+  },
+  {
+   "n": 103,
+   "sha": "c9260b18d8b08817",
+   "topics": [
+    "freecomp"
+   ]
+  },
+  {
+   "n": 104,
+   "sha": "f200122393c70e13",
+   "topics": [
+    "busines"
+   ]
+  },
+  {
+   "n": 105,
+   "sha": "a0ee2909eafae607",
+   "topics": [
+    "freecomp"
+   ]
+  },
+  {
+   "n": 106,
+   "sha": "1ac14d24ee2106f9",
+   "topics": [
+    "conright"
+   ]
+  },
+  {
+   "n": 107,
+   "sha": "6ca1b8f0d2df5a5e",
+   "topics": []
+  },
+  {
+   "n": 108,
+   "sha": "c21eb6c996a5f1a2",
+   "topics": [
+    "bank"
+   ]
+  },
+  {
+   "n": 109,
+   "sha": "5b52eec8c2fc0828",
+   "topics": [
+    "econplan"
+   ]
+  },
+  {
+   "n": 110,
+   "sha": "d6620430c01ed978",
+   "topics": []
+  },
+  {
+   "n": 111,
+   "sha": "ed0a6558e24b846f",
+   "topics": [
+    "em"
+   ]
+  },
+  {
+   "n": 112,
+   "sha": "6926123af1f80f85",
+   "topics": [
+    "resrce"
+   ]
+  },
+  {
+   "n": 113,
+   "sha": "889a87e676647753",
+   "topics": [
+    "opgroup"
+   ]
+  },
+  {
+   "n": 114,
+   "sha": "b3eb40846a429a84",
+   "topics": []
+  },
+  {
+   "n": 115,
+   "sha": "9b1f5970d0567f8e",
+   "topics": []
+  },
+  {
+   "n": 116,
+   "sha": "99b79a4d62040a74",
+   "topics": [
+    "illsub"
+   ]
+  },
+  {
+   "n": 117,
+   "sha": "e6192821973ce49f",
+   "topics": [
+    "arms"
+   ]
+  },
+  {
+   "n": 118,
+   "sha": "5df4467fc95817c4",
+   "topics": [
+    "shelter"
+   ]
+  },
+  {
+   "n": 119,
+   "sha": "3a8ea991b4d72a4f",
+   "topics": [
+    "shelter"
+   ]
+  },
+  {
+   "n": 120,
+   "sha": "a5b2c33a25f49c77",
+   "topics": [
+    "leisure"
+   ]
+  },
+  {
+   "n": 121,
+   "sha": "991f8be17c464b15",
+   "topics": [
+    "remuner",
+    "opgroup"
+   ]
+  },
+  {
+   "n": 122,
+   "sha": "642b04213d111ba5",
+   "topics": [
+    "finsup1",
+    "finsup2",
+    "finsup3",
+    "standliv"
+   ]
+  },
+  {
+   "n": 123,
+   "sha": "a98139b749298456",
+   "topics": [
+    "finsup3"
+   ]
+  },
+  {
+   "n": 124,
+   "sha": "4f80a3da38642b35",
+   "topics": [
+    "finsup2"
+   ]
+  },
+  {
+   "n": 125,
+   "sha": "40e31b4ab523256a",
+   "topics": [
+    "finsup1",
+    "finsup3"
+   ]
+  },
+  {
+   "n": 126,
+   "sha": "4f671198cc56147c",
+   "topics": [
+    "standliv"
+   ]
+  },
+  {
+   "n": 127,
+   "sha": "1a94373452cea421",
+   "topics": [
+    "finsup4"
+   ]
+  },
+  {
+   "n": 128,
+   "sha": "e7b21d7401661b42",
+   "topics": [
+    "health"
+   ]
+  },
+  {
+   "n": 129,
+   "sha": "e273e0698571fd03",
+   "topics": [
+    "health",
+    "illsub"
+   ]
+  },
+  {
+   "n": 130,
+   "sha": "503865625ae333a2",
+   "topics": [
+    "science",
+    "dignity",
+    "privacy"
+   ]
+  },
+  {
+   "n": 131,
+   "sha": "fbf92c491e5a4e6a",
+   "topics": [
+    "dignity",
+    "privacy"
+   ]
+  },
+  {
+   "n": 132,
+   "sha": "e676d7d36eae9e93",
+   "topics": [
+    "dignity"
+   ]
+  },
+  {
+   "n": 133,
+   "sha": "9d8003a6698fa12e",
+   "topics": [
+    "env"
+   ]
+  },
+  {
+   "n": 134,
+   "sha": "5d32b37fdabfe032",
+   "topics": []
+  },
+  {
+   "n": 135,
+   "sha": "7f1f0b79c5838eff",
+   "topics": []
+  },
+  {
+   "n": 136,
+   "sha": "687217633551eff3",
+   "topics": [
+    "asylum"
+   ]
+  },
+  {
+   "n": 137,
+   "sha": "e86872dca4bb8d16",
+   "topics": [
+    "balbudgt"
+   ]
+  },
+  {
+   "n": 138,
+   "sha": "9d34c3adbce9137b",
+   "topics": [
+    "tax"
+   ]
+  },
+  {
+   "n": 139,
+   "sha": "9c806fd495886b93",
+   "topics": [
+    "tax",
+    "taxes"
+   ]
+  },
+  {
+   "n": 140,
+   "sha": "83c7caea28d31501",
+   "topics": [
+    "tax"
+   ]
+  },
+  {
+   "n": 141,
+   "sha": "9aeeaa7e45e4e002",
+   "topics": [
+    "tax"
+   ]
+  },
+  {
+   "n": 142,
+   "sha": "baa2b22671db1301",
+   "topics": [
+    "tax"
+   ]
+  },
+  {
+   "n": 143,
+   "sha": "917a8f2e6fbcfd66",
+   "topics": [
+    "sub",
+    "opgroup"
+   ]
+  },
+  {
+   "n": 144,
+   "sha": "99a8a154206d8e61",
+   "topics": [
+    "voteun",
+    "voteres"
+   ]
+  },
+  {
+   "n": 145,
+   "sha": "9c0b75268f6a8d3f",
+   "topics": [
+    "partrght",
+    "partunco",
+    "partprh",
+    "partreg"
+   ]
+  },
+  {
+   "n": 146,
+   "sha": "ea057050edf8c3fc",
+   "topics": [
+    "initiat",
+    "referen"
+   ]
+  },
+  {
+   "n": 147,
+   "sha": "a45df92791bc9b94",
+   "topics": [
+    "initiat"
+   ]
+  },
+  {
+   "n": 148,
+   "sha": "4d4af5d517d470fd",
+   "topics": [
+    "referen",
+    "amend"
+   ]
+  },
+  {
+   "n": 149,
+   "sha": "780125bfba081b99",
+   "topics": [
+    "referen"
+   ]
+  },
+  {
+   "n": 150,
+   "sha": "08b99495dc93d6ec",
+   "topics": [
+    "lhrest",
+    "uhrest",
+    "cabrest"
+   ]
+  },
+  {
+   "n": 151,
+   "sha": "2d5d7e48eeaef40a",
+   "topics": [
+    "assets",
+    "profleg"
+   ]
+  },
+  {
+   "n": 152,
+   "sha": "a64aeb936788979b",
+   "topics": [
+    "lhterm",
+    "uhterm",
+    "lhtrmlim",
+    "uhtrmlim",
+    "hocterm",
+    "hocterml",
+    "judretir",
+    "hogterm"
+   ]
+  },
+  {
+   "n": 153,
+   "sha": "a59a432d7e76290f",
+   "topics": []
+  },
+  {
+   "n": 154,
+   "sha": "18348ca459f9717b",
+   "topics": [
+    "civil"
+   ]
+  },
+  {
+   "n": 155,
+   "sha": "844056981027d1a8",
+   "topics": []
+  },
+  {
+   "n": 156,
+   "sha": "f7bd0022b20bd207",
+   "topics": [
+    "housenum",
+    "divhouse"
+   ]
+  },
+  {
+   "n": 157,
+   "sha": "ec9a113e497fa6b8",
+   "topics": [
+    "lhselect",
+    "district",
+    "lhterm",
+    "electsch",
+    "lhseats"
+   ]
+  },
+  {
+   "n": 158,
+   "sha": "5eb9121f6b9120ae",
+   "topics": [
+    "uhselect",
+    "uhseats",
+    "uhterm",
+    "electsch"
+   ]
+  },
+  {
+   "n": 159,
+   "sha": "86de8c75deeb7e41",
+   "topics": [
+    "session",
+    "exsess"
+   ]
+  },
+  {
+   "n": 160,
+   "sha": "3e68ace2aa5605d4",
+   "topics": [
+    "lhlead",
+    "uhlead"
+   ]
+  },
+  {
+   "n": 161,
+   "sha": "a2564f00ef226f8c",
+   "topics": [
+    "commit",
+    "stdcom",
+    "invexe"
+   ]
+  },
+  {
+   "n": 162,
+   "sha": "330b54ac39bc6ae3",
+   "topics": []
+  },
+  {
+   "n": 163,
+   "sha": "a0e2c5c8e83f297c",
+   "topics": [
+    "legapp",
+    "divhouse"
+   ]
+  },
+  {
+   "n": 164,
+   "sha": "469dd0563f56cacc",
+   "topics": [
+    "legjoint",
+    "pardon"
+   ]
+  },
+  {
+   "n": 165,
+   "sha": "47c25c26fd3bcace",
+   "topics": [
+    "pubmeet"
+   ]
+  },
+  {
+   "n": 166,
+   "sha": "6556a7d342ed50db",
+   "topics": [
+    "quorum"
+   ]
+  },
+  {
+   "n": 167,
+   "sha": "a85386039b9d1efc",
+   "topics": [
+    "legini"
+   ]
+  },
+  {
+   "n": 168,
+   "sha": "b9cdb28bcbbd2cec",
+   "topics": [
+    "immunity"
+   ]
+  },
+  {
+   "n": 169,
+   "sha": "6e753c200f293e7e",
+   "topics": [
+    "legapp"
+   ]
+  },
+  {
+   "n": 170,
+   "sha": "16922c765681b4fc",
+   "topics": [
+    "legapp"
+   ]
+  },
+  {
+   "n": 171,
+   "sha": "f94884fcaf54f14f",
+   "topics": [
+    "em"
+   ]
+  },
+  {
+   "n": 172,
+   "sha": "2706a0fe1078414f",
+   "topics": [
+    "treat"
+   ]
+  },
+  {
+   "n": 173,
+   "sha": "ab36a32037a604a9",
+   "topics": [
+    "budget"
+   ]
+  },
+  {
+   "n": 174,
+   "sha": "20ce628e5b39495a",
+   "topics": [
+    "cabsel",
+    "hocsel"
+   ]
+  },
+  {
+   "n": 175,
+   "sha": "a6f6b8ec7b7978ad",
+   "topics": [
+    "invexe"
+   ]
+  },
+  {
+   "n": 176,
+   "sha": "9a84e9293a18df1d",
+   "topics": [
+    "invexe"
+   ]
+  },
+  {
+   "n": 177,
+   "sha": "717cea1f8ad5b91a",
+   "topics": [
+    "invexe"
+   ]
+  },
+  {
+   "n": 178,
+   "sha": "2145730eb6465f3e",
+   "topics": [
+    "fedrev"
+   ]
+  },
+  {
+   "n": 179,
+   "sha": "b699c919d1a745ec",
+   "topics": [
+    "em",
+    "initiat"
+   ]
+  },
+  {
+   "n": 180,
+   "sha": "daf6615fecee8c93",
+   "topics": [
+    "execnum"
+   ]
+  },
+  {
+   "n": 181,
+   "sha": "f29db3bc9d7d943b",
+   "topics": [
+    "cabinet",
+    "cabsel",
+    "cabrest"
+   ]
+  },
+  {
+   "n": 182,
+   "sha": "19410fdd9020a90b",
+   "topics": [
+    "hoselect",
+    "hosterm",
+    "hosterml"
+   ]
+  },
+  {
+   "n": 183,
+   "sha": "48f80dbde9eda452",
+   "topics": [
+    "cabinet",
+    "cabpow"
+   ]
+  },
+  {
+   "n": 184,
+   "sha": "fc7dd571cfe2d5f1",
+   "topics": [
+    "civil"
+   ]
+  },
+  {
+   "n": 185,
+   "sha": "8aa12fb0be6a2dcf",
+   "topics": [
+    "cabpow"
+   ]
+  },
+  {
+   "n": 186,
+   "sha": "2dc1f36e43887c3c",
+   "topics": [
+    "legini"
+   ]
+  },
+  {
+   "n": 187,
+   "sha": "449f323a1d4964a5",
+   "topics": [
+    "cabpow"
+   ]
+  },
+  {
+   "n": 188,
+   "sha": "58dfd7be93a1c7b3",
+   "topics": [
+    "budget"
+   ]
+  },
+  {
+   "n": 189,
+   "sha": "12dd2ff832659dd9",
+   "topics": [
+    "headforn",
+    "treat"
+   ]
+  },
+  {
+   "n": 190,
+   "sha": "5216e305d1ec487c",
+   "topics": [
+    "em"
+   ]
+  },
+  {
+   "n": 191,
+   "sha": "df7d89f3333254c7",
+   "topics": [
+    "fedrev"
+   ]
+  },
+  {
+   "n": 192,
+   "sha": "ffcbf1e2689b8d2b",
+   "topics": []
+  },
+  {
+   "n": 193,
+   "sha": "9c9f46d5e79e0dcd",
+   "topics": [
+    "levjud",
+    "judcrts1",
+    "judcrts2"
+   ]
+  },
+  {
+   "n": 194,
+   "sha": "63d4dce21058b8fc",
+   "topics": [
+    "suppow",
+    "uncon",
+    "conpow"
+   ]
+  },
+  {
+   "n": 195,
+   "sha": "af881d8a9a02ea1a",
+   "topics": [
+    "intlaw"
+   ]
+  },
+  {
+   "n": 196,
+   "sha": "257d57c8c3b7da1d",
+   "topics": [
+    "suppow"
+   ]
+  },
+  {
+   "n": 197,
+   "sha": "8f5da6579add63fa",
+   "topics": [
+    "ordsel",
+    "levjud"
+   ]
+  },
+  {
+   "n": 198,
+   "sha": "c5ff3f831e63ffed",
+   "topics": [
+    "judind"
+   ]
+  },
+  {
+   "n": 199,
+   "sha": "5f1519e049bb1f36",
+   "topics": [
+    "amend"
+   ]
+  },
+  {
+   "n": 200,
+   "sha": "70d10216d829eed8",
+   "topics": [
+    "amend",
+    "unamend",
+    "initiat"
+   ]
+  },
+  {
+   "n": 201,
+   "sha": "c5cf9436e7bde8b7",
+   "topics": [
+    "amend",
+    "referen"
+   ]
+  },
+  {
+   "n": 202,
+   "sha": "abe0a16c8a5790b1",
+   "topics": [
+    "tranprov"
+   ]
+  }
+ ],
+ "review": {
+  "status": "unreviewed",
+  "reviewer": null,
+  "date": null,
+  "publish": true,
+  "notes": "Published unreviewed at the user's call (2026-10-03); the page says it is not yet reviewed."
+ },
+ "note_fa": "ساختار و عنوان اصول این پیش‌نویس تقریبن اصل به اصل از قانون اساسی فدرال سوئیس (۱۹۹۹) پیروی می‌کند. اصل ۱ («مردم ایالات … ایالات متحده ایران را تشکیل می‌دهند») و اصل ۲ (اهداف) همان اصل‌های ۱ و ۲ سوئیس‌اند؛ اصل‌های ۶ و ۷ (حکومت قانون، مسئولیت فردی و جمعی) همان ۵ و ۶؛ پارلمان با دو مجلس هم‌تراز، حکومت جمعی که پارلمان برمی‌گزیند و ریاست یک‌ساله‌ی چرخشی، دیوان عالی واحد، و اصل‌هایی درباره‌ی شکار و ماهی‌گیری، حمایت از حیوانات، الکل، سلاح، پزشکی تولید مثل، پیوند اعضا و مهندسی ژنتیک نیز همان الگو را دارند. جاهایی که پیش‌نویس از الگو جدا می‌شود: حق جدایی ایالت‌ها (اصل ۱)، نیمی از کرسی‌ها و مقام‌ها برای زنان (اصل ۲)، سقف ده‌برابری دستمزد (اصل‌های ۱۲۱ و ۱۵۴) و ممنوعیت سلاح برای افراد (اصل ۱۱۷). مقایسه از روی حافظه‌ی متن سوئیس انجام شده، نه با متن کنار متن.",
+ "note_en": "The draft's structure and article titles follow the Swiss Federal Constitution of 1999 almost article by article. Art. 1 (“the people of the states … form the United States of Iran”) and Art. 2 (aims) are Swiss Arts. 1 and 2; Arts. 6–7 (rule of law, individual and collective responsibility) are Swiss Arts. 5–6; so are the two equal chambers, a collegial government elected by parliament with a one-year rotating presidency, a single supreme court, and articles on hunting and fishing, animal protection, alcohol, weapons, reproductive medicine, transplants and gene technology. Where it departs: a right of secession (Art. 1), half of all seats and offices for women (Art. 2), a tenfold cap on pay (Arts. 121, 154) and a ban on private weapons (Art. 117). The comparison was made from memory of the Swiss text, not side by side.",
+ "findings": [
+  {
+   "fa": "نهاد ناظر مستقل ندارد: نه بازرس عمومی (Ombudsman)، نه کمیسیون حقوق بشر، نه نهادی برای مبارزه با فساد.",
+   "en": "No independent oversight body: no ombudsman, no human rights commission, no anti-corruption body.",
+   "topics": [
+    "ombuds",
+    "hr",
+    "cc"
+   ],
+   "articles": []
+  },
+  {
+   "fa": "نهاد مستقل برگزاری و نظارت بر انتخابات ندارد. هر مجلس خود بر انتخاب اعضایش نظارت می‌کند و تنها راه اعتراض، دادگاه قانون اساسی است.",
+   "en": "No independent electoral body: each chamber oversees its own election, with an appeal to the constitutional court.",
+   "topics": [
+    "ecom"
+   ],
+   "articles": [
+    157,
+    158
+   ]
+  },
+  {
+   "fa": "درباره‌ی جنایت‌های حکومت پیشین یا کمیسیون حقیقت چیزی ندارد. دوران گذار تنها در پانویس اصل ۱ و اصل ۲۰۲ (که خالی مانده) آمده است.",
+   "en": "Nothing on the previous regime's crimes or a truth commission; the transition appears only in the footnote to Art. 1 and in Art. 202, left blank.",
+   "topics": [
+    "prevlead",
+    "truthcom"
+   ],
+   "articles": [
+    1,
+    202
+   ]
+  },
+  {
+   "fa": "برکناری ندارد: وزیران، رئیس جمهوری چرخشی و قاضیان دیوان عالی تا پایان دوره‌شان برکنارشدنی نیستند و انحلال پارلمان هم پیش‌بینی نشده است.",
+   "en": "No removal: ministers, the rotating president and the supreme court's judges cannot be removed before their term ends, and parliament cannot be dissolved.",
+   "topics": [
+    "cabdiss",
+    "hogdiss",
+    "hosdiss",
+    "jrem",
+    "legdiss"
+   ],
+   "articles": [
+    152,
+    174,
+    181,
+    182
+   ]
+  },
+  {
+   "fa": "اعلان جنگ و فرماندهی کل نیروهای مسلح را به کسی نسپرده است؛ اصل ۱۷۹ تنها از آماده‌باش و بسیج در وضعیت اضطراری می‌گوید.",
+   "en": "No war power and no commander in chief; Art. 179 only covers alert and mobilisation in emergencies.",
+   "topics": [
+    "war",
+    "comchief"
+   ],
+   "articles": [
+    63,
+    179
+   ]
+  },
+  {
+   "fa": "در دادرسی کیفری، منع محاکمه‌ی دوباره برای یک جرم، اصل «بی‌قانون مجازاتی نیست»، حق سکوت و قاعده‌های گردآوری دلیل نیامده‌اند.",
+   "en": "Criminal procedure lacks protection against double jeopardy, “no punishment without law”, the right to silence and rules on evidence.",
+   "topics": [
+    "doubjep",
+    "wolaw",
+    "miranda",
+    "evidence"
+   ],
+   "articles": [
+    34,
+    35
+   ]
+  },
+  {
+   "fa": "اصل ۹ فهرست بلندی از زمینه‌های تبعیض دارد، اما نژاد و رنگ پوست در آن نیست.",
+   "en": "Art. 9 lists many grounds of discrimination, but not race or skin colour.",
+   "topics": [
+    "equalgr4",
+    "equalgr10"
+   ],
+   "articles": [
+    9
+   ]
+  },
+  {
+   "fa": "بردگی و کار اجباری ممنوع نشده است.",
+   "en": "Slavery and forced labour are not prohibited.",
+   "topics": [
+    "slave"
+   ],
+   "articles": []
+  },
+  {
+   "fa": "به معاهده‌های بین‌المللی حقوق بشر اشاره‌ای ندارد؛ اصل‌های ۶ و ۱۹۵ تنها از «قوانین بین‌المللی» به‌طور کلی می‌گویند.",
+   "en": "No reference to international human rights treaties; Arts. 6 and 195 speak only of international law in general.",
+   "topics": [
+    "intrght"
+   ],
+   "articles": [
+    6,
+    195
+   ]
+  },
+  {
+   "fa": "جاهای خالی در متن: فهرست کامل ایالت‌ها و پایتخت و روز ملی (اصل ۱)، شمار نمایندگان مجلس و سنا (اصل‌های ۱۵۷ و ۱۵۸) و شمار وزیران (اصل ۱۸۱).",
+   "en": "Blanks left in the text: the full list of states, the capital and the national day (Art. 1), the size of both chambers (Arts. 157, 158) and the number of ministers (Art. 181).",
+   "topics": [],
+   "articles": [
+    1,
+    157,
+    158,
+    181
+   ]
+  }
+ ]
+}

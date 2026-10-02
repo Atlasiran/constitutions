@@ -1,0 +1,478 @@
+{
+ "pages": {
+  "40bb0dc52eb3f048:1:01fd7bd4987dcf7a:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 1,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:2:becf99f6453e546f:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 2,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:3:ece54c8e10406432:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 3,
+   "by": "claude-code session 2026-10-03",
+   "method": "contents page: each entry checked against the proofread article heading"
+  },
+  "40bb0dc52eb3f048:4:a1b3715b3cef01c4:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 4,
+   "by": "claude-code session 2026-10-03",
+   "method": "contents page: each entry checked against the proofread article heading"
+  },
+  "40bb0dc52eb3f048:5:1edc4e72eeaef478:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 5,
+   "by": "claude-code session 2026-10-03",
+   "method": "contents page: each entry checked against the proofread article heading"
+  },
+  "40bb0dc52eb3f048:6:a9dfdeae1a581e53:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 6,
+   "by": "claude-code session 2026-10-03",
+   "method": "contents page: each entry checked against the proofread article heading"
+  },
+  "40bb0dc52eb3f048:7:bc7bbcd8cfcca7ce:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 7,
+   "by": "claude-code session 2026-10-03",
+   "method": "contents page: each entry checked against the proofread article heading"
+  },
+  "40bb0dc52eb3f048:8:574ec51dc1497391:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 8,
+   "by": "claude-code session 2026-10-03",
+   "method": "contents page: each entry checked against the proofread article heading"
+  },
+  "40bb0dc52eb3f048:9:03f946c709f64217:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 9,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:10:c1093481c39f4bc2:claude-opus-5-5:v1": {
+   "corrections": [
+    {
+     "find": "تشکیل میدهند.۱",
+     "replace": "تشکیل میدهند.1",
+     "kind": "wrong_number"
+    },
+    {
+     "find": "۱ در مدت کوتاهی",
+     "replace": "1 در مدت کوتاهی",
+     "kind": "wrong_number"
+    }
+   ],
+   "page": 10,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:11:c361c84efb3b7470:claude-opus-5-5:v1": {
+   "corrections": [
+    {
+     "find": "در قانون برابری حقوق و حقیقی",
+     "replace": "در قانون برابری حقوقی و حقیقی",
+     "kind": "wrong_letters"
+    }
+   ],
+   "page": 11,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:12:33faaf035c754fb0:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 12,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:13:4a1a81b64bb9bcb1:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 13,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:14:1595a1c69287e760:claude-opus-5-5:v1": {
+   "corrections": [
+    {
+     "find": "زمان معقول رسیدگ شود",
+     "replace": "زمان معقول رسیدگی شود",
+     "kind": "wrong_letters"
+    }
+   ],
+   "page": 14,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:15:db883c7b24881558:claude-opus-5-5:v1": {
+   "corrections": [
+    {
+     "find": "پشتیبانی حقوق در دادگاه",
+     "replace": "پشتیبانی حقوقی در دادگاه",
+     "kind": "wrong_letters"
+    }
+   ],
+   "page": 15,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:16:c7d7227dd5af6876:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 16,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:17:50b0753e0a6b3ae3:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 17,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:18:7cf4e43d36ce1764:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 18,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:19:a8287db210f8131f:claude-opus-5-5:v1": {
+   "corrections": [
+    {
+     "find": "احترام میگذارد و ویژگ\n",
+     "replace": "احترام میگذارد و ویژگی\n",
+     "kind": "wrong_letters"
+    }
+   ],
+   "page": 19,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:20:e8c359be8b5e79da:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 20,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:21:d53d031129b0d570:claude-opus-5-5:v1": {
+   "corrections": [
+    {
+     "find": "هرگونه تغیر در حدود مرزی",
+     "replace": "هرگونه تغییر در حدود مرزی",
+     "kind": "wrong_letters"
+    }
+   ],
+   "page": 21,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:22:4cd70090681f4d14:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 22,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:23:f93261f57077c1f2:claude-opus-5-5:v1": {
+   "corrections": [
+    {
+     "find": "با پیش شرطهائ چون",
+     "replace": "با پیش شرطهائی چون",
+     "kind": "wrong_letters"
+    }
+   ],
+   "page": 23,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:24:b76b275e91c31050:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 24,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:25:4753ed8e4e8fa1df:claude-opus-5-5:v1": {
+   "corrections": [
+    {
+     "find": "از عملکردهای ایالت چند زبانه",
+     "replace": "از عملکردهای ایالات چند زبانه",
+     "kind": "wrong_letters"
+    }
+   ],
+   "page": 25,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:26:3ae78560d7f08e4d:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 26,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:27:350dd063bd64ad5c:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 27,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:28:4e4d4d3d74e09f08:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 28,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:29:094ad418f499343a:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 29,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:30:dff929b98a80e495:claude-opus-5-5:v1": {
+   "corrections": [
+    {
+     "find": "برای مطالبات حقوق تا سقف",
+     "replace": "برای مطالبات حقوقی تا سقف",
+     "kind": "wrong_letters"
+    }
+   ],
+   "page": 30,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:31:586a5efb81cb4e27:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 31,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:32:154f509ea719ac87:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 32,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:33:f31cd2c832df68f2:claude-opus-5-5:v1": {
+   "corrections": [
+    {
+     "find": "خودداری خواهد کرد.",
+     "replace": "خوداری خواهد کرد.",
+     "kind": "wrong_letters"
+    }
+   ],
+   "page": 33,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:34:e4d68ae73d954ed3:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 34,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:35:9025d3d281db1506:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 35,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:36:ae5a45c561c701bb:claude-opus-5-5:v1": {
+   "corrections": [
+    {
+     "find": "مرکزی اشخاص حقوق در آنها",
+     "replace": "مرکزی اشخاص حقوقی در آنها",
+     "kind": "wrong_letters"
+    }
+   ],
+   "page": 36,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:37:c7f6d7d093cb4968:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 37,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:38:903fe5c0a254adc1:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 38,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:39:bdd89050e593852a:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 39,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:40:25be49c8343669b7:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 40,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:41:46250bde1c59dd77:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 41,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:42:5aa7a1bce79861cb:claude-opus-5-5:v1": {
+   "corrections": [
+    {
+     "find": "در انتخابات عمومی منشأ گرفته",
+     "replace": "در انتخابات عموی منشأ گرفته",
+     "kind": "wrong_letters"
+    }
+   ],
+   "page": 42,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:43:19889b40f1c43afa:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 43,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:44:e58f7611acebdbcf:claude-opus-5-5:v1": {
+   "corrections": [
+    {
+     "find": "آنهایی توانند دراین انتخابات",
+     "replace": "آنها می توانند دراین انتخابات",
+     "kind": "wrong_letters"
+    }
+   ],
+   "page": 44,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:45:86391b00f2ef7304:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 45,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:46:c399546f185197cc:claude-opus-5-5:v1": {
+   "corrections": [
+    {
+     "find": "شعبه های دادگاه های قانون اساسی فدرال",
+     "replace": "شعبه های دادگاه قانون اساسی فدرال",
+     "kind": "extra_text"
+    }
+   ],
+   "page": 46,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:47:1e734cb99b55b248:claude-opus-5-5:v1": {
+   "corrections": [
+    {
+     "find": "در مورد اختلافات حقوق مابین",
+     "replace": "در مورد اختلافات حقوقی مابین",
+     "kind": "wrong_letters"
+    },
+    {
+     "find": "در مورد دعاوی حقوق که",
+     "replace": "در مورد دعاوی حقوقی که",
+     "kind": "wrong_letters"
+    }
+   ],
+   "page": 47,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:48:88b409b29df27572:claude-opus-5-5:v1": {
+   "corrections": [
+    {
+     "find": "اصل .... ...",
+     "replace": "اصل .... ...\n\n......",
+     "kind": "missing_text"
+    }
+   ],
+   "page": 48,
+   "by": "claude-code session 2026-10-03",
+   "method": "page image read in a Claude Code session"
+  },
+  "40bb0dc52eb3f048:10:3144e897acb0e269:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 10,
+   "after_apply": true
+  },
+  "40bb0dc52eb3f048:11:741d4dd4de982980:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 11,
+   "after_apply": true
+  },
+  "40bb0dc52eb3f048:14:329556effb86f7f8:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 14,
+   "after_apply": true
+  },
+  "40bb0dc52eb3f048:15:bb86ec818353a69f:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 15,
+   "after_apply": true
+  },
+  "40bb0dc52eb3f048:19:cb15d7ae16a88cef:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 19,
+   "after_apply": true
+  },
+  "40bb0dc52eb3f048:21:01a289fb4bbb931a:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 21,
+   "after_apply": true
+  },
+  "40bb0dc52eb3f048:23:ac7d78c8584a42a5:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 23,
+   "after_apply": true
+  },
+  "40bb0dc52eb3f048:25:dc1b5c37b9300463:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 25,
+   "after_apply": true
+  },
+  "40bb0dc52eb3f048:30:c5d69cebe6cddad6:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 30,
+   "after_apply": true
+  },
+  "40bb0dc52eb3f048:33:11c4410337972e0e:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 33,
+   "after_apply": true
+  },
+  "40bb0dc52eb3f048:36:3731ad05b897d1c5:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 36,
+   "after_apply": true
+  },
+  "40bb0dc52eb3f048:42:6f6775510b26c088:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 42,
+   "after_apply": true
+  },
+  "40bb0dc52eb3f048:44:414b5ab7fe248556:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 44,
+   "after_apply": true
+  },
+  "40bb0dc52eb3f048:46:0d53e50a5182864d:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 46,
+   "after_apply": true
+  },
+  "40bb0dc52eb3f048:47:afee6d1872ae7803:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 47,
+   "after_apply": true
+  },
+  "40bb0dc52eb3f048:48:db7b4314dc3fc686:claude-opus-5-5:v1": {
+   "corrections": [],
+   "page": 48,
+   "after_apply": true
+  }
+ }
+}

@@ -7,12 +7,15 @@ SRC = os.path.join(ROOT, "(پیشنهادهای پیش‌نویس) قانون ا
 OUT = os.path.join(ROOT, "data", "text")
 
 FA_DIGITS = str.maketrans("۰۱۲۳۴۵۶۷۸۹٠١٢٣٤٥٦٧٨٩", "01234567890123456789")
+# Urdu heh (ھ ہ) where the font meant Persian ه, and Arabic-Indic digits as Persian ones (Mashruteh's text layer)
+LETTERS = str.maketrans("ھہ٠١٢٣٤٥٦٧٨٩", "هه۰۱۲۳۴۵۶۷۸۹")
 
 def normalize_fa(s: str) -> str:
     s = unicodedata.normalize('NFKC', s)
     s = re.sub(r'[‎‏‪-‮⁦-⁩]', '', s)
     s = s.replace('ي', 'ی').replace('ى', 'ی')
     s = s.replace('ك', 'ک')
+    s = s.translate(LETTERS)
     s = re.sub(r'[ً-ْٰ]', '', s)
     s = re.sub(r'[ \t]+', ' ', s)
     s = re.sub(r'\n{3,}', '\n\n', s)

@@ -16,13 +16,14 @@ sometimes "fixes" a typo that the page itself prints). Run it after vision_ocr.p
 """
 import hashlib, json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from vision_ocr import DATA, MODEL, client, doc_for, pdf_hash, render, registry, base64
+from vision_ocr import DATA, MODEL, EARLIER, client, doc_for, pdf_hash, render, registry, base64
 from extract import page_count
 
 PROOF = os.path.join(DATA, "proof")
 JOBS = os.path.join(PROOF, "jobs.json")
 MAX_BATCH = 100
 PROMPT_V = 1
+EFFORT = "medium"   # Opus 5.5 thinks at every effort; telling the page's own typos from ours takes judgement
 KINDS = ["wrong_letters", "missing_text", "extra_text", "wrong_number", "wrong_order", "punctuation"]
 SYSTEM = """You proofread a transcription of one page of a Persian-language constitutional document against the page image. The transcription feeds a research corpus that quotes the documents, so it must match the printed page word for word.
 
@@ -60,8 +61,15 @@ def text_doc(uid):
     return slug, pdf, path, json.load(open(path, encoding="utf-8"))
 
 
-def key(sha, page, text):
-    return f"{sha}:{page}:{hashlib.sha256(text.encode()).hexdigest()[:16]}:{MODEL}:v{PROMPT_V}"
+def key(sha, page, text, model=MODEL):
+    return f"{sha}:{page}:{hashlib.sha256(text.encode()).hexdigest()[:16]}:{model}:v{PROMPT_V}"
+
+
+def cached(cache, sha, page, text):
+    """The cached proofreading of a page in this form, by the current model or an earlier one; None if none."""
+    for m in (MODEL,) + EARLIER:
+        if key(sha, page, text, m) in cache["pages"]: return cache["pages"][key(sha, page, text, m)]
+    return None
 
 
 def load(slug):
@@ -76,8 +84,8 @@ def save(slug, cache):
 
 def params(pdf, page, n, text):
     img = base64.standard_b64encode(render(pdf, page)).decode()
-    return {"model": MODEL, "max_tokens": 8000, "thinking": {"type": "disabled"}, "system": SYSTEM,
-            "output_config": {"format": {"type": "json_schema", "schema": SCHEMA}},
+    return {"model": MODEL, "max_tokens": 16000, "output_config": {"effort": EFFORT,
+            "format": {"type": "json_schema", "schema": SCHEMA}}, "system": SYSTEM,
             "messages": [{"role": "user", "content": [
                 {"type": "image", "source": {"type": "base64", "media_type": "image/jpeg", "data": img}},
                 {"type": "text", "text": f"Page {page} of {n}. Transcription:\n<transcription>\n{text}\n</transcription>"}]}]}
@@ -96,7 +104,7 @@ def pending(uid):
     slug, pdf, _, doc = text_doc(uid)
     sha, cache = pdf_hash(pdf), load(slug)
     return [(p["page"], p["text"]) for p in doc["pages"]
-            if p["text"].strip() and key(sha, p["page"], p["text"]) not in cache["pages"]]
+            if p["text"].strip() and not cached(cache, sha, p["page"], p["text"])]
 
 
 def cmd_test(uid, pages):
@@ -104,14 +112,13 @@ def cmd_test(uid, pages):
     sha, n, cache, c = pdf_hash(pdf), page_count(pdf), load(slug), client()
     for p in pages:
         text = doc["pages"][p - 1]["text"]
-        k = key(sha, p, text)
-        if k not in cache["pages"]:
-            entry, why = entry_for(c.messages.create(**params(pdf, p, n, text)))
-            if not entry:
+        e = cached(cache, sha, p, text)
+        if not e:
+            e, why = entry_for(c.messages.create(**params(pdf, p, n, text)))
+            if not e:
                 print(f"--- page {p}: {why}"); continue
-            cache["pages"][k] = entry | {"page": p}
+            cache["pages"][key(sha, p, text)] = e | {"page": p}
             save(slug, cache)
-        e = cache["pages"][k]
         print(f"--- page {p}  {e.get('usage')}  {len(e['corrections'])} corrections")
         for x in e["corrections"]:
             print(f"  [{x['kind']}] {x['find']!r}\n      -> {x['replace']!r}  ({text.count(x['find'])}x on page)")
@@ -167,7 +174,7 @@ def cmd_apply(uids, write=True):
         sha, cache = pdf_hash(pdf), load(slug)
         done, skipped = [], []
         for pg in doc["pages"]:
-            e = cache["pages"].get(key(sha, pg["page"], pg["text"]))
+            e = cached(cache, sha, pg["page"], pg["text"])
             if not e: continue
             text = pg["text"]
             for x in e["corrections"]:
