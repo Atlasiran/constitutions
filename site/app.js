@@ -13,9 +13,11 @@
      hash      keep the view in location.hash for deep links (default true)
 
    Deep links: #corpus, #map, #search=<text>, #compare=<uid>,<uid>[,<topic>], #editions=<series>[,<uid>,<uid>],
-   #rights=<uid>[,<right>]
+   #rights=<uid>[,<right>], #topics=<uid>[,<topic>]
    Only documents in the same comparison group can be compared (rule: like with like). */
 
+// Persian digits for the strings below
+const num2=n=>Number(n).toLocaleString("fa-IR",{useGrouping:false});
 const T={
  en:{corpus:"Corpus",map:"Similarity",compare:"Compare",editions:"Editions",search:"Search",rights:"Human rights",
    ed:"Edition to edition",edsub:"Some drafts were revised and republished. Pick two editions of one draft: articles are matched across them, and each changed article shows what was removed (red) and added (green).",
@@ -46,6 +48,22 @@ const T={
       "The document's text comes from its PDF and was checked against the page images; the article list shows exactly what was read. Where an article was amended, only the wording in force is assessed.",
       "This is an analytical reading, not legal advice or a ruling."],
    mmodel:(m,b)=>"Model: "+m+" · benchmark version "+b,
+   topics:"Topics",
+   ttitle:"What the document covers, and what it leaves out",
+   tsub:"Every article is tagged with the topics of Constitute's vocabulary (Comparative Constitutions Project): 334 subjects that constitutions around the world address, from the right to life to the removal of judges. The topics no article touches are listed too.",
+   tnone:"No document has been tagged and published yet.",
+   tcount:(a,b)=>a+" of "+b+" topics addressed",tarts:(n,z)=>n+" articles, "+z+" of them on subjects the vocabulary does not code (transport, energy, agriculture …)",
+   tnote:"Observation",tfind:"Gaps worth noting",tgroups:"By subject",tpresent:"Addressed",tabsent:"Not addressed",
+   tart:"Articles",tpre:"Preamble",tdoc:"in the document as a whole",
+   tunrev:"Not yet reviewed: the tags, gaps and observation come from one reading of the text by Claude in a working session; no person has checked them yet.",
+   tm:["The vocabulary is Constitute's topic list (constituteproject.org), used under CC BY-NC 3.0: 334 topics, each with a definition and the question its coders ask of every constitution. Its texts of national constitutions are not used.",
+      "Claude (Anthropic) read the proofread text article by article and tagged each article with the topics it actually provides for, not ones it merely mentions. A tag that names an article missing from the document is rejected.",
+      "“Not addressed” means no article provides for the topic. Some absences are choices (a secular draft has no official religion); others are gaps. The list of gaps worth noting is a reading, not a verdict.",
+      "Persian names of the topics are drafts, not yet reviewed."],
+   tcredit:"Topic vocabulary: Constitute, Comparative Constitutions Project, CC BY-NC 3.0.",
+   vtitle:"The vocabulary",vsub:n=>"All "+n+" topics, by subject: each with its definition and the question Constitute's coders ask of every constitution. Under each topic: the documents published here that provide for it.",
+   vq:"Coding question",vdocs:"Provided for in",vnone:"No published document yet.",vdraft:"Persian name: draft",
+   prog:(a,b)=>a+" of "+b+" constitutions and drafts done so far. The others are queued and follow one by one; the federal drafts come next.",queued:"queued",
    title:"Qanun Atlas",
    lede:"Every known draft constitution for Iran, from the 1906 Fundamental Law to the transitional charters of 2020 — <em>extracted, split into articles, and made comparable</em>. Texts appear exactly as their authors wrote them; nothing here is ranked or endorsed. Alongside them, and kept apart: the bylaws, programmes and charters of organisations in Atlas, and two treatises, each compared only with its own kind.",
    sub:"Iranian constitutional drafts",
@@ -107,6 +125,22 @@ const T={
       "متن سند از فایل PDF آن گرفته و با تصویر صفحه‌ها مقابله شده است؛ فهرست اصول دقیقاً همان است که خوانده شده. در اصول اصلاح‌شده تنها متن معتبر کنونی سنجیده می‌شود.",
       "این یک خوانش تحلیلی است، نه مشاوره‌ی حقوقی یا حکم قضایی."],
    mmodel:(m,b)=>"مدل: "+m+" · نسخه‌ی متن بالادستی "+b,
+   topics:"موضوع‌ها",
+   ttitle:"سند به چه می‌پردازد و چه را نمی‌گوید",
+   tsub:"هر اصل با موضوع‌های واژگان Constitute (پروژه‌ی تطبیقی قانون‌های اساسی) برچسب خورده است: ۳۳۴ موضوعی که قانون‌های اساسی در سراسر جهان به آن‌ها می‌پردازند، از حق زندگی تا برکناری قاضیان. موضوع‌هایی که هیچ اصلی به آن‌ها نپرداخته هم فهرست شده‌اند.",
+   tnone:"هنوز هیچ سندی برچسب نخورده و منتشر نشده است.",
+   tcount:(a,b)=>num2(a)+" از "+num2(b)+" موضوع",tarts:(n,z)=>num2(n)+" اصل؛ "+num2(z)+" تا درباره‌ی موضوع‌هایی که این واژگان ندارد (حمل‌ونقل، انرژی، کشاورزی …)",
+   tnote:"مشاهده",tfind:"کاستی‌های درخور توجه",tgroups:"بر پایه‌ی موضوع",tpresent:"آمده",tabsent:"نیامده",
+   tart:"اصول",tpre:"مقدمه",tdoc:"در کل سند",
+   tunrev:"هنوز بازبینی نشده: برچسب‌ها، کاستی‌ها و مشاهده حاصل یک بار خواندن متن به دست Claude در یک جلسه‌ی کاری‌اند و هنوز کسی آن‌ها را وارسی نکرده است.",
+   tm:["واژگان، فهرست موضوع‌های Constitute است (constituteproject.org) که با پروانه‌ی CC BY-NC 3.0 به کار رفته: ۳۳۴ موضوع، هر یک با تعریف و پرسشی که کدگذاران آن از هر قانون اساسی می‌پرسند. متن قانون‌های اساسی کشورها از آن‌جا به کار نرفته است.",
+      "Claude (ساخت Anthropic) متن مقابله‌شده را اصل به اصل خواند و به هر اصل موضوع‌هایی را داد که آن اصل واقعن درباره‌شان حکم می‌کند، نه موضوع‌هایی که فقط نامشان آمده. برچسبی که به اصلی ناموجود اشاره کند رد می‌شود.",
+      "«نیامده» یعنی هیچ اصلی درباره‌ی آن موضوع حکم نمی‌کند. برخی نبودن‌ها انتخاب‌اند (پیش‌نویسی سکولار دین رسمی ندارد) و برخی کاستی. فهرست کاستی‌ها یک خوانش است، نه حکم.",
+      "نام فارسی موضوع‌ها پیش‌نویس است و هنوز بازبینی نشده."],
+   tcredit:"واژگان موضوع‌ها: Constitute، پروژه‌ی تطبیقی قانون‌های اساسی، CC BY-NC 3.0.",
+   vtitle:"واژگان",vsub:n=>"همه‌ی "+num2(n)+" موضوع، بر پایه‌ی موضوع اصلی: هر یک با تعریفش و پرسشی که کدگذاران Constitute از هر قانون اساسی می‌پرسند. زیر هر موضوع: سندهای منتشرشده در این‌جا که درباره‌ی آن حکم می‌کنند.",
+   vq:"پرسش کدگذاری",vdocs:"آمده در",vnone:"هنوز در هیچ سند منتشرشده‌ای نیامده.",vdraft:"نام فارسی: پیش‌نویس",
+   prog:(a,b)=>"تاکنون "+num2(a)+" سند از "+num2(b)+" قانون اساسی و پیش‌نویس بررسی شده است. بقیه در نوبت‌اند و یکی‌یکی می‌آیند؛ نوبت بعد با پیش‌نویس‌های فدرال است.",queued:"در نوبت",
    title:"اسناد بنیادین",
    lede:"همه‌ی پیش‌نویس‌های شناخته‌شده‌ی قانون اساسی برای ایران، از قانون اساسی مشروطه تا منشورهای دوران گذار — <em>استخراج‌شده، تفکیک‌شده به اصول، و قابل مقایسه</em>. متن‌ها همان‌گونه‌اند که نویسندگانشان نوشته‌اند؛ هیچ‌چیز در اینجا رتبه‌بندی یا تأیید نشده است. در کنار آن‌ها و جدا از آن‌ها: اساس‌نامه‌ها، برنامه‌ها و منشورهای سازمان‌های اطلس و دو رساله، که هر یک تنها با هم‌گونه‌های خود سنجیده می‌شوند.",
    sub:"پیش‌نویس‌های قانون اساسی ایران",
@@ -146,7 +180,7 @@ const BCOL=["var(--s1)","var(--s2)","var(--s3)"];
 // Comparison groups (plan §6): bylaws are never compared with constitutions.
 export const GROUP={constitution:"A",constitution_proposal:"A",bylaws:"B",
   charter:"C",program:"C",ideology:"C",treatise:"D"};
-const VIEWS=["corpus","map","compare","editions","search","rights"];
+const VIEWS=["corpus","map","compare","editions","search","rights","topics"];
 
 // articles.json keeps the splitter's pattern for the unit; this is the word to show
 const UNITW={"شماره":["","Art."],"اص[سص]?ل":["اصل","Art."],"ماد[هدة]":["ماده","Art."],"بند":["بند","Clause"],"تبصره":["تبصره","Note"]};
@@ -159,7 +193,7 @@ export function mount(root, opts={}){
   const pdfUrl=new URL(opts.pdfUrl||"pdf/", new URL(".", import.meta.url));
   let L=opts.lang||(embedded?"fa":"en"), CAT=[], AN=null, ARTS=[], view="corpus";
   let cmpA=null,cmpB=null,cmpT=null,q="",AUD=null,audDoc=null,audRight=null,audFilter=null;
-  let ED=null,edS=null,edA=null,edB=null,edAll=false,mapG="A",srchG=null;
+  let TOP=null,topDoc=null,topLeaf=null,ED=null,edS=null,edA=null,edB=null,edAll=false,mapG="A",srchG=null;
   const t=k=>T[L][k];
   const title=d=>L==="fa"?d.fa:d.en;
   const author=d=>L==="fa"?(d.author_fa||""):(d.author_en||"");
@@ -223,6 +257,7 @@ export function mount(root, opts={}){
     if(k==="map"&&"ABCD".includes(v)&&v)mapG=v;
     if(k==="compare"){const [a,b,tp]=v.split(",");cmpA=a||null;cmpB=b||null;cmpT=tp||null;}
     if(k==="rights"){const [a,r]=v.split(",");audDoc=a||null;audRight=r||null;}
+    if(k==="topics"){const [a,r]=v.split(",");topDoc=a||null;topLeaf=r||null;}
     if(k==="editions"){const [s,a,b]=v.split(",");edS=s||null;edA=a||null;edB=b||null;}
   }
   function writeHash(){
@@ -232,6 +267,7 @@ export function mount(root, opts={}){
     if(view==="map"&&mapG!=="A")h+="="+mapG;
     if(view==="compare"&&cmpA)h+="="+[cmpA,cmpB,cmpT].filter(Boolean).join(",");
     if(view==="rights"&&audDoc)h+="="+[audDoc,audRight].filter(Boolean).join(",");
+    if(view==="topics"&&topDoc)h+="="+[topDoc,topLeaf].filter(Boolean).join(",");
     if(view==="editions"&&edS)h+="="+[edS,edA,edB].filter(Boolean).join(",");
     if(decodeURIComponent(location.hash.slice(1))!==h)
       history.replaceState(history.state,"","#"+encodeURIComponent(h).replace(/%2C/g,",").replace(/%3D/g,"="));
@@ -243,8 +279,8 @@ export function mount(root, opts={}){
   const get=n=>fetch(new URL(n,dataUrl)).then(r=>{if(!r.ok)throw new Error(n+": "+r.status);return r.json()});
   // audits.json and editions.json are optional: a module built before they existed still loads
   Promise.all([get("catalog.json"),get("analysis.json"),get("articles.json"),get("audits.json").catch(()=>null),
-               get("editions.json").catch(()=>null)])
-    .then(([c,a,ar,au,ed])=>{CAT=c;AN=a;ARTS=ar;AUD=au;ED=ed;render()})
+               get("editions.json").catch(()=>null),get("topics.json").catch(()=>null)])
+    .then(([c,a,ar,au,ed,tp])=>{CAT=c;AN=a;ARTS=ar;AUD=au;ED=ed;TOP=tp;render()})
     .catch(e=>{root.setAttribute("lang",L);V("corpus").hidden=false;
       V("corpus").innerHTML=`<div class="empty">${esc(t("loadfail"))}</div>`;console.error(e)});
 
@@ -257,12 +293,13 @@ export function mount(root, opts={}){
     const tb=$(".tabs");tb.innerHTML="";
     VIEWS.forEach(k=>{
       if(k==="editions"&&!(ED&&Object.keys(ED).length))return;
+      if(k==="topics"&&!(TOP&&TOP.docs.length))return;
       const b=el("button",null,esc(t(k)));b.setAttribute("role","tab");
       b.setAttribute("aria-selected",view===k);
       b.onclick=()=>{view=k;render()};tb.append(b);});
     VIEWS.forEach(k=>V(k).hidden=view!==k);
     if(!CAT.length)return;
-    ({corpus:corpusView,map:mapView,compare:compareView,editions:editionsView,search:searchView,rights:rightsView})[view]();
+    ({corpus:corpusView,map:mapView,compare:compareView,editions:editionsView,search:searchView,rights:rightsView,topics:topicsView})[view]();
     writeHash();
   }
 
@@ -296,7 +333,7 @@ export function mount(root, opts={}){
     const x=y=>{const f=(Math.max(y0,y)-y0)/(y1-y0);return L==="fa"?W-PR-f*(W-PL-PR):PL+f*(W-PL-PR)};
     const s=[`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(t("tl"))}">`];
     for(let y=1900;y<=2020;y+=20){s.push(`<line class="gridline" x1="${x(y)}" y1="26" x2="${x(y)}" y2="${LH*3+22}"/>`,
-      `<text class="axis-t" x="${x(y)}" y="18" text-anchor="middle">${y}</text>`);}
+      `<text class="axis-t" x="${x(y)}" y="18" text-anchor="middle">${num(y)}</text>`);}
     [t("enacted"),t("proposed"),t("trans")].forEach((n,i)=>{
       const ty=26+i*LH+15;
       s.push(`<text class="lane-t" x="${L==="fa"?W-8:8}" y="${ty}" text-anchor="${L==="fa"?"end":"start"}">${esc(n)}</text>`);});
@@ -325,11 +362,11 @@ export function mount(root, opts={}){
     docs.forEach(d=>{
       const b=BUCKET[d.type]??2;
       const tr=el("tr");
-      tr.innerHTML=`<td class="num">${d.year||"—"}</td>
+      tr.innerHTML=`<td class="num">${L==="fa"?esc(String(d.era||d.year||"—").replace(/[0-9]/g,c=>"۰۱۲۳۴۵۶۷۸۹"[c])):(d.year||"—")}</td>
         <td class="ttl"><span class="dot" style="background:${BCOL[b]}"></span>${esc(title(d))}
           ${d.ocr?`<span class="flag">${t("ocr")}</span>`:""}${d.duplicate_of?`<span class="flag">${t("dup")}</span>`:""}${(d.confidence<0.8&&["draft","in_force","historical","transitional"].includes(d.type))?`<span class="flag quiet">${t("partial")}</span>`:""}
           <small>${pdfLink(d,0,d.source_pdf)}</small></td>
-        <td>${esc(author(d))}</td><td class="num">${d.n_articles}</td><td class="num">${d.n_pages}</td>`;
+        <td>${esc(author(d))}</td><td class="num">${num(d.n_articles)}</td><td class="num">${num(d.n_pages)}</td>`;
       body.append(tr);});
     tb.append(body);return tb;
   }
@@ -396,7 +433,7 @@ export function mount(root, opts={}){
     const row=el("div","row cmp-row");
     [["A",cmpA,withArts,i=>{cmpA=i}],["B",cmpB,peers,i=>{cmpB=i}]].forEach(([k,cur,list,set],n)=>{
       const s=el("select");
-      list.forEach(d=>{const o=el("option",null,esc(title(d))+" ("+d.n_articles+")");o.value=d.uid;
+      list.forEach(d=>{const o=el("option",null,esc(title(d))+" ("+num(d.n_articles)+")");o.value=d.uid;
         if(d.uid===cur)o.selected=true;s.append(o)});
       s.disabled=!list.length;
       s.onchange=()=>{set(s.value);cmpT=null;compareView();writeHash()};
@@ -417,8 +454,8 @@ export function mount(root, opts={}){
       const r=el("div","topic-row"+(cmpT===k?" on":""));
       r.innerHTML=`<div class="tname"><b>${esc(AN.topics[k][L])}</b></div>
         <div class="bars">
-          <div style="display:flex;align-items:center"><div class="bar" style="width:${a/max*100}%;background:var(--s1)"></div><span class="barlbl">${a}</span></div>
-          <div style="display:flex;align-items:center"><div class="bar" style="width:${b/max*100}%;background:var(--s2)"></div><span class="barlbl">${b}</span></div>
+          <div style="display:flex;align-items:center"><div class="bar" style="width:${a/max*100}%;background:var(--s1)"></div><span class="barlbl">${num(a)}</span></div>
+          <div style="display:flex;align-items:center"><div class="bar" style="width:${b/max*100}%;background:var(--s2)"></div><span class="barlbl">${num(b)}</span></div>
         </div>`;
       r.onclick=()=>{cmpT=cmpT===k?null:k;compareView();writeHash()};
       list.append(r);});
@@ -597,12 +634,7 @@ export function mount(root, opts={}){
     if(!list.length){p.append(el("div","empty",esc(t("rnone"))));v.append(method(null));return}
     if(!list.some(a=>a.uid===audDoc))audDoc=list[0].uid;
     const A=list.find(a=>a.uid===audDoc), d=CAT.find(c=>c.uid===A.uid)||{};
-    if(list.length>1){
-      const row=el("div","row"),s=el("select");s.setAttribute("aria-label",t("rpick"));
-      list.forEach(a=>{const o=el("option",null,esc(title(CAT.find(c=>c.uid===a.uid)||{fa:a.uid,en:a.uid})));o.value=a.uid;o.selected=a.uid===audDoc;s.append(o)});
-      s.onchange=()=>{audDoc=s.value;audRight=null;audFilter=null;render()};
-      row.append(el("span","sub",esc(t("rpick"))),s);p.append(row);
-    }
+    progress(p,list.map(a=>a.uid),audDoc,u=>{audDoc=u;audRight=null;audFilter=null;render()});
     const head=el("div","aud-head");
     head.append(el("h3",null,esc(title(d))));
     const rv=A.review||{};
@@ -671,6 +703,120 @@ export function mount(root, opts={}){
     const ul=el("ul","aud-method");t("m").forEach(s=>ul.append(el("li",null,esc(s))));p.append(ul);
     if(A)p.append(el("div","note",esc(t("mmodel")(A.model,A.benchmark))));
     return p;
+  }
+
+  /* ================= TOPICS (Constitute vocabulary) ================= */
+  // the whole vocabulary, browsable: definition, coding question, and the published documents that have each topic
+  function vocab(){
+    const LV=TOP.leaves,p=el("div","panel");
+    p.append(el("h2",null,esc(t("vtitle"))),el("div","sub",esc(t("vsub")(Object.keys(LV).length))));
+    const has={};TOP.docs.forEach(D=>{D.articles.forEach(a=>a.t.forEach(id=>((has[id]=has[id]||{})[D.uid]=1)));
+      (D.document||[]).forEach(id=>((has[id]=has[id]||{})[D.uid]=1))});
+    const groups={};Object.entries(LV).forEach(([id,x])=>(groups[x.g]=groups[x.g]||[]).push(id));
+    const rows=el("div","aud-rows");
+    Object.keys(groups).sort((a,b)=>{const A=TOP.groups[a]||{},B=TOP.groups[b]||{};return (L==="fa"?A.fa||a:A.en||a).localeCompare(L==="fa"?B.fa||b:B.en||b,L)})
+      .forEach(gk=>{const G=TOP.groups[gk]||{fa:gk,en:gk},det=el("details","aud-row tp-vrow");
+        det.append(el("summary",null,`<span class="aud-right">${esc(L==="fa"?G.fa:G.en)}</span><span class="tp-frac">${esc(num(groups[gk].length))}</span>`));
+        const body=el("div","aud-body");
+        groups[gk].forEach(id=>{const x=LV[id],y=el("details","aud-art");
+          y.append(el("summary",null,`${esc(L==="fa"?x.fa||x.en:x.en)} <span class="tp-cites">${esc(L==="fa"?x.en:x.fa||"")} · <code>${esc(id)}</code></span>`));
+          const b=el("div");
+          b.append(el("p",null,esc(L==="fa"?x.df||x.d:x.d)));
+          if(x.q){const q=el("p","sub",`<b>${esc(t("vq"))}:</b> `),e=el("span",null,esc(x.q));e.dir="ltr";e.lang="en";q.append(e);b.append(q)}
+          const ds=Object.keys(has[id]||{});
+          b.append(el("p","sub",`<b>${esc(t("vdocs"))}:</b> `+(ds.length?ds.map(u=>`<a href="#topics=${esc(u)},${esc(id)}">${esc(title(docOf(u)))}</a>`).join(L==="fa"?"، ":", "):esc(t("vnone")))));
+          if(L==="fa"&&x.fs!=="reviewed")b.append(el("div","sub",esc(t("vdraft"))));
+          y.append(b);body.append(y)});
+        det.append(body);rows.append(det)});
+    p.append(rows);return p;
+  }
+  // one document done among many: say so, and list every constitution and draft, the undone ones disabled
+  function progress(p,done,cur,pick){
+    const all=CAT.filter(c=>group(c)==="A").sort((x,y)=>(x.year||9999)-(y.year||9999));
+    p.append(el("div","tp-prog",esc(t("prog")(done.length,all.length))));
+    const row=el("div","row"),s=el("select");s.setAttribute("aria-label",t("rpick"));
+    [...all.filter(c=>done.includes(c.uid)),...all.filter(c=>!done.includes(c.uid))].forEach(c=>{
+      const ok=done.includes(c.uid),o=el("option",null,esc(title(c)+(ok?"":" · "+t("queued"))));
+      o.value=c.uid;o.disabled=!ok;o.selected=c.uid===cur;s.append(o)});
+    s.onchange=()=>pick(s.value);row.append(el("span","sub",esc(t("rpick"))),s);p.append(row);
+  }
+  function topicsView(){
+    const v=V("topics");v.innerHTML="";
+    const p=el("div","panel");
+    p.append(el("h2",null,esc(t("ttitle"))),el("div","sub",esc(t("tsub"))));
+    v.append(p);
+    const list=(TOP&&TOP.docs)||[];
+    if(!list.length){p.append(el("div","empty",esc(t("tnone"))));return}
+    if(!list.some(a=>a.uid===topDoc))topDoc=list[0].uid;
+    const A=list.find(a=>a.uid===topDoc), d=docOf(A.uid), LV=TOP.leaves;
+    progress(p,list.map(a=>a.uid),topDoc,u=>{topDoc=u;topLeaf=null;render()});
+    // leaf → the articles that provide for it
+    const by={};A.articles.forEach(a=>a.t.forEach(id=>(by[id]=by[id]||[]).push(a.n)));
+    (A.document||[]).forEach(id=>by[id]=by[id]||[]);
+    const lname=id=>{const x=LV[id]||{};return L==="fa"?x.fa||x.en||id:x.en||id};
+    const ldef=id=>{const x=LV[id]||{};return L==="fa"?x.df||x.d||"":x.d||""};
+    const artOf=n=>ARTS.find(x=>x.doc===A.uid&&x.n===n);
+    const artRef=n=>{const a=artOf(n);return a?artn(a):num(n)};
+    const total=Object.keys(LV).length, got=Object.keys(by).length, bare=A.articles.filter(a=>!a.t.length).length;
+    const head=el("div","aud-head");
+    head.append(el("h3",null,esc(title(d))));
+    if(A.unreviewed||A.preview)head.append(el("div","aud-flag",esc((A.preview?(L==="fa"?"پیش‌نمایش، برای انتشار نیست. ":"Preview, not for publication. "):"")+t("tunrev"))));
+    const meta=el("div","aud-meta",esc(t("tarts")(A.articles.length,bare)));
+    if(d.pdf)meta.append(" · ",el("span",null,pdfLink(d,0,t("rpdf"))));
+    head.append(meta);p.append(head);
+    // overall bar
+    const big=el("div","tp-big");
+    big.append(el("div","tp-num",esc(t("tcount")(got,total))));
+    const bar=el("div","tp-bar");bar.append(el("span",null));bar.firstChild.style.width=(100*got/total)+"%";big.append(bar);
+    p.append(big);
+    // observation
+    const note=L==="fa"?A.note_fa:A.note_en;
+    if(note){const n=el("div","tp-note");n.append(el("b",null,esc(t("tnote"))),el("p",null,esc(note)));p.append(n)}
+    // gaps
+    if(A.findings&&A.findings.length){
+      const f=el("div","panel");f.append(el("h2",null,esc(t("tfind"))));
+      const ul=el("ul","tp-finds");
+      A.findings.forEach(x=>{const li=el("li");li.append(el("p",null,esc(L==="fa"?x.fa:x.en)));
+        const tags=el("div","tp-chips");
+        x.topics.forEach(id=>{const c=el("span","tp-chip off",esc(lname(id)));c.title=ldef(id);tags.append(c)});
+        x.articles.forEach(n=>{const a=artOf(n);const c=el("span","tp-art",a&&d.pdf?pdfLink(d,a.page,artRef(n)):esc(artRef(n)));tags.append(c)});
+        if(tags.childNodes.length)li.append(tags);ul.append(li)});
+      f.append(ul);v.append(f);
+    }
+    // by group
+    const g=el("div","panel");g.append(el("h2",null,esc(t("tgroups"))));
+    const groups={};Object.entries(LV).forEach(([id,x])=>(groups[x.g]=groups[x.g]||[]).push(id));
+    const order=Object.keys(groups).sort((a,b)=>{
+      const ra=groups[a].filter(i=>by[i]).length/groups[a].length, rb=groups[b].filter(i=>by[i]).length/groups[b].length;return rb-ra});
+    const rows=el("div","aud-rows");
+    order.forEach(gk=>{
+      const ids=groups[gk], has=ids.filter(i=>by[i]), not=ids.filter(i=>!by[i]);
+      const det=el("details","aud-row");det.open=!!(topLeaf&&ids.includes(topLeaf));
+      const G=TOP.groups[gk]||{fa:gk,en:gk};
+      const sb=el("div","tp-bar sm");sb.append(el("span",null));sb.firstChild.style.width=(100*has.length/ids.length)+"%";
+      const sum=el("summary",null,`<span class="aud-right">${esc(L==="fa"?G.fa:G.en)}</span>`);
+      sum.append(sb,el("span","tp-frac",esc(num(has.length)+" / "+num(ids.length))));det.append(sum);
+      const body=el("div","aud-body");
+      if(has.length){body.append(el("h4",null,esc(t("tpresent"))));
+        has.forEach(id=>{const x=el("details","aud-art");x.open=topLeaf===id;
+          x.ontoggle=()=>{if(x.open){topLeaf=id;writeHash()}};
+          const ns=by[id];
+          x.append(el("summary",null,`${esc(lname(id))} <span class="tp-cites">${ns.length?ns.map(artRef).map(esc).join(L==="fa"?"، ":", "):esc(t("tpre")+" · "+t("tdoc"))}</span>`));
+          const inner=el("div");inner.append(el("div","sub",esc(ldef(id))));
+          ns.forEach(n=>{const a=artOf(n);if(!a)return;const y=el("details","aud-art");
+            y.append(el("summary",null,esc(artn(a)+" · "+pg(a.page))),el("div","fa",esc(a.text||"")));y.lastChild.dir="rtl";
+            if(d.pdf)y.append(el("div","sub",pdfLink(d,a.page,t("rpage")(a.page))));inner.append(y)});
+          x.append(inner);body.append(x)});}
+      if(not.length){body.append(el("h4",null,esc(t("tabsent"))));
+        const c=el("div","tp-chips");not.forEach(id=>{const s=el("span","tp-chip off",esc(lname(id)));s.title=ldef(id);c.append(s)});body.append(c)}
+      det.append(body);rows.append(det);});
+    g.append(rows);v.append(g);
+    // method
+    const m=el("div","panel");m.append(el("h2",null,esc(t("mtitle"))));
+    const ul=el("ul","aud-method");t("tm").forEach(s=>ul.append(el("li",null,esc(s))));m.append(ul);
+    m.append(el("div","note",esc((A.model?t("mmodel")(A.model,TOP.version).split(" · ")[0]+" · ":"")+t("tcredit"))));
+    v.append(m);
+    v.append(vocab());
   }
 
   return {

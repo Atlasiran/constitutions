@@ -241,3 +241,35 @@
 .qa-root .grp-sec h3 small{font-weight:400;color:var(--ink-3);font-size:12px;margin-inline-start:4px}
 .qa-root .grp-sec .sub{margin-block-end:8px}
 .qa-root .kind-tag{display:inline-block;font-size:10.5px;padding:0 7px;margin-inline-end:6px;border-radius:999px;background:var(--line-2);color:var(--ink-2)}
+
+/* topics view (Constitute vocabulary) */
+.qa-root .tp-big{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-block:6px 14px}
+.qa-root .tp-num{font-family:var(--f-display);font-size:22px;font-weight:600}
+.qa-root .tp-bar{flex:1;min-width:160px;height:10px;border-radius:999px;background:var(--v-none-bg);overflow:hidden}
+.qa-root .tp-bar > span{display:block;height:100%;background:var(--accent);border-radius:inherit}
+.qa-root .tp-bar.sm{height:6px;min-width:80px}
+.qa-root .tp-frac{color:var(--ink-3);font-size:12.5px;white-space:nowrap}
+.qa-root .aud-row > summary:has(.tp-bar){grid-template-columns:minmax(0,1fr) minmax(80px,1.2fr) 5em}
+.qa-root .tp-note{border:1px solid var(--line);border-inline-start:3px solid var(--v-part);background:var(--v-part-bg);border-radius:8px;padding:10px 14px;margin-block:4px 6px}
+.qa-root .tp-note b{font-size:12px;letter-spacing:.04em;color:var(--v-part)}
+.qa-root .tp-note p{margin:4px 0 0;line-height:1.8;color:var(--ink-2)}
+.qa-root .tp-finds{margin:0;padding-inline-start:20px;line-height:1.8}
+.qa-root .tp-finds li{margin-block:0 12px}
+.qa-root .tp-finds p{margin:0 0 4px}
+.qa-root .tp-chips{display:flex;flex-wrap:wrap;gap:6px;margin-block:4px}
+.qa-root .tp-chip{display:inline-block;padding:1px 9px;border-radius:999px;font-size:12px;background:var(--v-ok-bg);color:var(--v-ok)}
+.qa-root .tp-chip.off{background:var(--v-none-bg);color:var(--v-none);cursor:help}
+.qa-root .tp-art{display:inline-block;padding:1px 9px;border-radius:999px;font-size:12px;border:1px solid var(--line)}
+.qa-root .tp-art a{color:var(--accent)}
+.qa-root .tp-cites{color:var(--ink-3);font-size:12px;margin-inline-start:6px}
+.qa-root .tp-prog{border:1px dashed var(--line);border-radius:8px;padding:8px 12px;margin-block:4px 10px;color:var(--ink-2);font-size:13px;line-height:1.7;background:var(--surface-2)}
+
+/* Persian: one typeface throughout (Vazirmatn standalone, Shabnam in Atlas). Newsreader and the mono stack
+   have no Persian letters or digits, so they fell back to a system font; letter-spacing pulls joined letters
+   apart (important: it beats the per-component rules); Persian has no italic. */
+.qa-root[lang="fa"]:not(.qa-atlas){--f-display:"Vazirmatn",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.qa-root[lang="fa"]{--f-mono:var(--f-ui)}
+.qa-root[lang="fa"] *{letter-spacing:normal!important}
+.qa-root[lang="fa"] em{font-style:normal;font-weight:600}
+.qa-root[lang="fa"] .num,.qa-root[lang="fa"] .tp-frac,.qa-root[lang="fa"] .tp-num{font-variant-numeric:tabular-nums}
+.qa-root .tp-vrow > summary{grid-template-columns:minmax(0,1fr) auto}

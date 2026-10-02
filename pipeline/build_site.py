@@ -46,8 +46,22 @@ for f in sorted(glob.glob(D+"/audits/*.json")):
                   |({} if ok else {"unreviewed":True})|({} if public else {"preview":True}))
 aud={"rights":[{k:r[k] for k in ("id","en","fa")} for r in rub["rights"]],
      "instruments":inst,"provisions":{k:prov[k] for k in sorted(cited) if k in prov},"audits":audits}
-for n,o in [("catalog.json",cat),("analysis.json",an),("articles.json",slim),("audits.json",aud),("editions.json",ed)]:
+# Article tags against the Constitute vocabulary (plan 7.10), published on the same terms as the audits
+ONT=json.load(open(D+"/ontology/topics.json",encoding="utf-8"))
+tagged=[]
+for f in sorted(glob.glob(D+"/topics/*.json")):
+    a=json.load(open(f,encoding="utf-8"))
+    rv=a.get("review",{}); ok=rv.get("status")=="approved"; public=ok or rv.get("publish") is True
+    if a["uid"] not in uids or not (public or preview):continue
+    tagged.append({k:a.get(k) for k in ("uid","ontology_version","model","by","review","note_fa","note_en","findings","document")}
+                  |{"articles":[{"n":x["n"],"t":x["topics"]} for x in a["articles"]]}
+                  |({} if ok else {"unreviewed":True})|({} if public else {"preview":True}))
+top={"version":ONT["version"],"licence":ONT["licence"],"groups":ONT["groups"],
+     "leaves":{x["id"]:{"g":x["group"],"en":x["en"],"fa":x["fa"],"fs":x["fa_status"],"d":x["definition_en"],"df":x["fa_def"],"q":x.get("question")} for x in ONT["topics"]},
+     "docs":tagged}
+for n,o in [("catalog.json",cat),("analysis.json",an),("articles.json",slim),("audits.json",aud),("editions.json",ed),("topics.json",top)]:
     json.dump(o,open(S+"/"+n,"w",encoding="utf-8"),ensure_ascii=False,separators=(",",":"))
     print(f"  {n:<16} {os.path.getsize(S+'/'+n)/1e6:.2f} MB")
 print(f"\n{len(cat)} documents · {len(slim)} articles · {len(an['edges'])} edges · "
-      f"{len(ed)} edition series · {len(audits)} audits ({sum('unreviewed' in a for a in audits)} not yet reviewed, {sum('preview' in a for a in audits)} preview only)")
+      f"{len(ed)} edition series · {len(audits)} audits ({sum('unreviewed' in a for a in audits)} not yet reviewed, {sum('preview' in a for a in audits)} preview only)"
+      f" · {len(tagged)} topic-tagged ({sum('preview' in a for a in tagged)} preview only)")

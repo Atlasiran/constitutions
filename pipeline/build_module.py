@@ -40,6 +40,9 @@ def main():
     aud = os.path.join(SITE, "data", "audits.json")
     if os.path.exists(aud) and any(a.get("preview") for a in json.load(open(aud, encoding="utf-8"))["audits"]):
         sys.exit("site/data/audits.json holds unreviewed audits (build_site.py --preview); rebuild without --preview")
+    top = os.path.join(SITE, "data", "topics.json")
+    if os.path.exists(top) and any(a.get("preview") for a in json.load(open(top, encoding="utf-8"))["docs"]):
+        sys.exit("site/data/topics.json holds unreviewed topic tags (build_site.py --preview); rebuild without --preview")
     out = sys.argv[sys.argv.index("--out") + 1] if "--out" in sys.argv else os.path.join(ROOT, "dist")
     out = os.path.abspath(out)
     if os.path.exists(out):
