@@ -1,0 +1,214 @@
+key,label,description,parent_category
+100,"Macroeconomics, General",Issues related to general domestic macroeconomic policy.,Macroeconomics
+101,Interest Rates,"Issues related to inflation, cost of living, prices, and interest rates",Macroeconomics
+103,Unemployment Rate,"Issues related to the unemployment rate, impact of unemployment",Macroeconomics
+104,Monetary Policy,"Issues related to the monetary policy, central bank, and the treasury",Macroeconomics
+105,National Budget,"Issues related to public debt, budgeting, and efforts to reduce deficits",Macroeconomics
+107,Tax Code,"Issues related to tax policy, the impact of taxes, and tax enforcement",Macroeconomics
+108,Industrial Policy,"Issues related to manufacturing policy, industrial revitalization and growth",Macroeconomics
+110,Price Control,"Issues related to wage or price control, emergency price controls",Macroeconomics
+199,"Macroeconomics, Other",Issues related to other macroeconomics subtopics,Macroeconomics
+200,"Civil Rights, General",Issues related generally to civil rights and minority rights,Civil Rights
+201,Minority Discrimination,"Issues related to minority, ethnic, and racial group discrimination",Civil Rights
+202,Gender Discrimination,"Issues related to sex, gender, and sexual orientation discrimination",Civil Rights
+204,Age Discrimination,"Issues related to age discrimination, including mandatory retirement age policies",Civil Rights
+205,Handicap Discrimination,Issues related to handicap and disease discrimination,Civil Rights
+206,Voting Rights,"Issues related to voting rights, expanding or contracting the franchise, participation and related issues",Civil Rights
+207,Freedom of Speech,"Issues related to freedom of speech, religious freedoms, and other types of freedom of expression",Civil Rights
+208,Right to Privacy,"Issues related to privacy rights, including privacy of records, access to government information, and abortion rights",Civil Rights
+209,Anti-Government,"Issues related to anti-government activity groups, such as the communist party and local insurgency groups",Civil Rights
+299,"Civil Rights, Other",Issues related to other civil rights subtopics,Civil Rights
+300,"Health, General","Issues related generally to health care, including appropriations for general health care government agencies",Health
+301,Health Care Reform,"Issues related to broad, comprehensive changes in the health care system",Health
+302,Insurance,"Issues related to health insurance reform, regulation, availability, and cost",Health
+321,Drug Industry,"Issues related to the regulation and promotion of pharmaceuticals, medical devices, and clinical labs",Health
+322,Medical Facilities,"Issues related to facilities construction, regulation and payments, including waitlists and ambulance services",Health
+323,Insurance Providers,"Issues related to provider and insurer payments and regulation, including other types of benefits or multiple benefits",Health
+324,Medical Liability,"Issues related to medical liability, malpractice issues, medical fraud and abuse, and unfair practices",Health
+325,Manpower,"Issues related to the supply and quantity of labor in the health care industry, training and licensing",Health
+331,Disease Prevention,"Issues related to disease prevention, treatment, and health promotion, including specific diseases not covered in other subtopics",Health
+332,Infants and Children,"Issues related to infants and children, including coverage and quality of care, health promotion, and school health programs",Health
+333,Mental Health,Issues related to mental health care and mental health disease,Health
+334,Long-term Care,"Issues related to long term care, home health care, the terminally ill, and rehabilitation services",Health
+335,Drug Coverage and Cost,"Issues related to prescription drug coverage, programs to pay for prescription drugs, and policy to reduce the cost of prescription drugs",Health
+341,Tobacco Abuse,"Issues related to tobacco abuse, treatment, education, and health effects",Health
+342,Drug and Alcohol Abuse,"Issues related to alcohol and illegal drug abuse, treatment, education, and health effects",Health
+398,"Health, R&D",Issues related to health care research and development,Health
+399,"Health, Other",Issues related to other health care topics,Health
+400,"Agriculture, General","Issues related to general agriculture policy, including appropriations for general agriculture government agencies",Agriculture
+401,Trade,Issues related to the regulation and impact of agricultural foreign trade,Agriculture
+402,Subsidies to Farmers,"Issues related to government subsidies to farmers and ranchers, including agricultural disaster insurance",Agriculture
+403,Food Inspection & Safety,"Issues related to food inspection and safety, including seafood, and labeling requirements",Agriculture
+404,Food Marketing & Promotion,Issues related to the regulation of agricultural marketing and providing information to consumers regarding a healthy diet,Agriculture
+405,Animal and Crop Disease,"Issues related to animal and crop disease, pest control and pesticide regulation, and welfare for domesticated animals",Agriculture
+408,Fisheries & Fishing,"Issues related to fishing, commercial fishery regulation and conservation",Agriculture
+498,"Agriculture, R&D",Issues related to agricultural research and development,Agriculture
+499,"Agriculture, Other",Issues related to other agricultural subtopics,Agriculture
+500,"Labor, General","Issues generally related to labor, employment, and pensions, including appropriations for government agencies regulating labor policy",Labor
+501,Worker Safety,Issues related to worker safety and protection and compensation for work-related injury and disease,Labor
+502,Employment Training,"Issues related to job training for adult workers, workforce development, and efforts to retrain displaced workers",Labor
+503,Employee Benefits,"Issues related to all employee benefits, pensions, and retirement accounts, including government-provided unemployment insurance",Labor
+504,Labor Unions,"Issues related to labor unions, collective bargaining, and employer-employee relations",Labor
+505,Fair Labor Standards,"Issues related to fair labor standards such as the minimum wage and overtime compensation, and labor law",Labor
+506,Youth Employment,"Issues related to youth employment, child labor and job training for youths",Labor
+529,Migrant and Seasonal,"Issues related to migrant, guest and seasonal workers",Labor
+599,"Labor, Other",Issues related to other labor policy,Labor
+600,"Education, General","Issues related to general education policy, including appropriations for government agencies regulating education policy",Education
+601,Higher,"Issues related to higher education, student loans and education finance, and the regulation of colleges and universities",Education
+602,Elementary & Secondary,"Issues related to elementary and primary schools, school reform, safety in schools, and efforts to generally improve educational standards and outcomes",Education
+603,Underprivileged,"Issues related to education of underprivileged students, including adult literacy programs, bilingual education needs, and rural education initiatives",Education
+604,Vocational,Issues related to vocational education for children and adults and their impact,Education
+606,Special,Issues related to special education and education for the physically or mentally handicapped,Education
+607,Excellence,"Issues related to education excellence, including efforts to increase the quality of specific areas, such as math, science or foreign language skills",Education
+698,"Education, R&D",Issues related to research and development in education,Education
+699,"Education, Other",Issues related to other subtopics in education policy,Education
+700,"Environment, General","Issues related to general environmental policy, including appropriations for government agencies regulating environmental policy",Environment
+701,Drinking Water,"Issues related to domestic drinking water safety, supply, pollution, and additives (e.g., fluoridation)",Environment
+703,Waste Disposal,"Issues related to the disposal and treatment of wastewater, solid waste and runoff.",Environment
+704,"Environment, Hazardous Waste","Issues related to hazardous waste and toxic chemical regulation, treatment, and disposal",Environment
+705,Air Pollution,"Issues related to air pollution, climate change, and noise pollution",Environment
+707,Recycling,"Issues related to recycling, reuse, and resource conservation",Environment
+708,Indoor Hazards,"Issues related to indoor environmental hazards, indoor air contamination (including on airlines), and indoor hazardous substances such as asbestos",Environment
+709,Species & Forest,"Issues related to species and forest protection, endangered species, control of the domestic illicit trade in wildlife products, and regulation of laboratory or performance animals",Environment
+711,Land and Water Conservation,Issues related to land and water resource conservation,Environment
+798,"Environment, R&D","Issues related to research and development in environmental technology, not including alternative energy",Environment
+799,"Environment, Other",Issues related to other environmental subtopics,Environment
+800,"Energy, General","Issues generally related to energy policy, including appropriations for government agencies regulating energy policy",Energy
+801,Nuclear,"Issues related to nuclear energy, safety and security, and disposal of nuclear waste",Energy
+802,Electricity,"Issues related to general electricity, hydropower, and regulation of electrical utilities",Energy
+803,Natural Gas & Oil,"Issues related to natural gas and oil, drilling, oil spills and flaring, oil and gas prices, shortages and gasoline regulation",Energy
+805,Coal,"Issues related to coal production, use, trade, and regulation, including coal gasification and clean coal technologies",Energy
+806,Alternative & Renewable,"Issues related to alternative and renewable energy, biofuels, hydrogen and geothermal power",Energy
+807,Conservation,"Issues related to energy conservation and energy efficiency, including vehicles, homes, commercial use and government",Energy
+898,"Energy, R&D",Issues related to energy research and development,Energy
+899,"Energy, Other",Issues related to other energy subtopics,Energy
+900,Immigration,"Issues related to immigration, refugees, and citizenship",Immigration
+1000,"Transportation, General","Issues related generally to transportation, including appropriations for government agencies regulating transportation policy",Transportation
+1001,Mass,"Issues related to mass transportation construction, regulation, safety, and availability",Transportation
+1002,Highways,"Issues related to public highway construction, maintenance, and safety",Transportation
+1003,Air Travel,"Issues related to air travel, regulation and safety of aviation, airports, air traffic control, pilot training, and aviation technology",Transportation
+1005,Railroad Travel,"Issues related to railroads, rail travel, rail freight, and the development and deployment of new rail technologies",Transportation
+1007,Maritime,"Issues related to maritime transportation, including maritime freight and shipping, safety and security, and inland waterways and channels",Transportation
+1010,Infrastructure,"Issues related to infrastructure and public works, including employment initiatives",Transportation
+1098,"Transportation, R&D",Issues related to transportation research and development,Transportation
+1099,"Transportation, Other",Issues related to other transportation subtopics,Transportation
+1200,"Law and Crime, General","Issues related to general law, crime, and family issues",Law and Crime
+1201,Agencies,"Issues related to all law enforcement agencies, including border, customs, and other specialized enforcement agencies and their appropriations",Law and Crime
+1202,White Collar Crime,"Issues related to white collar crime, organized crime, counterfeiting and fraud, cyber-crime, and money laundering",Law and Crime
+1203,Illegal Drugs,"Issues related to illegal drug crime and enforcement, criminal penalties for drug crimes, including international efforts to combat drug trafficking",Law and Crime
+1204,Court Administration,"Issues related to court administration, judiciary appropriations, guidelines for bail, pre-release, fines and legal representation",Law and Crime
+1205,Prisons,"Issues related to prisons and jails, parole systems, and appropriations",Law and Crime
+1206,Juvenile Crime,"Issues related to juvenile crime and justice, juvenile prisons and jails, and efforts to reduce juvenile crime and recidivism",Law and Crime
+1207,Child Abuse,"Issues related to child abuse, child pornography, sexual exploitation of children and parental kidnapping",Law and Crime
+1208,Family Issues,"Issues related to family issues, domestic violence, child welfare, family law",Law and Crime
+1210,Criminal & Civil Code,"Issues related to domestic criminal and civil codes, including crimes not mentioned in other subtopics",Law and Crime
+1211,Crime Control,"Issues related to the control, prevention, and impact of crime",Law and Crime
+1227,Police,"Issues related to Police and other general domestic security responses to terrorism, such as special police",Law and Crime
+1299,"Law and Crime, Other","Issues related to other law, crime, and family subtopics",Law and Crime
+1300,"Social Welfare, General",Issues generally related to social welfare policy,Social Welfare
+1302,"Social Welfare, Low-Income Assistance","Issues related to poverty assistance for low-income families, including food assistance programs, programs to assess or alleviate welfare dependency and tax credits directed at low-income families",Social Welfare
+1303,Elderly Assistance,"Issues related to elderly issues and elderly assistance, including government pensions",Social Welfare
+1304,Disabled Assistance,Issues related to aid for people with physical or mental disabilities,Social Welfare
+1305,Volunteer Associations,"Issues related to domestic volunteer associations, charities, and youth organizations",Social Welfare
+1308,Child Care,Issues related to parental leave and child care,Social Welfare
+1399,"Social Welfare, Other",Issues related to other social welfare policy subtopics,Social Welfare
+1400,"Housing, General",Issues related generally to housing and urban affairs,Housing
+1401,Community Development,"Issues related to housing and community development, neighborhood development, and national housing policy",Housing
+1403,Urban Development,Issues related to urban development and general urban issues,Housing
+1404,Rural Housing,Issues related to rural housing,Housing
+1405,Rural Development,"Non-housing issues focused on economic, infrastructure, and other developments in non-urban areas",Housing
+1406,"Housing, Low-Income Assistance","Issues related to housing for low-income individuals and families, including public housing projects and housing affordability programs",Housing
+1407,Veterans,"Issues related to housing for military veterans and their families, including subsidies for veterans",Housing
+1408,Elderly,"Issues related to housing for the elderly, including housing facilities for the handicapped elderly",Housing
+1409,Homeless,Issues related to housing for the homeless and efforts to reduce homelessness,Housing
+1498,"Housing, R&D",Issues related to housing and community development research and development,Housing
+1499,"Housing, Other",Other issues related to housing and community development,Housing
+1500,"Domestic Commerce, General","Issues generally related to domestic commerce, including appropriations for government agencies regulating domestic commerce",Domestic Commerce
+1501,Banking,Issues related to the regulation of national banking systems and other non-bank financial institutions,Domestic Commerce
+1502,Securities & Commodities,"Issues related to the regulation and facilitation of securities and commodities trading, regulation of investments and related industries, and exchanges",Domestic Commerce
+1504,Consumer Finance,"Issues related to consumer finance, mortgages, credit cards, access to credit records, and consumer credit fraud",Domestic Commerce
+1505,Insurance Regulation,"Issues related to insurance regulation, fraud and abuse in the insurance industry, the financial health of the insurance industry, and insurance availability and cost",Domestic Commerce
+1507,Bankruptcy,"Issues related to personal, commercial, and municipal bankruptcies",Domestic Commerce
+1520,Corporate Management,"Issues related to corporate mergers, antitrust regulation, corporate accounting and governance, and corporate management",Domestic Commerce
+1521,Small Businesses,"Issues related to small businesses, including programs to promote and subsidize small businesses",Domestic Commerce
+1522,Copyrights and Patents,"Issues related to copyrights and patents, patent reform, and intellectual property",Domestic Commerce
+1523,Disaster Relief,"Issues related to domestic natural disaster relief, disaster or flood insurance, and natural disaster preparedness",Domestic Commerce
+1524,Tourism,"Issues related to tourism regulation, promotion, and impact",Domestic Commerce
+1525,Consumer Safety,Issues related to consumer fraud and safety in domestic commerce,Domestic Commerce
+1526,Sports Regulation,"Issues related to the regulation and promotion of sports, gambling, and personal fitness",Domestic Commerce
+1598,"Domestic Commerce, R&D",Issues related to domestic commerce research and development,Domestic Commerce
+1599,"Domestic Commerce, Other",Issues related to other domestic commerce policy subtopics,Domestic Commerce
+1600,"Defense, General","Issues related generally to defense policy, and appropriations for agencies that oversee general defense policy",Defense
+1602,Alliances,"Issues related to defense alliance and agreement, security assistance, and UN peacekeeping activities",Defense
+1603,Intelligence,"Issues related to military intelligence, espionage, and covert operations",Defense
+1604,Readiness,"Issues related to military readiness, coordination of armed services air support and sealift capabilities, and national stockpiles of strategic materials.",Defense
+1605,Nuclear Arms,"Issues related to nuclear weapons, nuclear proliferation, modernization of nuclear equipment",Defense
+1606,Military Aid,Issues related to military aid to other countries and the control of arms sales to other countries,Defense
+1608,Personnel Issues,"Issues related to military manpower, military personel and their dependents, military courts, and general veterans' issues",Defense
+1610,Procurement,"Issues related to military procurement, conversion of old equipment, and weapons systems evaluation",Defense
+1611,Installations & Land,"Issues related to military installations, construction, and land transfers",Defense
+1612,Reserve Forces,Issues related to military reserves and reserve affairs,Defense
+1614,"Defense, Hazardous Waste",Issues related to military nuclear and hazardous waste disposal and military environmental compliance,Defense
+1615,Civil,"Issues related to domestic civil defense, national security responses to terrorism, and other issues related to homeland security",Defense
+1616,Civilian Personnel,"Issues related to non-contractor civilian personnel, civilian employment in the defense industry, and military base closings",Defense
+1617,Contractors,"Issues related to military contractors and contracting, oversight of military contrators and fraud by military contractors",Defense
+1619,Foreign Operations,"Issues related to direct war-related foreign military operations, prisoners of war and collateral damage to civilian populations",Defense
+1620,Claims against Military,"Issues related to claims against the military, settlements for military dependents, and compensation for civilians injured in military operations",Defense
+1698,"Defense, R&D",Issues related to defense research and development,Defense
+1699,"Defense, Other",Issues related to other defense policy subtopics,Defense
+1700,"Technology, General","Issues related to general space, science, technology, and communications",Technology
+1701,Space,"Issues related to the government use of space and space resource exploitation agreements, government space programs and space exploration, military use of space",Technology
+1704,Commercial Use of Space,"Issues related to the regulation and promotion of commercial use of space, commercial satellite technology, and government efforts to encourage commercial space development",Technology
+1705,Science Transfer,Issues related to science and technology transfer and international science cooperation,Technology
+1706,Telecommunications,"Issues related to telephones and telecommunication regulation, infrastructure for high-speed internet, and other forms of telecommunication (e.g., mobile phones)",Technology
+1707,Broadcast,"Issues related to the broadcast industry, published media, and control of the electromagnetic spectrum",Technology
+1708,Weather Forecasting,"Issues related to weather forecasting, oceanography, geological surveys, and weather forecasting research and technology",Technology
+1709,Computers,"Issues relating to the computer industry, regulation of the internet, and cyber security",Technology
+1798,"Technology, R&D","Issues related to space, science, technology, and communication research and development not mentioned in other subtopics.",Technology
+1799,"Technology, Other","Issues related to other space, science, technology, and communication research and development",Technology
+1800,"Foreign Trade, General",Issues generally related to foreign trade and appropriations for government agencies generally regulating foreign trade,Foreign Trade
+1802,Trade Agreements,"Issues related to trade negotiations, disputes, and agreements, including tax treaties",Foreign Trade
+1803,Exports,"Issues related to export regulation, subsidies, promotion, and control",Foreign Trade
+1804,Private Investments,Issues related to international private business investment and corporate development,Foreign Trade
+1806,Competitiveness,Issues related to productivity of competitiveness of domestic businesses and balance of payments issues,Foreign Trade
+1807,Tariff & Imports,"Issues related to tariffs and other barriers to imports, import regulation and impact of imports on domestic industries",Foreign Trade
+1808,Exchange Rates,Issues related to exchange rate and related issues,Foreign Trade
+1899,"Foreign Trade, Other",Issues related to other foreign trade policy subtopics,Foreign Trade
+1900,"International Affairs, General","Issues related to general international affairs and foreign aid, including appropriations for general government foreign affairs agencies",International Affairs
+1901,Foreign Aid,Issues related to foreign aid not directly targeting at increasing international development,International Affairs
+1902,Resources Exploitation,"Issues related to international resources exploitation and resources agreements, law of the sea and international ocean conservation efforts",International Affairs
+1905,Developing Countries,Issues related specifically to developing countries (for Financial Issues see 1906),International Affairs
+1906,International Finance,"Issues related to international finance and economic development, the World Bank and International Monetary Fund, regional development banks, sovereign debt and implications for international lending institutions",International Affairs
+1910,Western Europe,Issues related to Western Europe and the European Union,International Affairs
+1921,Specific Country,"Issues related specifically to a foreign country or region not codable using other codes, assessment of political issues in other countries, relations between individual countries",International Affairs
+1925,Human Rights,"Issues related to human rights, human rights violations, human rights treaties and conventions, UN reports on human rights, crimes associated with genocide or crimes against humanity",International Affairs
+1926,Organizations,"International organizations, NGOs, the United Nations, International Red Cross, UNESCO, International Olympic Committee, International Criminal Court",International Affairs
+1927,Terrorism,"Issues related to international terrorism, hijacking, and acts of piracy in other countries, efforts to fight international terrorism, international legal mechanisms to combat terrorism",International Affairs
+1929,Diplomats,"Issues related to diplomats, diplomacy, embassies, citizens abroad, foreign diplomats in the country, visas and passports",International Affairs
+1999,"International Affairs, Other",Issues related to other international affairs policy subtopics,International Affairs
+2000,"Government Operations, General","Issues related to general government operations, including appropriations for multiple government agencies",Government Operations
+2001,Intergovernmental Relations,"Issues related to intergovernmental relations, local government issues",Government Operations
+2002,Bureaucracy,Issues related to general government efficiencies and bureaucratic oversight,Government Operations
+2003,Postal Service,"Issues related to postal services, regulation of mail, and post-civil service",Government Operations
+2004,Employees,"Issues related to civil employees not mentioned in other subtopics, government pensions and general civil service issues",Government Operations
+2005,Appointments,Issues related to nominations and appointments not mentioned elsewhere,Government Operations
+2006,Currency,"Issues related the currency, national mints, medals, and commemorative coins",Government Operations
+2007,Procurement & Contractors,"Issues related to government procurement, government contractors, contractor and procurement fraud, and procurement processes and systems",Government Operations
+2008,Property Management,"Issues related to government property management, construction, and regulation",Government Operations
+2009,Tax Administration,"Issues related to tax administration, enforcement, and auditing for both individuals and corporations",Government Operations
+2010,Scandals,Issues related to public scandal and impeachment,Government Operations
+2011,Branch Relations,"Issues related to government branch relations, administrative issues, and constitutional reforms",Government Operations
+2012,Political Campaigns,"Issues related to the regulation of political campaigns, campaign finance, political advertising and voter registration",Government Operations
+2013,Census & Statistics,Issues related to census and statistics collection by government,Government Operations
+2014,Capital City,Issues related to the capital city,Government Operations
+2015,Claims against the government,"Issues related to claims against the government, compensation for the victims of terrorist attacks, compensation policies without other substantive provisions",Government Operations
+2030,National Holidays,Issues related to national holidays and their observation,Government Operations
+2099,"Government Operations, Other",Issues related to other government operations subtopics,Government Operations
+2100,"Public Lands, General","Issues related to general public lands, water management, and territorial issues",Public Lands
+2101,National Parks,"Issues related to national parks, memorials, historic sites, and recreation, including the management and staffing of cultural sites",Public Lands
+2102,Indigenous Affairs,"Issues related to indigenous affairs, indigenous lands, and assistance to indigenous people",Public Lands
+2103,Public Lands,"Issues related to natural resources, public lands, and forest management, including forest fires, livestock grazing",Public Lands
+2104,Water Resources,"Issues related to water resources, water resource development and civil works, flood control, and research",Public Lands
+2105,Dependencies & Territories,Issues related to territorial and dependency issues and devolution,Public Lands
+2199,"Public Lands, Other",Issues related to other public lands policy subtopics,Public Lands
+2300,"Culture, General",Issues related to general cultural policy issues,Culture

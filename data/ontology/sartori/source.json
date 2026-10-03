@@ -1,0 +1,40 @@
+{
+ "repo": "https://github.com/conceptintegration/sartori-repo",
+ "commit": "0fa9ca380d8e5acb2986dc89036691d2253df0c5",
+ "fetched": "2026-10-03",
+ "licence": "CC BY-NC-SA 4.0",
+ "files": {
+  "CAP-TOP.csv": {
+   "from": "CAP-TOP/ontology.csv",
+   "sha256": "0f52dd55da2cbc8240cbf3ae04270e37089b948b01e8d531b44dd264fbeefbba"
+  },
+  "CAP-TOP.metadata.csv": {
+   "from": "CAP-TOP/metadata.csv",
+   "sha256": "ef358994e2f6cdc47a246deb659de22cc26897d70297a01a0637f6c0fe26276d"
+  },
+  "JUON-CPSD.csv": {
+   "from": "JUON-CPSD/ontology.csv",
+   "sha256": "43774df00962d41af6519a965fd0cf6d0a98a169e6e629a0b3078ac8cc57a1ac"
+  },
+  "JUON-CPSD.metadata.csv": {
+   "from": "JUON-CPSD/metadata.csv",
+   "sha256": "57d5d7504a8c4f1aee6918ca5c4d492dce14a27bba77c2cd0b800cd51864b3f9"
+  },
+  "STROM-IDC.csv": {
+   "from": "STRØM-IDC/ontology.csv",
+   "sha256": "74dcf6153b8c608b39847716b6ff7b40baaa2b7ec10fbbba1013b9d5d49d9482"
+  },
+  "STROM-IDC.metadata.csv": {
+   "from": "STRØM-IDC/metadata.csv",
+   "sha256": "44be78e69a162164055b2efba392cc03b5d3b445e713012976948a451b9b6b4d"
+  },
+  "CCP-FACET.csv": {
+   "from": "CCP-FACET/ontology.csv",
+   "sha256": "ce95223c95a4897938ad723f118d4b7ad285c8953fb222b143123a517eca10b2"
+  },
+  "CCP-FACET.metadata.csv": {
+   "from": "CCP-FACET/metadata.csv",
+   "sha256": "42b94fe360d176b45bd11d7760139aea01b49cdd927fcad4792669c4ceff62f2"
+  }
+ }
+}
