@@ -13,7 +13,7 @@
      hash      keep the view in location.hash for deep links (default true)
 
    Deep links: #corpus, #map, #search=<text>, #compare=<uid>,<uid>[,<topic>], #editions=<series>[,<uid>,<uid>],
-   #rights=<uid>[,<right>], #topics=<uid>[,<topic>]
+   #rights=<uid>[,<right>], #topics=<uid>[,<topic>], #topics=method
    Only documents in the same comparison group can be compared (rule: like with like). */
 
 // Persian digits for the strings below
@@ -56,10 +56,28 @@ const T={
    tnote:"Observation",tfind:"Gaps worth noting",tgroups:"By subject",tpresent:"Addressed",tabsent:"Not addressed",
    tart:"Articles",tpre:"Preamble",tdoc:"in the document as a whole",
    tunrev:"Not yet reviewed: the tags, gaps and observation come from one reading of the text by Claude in a working session; no person has checked them yet.",
-   tm:["The vocabulary is Constitute's topic list (constituteproject.org), used under CC BY-NC 3.0: 334 topics, each with a definition and the question its coders ask of every constitution. Its texts of national constitutions are not used.",
-      "Claude (Anthropic) read the proofread text article by article and tagged each article with the topics it actually provides for, not ones it merely mentions. A tag that names an article missing from the document is rejected.",
-      "“Not addressed” means no article provides for the topic. Some absences are choices (a secular draft has no official religion); others are gaps. The list of gaps worth noting is a reading, not a verdict.",
-      "Persian names of the topics are drafts, not yet reviewed."],
+   mlink:"How this works, and the full vocabulary →",mback:"← Back to the document",
+   mshort:"How the text is read, how articles are tagged, what “not addressed” means, and the limits: on the method page.",
+   mp:[["What this measures",["This section shows which topics a constitution or draft provides for, and which it says nothing about. It is not a score. The number of topics addressed says what a text deals with, not whether it is better."]],
+     ["The vocabulary",["We did not make the yardstick. It is the topic vocabulary of Constitute, which the Comparative Constitutions Project uses to code the constitutions of the world: 334 topics, from the right to life to the removal of judges. Each topic has a definition and a coding question, the question a coder asks of every constitution.",
+       "For readability we placed every topic under one of 30 subject groups. The grouping is ours, not Constitute's.",
+       "Constitute has no Persian. The Persian names and definitions are ours and still drafts; each unreviewed Persian name is marked, and the English name and definition are always beside it."]],
+     ["The text",["Tags are put on a text read from the source PDF and then proofread page by page against the image of the same page. The document's own misprints stay as printed; only reading errors are corrected.",
+       "The text is split into articles with the numbers the document gives them. Every article links to its page in the PDF, so anyone can check it against the original."]],
+     ["Tagging",["Each article is read on its own and in full, and gets the topics it actually provides for: it grants a right, sets up a body, assigns a power or forbids something. Being mentioned is not enough.",
+       "An article can carry several topics and a topic can appear in several articles. Some topics belong to the document as a whole, such as having a preamble.",
+       "Some articles get no topic, because they deal with subjects the vocabulary does not code (transport, energy, agriculture). Each document's page gives their number.",
+       "The tags were made by Claude (Anthropic). A tag that names an article missing from the document is rejected. Each tag is stored with a fingerprint of its article's text: if the text is corrected later, the tag is known to be stale and is redone."]],
+     ["What “addressed” and “not addressed” mean",["“Addressed” means at least one article provides for the topic. It says nothing about how: an article that grants a right and one that restricts it both fall under the same topic.",
+       "“Not addressed” means no article provides for it. Some absences are choices: a draft that separates religion and state has no official religion, and a parliamentary system has no directly elected president. Some topics exclude each other, so no constitution has all 334."]],
+     ["Gaps and observations",["The list of gaps worth noting is our reading, not a verdict. From the topics not addressed we picked those that matter for a transition to democracy in Iran, such as an independent oversight body, an electoral commission or dealing with past crimes. Each gap links to its topics and, where relevant, to the articles concerned, so you can judge for yourself.",
+       "An observation is a remark on the document as a whole, such as a model it follows."]],
+     ["Review",["Until someone has checked a document's tags, gaps and observation, it is marked “not yet reviewed”. Review means checking the tags against the text article by article; the reviewer and the date are then recorded.",
+       "This section is experimental. Documents are added one at a time: the federal drafts first, then the rest."]],
+     ["Limits",["The model can miss a topic or add a wrong tag; that is what review is for.",
+       "Constitute's vocabulary was built for national constitutions in force. Drafts sometimes deal with subjects outside it, and those articles stay untagged here.",
+       "The number of topics also depends on length: a longer text usually covers more topics."]],
+     ["Source and licence",["Topic vocabulary: Constitute (constituteproject.org), Comparative Constitutions Project, under CC BY-NC 3.0. Constitute's texts of national constitutions are not used."]]],
    tcredit:"Topic vocabulary: Constitute, Comparative Constitutions Project, CC BY-NC 3.0.",
    vtitle:"The vocabulary",vsub:n=>"All "+n+" topics, by subject: each with its definition and the question Constitute's coders ask of every constitution. Under each topic: the documents published here that provide for it.",
    vq:"Coding question",vdocs:"Provided for in",vnone:"No published document yet.",vdraft:"Persian name: draft",
@@ -133,10 +151,28 @@ const T={
    tnote:"مشاهده",tfind:"کاستی‌های درخور توجه",tgroups:"بر پایه‌ی موضوع",tpresent:"آمده",tabsent:"نیامده",
    tart:"اصول",tpre:"مقدمه",tdoc:"در کل سند",
    tunrev:"هنوز بازبینی نشده: برچسب‌ها، کاستی‌ها و مشاهده حاصل یک بار خواندن متن به دست Claude در یک جلسه‌ی کاری‌اند و هنوز کسی آن‌ها را وارسی نکرده است.",
-   tm:["واژگان، فهرست موضوع‌های Constitute است (constituteproject.org) که با پروانه‌ی CC BY-NC 3.0 به کار رفته: ۳۳۴ موضوع، هر یک با تعریف و پرسشی که کدگذاران آن از هر قانون اساسی می‌پرسند. متن قانون‌های اساسی کشورها از آن‌جا به کار نرفته است.",
-      "Claude (ساخت Anthropic) متن مقابله‌شده را اصل به اصل خواند و به هر اصل موضوع‌هایی را داد که آن اصل واقعن درباره‌شان حکم می‌کند، نه موضوع‌هایی که فقط نامشان آمده. برچسبی که به اصلی ناموجود اشاره کند رد می‌شود.",
-      "«نیامده» یعنی هیچ اصلی درباره‌ی آن موضوع حکم نمی‌کند. برخی نبودن‌ها انتخاب‌اند (پیش‌نویسی سکولار دین رسمی ندارد) و برخی کاستی. فهرست کاستی‌ها یک خوانش است، نه حکم.",
-      "نام فارسی موضوع‌ها پیش‌نویس است و هنوز بازبینی نشده."],
+   mlink:"روش کار و واژگان کامل ←",mback:"→ بازگشت به سند",
+   mshort:"متن چطور خوانده می‌شود، برچسب‌ها چطور زده می‌شوند، «نیامده» یعنی چه، و محدودیت‌ها: در صفحه‌ی روش کار.",
+   mp:[["این بخش چه می‌سنجد",["این بخش نشان می‌دهد هر قانون اساسی یا پیش‌نویس درباره‌ی کدام موضوع‌ها حکم می‌کند و درباره‌ی کدام‌ها چیزی نمی‌گوید. نمره نیست. شمار موضوع‌های آمده نشان می‌دهد متن به چه چیزهایی پرداخته، نه این‌که بهتر است."]],
+     ["واژگان",["معیار را ما نساخته‌ایم. واژگان موضوع‌های Constitute است، که پروژه‌ی تطبیقی قانون‌های اساسی (Comparative Constitutions Project) با آن قانون‌های اساسی کشورهای جهان را کدگذاری می‌کند: ۳۳۴ موضوع، از حق زندگی تا برکناری قاضیان. هر موضوع یک تعریف دارد و یک پرسش کدگذاری، یعنی پرسشی که کدگذار از هر قانون اساسی می‌پرسد.",
+       "برای خواناتر شدن، هر موضوع را زیر یکی از ۳۰ گروه موضوعی گذاشته‌ایم. این گروه‌بندی از ماست، نه از Constitute.",
+       "Constitute فارسی ندارد. نام‌ها و تعریف‌های فارسی را ما نوشته‌ایم و هنوز پیش‌نویس‌اند؛ هر نام فارسیِ بازبینی‌نشده علامت خورده و نام و تعریف انگلیسی همیشه کنارش هست."]],
+     ["متن",["برچسب‌ها روی متنی زده می‌شوند که از PDF منبع خوانده و بعد صفحه‌به‌صفحه با تصویر همان صفحه مقابله شده است. غلط‌های چاپی خود سند همان‌طور که چاپ شده‌اند می‌مانند؛ فقط خطای خواندن تصحیح می‌شود.",
+       "متن به اصل‌ها یا ماده‌ها تقسیم می‌شود، با همان شماره‌ای که در سند آمده. کنار هر اصل لینک صفحه‌ی PDF هست تا هر کس بتواند آن را با اصل سند تطبیق دهد."]],
+     ["برچسب‌زدن",["هر اصل جداگانه و کامل خوانده می‌شود و موضوع‌هایی را می‌گیرد که واقعن درباره‌شان حکم می‌کند: حقی می‌دهد، نهادی می‌سازد، اختیاری تعیین می‌کند یا چیزی را منع می‌کند. آمدن نام یک موضوع کافی نیست.",
+       "یک اصل می‌تواند چند موضوع داشته باشد و یک موضوع در چند اصل بیاید. برخی موضوع‌ها به کل سند تعلق دارند، مثل داشتن مقدمه.",
+       "برخی اصل‌ها هیچ موضوعی نمی‌گیرند، چون درباره‌ی چیزی‌اند که واژگان کدگذاری نمی‌کند (حمل‌ونقل، انرژی، کشاورزی). شمارشان در صفحه‌ی هر سند آمده است.",
+       "برچسب‌ها را Claude (ساخت Anthropic) زده است. برچسبی که به اصلی ناموجود اشاره کند رد می‌شود. هر برچسب همراه با اثر انگشت متن اصلش ذخیره می‌شود: اگر متن بعدن تصحیح شود، برچسب کهنه شناخته می‌شود و دوباره زده می‌شود."]],
+     ["«آمده» و «نیامده» یعنی چه",["«آمده» یعنی دست‌کم یک اصل درباره‌ی آن موضوع حکم می‌کند. درباره‌ی چگونگی آن چیزی نمی‌گوید: اصلی که حقی را می‌دهد و اصلی که همان حق را محدود می‌کند هر دو زیر یک موضوع می‌آیند.",
+       "«نیامده» یعنی هیچ اصلی درباره‌ی آن حکم نمی‌کند. برخی نبودن‌ها انتخاب‌اند: پیش‌نویسی که دین و دولت را جدا می‌کند دین رسمی ندارد، و نظامی پارلمانی رئیس‌جمهورِ منتخب مستقیم مردم ندارد. برخی موضوع‌ها با هم جمع نمی‌شوند، پس هیچ قانون اساسی همه‌ی ۳۳۴ موضوع را ندارد."]],
+     ["کاستی‌ها و مشاهده‌ها",["فهرست «کاستی‌های درخور توجه» خوانش ماست، نه حکم. از میان موضوع‌های نیامده آن‌هایی را برگزیده‌ایم که برای گذار به دموکراسی در ایران مهم‌اند، مثل نهاد ناظر مستقل، کمیسیون انتخابات یا رسیدگی به جنایات گذشته. هر کاستی به موضوع‌هایش و، هر جا لازم باشد، به اصل‌های مربوط لینک دارد تا خودتان بسنجید.",
+       "«مشاهده» نکته‌ای درباره‌ی کل سند است، مثلن الگویی که از آن پیروی می‌کند."]],
+     ["بازبینی",["تا وقتی کسی برچسب‌ها، کاستی‌ها و مشاهده‌ی یک سند را وارسی نکرده، آن سند علامت «هنوز بازبینی نشده» دارد. بازبینی یعنی تطبیق برچسب‌ها با متن، اصل به اصل؛ پس از آن نام بازبین و تاریخ ثبت می‌شود.",
+       "این بخش آزمایشی است. سندها یکی‌یکی اضافه می‌شوند: اول پیش‌نویس‌های فدرال، بعد بقیه."]],
+     ["محدودیت‌ها",["مدل ممکن است موضوعی را جا بیندازد یا برچسبی نادرست بزند؛ بازبینی برای همین است.",
+       "واژگان Constitute برای قانون‌های اساسی جاری کشورها ساخته شده است. پیش‌نویس‌ها گاهی به موضوع‌هایی می‌پردازند که در آن نیست و آن اصل‌ها این‌جا بی‌موضوع می‌مانند.",
+       "شمار موضوع‌ها به طول متن هم بستگی دارد: متن بلندتر معمولن موضوع‌های بیش‌تری را می‌پوشاند."]],
+     ["منبع و پروانه",["واژگان موضوع‌ها: Constitute (constituteproject.org)، پروژه‌ی تطبیقی قانون‌های اساسی، با پروانه‌ی CC BY-NC 3.0. از متن قانون‌های اساسی کشورها در Constitute استفاده نشده است."]]],
    tcredit:"واژگان موضوع‌ها: Constitute، پروژه‌ی تطبیقی قانون‌های اساسی، CC BY-NC 3.0.",
    vtitle:"واژگان",vsub:n=>"همه‌ی "+num2(n)+" موضوع، بر پایه‌ی موضوع اصلی: هر یک با تعریفش و پرسشی که کدگذاران Constitute از هر قانون اساسی می‌پرسند. زیر هر موضوع: سندهای منتشرشده در این‌جا که درباره‌ی آن حکم می‌کنند.",
    vq:"پرسش کدگذاری",vdocs:"آمده در",vnone:"هنوز در هیچ سند منتشرشده‌ای نیامده.",vdraft:"نام فارسی: پیش‌نویس",
@@ -193,7 +229,7 @@ export function mount(root, opts={}){
   const pdfUrl=new URL(opts.pdfUrl||"pdf/", new URL(".", import.meta.url));
   let L=opts.lang||(embedded?"fa":"en"), CAT=[], AN=null, ARTS=[], view="corpus";
   let cmpA=null,cmpB=null,cmpT=null,q="",AUD=null,audDoc=null,audRight=null,audFilter=null;
-  let TOP=null,topDoc=null,topLeaf=null,ED=null,edS=null,edA=null,edB=null,edAll=false,mapG="A",srchG=null;
+  let TOP=null,topDoc=null,topLeaf=null,topPage=null,ED=null,edS=null,edA=null,edB=null,edAll=false,mapG="A",srchG=null;
   const t=k=>T[L][k];
   const title=d=>L==="fa"?d.fa:d.en;
   const author=d=>L==="fa"?(d.author_fa||""):(d.author_en||"");
@@ -257,7 +293,7 @@ export function mount(root, opts={}){
     if(k==="map"&&"ABCD".includes(v)&&v)mapG=v;
     if(k==="compare"){const [a,b,tp]=v.split(",");cmpA=a||null;cmpB=b||null;cmpT=tp||null;}
     if(k==="rights"){const [a,r]=v.split(",");audDoc=a||null;audRight=r||null;}
-    if(k==="topics"){const [a,r]=v.split(",");topDoc=a||null;topLeaf=r||null;}
+    if(k==="topics"){const [a,r]=v.split(",");topPage=a==="method"?a:null;if(!topPage){topDoc=a||null;topLeaf=r||null;}}
     if(k==="editions"){const [s,a,b]=v.split(",");edS=s||null;edA=a||null;edB=b||null;}
   }
   function writeHash(){
@@ -267,7 +303,7 @@ export function mount(root, opts={}){
     if(view==="map"&&mapG!=="A")h+="="+mapG;
     if(view==="compare"&&cmpA)h+="="+[cmpA,cmpB,cmpT].filter(Boolean).join(",");
     if(view==="rights"&&audDoc)h+="="+[audDoc,audRight].filter(Boolean).join(",");
-    if(view==="topics"&&topDoc)h+="="+[topDoc,topLeaf].filter(Boolean).join(",");
+    if(view==="topics"&&(topPage||topDoc))h+="="+(topPage||[topDoc,topLeaf].filter(Boolean).join(","));
     if(view==="editions"&&edS)h+="="+[edS,edA,edB].filter(Boolean).join(",");
     if(decodeURIComponent(location.hash.slice(1))!==h)
       history.replaceState(history.state,"","#"+encodeURIComponent(h).replace(/%2C/g,",").replace(/%3D/g,"="));
@@ -744,12 +780,15 @@ export function mount(root, opts={}){
     const v=V("topics");v.innerHTML="";
     const p=el("div","panel");
     p.append(el("h2",null,esc(t("ttitle"))),el("div","sub",esc(t("tsub"))));
-    v.append(p);
     const list=(TOP&&TOP.docs)||[];
+    if(topPage==="method"&&TOP)return methodPage();
+    v.append(p);
     if(!list.length){p.append(el("div","empty",esc(t("tnone"))));return}
     if(!list.some(a=>a.uid===topDoc))topDoc=list[0].uid;
     const A=list.find(a=>a.uid===topDoc), d=docOf(A.uid), LV=TOP.leaves;
     progress(p,list.map(a=>a.uid),topDoc,u=>{topDoc=u;topLeaf=null;render()});
+    // the method page (and the whole vocabulary) is one click from the top
+    const jump=el("div","tp-jump"),mb=el("button",null,esc(t("mlink")));mb.type="button";mb.onclick=openMethod;jump.append(mb);p.append(jump);
     // leaf → the articles that provide for it
     const by={};A.articles.forEach(a=>a.t.forEach(id=>(by[id]=by[id]||[]).push(a.n)));
     (A.document||[]).forEach(id=>by[id]=by[id]||[]);
@@ -811,12 +850,21 @@ export function mount(root, opts={}){
         const c=el("div","tp-chips");not.forEach(id=>{const s=el("span","tp-chip off",esc(lname(id)));s.title=ldef(id);c.append(s)});body.append(c)}
       det.append(body);rows.append(det);});
     g.append(rows);v.append(g);
-    // method
-    const m=el("div","panel");m.append(el("h2",null,esc(t("mtitle"))));
-    const ul=el("ul","aud-method");t("tm").forEach(s=>ul.append(el("li",null,esc(s))));m.append(ul);
+    // method: a pointer to the method page
+    const m=el("div","panel");m.append(el("h2",null,esc(t("mtitle"))),el("p","sub",esc(t("mshort"))));
+    const mj=el("div","tp-jump"),mb2=el("button",null,esc(t("mlink")));mb2.type="button";mb2.onclick=openMethod;mj.append(mb2);m.append(mj);
     m.append(el("div","note",esc((A.model?t("mmodel")(A.model,TOP.version).split(" · ")[0]+" · ":"")+t("tcredit"))));
     v.append(m);
-    v.append(vocab());
+  }
+  function openMethod(){topPage="method";render();V("topics").scrollIntoView({block:"start"})}
+  // the method page: how the text is read and tagged, what the counts mean, the limits; then the vocabulary
+  function methodPage(){
+    const v=V("topics");v.innerHTML="";
+    const p=el("div","panel"),bk=el("div","tp-jump"),b=el("button",null,esc(t("mback")));
+    b.type="button";b.onclick=()=>{topPage=null;render()};bk.append(b);
+    p.append(bk,el("h2",null,esc(t("mtitle"))));
+    t("mp").forEach(([h,ps])=>{p.append(el("h3","tp-mh",esc(h)));ps.forEach(x=>p.append(el("p","tp-mp",esc(x))))});
+    v.append(p,vocab());
   }
 
   return {

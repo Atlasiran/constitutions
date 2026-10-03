@@ -262,6 +262,11 @@
 .qa-root .tp-art{display:inline-block;padding:1px 9px;border-radius:999px;font-size:12px;border:1px solid var(--line)}
 .qa-root .tp-art a{color:var(--accent)}
 .qa-root .tp-cites{color:var(--ink-3);font-size:12px;margin-inline-start:6px}
+.qa-root .tp-jump{font-size:13px;color:var(--ink-2);margin-block:2px 8px}
+.qa-root .tp-jump button{all:unset;cursor:pointer;color:var(--accent,inherit);text-decoration:underline;text-underline-offset:3px}
+.qa-root .tp-jump button:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+.qa-root .tp-mh{font-size:15px;margin:18px 0 6px}
+.qa-root .tp-mp{margin:0 0 8px;line-height:1.85;color:var(--ink-2);max-width:72ch}
 .qa-root .tp-prog{border:1px dashed var(--line);border-radius:8px;padding:8px 12px;margin-block:4px 10px;color:var(--ink-2);font-size:13px;line-height:1.7;background:var(--surface-2)}
 
 /* Persian: one typeface throughout (Vazirmatn standalone, Shabnam in Atlas). Newsreader and the mono stack
