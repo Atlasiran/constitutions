@@ -839,8 +839,6 @@ export function mount(root, opts={}){
     if(!list.some(a=>a.uid===topDoc))topDoc=list[0].uid;
     const A=list.find(a=>a.uid===topDoc), d=docOf(A.uid), LV=TOP.leaves;
     progress(p,list.map(a=>a.uid),topDoc,u=>{topDoc=u;topLeaf=null;render()});
-    // the method page (and the whole vocabulary) is one click from the top
-    const jump=el("div","tp-jump"),mb=el("button",null,esc(t("mlink")));mb.type="button";mb.onclick=openMethod;jump.append(mb);p.append(jump);
     // leaf → the articles that provide for it
     // leaf → the articles that provide for it; the CCP additions count with Constitute's topics, the other
     // added vocabularies (policy fields, power-sharing) go to xby and get panels of their own
