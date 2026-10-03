@@ -564,9 +564,10 @@ Topic tagging by meaning (Constitute vocabulary) moved earlier, to 7.7–7.11.
   - Method page (7.13 (6)): `#topics=method` replaces the short method list; the vocabulary moved onto it. Reporting a wrong tag still has no channel.
 - **2026-10-03 (Sartori vocabularies, 7.14):**
   - Reviewed the 11 ontologies of the Sartori repository against our Constitute import. Correction to the first review: CCP-FACET's grounds of discrimination were already in Constitute; what it adds is democracy, rule of law, social security.
-  - Licences checked at source before use (CAP CC BY-NC-SA 4.0; Juon, Strøm CC0; repo CC BY-NC-SA 4.0). `pipeline/sartori.py` (fetch, check, layers), `data/ontology/sartori/`; three layers (`ccp`, `cap`, `ps`) with draft Persian; Naoruz tagged against them; Topics tab: two new panels, intro and method page rewritten for the added vocabularies, credit line. Local preview only; not committed or deployed.
+  - Licences checked at source before use (CAP CC BY-NC-SA 4.0; Juon, Strøm CC0; repo CC BY-NC-SA 4.0). `pipeline/sartori.py` (fetch, check, layers), `data/ontology/sartori/`; three layers (`ccp`, `cap`, `ps`) with draft Persian; Naoruz tagged against them; Topics tab: two new panels, intro and method page rewritten for the added vocabularies, credit line. Committed as `b0454eb`, deployed with the entry below.
 
 - **2026-10-03 (Naoruz finished in session: audit, Swiss check, 7.15):**
   - Human-rights audit of `naoruz-usi-2026` (5.5) read in the session: same rubric, benchmark and segments as `audit.py`, citations checked (segments exist, provisions in the benchmark, quotes found), 0 warnings. 24 guaranteed, 4 clawback, 3 silent. The audit page notes it was read in a session (`by`).
   - Swiss observation checked against the fedlex English text: holds; two additions (art. 78 lacks Swiss 70(1); art. 191 generalises Swiss 186(2)); art. 32 drops Swiss 29a's «exceptional».
-  - 7.15: our own vocabularies (levels, 27 language items, Regional Authority Index) and their Naoruz coding; three new panels; method page. Local preview checked in both languages; not committed or deployed.
+  - 7.15: our own vocabularies (levels, 27 language items, Regional Authority Index) and their Naoruz coding; three new panels; method page. Local preview checked in both languages.
+  - Deployed: constitutions `b0454eb` (Sartori layers) and `74ab399`, Atlas `bf06455`; live on atlasiran.org about 70 s after the push (topics data `114ff5a618d9`, the Naoruz audit in the rights view).
