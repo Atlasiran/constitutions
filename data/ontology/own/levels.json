@@ -1,0 +1,18 @@
+{
+ "about": {"en": "Who holds a policy field, read from the article that assigns it. Recorded for each policy-field (cap:) tag of an article that assigns the field to a level; rights and aims are left without a level.",
+           "fa": "این‌که حوزه‌ی سیاست‌گذاری با کیست، از روی اصلی که آن را واگذار می‌کند. برای هر برچسب حوزه‌ی سیاست‌گذاری (cap:) در اصلی که حوزه را به سطحی می‌سپارد ثبت می‌شود؛ حق‌ها و هدف‌ها بی‌سطح می‌مانند."},
+ "levels": [
+  {"key": "N",  "en": "National", "fa": "ملی",
+   "d": "The national level legislates and carries out.", "df": "سطح ملی قانون می‌گذارد و اجرا می‌کند."},
+  {"key": "NR", "en": "National law, regional execution", "fa": "قانون ملی، اجرای منطقه‌ای",
+   "d": "The national level legislates; the regions carry the law out.", "df": "سطح ملی قانون می‌گذارد؛ مناطق آن را اجرا می‌کنند."},
+  {"key": "P",  "en": "National principles, regional detail", "fa": "اصول ملی، جزئیات منطقه‌ای",
+   "d": "The national level lays down principles or minimum rules; the regions legislate the rest.", "df": "سطح ملی اصول یا حداقل‌ها را می‌گذارد؛ مناطق باقی را قانون‌گذاری می‌کنند."},
+  {"key": "C",  "en": "Shared", "fa": "مشترک",
+   "d": "National level and regions both act, each within its powers, or jointly.", "df": "سطح ملی و مناطق هر دو، هر یک در حدود اختیار خود یا با هم، عمل می‌کنند."},
+  {"key": "R",  "en": "Regional", "fa": "منطقه‌ای",
+   "d": "The regions hold the field; the national level at most supports or coordinates.", "df": "حوزه با مناطق است؛ سطح ملی حداکثر پشتیبانی یا هماهنگ می‌کند."},
+  {"key": "L",  "en": "Local", "fa": "محلی",
+   "d": "Municipalities and villages hold the field, alone or by agreement with the region.", "df": "حوزه با شهر و روستاست، به‌تنهایی یا با توافق منطقه."}
+ ]
+}

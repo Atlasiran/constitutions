@@ -42,7 +42,7 @@ for f in sorted(glob.glob(D+"/audits/*.json")):
     if a["uid"] not in uids or not (public or preview):continue
     for r in a["rights"].values():cited.update(r["provisions"])
     audits.append({k:a[k] for k in ("uid","doc_version","model","audited_at","benchmark","rubric_version",
-                   "summary_en","summary_fa","review","rights","segment_labels")}
+                   "summary_en","summary_fa","review","rights","segment_labels")}|({"by":a["by"]} if a.get("by") else {})
                   |({} if ok else {"unreviewed":True})|({} if public else {"preview":True}))
 aud={"rights":[{k:r[k] for k in ("id","en","fa")} for r in rub["rights"]],
      "instruments":inst,"provisions":{k:prov[k] for k in sorted(cited) if k in prov},"audits":audits}
@@ -54,10 +54,17 @@ for f in sorted(glob.glob(D+"/topics/*.json")):
     rv=a.get("review",{}); ok=rv.get("status")=="approved"; public=ok or rv.get("publish") is True
     if a["uid"] not in uids or not (public or preview):continue
     tagged.append({k:a.get(k) for k in ("uid","ontology_version","model","by","review","note_fa","note_en","findings","document")}
-                  |{"articles":[{"n":x["n"],"t":x["topics"]} for x in a["articles"]]}
+                  |{"articles":[{"n":x["n"],"t":x["topics"]}|({"x":x["x"]} if x.get("x") else {})|({"lv":x["lv"]} if x.get("lv") else {}) for x in a["articles"]]}
+                  |({"rai":a["rai"]} if a.get("rai") else {})
                   |({} if ok else {"unreviewed":True})|({} if public else {"preview":True}))
-top={"version":ONT["version"],"licence":ONT["licence"],"groups":ONT["groups"],
-     "leaves":{x["id"]:{"g":x["group"],"en":x["en"],"fa":x["fa"],"fs":x["fa_status"],"d":x["definition_en"],"df":x["fa_def"],"q":x.get("question")} for x in ONT["topics"]},
+# the Sartori layers (plan 7.14): leaves keyed "<layer>:<key>", each with its layer (l) and source (s)
+EX=ONT["extra"]
+top={"version":ONT["version"],"licence":ONT["licence"],"groups":ONT["groups"]|{k:{"fa":v["fa"],"en":v["en"]} for k,v in EX["groups"].items()},
+     "layers":{k:{"fa":v["fa"],"en":v["en"],"src":v["src"]} for k,v in EX["layers"].items()},"xversion":EX["version"],
+     # our own (plan 7.15): levels of government for policy fields, and the Regional Authority Index's dimensions
+     "levels":EX["levels"]["levels"],"rai":{k:EX["rai"][k] for k in ("source","url","licence","domains","dims")},
+     "leaves":{x["id"]:{"g":x["group"],"en":x["en"],"fa":x["fa"],"fs":x["fa_status"],"d":x["definition_en"],"df":x["fa_def"],"q":x.get("question")} for x in ONT["topics"]}
+             |{x["id"]:{"g":x["group"],"l":x["layer"],"s":x["src"],"en":x["en"],"fa":x["fa"],"fs":x["fa_status"],"d":x["definition_en"],"df":x["fa_def"]} for x in EX["leaves"]},
      "docs":tagged}
 for n,o in [("catalog.json",cat),("analysis.json",an),("articles.json",slim),("audits.json",aud),("editions.json",ed),("topics.json",top)]:
     json.dump(o,open(S+"/"+n,"w",encoding="utf-8"),ensure_ascii=False,separators=(",",":"))

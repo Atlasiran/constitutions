@@ -11,6 +11,9 @@ re-import never overwrites a reviewed translation.
     ontology.py           # → data/ontology/topics.json
     ontology.py fa        # draft Persian labels for topics fa.json lacks (model, ~50 a call), then rebuild
 
+topics.json also carries `extra`: the vocabularies added from the Sartori repository (pipeline/sartori.py) and our
+own (pipeline/own.py: language, levels of government, Regional Authority Index).
+
 The vocabulary is CC BY-NC 3.0 (see data/ontology/README.md), not covered by the repository's AGPL.
 `version` hashes the XML and the mapping, so tags cached against one version go stale when either changes.
 """
@@ -174,9 +177,13 @@ def build():
     mapping = json.dumps([PARENT, LEAF, EXTRA], sort_keys=True, ensure_ascii=False).encode()
     version = hashlib.sha256(open(XML, "rb").read() + mapping).hexdigest()[:12]
     src = json.load(open(os.path.join(OUT, "source.json"), encoding="utf-8"))
+    # the Sartori layers (CCP's later topics, CAP policy fields, power-sharing) have their own version, so adding
+    # or changing them never makes tags against Constitute stale
+    from sartori import layers
+    from own import merge   # our own: language, levels of government, Regional Authority Index (plan 7.15)
     out = {"version": version, "source": src,
            "licence": "CC BY-NC 3.0 Unported; Comparative Constitutions Project, constituteproject.org",
-           "groups": GROUPS, "topics": topics}
+           "groups": GROUPS, "topics": topics, "extra": merge(layers(GROUPS))}
     json.dump(out, open(os.path.join(OUT, "topics.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
     from collections import Counter
@@ -188,6 +195,13 @@ def build():
           f"{sum(1 for t in topics if t['fa_status'] == 'missing')} missing")
     for g in GROUPS: print(f"  {by.get(g, 0):>4}  {g}")
     if stale: print("LEAF entries not in the vocabulary:", stale)
+    X = out["extra"]
+    print(f"Added layers {X['version']}: " + ", ".join(
+        f"{k} {sum(1 for x in X['leaves'] if x['layer'] == k)}" for k in X["layers"]))
+    # plan 7.14: once every Persian name is reviewed, the contribution to Sartori can go
+    drafts = sum(1 for t in topics if t["fa_status"] != "reviewed") + sum(1 for x in X["leaves"] if x["fa_status"] != "reviewed")
+    print(f"Persian still to review: {drafts}" if drafts else
+          "Persian review complete: time for the Sartori contribution (plan 7.14, local/notes.md)")
 
 
 MODEL = "claude-opus-5-5"   # user, 2026-10-03: Opus 5.5 at medium effort for the vocabulary and tagging

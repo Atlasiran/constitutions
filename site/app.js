@@ -48,11 +48,20 @@ const T={
       "The document's text comes from its PDF and was checked against the page images; the article list shows exactly what was read. Where an article was amended, only the wording in force is assessed.",
       "This is an analytical reading, not legal advice or a ruling."],
    mmodel:(m,b)=>"Model: "+m+" · benchmark version "+b,
+   mby:"Read in a Claude Code working session rather than through the audit pipeline: same scoring guide, benchmark, articles and citation checks.",
    topics:"Topics",
    ttitle:"What the document covers, and what it leaves out",
-   tsub:"Every article is tagged with the topics of Constitute's vocabulary (Comparative Constitutions Project): 334 subjects that constitutions around the world address, from the right to life to the removal of judges. The topics no article touches are listed too.",
+   tsub:"Every article is tagged with the topics of Constitute's vocabulary (Comparative Constitutions Project): 334 subjects that constitutions around the world address, from the right to life to the removal of judges, and three from the project's later vocabulary: democracy, rule of law and social security. The topics no article touches are listed too. More lenses follow: the policy field each article governs (Comparative Agendas Project) and which level of government holds it; how much authority the regions would have (Regional Authority Index); the rules it lays down for sharing power; and its language policy.",
    tnone:"No document has been tagged and published yet.",
-   tcount:(a,b)=>a+" of "+b+" topics addressed",tarts:(n,z)=>n+" articles, "+z+" of them on subjects the vocabulary does not code (transport, energy, agriculture …)",
+   tcount:(a,b)=>a+" of "+b+" topics addressed",tarts:(n,z,y)=>n+" articles, "+z+" of them on subjects Constitute does not code (transport, energy, agriculture …)"+(y?"; the added vocabularies place "+y+" of those":""),
+   xcap:"Policy fields",xcapsub:n=>"The policy field each article governs, from the 213 topics of the Comparative Agendas Project: what the state does, not how its organs work. "+n+" articles have one. Only the fields that appear are listed; a constitution need not cover every field.",
+   xps:"Power-sharing",xpssub:"Rules that share power among groups, parties and regions, from two datasets (Juon; Strøm and colleagues): vetoes, quotas, rotation of offices, supermajorities, elected regional and local government, the military's place. A rule that is absent is often a choice, not a gap.",
+   xnone:"None of these items appears in this document.",vsrc:"Source",
+   xlv:"Who holds each policy field",xlvsub:"For each article that assigns a policy field, the level of government that holds it, read from the article's text. A field appears under more than one level when articles divide it. Rights and aims carry no level.",
+   xrai:"Regional authority",xraisub:u=>"How much authority the regions would hold, on the ten dimensions of the Regional Authority Index, scored for "+u+". Self-rule is authority over the region itself; shared rule is a say over the country as a whole. The index compares countries as they work; this is our reading of a draft's text.",
+   xraitot:(a,b,c)=>a+" of 30 · self-rule "+b+" of 18 · shared rule "+c+" of 12",xraiscale:"The scale",
+   xraicredit:"Scales: Regional Authority Index v.3 (Hooghe, Marks, Schakel and colleagues), paraphrased from its codebook. Scores: ours.",
+   xlang:"Language",xlangsub:"Language policy, which the other vocabularies barely touch: which languages are official and who decides, and whether they can be used in courts, offices, schools, media and economic life. Our own list of 27 items, built on the European Charter for Regional or Minority Languages and the Framework Convention for the Protection of National Minorities. An item that is absent may be a choice, or left to ordinary law.",
    tnote:"Observation",tfind:"Gaps worth noting",tgroups:"By subject",tpresent:"Addressed",tabsent:"Not addressed",
    tart:"Articles",tpre:"Preamble",tdoc:"in the document as a whole",
    tunrev:"Not yet reviewed: the tags, gaps and observation come from one reading of the text by Claude in a working session; no person has checked them yet.",
@@ -60,26 +69,41 @@ const T={
    mshort:"How the text is read, how articles are tagged, what “not addressed” means, and the limits: on the method page.",
    mp:[["What this measures",["This section shows which topics a constitution or draft provides for, and which it says nothing about. It is not a score. The number of topics addressed says what a text deals with, not whether it is better."]],
      ["The vocabulary",["We did not make the yardstick. It is the topic vocabulary of Constitute, which the Comparative Constitutions Project uses to code the constitutions of the world: 334 topics, from the right to life to the removal of judges. Each topic has a definition and a coding question, the question a coder asks of every constitution.",
+       "Three topics come from the project's later vocabulary and are not yet in Constitute's: democracy, rule of law and social security. They count with the 334, so the total is 337.",
        "For readability we placed every topic under one of 30 subject groups. The grouping is ours, not Constitute's.",
        "Constitute has no Persian. The Persian names and definitions are ours and still drafts; each unreviewed Persian name is marked, and the English name and definition are always beside it."]],
+     ["The added vocabularies",["Constitute was built to compare national constitutions in force. Iranian drafts, the federal ones above all, also say who runs schools, roads and energy, and how power is shared among peoples and regions. Two more vocabularies cover this, and three additions of our own follow below. Each has its own panel and is not counted in the coverage figure.",
+       "Policy fields: the 213 topics of the Comparative Agendas Project, which codes what governments deal with, from health to transport. An article gets a field when it governs that field, at any level of government. CAP's civil-rights topics are not used, since Constitute codes rights in more detail.",
+       "Power-sharing: the 75 rules of Andreas Juon's Constitutional Power-Sharing Dataset and 18 rules from the Inclusion, Dispersion and Constraint dataset of Kaare Strøm and colleagues: vetoes and quotas for groups, rotation of offices, supermajorities, elected regional and local government, the tax and police powers of regions, and the military's place in politics. Only rules a constitution can lay down are used; those that record what a government actually did are left out.",
+       "We took these vocabularies from the Sartori repository (sartori.network), which gathers coding vocabularies for political institutions. The Persian names are ours and, like Constitute's, still drafts."]],
+     ["Our own additions",["Two questions every Iranian draft must answer are covered by none of these: language, and who holds which power in a federation. For them we added three things of our own.",
+       "Levels of government: for each policy field an article assigns, the level that holds it: national; national law carried out by the regions; national principles with regional detail; shared; regional; local. Together they show how a draft divides the state's work.",
+       "Language: 27 items on the status and use of languages. They follow the areas of life in Part III of the European Charter for Regional or Minority Languages (education, courts, administration, media, culture, economic life, contacts across borders) and the Framework Convention for the Protection of National Minorities (names, signs, schooling), plus questions of status: which languages are official, at which level, and who decides.",
+       "Regional authority: the ten dimensions of the Regional Authority Index of Liesbet Hooghe, Gary Marks, Arjan Schakel and colleagues, which measures the authority of regional governments in 95 countries. We score a draft's regions on the same scales and cite the articles each score rests on. The index scores countries as they work; we score what a draft's text says.",
+       "All three are ours and still drafts. Once reviewed, they can be offered to the Sartori repository with the Persian names."]],
      ["The text",["Tags are put on a text read from the source PDF and then proofread page by page against the image of the same page. The document's own misprints stay as printed; only reading errors are corrected.",
        "The text is split into articles with the numbers the document gives them. Every article links to its page in the PDF, so anyone can check it against the original."]],
      ["Tagging",["Each article is read on its own and in full, and gets the topics it actually provides for: it grants a right, sets up a body, assigns a power or forbids something. Being mentioned is not enough.",
        "An article can carry several topics and a topic can appear in several articles. Some topics belong to the document as a whole, such as having a preamble.",
-       "Some articles get no topic, because they deal with subjects the vocabulary does not code (transport, energy, agriculture). Each document's page gives their number.",
+       "Some articles get no Constitute topic, because they deal with subjects it does not code (transport, energy, agriculture). Most of them get a policy field instead; each document's page gives both numbers.",
        "The tags were made by Claude (Anthropic). A tag that names an article missing from the document is rejected. Each tag is stored with a fingerprint of its article's text: if the text is corrected later, the tag is known to be stale and is redone."]],
      ["What “addressed” and “not addressed” mean",["“Addressed” means at least one article provides for the topic. It says nothing about how: an article that grants a right and one that restricts it both fall under the same topic.",
-       "“Not addressed” means no article provides for it. Some absences are choices: a draft that separates religion and state has no official religion, and a parliamentary system has no directly elected president. Some topics exclude each other, so no constitution has all 334."]],
+       "“Not addressed” means no article provides for it. Some absences are choices: a draft that separates religion and state has no official religion, and a parliamentary system has no directly elected president. Some topics exclude each other, so no constitution has all 337.",
+       "With power-sharing rules, absence is usually a design choice: a draft without ethnic quotas has chosen not to have them."]],
      ["Gaps and observations",["The list of gaps worth noting is our reading, not a verdict. From the topics not addressed we picked those that matter for a transition to democracy in Iran, such as an independent oversight body, an electoral commission or dealing with past crimes. Each gap links to its topics and, where relevant, to the articles concerned, so you can judge for yourself.",
        "An observation is a remark on the document as a whole, such as a model it follows."]],
      ["Review",["Until someone has checked a document's tags, gaps and observation, it is marked “not yet reviewed”. Review means checking the tags against the text article by article; the reviewer and the date are then recorded.",
        "This section is experimental. Documents are added one at a time: the federal drafts first, then the rest."]],
      ["Limits",["The model can miss a topic or add a wrong tag; that is what review is for.",
-       "Constitute's vocabulary was built for national constitutions in force. Drafts sometimes deal with subjects outside it, and those articles stay untagged here.",
+       "Constitute's vocabulary was built for national constitutions in force. The added vocabularies fill part of what it misses, not all of it.",
+       "The Comparative Agendas Project's vocabulary was built to code what governments and parliaments deal with, not constitutions. An article that assigns a field to the federal or the state level is coded by the field; the level that holds it is recorded beside it.",
+       "The regional authority score reads only the text. Where a draft is silent, as on borrowing, the score rests on little, and the note says so.",
        "The number of topics also depends on length: a longer text usually covers more topics."]],
-     ["Source and licence",["Topic vocabulary: Constitute (constituteproject.org), Comparative Constitutions Project, under CC BY-NC 3.0. Constitute's texts of national constitutions are not used."]]],
-   tcredit:"Topic vocabulary: Constitute, Comparative Constitutions Project, CC BY-NC 3.0.",
-   vtitle:"The vocabulary",vsub:n=>"All "+n+" topics, by subject: each with its definition and the question Constitute's coders ask of every constitution. Under each topic: the documents published here that provide for it.",
+     ["Source and licence",["Topic vocabulary: Constitute (constituteproject.org), Comparative Constitutions Project, under CC BY-NC 3.0. Constitute's texts of national constitutions are not used.",
+       "The three added CCP topics and the policy fields come from the Sartori repository (CC BY-NC-SA 4.0); the policy fields are the Comparative Agendas Project's master codebook (CC BY-NC-SA 4.0). The power-sharing rules come from Juon's dataset and from Strøm and colleagues' (both CC0). Our Persian names for them are shared on the same ShareAlike terms.",
+       "The language items cite the articles of the Council of Europe's European Charter for Regional or Minority Languages and Framework Convention for the Protection of National Minorities they are built on; the wording is ours. The Regional Authority Index's scales are paraphrased from its codebook, with attribution (its data are published under CC BY 4.0)."]]],
+   tcredit:"Topic vocabulary: Constitute, Comparative Constitutions Project, CC BY-NC 3.0. Added vocabularies via the Sartori repository: CCP and the Comparative Agendas Project (CC BY-NC-SA 4.0); Juon; Strøm and colleagues (CC0). Regional Authority Index: Hooghe, Marks, Schakel and colleagues. Language items and levels: ours.",
+   vtitle:"The vocabulary",vsub:n=>"All "+n+" topics, by vocabulary and subject: each with its definition and, for Constitute's, the question its coders ask of every constitution. Under each topic: the documents published here that provide for it.",
    vq:"Coding question",vdocs:"Provided for in",vnone:"No published document yet.",vdraft:"Persian name: draft",
    prog:(a,b)=>a+" of "+b+" constitutions and drafts done so far. The others are queued and follow one by one; the federal drafts come next.",queued:"queued",
    title:"Qanun Atlas",
@@ -143,11 +167,20 @@ const T={
       "متن سند از فایل PDF آن گرفته و با تصویر صفحه‌ها مقابله شده است؛ فهرست اصول دقیقاً همان است که خوانده شده. در اصول اصلاح‌شده تنها متن معتبر کنونی سنجیده می‌شود.",
       "این یک خوانش تحلیلی است، نه مشاوره‌ی حقوقی یا حکم قضایی."],
    mmodel:(m,b)=>"مدل: "+m+" · نسخه‌ی متن بالادستی "+b,
+   mby:"خوانده‌شده در یک جلسه‌ی کاری Claude Code، نه از راه خط لوله‌ی ارزیابی: با همان راهنمای امتیازدهی، همان متن بالادستی، همان اصل‌ها و همان وارسی استنادها.",
    topics:"موضوع‌ها",
    ttitle:"سند به چه می‌پردازد و چه را نمی‌گوید",
-   tsub:"هر اصل با موضوع‌های واژگان Constitute (پروژه‌ی تطبیقی قانون‌های اساسی) برچسب خورده است: ۳۳۴ موضوعی که قانون‌های اساسی در سراسر جهان به آن‌ها می‌پردازند، از حق زندگی تا برکناری قاضیان. موضوع‌هایی که هیچ اصلی به آن‌ها نپرداخته هم فهرست شده‌اند.",
+   tsub:"هر اصل با موضوع‌های واژگان Constitute (پروژه‌ی تطبیقی قانون‌های اساسی) برچسب خورده است: ۳۳۴ موضوعی که قانون‌های اساسی در سراسر جهان به آن‌ها می‌پردازند، از حق زندگی تا برکناری قاضیان، و سه موضوع از واژگان تازه‌ترِ همین پروژه: دموکراسی، حاکمیت قانون و تامین اجتماعی. موضوع‌هایی که هیچ اصلی به آن‌ها نپرداخته هم فهرست شده‌اند. پس از آن نگاه‌های دیگر می‌آید: حوزه‌ی سیاست‌گذاری‌ای که هر اصل تنظیم می‌کند (پروژه‌ی دستورکارهای تطبیقی) و این‌که کدام سطح حکومت آن را در دست دارد؛ مناطق چه اندازه اختیار خواهند داشت (شاخص اقتدار منطقه‌ای)؛ قاعده‌هایی که برای تقسیم قدرت می‌گذارد؛ و سیاست زبانی‌اش.",
    tnone:"هنوز هیچ سندی برچسب نخورده و منتشر نشده است.",
-   tcount:(a,b)=>num2(a)+" از "+num2(b)+" موضوع",tarts:(n,z)=>num2(n)+" اصل؛ "+num2(z)+" تا درباره‌ی موضوع‌هایی که این واژگان ندارد (حمل‌ونقل، انرژی، کشاورزی …)",
+   tcount:(a,b)=>num2(a)+" از "+num2(b)+" موضوع",tarts:(n,z,y)=>num2(n)+" اصل؛ "+num2(z)+" تا درباره‌ی موضوع‌هایی که واژگان Constitute ندارد (حمل‌ونقل، انرژی، کشاورزی …)"+(y?"؛ واژگان افزوده "+num2(y)+" تا از آن‌ها را جا داده‌اند":""),
+   xcap:"حوزه‌های سیاست‌گذاری",xcapsub:n=>"حوزه‌ی سیاست‌گذاری‌ای که هر اصل تنظیم می‌کند، از میان ۲۱۳ موضوع پروژه‌ی دستورکارهای تطبیقی: کاری که دولت می‌کند، نه این‌که نهادهایش چطور کار می‌کنند. "+num2(n)+" اصل حوزه‌ای دارند. تنها حوزه‌هایی که آمده‌اند فهرست شده‌اند؛ قانون اساسی لازم نیست به همه‌ی حوزه‌ها بپردازد.",
+   xps:"تقسیم قدرت",xpssub:"قاعده‌هایی که قدرت را میان گروه‌ها، حزب‌ها و مناطق تقسیم می‌کنند، از دو مجموعه‌داده (یوئن؛ استروم و همکاران): حق وتو، سهمیه، گردش منصب‌ها، اکثریت ویژه، حکومت منتخب منطقه‌ای و محلی، و جای ارتش. نبودن یک قاعده اغلب انتخاب است، نه کاستی.",
+   xnone:"هیچ‌یک از این‌ها در این سند نیامده است.",vsrc:"منبع",
+   xlv:"هر حوزه با کیست",xlvsub:"برای هر اصلی که حوزه‌ای از سیاست‌گذاری را واگذار می‌کند، سطحی از حکومت که آن را در دست دارد، از روی متن همان اصل. حوزه‌ای که اصل‌ها میان چند سطح تقسیمش کرده‌اند زیر هر کدام می‌آید. حق‌ها و هدف‌ها سطح ندارند.",
+   xrai:"اقتدار منطقه‌ای",xraisub:u=>"مناطق چه اندازه اختیار خواهند داشت، بر پایه‌ی ده بُعد شاخص اقتدار منطقه‌ای (Regional Authority Index)، برای "+u+". خودگردانی اختیار منطقه بر خود است؛ حکمرانی مشترک سهم آن در اداره‌ی کل کشور. این شاخص کشورها را آن‌طور که کار می‌کنند می‌سنجد؛ این‌جا خوانش ما از متن یک پیش‌نویس است.",
+   xraitot:(a,b,c)=>num2(a)+" از ۳۰ · خودگردانی "+num2(b)+" از ۱۸ · حکمرانی مشترک "+num2(c)+" از ۱۲",xraiscale:"مقیاس",
+   xraicredit:"مقیاس‌ها: شاخص اقتدار منطقه‌ای، نسخه‌ی ۳ (هوخه، مارکس، شاکل و همکاران)، بازنویسی‌شده از دفترچه‌ی کدگذاری آن. نمره‌ها: از ما.",
+   xlang:"زبان",xlangsub:"سیاست زبانی، که واژگان‌های دیگر تقریبن به آن نمی‌پردازند: کدام زبان‌ها رسمی‌اند و چه کسی تصمیم می‌گیرد، و آیا می‌شود آن‌ها را در دادگاه، اداره، مدرسه، رسانه و زندگی اقتصادی به کار برد. فهرستی ۲۷ موردی از خود ما، بر پایه‌ی منشور اروپایی زبان‌های منطقه‌ای یا اقلیت و کنوانسیون چارچوب حمایت از اقلیت‌های ملی. نبودن یک مورد ممکن است انتخاب باشد، یا به قانون عادی سپرده شده باشد.",
    tnote:"مشاهده",tfind:"کاستی‌های درخور توجه",tgroups:"بر پایه‌ی موضوع",tpresent:"آمده",tabsent:"نیامده",
    tart:"اصول",tpre:"مقدمه",tdoc:"در کل سند",
    tunrev:"هنوز بازبینی نشده: برچسب‌ها، کاستی‌ها و مشاهده حاصل یک بار خواندن متن به دست Claude در یک جلسه‌ی کاری‌اند و هنوز کسی آن‌ها را وارسی نکرده است.",
@@ -155,26 +188,41 @@ const T={
    mshort:"متن چطور خوانده می‌شود، برچسب‌ها چطور زده می‌شوند، «نیامده» یعنی چه، و محدودیت‌ها: در صفحه‌ی روش کار.",
    mp:[["این بخش چه می‌سنجد",["این بخش نشان می‌دهد هر قانون اساسی یا پیش‌نویس درباره‌ی کدام موضوع‌ها حکم می‌کند و درباره‌ی کدام‌ها چیزی نمی‌گوید. نمره نیست. شمار موضوع‌های آمده نشان می‌دهد متن به چه چیزهایی پرداخته، نه این‌که بهتر است."]],
      ["واژگان",["معیار را ما نساخته‌ایم. واژگان موضوع‌های Constitute است، که پروژه‌ی تطبیقی قانون‌های اساسی (Comparative Constitutions Project) با آن قانون‌های اساسی کشورهای جهان را کدگذاری می‌کند: ۳۳۴ موضوع، از حق زندگی تا برکناری قاضیان. هر موضوع یک تعریف دارد و یک پرسش کدگذاری، یعنی پرسشی که کدگذار از هر قانون اساسی می‌پرسد.",
+       "سه موضوع از واژگان تازه‌ترِ همین پروژه آمده است که در واژگان Constitute هنوز نیست: دموکراسی، حاکمیت قانون و تامین اجتماعی. این سه با آن ۳۳۴ شمرده می‌شوند، پس جمع ۳۳۷ است.",
        "برای خواناتر شدن، هر موضوع را زیر یکی از ۳۰ گروه موضوعی گذاشته‌ایم. این گروه‌بندی از ماست، نه از Constitute.",
        "Constitute فارسی ندارد. نام‌ها و تعریف‌های فارسی را ما نوشته‌ایم و هنوز پیش‌نویس‌اند؛ هر نام فارسیِ بازبینی‌نشده علامت خورده و نام و تعریف انگلیسی همیشه کنارش هست."]],
+     ["واژگان افزوده",["Constitute برای مقایسه‌ی قانون‌های اساسی جاری کشورها ساخته شده است. پیش‌نویس‌های ایرانی، به‌ویژه پیش‌نویس‌های فدرال، این را هم می‌گویند که مدرسه و راه و انرژی با کیست و قدرت میان مردمان و مناطق چطور تقسیم می‌شود. دو واژگان دیگر این‌ها را می‌پوشانند و سه افزوده‌ی خود ما در پی می‌آید. هر یک بخش خود را دارد و در شمار پوشش موضوع‌ها حساب نمی‌شود.",
+       "حوزه‌های سیاست‌گذاری: ۲۱۳ موضوع پروژه‌ی دستورکارهای تطبیقی (Comparative Agendas Project)، که کار دولت‌ها را، از سلامت تا حمل‌ونقل، کدگذاری می‌کند. اصلی که حوزه‌ای را تنظیم کند، در هر سطحی از حکومت، آن حوزه را می‌گیرد. موضوع‌های حقوق مدنی این واژگان به کار نرفته‌اند، چون Constitute حقوق را دقیق‌تر کدگذاری می‌کند.",
+       "تقسیم قدرت: ۷۵ قاعده‌ی مجموعه‌داده‌ی تقسیم قدرت در قانون اساسی (Constitutional Power-Sharing Dataset) از آندریاس یوئن (Andreas Juon)، و ۱۸ قاعده از مجموعه‌داده‌ی «فراگیری، پراکندگی و مهار» (Inclusion, Dispersion, and Constraint) از کوره استروم (Kaare Strøm) و همکاران: حق وتو و سهمیه برای گروه‌ها، گردش منصب‌ها، اکثریت ویژه، حکومت منتخب منطقه‌ای و محلی، اختیار مالیاتی و انتظامی مناطق، و جای ارتش در سیاست. تنها قاعده‌هایی به کار رفته‌اند که قانون اساسی می‌تواند بگذارد؛ آن‌هایی که کار واقعی یک دولت را ثبت می‌کنند کنار گذاشته شده‌اند.",
+       "این واژگان‌ها را از مخزن Sartori (sartori.network) گرفته‌ایم، که واژگان‌های کدگذاری نهادهای سیاسی را گرد می‌آورد. نام‌های فارسی از ماست و، مانند نام‌های Constitute، هنوز پیش‌نویس‌اند."]],
+     ["افزوده‌های خود ما",["دو پرسش که هر پیش‌نویس ایرانی باید پاسخ دهد در هیچ‌یک از این واژگان‌ها نیست: زبان، و این‌که در فدراسیون کدام اختیار با کیست. برای این دو، سه چیز از خود افزوده‌ایم.",
+       "سطح‌های حکومت: برای هر حوزه‌ی سیاست‌گذاری که اصلی واگذار می‌کند، سطحی که آن را در دست دارد: ملی؛ قانون ملی با اجرای منطقه‌ای؛ اصول ملی با جزئیات منطقه‌ای؛ مشترک؛ منطقه‌ای؛ محلی. کنار هم، نشان می‌دهند یک پیش‌نویس کار دولت را چطور تقسیم می‌کند.",
+       "زبان: ۲۷ مورد درباره‌ی جایگاه و کاربرد زبان‌ها. از عرصه‌های زندگی در بخش سوم منشور اروپایی زبان‌های منطقه‌ای یا اقلیت (European Charter for Regional or Minority Languages) پیروی می‌کنند (آموزش، دادگاه، اداره، رسانه، فرهنگ، زندگی اقتصادی، پیوند فرامرزی) و از کنوانسیون چارچوب حمایت از اقلیت‌های ملی (Framework Convention for the Protection of National Minorities) (نام‌ها، تابلوها، آموزش)، به‌اضافه‌ی پرسش‌های جایگاه: کدام زبان‌ها رسمی‌اند، در کدام سطح، و چه کسی تصمیم می‌گیرد.",
+       "اقتدار منطقه‌ای: ده بُعد شاخص اقتدار منطقه‌ای (Regional Authority Index) از لیسبت هوخه، گری مارکس، آریان شاکل و همکاران، که اختیار حکومت‌های منطقه‌ای را در ۹۵ کشور می‌سنجد. ما مناطق یک پیش‌نویس را با همان مقیاس‌ها می‌سنجیم و اصل‌هایی را که هر نمره بر آن‌ها تکیه دارد می‌آوریم. شاخص کشورها را آن‌طور که کار می‌کنند می‌سنجد؛ ما آن‌چه متن پیش‌نویس می‌گوید.",
+       "هر سه از ماست و هنوز پیش‌نویس. پس از بازبینی می‌توان آن‌ها را همراه نام‌های فارسی به مخزن Sartori پیشنهاد داد."]],
      ["متن",["برچسب‌ها روی متنی زده می‌شوند که از PDF منبع خوانده و بعد صفحه‌به‌صفحه با تصویر همان صفحه مقابله شده است. غلط‌های چاپی خود سند همان‌طور که چاپ شده‌اند می‌مانند؛ فقط خطای خواندن تصحیح می‌شود.",
        "متن به اصل‌ها یا ماده‌ها تقسیم می‌شود، با همان شماره‌ای که در سند آمده. کنار هر اصل لینک صفحه‌ی PDF هست تا هر کس بتواند آن را با اصل سند تطبیق دهد."]],
      ["برچسب‌زدن",["هر اصل جداگانه و کامل خوانده می‌شود و موضوع‌هایی را می‌گیرد که واقعن درباره‌شان حکم می‌کند: حقی می‌دهد، نهادی می‌سازد، اختیاری تعیین می‌کند یا چیزی را منع می‌کند. آمدن نام یک موضوع کافی نیست.",
        "یک اصل می‌تواند چند موضوع داشته باشد و یک موضوع در چند اصل بیاید. برخی موضوع‌ها به کل سند تعلق دارند، مثل داشتن مقدمه.",
-       "برخی اصل‌ها هیچ موضوعی نمی‌گیرند، چون درباره‌ی چیزی‌اند که واژگان کدگذاری نمی‌کند (حمل‌ونقل، انرژی، کشاورزی). شمارشان در صفحه‌ی هر سند آمده است.",
+       "برخی اصل‌ها هیچ موضوعی از Constitute نمی‌گیرند، چون درباره‌ی چیزی‌اند که آن واژگان کدگذاری نمی‌کند (حمل‌ونقل، انرژی، کشاورزی). بیش‌ترِ آن‌ها در عوض حوزه‌ی سیاست‌گذاری می‌گیرند؛ هر دو شمار در صفحه‌ی هر سند آمده است.",
        "برچسب‌ها را Claude (ساخت Anthropic) زده است. برچسبی که به اصلی ناموجود اشاره کند رد می‌شود. هر برچسب همراه با اثر انگشت متن اصلش ذخیره می‌شود: اگر متن بعدن تصحیح شود، برچسب کهنه شناخته می‌شود و دوباره زده می‌شود."]],
      ["«آمده» و «نیامده» یعنی چه",["«آمده» یعنی دست‌کم یک اصل درباره‌ی آن موضوع حکم می‌کند. درباره‌ی چگونگی آن چیزی نمی‌گوید: اصلی که حقی را می‌دهد و اصلی که همان حق را محدود می‌کند هر دو زیر یک موضوع می‌آیند.",
-       "«نیامده» یعنی هیچ اصلی درباره‌ی آن حکم نمی‌کند. برخی نبودن‌ها انتخاب‌اند: پیش‌نویسی که دین و دولت را جدا می‌کند دین رسمی ندارد، و نظامی پارلمانی رئیس‌جمهورِ منتخب مستقیم مردم ندارد. برخی موضوع‌ها با هم جمع نمی‌شوند، پس هیچ قانون اساسی همه‌ی ۳۳۴ موضوع را ندارد."]],
+       "«نیامده» یعنی هیچ اصلی درباره‌ی آن حکم نمی‌کند. برخی نبودن‌ها انتخاب‌اند: پیش‌نویسی که دین و دولت را جدا می‌کند دین رسمی ندارد، و نظامی پارلمانی رئیس‌جمهورِ منتخب مستقیم مردم ندارد. برخی موضوع‌ها با هم جمع نمی‌شوند، پس هیچ قانون اساسی همه‌ی ۳۳۷ موضوع را ندارد.",
+       "در تقسیم قدرت، نبودن یک قاعده معمولن انتخاب طراحی است: پیش‌نویسی که سهمیه‌ی قومی ندارد خواسته است که نداشته باشد."]],
      ["کاستی‌ها و مشاهده‌ها",["فهرست «کاستی‌های درخور توجه» خوانش ماست، نه حکم. از میان موضوع‌های نیامده آن‌هایی را برگزیده‌ایم که برای گذار به دموکراسی در ایران مهم‌اند، مثل نهاد ناظر مستقل، کمیسیون انتخابات یا رسیدگی به جنایات گذشته. هر کاستی به موضوع‌هایش و، هر جا لازم باشد، به اصل‌های مربوط لینک دارد تا خودتان بسنجید.",
        "«مشاهده» نکته‌ای درباره‌ی کل سند است، مثلن الگویی که از آن پیروی می‌کند."]],
      ["بازبینی",["تا وقتی کسی برچسب‌ها، کاستی‌ها و مشاهده‌ی یک سند را وارسی نکرده، آن سند علامت «هنوز بازبینی نشده» دارد. بازبینی یعنی تطبیق برچسب‌ها با متن، اصل به اصل؛ پس از آن نام بازبین و تاریخ ثبت می‌شود.",
        "این بخش آزمایشی است. سندها یکی‌یکی اضافه می‌شوند: اول پیش‌نویس‌های فدرال، بعد بقیه."]],
      ["محدودیت‌ها",["مدل ممکن است موضوعی را جا بیندازد یا برچسبی نادرست بزند؛ بازبینی برای همین است.",
-       "واژگان Constitute برای قانون‌های اساسی جاری کشورها ساخته شده است. پیش‌نویس‌ها گاهی به موضوع‌هایی می‌پردازند که در آن نیست و آن اصل‌ها این‌جا بی‌موضوع می‌مانند.",
+       "واژگان Constitute برای قانون‌های اساسی جاری کشورها ساخته شده است. واژگان افزوده بخشی از آن‌چه را که در آن نیست پر می‌کنند، نه همه‌اش را.",
+       "واژگان دستورکارهای تطبیقی برای کدگذاری کار دولت‌ها و مجلس‌ها ساخته شده است، نه قانون‌های اساسی. اصلی که حوزه‌ای را به دولت فدرال یا به ایالت می‌سپارد با همان حوزه کد می‌خورد؛ سطحی که آن را در دست دارد کنارش ثبت می‌شود.",
+       "نمره‌ی اقتدار منطقه‌ای تنها متن را می‌خواند. جایی که پیش‌نویس ساکت است، مثلن درباره‌ی استقراض، نمره پشتوانه‌ی کمی دارد و یادداشتش این را می‌گوید.",
        "شمار موضوع‌ها به طول متن هم بستگی دارد: متن بلندتر معمولن موضوع‌های بیش‌تری را می‌پوشاند."]],
-     ["منبع و پروانه",["واژگان موضوع‌ها: Constitute (constituteproject.org)، پروژه‌ی تطبیقی قانون‌های اساسی، با پروانه‌ی CC BY-NC 3.0. از متن قانون‌های اساسی کشورها در Constitute استفاده نشده است."]]],
-   tcredit:"واژگان موضوع‌ها: Constitute، پروژه‌ی تطبیقی قانون‌های اساسی، CC BY-NC 3.0.",
-   vtitle:"واژگان",vsub:n=>"همه‌ی "+num2(n)+" موضوع، بر پایه‌ی موضوع اصلی: هر یک با تعریفش و پرسشی که کدگذاران Constitute از هر قانون اساسی می‌پرسند. زیر هر موضوع: سندهای منتشرشده در این‌جا که درباره‌ی آن حکم می‌کنند.",
+     ["منبع و پروانه",["واژگان موضوع‌ها: Constitute (constituteproject.org)، پروژه‌ی تطبیقی قانون‌های اساسی، با پروانه‌ی CC BY-NC 3.0. از متن قانون‌های اساسی کشورها در Constitute استفاده نشده است.",
+       "سه موضوع افزوده‌ی CCP و حوزه‌های سیاست‌گذاری از مخزن Sartori آمده‌اند (CC BY-NC-SA 4.0)؛ حوزه‌های سیاست‌گذاری همان کدنامه‌ی اصلی پروژه‌ی دستورکارهای تطبیقی است (CC BY-NC-SA 4.0). قاعده‌های تقسیم قدرت از مجموعه‌داده‌ی یوئن و مجموعه‌داده‌ی استروم و همکاران آمده‌اند (هر دو CC0). نام‌های فارسی ما برای این‌ها با همان شرط «اشتراک یکسان» (ShareAlike) در دسترس است.",
+       "موردهای زبان به ماده‌هایی از منشور اروپایی زبان‌های منطقه‌ای یا اقلیت و کنوانسیون چارچوب حمایت از اقلیت‌های ملی (هر دو از شورای اروپا) ارجاع می‌دهند که بر آن‌ها بنا شده‌اند؛ عبارت‌ها از ماست. مقیاس‌های شاخص اقتدار منطقه‌ای از دفترچه‌ی کدگذاری آن بازنویسی شده‌اند، با ذکر منبع (داده‌هایش با پروانه‌ی CC BY 4.0 منتشر شده‌اند)."]]],
+   tcredit:"واژگان موضوع‌ها: Constitute، پروژه‌ی تطبیقی قانون‌های اساسی، CC BY-NC 3.0. واژگان افزوده از مخزن Sartori: CCP و پروژه‌ی دستورکارهای تطبیقی (CC BY-NC-SA 4.0)؛ یوئن؛ استروم و همکاران (CC0). شاخص اقتدار منطقه‌ای: هوخه، مارکس، شاکل و همکاران. موردهای زبان و سطح‌ها: از ما.",
+   vtitle:"واژگان",vsub:n=>"همه‌ی "+num2(n)+" موضوع، بر پایه‌ی واژگان و موضوع اصلی: هر یک با تعریفش و، برای موضوع‌های Constitute، پرسشی که کدگذاران آن از هر قانون اساسی می‌پرسند. زیر هر موضوع: سندهای منتشرشده در این‌جا که درباره‌ی آن حکم می‌کنند.",
    vq:"پرسش کدگذاری",vdocs:"آمده در",vnone:"هنوز در هیچ سند منتشرشده‌ای نیامده.",vdraft:"نام فارسی: پیش‌نویس",
    prog:(a,b)=>"تاکنون "+num2(a)+" سند از "+num2(b)+" قانون اساسی و پیش‌نویس بررسی شده است. بقیه در نوبت‌اند و یکی‌یکی می‌آیند؛ نوبت بعد با پیش‌نویس‌های فدرال است.",queued:"در نوبت",
    title:"اسناد بنیادین",
@@ -737,7 +785,7 @@ export function mount(root, opts={}){
     VORDER.forEach(k=>{dl.append(el("dt",null,`<span class="vchip v-${k}">${esc(t("v")[k])}</span>`),el("dd",null,esc(t("vd")[k])))});
     p.append(dl);
     const ul=el("ul","aud-method");t("m").forEach(s=>ul.append(el("li",null,esc(s))));p.append(ul);
-    if(A)p.append(el("div","note",esc(t("mmodel")(A.model,A.benchmark))));
+    if(A)p.append(el("div","note",esc(t("mmodel")(A.model,A.benchmark)+(A.by?" · "+t("mby"):""))));
     return p;
   }
 
@@ -746,9 +794,12 @@ export function mount(root, opts={}){
   function vocab(){
     const LV=TOP.leaves,p=el("div","panel");
     p.append(el("h2",null,esc(t("vtitle"))),el("div","sub",esc(t("vsub")(Object.keys(LV).length))));
-    const has={};TOP.docs.forEach(D=>{D.articles.forEach(a=>a.t.forEach(id=>((has[id]=has[id]||{})[D.uid]=1)));
+    const has={};TOP.docs.forEach(D=>{D.articles.forEach(a=>[...a.t,...(a.x||[])].forEach(id=>((has[id]=has[id]||{})[D.uid]=1)));
       (D.document||[]).forEach(id=>((has[id]=has[id]||{})[D.uid]=1))});
-    const groups={};Object.entries(LV).forEach(([id,x])=>(groups[x.g]=groups[x.g]||[]).push(id));
+    const LY=TOP.layers||{},core=x=>!x.l||x.l==="ccp";
+    [["",x=>core(x)],...Object.keys(LY).filter(k=>k!=="ccp").map(k=>[k,x=>x.l===k])].forEach(([k,pick])=>{
+    if(k)p.append(el("h3","tp-mh",esc(L==="fa"?LY[k].fa:LY[k].en)+` <span class="tp-cites">${esc(LY[k].src.join(" · "))}</span>`));
+    const groups={};Object.entries(LV).filter(([,x])=>pick(x)).forEach(([id,x])=>(groups[x.g]=groups[x.g]||[]).push(id));
     const rows=el("div","aud-rows");
     Object.keys(groups).sort((a,b)=>{const A=TOP.groups[a]||{},B=TOP.groups[b]||{};return (L==="fa"?A.fa||a:A.en||a).localeCompare(L==="fa"?B.fa||b:B.en||b,L)})
       .forEach(gk=>{const G=TOP.groups[gk]||{fa:gk,en:gk},det=el("details","aud-row tp-vrow");
@@ -759,12 +810,13 @@ export function mount(root, opts={}){
           const b=el("div");
           b.append(el("p",null,esc(L==="fa"?x.df||x.d:x.d)));
           if(x.q){const q=el("p","sub",`<b>${esc(t("vq"))}:</b> `),e=el("span",null,esc(x.q));e.dir="ltr";e.lang="en";q.append(e);b.append(q)}
+          if(x.s)b.append(el("p","sub",`<b>${esc(t("vsrc"))}:</b> ${esc(x.s)}`));
           const ds=Object.keys(has[id]||{});
           b.append(el("p","sub",`<b>${esc(t("vdocs"))}:</b> `+(ds.length?ds.map(u=>`<a href="#topics=${esc(u)},${esc(id)}">${esc(title(docOf(u)))}</a>`).join(L==="fa"?"، ":", "):esc(t("vnone")))));
           if(L==="fa"&&x.fs!=="reviewed")b.append(el("div","sub",esc(t("vdraft"))));
           y.append(b);body.append(y)});
         det.append(body);rows.append(det)});
-    p.append(rows);return p;
+    p.append(rows)});return p;
   }
   // one document done among many: say so, and list every constitution and draft, the undone ones disabled
   function progress(p,done,cur,pick){
@@ -790,17 +842,30 @@ export function mount(root, opts={}){
     // the method page (and the whole vocabulary) is one click from the top
     const jump=el("div","tp-jump"),mb=el("button",null,esc(t("mlink")));mb.type="button";mb.onclick=openMethod;jump.append(mb);p.append(jump);
     // leaf → the articles that provide for it
-    const by={};A.articles.forEach(a=>a.t.forEach(id=>(by[id]=by[id]||[]).push(a.n)));
+    // leaf → the articles that provide for it; the CCP additions count with Constitute's topics, the other
+    // added vocabularies (policy fields, power-sharing) go to xby and get panels of their own
+    const isCore=id=>{const x=LV[id];return !!x&&(!x.l||x.l==="ccp")};
+    const by={},xby={};A.articles.forEach(a=>[...a.t,...(a.x||[])].forEach(id=>{const m=isCore(id)?by:xby;(m[id]=m[id]||[]).push(a.n)}));
     (A.document||[]).forEach(id=>by[id]=by[id]||[]);
     const lname=id=>{const x=LV[id]||{};return L==="fa"?x.fa||x.en||id:x.en||id};
+    // one topic present in the document: its articles, each with its text and PDF page
+    const leafRow=(id,ns)=>{const x=el("details","aud-art");x.open=topLeaf===id;
+      x.ontoggle=()=>{if(x.open){topLeaf=id;writeHash()}};
+      x.append(el("summary",null,`${esc(lname(id))} <span class="tp-cites">${ns.length?ns.map(artRef).map(esc).join(L==="fa"?"، ":", "):esc(t("tpre")+" · "+t("tdoc"))}</span>`));
+      const inner=el("div");inner.append(el("div","sub",esc(ldef(id))));
+      ns.forEach(n=>{const a=artOf(n);if(!a)return;const y=el("details","aud-art");
+        y.append(el("summary",null,esc(artn(a)+" · "+pg(a.page))),el("div","fa",esc(a.text||"")));y.lastChild.dir="rtl";
+        if(d.pdf)y.append(el("div","sub",pdfLink(d,a.page,t("rpage")(a.page))));inner.append(y)});
+      x.append(inner);return x};
     const ldef=id=>{const x=LV[id]||{};return L==="fa"?x.df||x.d||"":x.d||""};
     const artOf=n=>ARTS.find(x=>x.doc===A.uid&&x.n===n);
     const artRef=n=>{const a=artOf(n);return a?artn(a):num(n)};
-    const total=Object.keys(LV).length, got=Object.keys(by).length, bare=A.articles.filter(a=>!a.t.length).length;
+    const total=Object.keys(LV).filter(isCore).length, got=Object.keys(by).length, bareA=A.articles.filter(a=>!a.t.length);
+    const bare=bareA.length, placed=bareA.filter(a=>(a.x||[]).length).length;
     const head=el("div","aud-head");
     head.append(el("h3",null,esc(title(d))));
     if(A.unreviewed||A.preview)head.append(el("div","aud-flag",esc((A.preview?(L==="fa"?"پیش‌نمایش، برای انتشار نیست. ":"Preview, not for publication. "):"")+t("tunrev"))));
-    const meta=el("div","aud-meta",esc(t("tarts")(A.articles.length,bare)));
+    const meta=el("div","aud-meta",esc(t("tarts")(A.articles.length,bare,placed)));
     if(d.pdf)meta.append(" · ",el("span",null,pdfLink(d,0,t("rpdf"))));
     head.append(meta);p.append(head);
     // overall bar
@@ -824,7 +889,7 @@ export function mount(root, opts={}){
     }
     // by group
     const g=el("div","panel");g.append(el("h2",null,esc(t("tgroups"))));
-    const groups={};Object.entries(LV).forEach(([id,x])=>(groups[x.g]=groups[x.g]||[]).push(id));
+    const groups={};Object.entries(LV).filter(([id])=>isCore(id)).forEach(([id,x])=>(groups[x.g]=groups[x.g]||[]).push(id));
     const order=Object.keys(groups).sort((a,b)=>{
       const ra=groups[a].filter(i=>by[i]).length/groups[a].length, rb=groups[b].filter(i=>by[i]).length/groups[b].length;return rb-ra});
     const rows=el("div","aud-rows");
@@ -836,20 +901,65 @@ export function mount(root, opts={}){
       const sum=el("summary",null,`<span class="aud-right">${esc(L==="fa"?G.fa:G.en)}</span>`);
       sum.append(sb,el("span","tp-frac",esc(num(has.length)+" / "+num(ids.length))));det.append(sum);
       const body=el("div","aud-body");
-      if(has.length){body.append(el("h4",null,esc(t("tpresent"))));
-        has.forEach(id=>{const x=el("details","aud-art");x.open=topLeaf===id;
-          x.ontoggle=()=>{if(x.open){topLeaf=id;writeHash()}};
-          const ns=by[id];
-          x.append(el("summary",null,`${esc(lname(id))} <span class="tp-cites">${ns.length?ns.map(artRef).map(esc).join(L==="fa"?"، ":", "):esc(t("tpre")+" · "+t("tdoc"))}</span>`));
-          const inner=el("div");inner.append(el("div","sub",esc(ldef(id))));
-          ns.forEach(n=>{const a=artOf(n);if(!a)return;const y=el("details","aud-art");
-            y.append(el("summary",null,esc(artn(a)+" · "+pg(a.page))),el("div","fa",esc(a.text||"")));y.lastChild.dir="rtl";
-            if(d.pdf)y.append(el("div","sub",pdfLink(d,a.page,t("rpage")(a.page))));inner.append(y)});
-          x.append(inner);body.append(x)});}
+      if(has.length){body.append(el("h4",null,esc(t("tpresent"))));has.forEach(id=>body.append(leafRow(id,by[id])))}
       if(not.length){body.append(el("h4",null,esc(t("tabsent"))));
         const c=el("div","tp-chips");not.forEach(id=>{const s=el("span","tp-chip off",esc(lname(id)));s.title=ldef(id);c.append(s)});body.append(c)}
       det.append(body);rows.append(det);});
     g.append(rows);v.append(g);
+    // the added vocabularies: policy fields list only what appears; power-sharing shows the absent rules too
+    const layerPanel=([k,key,absent])=>{
+      const all=Object.keys(LV).filter(id=>LV[id].l===k);if(!all.length)return;
+      const P=el("div","panel"),arts=new Set(all.flatMap(id=>xby[id]||[]));
+      P.append(el("h2",null,esc(t(key))),el("div","sub",esc(k==="cap"?t("xcapsub")(arts.size):t(key+"sub"))));
+      const gs={};all.forEach(id=>(gs[LV[id].g]=gs[LV[id].g]||[]).push(id));
+      const keys=Object.keys(gs).filter(gk=>absent||gs[gk].some(id=>xby[id]))
+        .sort((a,b)=>gs[b].filter(i=>xby[i]).length-gs[a].filter(i=>xby[i]).length);
+      if(!all.some(id=>xby[id])&&absent)P.append(el("p","sub",esc(t("xnone"))));
+      const rows=el("div","aud-rows");
+      keys.forEach(gk=>{const ids=gs[gk],has=ids.filter(i=>xby[i]),not=ids.filter(i=>!xby[i]);
+        const det=el("details","aud-row tp-vrow");det.open=!!(topLeaf&&ids.includes(topLeaf));
+        const G=TOP.groups[gk]||{fa:gk,en:gk};
+        det.append(el("summary",null,`<span class="aud-right">${esc(L==="fa"?G.fa||G.en:G.en)}</span><span class="tp-frac">${esc(absent?num(has.length)+" / "+num(ids.length):num(has.length))}</span>`));
+        const body=el("div","aud-body");
+        if(has.length){if(absent)body.append(el("h4",null,esc(t("tpresent"))));has.forEach(id=>body.append(leafRow(id,xby[id])))}
+        if(absent&&not.length){body.append(el("h4",null,esc(t("tabsent"))));
+          const c=el("div","tp-chips");not.forEach(id=>{const s=el("span","tp-chip off",esc(lname(id)));s.title=ldef(id);c.append(s)});body.append(c)}
+        det.append(body);rows.append(det)});
+      P.append(rows);v.append(P)};
+    // who holds each policy field: one row per level, the fields it holds with their articles
+    const levelsPanel=()=>{
+      const LVL=TOP.levels||[],at={};
+      A.articles.forEach(a=>Object.entries(a.lv||{}).forEach(([id,k])=>{((at[k]=at[k]||{})[id]=at[k][id]||[]).push(a.n)}));
+      if(!Object.keys(at).length)return;
+      const P=el("div","panel");P.append(el("h2",null,esc(t("xlv"))),el("div","sub",esc(t("xlvsub"))));
+      const rows=el("div","aud-rows");
+      LVL.forEach(l=>{const f=at[l.key];if(!f)return;
+        const det=el("details","aud-row tp-vrow");det.open=!!(topLeaf&&f[topLeaf]);
+        det.append(el("summary",null,`<span class="aud-right">${esc(L==="fa"?l.fa:l.en)}</span><span class="tp-frac">${esc(num(Object.keys(f).length))}</span>`));
+        const body=el("div","aud-body");body.append(el("div","sub",esc(L==="fa"?l.df:l.d)));
+        const c=el("div","tp-chips");
+        Object.entries(f).sort((x,y)=>lname(x[0]).localeCompare(lname(y[0]),L)).forEach(([id,ns])=>{
+          const s=el("span","tp-chip",esc(lname(id))+` <span class="tp-cites">${esc(ns.map(artRef).join(L==="fa"?"، ":", "))}</span>`);s.title=ldef(id);c.append(s)});
+        body.append(c);det.append(body);rows.append(det)});
+      P.append(rows);v.append(P)};
+    // regional authority: the ten dimensions of the Regional Authority Index, scored for this draft's regions
+    const raiPanel=()=>{
+      const R=A.rai,D=TOP.rai;if(!R||!D)return;
+      const P=el("div","panel");P.append(el("h2",null,esc(t("xrai"))),el("div","sub",esc(t("xraisub")(L==="fa"?R.unit.fa:R.unit.en))));
+      const big=el("div","tp-big");big.append(el("div","tp-num",esc(t("xraitot")(R.total,R.self,R.shared))));
+      const bar=el("div","tp-bar");bar.append(el("span",null));bar.firstChild.style.width=(100*R.total/30)+"%";big.append(bar);P.append(big);
+      if(R.finding){const n=el("div","tp-note");n.append(el("b",null,esc(t("tnote"))),el("p",null,esc(L==="fa"?R.finding.fa:R.finding.en)));P.append(n)}
+      const rows=el("div","aud-rows");
+      ["self","shared"].forEach(dm=>{const DM=D.domains[dm];rows.append(el("h4",null,esc((L==="fa"?DM.fa:DM.en)+" · "+num(R[dm])+" / "+num(DM.max))));
+        D.dims.filter(x=>x.domain===dm).forEach(x=>{const r=R.dims[x.key];if(!r)return;
+          const det=el("details","aud-row tp-vrow"),sb=el("div","tp-bar sm");sb.append(el("span",null));sb.firstChild.style.width=(100*r.score/x.max)+"%";
+          const sum=el("summary",null,`<span class="aud-right">${esc(L==="fa"?x.fa:x.en)}</span>`);sum.append(sb,el("span","tp-frac",esc(num(r.score)+" / "+num(x.max))));det.append(sum);
+          const body=el("div","aud-body");body.append(el("p",null,esc(L==="fa"?r.fa:r.en)));
+          if(r.articles.length)body.append(el("div","tp-chips",r.articles.map(n=>{const a=artOf(n);return `<span class="tp-art">${a&&d.pdf?pdfLink(d,a.page,artRef(n)):esc(artRef(n))}</span>`}).join("")));
+          const sc=L==="fa"?x.scale_fa:x.scale,ul=el("ol","sub tp-scale");ul.start=0;if(sc.length>1)sc.forEach((s,i)=>{const li=el("li",i===r.score?"on":null,esc(s));li.value=i;ul.append(li)});else ul.append(el("li",null,esc(sc[0])));
+          body.append(el("h4",null,esc(t("xraiscale"))),ul);det.append(body);rows.append(det)})});
+      P.append(rows,el("div","note",esc(t("xraicredit"))));v.append(P)};
+    layerPanel(["cap","xcap",false]);levelsPanel();raiPanel();layerPanel(["ps","xps",true]);layerPanel(["lang","xlang",true]);
     // method: a pointer to the method page
     const m=el("div","panel");m.append(el("h2",null,esc(t("mtitle"))),el("p","sub",esc(t("mshort"))));
     const mj=el("div","tp-jump"),mb2=el("button",null,esc(t("mlink")));mb2.type="button";mb2.onclick=openMethod;mj.append(mb2);m.append(mj);

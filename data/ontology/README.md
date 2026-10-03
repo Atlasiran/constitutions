@@ -29,4 +29,6 @@ World under permission and are not part of this repository.
 | `constitute-topics.xml` | The vocabulary as downloaded (RDF/XML). Labels in English, Spanish and Arabic. |
 | `source.json` | URL, fetch date, sha256 |
 | `fa.json` | Persian labels and definitions: `{id: {fa, fa_def, status}}`. `status` is `draft` (model-written, not yet checked) or `reviewed`. Edit this file by hand when reviewing; a re-import never overwrites it. |
-| `topics.json` | Built by `pipeline/ontology.py`: the 334 leaf topics, each mapped to one of this project's topic groups, with the Persian merged in. `version` hashes the XML and the mapping. |
+| `topics.json` | Built by `pipeline/ontology.py`: the 334 leaf topics, each mapped to one of this project's topic groups, with the Persian merged in. `version` hashes the XML and the mapping. Its `extra` block holds the vocabularies added from the Sartori repository and our own (`own/`), with their own `version`; see `sartori/README.md` for them and their licence (CC BY-NC-SA 4.0 / CC0). |
+| `sartori/` | The added vocabularies (CCP's three extra topics, Comparative Agendas Project policy topics, power-sharing rules), their source record and Persian. |
+| `own/` | Our own vocabularies: language (27 items), levels of government for policy fields, and the Regional Authority Index's dimensions; see `own/README.md`. |

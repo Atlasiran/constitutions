@@ -1,0 +1,819 @@
+{
+ "uid": "naoruz-usi-2026",
+ "doc_version": "1",
+ "segmented_by": "articles",
+ "segment_labels": {
+  "pre": "مقدمه / preamble",
+  "a1": "اصل 1 (p. 10)",
+  "a2": "اصل 2 (p. 10)",
+  "a3": "اصل 3 (p. 11)",
+  "a4": "اصل 4 (p. 11)",
+  "a5": "اصل 5 (p. 11)",
+  "a6": "اصل 6 (p. 11)",
+  "a7": "اصل 7 (p. 11)",
+  "a8": "اصل 8 (p. 11)",
+  "a9": "اصل 9 (p. 11)",
+  "a10": "اصل 10 (p. 12)",
+  "a11": "اصل 11 (p. 12)",
+  "a12": "اصل 12 (p. 12)",
+  "a13": "اصل 13 (p. 12)",
+  "a14": "اصل 14 (p. 12)",
+  "a15": "اصل 15 (p. 12)",
+  "a16": "اصل 16 (p. 13)",
+  "a17": "اصل 17 (p. 13)",
+  "a18": "اصل 18 (p. 13)",
+  "a19": "اصل 19 (p. 13)",
+  "a20": "اصل 20 (p. 13)",
+  "a21": "اصل 21 (p. 13)",
+  "a22": "اصل 22 (p. 13)",
+  "a23": "اصل 23 (p. 13)",
+  "a24": "اصل 24 (p. 14)",
+  "a25": "اصل 25 (p. 14)",
+  "a26": "اصل 26 (p. 14)",
+  "a27": "اصل 27 (p. 14)",
+  "a28": "اصل 28 (p. 14)",
+  "a29": "اصل 29 (p. 14)",
+  "a30": "اصل 30 (p. 14)",
+  "a31": "اصل 31 (p. 14)",
+  "a32": "اصل 32 (p. 15)",
+  "a33": "اصل 33 (p. 15)",
+  "a34": "اصل 34 (p. 15)",
+  "a35": "اصل 35 (p. 15)",
+  "a36": "اصل 36 (p. 15)",
+  "a37": "اصل 37 (p. 15)",
+  "a38": "اصل 38 (p. 16)",
+  "a39": "اصل 39 (p. 16)",
+  "a40": "اصل 40 (p. 16)",
+  "a41": "اصل 41 (p. 16)",
+  "a42": "اصل 42 (p. 16)",
+  "a43": "اصل 43 (p. 17)",
+  "a44": "اصل 44 (p. 17)",
+  "a45": "اصل 45 (p. 17)",
+  "a46": "اصل 46 (p. 18)",
+  "a47": "اصل 47 (p. 18)",
+  "a48": "اصل 48 (p. 18)",
+  "a49": "اصل 49 (p. 18)",
+  "a50": "اصل 50 (p. 18)",
+  "a51": "اصل 51 (p. 19)",
+  "a52": "اصل 52 (p. 19)",
+  "a53": "اصل 53 (p. 19)",
+  "a54": "اصل 54 (p. 19)",
+  "a55": "اصل 55 (p. 19)",
+  "a56": "اصل 56 (p. 20)",
+  "a57": "اصل 57 (p. 20)",
+  "a58": "اصل 58 (p. 20)",
+  "a59": "اصل 59 (p. 21)",
+  "a60": "اصل 60 (p. 21)",
+  "a61": "اصل 61 (p. 21)",
+  "a62": "اصل 62 (p. 21)",
+  "a63": "اصل 63 (p. 21)",
+  "a64": "اصل 64 (p. 22)",
+  "a65": "اصل 65 (p. 22)",
+  "a66": "اصل 66 (p. 22)",
+  "a67": "اصل 67 (p. 23)",
+  "a68": "اصل 68 (p. 23)",
+  "a69": "اصل 69 (p. 23)",
+  "a70": "اصل 70 (p. 23)",
+  "a71": "اصل 71 (p. 23)",
+  "a72": "اصل 72 (p. 24)",
+  "a73": "اصل 73 (p. 24)",
+  "a74": "اصل 74 (p. 24)",
+  "a75": "اصل 75 (p. 24)",
+  "a76": "اصل 76 (p. 24)",
+  "a77": "اصل 77 (p. 24)",
+  "a78": "اصل 78 (p. 24)",
+  "a79": "اصل 79 (p. 25)",
+  "a80": "اصل 80 (p. 25)",
+  "a81": "اصل 81 (p. 25)",
+  "a82": "اصل 82 (p. 25)",
+  "a83": "اصل 83 (p. 25)",
+  "a84": "اصل 84 (p. 25)",
+  "a85": "اصل 85 (p. 25)",
+  "a86": "اصل 86 (p. 26)",
+  "a87": "اصل 87 (p. 26)",
+  "a88": "اصل 88 (p. 26)",
+  "a89": "اصل 89 (p. 26)",
+  "a90": "اصل 90 (p. 26)",
+  "a91": "اصل 91 (p. 27)",
+  "a92": "اصل 92 (p. 27)",
+  "a93": "اصل 93 (p. 27)",
+  "a94": "اصل 94 (p. 27)",
+  "a95": "اصل 95 (p. 28)",
+  "a96": "اصل 96 (p. 28)",
+  "a97": "اصل 97 (p. 28)",
+  "a98": "اصل 98 (p. 28)",
+  "a99": "اصل 99 (p. 28)",
+  "a100": "اصل 100 (p. 28)",
+  "a101": "اصل 101 (p. 29)",
+  "a102": "اصل 102 (p. 29)",
+  "a103": "اصل 103 (p. 29)",
+  "a104": "اصل 104 (p. 29)",
+  "a105": "اصل 105 (p. 29)",
+  "a106": "اصل 106 (p. 29)",
+  "a107": "اصل 107 (p. 30)",
+  "a108": "اصل 108 (p. 30)",
+  "a109": "اصل 109 (p. 30)",
+  "a110": "اصل 110 (p. 30)",
+  "a111": "اصل 111 (p. 30)",
+  "a112": "اصل 112 (p. 30)",
+  "a113": "اصل 113 (p. 30)",
+  "a114": "اصل 114 (p. 31)",
+  "a115": "اصل 115 (p. 31)",
+  "a116": "اصل 116 (p. 31)",
+  "a117": "اصل 117 (p. 31)",
+  "a118": "اصل 118 (p. 32)",
+  "a119": "اصل 119 (p. 32)",
+  "a120": "اصل 120 (p. 32)",
+  "a121": "اصل 121 (p. 32)",
+  "a122": "اصل 122 (p. 32)",
+  "a123": "اصل 123 (p. 33)",
+  "a124": "اصل 124 (p. 33)",
+  "a125": "اصل 125 (p. 33)",
+  "a126": "اصل 126 (p. 33)",
+  "a127": "اصل 127 (p. 33)",
+  "a128": "اصل 128 (p. 34)",
+  "a129": "اصل 129 (p. 34)",
+  "a130": "اصل 130 (p. 34)",
+  "a131": "اصل 131 (p. 34)",
+  "a132": "اصل 132 (p. 34)",
+  "a133": "اصل 133 (p. 34)",
+  "a134": "اصل 134 (p. 35)",
+  "a135": "اصل 135 (p. 35)",
+  "a136": "اصل 136 (p. 35)",
+  "a137": "اصل 137 (p. 35)",
+  "a138": "اصل 138 (p. 35)",
+  "a139": "اصل 139 (p. 36)",
+  "a140": "اصل 140 (p. 36)",
+  "a141": "اصل 141 (p. 36)",
+  "a142": "اصل 142 (p. 36)",
+  "a143": "اصل 143 (p. 36)",
+  "a144": "اصل 144 (p. 37)",
+  "a145": "اصل 145 (p. 37)",
+  "a146": "اصل 146 (p. 37)",
+  "a147": "اصل 147 (p. 38)",
+  "a148": "اصل 148 (p. 38)",
+  "a149": "اصل 149 (p. 38)",
+  "a150": "اصل 150 (p. 38)",
+  "a151": "اصل 151 (p. 39)",
+  "a152": "اصل 152 (p. 39)",
+  "a153": "اصل 153 (p. 39)",
+  "a154": "اصل 154 (p. 39)",
+  "a155": "اصل 155 (p. 39)",
+  "a156": "اصل 156 (p. 39)",
+  "a157": "اصل 157 (p. 40)",
+  "a158": "اصل 158 (p. 40)",
+  "a159": "اصل 159 (p. 40)",
+  "a160": "اصل 160 (p. 40)",
+  "a161": "اصل 161 (p. 40)",
+  "a162": "اصل 162 (p. 41)",
+  "a163": "اصل 163 (p. 41)",
+  "a164": "اصل 164 (p. 41)",
+  "a165": "اصل 165 (p. 41)",
+  "a166": "اصل 166 (p. 41)",
+  "a167": "اصل 167 (p. 41)",
+  "a168": "اصل 168 (p. 41)",
+  "a169": "اصل 169 (p. 42)",
+  "a170": "اصل 170 (p. 42)",
+  "a171": "اصل 171 (p. 42)",
+  "a172": "اصل 172 (p. 42)",
+  "a173": "اصل 173 (p. 43)",
+  "a174": "اصل 174 (p. 43)",
+  "a175": "اصل 175 (p. 43)",
+  "a176": "اصل 176 (p. 43)",
+  "a177": "اصل 177 (p. 43)",
+  "a178": "اصل 178 (p. 43)",
+  "a179": "اصل 179 (p. 43)",
+  "a180": "اصل 180 (p. 44)",
+  "a181": "اصل 181 (p. 44)",
+  "a182": "اصل 182 (p. 44)",
+  "a183": "اصل 183 (p. 44)",
+  "a184": "اصل 184 (p. 45)",
+  "a185": "اصل 185 (p. 45)",
+  "a186": "اصل 186 (p. 45)",
+  "a187": "اصل 187 (p. 45)",
+  "a188": "اصل 188 (p. 45)",
+  "a189": "اصل 189 (p. 45)",
+  "a190": "اصل 190 (p. 45)",
+  "a191": "اصل 191 (p. 46)",
+  "a192": "اصل 192 (p. 46)",
+  "a193": "اصل 193 (p. 46)",
+  "a194": "اصل 194 (p. 46)",
+  "a195": "اصل 195 (p. 47)",
+  "a196": "اصل 196 (p. 47)",
+  "a197": "اصل 197 (p. 47)",
+  "a198": "اصل 198 (p. 47)",
+  "a199": "اصل 199 (p. 47)",
+  "a200": "اصل 200 (p. 48)",
+  "a201": "اصل 201 (p. 48)",
+  "a202": "اصل 202 (p. 48)"
+ },
+ "hash": "b254e061b4a51a4483b936f6fefecbe4a13fc81f921f6ed2f1139b92abf6602b",
+ "rubric": "audit-constitution",
+ "rubric_version": "audit-constitution-16fda2964fda",
+ "benchmark": "f04ecff03b434da0",
+ "model": "claude-opus-5-5",
+ "audited_at": "2026-10-03",
+ "batch_id": null,
+ "by": "claude-code session 2026-10-03",
+ "note": "Read in a Claude Code session against the same rubric, benchmark and segments as audit.py (the API account had no credit); citations checked by the same rules: segments exist, provisions are benchmark IDs, quotes are found in a cited segment (whitespace normalised).",
+ "rights": {
+  "equality": {
+   "verdict": "guaranteed",
+   "segments": [
+    "a9",
+    "a40"
+   ],
+   "provisions": [
+    "UDHR.2",
+    "UDHR.7",
+    "ICCPR.2.1",
+    "ICCPR.26",
+    "ICERD.1.1"
+   ],
+   "quote": "هیچ کس حق ندارد کسی را مورد تبعیض قرار دهد، منجمله به خاطر اصل ونسب ، ملیت، جنسیت، گرایش جنسی، سن، زبان،",
+   "note_en": "Article 9 makes everyone equal before the law and bars discrimination on an open list of grounds: origin, nationality, sex, sexual orientation, age, language, social position, way of life, religious or political belief, and disability. Race and colour are not named, but the list is open (\"including\"). Article 40 lets states treat their own citizens differently only in state political rights and holdings in companies.",
+   "note_fa": "اصل ۹ همه را در برابر قانون برابر می‌داند و تبعیض را با فهرستی باز منع می‌کند: اصل‌ونسب، ملیت، جنسیت، گرایش جنسی، سن، زبان، موقعیت اجتماعی، شیوه‌ی زندگی، باور دینی یا سیاسی و ناتوانی. نژاد و رنگ پوست نام برده نشده‌اند، اما فهرست با «منجمله» باز است. اصل ۴۰ تفاوت‌گذاری میان شهروندان ایالت‌ها را تنها در حقوق سیاسی ایالتی و سهم در شرکت‌ها می‌پذیرد.",
+   "check": "ok",
+   "problems": []
+  },
+  "gender_equality": {
+   "verdict": "guaranteed",
+   "segments": [
+    "a2",
+    "a9",
+    "a181"
+   ],
+   "provisions": [
+    "ICCPR.3",
+    "CEDAW.2",
+    "CEDAW.7",
+    "CEDAW.16.1"
+   ],
+   "quote": "کلیه انسانها منجمله زن و مرد و کوئیر از حقوق مساوی برخوردارند.",
+   "note_en": "Article 9 gives women, men and queer people equal rights, requires the law to secure their equality in law and in fact, especially in the family, education and work, and guarantees equal pay for work of equal value. Article 2 reserves half of all members of governments, parliaments and courts for women, and Article 181 asks that the federal government reflect the sexes.",
+   "note_fa": "اصل ۹ برای زن، مرد و کوئیر حقوق برابر می‌شناسد، برابری حقوقی و واقعی آن‌ها را به‌ویژه در خانواده، تحصیل و اشتغال به قانون می‌سپارد و دستمزد برابر برای کار هم‌ارزش را تضمین می‌کند. اصل ۲ نیمی از اعضای حکومت‌ها، پارلمان‌ها و دادگاه‌ها را زن می‌خواهد و اصل ۱۸۱ تناسب جنسیت‌ها را در حکومت فدرال.",
+   "check": "ok",
+   "problems": []
+  },
+  "sogi": {
+   "verdict": "guaranteed",
+   "segments": [
+    "a9",
+    "a16"
+   ],
+   "provisions": [
+    "YP.2",
+    "YP.6",
+    "YP.3"
+   ],
+   "quote": "هر شخصی حق دارد آزادانه شکل رابطه اش را با یاورش انتخاب کند.",
+   "note_en": "Article 9 names sexual orientation among the grounds of discrimination and gives queer people equal rights; Article 16 lets everyone choose the form of their relationship and lets states recognise forms of partnership other than marriage. Gender identity is not named, and nothing provides for legal recognition of gender (YP.3); recognising other partnerships is left to each state.",
+   "note_fa": "اصل ۹ گرایش جنسی را در شمار زمینه‌های تبعیض آورده و برای کوئیرها حقوق برابر می‌شناسد؛ اصل ۱۶ انتخاب آزادانه‌ی شکل رابطه را حق هر کس می‌داند و به ایالت‌ها اجازه می‌دهد شکل‌های دیگر زندگی مشترک را به‌رسمیت بشناسند. هویت جنسیتی نام برده نشده و درباره‌ی به‌رسمیت‌شناختن حقوقی جنسیت (YP.3) چیزی نیامده است؛ به‌رسمیت‌شناختن شکل‌های دیگر رابطه هم به ایالت‌ها واگذار شده است.",
+   "check": "ok",
+   "problems": []
+  },
+  "life": {
+   "verdict": "guaranteed",
+   "segments": [
+    "a11",
+    "a190"
+   ],
+   "provisions": [
+    "UDHR.3",
+    "ICCPR.6.1",
+    "ICCPR.6.6"
+   ],
+   "quote": "همه انسانها حق زندگی دارند. مجازات اعدام ممنوع است.",
+   "note_en": "Article 11 guarantees everyone the right to life and abolishes the death penalty outright. Article 190 adds that no citizen's life or health may be sacrificed to protect goods or economic interests, and Article 63 bars the armed forces from ever turning their weapons on the people.",
+   "note_fa": "اصل ۱۱ حق زندگی را برای همه تضمین و مجازات اعدام را بی‌قید منع می‌کند. اصل ۱۹۰ می‌افزاید که جان و سلامت هیچ شهروندی نباید فدای حفاظت از کالا یا منافع اقتصادی شود و اصل ۶۳ به‌کاربردن سلاح نیروهای مسلح علیه مردم را منع می‌کند.",
+   "check": "ok",
+   "problems": []
+  },
+  "torture": {
+   "verdict": "guaranteed",
+   "segments": [
+    "a11",
+    "a27"
+   ],
+   "provisions": [
+    "UDHR.5",
+    "ICCPR.7",
+    "CAT.2.1",
+    "CAT.16.1",
+    "CAT.15"
+   ],
+   "quote": "شکنجه و هر نوع رفتار یا مجازات ظالمانه، غیرانسانی و یا تحقیرآمیز ممنوع است.",
+   "note_en": "Article 11 prohibits torture and any cruel, inhuman or degrading treatment or punishment, and Article 27 bars extradition to a country where the person may face them. The text does not exclude evidence obtained by torture (CAT.15). Article 39's limitation clause does not except the prohibition, though its guarantee of the essence of rights protects it.",
+   "note_fa": "اصل ۱۱ شکنجه و هر رفتار یا مجازات ظالمانه، غیرانسانی یا تحقیرآمیز را منع می‌کند و اصل ۲۷ استرداد به کشوری را که در آن خطر چنین رفتاری هست ممنوع می‌داند. بی‌اعتباری دلیلی که با شکنجه به دست آمده (CAT.15) نیامده است. بند محدودیت اصل ۳۹ این منع را مستثنا نمی‌کند، هرچند تضمین «جوهر حقوق اساسی» از آن حمایت می‌کند.",
+   "check": "ok",
+   "problems": []
+  },
+  "slavery": {
+   "verdict": "silent",
+   "segments": [
+    "a64",
+    "a66"
+   ],
+   "provisions": [
+    "UDHR.4",
+    "ICCPR.8.1",
+    "ICCPR.8.3"
+   ],
+   "quote": "",
+   "note_en": "The text does not prohibit slavery, servitude or forced labour. The compulsory military or alternative service (Article 64) and civil defence service (Article 66) it creates fall within the exceptions of ICCPR.8.3.",
+   "note_fa": "متن بردگی، بندگی و کار اجباری را منع نمی‌کند. خدمت وظیفه‌ی نظامی یا جایگزین (اصل ۶۴) و خدمت پشتیبانی مدنی (اصل ۶۶) که مقرر می‌کند در استثناهای ICCPR.8.3 جا می‌گیرند.",
+   "check": "ok",
+   "problems": []
+  },
+  "liberty": {
+   "verdict": "guaranteed",
+   "segments": [
+    "a11",
+    "a34"
+   ],
+   "provisions": [
+    "UDHR.9",
+    "ICCPR.9.1",
+    "ICCPR.9.2",
+    "ICCPR.9.3",
+    "ICCPR.9.4"
+   ],
+   "quote": "هر شخصی که بازداشت میشود حق دارد بلافاصله به محضر قاضی رجوع کند",
+   "note_en": "Article 11 guarantees personal liberty; Article 34 allows deprivation of liberty only in the cases and by the procedure the law sets, requires prompt reasons in an understandable way, the right to inform close relatives, immediate appearance before a judge and a court challenge at any time. Humane treatment of detainees (ICCPR.10) and compensation for unlawful detention (ICCPR.9.5) are not stated, beyond the state's general liability in Article 153.",
+   "note_fa": "اصل ۱۱ آزادی شخصی را تضمین می‌کند؛ اصل ۳۴ سلب آزادی را تنها در موارد و با روال قانون مجاز می‌داند و اطلاع فوری از دلایل به زبانی قابل‌فهم، حق خبردادن به نزدیکان، حضور بی‌درنگ نزد قاضی و اعتراض به دادگاه در هر زمان را تضمین می‌کند. رفتار انسانی با بازداشت‌شدگان (ICCPR.10) و جبران بازداشت غیرقانونی (ICCPR.9.5) جز در مسئولیت عام دولت در اصل ۱۵۳ نیامده است.",
+   "check": "ok",
+   "problems": []
+  },
+  "disappearance": {
+   "verdict": "silent",
+   "segments": [
+    "a34"
+   ],
+   "provisions": [
+    "CED.1.1",
+    "CED.2",
+    "CED.17"
+   ],
+   "quote": "",
+   "note_en": "Enforced disappearance is not prohibited. Article 34's right of a detainee to inform close relatives and to be brought before a judge at once covers part of what CED.17 requires, but there is no prohibition and no duty to keep official records of detention.",
+   "note_fa": "ناپدیدسازی قهری منع نشده است. حق بازداشت‌شده در اصل ۳۴ برای خبردادن به نزدیکان و حضور بی‌درنگ نزد قاضی بخشی از الزام CED.17 را پوشش می‌دهد، اما نه منعی هست و نه تکلیفی به ثبت رسمی بازداشت.",
+   "check": "ok",
+   "problems": []
+  },
+  "fair_trial": {
+   "verdict": "restricted_clawback",
+   "segments": [
+    "a31",
+    "a32",
+    "a33",
+    "a35",
+    "a196",
+    "a198"
+   ],
+   "provisions": [
+    "UDHR.10",
+    "UDHR.11.2",
+    "ICCPR.14.1",
+    "ICCPR.14.2",
+    "ICCPR.14.3",
+    "ICCPR.15"
+   ],
+   "quote": "هر شخص حق دارد که در دعوای حقوقیش یک مقام قضائی به پرونده اش رسیدگی کند. قانون میتواند استثنائاتی را قائل شود.",
+   "note_en": "Articles 31, 33, 35 and 198 give a fair hearing in reasonable time, legal aid, a competent, independent court established by law, a ban on ad hoc courts, public hearings, the presumption of innocence and defence rights. But Article 32 lets the law make exceptions (dropping the Swiss model's limit to \"exceptional categories of case\") to the right to have a dispute heard by a judge, Article 196 lets it close the supreme court to whole subjects, and the text nowhere prohibits retroactive criminal law (ICCPR.15). There is no appeal where the supreme court tries a case at first instance.",
+   "note_fa": "اصل‌های ۳۱، ۳۳، ۳۵ و ۱۹۸ رسیدگی منصفانه در زمان معقول، کمک حقوقی، دادگاه صالح و مستقلی که قانون تعیین کرده، منع دادگاه موقت، علنی‌بودن جلسات، اصل برائت و حق دفاع را تضمین می‌کنند. اما اصل ۳۲ می‌گوید «قانون میتواند استثنائاتی را قائل شود» بر حق رسیدگی قضائی، بی قید «موارد استثنایی» که در الگوی سوئیسی هست، اصل ۱۹۶ اجازه می‌دهد قانون دیوان عالی را در موضوع‌هایی ببندد، و منع عطف به ماسبق قانون کیفری (ICCPR.15) هیچ‌جا نیامده است. جایی که دیوان عالی نخستین مرجع است، فرجام نیست.",
+   "check": "ok",
+   "problems": []
+  },
+  "remedy": {
+   "verdict": "guaranteed",
+   "segments": [
+    "a6",
+    "a31",
+    "a34",
+    "a36",
+    "a153",
+    "a194"
+   ],
+   "provisions": [
+    "UDHR.8",
+    "ICCPR.2.3"
+   ],
+   "quote": "جمهوری مشترک فدرال مسئول خسارت و زیانی است که توسط اعضای آن درحین انجام وظیفه لذا برخلاف قانون بوجود آمده است.",
+   "note_en": "Article 6 subjects all state action to law; Article 31 requires reasoned decisions that state the means of appeal; Article 36 protects petitions; Article 153 makes the federation liable for unlawful harm by its officials; and Article 194 lets the supreme court review federal law against the constitution and international law. Article 32's exceptions to judicial hearing (see fair trial) weaken the remedy, but ICCPR.2.3 also accepts administrative remedies.",
+   "note_fa": "اصل ۶ همه‌ی کنش‌های حکومت را تابع قانون می‌کند؛ اصل ۳۱ تصمیم مستدل با ذکر راه فرجام می‌خواهد؛ اصل ۳۶ از حق عریضه حمایت می‌کند؛ اصل ۱۵۳ جمهوری مشترک فدرال را مسئول زیان غیرقانونی کارکنانش می‌داند؛ و اصل ۱۹۴ به دیوان عالی اجازه می‌دهد قانون فدرال را با قانون اساسی و حقوق بین‌الملل بسنجد. استثناهای اصل ۳۲ بر رسیدگی قضائی (نگاه کنید به دادرسی منصفانه) این حق را سست می‌کند، اما ICCPR.2.3 راه جبران اداری را هم می‌پذیرد.",
+   "check": "ok",
+   "problems": []
+  },
+  "privacy": {
+   "verdict": "guaranteed",
+   "segments": [
+    "a15",
+    "a130"
+   ],
+   "provisions": [
+    "UDHR.12",
+    "ICCPR.17.1",
+    "ICCPR.17.2"
+   ],
+   "quote": "همه حق محافظت در برابر سوءاستفاده از اطلاعات شخصیشان را دارند.",
+   "note_en": "Article 15 protects private and family life, the home and all communication channels, including online, and gives a right to protection against misuse of personal data. Searches normally need a court order; in imminent danger other bodies named by law may search, which is a lawful, non-arbitrary exception.",
+   "note_fa": "اصل ۱۵ از زندگی خصوصی و خانوادگی، خانه و همه‌ی کانال‌های ارتباطی و مجازی حمایت می‌کند و حق محافظت در برابر سوءاستفاده از اطلاعات شخصی را می‌شناسد. تفتیش معمولن با حکم دادگاه است؛ در خطر قریب‌الوقوع نهادهایی که قانون نام برده نیز می‌توانند تفتیش کنند، که استثنایی قانونی و غیرخودسرانه است.",
+   "check": "ok",
+   "problems": []
+  },
+  "movement": {
+   "verdict": "guaranteed",
+   "segments": [
+    "a11",
+    "a26",
+    "a27",
+    "a136"
+   ],
+   "provisions": [
+    "UDHR.13.2",
+    "UDHR.14.1",
+    "ICCPR.12.1",
+    "ICCPR.12.2",
+    "ICCPR.12.4",
+    "ICCPR.13"
+   ],
+   "quote": "خروج از کشور و یا ورود به آن حق مسلم آنهاست.",
+   "note_en": "Article 11 gives everyone freedom of movement; Article 26 lets citizens live anywhere in the country and leave and enter it as of right; Article 27 bars the expulsion of citizens and extradition to torture. The right to leave is stated for citizens only (ICCPR.12.2 covers everyone), asylum appears only as a federal power to legislate rather than a right to seek it, and there are no procedural safeguards for expelling foreigners (ICCPR.13).",
+   "note_fa": "اصل ۱۱ آزادی تردد را برای همه می‌شناسد؛ اصل ۲۶ سکونت در هر نقطه‌ی کشور و خروج و ورود را حق مسلم شهروندان می‌داند؛ اصل ۲۷ اخراج شهروندان و استرداد به خطر شکنجه را منع می‌کند. حق خروج تنها برای شهروندان آمده (ICCPR.12.2 همه را در بر می‌گیرد)، پناهندگی تنها صلاحیت قانون‌گذاری فدرال است نه حق درخواست پناه، و برای اخراج بیگانگان تضمین آیینی (ICCPR.13) نیامده است.",
+   "check": "ok",
+   "problems": []
+  },
+  "nationality": {
+   "verdict": "restricted_clawback",
+   "segments": [
+    "a40",
+    "a41"
+   ],
+   "provisions": [
+    "UDHR.15.1",
+    "UDHR.15.2",
+    "ICCPR.24.3",
+    "CEDAW.9.1"
+   ],
+   "quote": "جمهوری مشترک فدرال همچنین سلب تابعیت وکسب تابعیت مجدد را تدوین می کند.",
+   "note_en": "Article 41 leaves acquisition and loss of nationality to federal law and requires rules easing nationality for stateless children and migrants' children (ICCPR.24.3). But it states no right to a nationality and sets no limit on deprivation, so the law may withdraw it without the protection against arbitrary deprivation in UDHR.15.2. Equal transmission by women and men (CEDAW.9) rests only on Article 9's general equality.",
+   "note_fa": "اصل ۴۱ کسب و سلب تابعیت را به قانون فدرال می‌سپارد و تسهیل تابعیت کودکان بی‌تابعیت و فرزندان مهاجران (ICCPR.24.3) را می‌خواهد. اما حقی بر تابعیت نمی‌شناسد و برای سلب آن حدی نمی‌گذارد، پس قانون می‌تواند بی‌آن‌که حمایت UDHR.15.2 در برابر سلب خودسرانه در کار باشد تابعیت را بگیرد. برابری زن و مرد در انتقال تابعیت (CEDAW.9) تنها بر برابری عام اصل ۹ تکیه دارد.",
+   "check": "ok",
+   "problems": []
+  },
+  "religion": {
+   "verdict": "guaranteed",
+   "segments": [
+    "a17",
+    "a80"
+   ],
+   "provisions": [
+    "UDHR.18",
+    "ICCPR.18.1",
+    "ICCPR.18.2",
+    "ICCPR.18.4"
+   ],
+   "quote": "هر شخصی حق دارد هر زمان که اراده کند عقیده و یا دینش را انتخاب ویا عوض کند.",
+   "note_en": "Article 17 lets everyone choose or change belief or religion at any time and bars compulsion to join a religious community, attend a rite or follow religious teaching; it allows conscientious objection to armed service in war. Article 80 separates state and religion. The freedom to manifest religion in worship, observance, practice and teaching is not stated (religion is called a \"personal matter\"), nor the liberty of parents in their children's religious education (ICCPR.18.4).",
+   "note_fa": "اصل ۱۷ انتخاب یا تغییر عقیده و دین را در هر زمان حق هر کس می‌داند و اجبار به پیوستن به جامعه‌ی دینی، شرکت در مراسم یا پیروی از آموزه‌ها را منع می‌کند؛ خودداری وجدانی از خدمت مسلحانه در جنگ را هم می‌پذیرد. اصل ۸۰ دین و دولت را جدا می‌کند. آزادی ابراز دین در عبادت، آیین، عمل و آموزش نیامده (دین «امری شخصی» خوانده شده) و نه آزادی والدین در آموزش دینی فرزندان (ICCPR.18.4).",
+   "check": "ok",
+   "problems": []
+  },
+  "expression": {
+   "verdict": "guaranteed",
+   "segments": [
+    "a18",
+    "a19",
+    "a102"
+   ],
+   "provisions": [
+    "UDHR.19",
+    "ICCPR.19.1",
+    "ICCPR.19.2"
+   ],
+   "quote": "سانسور ممنوع است.",
+   "note_en": "Article 18 guarantees freedom of opinion, expression and information, and access to publicly available sources; Article 19 guarantees press and broadcasting freedom, bans censorship and protects journalists' sources; Article 102 makes broadcasting independent and sends complaints to an independent body. Restrictions fall under Article 39's legality, public-interest and proportionality test, which matches ICCPR.19.3.",
+   "note_fa": "اصل ۱۸ آزادی عقیده، بیان و اطلاعات و دسترسی به منابع همگانی را تضمین می‌کند؛ اصل ۱۹ آزادی مطبوعات و رادیو و تلویزیون را تضمین، سانسور را ممنوع و از منبع خبر حمایت می‌کند؛ اصل ۱۰۲ رادیو و تلویزیون را مستقل می‌کند و شکایت‌ها را به مرجعی مستقل می‌سپارد. محدودیت‌ها تابع سنجه‌ی اصل ۳۹ است (مبنای قانونی، منافع عمومی، تناسب) که با ICCPR.19.3 هم‌خوان است.",
+   "check": "ok",
+   "problems": []
+  },
+  "incitement": {
+   "verdict": "silent",
+   "segments": [
+    "a18"
+   ],
+   "provisions": [
+    "ICCPR.20.1",
+    "ICCPR.20.2",
+    "ICERD.4"
+   ],
+   "quote": "",
+   "note_en": "Nothing prohibits propaganda for war or advocacy of national, racial or religious hatred that incites discrimination, hostility or violence. Article 18 lets everyone express their opinion \"without any restriction\", leaving the duty in ICCPR.20 to the general limitation clause of Article 39.",
+   "note_fa": "هیچ حکمی تبلیغ جنگ یا دعوت به نفرت ملی، نژادی یا دینی را که به تبعیض، دشمنی یا خشونت برانگیزد منع نمی‌کند. اصل ۱۸ بیان نظر را «بدون هیچ محدودیتی» حق هر کس می‌داند و تکلیف ICCPR.20 را به بند محدودیت عام اصل ۳۹ وامی‌گذارد.",
+   "check": "ok",
+   "problems": []
+  },
+  "assembly": {
+   "verdict": "guaranteed",
+   "segments": [
+    "a24"
+   ],
+   "provisions": [
+    "UDHR.20.1",
+    "ICCPR.21"
+   ],
+   "quote": "هر شخصی حق دارد تجمع مسالمت آمیز تشکیل دهد. شرکت در آنها اختیاری است.",
+   "note_en": "Article 24 guarantees freedom of assembly and the right to hold peaceful assemblies, makes participation voluntary and prohibits violence against assemblies.",
+   "note_fa": "اصل ۲۴ آزادی اجتماعات و حق تشکیل تجمع مسالمت‌آمیز را تضمین می‌کند، شرکت در آن را اختیاری می‌داند و اعمال خشونت علیه تجمع را منع می‌کند.",
+   "check": "ok",
+   "problems": []
+  },
+  "association": {
+   "verdict": "guaranteed",
+   "segments": [
+    "a25",
+    "a30",
+    "a145"
+   ],
+   "provisions": [
+    "UDHR.20.2",
+    "UDHR.23.4",
+    "ICCPR.22.1",
+    "ICCPR.22.2",
+    "ICESCR.8.1"
+   ],
+   "quote": "هر شخصی حق دارد سازمانی را تشکیل دهد. عضویت ویا شرکت در فعالیتهای آن سازمان اختیاری است.",
+   "note_en": "Article 25 guarantees the freedom to form organisations and makes membership voluntary; Article 30 guarantees trade unions for workers and employers and the right to strike in labour disputes, with bans for particular occupations only by statute; Article 145 makes founding parties free, with a ban only by the constitutional court for parties seeking to destroy the democratic order. These limits stay within ICCPR.22.2 and ICESCR.8.",
+   "note_fa": "اصل ۲۵ آزادی تشکیل سازمان را تضمین و عضویت را اختیاری می‌کند؛ اصل ۳۰ اتحادیه‌ی کارگران و کارفرمایان و حق اعتصاب در اختلاف کاری را می‌شناسد و منع اعتصاب در شغل‌های معین را تنها با قانون ممکن می‌داند؛ اصل ۱۴۵ تاسیس حزب را آزاد می‌کند و انحلال حزبی را که در پی برانداختن نظم دموکراتیک است تنها با حکم دادگاه قانون اساسی. این قیدها در حد ICCPR.22.2 و ICESCR.8 می‌مانند.",
+   "check": "ok",
+   "problems": []
+  },
+  "participation": {
+   "verdict": "guaranteed",
+   "segments": [
+    "a37",
+    "a144",
+    "a146",
+    "a150",
+    "a157"
+   ],
+   "provisions": [
+    "UDHR.21.1",
+    "UDHR.21.3",
+    "ICCPR.25",
+    "CEDAW.7"
+   ],
+   "quote": "همه شهروندان حقوق و وظایف سیاسی یکسانی دارند.",
+   "note_en": "Article 37 guarantees political rights, Article 144 gives them to citizens from age sixteen with equal rights and duties, Article 150 lets every voter stand for federal office, Article 157 provides direct proportional elections every four years, and Articles 146–149 add initiatives and referendums at every level. Secret ballot is not stated, there is no independent electoral body (each chamber judges its own elections), and Article 144 lets parents exercise the political rights of young people with a mental illness or intellectual disability (see disability).",
+   "note_fa": "اصل ۳۷ حقوق سیاسی را تضمین می‌کند، اصل ۱۴۴ آن را از شانزده‌سالگی با حقوق و وظایف یکسان به شهروندان می‌دهد، اصل ۱۵۰ هر رای‌دهنده را قابل انتخاب در نهادهای فدرال می‌داند، اصل ۱۵۷ انتخابات مستقیم و تناسبی هر چهار سال را مقرر می‌کند و اصل‌های ۱۴۶ تا ۱۴۹ لایحه‌ی مردمی و همه‌پرسی را در همه‌ی سطح‌ها می‌افزایند. مخفی‌بودن رای نیامده، نهاد مستقل انتخابات نیست (هر مجلس بر انتخاب خود نظارت می‌کند) و اصل ۱۴۴ به والدین اجازه می‌دهد حقوق سیاسی نوجوانان دارای بیماری روانی یا ناتوانی ذهنی را به جای آن‌ها اعمال کنند (نگاه کنید به حقوق افراد دارای معلولیت).",
+   "check": "ok",
+   "problems": []
+  },
+  "self_determination": {
+   "verdict": "guaranteed",
+   "segments": [
+    "a1",
+    "a58",
+    "a112"
+   ],
+   "provisions": [
+    "ICCPR.1.1",
+    "ICCPR.1.2",
+    "ICESCR.1.1"
+   ],
+   "quote": "هر ایالت حق جدائی آزادانه از ایالات متحده ایران را برای خود محفوظ می دارد.",
+   "note_en": "Article 1 founds the state on the voluntary union of states with equal rights, each keeping a right to secede freely, and places all state power in the people; Article 58 protects each state's existence and territory. Article 112 makes all natural resources, such as crude oil and minerals, the property of the federation as a whole rather than of the states where they lie.",
+   "note_fa": "اصل ۱ کشور را بر اتحاد داوطلبانه‌ی ایالت‌های هم‌حقوق بنا می‌کند که هر یک حق جدایی آزادانه را برای خود نگه می‌دارد، و منشا قدرت دولت را مردم می‌داند؛ اصل ۵۸ از موجودیت و قلمرو ایالت‌ها حمایت می‌کند. اصل ۱۱۲ همه‌ی منابع طبیعی، چون نفت خام و معادن، را دارایی کل ایالات متحده می‌داند، نه ایالتی که منبع در آن است.",
+   "check": "ok",
+   "problems": []
+  },
+  "minorities": {
+   "verdict": "guaranteed",
+   "segments": [
+    "a5",
+    "a9",
+    "a20",
+    "a77",
+    "a78",
+    "a181"
+   ],
+   "provisions": [
+    "ICCPR.27",
+    "ICERD.5"
+   ],
+   "quote": "آزادی استفاده از هر زبانی تضمین شده است.",
+   "note_en": "Article 5 lists the country's languages (Persian, Kurdish, Turkish, Arabic, Gilaki, Mazani, Turkmen, Lori, Baluchi …) and lets each state choose one or more official languages; Article 20 guarantees the use of any language, sign language included; Article 78 obliges states to respect linguistic minorities and lets the federation support multilingual states; Article 9 bars discrimination by language, origin and religion; Article 181 asks that the federal government reflect the nations. A minority within a state depends on that state's choice of official language: no federal guarantee of schooling or public services in a minority language.",
+   "note_fa": "اصل ۵ زبان‌های کشور (فارسی، کوردی، ترکی، عربی، گیلکی، مازنی، ترکمنی، لری، بلوچی و …) را برمی‌شمارد و به هر ایالت اجازه می‌دهد یک یا چند زبان رسمی برگزیند؛ اصل ۲۰ آزادی استفاده از هر زبان، از جمله زبان اشاره، را تضمین می‌کند؛ اصل ۷۸ ایالت‌ها را به احترام به حقوق اقلیت‌های زبانی موظف می‌کند و حمایت فدرال از ایالت‌های چندزبانه را می‌پذیرد؛ اصل ۹ تبعیض بر پایه‌ی زبان، اصل‌ونسب و دین را منع می‌کند؛ اصل ۱۸۱ تناسب ملت‌ها را در حکومت فدرال می‌خواهد. اقلیتِ درون یک ایالت به انتخاب زبان رسمی همان ایالت وابسته است: تضمینی فدرال برای آموزش یا خدمات عمومی به زبان اقلیت نیست.",
+   "check": "ok",
+   "problems": []
+  },
+  "family": {
+   "verdict": "guaranteed",
+   "segments": [
+    "a9",
+    "a16",
+    "a127"
+   ],
+   "provisions": [
+    "UDHR.16.1",
+    "ICCPR.23.2",
+    "ICCPR.23.4",
+    "CEDAW.16.1"
+   ],
+   "quote": "حق ازدواج و تشکیل خانواده تضمین شده است. تعدد ازدواج ممنوع است.",
+   "note_en": "Article 16 guarantees the right to marry and found a family, prohibits polygamy, lets everyone freely choose the form of their relationship and prohibits domestic violence in every form; Article 9 requires equality in the family. Free and full consent to marriage (ICCPR.23.3) and a minimum age of marriage are not stated.",
+   "note_fa": "اصل ۱۶ حق ازدواج و تشکیل خانواده را تضمین، تعدد ازدواج را منع، انتخاب آزادانه‌ی شکل رابطه را حق هر کس و خشونت خانگی را در هر شکل ممنوع می‌داند؛ اصل ۹ برابری در خانواده را می‌خواهد. رضایت آزاد و کامل در ازدواج (ICCPR.23.3) و حداقل سن ازدواج نیامده است.",
+   "check": "ok",
+   "problems": []
+  },
+  "children": {
+   "verdict": "guaranteed",
+   "segments": [
+    "a11",
+    "a12",
+    "a41",
+    "a68"
+   ],
+   "provisions": [
+    "ICCPR.24.1",
+    "ICCPR.24.3",
+    "CRC.2.1",
+    "CRC.3.1",
+    "CRC.19.1",
+    "CRC.37"
+   ],
+   "quote": "خشونت علیه آنها به هر شکلی و از طرف هر کسی ممنوع است.",
+   "note_en": "Article 12 gives children special protection, prohibits violence against them in any form by anyone, gives them a say in decisions according to their age, puts their physical and mental wellbeing first in any decision affecting them, and gives equal rights whatever their parents' marital status; Article 41 eases nationality for stateless children; Article 11's abolition of the death penalty covers children. Juvenile justice (CRC.40) and limits on detaining children (CRC.37) are not addressed.",
+   "note_fa": "اصل ۱۲ به کودکان حمایت ویژه می‌دهد، خشونت علیه آن‌ها را در هر شکل و از سوی هر کس منع می‌کند، آن‌ها را به تناسب سن در تصمیم‌ها سهیم می‌کند، سلامت جسمی و روحی کودک را در هر تصمیمی که بر زندگی‌اش اثر دارد مقدم می‌دارد و حقوق برابر کودکان را فارغ از وضعیت تاهل والدین تضمین می‌کند؛ اصل ۴۱ تابعیت کودکان بی‌تابعیت را آسان می‌کند و منع اعدام در اصل ۱۱ کودکان را هم در بر می‌گیرد. دادرسی ویژه‌ی نوجوانان (CRC.40) و حدود بازداشت کودکان (CRC.37) نیامده است.",
+   "check": "ok",
+   "problems": []
+  },
+  "disability": {
+   "verdict": "restricted_clawback",
+   "segments": [
+    "a9",
+    "a68",
+    "a123",
+    "a144"
+   ],
+   "provisions": [
+    "CRPD.5.1",
+    "CRPD.5.2",
+    "CRPD.12.2",
+    "CRPD.12.3"
+   ],
+   "quote": "حقوق سیاسی نوجوانانی که مبتلا به بیماری روانی و یا ناتوانی ذهنی هستند، ممکن است توسط والدین ویا کفیل برایشان به اجرا گذاشته شود.",
+   "note_en": "Article 9 bars discrimination on grounds of physical, mental or psychological disability and commits the state to equal rights and participation; Article 123 requires all public spaces, state bodies, markets and hospitals to be barrier-free within five years; Article 68 gives disabled children special schooling to age twenty. But Article 144 lets parents or guardians exercise the political rights of young people with a mental illness or intellectual disability: substituted decision-making, where CRPD.12 requires equal legal capacity with support.",
+   "note_fa": "اصل ۹ تبعیض به‌خاطر ناتوانی جسمی، روحی و روانی را منع و دولت را به حمایت از حقوق برابر و مشارکت افراد دارای معلولیت متعهد می‌کند؛ اصل ۱۲۳ همه‌ی معابر عمومی، نهادهای دولتی، بازارها و بیمارستان‌ها را تا پنج سال بدون مانع می‌خواهد؛ اصل ۶۸ آموزش ویژه را تا بیست‌سالگی تضمین می‌کند. اما اصل ۱۴۴ اجازه می‌دهد والدین یا کفیل حقوق سیاسی نوجوانان دارای بیماری روانی یا ناتوانی ذهنی را به جای آن‌ها اعمال کنند: تصمیم‌گیری جانشین، در حالی که CRPD.12 اهلیت قانونی برابر همراه با پشتیبانی را می‌خواهد.",
+   "check": "ok",
+   "problems": []
+  },
+  "work": {
+   "verdict": "guaranteed",
+   "segments": [
+    "a9",
+    "a29",
+    "a30",
+    "a120",
+    "a121",
+    "a122",
+    "a124"
+   ],
+   "provisions": [
+    "UDHR.23.1",
+    "UDHR.23.2",
+    "ICESCR.6.1",
+    "ICESCR.7",
+    "ICESCR.9"
+   ],
+   "quote": "کلیه انسانها منجمله زن و مرد و کوئیر حق دارند برای کار با ارزش برابر دستمزد مساوی دریافت کنند.",
+   "note_en": "Article 29 guarantees free choice of occupation, Article 9 equal pay for work of equal value, Article 120 federal law protecting workers, Article 121 a cap of ten times the lowest wage in a firm, and Article 122 compulsory social insurance for death, accident, maternity, sickness, disability, unemployment and old age with benefits that cover at least the cost of living. Fair working conditions such as hours, rest and safety are left to federal law, and Article 45 says no individual claim follows from the social goals.",
+   "note_fa": "اصل ۲۹ آزادی انتخاب شغل، اصل ۹ دستمزد برابر برای کار هم‌ارزش، اصل ۱۲۰ قانون فدرال حمایت از کارگران و کارمندان، اصل ۱۲۱ سقف ده‌برابری دستمزد در هر شرکت و اصل ۱۲۲ بیمه‌ی اجتماعی اجباری در فوت، سانحه، زایمان، بیماری، از کارافتادگی، بیکاری و بازنشستگی با مزایایی در حد دست‌کم هزینه‌ی زندگی را مقرر می‌کنند. شرایط منصفانه‌ی کار مانند ساعت کار، استراحت و ایمنی به قانون فدرال سپرده شده و اصل ۴۵ می‌گوید از اهداف اجتماعی ادعای فردی برنمی‌آید.",
+   "check": "ok",
+   "problems": []
+  },
+  "living_standard": {
+   "verdict": "guaranteed",
+   "segments": [
+    "a14",
+    "a111",
+    "a115",
+    "a118",
+    "a119"
+   ],
+   "provisions": [
+    "UDHR.25.1",
+    "ICESCR.11.1"
+   ],
+   "quote": "حکومت موظف است به افراد نیازمند و ناتوان از تامین نیازهای خویش کمک و مراقبت لازم را ارائه دهد",
+   "note_en": "Article 14 obliges the state to give people in need, who cannot provide for themselves, help and care and the financial means for a decent life. Food supply (Articles 111, 115), housing (Article 118) and tenants (Article 119) are policy tasks of the federation rather than rights, and water appears only as resource management (Article 86).",
+   "note_fa": "اصل ۱۴ حکومت را موظف می‌کند به نیازمندانی که از تامین خود ناتوان‌اند کمک و مراقبت و وسایل مالی زندگی مناسب بدهد. تامین مواد غذایی (اصل‌های ۱۱۱ و ۱۱۵)، مسکن (اصل ۱۱۸) و حمایت از مستاجر (اصل ۱۱۹) وظیفه‌ی سیاست‌گذاری فدرال‌اند نه حق، و آب تنها در مدیریت منابع (اصل ۸۶) آمده است.",
+   "check": "ok",
+   "problems": []
+  },
+  "health": {
+   "verdict": "guaranteed",
+   "segments": [
+    "a11",
+    "a45",
+    "a128",
+    "a129"
+   ],
+   "provisions": [
+    "ICESCR.12.1",
+    "ICESCR.12.2"
+   ],
+   "quote": "جمهوری مشترک فدرال و ایالت ها در چارچوب اختیارات خود مسئول تامین کافی خدمات اساسی پزشکی با کیفیت بالا و در دسترس همگان میباشند.",
+   "note_en": "Article 128 makes the federation and the states responsible for sufficient, high-quality basic medical care accessible to all; Article 129 covers public health, epidemics and radiation; Article 11 protects physical and mental health as part of personal liberty; Article 122 insures sickness. Access to care in Article 45 is a social goal from which, it says, no individual claim follows.",
+   "note_fa": "اصل ۱۲۸ جمهوری مشترک فدرال و ایالت‌ها را مسئول تامین کافی خدمات اساسی پزشکی با کیفیت بالا و در دسترس همگان می‌داند؛ اصل ۱۲۹ سلامت عمومی، بیماری‌های واگیر و پرتو را در بر می‌گیرد؛ اصل ۱۱ سلامت جسمی و روحی را بخشی از آزادی شخصی می‌داند؛ اصل ۱۲۲ بیماری را بیمه می‌کند. دسترسی به درمان در اصل ۴۵ هدف اجتماعی است که به گفته‌ی همان اصل ادعای فردی از آن برنمی‌آید.",
+   "check": "ok",
+   "problems": []
+  },
+  "education": {
+   "verdict": "guaranteed",
+   "segments": [
+    "a21",
+    "a22",
+    "a68",
+    "a70"
+   ],
+   "provisions": [
+    "UDHR.26.1",
+    "ICESCR.13.2"
+   ],
+   "quote": "حق آموزش تحصیلی مناسب و رایگان در کلیه سطوح تضمین شده است.",
+   "note_en": "Article 21 guarantees appropriate, free education at all levels, beyond what ICESCR.13.2 requires; Article 68 makes primary education compulsory and state schools free and requires special education for disabled young people to age twenty; Article 22 protects academic freedom. The aims of education (ICESCR.13.1) and parents' freedom to choose schools (ICESCR.13.3) are not stated.",
+   "note_fa": "اصل ۲۱ آموزش مناسب و رایگان را در همه‌ی سطح‌ها تضمین می‌کند، بیش از آن‌چه ICESCR.13.2 می‌خواهد؛ اصل ۶۸ آموزش ابتدایی را الزامی و مدارس ایالتی را رایگان می‌کند و آموزش ویژه‌ی معلولان را تا بیست‌سالگی می‌خواهد؛ اصل ۲۲ از آزادی علمی حمایت می‌کند. هدف‌های آموزش (ICESCR.13.1) و آزادی والدین در انتخاب مدرسه (ICESCR.13.3) نیامده است.",
+   "check": "ok",
+   "problems": []
+  },
+  "culture": {
+   "verdict": "guaranteed",
+   "segments": [
+    "a2",
+    "a22",
+    "a23",
+    "a77",
+    "a88"
+   ],
+   "provisions": [
+    "UDHR.27.1",
+    "ICESCR.15.1",
+    "ICESCR.15.2"
+   ],
+   "quote": "آزادی هنری تضمین شده است.",
+   "note_en": "Articles 22 and 23 guarantee academic and artistic freedom; Article 77 makes culture a state matter with federal support and attention to cultural and linguistic diversity; Article 88 protects cultural heritage; Article 2 promotes the country's cultural diversity. The right of everyone to take part in cultural life and authors' moral and material interests (ICESCR.15.1) are not named.",
+   "note_fa": "اصل‌های ۲۲ و ۲۳ آزادی علمی و هنری را تضمین می‌کنند؛ اصل ۷۷ فرهنگ را در حیطه‌ی ایالت‌ها می‌گذارد و از پشتیبانی فدرال و توجه به تنوع فرهنگی و زبانی سخن می‌گوید؛ اصل ۸۸ از میراث فرهنگی حمایت می‌کند؛ اصل ۲ تنوع فرهنگی کشور را ارتقا می‌دهد. حق همه برای مشارکت در زندگی فرهنگی و منافع معنوی و مادی پدیدآورندگان (ICESCR.15.1) نام برده نشده است.",
+   "check": "ok",
+   "problems": []
+  },
+  "emergency": {
+   "verdict": "restricted_clawback",
+   "segments": [
+    "a39",
+    "a171",
+    "a179",
+    "a190"
+   ],
+   "provisions": [
+    "ICCPR.4",
+    "ICCPR.4.2"
+   ],
+   "quote": "محدودیت های سخت باید در قانون قید شوند، لذا موارد خطر جدی، فوری و غیر قابل اجتناب از این امر مبرا هستند.",
+   "note_en": "Article 190 lets the federal government issue ordinances against serious disturbances, valid for at most one month unless parliament approves them, and requires parliament to decide on any deployment of the armed forces longer than a week; Article 39 protects the essence of every basic right. But Article 39 also exempts restrictions in cases of serious, immediate and unavoidable danger from the need for a statute, without any proclamation of an emergency, and no right is declared non-derogable (ICCPR.4.2).",
+   "note_fa": "اصل ۱۹۰ به حکومت فدرال اجازه می‌دهد در برابر اختلال جدی آیین‌نامه صادر کند که حداکثر یک ماه اعتبار دارد مگر پارلمان تصویبش کند، و بسیج نیروهای مسلح برای بیش از یک هفته را به تصمیم پارلمان می‌سپارد؛ اصل ۳۹ جوهر هر حق اساسی را محفوظ می‌دارد. اما همان اصل ۳۹ محدودیت در «موارد خطر جدی، فوری و غیر قابل اجتناب» را بی‌نیاز از قانون می‌کند، بی‌آن‌که وضعیت اضطراری اعلام شود، و هیچ حقی تعلیق‌ناپذیر (ICCPR.4.2) خوانده نشده است.",
+   "check": "ok",
+   "problems": []
+  },
+  "atrocity_crimes": {
+   "verdict": "guaranteed",
+   "segments": [
+    "a6",
+    "a194",
+    "a200"
+   ],
+   "provisions": [
+    "ROME.7.1",
+    "ROME.27",
+    "GENOCIDE.1"
+   ],
+   "quote": "منع جنایات جنگی و جنایات علیه بشریت",
+   "note_en": "Article 194 gives the supreme court jurisdiction over violations of the prohibition of war crimes and crimes against humanity; Article 200 requires every constitutional revision to respect peremptory norms of international law, and Article 6 binds the state to international law. Genocide is not named, and nothing excludes immunity, amnesty or limitation periods for these crimes (ROME.27); immunity in Article 168 covers only statements in parliament.",
+   "note_fa": "اصل ۱۹۴ رسیدگی به نقض «منع جنایات جنگی و جنایات علیه بشریت» را در صلاحیت دیوان عالی قضائی می‌گذارد؛ اصل ۲۰۰ هر بازنگری در قانون اساسی را به رعایت قواعد آمره‌ی حقوق بین‌الملل مقید می‌کند و اصل ۶ کشور را پایبند حقوق بین‌الملل می‌داند. نسل‌کشی نام برده نشده و چیزی مصونیت، عفو یا مرور زمان را برای این جنایت‌ها منتفی نمی‌کند (ROME.27)؛ مصونیت اصل ۱۶۸ تنها اظهارات در پارلمان را در بر می‌گیرد.",
+   "check": "ok",
+   "problems": []
+  }
+ },
+ "summary_en": "A broad, modern catalogue of rights, largely modelled on the Swiss Federal Constitution: equality with an open list of grounds that names sexual orientation, equal rights for women, men and queer people with half of all seats and offices reserved for women, abolition of the death penalty, a ban on torture and on extradition to it, detailed safeguards on detention, the freedom to change religion and the separation of religion and state, a ban on censorship, free education at every level, comprehensive social insurance, a right of each state to secede, and free use of every language. Rights may be limited only on a legal basis, in the public interest and proportionately, and their essence is protected (Art. 39). The main weaknesses: the law may make exceptions to judicial hearing (Art. 32) and close the supreme court to whole subjects (Art. 196); nationality may be withdrawn by statute without limit (Art. 41); parents may exercise the political rights of young people with mental disabilities (Art. 144); and serious restrictions escape the need for a statute in an undeclared emergency, with no non-derogable rights (Art. 39). Silences: slavery and forced labour, enforced disappearance, incitement to hatred and war propaganda, retroactive criminal law, gender identity, and the freedom to practise religion in public.",
+ "summary_fa": "فهرستی گسترده و امروزی از حقوق که بیش‌تر از قانون اساسی فدرال سوئیس الگو گرفته است: برابری با فهرستی باز از زمینه‌های تبعیض که گرایش جنسی را نام می‌برد، حقوق برابر زن، مرد و کوئیر و نیمی از کرسی‌ها و مقام‌ها برای زنان، لغو اعدام، منع شکنجه و استرداد به خطر شکنجه، تضمین‌های دقیق در بازداشت، آزادی تغییر دین و جدایی دین و دولت، منع سانسور، آموزش رایگان در همه‌ی سطح‌ها، بیمه‌ی اجتماعی فراگیر، حق جدایی هر ایالت و آزادی استفاده از هر زبان. محدودکردن حقوق تنها با مبنای قانونی، برای منافع عمومی و به‌طور متناسب ممکن است و جوهر حقوق محفوظ است (اصل ۳۹). ضعف‌های اصلی: قانون می‌تواند بر رسیدگی قضائی استثنا بگذارد (اصل ۳۲) و دیوان عالی را در موضوع‌هایی ببندد (اصل ۱۹۶)؛ سلب تابعیت بی‌حد به قانون سپرده شده (اصل ۴۱)؛ والدین می‌توانند حقوق سیاسی نوجوانان دارای ناتوانی ذهنی را به جای آن‌ها اعمال کنند (اصل ۱۴۴)؛ و در خطر جدی بی‌آن‌که وضعیت اضطراری اعلام شود، محدودیت سخت از نیاز به قانون معاف است و هیچ حقی تعلیق‌ناپذیر نیست (اصل ۳۹). سکوت‌ها: بردگی و کار اجباری، ناپدیدسازی قهری، تحریک به نفرت و تبلیغ جنگ، منع عطف به ماسبق قانون کیفری، هویت جنسیتی و آزادی ابراز دین در عرصه‌ی عمومی.",
+ "rejected": 0,
+ "warnings": 0,
+ "usage": null,
+ "review": {
+  "status": "unreviewed",
+  "reviewer": null,
+  "date": null,
+  "publish": true,
+  "notes": "Published unreviewed at the user's call (2026-10-03), like the 1368 audit; the page says it is not yet reviewed."
+ }
+}

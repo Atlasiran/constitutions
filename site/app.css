@@ -278,3 +278,6 @@
 .qa-root[lang="fa"] em{font-style:normal;font-weight:600}
 .qa-root[lang="fa"] .num,.qa-root[lang="fa"] .tp-frac,.qa-root[lang="fa"] .tp-num{font-variant-numeric:tabular-nums}
 .qa-root .tp-vrow > summary{grid-template-columns:minmax(0,1fr) auto}
+.qa-root .tp-scale{margin:4px 0 0;padding-inline-start:22px}
+.qa-root .tp-scale li{margin:2px 0}
+.qa-root .tp-scale li.on{color:var(--ink);font-weight:600}

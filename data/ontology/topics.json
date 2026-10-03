@@ -6159,5 +6159,4192 @@
    "fa_def": "افراد باید با کار به بهبود جامعه یاری رسانند؛ معمولن حکمی کلی است که بر پایه‌ی معلولیت، سن یا عوامل دیگر استثنا می‌پذیرد.",
    "fa_status": "draft"
   }
- ]
+ ],
+ "extra": {
+  "version": "114ff5a618d9",
+  "source": {
+   "repo": "https://github.com/conceptintegration/sartori-repo",
+   "commit": "0fa9ca380d8e5acb2986dc89036691d2253df0c5",
+   "fetched": "2026-10-03",
+   "licence": "CC BY-NC-SA 4.0",
+   "files": {
+    "CAP-TOP.csv": {
+     "from": "CAP-TOP/ontology.csv",
+     "sha256": "0f52dd55da2cbc8240cbf3ae04270e37089b948b01e8d531b44dd264fbeefbba"
+    },
+    "CAP-TOP.metadata.csv": {
+     "from": "CAP-TOP/metadata.csv",
+     "sha256": "ef358994e2f6cdc47a246deb659de22cc26897d70297a01a0637f6c0fe26276d"
+    },
+    "JUON-CPSD.csv": {
+     "from": "JUON-CPSD/ontology.csv",
+     "sha256": "43774df00962d41af6519a965fd0cf6d0a98a169e6e629a0b3078ac8cc57a1ac"
+    },
+    "JUON-CPSD.metadata.csv": {
+     "from": "JUON-CPSD/metadata.csv",
+     "sha256": "57d5d7504a8c4f1aee6918ca5c4d492dce14a27bba77c2cd0b800cd51864b3f9"
+    },
+    "STROM-IDC.csv": {
+     "from": "STRØM-IDC/ontology.csv",
+     "sha256": "74dcf6153b8c608b39847716b6ff7b40baaa2b7ec10fbbba1013b9d5d49d9482"
+    },
+    "STROM-IDC.metadata.csv": {
+     "from": "STRØM-IDC/metadata.csv",
+     "sha256": "44be78e69a162164055b2efba392cc03b5d3b445e713012976948a451b9b6b4d"
+    },
+    "CCP-FACET.csv": {
+     "from": "CCP-FACET/ontology.csv",
+     "sha256": "ce95223c95a4897938ad723f118d4b7ad285c8953fb222b143123a517eca10b2"
+    },
+    "CCP-FACET.metadata.csv": {
+     "from": "CCP-FACET/metadata.csv",
+     "sha256": "42b94fe360d176b45bd11d7760139aea01b49cdd927fcad4792669c4ceff62f2"
+    }
+   }
+  },
+  "layers": {
+   "ccp": {
+    "fa": "موضوع‌های افزوده از CCP",
+    "en": "Added from the CCP's later vocabulary",
+    "src": [
+     "CCP-FACET"
+    ]
+   },
+   "cap": {
+    "fa": "حوزه‌های سیاست‌گذاری",
+    "en": "Policy fields",
+    "src": [
+     "CAP-TOP"
+    ]
+   },
+   "ps": {
+    "fa": "تقسیم قدرت",
+    "en": "Power-sharing",
+    "src": [
+     "JUON-CPSD",
+     "STRØM-IDC"
+    ]
+   },
+   "lang": {
+    "fa": "زبان",
+    "en": "Language",
+    "src": [
+     "ECRML",
+     "FCNM"
+    ]
+   }
+  },
+  "groups": {
+   "cap-macroeconomics": {
+    "fa": "اقتصاد کلان",
+    "en": "Macroeconomics",
+    "layer": "cap"
+   },
+   "cap-civil-rights": {
+    "fa": "حقوق مدنی",
+    "en": "Civil Rights",
+    "layer": "cap"
+   },
+   "cap-health": {
+    "fa": "سلامت",
+    "en": "Health",
+    "layer": "cap"
+   },
+   "cap-agriculture": {
+    "fa": "کشاورزی",
+    "en": "Agriculture",
+    "layer": "cap"
+   },
+   "cap-labor": {
+    "fa": "کار و اشتغال",
+    "en": "Labor",
+    "layer": "cap"
+   },
+   "cap-education": {
+    "fa": "آموزش",
+    "en": "Education",
+    "layer": "cap"
+   },
+   "cap-environment": {
+    "fa": "محیط زیست",
+    "en": "Environment",
+    "layer": "cap"
+   },
+   "cap-energy": {
+    "fa": "انرژی",
+    "en": "Energy",
+    "layer": "cap"
+   },
+   "cap-immigration": {
+    "fa": "مهاجرت",
+    "en": "Immigration",
+    "layer": "cap"
+   },
+   "cap-transportation": {
+    "fa": "حمل‌ونقل",
+    "en": "Transportation",
+    "layer": "cap"
+   },
+   "cap-law-and-crime": {
+    "fa": "قانون و جرم",
+    "en": "Law and Crime",
+    "layer": "cap"
+   },
+   "cap-social-welfare": {
+    "fa": "رفاه اجتماعی",
+    "en": "Social Welfare",
+    "layer": "cap"
+   },
+   "cap-housing": {
+    "fa": "مسکن و توسعه‌ی شهری",
+    "en": "Housing",
+    "layer": "cap"
+   },
+   "cap-domestic-commerce": {
+    "fa": "بازرگانی داخلی",
+    "en": "Domestic Commerce",
+    "layer": "cap"
+   },
+   "cap-defense": {
+    "fa": "دفاع",
+    "en": "Defense",
+    "layer": "cap"
+   },
+   "cap-technology": {
+    "fa": "فناوری",
+    "en": "Technology",
+    "layer": "cap"
+   },
+   "cap-foreign-trade": {
+    "fa": "بازرگانی خارجی",
+    "en": "Foreign Trade",
+    "layer": "cap"
+   },
+   "cap-international-affairs": {
+    "fa": "امور بین‌الملل",
+    "en": "International Affairs",
+    "layer": "cap"
+   },
+   "cap-government-operations": {
+    "fa": "امور اداری دولت",
+    "en": "Government Operations",
+    "layer": "cap"
+   },
+   "cap-public-lands": {
+    "fa": "زمین‌ها و منابع عمومی",
+    "en": "Public Lands",
+    "layer": "cap"
+   },
+   "cap-culture": {
+    "fa": "فرهنگ",
+    "en": "Culture",
+    "layer": "cap"
+   },
+   "ps-exec": {
+    "fa": "مقام‌های اجرایی و ریاست مجلس‌ها",
+    "en": "Executive offices and speakers",
+    "layer": "ps"
+   },
+   "ps-leg": {
+    "fa": "کرسی‌های مجلس",
+    "en": "Legislative seats",
+    "layer": "ps"
+   },
+   "ps-veto": {
+    "fa": "حق وتو و اکثریت ویژه",
+    "en": "Vetoes and supermajorities",
+    "layer": "ps"
+   },
+   "ps-incl": {
+    "fa": "مشارکت گروه‌ها در قدرت",
+    "en": "Inclusion of groups",
+    "layer": "ps"
+   },
+   "ps-terr": {
+    "fa": "تقسیم سرزمینی قدرت",
+    "en": "Territorial dispersion",
+    "layer": "ps"
+   },
+   "ps-mil": {
+    "fa": "ارتش و سیاست",
+    "en": "The military and politics",
+    "layer": "ps"
+   },
+   "lang-status": {
+    "fa": "جایگاه زبان‌ها",
+    "en": "Status of languages",
+    "layer": "lang"
+   },
+   "lang-public": {
+    "fa": "زبان در دادگاه، اداره و قانون",
+    "en": "Language in courts, administration and law",
+    "layer": "lang"
+   },
+   "lang-edu": {
+    "fa": "آموزش",
+    "en": "Education",
+    "layer": "lang"
+   },
+   "lang-life": {
+    "fa": "رسانه، فرهنگ و زندگی اقتصادی",
+    "en": "Media, culture and economic life",
+    "layer": "lang"
+   },
+   "lang-prot": {
+    "fa": "حمایت و هماهنگی",
+    "en": "Protection and coordination",
+    "layer": "lang"
+   }
+  },
+  "leaves": [
+   {
+    "id": "ccp:democ",
+    "layer": "ccp",
+    "group": "principles",
+    "src": "CCP-FACET",
+    "en": "Democracy",
+    "definition_en": "Governance controlled by the people; rule by the people; a state governed by democracy",
+    "fa": "دموکراسی",
+    "fa_def": "حکومت در دست مردم است و کشور به شیوه‌ی دموکراتیک اداره می‌شود.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ccp:rulelaw",
+    "layer": "ccp",
+    "group": "principles",
+    "src": "CCP-FACET",
+    "en": "Rule of law",
+    "definition_en": "Requires state actions based on the rule of law, legality, rechtsstasst, or justice; restricts the arbitrary exercise of power by requiring adherence to clear, established laws",
+    "fa": "حاکمیت قانون",
+    "fa_def": "کارهای دولت باید بر پایه‌ی قانون باشد؛ قانون اساسی اعمال خودسرانه‌ی قدرت را با الزام به پیروی از قانون‌های روشن و ازپیش‌معین محدود می‌کند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ccp:socsec",
+    "layer": "ccp",
+    "group": "social",
+    "src": "CCP-FACET",
+    "en": "Social security",
+    "definition_en": "Guarantees the social security of the society",
+    "fa": "تامین اجتماعی",
+    "fa_def": "قانون اساسی تامین اجتماعی جامعه را تضمین می‌کند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:100",
+    "layer": "cap",
+    "group": "cap-macroeconomics",
+    "src": "CAP-TOP",
+    "en": "Macroeconomics, General",
+    "definition_en": "Issues related to general domestic macroeconomic policy.",
+    "fa": "کلیات اقتصاد کلان",
+    "fa_def": "سیاست کلی اقتصاد کلان داخلی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:101",
+    "layer": "cap",
+    "group": "cap-macroeconomics",
+    "src": "CAP-TOP",
+    "en": "Interest Rates",
+    "definition_en": "Issues related to inflation, cost of living, prices, and interest rates",
+    "fa": "تورم و نرخ بهره",
+    "fa_def": "تورم، هزینه‌ی زندگی، قیمت‌ها و نرخ بهره.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:103",
+    "layer": "cap",
+    "group": "cap-macroeconomics",
+    "src": "CAP-TOP",
+    "en": "Unemployment Rate",
+    "definition_en": "Issues related to the unemployment rate, impact of unemployment",
+    "fa": "نرخ بیکاری",
+    "fa_def": "نرخ بیکاری و پیامدهای آن.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:104",
+    "layer": "cap",
+    "group": "cap-macroeconomics",
+    "src": "CAP-TOP",
+    "en": "Monetary Policy",
+    "definition_en": "Issues related to the monetary policy, central bank, and the treasury",
+    "fa": "سیاست پولی",
+    "fa_def": "سیاست پولی، بانک مرکزی و خزانه.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:105",
+    "layer": "cap",
+    "group": "cap-macroeconomics",
+    "src": "CAP-TOP",
+    "en": "National Budget",
+    "definition_en": "Issues related to public debt, budgeting, and efforts to reduce deficits",
+    "fa": "بودجه‌ی ملی",
+    "fa_def": "بدهی عمومی، بودجه‌ریزی و کاهش کسری بودجه.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:107",
+    "layer": "cap",
+    "group": "cap-macroeconomics",
+    "src": "CAP-TOP",
+    "en": "Tax Code",
+    "definition_en": "Issues related to tax policy, the impact of taxes, and tax enforcement",
+    "fa": "قانون مالیات",
+    "fa_def": "سیاست مالیاتی، اثر مالیات‌ها و اجرای قانون‌های مالیاتی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:108",
+    "layer": "cap",
+    "group": "cap-macroeconomics",
+    "src": "CAP-TOP",
+    "en": "Industrial Policy",
+    "definition_en": "Issues related to manufacturing policy, industrial revitalization and growth",
+    "fa": "سیاست صنعتی",
+    "fa_def": "سیاست تولید صنعتی، احیا و رشد صنعت.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:110",
+    "layer": "cap",
+    "group": "cap-macroeconomics",
+    "src": "CAP-TOP",
+    "en": "Price Control",
+    "definition_en": "Issues related to wage or price control, emergency price controls",
+    "fa": "کنترل قیمت‌ها",
+    "fa_def": "کنترل دستمزد یا قیمت، از جمله کنترل اضطراری قیمت‌ها.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:199",
+    "layer": "cap",
+    "group": "cap-macroeconomics",
+    "src": "CAP-TOP",
+    "en": "Macroeconomics, Other",
+    "definition_en": "Issues related to other macroeconomics subtopics",
+    "fa": "دیگر موضوع‌های اقتصاد کلان",
+    "fa_def": "موضوع‌های دیگر اقتصاد کلان.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:200",
+    "layer": "cap",
+    "group": "cap-civil-rights",
+    "src": "CAP-TOP",
+    "en": "Civil Rights, General",
+    "definition_en": "Issues related generally to civil rights and minority rights",
+    "fa": "کلیات حقوق مدنی",
+    "fa_def": "حقوق مدنی و حقوق اقلیت‌ها به‌طور کلی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:201",
+    "layer": "cap",
+    "group": "cap-civil-rights",
+    "src": "CAP-TOP",
+    "en": "Minority Discrimination",
+    "definition_en": "Issues related to minority, ethnic, and racial group discrimination",
+    "fa": "تبعیض علیه اقلیت‌ها",
+    "fa_def": "تبعیض علیه گروه‌های اقلیت، قومی و نژادی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:202",
+    "layer": "cap",
+    "group": "cap-civil-rights",
+    "src": "CAP-TOP",
+    "en": "Gender Discrimination",
+    "definition_en": "Issues related to sex, gender, and sexual orientation discrimination",
+    "fa": "تبعیض جنسیتی",
+    "fa_def": "تبعیض بر پایه‌ی جنس، جنسیت و گرایش جنسی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:204",
+    "layer": "cap",
+    "group": "cap-civil-rights",
+    "src": "CAP-TOP",
+    "en": "Age Discrimination",
+    "definition_en": "Issues related to age discrimination, including mandatory retirement age policies",
+    "fa": "تبعیض سنی",
+    "fa_def": "تبعیض سنی، از جمله سن بازنشستگی اجباری.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:205",
+    "layer": "cap",
+    "group": "cap-civil-rights",
+    "src": "CAP-TOP",
+    "en": "Handicap Discrimination",
+    "definition_en": "Issues related to handicap and disease discrimination",
+    "fa": "تبعیض بر پایه‌ی معلولیت",
+    "fa_def": "تبعیض بر پایه‌ی معلولیت و بیماری.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:206",
+    "layer": "cap",
+    "group": "cap-civil-rights",
+    "src": "CAP-TOP",
+    "en": "Voting Rights",
+    "definition_en": "Issues related to voting rights, expanding or contracting the franchise, participation and related issues",
+    "fa": "حق رای",
+    "fa_def": "حق رای، گسترش یا محدود کردن آن، و مشارکت در انتخابات.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:207",
+    "layer": "cap",
+    "group": "cap-civil-rights",
+    "src": "CAP-TOP",
+    "en": "Freedom of Speech",
+    "definition_en": "Issues related to freedom of speech, religious freedoms, and other types of freedom of expression",
+    "fa": "آزادی بیان",
+    "fa_def": "آزادی بیان، آزادی دینی و دیگر آزادی‌های بیان.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:208",
+    "layer": "cap",
+    "group": "cap-civil-rights",
+    "src": "CAP-TOP",
+    "en": "Right to Privacy",
+    "definition_en": "Issues related to privacy rights, including privacy of records, access to government information, and abortion rights",
+    "fa": "حق حریم خصوصی",
+    "fa_def": "حریم خصوصی، از جمله حریم سوابق و دسترسی به اطلاعات دولتی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:209",
+    "layer": "cap",
+    "group": "cap-civil-rights",
+    "src": "CAP-TOP",
+    "en": "Anti-Government",
+    "definition_en": "Issues related to anti-government activity groups, such as the communist party and local insurgency groups",
+    "fa": "گروه‌های ضد حکومت",
+    "fa_def": "فعالیت گروه‌های مخالف حکومت.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:299",
+    "layer": "cap",
+    "group": "cap-civil-rights",
+    "src": "CAP-TOP",
+    "en": "Civil Rights, Other",
+    "definition_en": "Issues related to other civil rights subtopics",
+    "fa": "دیگر موضوع‌های حقوق مدنی",
+    "fa_def": "موضوع‌های دیگر حقوق مدنی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:300",
+    "layer": "cap",
+    "group": "cap-health",
+    "src": "CAP-TOP",
+    "en": "Health, General",
+    "definition_en": "Issues related generally to health care, including appropriations for general health care government agencies",
+    "fa": "کلیات سلامت",
+    "fa_def": "مراقبت سلامت به‌طور کلی، از جمله بودجه‌ی آن.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:301",
+    "layer": "cap",
+    "group": "cap-health",
+    "src": "CAP-TOP",
+    "en": "Health Care Reform",
+    "definition_en": "Issues related to broad, comprehensive changes in the health care system",
+    "fa": "اصلاح نظام سلامت",
+    "fa_def": "تغییرهای گسترده و همه‌جانبه در نظام سلامت.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:302",
+    "layer": "cap",
+    "group": "cap-health",
+    "src": "CAP-TOP",
+    "en": "Insurance",
+    "definition_en": "Issues related to health insurance reform, regulation, availability, and cost",
+    "fa": "بیمه‌ی سلامت",
+    "fa_def": "اصلاح، تنظیم، دسترس‌پذیری و هزینه‌ی بیمه‌ی سلامت.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:321",
+    "layer": "cap",
+    "group": "cap-health",
+    "src": "CAP-TOP",
+    "en": "Drug Industry",
+    "definition_en": "Issues related to the regulation and promotion of pharmaceuticals, medical devices, and clinical labs",
+    "fa": "صنعت دارو",
+    "fa_def": "تنظیم و پشتیبانی از دارو، تجهیزات پزشکی و آزمایش‌های بالینی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:322",
+    "layer": "cap",
+    "group": "cap-health",
+    "src": "CAP-TOP",
+    "en": "Medical Facilities",
+    "definition_en": "Issues related to facilities construction, regulation and payments, including waitlists and ambulance services",
+    "fa": "مراکز درمانی",
+    "fa_def": "ساخت، تنظیم و پرداخت به مراکز درمانی، از جمله صف انتظار.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:323",
+    "layer": "cap",
+    "group": "cap-health",
+    "src": "CAP-TOP",
+    "en": "Insurance Providers",
+    "definition_en": "Issues related to provider and insurer payments and regulation, including other types of benefits or multiple benefits",
+    "fa": "ارائه‌دهندگان خدمات و بیمه‌گران",
+    "fa_def": "پرداخت به ارائه‌دهندگان خدمات سلامت و بیمه‌گران و تنظیم کار آن‌ها.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:324",
+    "layer": "cap",
+    "group": "cap-health",
+    "src": "CAP-TOP",
+    "en": "Medical Liability",
+    "definition_en": "Issues related to medical liability, malpractice issues, medical fraud and abuse, and unfair practices",
+    "fa": "مسئولیت پزشکی",
+    "fa_def": "قصور پزشکی، تقلب و سوءاستفاده در درمان.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:325",
+    "layer": "cap",
+    "group": "cap-health",
+    "src": "CAP-TOP",
+    "en": "Manpower",
+    "definition_en": "Issues related to the supply and quantity of labor in the health care industry, training and licensing",
+    "fa": "نیروی انسانی سلامت",
+    "fa_def": "عرضه و آموزش نیروی کار در بخش سلامت.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:331",
+    "layer": "cap",
+    "group": "cap-health",
+    "src": "CAP-TOP",
+    "en": "Disease Prevention",
+    "definition_en": "Issues related to disease prevention, treatment, and health promotion, including specific diseases not covered in other subtopics",
+    "fa": "پیش‌گیری از بیماری",
+    "fa_def": "پیش‌گیری و درمان بیماری‌ها و ارتقای سلامت.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:332",
+    "layer": "cap",
+    "group": "cap-health",
+    "src": "CAP-TOP",
+    "en": "Infants and Children",
+    "definition_en": "Issues related to infants and children, including coverage and quality of care, health promotion, and school health programs",
+    "fa": "سلامت نوزادان و کودکان",
+    "fa_def": "پوشش و کیفیت مراقبت سلامت نوزادان و کودکان.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:333",
+    "layer": "cap",
+    "group": "cap-health",
+    "src": "CAP-TOP",
+    "en": "Mental Health",
+    "definition_en": "Issues related to mental health care and mental health disease",
+    "fa": "سلامت روان",
+    "fa_def": "مراقبت سلامت روان و بیماری‌های روانی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:334",
+    "layer": "cap",
+    "group": "cap-health",
+    "src": "CAP-TOP",
+    "en": "Long-term Care",
+    "definition_en": "Issues related to long term care, home health care, the terminally ill, and rehabilitation services",
+    "fa": "مراقبت بلندمدت",
+    "fa_def": "مراقبت بلندمدت و در خانه، بیماران رو به مرگ و توان‌بخشی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:335",
+    "layer": "cap",
+    "group": "cap-health",
+    "src": "CAP-TOP",
+    "en": "Drug Coverage and Cost",
+    "definition_en": "Issues related to prescription drug coverage, programs to pay for prescription drugs, and policy to reduce the cost of prescription drugs",
+    "fa": "پوشش و هزینه‌ی دارو",
+    "fa_def": "پوشش داروهای تجویزی و برنامه‌های پرداخت هزینه‌ی آن‌ها.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:341",
+    "layer": "cap",
+    "group": "cap-health",
+    "src": "CAP-TOP",
+    "en": "Tobacco Abuse",
+    "definition_en": "Issues related to tobacco abuse, treatment, education, and health effects",
+    "fa": "مصرف دخانیات",
+    "fa_def": "مصرف دخانیات، درمان، آموزش و پیامدهای سلامتی آن.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:342",
+    "layer": "cap",
+    "group": "cap-health",
+    "src": "CAP-TOP",
+    "en": "Drug and Alcohol Abuse",
+    "definition_en": "Issues related to alcohol and illegal drug abuse, treatment, education, and health effects",
+    "fa": "مصرف الکل و مواد مخدر",
+    "fa_def": "مصرف الکل و مواد مخدر، درمان، آموزش و پیامدهای سلامتی آن.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:398",
+    "layer": "cap",
+    "group": "cap-health",
+    "src": "CAP-TOP",
+    "en": "Health, R&D",
+    "definition_en": "Issues related to health care research and development",
+    "fa": "پژوهش و توسعه در سلامت",
+    "fa_def": "پژوهش و توسعه در حوزه‌ی سلامت.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:399",
+    "layer": "cap",
+    "group": "cap-health",
+    "src": "CAP-TOP",
+    "en": "Health, Other",
+    "definition_en": "Issues related to other health care topics",
+    "fa": "دیگر موضوع‌های سلامت",
+    "fa_def": "موضوع‌های دیگر سلامت.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:400",
+    "layer": "cap",
+    "group": "cap-agriculture",
+    "src": "CAP-TOP",
+    "en": "Agriculture, General",
+    "definition_en": "Issues related to general agriculture policy, including appropriations for general agriculture government agencies",
+    "fa": "کلیات کشاورزی",
+    "fa_def": "سیاست کلی کشاورزی، از جمله بودجه‌ی آن.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:401",
+    "layer": "cap",
+    "group": "cap-agriculture",
+    "src": "CAP-TOP",
+    "en": "Trade",
+    "definition_en": "Issues related to the regulation and impact of agricultural foreign trade",
+    "fa": "تجارت محصولات کشاورزی",
+    "fa_def": "تنظیم و اثر تجارت خارجی محصولات کشاورزی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:402",
+    "layer": "cap",
+    "group": "cap-agriculture",
+    "src": "CAP-TOP",
+    "en": "Subsidies to Farmers",
+    "definition_en": "Issues related to government subsidies to farmers and ranchers, including agricultural disaster insurance",
+    "fa": "یارانه‌ی کشاورزان",
+    "fa_def": "یارانه‌ی دولت به کشاورزان و دامداران، از جمله کمک در بلایا.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:403",
+    "layer": "cap",
+    "group": "cap-agriculture",
+    "src": "CAP-TOP",
+    "en": "Food Inspection & Safety",
+    "definition_en": "Issues related to food inspection and safety, including seafood, and labeling requirements",
+    "fa": "بازرسی و ایمنی غذا",
+    "fa_def": "بازرسی و ایمنی مواد غذایی و برچسب‌گذاری آن‌ها.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:404",
+    "layer": "cap",
+    "group": "cap-agriculture",
+    "src": "CAP-TOP",
+    "en": "Food Marketing & Promotion",
+    "definition_en": "Issues related to the regulation of agricultural marketing and providing information to consumers regarding a healthy diet",
+    "fa": "بازاریابی و ترویج محصولات کشاورزی",
+    "fa_def": "تنظیم بازاریابی کشاورزی و آگاهی‌رسانی به مصرف‌کنندگان.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:405",
+    "layer": "cap",
+    "group": "cap-agriculture",
+    "src": "CAP-TOP",
+    "en": "Animal and Crop Disease",
+    "definition_en": "Issues related to animal and crop disease, pest control and pesticide regulation, and welfare for domesticated animals",
+    "fa": "بیماری دام و گیاه",
+    "fa_def": "بیماری دام و محصول، مبارزه با آفت‌ها، تنظیم سم‌ها و رفاه حیوانات.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:408",
+    "layer": "cap",
+    "group": "cap-agriculture",
+    "src": "CAP-TOP",
+    "en": "Fisheries & Fishing",
+    "definition_en": "Issues related to fishing, commercial fishery regulation and conservation",
+    "fa": "شیلات و ماهیگیری",
+    "fa_def": "ماهیگیری و تنظیم و حفاظت شیلات.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:498",
+    "layer": "cap",
+    "group": "cap-agriculture",
+    "src": "CAP-TOP",
+    "en": "Agriculture, R&D",
+    "definition_en": "Issues related to agricultural research and development",
+    "fa": "پژوهش و توسعه در کشاورزی",
+    "fa_def": "پژوهش و توسعه در حوزه‌ی کشاورزی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:499",
+    "layer": "cap",
+    "group": "cap-agriculture",
+    "src": "CAP-TOP",
+    "en": "Agriculture, Other",
+    "definition_en": "Issues related to other agricultural subtopics",
+    "fa": "دیگر موضوع‌های کشاورزی",
+    "fa_def": "موضوع‌های دیگر کشاورزی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:500",
+    "layer": "cap",
+    "group": "cap-labor",
+    "src": "CAP-TOP",
+    "en": "Labor, General",
+    "definition_en": "Issues generally related to labor, employment, and pensions, including appropriations for government agencies regulating labor policy",
+    "fa": "کلیات کار و اشتغال",
+    "fa_def": "کار، اشتغال و مستمری به‌طور کلی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:501",
+    "layer": "cap",
+    "group": "cap-labor",
+    "src": "CAP-TOP",
+    "en": "Worker Safety",
+    "definition_en": "Issues related to worker safety and protection and compensation for work-related injury and disease",
+    "fa": "ایمنی کار",
+    "fa_def": "ایمنی و حمایت از کارگران و جبران آسیب‌ها و بیماری‌های ناشی از کار.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:502",
+    "layer": "cap",
+    "group": "cap-labor",
+    "src": "CAP-TOP",
+    "en": "Employment Training",
+    "definition_en": "Issues related to job training for adult workers, workforce development, and efforts to retrain displaced workers",
+    "fa": "آموزش شغلی",
+    "fa_def": "آموزش شغلی بزرگسالان و توسعه‌ی نیروی کار.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:503",
+    "layer": "cap",
+    "group": "cap-labor",
+    "src": "CAP-TOP",
+    "en": "Employee Benefits",
+    "definition_en": "Issues related to all employee benefits, pensions, and retirement accounts, including government-provided unemployment insurance",
+    "fa": "مزایای کارکنان",
+    "fa_def": "مزایای کارکنان، مستمری و حساب‌های بازنشستگی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:504",
+    "layer": "cap",
+    "group": "cap-labor",
+    "src": "CAP-TOP",
+    "en": "Labor Unions",
+    "definition_en": "Issues related to labor unions, collective bargaining, and employer-employee relations",
+    "fa": "اتحادیه‌های کارگری",
+    "fa_def": "اتحادیه‌های کارگری، چانه‌زنی جمعی و رابطه‌ی کارفرما و کارگر.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:505",
+    "layer": "cap",
+    "group": "cap-labor",
+    "src": "CAP-TOP",
+    "en": "Fair Labor Standards",
+    "definition_en": "Issues related to fair labor standards such as the minimum wage and overtime compensation, and labor law",
+    "fa": "استانداردهای منصفانه‌ی کار",
+    "fa_def": "حداقل دستمزد، اضافه‌کاری و دیگر استانداردهای منصفانه‌ی کار.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:506",
+    "layer": "cap",
+    "group": "cap-labor",
+    "src": "CAP-TOP",
+    "en": "Youth Employment",
+    "definition_en": "Issues related to youth employment, child labor and job training for youths",
+    "fa": "اشتغال جوانان",
+    "fa_def": "اشتغال جوانان، کار کودکان و آموزش شغلی جوانان.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:529",
+    "layer": "cap",
+    "group": "cap-labor",
+    "src": "CAP-TOP",
+    "en": "Migrant and Seasonal",
+    "definition_en": "Issues related to migrant, guest and seasonal workers",
+    "fa": "کارگران مهاجر و فصلی",
+    "fa_def": "کارگران مهاجر، مهمان و فصلی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:599",
+    "layer": "cap",
+    "group": "cap-labor",
+    "src": "CAP-TOP",
+    "en": "Labor, Other",
+    "definition_en": "Issues related to other labor policy",
+    "fa": "دیگر موضوع‌های کار",
+    "fa_def": "موضوع‌های دیگر کار و اشتغال.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:600",
+    "layer": "cap",
+    "group": "cap-education",
+    "src": "CAP-TOP",
+    "en": "Education, General",
+    "definition_en": "Issues related to general education policy, including appropriations for government agencies regulating education policy",
+    "fa": "کلیات آموزش",
+    "fa_def": "سیاست کلی آموزش، از جمله بودجه‌ی نهادهای آموزشی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:601",
+    "layer": "cap",
+    "group": "cap-education",
+    "src": "CAP-TOP",
+    "en": "Higher",
+    "definition_en": "Issues related to higher education, student loans and education finance, and the regulation of colleges and universities",
+    "fa": "آموزش عالی",
+    "fa_def": "آموزش عالی، وام دانشجویی و تامین مالی آموزش.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:602",
+    "layer": "cap",
+    "group": "cap-education",
+    "src": "CAP-TOP",
+    "en": "Elementary & Secondary",
+    "definition_en": "Issues related to elementary and primary schools, school reform, safety in schools, and efforts to generally improve educational standards and outcomes",
+    "fa": "آموزش ابتدایی و متوسطه",
+    "fa_def": "مدرسه‌های ابتدایی و متوسطه، اصلاح و ایمنی مدرسه‌ها.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:603",
+    "layer": "cap",
+    "group": "cap-education",
+    "src": "CAP-TOP",
+    "en": "Underprivileged",
+    "definition_en": "Issues related to education of underprivileged students, including adult literacy programs, bilingual education needs, and rural education initiatives",
+    "fa": "آموزش محرومان",
+    "fa_def": "آموزش دانش‌آموزان محروم، از جمله سوادآموزی بزرگسالان.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:604",
+    "layer": "cap",
+    "group": "cap-education",
+    "src": "CAP-TOP",
+    "en": "Vocational",
+    "definition_en": "Issues related to vocational education for children and adults and their impact",
+    "fa": "آموزش فنی و حرفه‌ای",
+    "fa_def": "آموزش فنی و حرفه‌ای کودکان و بزرگسالان.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:606",
+    "layer": "cap",
+    "group": "cap-education",
+    "src": "CAP-TOP",
+    "en": "Special",
+    "definition_en": "Issues related to special education and education for the physically or mentally handicapped",
+    "fa": "آموزش استثنایی",
+    "fa_def": "آموزش استثنایی و آموزش افراد دارای معلولیت جسمی یا ذهنی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:607",
+    "layer": "cap",
+    "group": "cap-education",
+    "src": "CAP-TOP",
+    "en": "Excellence",
+    "definition_en": "Issues related to education excellence, including efforts to increase the quality of specific areas, such as math, science or foreign language skills",
+    "fa": "کیفیت آموزش",
+    "fa_def": "تلاش برای بالا بردن کیفیت آموزش.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:698",
+    "layer": "cap",
+    "group": "cap-education",
+    "src": "CAP-TOP",
+    "en": "Education, R&D",
+    "definition_en": "Issues related to research and development in education",
+    "fa": "پژوهش و توسعه در آموزش",
+    "fa_def": "پژوهش و توسعه در حوزه‌ی آموزش.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:699",
+    "layer": "cap",
+    "group": "cap-education",
+    "src": "CAP-TOP",
+    "en": "Education, Other",
+    "definition_en": "Issues related to other subtopics in education policy",
+    "fa": "دیگر موضوع‌های آموزش",
+    "fa_def": "موضوع‌های دیگر سیاست آموزشی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:700",
+    "layer": "cap",
+    "group": "cap-environment",
+    "src": "CAP-TOP",
+    "en": "Environment, General",
+    "definition_en": "Issues related to general environmental policy, including appropriations for government agencies regulating environmental policy",
+    "fa": "کلیات محیط زیست",
+    "fa_def": "سیاست کلی محیط زیست، از جمله بودجه‌ی نهادهای آن.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:701",
+    "layer": "cap",
+    "group": "cap-environment",
+    "src": "CAP-TOP",
+    "en": "Drinking Water",
+    "definition_en": "Issues related to domestic drinking water safety, supply, pollution, and additives (e.g., fluoridation)",
+    "fa": "آب آشامیدنی",
+    "fa_def": "ایمنی، تامین و آلودگی آب آشامیدنی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:703",
+    "layer": "cap",
+    "group": "cap-environment",
+    "src": "CAP-TOP",
+    "en": "Waste Disposal",
+    "definition_en": "Issues related to the disposal and treatment of wastewater, solid waste and runoff.",
+    "fa": "دفع پسماند",
+    "fa_def": "دفع و تصفیه‌ی فاضلاب، پسماند جامد و روان‌آب.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:704",
+    "layer": "cap",
+    "group": "cap-environment",
+    "src": "CAP-TOP",
+    "en": "Environment, Hazardous Waste",
+    "definition_en": "Issues related to hazardous waste and toxic chemical regulation, treatment, and disposal",
+    "fa": "پسماند خطرناک",
+    "fa_def": "تنظیم، تصفیه و دفع پسماند خطرناک و مواد شیمیایی سمی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:705",
+    "layer": "cap",
+    "group": "cap-environment",
+    "src": "CAP-TOP",
+    "en": "Air Pollution",
+    "definition_en": "Issues related to air pollution, climate change, and noise pollution",
+    "fa": "آلودگی هوا",
+    "fa_def": "آلودگی هوا، تغییر اقلیم و آلودگی صوتی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:707",
+    "layer": "cap",
+    "group": "cap-environment",
+    "src": "CAP-TOP",
+    "en": "Recycling",
+    "definition_en": "Issues related to recycling, reuse, and resource conservation",
+    "fa": "بازیافت",
+    "fa_def": "بازیافت، بازمصرف و صرفه‌جویی در منابع.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:708",
+    "layer": "cap",
+    "group": "cap-environment",
+    "src": "CAP-TOP",
+    "en": "Indoor Hazards",
+    "definition_en": "Issues related to indoor environmental hazards, indoor air contamination (including on airlines), and indoor hazardous substances such as asbestos",
+    "fa": "خطرهای محیط بسته",
+    "fa_def": "آلودگی هوای درون ساختمان و دیگر خطرهای محیط بسته.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:709",
+    "layer": "cap",
+    "group": "cap-environment",
+    "src": "CAP-TOP",
+    "en": "Species & Forest",
+    "definition_en": "Issues related to species and forest protection, endangered species, control of the domestic illicit trade in wildlife products, and regulation of laboratory or performance animals",
+    "fa": "گونه‌ها و جنگل‌ها",
+    "fa_def": "حفاظت از گونه‌ها و جنگل‌ها و گونه‌های در خطر انقراض.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:711",
+    "layer": "cap",
+    "group": "cap-environment",
+    "src": "CAP-TOP",
+    "en": "Land and Water Conservation",
+    "definition_en": "Issues related to land and water resource conservation",
+    "fa": "حفاظت از خاک و آب",
+    "fa_def": "حفاظت از منابع خاک و آب.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:798",
+    "layer": "cap",
+    "group": "cap-environment",
+    "src": "CAP-TOP",
+    "en": "Environment, R&D",
+    "definition_en": "Issues related to research and development in environmental technology, not including alternative energy",
+    "fa": "پژوهش و توسعه در محیط زیست",
+    "fa_def": "پژوهش و توسعه در فناوری‌های محیط زیستی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:799",
+    "layer": "cap",
+    "group": "cap-environment",
+    "src": "CAP-TOP",
+    "en": "Environment, Other",
+    "definition_en": "Issues related to other environmental subtopics",
+    "fa": "دیگر موضوع‌های محیط زیست",
+    "fa_def": "موضوع‌های دیگر محیط زیست.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:800",
+    "layer": "cap",
+    "group": "cap-energy",
+    "src": "CAP-TOP",
+    "en": "Energy, General",
+    "definition_en": "Issues generally related to energy policy, including appropriations for government agencies regulating energy policy",
+    "fa": "کلیات انرژی",
+    "fa_def": "سیاست کلی انرژی، از جمله بودجه‌ی نهادهای آن.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:801",
+    "layer": "cap",
+    "group": "cap-energy",
+    "src": "CAP-TOP",
+    "en": "Nuclear",
+    "definition_en": "Issues related to nuclear energy, safety and security, and disposal of nuclear waste",
+    "fa": "انرژی هسته‌ای",
+    "fa_def": "انرژی هسته‌ای، ایمنی و امنیت آن و دفع پسماند هسته‌ای.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:802",
+    "layer": "cap",
+    "group": "cap-energy",
+    "src": "CAP-TOP",
+    "en": "Electricity",
+    "definition_en": "Issues related to general electricity, hydropower, and regulation of electrical utilities",
+    "fa": "برق",
+    "fa_def": "برق، نیروی برق‌آبی و تنظیم شرکت‌های برق.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:803",
+    "layer": "cap",
+    "group": "cap-energy",
+    "src": "CAP-TOP",
+    "en": "Natural Gas & Oil",
+    "definition_en": "Issues related to natural gas and oil, drilling, oil spills and flaring, oil and gas prices, shortages and gasoline regulation",
+    "fa": "گاز طبیعی و نفت",
+    "fa_def": "گاز و نفت، حفاری، نشت نفت و قیمت نفت و گاز.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:805",
+    "layer": "cap",
+    "group": "cap-energy",
+    "src": "CAP-TOP",
+    "en": "Coal",
+    "definition_en": "Issues related to coal production, use, trade, and regulation, including coal gasification and clean coal technologies",
+    "fa": "زغال‌سنگ",
+    "fa_def": "تولید، مصرف، تجارت و تنظیم زغال‌سنگ.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:806",
+    "layer": "cap",
+    "group": "cap-energy",
+    "src": "CAP-TOP",
+    "en": "Alternative & Renewable",
+    "definition_en": "Issues related to alternative and renewable energy, biofuels, hydrogen and geothermal power",
+    "fa": "انرژی‌های جایگزین و تجدیدپذیر",
+    "fa_def": "انرژی‌های جایگزین و تجدیدپذیر، سوخت زیستی، هیدروژن و زمین‌گرمایی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:807",
+    "layer": "cap",
+    "group": "cap-energy",
+    "src": "CAP-TOP",
+    "en": "Conservation",
+    "definition_en": "Issues related to energy conservation and energy efficiency, including vehicles, homes, commercial use and government",
+    "fa": "صرفه‌جویی در انرژی",
+    "fa_def": "صرفه‌جویی و بهره‌وری انرژی در خودروها، خانه‌ها و صنعت.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:898",
+    "layer": "cap",
+    "group": "cap-energy",
+    "src": "CAP-TOP",
+    "en": "Energy, R&D",
+    "definition_en": "Issues related to energy research and development",
+    "fa": "پژوهش و توسعه در انرژی",
+    "fa_def": "پژوهش و توسعه در حوزه‌ی انرژی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:899",
+    "layer": "cap",
+    "group": "cap-energy",
+    "src": "CAP-TOP",
+    "en": "Energy, Other",
+    "definition_en": "Issues related to other energy subtopics",
+    "fa": "دیگر موضوع‌های انرژی",
+    "fa_def": "موضوع‌های دیگر انرژی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:900",
+    "layer": "cap",
+    "group": "cap-immigration",
+    "src": "CAP-TOP",
+    "en": "Immigration",
+    "definition_en": "Issues related to immigration, refugees, and citizenship",
+    "fa": "مهاجرت",
+    "fa_def": "مهاجرت، پناهندگان و تابعیت.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1000",
+    "layer": "cap",
+    "group": "cap-transportation",
+    "src": "CAP-TOP",
+    "en": "Transportation, General",
+    "definition_en": "Issues related generally to transportation, including appropriations for government agencies regulating transportation policy",
+    "fa": "کلیات حمل‌ونقل",
+    "fa_def": "حمل‌ونقل به‌طور کلی، از جمله بودجه‌ی نهادهای آن.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1001",
+    "layer": "cap",
+    "group": "cap-transportation",
+    "src": "CAP-TOP",
+    "en": "Mass",
+    "definition_en": "Issues related to mass transportation construction, regulation, safety, and availability",
+    "fa": "حمل‌ونقل عمومی",
+    "fa_def": "ساخت، تنظیم، ایمنی و دسترس‌پذیری حمل‌ونقل عمومی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1002",
+    "layer": "cap",
+    "group": "cap-transportation",
+    "src": "CAP-TOP",
+    "en": "Highways",
+    "definition_en": "Issues related to public highway construction, maintenance, and safety",
+    "fa": "راه‌ها",
+    "fa_def": "ساخت، نگهداری و ایمنی راه‌های عمومی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1003",
+    "layer": "cap",
+    "group": "cap-transportation",
+    "src": "CAP-TOP",
+    "en": "Air Travel",
+    "definition_en": "Issues related to air travel, regulation and safety of aviation, airports, air traffic control, pilot training, and aviation technology",
+    "fa": "حمل‌ونقل هوایی",
+    "fa_def": "سفر هوایی، تنظیم و ایمنی هوانوردی، فرودگاه‌ها و کنترل ترافیک هوایی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1005",
+    "layer": "cap",
+    "group": "cap-transportation",
+    "src": "CAP-TOP",
+    "en": "Railroad Travel",
+    "definition_en": "Issues related to railroads, rail travel, rail freight, and the development and deployment of new rail technologies",
+    "fa": "راه‌آهن",
+    "fa_def": "راه‌آهن، سفر و بار ریلی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1007",
+    "layer": "cap",
+    "group": "cap-transportation",
+    "src": "CAP-TOP",
+    "en": "Maritime",
+    "definition_en": "Issues related to maritime transportation, including maritime freight and shipping, safety and security, and inland waterways and channels",
+    "fa": "حمل‌ونقل دریایی",
+    "fa_def": "حمل‌ونقل و بار دریایی، کشتیرانی و ایمنی آن.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1010",
+    "layer": "cap",
+    "group": "cap-transportation",
+    "src": "CAP-TOP",
+    "en": "Infrastructure",
+    "definition_en": "Issues related to infrastructure and public works, including employment initiatives",
+    "fa": "زیرساخت‌ها",
+    "fa_def": "زیرساخت‌ها و کارهای عمومی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1098",
+    "layer": "cap",
+    "group": "cap-transportation",
+    "src": "CAP-TOP",
+    "en": "Transportation, R&D",
+    "definition_en": "Issues related to transportation research and development",
+    "fa": "پژوهش و توسعه در حمل‌ونقل",
+    "fa_def": "پژوهش و توسعه در حوزه‌ی حمل‌ونقل.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1099",
+    "layer": "cap",
+    "group": "cap-transportation",
+    "src": "CAP-TOP",
+    "en": "Transportation, Other",
+    "definition_en": "Issues related to other transportation subtopics",
+    "fa": "دیگر موضوع‌های حمل‌ونقل",
+    "fa_def": "موضوع‌های دیگر حمل‌ونقل.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1200",
+    "layer": "cap",
+    "group": "cap-law-and-crime",
+    "src": "CAP-TOP",
+    "en": "Law and Crime, General",
+    "definition_en": "Issues related to general law, crime, and family issues",
+    "fa": "کلیات قانون و جرم",
+    "fa_def": "قانون، جرم و امور خانواده به‌طور کلی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1201",
+    "layer": "cap",
+    "group": "cap-law-and-crime",
+    "src": "CAP-TOP",
+    "en": "Agencies",
+    "definition_en": "Issues related to all law enforcement agencies, including border, customs, and other specialized enforcement agencies and their appropriations",
+    "fa": "نهادهای انتظامی",
+    "fa_def": "نهادهای اجرای قانون، از جمله مرزبانی و گمرک.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1202",
+    "layer": "cap",
+    "group": "cap-law-and-crime",
+    "src": "CAP-TOP",
+    "en": "White Collar Crime",
+    "definition_en": "Issues related to white collar crime, organized crime, counterfeiting and fraud, cyber-crime, and money laundering",
+    "fa": "جرم‌های یقه‌سفید",
+    "fa_def": "جرم یقه‌سفید، جرم سازمان‌یافته، جعل، کلاه‌برداری و جرم رایانه‌ای.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1203",
+    "layer": "cap",
+    "group": "cap-law-and-crime",
+    "src": "CAP-TOP",
+    "en": "Illegal Drugs",
+    "definition_en": "Issues related to illegal drug crime and enforcement, criminal penalties for drug crimes, including international efforts to combat drug trafficking",
+    "fa": "مواد مخدر غیرقانونی",
+    "fa_def": "جرم‌های مواد مخدر و مجازات آن‌ها.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1204",
+    "layer": "cap",
+    "group": "cap-law-and-crime",
+    "src": "CAP-TOP",
+    "en": "Court Administration",
+    "definition_en": "Issues related to court administration, judiciary appropriations, guidelines for bail, pre-release, fines and legal representation",
+    "fa": "اداره‌ی دادگاه‌ها",
+    "fa_def": "اداره و بودجه‌ی دادگاه‌ها، وثیقه و رسیدگی پیش از محاکمه.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1205",
+    "layer": "cap",
+    "group": "cap-law-and-crime",
+    "src": "CAP-TOP",
+    "en": "Prisons",
+    "definition_en": "Issues related to prisons and jails, parole systems, and appropriations",
+    "fa": "زندان‌ها",
+    "fa_def": "زندان‌ها و بازداشتگاه‌ها و آزادی مشروط.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1206",
+    "layer": "cap",
+    "group": "cap-law-and-crime",
+    "src": "CAP-TOP",
+    "en": "Juvenile Crime",
+    "definition_en": "Issues related to juvenile crime and justice, juvenile prisons and jails, and efforts to reduce juvenile crime and recidivism",
+    "fa": "جرم نوجوانان",
+    "fa_def": "جرم و دادرسی نوجوانان و کانون‌های اصلاح و تربیت.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1207",
+    "layer": "cap",
+    "group": "cap-law-and-crime",
+    "src": "CAP-TOP",
+    "en": "Child Abuse",
+    "definition_en": "Issues related to child abuse, child pornography, sexual exploitation of children and parental kidnapping",
+    "fa": "کودک‌آزاری",
+    "fa_def": "کودک‌آزاری، هرزه‌نگاری کودکان و بهره‌کشی جنسی از کودکان.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1208",
+    "layer": "cap",
+    "group": "cap-law-and-crime",
+    "src": "CAP-TOP",
+    "en": "Family Issues",
+    "definition_en": "Issues related to family issues, domestic violence, child welfare, family law",
+    "fa": "امور خانواده",
+    "fa_def": "امور خانواده، خشونت خانگی، رفاه کودکان و حقوق خانواده.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1210",
+    "layer": "cap",
+    "group": "cap-law-and-crime",
+    "src": "CAP-TOP",
+    "en": "Criminal & Civil Code",
+    "definition_en": "Issues related to domestic criminal and civil codes, including crimes not mentioned in other subtopics",
+    "fa": "قانون جزا و قانون مدنی",
+    "fa_def": "قانون‌های جزایی و مدنی کشور.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1211",
+    "layer": "cap",
+    "group": "cap-law-and-crime",
+    "src": "CAP-TOP",
+    "en": "Crime Control",
+    "definition_en": "Issues related to the control, prevention, and impact of crime",
+    "fa": "مهار جرم",
+    "fa_def": "مهار و پیش‌گیری از جرم و پیامدهای آن.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1227",
+    "layer": "cap",
+    "group": "cap-law-and-crime",
+    "src": "CAP-TOP",
+    "en": "Police",
+    "definition_en": "Issues related to Police and other general domestic security responses to terrorism, such as special police",
+    "fa": "پلیس",
+    "fa_def": "پلیس و دیگر واکنش‌های امنیتی داخلی، از جمله در برابر تروریسم.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1299",
+    "layer": "cap",
+    "group": "cap-law-and-crime",
+    "src": "CAP-TOP",
+    "en": "Law and Crime, Other",
+    "definition_en": "Issues related to other law, crime, and family subtopics",
+    "fa": "دیگر موضوع‌های قانون و جرم",
+    "fa_def": "موضوع‌های دیگر قانون، جرم و خانواده.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1300",
+    "layer": "cap",
+    "group": "cap-social-welfare",
+    "src": "CAP-TOP",
+    "en": "Social Welfare, General",
+    "definition_en": "Issues generally related to social welfare policy",
+    "fa": "کلیات رفاه اجتماعی",
+    "fa_def": "سیاست رفاه اجتماعی به‌طور کلی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1302",
+    "layer": "cap",
+    "group": "cap-social-welfare",
+    "src": "CAP-TOP",
+    "en": "Social Welfare, Low-Income Assistance",
+    "definition_en": "Issues related to poverty assistance for low-income families, including food assistance programs, programs to assess or alleviate welfare dependency and tax credits directed at low-income families",
+    "fa": "کمک به کم‌درآمدها",
+    "fa_def": "کمک به خانواده‌های کم‌درآمد، از جمله کمک غذایی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1303",
+    "layer": "cap",
+    "group": "cap-social-welfare",
+    "src": "CAP-TOP",
+    "en": "Elderly Assistance",
+    "definition_en": "Issues related to elderly issues and elderly assistance, including government pensions",
+    "fa": "کمک به سالمندان",
+    "fa_def": "امور سالمندان و کمک به آن‌ها، از جمله مستمری دولتی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1304",
+    "layer": "cap",
+    "group": "cap-social-welfare",
+    "src": "CAP-TOP",
+    "en": "Disabled Assistance",
+    "definition_en": "Issues related to aid for people with physical or mental disabilities",
+    "fa": "کمک به افراد دارای معلولیت",
+    "fa_def": "کمک به افراد دارای معلولیت جسمی یا ذهنی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1305",
+    "layer": "cap",
+    "group": "cap-social-welfare",
+    "src": "CAP-TOP",
+    "en": "Volunteer Associations",
+    "definition_en": "Issues related to domestic volunteer associations, charities, and youth organizations",
+    "fa": "انجمن‌های داوطلبانه",
+    "fa_def": "انجمن‌های داوطلبانه، خیریه‌ها و سازمان‌های جوانان.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1308",
+    "layer": "cap",
+    "group": "cap-social-welfare",
+    "src": "CAP-TOP",
+    "en": "Child Care",
+    "definition_en": "Issues related to parental leave and child care",
+    "fa": "مراقبت از کودک",
+    "fa_def": "مرخصی والدین و مراقبت از کودک.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1399",
+    "layer": "cap",
+    "group": "cap-social-welfare",
+    "src": "CAP-TOP",
+    "en": "Social Welfare, Other",
+    "definition_en": "Issues related to other social welfare policy subtopics",
+    "fa": "دیگر موضوع‌های رفاه اجتماعی",
+    "fa_def": "موضوع‌های دیگر رفاه اجتماعی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1400",
+    "layer": "cap",
+    "group": "cap-housing",
+    "src": "CAP-TOP",
+    "en": "Housing, General",
+    "definition_en": "Issues related generally to housing and urban affairs",
+    "fa": "کلیات مسکن",
+    "fa_def": "مسکن و امور شهری به‌طور کلی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1401",
+    "layer": "cap",
+    "group": "cap-housing",
+    "src": "CAP-TOP",
+    "en": "Community Development",
+    "definition_en": "Issues related to housing and community development, neighborhood development, and national housing policy",
+    "fa": "توسعه‌ی محلی",
+    "fa_def": "مسکن و توسعه‌ی محله‌ها و اجتماع‌های محلی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1403",
+    "layer": "cap",
+    "group": "cap-housing",
+    "src": "CAP-TOP",
+    "en": "Urban Development",
+    "definition_en": "Issues related to urban development and general urban issues",
+    "fa": "توسعه‌ی شهری",
+    "fa_def": "توسعه‌ی شهری و مسائل کلی شهرها.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1404",
+    "layer": "cap",
+    "group": "cap-housing",
+    "src": "CAP-TOP",
+    "en": "Rural Housing",
+    "definition_en": "Issues related to rural housing",
+    "fa": "مسکن روستایی",
+    "fa_def": "مسکن روستایی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1405",
+    "layer": "cap",
+    "group": "cap-housing",
+    "src": "CAP-TOP",
+    "en": "Rural Development",
+    "definition_en": "Non-housing issues focused on economic, infrastructure, and other developments in non-urban areas",
+    "fa": "توسعه‌ی روستایی",
+    "fa_def": "توسعه‌ی اقتصادی و زیرساختی مناطق غیرشهری، جز مسکن.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1406",
+    "layer": "cap",
+    "group": "cap-housing",
+    "src": "CAP-TOP",
+    "en": "Housing, Low-Income Assistance",
+    "definition_en": "Issues related to housing for low-income individuals and families, including public housing projects and housing affordability programs",
+    "fa": "مسکن کم‌درآمدها",
+    "fa_def": "مسکن افراد و خانواده‌های کم‌درآمد، از جمله مسکن عمومی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1407",
+    "layer": "cap",
+    "group": "cap-housing",
+    "src": "CAP-TOP",
+    "en": "Veterans",
+    "definition_en": "Issues related to housing for military veterans and their families, including subsidies for veterans",
+    "fa": "مسکن کهنه‌سربازان",
+    "fa_def": "مسکن کهنه‌سربازان و خانواده‌هایشان.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1408",
+    "layer": "cap",
+    "group": "cap-housing",
+    "src": "CAP-TOP",
+    "en": "Elderly",
+    "definition_en": "Issues related to housing for the elderly, including housing facilities for the handicapped elderly",
+    "fa": "مسکن سالمندان",
+    "fa_def": "مسکن سالمندان، از جمله مراکز نگهداری.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1409",
+    "layer": "cap",
+    "group": "cap-housing",
+    "src": "CAP-TOP",
+    "en": "Homeless",
+    "definition_en": "Issues related to housing for the homeless and efforts to reduce homelessness",
+    "fa": "بی‌خانمانی",
+    "fa_def": "مسکن بی‌خانمان‌ها و کاهش بی‌خانمانی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1498",
+    "layer": "cap",
+    "group": "cap-housing",
+    "src": "CAP-TOP",
+    "en": "Housing, R&D",
+    "definition_en": "Issues related to housing and community development research and development",
+    "fa": "پژوهش و توسعه در مسکن",
+    "fa_def": "پژوهش و توسعه در مسکن و توسعه‌ی محلی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1499",
+    "layer": "cap",
+    "group": "cap-housing",
+    "src": "CAP-TOP",
+    "en": "Housing, Other",
+    "definition_en": "Other issues related to housing and community development",
+    "fa": "دیگر موضوع‌های مسکن",
+    "fa_def": "موضوع‌های دیگر مسکن و توسعه‌ی محلی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1500",
+    "layer": "cap",
+    "group": "cap-domestic-commerce",
+    "src": "CAP-TOP",
+    "en": "Domestic Commerce, General",
+    "definition_en": "Issues generally related to domestic commerce, including appropriations for government agencies regulating domestic commerce",
+    "fa": "کلیات بازرگانی داخلی",
+    "fa_def": "بازرگانی داخلی به‌طور کلی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1501",
+    "layer": "cap",
+    "group": "cap-domestic-commerce",
+    "src": "CAP-TOP",
+    "en": "Banking",
+    "definition_en": "Issues related to the regulation of national banking systems and other non-bank financial institutions",
+    "fa": "بانکداری",
+    "fa_def": "تنظیم نظام بانکی و نهادهای مالی غیربانکی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1502",
+    "layer": "cap",
+    "group": "cap-domestic-commerce",
+    "src": "CAP-TOP",
+    "en": "Securities & Commodities",
+    "definition_en": "Issues related to the regulation and facilitation of securities and commodities trading, regulation of investments and related industries, and exchanges",
+    "fa": "اوراق بهادار و کالا",
+    "fa_def": "تنظیم و تسهیل داد و ستد اوراق بهادار و کالا.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1504",
+    "layer": "cap",
+    "group": "cap-domestic-commerce",
+    "src": "CAP-TOP",
+    "en": "Consumer Finance",
+    "definition_en": "Issues related to consumer finance, mortgages, credit cards, access to credit records, and consumer credit fraud",
+    "fa": "اعتبار مصرف‌کننده",
+    "fa_def": "اعتبار مصرف‌کننده، وام مسکن، کارت اعتباری و سوابق اعتباری.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1505",
+    "layer": "cap",
+    "group": "cap-domestic-commerce",
+    "src": "CAP-TOP",
+    "en": "Insurance Regulation",
+    "definition_en": "Issues related to insurance regulation, fraud and abuse in the insurance industry, the financial health of the insurance industry, and insurance availability and cost",
+    "fa": "تنظیم بیمه",
+    "fa_def": "تنظیم بیمه و تقلب در صنعت بیمه.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1507",
+    "layer": "cap",
+    "group": "cap-domestic-commerce",
+    "src": "CAP-TOP",
+    "en": "Bankruptcy",
+    "definition_en": "Issues related to personal, commercial, and municipal bankruptcies",
+    "fa": "ورشکستگی",
+    "fa_def": "ورشکستگی اشخاص، بنگاه‌ها و شهرداری‌ها.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1520",
+    "layer": "cap",
+    "group": "cap-domestic-commerce",
+    "src": "CAP-TOP",
+    "en": "Corporate Management",
+    "definition_en": "Issues related to corporate mergers, antitrust regulation, corporate accounting and governance, and corporate management",
+    "fa": "مدیریت شرکت‌ها",
+    "fa_def": "ادغام شرکت‌ها، ضدانحصار، حسابداری و حاکمیت شرکتی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1521",
+    "layer": "cap",
+    "group": "cap-domestic-commerce",
+    "src": "CAP-TOP",
+    "en": "Small Businesses",
+    "definition_en": "Issues related to small businesses, including programs to promote and subsidize small businesses",
+    "fa": "کسب‌وکارهای کوچک",
+    "fa_def": "کسب‌وکارهای کوچک و برنامه‌های پشتیبانی از آن‌ها.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1522",
+    "layer": "cap",
+    "group": "cap-domestic-commerce",
+    "src": "CAP-TOP",
+    "en": "Copyrights and Patents",
+    "definition_en": "Issues related to copyrights and patents, patent reform, and intellectual property",
+    "fa": "حق نشر و ثبت اختراع",
+    "fa_def": "حق نشر، ثبت اختراع و مالکیت فکری.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1523",
+    "layer": "cap",
+    "group": "cap-domestic-commerce",
+    "src": "CAP-TOP",
+    "en": "Disaster Relief",
+    "definition_en": "Issues related to domestic natural disaster relief, disaster or flood insurance, and natural disaster preparedness",
+    "fa": "امداد در بلایا",
+    "fa_def": "امداد در بلایای طبیعی و بیمه‌ی بلایا.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1524",
+    "layer": "cap",
+    "group": "cap-domestic-commerce",
+    "src": "CAP-TOP",
+    "en": "Tourism",
+    "definition_en": "Issues related to tourism regulation, promotion, and impact",
+    "fa": "گردشگری",
+    "fa_def": "تنظیم، ترویج و اثر گردشگری.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1525",
+    "layer": "cap",
+    "group": "cap-domestic-commerce",
+    "src": "CAP-TOP",
+    "en": "Consumer Safety",
+    "definition_en": "Issues related to consumer fraud and safety in domestic commerce",
+    "fa": "ایمنی مصرف‌کننده",
+    "fa_def": "کلاه‌برداری از مصرف‌کننده و ایمنی کالا در بازار داخلی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1526",
+    "layer": "cap",
+    "group": "cap-domestic-commerce",
+    "src": "CAP-TOP",
+    "en": "Sports Regulation",
+    "definition_en": "Issues related to the regulation and promotion of sports, gambling, and personal fitness",
+    "fa": "ورزش",
+    "fa_def": "تنظیم و ترویج ورزش، بازی‌های شرط‌بندی و تندرستی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1598",
+    "layer": "cap",
+    "group": "cap-domestic-commerce",
+    "src": "CAP-TOP",
+    "en": "Domestic Commerce, R&D",
+    "definition_en": "Issues related to domestic commerce research and development",
+    "fa": "پژوهش و توسعه در بازرگانی داخلی",
+    "fa_def": "پژوهش و توسعه در بازرگانی داخلی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1599",
+    "layer": "cap",
+    "group": "cap-domestic-commerce",
+    "src": "CAP-TOP",
+    "en": "Domestic Commerce, Other",
+    "definition_en": "Issues related to other domestic commerce policy subtopics",
+    "fa": "دیگر موضوع‌های بازرگانی داخلی",
+    "fa_def": "موضوع‌های دیگر بازرگانی داخلی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1600",
+    "layer": "cap",
+    "group": "cap-defense",
+    "src": "CAP-TOP",
+    "en": "Defense, General",
+    "definition_en": "Issues related generally to defense policy, and appropriations for agencies that oversee general defense policy",
+    "fa": "کلیات دفاع",
+    "fa_def": "سیاست دفاعی به‌طور کلی و بودجه‌ی نهادهای آن.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1602",
+    "layer": "cap",
+    "group": "cap-defense",
+    "src": "CAP-TOP",
+    "en": "Alliances",
+    "definition_en": "Issues related to defense alliance and agreement, security assistance, and UN peacekeeping activities",
+    "fa": "پیمان‌های دفاعی",
+    "fa_def": "پیمان‌ها و توافق‌های دفاعی، کمک امنیتی و حفظ صلح سازمان ملل.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1603",
+    "layer": "cap",
+    "group": "cap-defense",
+    "src": "CAP-TOP",
+    "en": "Intelligence",
+    "definition_en": "Issues related to military intelligence, espionage, and covert operations",
+    "fa": "اطلاعات نظامی",
+    "fa_def": "اطلاعات نظامی، جاسوسی و عملیات پنهان.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1604",
+    "layer": "cap",
+    "group": "cap-defense",
+    "src": "CAP-TOP",
+    "en": "Readiness",
+    "definition_en": "Issues related to military readiness, coordination of armed services air support and sealift capabilities, and national stockpiles of strategic materials.",
+    "fa": "آمادگی نظامی",
+    "fa_def": "آمادگی و هماهنگی نیروهای مسلح.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1605",
+    "layer": "cap",
+    "group": "cap-defense",
+    "src": "CAP-TOP",
+    "en": "Nuclear Arms",
+    "definition_en": "Issues related to nuclear weapons, nuclear proliferation, modernization of nuclear equipment",
+    "fa": "سلاح هسته‌ای",
+    "fa_def": "سلاح هسته‌ای، اشاعه و نوسازی آن.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1606",
+    "layer": "cap",
+    "group": "cap-defense",
+    "src": "CAP-TOP",
+    "en": "Military Aid",
+    "definition_en": "Issues related to military aid to other countries and the control of arms sales to other countries",
+    "fa": "کمک نظامی",
+    "fa_def": "کمک نظامی به کشورهای دیگر و کنترل فروش سلاح.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1608",
+    "layer": "cap",
+    "group": "cap-defense",
+    "src": "CAP-TOP",
+    "en": "Personnel Issues",
+    "definition_en": "Issues related to military manpower, military personel and their dependents, military courts, and general veterans' issues",
+    "fa": "کارکنان نظامی",
+    "fa_def": "نیروی انسانی نظامی، خانواده‌هایشان و دادگاه‌های نظامی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1610",
+    "layer": "cap",
+    "group": "cap-defense",
+    "src": "CAP-TOP",
+    "en": "Procurement",
+    "definition_en": "Issues related to military procurement, conversion of old equipment, and weapons systems evaluation",
+    "fa": "تدارکات نظامی",
+    "fa_def": "خرید تسلیحات و تجهیزات نظامی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1611",
+    "layer": "cap",
+    "group": "cap-defense",
+    "src": "CAP-TOP",
+    "en": "Installations & Land",
+    "definition_en": "Issues related to military installations, construction, and land transfers",
+    "fa": "تاسیسات و زمین‌های نظامی",
+    "fa_def": "تاسیسات نظامی، ساخت‌وساز و واگذاری زمین.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1612",
+    "layer": "cap",
+    "group": "cap-defense",
+    "src": "CAP-TOP",
+    "en": "Reserve Forces",
+    "definition_en": "Issues related to military reserves and reserve affairs",
+    "fa": "نیروهای ذخیره",
+    "fa_def": "نیروهای ذخیره‌ی نظامی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1614",
+    "layer": "cap",
+    "group": "cap-defense",
+    "src": "CAP-TOP",
+    "en": "Defense, Hazardous Waste",
+    "definition_en": "Issues related to military nuclear and hazardous waste disposal and military environmental compliance",
+    "fa": "پسماند خطرناک نظامی",
+    "fa_def": "دفع پسماند هسته‌ای و خطرناک نظامی و امور زیست‌محیطی ارتش.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1615",
+    "layer": "cap",
+    "group": "cap-defense",
+    "src": "CAP-TOP",
+    "en": "Civil",
+    "definition_en": "Issues related to domestic civil defense, national security responses to terrorism, and other issues related to homeland security",
+    "fa": "پدافند غیرعامل",
+    "fa_def": "پدافند غیرعامل و واکنش امنیت ملی به تروریسم.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1616",
+    "layer": "cap",
+    "group": "cap-defense",
+    "src": "CAP-TOP",
+    "en": "Civilian Personnel",
+    "definition_en": "Issues related to non-contractor civilian personnel, civilian employment in the defense industry, and military base closings",
+    "fa": "کارکنان غیرنظامی دفاع",
+    "fa_def": "کارکنان غیرنظامی بخش دفاع.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1617",
+    "layer": "cap",
+    "group": "cap-defense",
+    "src": "CAP-TOP",
+    "en": "Contractors",
+    "definition_en": "Issues related to military contractors and contracting, oversight of military contrators and fraud by military contractors",
+    "fa": "پیمانکاران نظامی",
+    "fa_def": "پیمانکاران نظامی و نظارت بر آن‌ها.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1619",
+    "layer": "cap",
+    "group": "cap-defense",
+    "src": "CAP-TOP",
+    "en": "Foreign Operations",
+    "definition_en": "Issues related to direct war-related foreign military operations, prisoners of war and collateral damage to civilian populations",
+    "fa": "عملیات نظامی خارجی",
+    "fa_def": "عملیات جنگی در خارج، اسیران جنگی و غرامت.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1620",
+    "layer": "cap",
+    "group": "cap-defense",
+    "src": "CAP-TOP",
+    "en": "Claims against Military",
+    "definition_en": "Issues related to claims against the military, settlements for military dependents, and compensation for civilians injured in military operations",
+    "fa": "دعاوی علیه ارتش",
+    "fa_def": "دعاوی علیه نیروهای نظامی و غرامت.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1698",
+    "layer": "cap",
+    "group": "cap-defense",
+    "src": "CAP-TOP",
+    "en": "Defense, R&D",
+    "definition_en": "Issues related to defense research and development",
+    "fa": "پژوهش و توسعه در دفاع",
+    "fa_def": "پژوهش و توسعه در حوزه‌ی دفاع.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1699",
+    "layer": "cap",
+    "group": "cap-defense",
+    "src": "CAP-TOP",
+    "en": "Defense, Other",
+    "definition_en": "Issues related to other defense policy subtopics",
+    "fa": "دیگر موضوع‌های دفاع",
+    "fa_def": "موضوع‌های دیگر سیاست دفاعی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1700",
+    "layer": "cap",
+    "group": "cap-technology",
+    "src": "CAP-TOP",
+    "en": "Technology, General",
+    "definition_en": "Issues related to general space, science, technology, and communications",
+    "fa": "کلیات فناوری",
+    "fa_def": "فضا، علم، فناوری و ارتباطات به‌طور کلی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1701",
+    "layer": "cap",
+    "group": "cap-technology",
+    "src": "CAP-TOP",
+    "en": "Space",
+    "definition_en": "Issues related to the government use of space and space resource exploitation agreements, government space programs and space exploration, military use of space",
+    "fa": "فضا",
+    "fa_def": "استفاده‌ی دولت از فضا و توافق‌های بهره‌برداری از منابع فضایی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1704",
+    "layer": "cap",
+    "group": "cap-technology",
+    "src": "CAP-TOP",
+    "en": "Commercial Use of Space",
+    "definition_en": "Issues related to the regulation and promotion of commercial use of space, commercial satellite technology, and government efforts to encourage commercial space development",
+    "fa": "استفاده‌ی تجاری از فضا",
+    "fa_def": "تنظیم و ترویج استفاده‌ی تجاری از فضا و ماهواره‌ها.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1705",
+    "layer": "cap",
+    "group": "cap-technology",
+    "src": "CAP-TOP",
+    "en": "Science Transfer",
+    "definition_en": "Issues related to science and technology transfer and international science cooperation",
+    "fa": "انتقال علم",
+    "fa_def": "انتقال علم و فناوری و همکاری علمی بین‌المللی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1706",
+    "layer": "cap",
+    "group": "cap-technology",
+    "src": "CAP-TOP",
+    "en": "Telecommunications",
+    "definition_en": "Issues related to telephones and telecommunication regulation, infrastructure for high-speed internet, and other forms of telecommunication (e.g., mobile phones)",
+    "fa": "مخابرات",
+    "fa_def": "تلفن، تنظیم مخابرات و زیرساخت اینترنت پرسرعت.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1707",
+    "layer": "cap",
+    "group": "cap-technology",
+    "src": "CAP-TOP",
+    "en": "Broadcast",
+    "definition_en": "Issues related to the broadcast industry, published media, and control of the electromagnetic spectrum",
+    "fa": "رسانه‌های پخش",
+    "fa_def": "صنعت پخش، رسانه‌های چاپی و تنظیم طیف فرکانس.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1708",
+    "layer": "cap",
+    "group": "cap-technology",
+    "src": "CAP-TOP",
+    "en": "Weather Forecasting",
+    "definition_en": "Issues related to weather forecasting, oceanography, geological surveys, and weather forecasting research and technology",
+    "fa": "هواشناسی",
+    "fa_def": "پیش‌بینی هوا، اقیانوس‌شناسی و نقشه‌برداری زمین‌شناسی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1709",
+    "layer": "cap",
+    "group": "cap-technology",
+    "src": "CAP-TOP",
+    "en": "Computers",
+    "definition_en": "Issues relating to the computer industry, regulation of the internet, and cyber security",
+    "fa": "رایانه و اینترنت",
+    "fa_def": "صنعت رایانه، تنظیم اینترنت و امنیت سایبری.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1798",
+    "layer": "cap",
+    "group": "cap-technology",
+    "src": "CAP-TOP",
+    "en": "Technology, R&D",
+    "definition_en": "Issues related to space, science, technology, and communication research and development not mentioned in other subtopics.",
+    "fa": "پژوهش و توسعه در فناوری",
+    "fa_def": "پژوهش و توسعه در فضا، علم، فناوری و ارتباطات.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1799",
+    "layer": "cap",
+    "group": "cap-technology",
+    "src": "CAP-TOP",
+    "en": "Technology, Other",
+    "definition_en": "Issues related to other space, science, technology, and communication research and development",
+    "fa": "دیگر موضوع‌های فناوری",
+    "fa_def": "موضوع‌های دیگر فضا، علم، فناوری و ارتباطات.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1800",
+    "layer": "cap",
+    "group": "cap-foreign-trade",
+    "src": "CAP-TOP",
+    "en": "Foreign Trade, General",
+    "definition_en": "Issues generally related to foreign trade and appropriations for government agencies generally regulating foreign trade",
+    "fa": "کلیات بازرگانی خارجی",
+    "fa_def": "بازرگانی خارجی به‌طور کلی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1802",
+    "layer": "cap",
+    "group": "cap-foreign-trade",
+    "src": "CAP-TOP",
+    "en": "Trade Agreements",
+    "definition_en": "Issues related to trade negotiations, disputes, and agreements, including tax treaties",
+    "fa": "موافقت‌نامه‌های تجاری",
+    "fa_def": "مذاکره‌ها، اختلاف‌ها و موافقت‌نامه‌های تجاری، از جمله پیمان‌های مالیاتی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1803",
+    "layer": "cap",
+    "group": "cap-foreign-trade",
+    "src": "CAP-TOP",
+    "en": "Exports",
+    "definition_en": "Issues related to export regulation, subsidies, promotion, and control",
+    "fa": "صادرات",
+    "fa_def": "تنظیم، یارانه، ترویج و کنترل صادرات.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1804",
+    "layer": "cap",
+    "group": "cap-foreign-trade",
+    "src": "CAP-TOP",
+    "en": "Private Investments",
+    "definition_en": "Issues related to international private business investment and corporate development",
+    "fa": "سرمایه‌گذاری خصوصی خارجی",
+    "fa_def": "سرمایه‌گذاری بین‌المللی بخش خصوصی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1806",
+    "layer": "cap",
+    "group": "cap-foreign-trade",
+    "src": "CAP-TOP",
+    "en": "Competitiveness",
+    "definition_en": "Issues related to productivity of competitiveness of domestic businesses and balance of payments issues",
+    "fa": "رقابت‌پذیری",
+    "fa_def": "بهره‌وری و رقابت‌پذیری بنگاه‌های داخلی و تراز پرداخت‌ها.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1807",
+    "layer": "cap",
+    "group": "cap-foreign-trade",
+    "src": "CAP-TOP",
+    "en": "Tariff & Imports",
+    "definition_en": "Issues related to tariffs and other barriers to imports, import regulation and impact of imports on domestic industries",
+    "fa": "تعرفه و واردات",
+    "fa_def": "تعرفه‌ها و دیگر موانع واردات و تنظیم واردات.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1808",
+    "layer": "cap",
+    "group": "cap-foreign-trade",
+    "src": "CAP-TOP",
+    "en": "Exchange Rates",
+    "definition_en": "Issues related to exchange rate and related issues",
+    "fa": "نرخ ارز",
+    "fa_def": "نرخ ارز.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1899",
+    "layer": "cap",
+    "group": "cap-foreign-trade",
+    "src": "CAP-TOP",
+    "en": "Foreign Trade, Other",
+    "definition_en": "Issues related to other foreign trade policy subtopics",
+    "fa": "دیگر موضوع‌های بازرگانی خارجی",
+    "fa_def": "موضوع‌های دیگر بازرگانی خارجی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1900",
+    "layer": "cap",
+    "group": "cap-international-affairs",
+    "src": "CAP-TOP",
+    "en": "International Affairs, General",
+    "definition_en": "Issues related to general international affairs and foreign aid, including appropriations for general government foreign affairs agencies",
+    "fa": "کلیات امور بین‌الملل",
+    "fa_def": "امور بین‌الملل و کمک خارجی به‌طور کلی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1901",
+    "layer": "cap",
+    "group": "cap-international-affairs",
+    "src": "CAP-TOP",
+    "en": "Foreign Aid",
+    "definition_en": "Issues related to foreign aid not directly targeting at increasing international development",
+    "fa": "کمک خارجی",
+    "fa_def": "کمک خارجی، جز کمک توسعه‌ای.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1902",
+    "layer": "cap",
+    "group": "cap-international-affairs",
+    "src": "CAP-TOP",
+    "en": "Resources Exploitation",
+    "definition_en": "Issues related to international resources exploitation and resources agreements, law of the sea and international ocean conservation efforts",
+    "fa": "بهره‌برداری از منابع بین‌المللی",
+    "fa_def": "بهره‌برداری از منابع بین‌المللی، حقوق دریاها و توافق‌های منابع.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1905",
+    "layer": "cap",
+    "group": "cap-international-affairs",
+    "src": "CAP-TOP",
+    "en": "Developing Countries",
+    "definition_en": "Issues related specifically to developing countries (for Financial Issues see 1906)",
+    "fa": "کشورهای در حال توسعه",
+    "fa_def": "امور کشورهای در حال توسعه.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1906",
+    "layer": "cap",
+    "group": "cap-international-affairs",
+    "src": "CAP-TOP",
+    "en": "International Finance",
+    "definition_en": "Issues related to international finance and economic development, the World Bank and International Monetary Fund, regional development banks, sovereign debt and implications for international lending institutions",
+    "fa": "مالیه‌ی بین‌المللی",
+    "fa_def": "مالیه و توسعه‌ی اقتصادی بین‌المللی، بانک جهانی و صندوق بین‌المللی پول.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1910",
+    "layer": "cap",
+    "group": "cap-international-affairs",
+    "src": "CAP-TOP",
+    "en": "Western Europe",
+    "definition_en": "Issues related to Western Europe and the European Union",
+    "fa": "اروپای غربی",
+    "fa_def": "اروپای غربی و اتحادیه‌ی اروپا.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1921",
+    "layer": "cap",
+    "group": "cap-international-affairs",
+    "src": "CAP-TOP",
+    "en": "Specific Country",
+    "definition_en": "Issues related specifically to a foreign country or region not codable using other codes, assessment of political issues in other countries, relations between individual countries",
+    "fa": "کشوری مشخص",
+    "fa_def": "امور مربوط به یک کشور یا منطقه‌ی خارجی مشخص.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1925",
+    "layer": "cap",
+    "group": "cap-international-affairs",
+    "src": "CAP-TOP",
+    "en": "Human Rights",
+    "definition_en": "Issues related to human rights, human rights violations, human rights treaties and conventions, UN reports on human rights, crimes associated with genocide or crimes against humanity",
+    "fa": "حقوق بشر",
+    "fa_def": "حقوق بشر، نقض آن و معاهده‌های حقوق بشری.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1926",
+    "layer": "cap",
+    "group": "cap-international-affairs",
+    "src": "CAP-TOP",
+    "en": "Organizations",
+    "definition_en": "International organizations, NGOs, the United Nations, International Red Cross, UNESCO, International Olympic Committee, International Criminal Court",
+    "fa": "سازمان‌های بین‌المللی",
+    "fa_def": "سازمان‌های بین‌المللی و نهادهای غیردولتی، سازمان ملل و صلیب سرخ.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1927",
+    "layer": "cap",
+    "group": "cap-international-affairs",
+    "src": "CAP-TOP",
+    "en": "Terrorism",
+    "definition_en": "Issues related to international terrorism, hijacking, and acts of piracy in other countries, efforts to fight international terrorism, international legal mechanisms to combat terrorism",
+    "fa": "تروریسم",
+    "fa_def": "تروریسم بین‌المللی، هواپیماربایی و دزدی دریایی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1929",
+    "layer": "cap",
+    "group": "cap-international-affairs",
+    "src": "CAP-TOP",
+    "en": "Diplomats",
+    "definition_en": "Issues related to diplomats, diplomacy, embassies, citizens abroad, foreign diplomats in the country, visas and passports",
+    "fa": "دیپلمات‌ها",
+    "fa_def": "دیپلماسی، سفارت‌خانه‌ها و شهروندان خارج از کشور.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:1999",
+    "layer": "cap",
+    "group": "cap-international-affairs",
+    "src": "CAP-TOP",
+    "en": "International Affairs, Other",
+    "definition_en": "Issues related to other international affairs policy subtopics",
+    "fa": "دیگر موضوع‌های امور بین‌الملل",
+    "fa_def": "موضوع‌های دیگر امور بین‌الملل.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:2000",
+    "layer": "cap",
+    "group": "cap-government-operations",
+    "src": "CAP-TOP",
+    "en": "Government Operations, General",
+    "definition_en": "Issues related to general government operations, including appropriations for multiple government agencies",
+    "fa": "کلیات امور اداری دولت",
+    "fa_def": "امور اداری دولت به‌طور کلی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:2001",
+    "layer": "cap",
+    "group": "cap-government-operations",
+    "src": "CAP-TOP",
+    "en": "Intergovernmental Relations",
+    "definition_en": "Issues related to intergovernmental relations, local government issues",
+    "fa": "روابط میان سطوح حکومت",
+    "fa_def": "روابط میان سطوح حکومت و امور حکومت‌های محلی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:2002",
+    "layer": "cap",
+    "group": "cap-government-operations",
+    "src": "CAP-TOP",
+    "en": "Bureaucracy",
+    "definition_en": "Issues related to general government efficiencies and bureaucratic oversight",
+    "fa": "دیوان‌سالاری",
+    "fa_def": "کارایی دولت و نظارت بر دستگاه اداری.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:2003",
+    "layer": "cap",
+    "group": "cap-government-operations",
+    "src": "CAP-TOP",
+    "en": "Postal Service",
+    "definition_en": "Issues related to postal services, regulation of mail, and post-civil service",
+    "fa": "پست",
+    "fa_def": "خدمات پستی و تنظیم آن.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:2004",
+    "layer": "cap",
+    "group": "cap-government-operations",
+    "src": "CAP-TOP",
+    "en": "Employees",
+    "definition_en": "Issues related to civil employees not mentioned in other subtopics, government pensions and general civil service issues",
+    "fa": "کارکنان دولت",
+    "fa_def": "کارکنان دولت، مستمری و مزایای آن‌ها.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:2005",
+    "layer": "cap",
+    "group": "cap-government-operations",
+    "src": "CAP-TOP",
+    "en": "Appointments",
+    "definition_en": "Issues related to nominations and appointments not mentioned elsewhere",
+    "fa": "انتصاب‌ها",
+    "fa_def": "انتصاب‌ها و نامزدی‌هایی که جای دیگری نیامده‌اند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:2006",
+    "layer": "cap",
+    "group": "cap-government-operations",
+    "src": "CAP-TOP",
+    "en": "Currency",
+    "definition_en": "Issues related the currency, national mints, medals, and commemorative coins",
+    "fa": "پول ملی",
+    "fa_def": "پول ملی، ضرب سکه و نشان‌ها.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:2007",
+    "layer": "cap",
+    "group": "cap-government-operations",
+    "src": "CAP-TOP",
+    "en": "Procurement & Contractors",
+    "definition_en": "Issues related to government procurement, government contractors, contractor and procurement fraud, and procurement processes and systems",
+    "fa": "تدارکات دولتی",
+    "fa_def": "خرید دولتی و پیمانکاران دولت.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:2008",
+    "layer": "cap",
+    "group": "cap-government-operations",
+    "src": "CAP-TOP",
+    "en": "Property Management",
+    "definition_en": "Issues related to government property management, construction, and regulation",
+    "fa": "مدیریت اموال دولتی",
+    "fa_def": "مدیریت، ساخت و تنظیم اموال دولتی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:2009",
+    "layer": "cap",
+    "group": "cap-government-operations",
+    "src": "CAP-TOP",
+    "en": "Tax Administration",
+    "definition_en": "Issues related to tax administration, enforcement, and auditing for both individuals and corporations",
+    "fa": "اداره‌ی مالیات",
+    "fa_def": "وصول، اجرا و حسابرسی مالیات اشخاص و شرکت‌ها.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:2010",
+    "layer": "cap",
+    "group": "cap-government-operations",
+    "src": "CAP-TOP",
+    "en": "Scandals",
+    "definition_en": "Issues related to public scandal and impeachment",
+    "fa": "رسوایی‌ها",
+    "fa_def": "رسوایی‌های عمومی و برکناری مقام‌ها.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:2011",
+    "layer": "cap",
+    "group": "cap-government-operations",
+    "src": "CAP-TOP",
+    "en": "Branch Relations",
+    "definition_en": "Issues related to government branch relations, administrative issues, and constitutional reforms",
+    "fa": "روابط قوا",
+    "fa_def": "روابط میان قوا، امور اداری و اصلاح قانون اساسی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:2012",
+    "layer": "cap",
+    "group": "cap-government-operations",
+    "src": "CAP-TOP",
+    "en": "Political Campaigns",
+    "definition_en": "Issues related to the regulation of political campaigns, campaign finance, political advertising and voter registration",
+    "fa": "مبارزه‌های انتخاباتی",
+    "fa_def": "تنظیم مبارزه‌های انتخاباتی، هزینه‌ی انتخابات و تبلیغات سیاسی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:2013",
+    "layer": "cap",
+    "group": "cap-government-operations",
+    "src": "CAP-TOP",
+    "en": "Census & Statistics",
+    "definition_en": "Issues related to census and statistics collection by government",
+    "fa": "سرشماری و آمار",
+    "fa_def": "سرشماری و گردآوری آمار به دست دولت.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:2014",
+    "layer": "cap",
+    "group": "cap-government-operations",
+    "src": "CAP-TOP",
+    "en": "Capital City",
+    "definition_en": "Issues related to the capital city",
+    "fa": "پایتخت",
+    "fa_def": "پایتخت.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:2015",
+    "layer": "cap",
+    "group": "cap-government-operations",
+    "src": "CAP-TOP",
+    "en": "Claims against the government",
+    "definition_en": "Issues related to claims against the government, compensation for the victims of terrorist attacks, compensation policies without other substantive provisions",
+    "fa": "دعاوی علیه دولت",
+    "fa_def": "دعاوی علیه دولت و جبران خسارت قربانیان.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:2030",
+    "layer": "cap",
+    "group": "cap-government-operations",
+    "src": "CAP-TOP",
+    "en": "National Holidays",
+    "definition_en": "Issues related to national holidays and their observation",
+    "fa": "تعطیلات ملی",
+    "fa_def": "تعطیلات و روزهای ملی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:2099",
+    "layer": "cap",
+    "group": "cap-government-operations",
+    "src": "CAP-TOP",
+    "en": "Government Operations, Other",
+    "definition_en": "Issues related to other government operations subtopics",
+    "fa": "دیگر موضوع‌های امور اداری دولت",
+    "fa_def": "موضوع‌های دیگر امور اداری دولت.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:2100",
+    "layer": "cap",
+    "group": "cap-public-lands",
+    "src": "CAP-TOP",
+    "en": "Public Lands, General",
+    "definition_en": "Issues related to general public lands, water management, and territorial issues",
+    "fa": "کلیات زمین‌ها و منابع عمومی",
+    "fa_def": "زمین‌های عمومی، مدیریت آب و مسائل سرزمینی به‌طور کلی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:2101",
+    "layer": "cap",
+    "group": "cap-public-lands",
+    "src": "CAP-TOP",
+    "en": "National Parks",
+    "definition_en": "Issues related to national parks, memorials, historic sites, and recreation, including the management and staffing of cultural sites",
+    "fa": "پارک‌های ملی",
+    "fa_def": "پارک‌های ملی، یادمان‌ها، مکان‌های تاریخی و تفریح.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:2102",
+    "layer": "cap",
+    "group": "cap-public-lands",
+    "src": "CAP-TOP",
+    "en": "Indigenous Affairs",
+    "definition_en": "Issues related to indigenous affairs, indigenous lands, and assistance to indigenous people",
+    "fa": "امور مردمان بومی",
+    "fa_def": "امور مردمان بومی، زمین‌هایشان و کمک به آن‌ها.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:2103",
+    "layer": "cap",
+    "group": "cap-public-lands",
+    "src": "CAP-TOP",
+    "en": "Public Lands",
+    "definition_en": "Issues related to natural resources, public lands, and forest management, including forest fires, livestock grazing",
+    "fa": "زمین‌های عمومی",
+    "fa_def": "منابع طبیعی، زمین‌های عمومی و مدیریت جنگل.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:2104",
+    "layer": "cap",
+    "group": "cap-public-lands",
+    "src": "CAP-TOP",
+    "en": "Water Resources",
+    "definition_en": "Issues related to water resources, water resource development and civil works, flood control, and research",
+    "fa": "منابع آب",
+    "fa_def": "منابع آب، طرح‌های آبی و مهار سیلاب.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:2105",
+    "layer": "cap",
+    "group": "cap-public-lands",
+    "src": "CAP-TOP",
+    "en": "Dependencies & Territories",
+    "definition_en": "Issues related to territorial and dependency issues and devolution",
+    "fa": "قلمروهای وابسته و واگذاری اختیار",
+    "fa_def": "قلمروهای وابسته و واگذاری اختیار به مناطق.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:2199",
+    "layer": "cap",
+    "group": "cap-public-lands",
+    "src": "CAP-TOP",
+    "en": "Public Lands, Other",
+    "definition_en": "Issues related to other public lands policy subtopics",
+    "fa": "دیگر موضوع‌های زمین‌ها و منابع عمومی",
+    "fa_def": "موضوع‌های دیگر زمین‌ها و منابع عمومی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "cap:2300",
+    "layer": "cap",
+    "group": "cap-culture",
+    "src": "CAP-TOP",
+    "en": "Culture, General",
+    "definition_en": "Issues related to general cultural policy issues",
+    "fa": "فرهنگ",
+    "fa_def": "سیاست فرهنگی به‌طور کلی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j1",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Cabinet appointment veto (ethnic / specific organization)",
+    "definition_en": "Rules mandating that, in order to be appointed, the cabinet needs the approval of the given minority group or of a specific party or former warring faction purporting to represent the given minority group.",
+    "fa": "هیات وزیران: حق وتوی اقلیت بر انتصاب",
+    "fa_def": "انتصاب هیات وزیران به تایید گروه اقلیت، یا حزب یا گروهی که خود را نماینده‌ی آن می‌داند، نیاز دارد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j2",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of state appointment veto (ethnic / specific organization)",
+    "definition_en": "Rules mandating that, in order to be appointed, the head of state needs the approval of the given minority group or of a specific party or former warring faction purporting to represent the given minority group.",
+    "fa": "رئیس کشور: حق وتوی اقلیت بر انتصاب",
+    "fa_def": "انتصاب منصب رئیس کشور به تایید گروه اقلیت، یا حزب یا گروهی که خود را نماینده‌ی آن می‌داند، نیاز دارد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j3",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of government appointment veto (ethnic / specific organization)",
+    "definition_en": "Rules mandating that, in order to be appointed, the head of government needs the approval of the given minority group or of a specific party or former warring faction purporting to represent the given minority group.",
+    "fa": "رئیس دولت: حق وتوی اقلیت بر انتصاب",
+    "fa_def": "انتصاب منصب رئیس دولت به تایید گروه اقلیت، یا حزب یا گروهی که خود را نماینده‌ی آن می‌داند، نیاز دارد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j4",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of state deputy appointment veto (ethnic / specific organization)",
+    "definition_en": "Rules mandating that, in order to be appointed, the head of state deputy needs the approval of the given minority group or of a specific party or former warring faction purporting to represent the given minority group.",
+    "fa": "معاون رئیس کشور: حق وتوی اقلیت بر انتصاب",
+    "fa_def": "انتصاب منصب معاون رئیس کشور به تایید گروه اقلیت، یا حزب یا گروهی که خود را نماینده‌ی آن می‌داند، نیاز دارد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j5",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of government deputy appointment veto (ethnic / specific organization)",
+    "definition_en": "Rules mandating that, in order to be appointed, the head of government deputy needs the approval of the given minority group or of a specific party or former warring faction purporting to represent the given minority group.",
+    "fa": "معاون رئیس دولت: حق وتوی اقلیت بر انتصاب",
+    "fa_def": "انتصاب منصب معاون رئیس دولت به تایید گروه اقلیت، یا حزب یا گروهی که خود را نماینده‌ی آن می‌داند، نیاز دارد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j6",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Lower house speaker appointment veto (ethnic / specific organization)",
+    "definition_en": "Rules mandating that, in order to be appointed, the lower house speaker needs the approval of the given minority group or of a specific party or former warring faction purporting to represent the given minority group.",
+    "fa": "رئیس مجلس نخست: حق وتوی اقلیت بر انتصاب",
+    "fa_def": "انتصاب منصب رئیس مجلس نخست به تایید گروه اقلیت، یا حزب یا گروهی که خود را نماینده‌ی آن می‌داند، نیاز دارد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j7",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Upper house speaker appointment veto (ethnic / specific organization)",
+    "definition_en": "Rules mandating that, in order to be appointed, the upper house speaker needs the approval of the given minority group or of a specific party or former warring faction purporting to represent the given minority group.",
+    "fa": "رئیس مجلس دوم: حق وتوی اقلیت بر انتصاب",
+    "fa_def": "انتصاب منصب رئیس مجلس دوم به تایید گروه اقلیت، یا حزب یا گروهی که خود را نماینده‌ی آن می‌داند، نیاز دارد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j8",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Cabinet quotas (ethnic / specific organization)",
+    "definition_en": "Quotas mandating cabinet seats to be awarded to the given minority group or to a specific party or former warring faction purporting to represent the given minority group.",
+    "fa": "هیات وزیران: سهمیه‌ی اقلیت",
+    "fa_def": "هیات وزیران، یا سهمی از آن، به گروه اقلیت یا نماینده‌ی آن سپرده می‌شود.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j9",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of state quotas / linkage (ethnic / specific organization)",
+    "definition_en": "Quotas mandating that the head of state position should be taken by the given minority group or by a specific party or former warring faction purporting to represent the given minority group or requirements mandating the head of state position to be split between them.",
+    "fa": "رئیس کشور: سهمیه‌ی اقلیت",
+    "fa_def": "منصب رئیس کشور، یا سهمی از آن، به گروه اقلیت یا نماینده‌ی آن سپرده می‌شود.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j10",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of government quotas / linkage (ethnic / specific organization)",
+    "definition_en": "Quotas mandating that the head of government position should be taken by the given minority group or by a specific party or former warring faction purporting to represent the given minority group or requirements mandating the head of government position to be split between them.",
+    "fa": "رئیس دولت: سهمیه‌ی اقلیت",
+    "fa_def": "منصب رئیس دولت، یا سهمی از آن، به گروه اقلیت یا نماینده‌ی آن سپرده می‌شود.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j11",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of state deputy quotas / linkage (ethnic / specific organization) (ethnic / specific organization)",
+    "definition_en": "Quotas mandating that the head of state deputy position should be taken by the given minority group or by a specific party or former warring faction purporting to represent the given minority group or requirements mandating the head of state deputy position to be split between them.",
+    "fa": "معاون رئیس کشور: سهمیه‌ی اقلیت",
+    "fa_def": "منصب معاون رئیس کشور، یا سهمی از آن، به گروه اقلیت یا نماینده‌ی آن سپرده می‌شود.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j12",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of government deputy quotas / linkage (ethnic / specific organization)",
+    "definition_en": "Quotas mandating that the head of government deputy position should be taken by the given minority group or by a specific party or former warring faction purporting to represent the given minority group or requirements mandating the head of government deputy position to be split between them.",
+    "fa": "معاون رئیس دولت: سهمیه‌ی اقلیت",
+    "fa_def": "منصب معاون رئیس دولت، یا سهمی از آن، به گروه اقلیت یا نماینده‌ی آن سپرده می‌شود.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j13",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Lower house speaker quotas / linkage (ethnic / specific organization)",
+    "definition_en": "Quotas mandating that the lower house speaker position should be taken by the given minority group or by a specific party or former warring faction purporting to represent the given minority group or requirements mandating the lower house speaker position to be split between them.",
+    "fa": "رئیس مجلس نخست: سهمیه‌ی اقلیت",
+    "fa_def": "منصب رئیس مجلس نخست، یا سهمی از آن، به گروه اقلیت یا نماینده‌ی آن سپرده می‌شود.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j14",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Upper house speaker quotas / linkage (ethnic / specific organization)",
+    "definition_en": "Quotas mandating that the upper house speaker position should be taken by the given minority group or by a specific party or former warring faction purporting to represent the given minority group or requirements mandating the upper house speaker position to be split between them.",
+    "fa": "رئیس مجلس دوم: سهمیه‌ی اقلیت",
+    "fa_def": "منصب رئیس مجلس دوم، یا سهمی از آن، به گروه اقلیت یا نماینده‌ی آن سپرده می‌شود.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j15",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of state rotation rules (ethnic / specific organization)",
+    "definition_en": "Rules requiring that the head of state position has to rotate between representatives of the given minority group (and others) or between a specific party or former warring faction purporting to represent the given minority group (and others).",
+    "fa": "رئیس کشور: گردش میان گروه‌ها",
+    "fa_def": "منصب رئیس کشور باید میان نمایندگان گروه اقلیت و دیگران بچرخد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j16",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of government rotation rules (ethnic / specific organization)",
+    "definition_en": "Rules requiring that the head of government position has to rotate between representatives of the given minority group (and others) or between a specific party or former warring faction purporting to represent the given minority group (and others).",
+    "fa": "رئیس دولت: گردش میان گروه‌ها",
+    "fa_def": "منصب رئیس دولت باید میان نمایندگان گروه اقلیت و دیگران بچرخد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j17",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of state deputy rotation rules (ethnic / specific organization) (ethnic / specific organization)",
+    "definition_en": "Rules requiring that the head of state deputy position has to rotate between representatives of the given minority group (and others) or between a specific party or former warring faction purporting to represent the given minority group (and others).",
+    "fa": "معاون رئیس کشور: گردش میان گروه‌ها",
+    "fa_def": "منصب معاون رئیس کشور باید میان نمایندگان گروه اقلیت و دیگران بچرخد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j18",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of government deputy rotation rules (ethnic / specific organization)",
+    "definition_en": "Rules requiring that the head of government deputy position has to rotate between representatives of the given minority group (and others) or between a specific party or former warring faction purporting to represent the given minority group (and others).",
+    "fa": "معاون رئیس دولت: گردش میان گروه‌ها",
+    "fa_def": "منصب معاون رئیس دولت باید میان نمایندگان گروه اقلیت و دیگران بچرخد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j19",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Lower house speaker rotation rules (ethnic / specific organization)",
+    "definition_en": "Rules requiring that the lower house speaker position has to rotate between representatives of the given minority group (and others) or between a specific party or former warring faction purporting to represent the given minority group (and others).",
+    "fa": "رئیس مجلس نخست: گردش میان گروه‌ها",
+    "fa_def": "منصب رئیس مجلس نخست باید میان نمایندگان گروه اقلیت و دیگران بچرخد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j20",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Upper house speaker rotation rules (ethnic / specific organization)",
+    "definition_en": "Rules requiring that the upper house speaker position has to rotate between representatives of the given minority group (and others) or between a specific party or former warring faction purporting to represent the given minority group (and others).",
+    "fa": "رئیس مجلس دوم: گردش میان گروه‌ها",
+    "fa_def": "منصب رئیس مجلس دوم باید میان نمایندگان گروه اقلیت و دیگران بچرخد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j21",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Cabinet appointment supermajority requirements",
+    "definition_en": "Requirement that the cabinet obtain a supermajority in popular or parliamentary elections in order to be appointed",
+    "fa": "هیات وزیران: انتصاب با اکثریت ویژه",
+    "fa_def": "انتصاب هیات وزیران به اکثریت ویژه در انتخابات یا در مجلس نیاز دارد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j22",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of state appointment supermajority requirements",
+    "definition_en": "Requirement that candidates for the head of state position obtain a supermajority in popular or parliamentary elections in order to be appointed.",
+    "fa": "رئیس کشور: انتصاب با اکثریت ویژه",
+    "fa_def": "انتصاب منصب رئیس کشور به اکثریت ویژه در انتخابات یا در مجلس نیاز دارد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j23",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of government appointment supermajority requirements",
+    "definition_en": "Requirement that candidates for the head of government position obtain a supermajority in popular or parliamentary elections in order to be appointed.",
+    "fa": "رئیس دولت: انتصاب با اکثریت ویژه",
+    "fa_def": "انتصاب منصب رئیس دولت به اکثریت ویژه در انتخابات یا در مجلس نیاز دارد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j24",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of state deputy appointment supermajority requirements",
+    "definition_en": "Requirement that candidates for the head of state deputy position obtain a supermajority in popular or parliamentary elections in order to be appointed.",
+    "fa": "معاون رئیس کشور: انتصاب با اکثریت ویژه",
+    "fa_def": "انتصاب منصب معاون رئیس کشور به اکثریت ویژه در انتخابات یا در مجلس نیاز دارد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j25",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of government deputy appointment supermajority requirements",
+    "definition_en": "Requirement that candidates for the head of government deputy position obtain a supermajority in popular or parliamentary elections in order to be appointed.",
+    "fa": "معاون رئیس دولت: انتصاب با اکثریت ویژه",
+    "fa_def": "انتصاب منصب معاون رئیس دولت به اکثریت ویژه در انتخابات یا در مجلس نیاز دارد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j26",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Lower house speaker appointment supermajority requirements",
+    "definition_en": "Requirement that candidates for the lower house speaker position obtain a supermajority in popular or parliamentary elections in order to be appointed.",
+    "fa": "رئیس مجلس نخست: انتصاب با اکثریت ویژه",
+    "fa_def": "انتصاب منصب رئیس مجلس نخست به اکثریت ویژه در انتخابات یا در مجلس نیاز دارد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j27",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Upper house speaker appointment supermajority requirements",
+    "definition_en": "Requirement that candidates for the upper house speaker position obtain a supermajority in popular or parliamentary elections in order to be appointed.",
+    "fa": "رئیس مجلس دوم: انتصاب با اکثریت ویژه",
+    "fa_def": "انتصاب منصب رئیس مجلس دوم به اکثریت ویژه در انتخابات یا در مجلس نیاز دارد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j28",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Cabinet quota based on vote thresholds",
+    "definition_en": "Requirement that parties obtaining vote shares above a certain threshold have the right to be included in the cabinet.",
+    "fa": "هیات وزیران: سهم حزب‌های بالای آستانه‌ی رای",
+    "fa_def": "حزب‌هایی که بیش از آستانه‌ی معینی رای بیاورند حق دارند در هیات وزیران سهم داشته باشند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j29",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of state quota based on vote thresholds",
+    "definition_en": "Requirement that parties obtaining vote shares above a certain threshold have the right to be included in the head of state position.",
+    "fa": "رئیس کشور: سهم حزب‌های بالای آستانه‌ی رای",
+    "fa_def": "حزب‌هایی که بیش از آستانه‌ی معینی رای بیاورند حق دارند در منصب رئیس کشور سهم داشته باشند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j30",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of government quota based on vote thresholds",
+    "definition_en": "Requirement that parties obtaining vote shares above a certain threshold have the right to be included in the head of government position.",
+    "fa": "رئیس دولت: سهم حزب‌های بالای آستانه‌ی رای",
+    "fa_def": "حزب‌هایی که بیش از آستانه‌ی معینی رای بیاورند حق دارند در منصب رئیس دولت سهم داشته باشند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j31",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of state deputy quota based on vote thresholds",
+    "definition_en": "Requirement that parties obtaining vote shares above a certain threshold have the right to be included in the head of state deputy position.",
+    "fa": "معاون رئیس کشور: سهم حزب‌های بالای آستانه‌ی رای",
+    "fa_def": "حزب‌هایی که بیش از آستانه‌ی معینی رای بیاورند حق دارند در منصب معاون رئیس کشور سهم داشته باشند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j32",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of government deputy quota based on vote thresholds",
+    "definition_en": "Requirement that parties obtaining vote shares above a certain threshold have the right to be included in the head of government deputy position.",
+    "fa": "معاون رئیس دولت: سهم حزب‌های بالای آستانه‌ی رای",
+    "fa_def": "حزب‌هایی که بیش از آستانه‌ی معینی رای بیاورند حق دارند در منصب معاون رئیس دولت سهم داشته باشند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j33",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Lower house speaker quota based on vote thresholds",
+    "definition_en": "Requirement that parties obtaining vote shares above a certain threshold have the right to be included in the lower house speaker position.",
+    "fa": "رئیس مجلس نخست: سهم حزب‌های بالای آستانه‌ی رای",
+    "fa_def": "حزب‌هایی که بیش از آستانه‌ی معینی رای بیاورند حق دارند در منصب رئیس مجلس نخست سهم داشته باشند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j34",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Upper house speaker quota based on vote thresholds",
+    "definition_en": "Requirement that parties obtaining vote shares above a certain threshold have the right to be included in the upper house speaker position.",
+    "fa": "رئیس مجلس دوم: سهم حزب‌های بالای آستانه‌ی رای",
+    "fa_def": "حزب‌هایی که بیش از آستانه‌ی معینی رای بیاورند حق دارند در منصب رئیس مجلس دوم سهم داشته باشند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j35",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of state rotation rules based on vote thresholds",
+    "definition_en": "Requirement that parties obtaining vote shares above a certain threshold have the right to be included in a rotating head of state position.",
+    "fa": "رئیس کشور: گردش میان حزب‌های بالای آستانه‌ی رای",
+    "fa_def": "حزب‌هایی که بیش از آستانه‌ی معینی رای بیاورند در گردش منصب رئیس کشور شریک‌اند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j36",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of government rotation rules based on thresholds",
+    "definition_en": "Requirement that parties obtaining vote shares above a certain threshold have the right to be included in a rotating head of government position.",
+    "fa": "رئیس دولت: گردش میان حزب‌های بالای آستانه‌ی رای",
+    "fa_def": "حزب‌هایی که بیش از آستانه‌ی معینی رای بیاورند در گردش منصب رئیس دولت شریک‌اند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j37",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of state deputy rotation rules based on thresholds",
+    "definition_en": "Requirement that parties obtaining vote shares above a certain threshold have the right to be included in a rotating head of state deputy position.",
+    "fa": "معاون رئیس کشور: گردش میان حزب‌های بالای آستانه‌ی رای",
+    "fa_def": "حزب‌هایی که بیش از آستانه‌ی معینی رای بیاورند در گردش منصب معاون رئیس کشور شریک‌اند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j38",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of government deputy rotation rules based on thresholds",
+    "definition_en": "Requirement that parties obtaining vote shares above a certain threshold have the right to be included in a rotating head of government deputy position.",
+    "fa": "معاون رئیس دولت: گردش میان حزب‌های بالای آستانه‌ی رای",
+    "fa_def": "حزب‌هایی که بیش از آستانه‌ی معینی رای بیاورند در گردش منصب معاون رئیس دولت شریک‌اند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j39",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Lower house speaker rotation rules based on thresholds",
+    "definition_en": "Requirement that parties obtaining vote shares above a certain threshold have the right to be included in a rotating lower house speaker position.",
+    "fa": "رئیس مجلس نخست: گردش میان حزب‌های بالای آستانه‌ی رای",
+    "fa_def": "حزب‌هایی که بیش از آستانه‌ی معینی رای بیاورند در گردش منصب رئیس مجلس نخست شریک‌اند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j40",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Upper house speaker rotation rules based on thresholds",
+    "definition_en": "Requirement that parties obtaining vote shares above a certain threshold have the right to be included in a rotating upper house speaker position.",
+    "fa": "رئیس مجلس دوم: گردش میان حزب‌های بالای آستانه‌ی رای",
+    "fa_def": "حزب‌هایی که بیش از آستانه‌ی معینی رای بیاورند در گردش منصب رئیس مجلس دوم شریک‌اند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j41",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Cabinet appointment vote spread requirements (territorial)",
+    "definition_en": "Requirement that candidates for the cabinet or the cabinet in full obtain a certain minimum vote share in a certain percentage of administrative subunits in which the given minority group settles.",
+    "fa": "هیات وزیران: شرط پراکندگی سرزمینی رای",
+    "fa_def": "نامزد هیات وزیران باید در بخش معینی از واحدهای سرزمینی محل سکونت گروه اقلیت حداقلی از رای را به دست آورد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j42",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of state appointment vote spread requirements (territorial)",
+    "definition_en": "Requirement that candidates for the head of state position obtain a certain minimum vote share in a certain percentage of administrative subunits in which the given minority group settles.",
+    "fa": "رئیس کشور: شرط پراکندگی سرزمینی رای",
+    "fa_def": "نامزد منصب رئیس کشور باید در بخش معینی از واحدهای سرزمینی محل سکونت گروه اقلیت حداقلی از رای را به دست آورد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j43",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of government appointment vote spread requirements (territorial)",
+    "definition_en": "Requirement that candidates for the head of government position obtain a certain minimum vote share in a certain percentage of administrative subunits in which the given minority group settles.",
+    "fa": "رئیس دولت: شرط پراکندگی سرزمینی رای",
+    "fa_def": "نامزد منصب رئیس دولت باید در بخش معینی از واحدهای سرزمینی محل سکونت گروه اقلیت حداقلی از رای را به دست آورد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j44",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of state deputy appointment vote spread requirements (territorial)",
+    "definition_en": "Requirement that candidates for the head of state deputy position obtain a certain minimum vote share in a certain percentage of administrative subunits in which the given minority group settles.",
+    "fa": "معاون رئیس کشور: شرط پراکندگی سرزمینی رای",
+    "fa_def": "نامزد منصب معاون رئیس کشور باید در بخش معینی از واحدهای سرزمینی محل سکونت گروه اقلیت حداقلی از رای را به دست آورد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j45",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of government deputy appointment vote spread requirements (territorial)",
+    "definition_en": "Requirement that candidates for the head of government deputy position obtain a certain minimum vote share in a certain percentage of administrative subunits in which the given minority group settles.",
+    "fa": "معاون رئیس دولت: شرط پراکندگی سرزمینی رای",
+    "fa_def": "نامزد منصب معاون رئیس دولت باید در بخش معینی از واحدهای سرزمینی محل سکونت گروه اقلیت حداقلی از رای را به دست آورد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j46",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Lower house speaker appointment vote spread requirements (territorial)",
+    "definition_en": "Requirement that candidates for the lower house speaker position obtain a certain minimum vote share in a certain percentage of administrative subunits in which the given minority group settles.",
+    "fa": "رئیس مجلس نخست: شرط پراکندگی سرزمینی رای",
+    "fa_def": "نامزد منصب رئیس مجلس نخست باید در بخش معینی از واحدهای سرزمینی محل سکونت گروه اقلیت حداقلی از رای را به دست آورد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j47",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Upper house speaker appointment vote spread requirements (territorial)",
+    "definition_en": "Requirement that candidates for the upper house speaker position obtain a certain minimum vote share in a certain percentage of administrative subunits in which the given minority group settles.",
+    "fa": "رئیس مجلس دوم: شرط پراکندگی سرزمینی رای",
+    "fa_def": "نامزد منصب رئیس مجلس دوم باید در بخش معینی از واحدهای سرزمینی محل سکونت گروه اقلیت حداقلی از رای را به دست آورد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j48",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Cabinet quotas (territorial)",
+    "definition_en": "Quotas mandating cabinet seats to be awarded to territorial subunits in which the given minority group settles.",
+    "fa": "هیات وزیران: سهمیه‌ی سرزمینی",
+    "fa_def": "هیات وزیران، یا سهمی از آن، به واحدهای سرزمینی محل سکونت گروه اقلیت سپرده می‌شود.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j49",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of state quotas / linkage (territorial)",
+    "definition_en": "Quotas mandating that the head of state position should be taken by territorial subunits in which the given minority group settles or requirements mandating the head of state position to be split between such subunits.",
+    "fa": "رئیس کشور: سهمیه‌ی سرزمینی",
+    "fa_def": "منصب رئیس کشور، یا سهمی از آن، به واحدهای سرزمینی محل سکونت گروه اقلیت سپرده می‌شود.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j50",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of government quotas / linkage (territorial)",
+    "definition_en": "Quotas mandating that the head of government position should be taken by territorial subunits in which the given minority group settles or requirements mandating the head of state position to be split between such subunits.",
+    "fa": "رئیس دولت: سهمیه‌ی سرزمینی",
+    "fa_def": "منصب رئیس دولت، یا سهمی از آن، به واحدهای سرزمینی محل سکونت گروه اقلیت سپرده می‌شود.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j51",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of state deputy quotas / linkage (territorial)",
+    "definition_en": "Quotas mandating that the head of state deputy position should be taken by territorial subunits in which the given minority group settles or requirements mandating the head of state position to be split between such subunits",
+    "fa": "معاون رئیس کشور: سهمیه‌ی سرزمینی",
+    "fa_def": "منصب معاون رئیس کشور، یا سهمی از آن، به واحدهای سرزمینی محل سکونت گروه اقلیت سپرده می‌شود.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j52",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of government deputy quotas / linkage (territorial)",
+    "definition_en": "Quotas mandating that the head of government deputy position should be taken by territorial subunits in which the given minority group settles or requirements mandating the head of state position to be split between such subunits",
+    "fa": "معاون رئیس دولت: سهمیه‌ی سرزمینی",
+    "fa_def": "منصب معاون رئیس دولت، یا سهمی از آن، به واحدهای سرزمینی محل سکونت گروه اقلیت سپرده می‌شود.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j53",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Lower house speaker quotas / linkage (territorial)",
+    "definition_en": "Quotas mandating that the lower house speaker position should be taken by territorial subunits in which the given minority group settles or requirements mandating the head of state position to be split between such subunits.",
+    "fa": "رئیس مجلس نخست: سهمیه‌ی سرزمینی",
+    "fa_def": "منصب رئیس مجلس نخست، یا سهمی از آن، به واحدهای سرزمینی محل سکونت گروه اقلیت سپرده می‌شود.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j54",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Upper house speaker quotas / linkage (territorial)",
+    "definition_en": "Quotas mandating that the upper house speaker position should be taken by territorial subunits in which the given minority group settles or requirements mandating the head of state position to be split between such subunits.",
+    "fa": "رئیس مجلس دوم: سهمیه‌ی سرزمینی",
+    "fa_def": "منصب رئیس مجلس دوم، یا سهمی از آن، به واحدهای سرزمینی محل سکونت گروه اقلیت سپرده می‌شود.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j55",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of state rotation rules (territorial)",
+    "definition_en": "Rules requiring that the head of state position has to rotate between territorial subunits in which the given minority group settles.",
+    "fa": "رئیس کشور: گردش سرزمینی",
+    "fa_def": "منصب رئیس کشور باید میان واحدهای سرزمینی، از جمله محل سکونت گروه اقلیت، بچرخد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j56",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of government rotation rules (territorial)",
+    "definition_en": "Rules requiring that the head of government position has to rotate between territorial subunits in which the given minority group settles.",
+    "fa": "رئیس دولت: گردش سرزمینی",
+    "fa_def": "منصب رئیس دولت باید میان واحدهای سرزمینی، از جمله محل سکونت گروه اقلیت، بچرخد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j57",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of state deputy rotation rules (territorial",
+    "definition_en": "Rules requiring that the head of state depity position has to rotate between territorial subunits in which the given minority group settles.",
+    "fa": "معاون رئیس کشور: گردش سرزمینی",
+    "fa_def": "منصب معاون رئیس کشور باید میان واحدهای سرزمینی، از جمله محل سکونت گروه اقلیت، بچرخد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j58",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Head of government deputy rotation rules (territorial)",
+    "definition_en": "Rules requiring that the head of government deputy position has to rotate between territorial subunits in which the given minority group settles.",
+    "fa": "معاون رئیس دولت: گردش سرزمینی",
+    "fa_def": "منصب معاون رئیس دولت باید میان واحدهای سرزمینی، از جمله محل سکونت گروه اقلیت، بچرخد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j59",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Lower house speaker rotation rules (territorial)",
+    "definition_en": "Rules requiring that the lower house speaker position has to rotate between territorial subunits in which the given minority group settles.",
+    "fa": "رئیس مجلس نخست: گردش سرزمینی",
+    "fa_def": "منصب رئیس مجلس نخست باید میان واحدهای سرزمینی، از جمله محل سکونت گروه اقلیت، بچرخد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j60",
+    "layer": "ps",
+    "group": "ps-exec",
+    "src": "JUON-CPSD",
+    "en": "Upper house speaker rotation rules (territorial)",
+    "definition_en": "Rules requiring that the upper house speaker position has to rotate between territorial subunits in which the given minority group settles.",
+    "fa": "رئیس مجلس دوم: گردش سرزمینی",
+    "fa_def": "منصب رئیس مجلس دوم باید میان واحدهای سرزمینی، از جمله محل سکونت گروه اقلیت، بچرخد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j61",
+    "layer": "ps",
+    "group": "ps-leg",
+    "src": "JUON-CPSD",
+    "en": "Lower house quotas (ethnic / specific organization)",
+    "definition_en": "Quotas mandating lower house seats to be awarded to the given minority group or to a specific party or former warring faction purporting to represent the given minority group.",
+    "fa": "مجلس نخست: سهمیه‌ی اقلیت",
+    "fa_def": "کرسی‌هایی از مجلس نخست به گروه اقلیت یا نماینده‌ی آن سپرده می‌شود.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j62",
+    "layer": "ps",
+    "group": "ps-leg",
+    "src": "JUON-CPSD",
+    "en": "Upper house quotas (ethnic / specific organization)",
+    "definition_en": "Quotas mandating upper house seats to be awarded to the given minority group or to a specific party or former warring faction purporting to represent the given minority group.",
+    "fa": "مجلس دوم: سهمیه‌ی اقلیت",
+    "fa_def": "کرسی‌هایی از مجلس دوم به گروه اقلیت یا نماینده‌ی آن سپرده می‌شود.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j63",
+    "layer": "ps",
+    "group": "ps-leg",
+    "src": "JUON-CPSD",
+    "en": "Degree of proportionality of lower house electoral system",
+    "definition_en": "Degree to which the electoral system for the lower house is proportional as given by the existence of a proportional or mixed electoral system... and its legal and effective thresholds (effective threshold = 50 / [district magnitude + 1] + 50 / [2 * district magnitude]).",
+    "fa": "مجلس نخست: تناسبی بودن نظام انتخاباتی",
+    "fa_def": "نظام انتخاباتی مجلس نخست تا چه اندازه تناسبی است: تناسبی، مختلط یا اکثریتی، و آستانه‌های قانونی و موثر آن.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j64",
+    "layer": "ps",
+    "group": "ps-leg",
+    "src": "JUON-CPSD",
+    "en": "Degree of proportionality of upper house electoral system",
+    "definition_en": "Degree to which the electoral system for the upper house is proportional as given by the existence of a proportional or mixed electoral system... and its legal and effective thresholds (effective threshold = 50 / [district magnitude + 1] + 50 / [2 * district magnitude]).",
+    "fa": "مجلس دوم: تناسبی بودن نظام انتخاباتی",
+    "fa_def": "نظام انتخاباتی مجلس دوم تا چه اندازه تناسبی است: تناسبی، مختلط یا اکثریتی، و آستانه‌های قانونی و موثر آن.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j65",
+    "layer": "ps",
+    "group": "ps-leg",
+    "src": "JUON-CPSD",
+    "en": "Upper house quotas (electoral)",
+    "definition_en": "Quotas mandating upper house seats to be awarded to electoral minorities as given by the electoral results for the lower house.",
+    "fa": "مجلس دوم: سهمیه‌ی اقلیت‌های انتخاباتی",
+    "fa_def": "کرسی‌هایی از مجلس دوم، بر پایه‌ی نتیجه‌ی انتخابات مجلس نخست، به اقلیت‌های انتخاباتی داده می‌شود.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j66",
+    "layer": "ps",
+    "group": "ps-leg",
+    "src": "JUON-CPSD",
+    "en": "Lower house quotas (territorial)",
+    "definition_en": "Quotas mandating lower house seats to be awarded to territorial subunits in which a given minority group settles.",
+    "fa": "مجلس نخست: سهمیه‌ی سرزمینی",
+    "fa_def": "کرسی‌هایی از مجلس نخست به واحدهای سرزمینی محل سکونت گروه اقلیت سپرده می‌شود.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j67",
+    "layer": "ps",
+    "group": "ps-leg",
+    "src": "JUON-CPSD",
+    "en": "Upper house quotas (territorial)",
+    "definition_en": "Quotas mandating upper house seats to be awarded to territorial subunits in which a given minority group settles.",
+    "fa": "مجلس دوم: سهمیه‌ی سرزمینی",
+    "fa_def": "کرسی‌هایی از مجلس دوم به واحدهای سرزمینی محل سکونت گروه اقلیت سپرده می‌شود.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j68",
+    "layer": "ps",
+    "group": "ps-veto",
+    "src": "JUON-CPSD",
+    "en": "Veto rights on constitutional amendments (ethnic / specific organization)",
+    "definition_en": "Veto rights over constitutional amendments awarded to the parliamentary representatives of the given minority group or to the parliamentary representatives of a specific party or former warring faction purporting to represent the given minority group.",
+    "fa": "حق وتوی اقلیت بر بازنگری قانون اساسی",
+    "fa_def": "نمایندگان گروه اقلیت در مجلس، یا نمایندگان حزب یا گروهی که خود را نماینده‌ی آن می‌داند، بر بازنگری قانون اساسی حق وتو دارند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j69",
+    "layer": "ps",
+    "group": "ps-veto",
+    "src": "JUON-CPSD",
+    "en": "Veto rights on legislation (ethnic / specific organization)",
+    "definition_en": "Veto rights over legislation mandated awarded to the parliamentary representatives of the given minority group or to the parliamentary representatives of a specific party or former warring faction purporting to represent the given minority group.",
+    "fa": "حق وتوی اقلیت بر قانون‌گذاری",
+    "fa_def": "نمایندگان گروه اقلیت در مجلس، یا نمایندگان حزب یا گروهی که خود را نماینده‌ی آن می‌داند، بر قانون‌ها حق وتو دارند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j70",
+    "layer": "ps",
+    "group": "ps-veto",
+    "src": "JUON-CPSD",
+    "en": "Supermajority requirements for constitutional amendments in the lower house",
+    "definition_en": "Requirement that constitutional amendments require a supermajority in the lower house of parliament in order to be passed.",
+    "fa": "مجلس نخست: اکثریت ویژه برای بازنگری قانون اساسی",
+    "fa_def": "بازنگری قانون اساسی در مجلس نخست به اکثریت ویژه نیاز دارد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j71",
+    "layer": "ps",
+    "group": "ps-veto",
+    "src": "JUON-CPSD",
+    "en": "Supermajority requirements for legislation in the lower house",
+    "definition_en": "Requirement that legislation requires a supermajority in the lower house of parliament in order to be passed.",
+    "fa": "مجلس نخست: اکثریت ویژه برای قانون‌گذاری",
+    "fa_def": "تصویب قانون در مجلس نخست به اکثریت ویژه نیاز دارد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j72",
+    "layer": "ps",
+    "group": "ps-veto",
+    "src": "JUON-CPSD",
+    "en": "Supermajority requirements for constitutional amendments in the upper house",
+    "definition_en": "Requirement that constitutional amendments require a supermajority in the upper house of parliament in order to be passed.",
+    "fa": "مجلس دوم: اکثریت ویژه برای بازنگری قانون اساسی",
+    "fa_def": "بازنگری قانون اساسی در مجلس دوم به اکثریت ویژه نیاز دارد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j73",
+    "layer": "ps",
+    "group": "ps-veto",
+    "src": "JUON-CPSD",
+    "en": "Supermajority requirements for legislation in the upper house",
+    "definition_en": "Requirement that legislation requires a supermajority in the upper house of parliament in order to be passed.",
+    "fa": "مجلس دوم: اکثریت ویژه برای قانون‌گذاری",
+    "fa_def": "تصویب قانون در مجلس دوم به اکثریت ویژه نیاز دارد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j74",
+    "layer": "ps",
+    "group": "ps-veto",
+    "src": "JUON-CPSD",
+    "en": "Veto rights on constitutional amendments (territorial)",
+    "definition_en": "Requirement that constitutional amendments require the approval (either by parliamentary representatives or by local authorities) of administrative subunits in which the minority group settles.",
+    "fa": "حق وتوی سرزمینی بر بازنگری قانون اساسی",
+    "fa_def": "بازنگری قانون اساسی به تایید واحدهای سرزمینی محل سکونت گروه اقلیت (نمایندگان یا مقام‌های محلی آن‌ها) نیاز دارد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:j75",
+    "layer": "ps",
+    "group": "ps-veto",
+    "src": "JUON-CPSD",
+    "en": "Veto rights on legislation (territorial)",
+    "definition_en": "Requirement that legislation requires the approval (either by parliamentary representatives or by local authorities) of administrative subunits in which the minority group settles.",
+    "fa": "حق وتوی سرزمینی بر قانون‌گذاری",
+    "fa_def": "قانون‌ها به تایید واحدهای سرزمینی محل سکونت گروه اقلیت (نمایندگان یا مقام‌های محلی آن‌ها) نیاز دارند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:gcman",
+    "layer": "ps",
+    "group": "ps-incl",
+    "src": "STRØM-IDC",
+    "en": "Mandated grand coalition",
+    "definition_en": "There is a constitutional provision (or a provision in a peace accord in the case of transitional governments) requiring representation by all major political parties (or relevant political organizations) in the cabinet",
+    "fa": "ائتلاف بزرگ الزامی",
+    "fa_def": "قانون اساسی (یا توافق صلح) حضور همه‌ی حزب‌های بزرگ را در هیات وزیران الزامی می‌کند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:partynoethnic",
+    "layer": "ps",
+    "group": "ps-incl",
+    "src": "STRØM-IDC",
+    "en": "Ethnic party ban",
+    "definition_en": "There is a law or constitutional amendment banning ethnically, religiously, or regionally based parties",
+    "fa": "ممنوعیت حزب‌های قومی",
+    "fa_def": "حزب‌هایی که بر پایه‌ی قومیت، دین یا منطقه ساخته شده‌اند ممنوع‌اند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:resman",
+    "layer": "ps",
+    "group": "ps-incl",
+    "src": "STRØM-IDC",
+    "en": "Reserved executive positions (mandated)",
+    "definition_en": "It is mandated that particular executive positions be reserved for members of particular particular ethnic, linguistic, caste, or religious MINORITY groups",
+    "fa": "منصب‌های اجرایی ویژه‌ی اقلیت‌ها",
+    "fa_def": "منصب‌های اجرایی معینی برای گروه‌های اقلیت قومی، زبانی، کاستی یا دینی کنار گذاشته شده‌اند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:mveto",
+    "layer": "ps",
+    "group": "ps-veto",
+    "src": "STRØM-IDC",
+    "en": "Mutual veto",
+    "definition_en": "There is any provision for minority veto over a particular area of policy",
+    "fa": "وتوی متقابل",
+    "fa_def": "اقلیت‌ها در حوزه‌ی معینی از سیاست‌گذاری حق وتو دارند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:resseats",
+    "layer": "ps",
+    "group": "ps-leg",
+    "src": "STRØM-IDC",
+    "en": "Reserved legislative seats (mandated)",
+    "definition_en": "A certain number of legislative seats (lower house) are reserved for members of particular ethnic, linguistic, caste, or religious MINORITY groups",
+    "fa": "کرسی‌های ویژه‌ی اقلیت‌ها در مجلس",
+    "fa_def": "شمار معینی از کرسی‌های مجلس نخست برای گروه‌های اقلیت قومی، زبانی، کاستی یا دینی کنار گذاشته شده است.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:stconst",
+    "layer": "ps",
+    "group": "ps-leg",
+    "src": "STRØM-IDC",
+    "en": "Regional constituencies in the upper house",
+    "definition_en": "The states/provinces are the constituencies of a majority of legislators in the upper (or only) house",
+    "fa": "حوزه‌های انتخابیه‌ی منطقه‌ای در مجلس دوم",
+    "fa_def": "ایالت‌ها یا استان‌ها حوزه‌ی انتخابیه‌ی بیش‌ترِ نمایندگان مجلس دوم (یا تنها مجلس) هستند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:state",
+    "layer": "ps",
+    "group": "ps-terr",
+    "src": "STRØM-IDC",
+    "en": "State/provincial governments locally elected",
+    "definition_en": "[Relates to whether] the legislature or executive is elected at the local level [or] appointed by the central government",
+    "fa": "حکومت منتخب ایالت‌ها",
+    "fa_def": "قوه‌ی مقننه یا مجریه‌ی ایالت‌ها یا استان‌ها را مردم همان‌جا انتخاب می‌کنند، نه حکومت مرکزی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:muni",
+    "layer": "ps",
+    "group": "ps-terr",
+    "src": "STRØM-IDC",
+    "en": "Municipal governments locally elected",
+    "definition_en": "[Relates to whether] the legislature or executive is elected at the local level [or] appointed",
+    "fa": "حکومت منتخب شهرها",
+    "fa_def": "شورا یا مدیریت شهرها را مردم همان‌جا انتخاب می‌کنند، نه حکومت مرکزی.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:subtax",
+    "layer": "ps",
+    "group": "ps-terr",
+    "src": "STRØM-IDC",
+    "en": "Sub-national tax authority",
+    "definition_en": "State/provincial governments can levy their own taxes",
+    "fa": "اختیار مالیاتی ایالت‌ها",
+    "fa_def": "ایالت‌ها یا استان‌ها می‌توانند مالیات خود را وضع کنند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:subed",
+    "layer": "ps",
+    "group": "ps-terr",
+    "src": "STRØM-IDC",
+    "en": "Sub-national education authority",
+    "definition_en": "State/provincial governments have sole control of education policy",
+    "fa": "اختیار آموزشی ایالت‌ها",
+    "fa_def": "سیاست آموزشی تنها در اختیار ایالت‌ها یا استان‌هاست.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:subpolice",
+    "layer": "ps",
+    "group": "ps-terr",
+    "src": "STRØM-IDC",
+    "en": "Sub-national police authority",
+    "definition_en": "Sub-national governments (municipal or state/regional) have control of local police/paramilitary forces in their area",
+    "fa": "پلیس محلی",
+    "fa_def": "حکومت‌های شهری یا ایالتی پلیس یا نیروی انتظامی منطقه‌ی خود را در اختیار دارند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:auton",
+    "layer": "ps",
+    "group": "ps-terr",
+    "src": "STRØM-IDC",
+    "en": "Asymmetric federalism",
+    "definition_en": "There is one or more autonomous regions",
+    "fa": "فدرالیسم نامتقارن",
+    "fa_def": "یک یا چند منطقه‌ی خودمختار با اختیارهایی بیش از دیگر مناطق وجود دارد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:milleg",
+    "layer": "ps",
+    "group": "ps-mil",
+    "src": "STRØM-IDC",
+    "en": "Military legislator ban",
+    "definition_en": "There is a constitutional provision (or provision in the peace agreement in the case of transitional governments) against active members of the armed forces holding seats in the legislature",
+    "fa": "ممنوعیت نمایندگی نظامیان",
+    "fa_def": "نظامیان در خدمت نمی‌توانند نماینده‌ی مجلس باشند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:miman",
+    "layer": "ps",
+    "group": "ps-mil",
+    "src": "STRØM-IDC",
+    "en": "Inclusive military",
+    "definition_en": "It is mandated that all major groups (e.g. ethnic, religious, or linguistic groups) be represented in the military or its officer corps, or that the military or its officer corps be representative of different regions",
+    "fa": "ارتش فراگیر",
+    "fa_def": "همه‌ی گروه‌های بزرگ قومی، دینی یا زبانی، یا مناطق مختلف، باید در ارتش یا در میان افسران آن نماینده داشته باشند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:mfound",
+    "layer": "ps",
+    "group": "ps-mil",
+    "src": "STRØM-IDC",
+    "en": "Foundational military",
+    "definition_en": "The military is assigned by the constitution to preserve the constitution from infringement by other political actors",
+    "fa": "ارتش نگهبان قانون اساسی",
+    "fa_def": "قانون اساسی به ارتش وظیفه می‌دهد قانون اساسی را در برابر دیگر بازیگران سیاسی پاس بدارد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:milvote",
+    "layer": "ps",
+    "group": "ps-mil",
+    "src": "STRØM-IDC",
+    "en": "Constitutional provision against military voting",
+    "definition_en": "There is a constitutional provision (or provision in a peace agreement if no constitution exists) denying active-duty members of the military the right to vote",
+    "fa": "محرومیت نظامیان از رای",
+    "fa_def": "نظامیان در خدمت حق رای ندارند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:milparty",
+    "layer": "ps",
+    "group": "ps-mil",
+    "src": "STRØM-IDC",
+    "en": "Constitutional provision against members of the military belonging to political parties",
+    "definition_en": "There is a constitutional provision (or provision in a peace agreement if no constitution exists) banning members of the military from belonging to political parties",
+    "fa": "ممنوعیت عضویت نظامیان در حزب",
+    "fa_def": "نظامیان نمی‌توانند عضو حزب سیاسی باشند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "ps:milparty2",
+    "layer": "ps",
+    "group": "ps-mil",
+    "src": "STRØM-IDC",
+    "en": "Mandatory party membership",
+    "definition_en": "There is a constitutional provision (or provision in the peace agreement in the case of transitional governments) requiring that military officers belong to a particular party (i.e. the ruling party)",
+    "fa": "عضویت اجباری افسران در حزب",
+    "fa_def": "افسران باید عضو حزبی معین، یعنی حزب حاکم، باشند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "lang:list",
+    "layer": "lang",
+    "group": "lang-status",
+    "src": "Status",
+    "en": "Languages of the country named",
+    "definition_en": "The constitution names the languages spoken in the country, whether or not they are official.",
+    "fa": "نام‌بردن زبان‌های کشور",
+    "fa_def": "قانون اساسی زبان‌هایی را که در کشور به آن‌ها سخن گفته می‌شود نام می‌برد، رسمی باشند یا نه.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "lang:offnat",
+    "layer": "lang",
+    "group": "lang-status",
+    "src": "Status",
+    "en": "Official language of the country",
+    "definition_en": "One or more languages are official for the whole country or its central institutions: the language the central parliament, government and courts work in.",
+    "fa": "زبان رسمی کشور",
+    "fa_def": "یک یا چند زبان برای کل کشور یا نهادهای مرکزی رسمی است: زبانی که پارلمان، حکومت و دادگاه‌های مرکزی به آن کار می‌کنند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "lang:offsub",
+    "layer": "lang",
+    "group": "lang-status",
+    "src": "Status",
+    "en": "Regions choose their official languages",
+    "definition_en": "Regions (states, provinces) may set their own official language or languages.",
+    "fa": "انتخاب زبان رسمی به دست مناطق",
+    "fa_def": "مناطق (ایالت‌ها، استان‌ها) می‌توانند زبان یا زبان‌های رسمی خود را تعیین کنند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "lang:multi",
+    "layer": "lang",
+    "group": "lang-status",
+    "src": "Status",
+    "en": "Several official languages at one level",
+    "definition_en": "More than one language may be official at the same level of government.",
+    "fa": "چند زبان رسمی در یک سطح",
+    "fa_def": "در یک سطح حکومت بیش از یک زبان می‌تواند رسمی باشد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "lang:equal",
+    "layer": "lang",
+    "group": "lang-status",
+    "src": "Status",
+    "en": "Official languages equal in status",
+    "definition_en": "Where several languages are official, they have equal status and equal rights of use.",
+    "fa": "برابری زبان‌های رسمی",
+    "fa_def": "جایی که چند زبان رسمی است، جایگاه و حق کاربرد برابر دارند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "lang:script",
+    "layer": "lang",
+    "group": "lang-status",
+    "src": "Status",
+    "en": "Script",
+    "definition_en": "The constitution says in which script a language is written, or protects the use of a script.",
+    "fa": "خط",
+    "fa_def": "قانون اساسی می‌گوید زبانی به چه خطی نوشته می‌شود، یا از کاربرد یک خط حمایت می‌کند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "lang:sign",
+    "layer": "lang",
+    "group": "lang-status",
+    "src": "CRPD 21(b), 21(e), 24.3(b)",
+    "en": "Sign language",
+    "definition_en": "Sign language, or other means of communication of people with disabilities, is recognised or protected.",
+    "fa": "زبان اشاره",
+    "fa_def": "زبان اشاره یا دیگر راه‌های ارتباطی افراد دارای معلولیت به‌رسمیت شناخته یا حمایت می‌شود.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "lang:freeuse",
+    "layer": "lang",
+    "group": "lang-public",
+    "src": "FCNM 10.1",
+    "en": "Freedom to use any language",
+    "definition_en": "Everyone may use their language freely, in private and in public, orally and in writing.",
+    "fa": "آزادی کاربرد هر زبان",
+    "fa_def": "هر کس می‌تواند زبان خود را آزادانه، در خلوت و در جمع، گفتاری و نوشتاری به کار ببرد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "lang:court",
+    "layer": "lang",
+    "group": "lang-public",
+    "src": "ECRML 9",
+    "en": "Minority languages in court",
+    "definition_en": "Proceedings, documents or evidence may be in a regional or minority language.",
+    "fa": "زبان اقلیت در دادگاه",
+    "fa_def": "رسیدگی، اسناد یا ادله می‌تواند به زبان منطقه‌ای یا اقلیت باشد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "lang:interp",
+    "layer": "lang",
+    "group": "lang-public",
+    "src": "FCNM 10.3; ICCPR 9.2, 14.3(a), 14.3(f)",
+    "en": "Told in a language one understands; interpreter",
+    "definition_en": "A person arrested or charged is told the reasons and the charges in a language they understand, and has a free interpreter in court.",
+    "fa": "آگاهی به زبانی که فرد می‌فهمد؛ مترجم",
+    "fa_def": "فرد بازداشت‌شده یا متهم دلایل و اتهام را به زبانی که می‌فهمد می‌شنود و در دادگاه مترجم رایگان دارد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "lang:admin",
+    "layer": "lang",
+    "group": "lang-public",
+    "src": "ECRML 10; FCNM 10.2",
+    "en": "Dealing with authorities in one's language",
+    "definition_en": "People may use a regional or minority language with administrative authorities and public services, and get answers in it.",
+    "fa": "برخورد با اداره‌ها به زبان خود",
+    "fa_def": "مردم می‌توانند با اداره‌ها و خدمات عمومی به زبان منطقه‌ای یا اقلیت سروکار داشته باشند و به همان زبان پاسخ بگیرند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "lang:legis",
+    "layer": "lang",
+    "group": "lang-public",
+    "src": "Status; ECRML 9.3, 10.1",
+    "en": "Language of laws and parliament",
+    "definition_en": "The constitution says in which languages laws are published and parliament debates.",
+    "fa": "زبان قانون‌ها و پارلمان",
+    "fa_def": "قانون اساسی می‌گوید قانون‌ها به چه زبان‌هایی منتشر می‌شوند و پارلمان به چه زبانی بحث می‌کند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "lang:names",
+    "layer": "lang",
+    "group": "lang-public",
+    "src": "FCNM 11.1; ECRML 10.5",
+    "en": "Personal names",
+    "definition_en": "Everyone may use and have officially recognised their names in their own language.",
+    "fa": "نام‌های شخصی",
+    "fa_def": "هر کس می‌تواند نام خود را به زبان خود به کار ببرد و رسمی بشناساند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "lang:signs",
+    "layer": "lang",
+    "group": "lang-public",
+    "src": "FCNM 11.3; ECRML 10.2(g)",
+    "en": "Place names and public signs",
+    "definition_en": "Place names, street names and public signs may appear in regional or minority languages.",
+    "fa": "نام مکان‌ها و تابلوهای عمومی",
+    "fa_def": "نام مکان‌ها و خیابان‌ها و تابلوهای عمومی می‌تواند به زبان‌های منطقه‌ای یا اقلیت هم باشد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "lang:edumt",
+    "layer": "lang",
+    "group": "lang-edu",
+    "src": "ECRML 8; FCNM 14.2",
+    "en": "Teaching in minority languages",
+    "definition_en": "Schooling is given in regional or minority languages at one or more levels.",
+    "fa": "آموزش به زبان اقلیت",
+    "fa_def": "آموزش در یک یا چند مقطع به زبان‌های منطقه‌ای یا اقلیت داده می‌شود.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "lang:edulearn",
+    "layer": "lang",
+    "group": "lang-edu",
+    "src": "FCNM 14.1",
+    "en": "Right to learn one's language",
+    "definition_en": "Everyone has the right to learn their own language.",
+    "fa": "حق یادگیری زبان خود",
+    "fa_def": "هر کس حق دارد زبان خود را بیاموزد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "lang:educommon",
+    "layer": "lang",
+    "group": "lang-edu",
+    "src": "FCNM 14.3",
+    "en": "Learning the official language",
+    "definition_en": "The official or common language is taught alongside minority languages.",
+    "fa": "یادگیری زبان رسمی",
+    "fa_def": "زبان رسمی یا مشترک در کنار زبان‌های اقلیت آموزش داده می‌شود.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "lang:eduown",
+    "layer": "lang",
+    "group": "lang-edu",
+    "src": "FCNM 13",
+    "en": "Minorities' own schools",
+    "definition_en": "Language communities may set up and run their own schools and training.",
+    "fa": "مدرسه‌های خود اقلیت‌ها",
+    "fa_def": "جامعه‌های زبانی می‌توانند مدرسه و آموزش خود را تاسیس و اداره کنند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "lang:media",
+    "layer": "lang",
+    "group": "lang-life",
+    "src": "ECRML 11; FCNM 9",
+    "en": "Media in minority languages",
+    "definition_en": "Broadcasting and the press in regional or minority languages are provided for or supported.",
+    "fa": "رسانه به زبان‌های اقلیت",
+    "fa_def": "رادیو، تلویزیون و مطبوعات به زبان‌های منطقه‌ای یا اقلیت پیش‌بینی یا پشتیبانی می‌شوند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "lang:culture",
+    "layer": "lang",
+    "group": "lang-life",
+    "src": "ECRML 12; FCNM 5",
+    "en": "Languages in cultural life",
+    "definition_en": "Culture, publishing and heritage in regional or minority languages are supported, or cultural policy must take the country's languages into account.",
+    "fa": "زبان در زندگی فرهنگی",
+    "fa_def": "فرهنگ، نشر و میراث به زبان‌های منطقه‌ای یا اقلیت پشتیبانی می‌شود، یا سیاست فرهنگی باید زبان‌های کشور را در نظر بگیرد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "lang:econ",
+    "layer": "lang",
+    "group": "lang-life",
+    "src": "ECRML 13",
+    "en": "Economic and social life",
+    "definition_en": "Regional or minority languages may be used in economic life and in social services such as hospitals and care homes.",
+    "fa": "زندگی اقتصادی و اجتماعی",
+    "fa_def": "زبان‌های منطقه‌ای یا اقلیت را می‌توان در زندگی اقتصادی و در خدمات اجتماعی مانند بیمارستان و خانه‌ی سالمندان به کار برد.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "lang:border",
+    "layer": "lang",
+    "group": "lang-life",
+    "src": "ECRML 14; FCNM 17",
+    "en": "Contacts across borders",
+    "definition_en": "Speakers may keep contacts with people of the same language in other countries.",
+    "fa": "پیوند فرامرزی",
+    "fa_def": "سخن‌گویان یک زبان می‌توانند با هم‌زبانان خود در کشورهای دیگر پیوند داشته باشند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "lang:minprot",
+    "layer": "lang",
+    "group": "lang-prot",
+    "src": "FCNM 10, 14 (within a region)",
+    "en": "Minorities within a region",
+    "definition_en": "A region that chooses its official language must protect speakers of other languages living there.",
+    "fa": "اقلیت زبانی درون یک منطقه",
+    "fa_def": "منطقه‌ای که زبان رسمی خود را برمی‌گزیند باید از سخن‌گویان زبان‌های دیگرِ ساکن خود حمایت کند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "lang:promote",
+    "layer": "lang",
+    "group": "lang-prot",
+    "src": "ECRML 7.1",
+    "en": "Duty to keep and promote languages",
+    "definition_en": "The state must preserve and promote the country's languages, not merely tolerate them.",
+    "fa": "تکلیف حفظ و ترویج زبان‌ها",
+    "fa_def": "دولت باید زبان‌های کشور را حفظ و ترویج کند، نه این‌که تنها تحملشان کند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "lang:understand",
+    "layer": "lang",
+    "group": "lang-prot",
+    "src": "ECRML 7.3; FCNM 6",
+    "en": "Understanding between language communities",
+    "definition_en": "The state promotes mutual understanding and exchange between language communities.",
+    "fa": "درک متقابل میان جامعه‌های زبانی",
+    "fa_def": "دولت درک متقابل و دادوستد میان جامعه‌های زبانی را ترویج می‌کند.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "lang:central",
+    "layer": "lang",
+    "group": "lang-prot",
+    "src": "ECRML 7.1(c)",
+    "en": "Central support for languages",
+    "definition_en": "The central level supports multilingual regions or minority languages, for example with funds.",
+    "fa": "پشتیبانی مرکز از زبان‌ها",
+    "fa_def": "سطح ملی از مناطق چندزبانه یا زبان‌های اقلیت پشتیبانی می‌کند، برای نمونه با بودجه.",
+    "fa_status": "draft"
+   },
+   {
+    "id": "lang:body",
+    "layer": "lang",
+    "group": "lang-prot",
+    "src": "ECRML 7.4",
+    "en": "Body overseeing language rights",
+    "definition_en": "A commissioner, council or other body watches over language rights and hears complaints.",
+    "fa": "نهاد ناظر بر حقوق زبانی",
+    "fa_def": "یک کمیسر، شورا یا نهادی دیگر بر حقوق زبانی نظارت می‌کند و به شکایت‌ها رسیدگی می‌کند.",
+    "fa_status": "draft"
+   }
+  ],
+  "levels": {
+   "about": {
+    "en": "Who holds a policy field, read from the article that assigns it. Recorded for each policy-field (cap:) tag of an article that assigns the field to a level; rights and aims are left without a level.",
+    "fa": "این‌که حوزه‌ی سیاست‌گذاری با کیست، از روی اصلی که آن را واگذار می‌کند. برای هر برچسب حوزه‌ی سیاست‌گذاری (cap:) در اصلی که حوزه را به سطحی می‌سپارد ثبت می‌شود؛ حق‌ها و هدف‌ها بی‌سطح می‌مانند."
+   },
+   "levels": [
+    {
+     "key": "N",
+     "en": "National",
+     "fa": "ملی",
+     "d": "The national level legislates and carries out.",
+     "df": "سطح ملی قانون می‌گذارد و اجرا می‌کند."
+    },
+    {
+     "key": "NR",
+     "en": "National law, regional execution",
+     "fa": "قانون ملی، اجرای منطقه‌ای",
+     "d": "The national level legislates; the regions carry the law out.",
+     "df": "سطح ملی قانون می‌گذارد؛ مناطق آن را اجرا می‌کنند."
+    },
+    {
+     "key": "P",
+     "en": "National principles, regional detail",
+     "fa": "اصول ملی، جزئیات منطقه‌ای",
+     "d": "The national level lays down principles or minimum rules; the regions legislate the rest.",
+     "df": "سطح ملی اصول یا حداقل‌ها را می‌گذارد؛ مناطق باقی را قانون‌گذاری می‌کنند."
+    },
+    {
+     "key": "C",
+     "en": "Shared",
+     "fa": "مشترک",
+     "d": "National level and regions both act, each within its powers, or jointly.",
+     "df": "سطح ملی و مناطق هر دو، هر یک در حدود اختیار خود یا با هم، عمل می‌کنند."
+    },
+    {
+     "key": "R",
+     "en": "Regional",
+     "fa": "منطقه‌ای",
+     "d": "The regions hold the field; the national level at most supports or coordinates.",
+     "df": "حوزه با مناطق است؛ سطح ملی حداکثر پشتیبانی یا هماهنگ می‌کند."
+    },
+    {
+     "key": "L",
+     "en": "Local",
+     "fa": "محلی",
+     "d": "Municipalities and villages hold the field, alone or by agreement with the region.",
+     "df": "حوزه با شهر و روستاست، به‌تنهایی یا با توافق منطقه."
+    }
+   ]
+  },
+  "rai": {
+   "source": "Regional Authority Index v.3 (Hooghe, Marks, Schakel, Chapman Osterkatz, Niedzwiecki, Shair-Rosenfield), codebook RAI-Region, version 16 April 2021",
+   "url": "https://garymarks.web.unc.edu/data/regional-authority/",
+   "licence": "CC BY 4.0 (EUI Research Data record, as listed in search results 2026-10-03; the record page refused automated access, so this is still to confirm by hand)",
+   "cite": "Hooghe, Liesbet, Gary Marks, Arjan H. Schakel, Sandra Chapman Osterkatz, Sara Niedzwiecki and Sarah Shair-Rosenfield (2016). Measuring Regional Authority. Oxford: Oxford University Press.",
+   "about": {
+    "en": "How much authority the regions of a draft would hold, on the ten dimensions of the Regional Authority Index: self-rule over their own territory (0–18) and shared rule over the country as a whole (0–12). Scales paraphrased from the codebook; scores ours, read from the draft's text for its regional tier.",
+    "fa": "مناطق در یک پیش‌نویس چه اندازه اختیار دارند، بر پایه‌ی ده بُعد شاخص اقتدار منطقه‌ای (Regional Authority Index): خودگردانی در قلمرو خود (۰ تا ۱۸) و حکمرانی مشترک بر کل کشور (۰ تا ۱۲). مقیاس‌ها از دفترچه‌ی کدگذاری بازنویسی شده‌اند؛ نمره‌ها از ماست و از متن پیش‌نویس برای سطح منطقه‌ای آن خوانده شده‌اند."
+   },
+   "domains": {
+    "self": {
+     "en": "Self-rule",
+     "fa": "خودگردانی",
+     "max": 18
+    },
+    "shared": {
+     "en": "Shared rule",
+     "fa": "حکمرانی مشترک",
+     "max": 12
+    }
+   },
+   "dims": [
+    {
+     "key": "instdepth",
+     "domain": "self",
+     "max": 3,
+     "en": "Institutional depth",
+     "fa": "عمق نهادی",
+     "scale": [
+      "no regional administration",
+      "regional offices of the central government",
+      "own regional government, subject to a central veto",
+      "own regional government, no central veto"
+     ],
+     "scale_fa": [
+      "بی‌اداره‌ی منطقه‌ای",
+      "اداره‌ی منطقه‌ای وابسته به مرکز",
+      "حکومت منطقه‌ای خود، با حق وتوی مرکز",
+      "حکومت منطقه‌ای خود، بی‌وتوی مرکز"
+     ]
+    },
+    {
+     "key": "policy",
+     "domain": "self",
+     "max": 4,
+     "en": "Policy scope",
+     "fa": "دامنه‌ی سیاست‌گذاری",
+     "scale": [
+      "very weak in economic, cultural-educational and welfare policy, and in (d) residual powers, police, own institutions or local government",
+      "authority in one of these",
+      "in two of them",
+      "in (d) and two of economic, cultural-educational, welfare",
+      "as 3, plus immigration or citizenship"
+     ],
+     "scale_fa": [
+      "بسیار ضعیف در سیاست اقتصادی، فرهنگی‌آموزشی و رفاهی و در (د) اختیارات باقی‌مانده، پلیس، نهادهای خود یا حکومت محلی",
+      "اختیار در یکی از این‌ها",
+      "در دو تا",
+      "در (د) و دو تا از اقتصادی، فرهنگی‌آموزشی و رفاهی",
+      "مانند ۳، به‌اضافه‌ی مهاجرت یا تابعیت"
+     ]
+    },
+    {
+     "key": "fiscal",
+     "domain": "self",
+     "max": 4,
+     "en": "Fiscal autonomy",
+     "fa": "خودمختاری مالیاتی",
+     "scale": [
+      "centre sets base and rate of all regional taxes",
+      "region sets the rate of minor taxes",
+      "base and rate of minor taxes",
+      "rate of at least one major tax (income, corporate, VAT, sales)",
+      "base and rate of at least one major tax"
+     ],
+     "scale_fa": [
+      "مرکز پایه و نرخ همه‌ی مالیات‌های منطقه‌ای را تعیین می‌کند",
+      "منطقه نرخ مالیات‌های کوچک را تعیین می‌کند",
+      "پایه و نرخ مالیات‌های کوچک",
+      "نرخ دست‌کم یک مالیات بزرگ (درآمد، شرکت، ارزش افزوده، فروش)",
+      "پایه و نرخ دست‌کم یک مالیات بزرگ"
+     ]
+    },
+    {
+     "key": "borrow",
+     "domain": "self",
+     "max": 3,
+     "en": "Borrowing autonomy",
+     "fa": "خودمختاری استقراض",
+     "scale": [
+      "region does not borrow",
+      "borrows with prior central approval and central limits",
+      "borrows without prior approval, under central limits",
+      "borrows without central limits"
+     ],
+     "scale_fa": [
+      "منطقه وام نمی‌گیرد",
+      "با تایید پیشین مرکز و زیر قیدهای مرکز وام می‌گیرد",
+      "بی‌تایید پیشین، زیر قیدهای مرکز",
+      "بی‌قید مرکز"
+     ]
+    },
+    {
+     "key": "repr",
+     "domain": "self",
+     "max": 4,
+     "en": "Representation",
+     "fa": "نمایندگی",
+     "scale": [
+      "assembly: none 0, indirectly elected 1, directly elected 2; executive: appointed by the centre 0, dual 1, chosen by the assembly or directly elected 2 (sum)"
+     ],
+     "scale_fa": [
+      "مجلس: نیست ۰، غیرمستقیم ۱، مستقیم ۲؛ قوه‌ی مجریه: منصوب مرکز ۰، دوگانه ۱، برگزیده‌ی مجلس یا انتخاب مستقیم ۲ (جمع)"
+     ]
+    },
+    {
+     "key": "lawmaking",
+     "domain": "shared",
+     "max": 2,
+     "en": "Law making",
+     "fa": "قانون‌گذاری",
+     "scale": [
+      "half a point each, up to 2: regions are the unit of representation in a national chamber; regional governments designate its members; regions hold a majority in it; that chamber has extensive legislative authority; regions are consulted on laws that affect them; they have a veto over such laws"
+     ],
+     "scale_fa": [
+      "هر یک نیم امتیاز، تا ۲: مناطق واحد نمایندگی در یک مجلس ملی‌اند؛ حکومت‌های منطقه‌ای اعضایش را برمی‌گزینند؛ مناطق در آن اکثریت دارند؛ آن مجلس اختیار گسترده‌ی قانون‌گذاری دارد؛ با مناطق درباره‌ی قانون‌هایی که بر آن‌ها اثر دارد مشورت می‌شود؛ بر این قانون‌ها حق وتو دارند"
+     ]
+    },
+    {
+     "key": "exec",
+     "domain": "shared",
+     "max": 2,
+     "en": "Executive control",
+     "fa": "مشارکت در اجرا",
+     "scale": [
+      "no routine meetings between central and regional governments",
+      "routine meetings without binding authority",
+      "routine meetings with binding authority"
+     ],
+     "scale_fa": [
+      "نشست منظم میان حکومت مرکزی و منطقه‌ای نیست",
+      "نشست منظم بی‌اختیار الزام‌آور",
+      "نشست منظم با اختیار الزام‌آور"
+     ]
+    },
+    {
+     "key": "fiscalctl",
+     "domain": "shared",
+     "max": 2,
+     "en": "Fiscal control",
+     "fa": "مشارکت در تقسیم درآمد",
+     "scale": [
+      "regions not consulted on the distribution of national tax revenue",
+      "they negotiate it without a veto",
+      "they have a veto"
+     ],
+     "scale_fa": [
+      "با مناطق درباره‌ی تقسیم درآمد مالیاتی ملی مشورت نمی‌شود",
+      "بی‌حق وتو درباره‌اش مذاکره می‌کنند",
+      "حق وتو دارند"
+     ]
+    },
+    {
+     "key": "borrowctl",
+     "domain": "shared",
+     "max": 2,
+     "en": "Borrowing control",
+     "fa": "مشارکت در قیدهای استقراض",
+     "scale": [
+      "regions not consulted on borrowing limits",
+      "they negotiate them without a veto",
+      "they negotiate them with a veto"
+     ],
+     "scale_fa": [
+      "با مناطق درباره‌ی قیدهای استقراض مشورت نمی‌شود",
+      "بی‌حق وتو مذاکره می‌کنند",
+      "با حق وتو مذاکره می‌کنند"
+     ]
+    },
+    {
+     "key": "constit",
+     "domain": "shared",
+     "max": 4,
+     "en": "Constitutional reform",
+     "fa": "بازنگری قانون اساسی",
+     "scale": [
+      "the centre or the national electorate can change the constitution alone",
+      "a chamber of regional representation can delay or force a referendum",
+      "regional governments can delay or force a referendum",
+      "a chamber of regional representation can veto, or a referendum needs a majority of regions",
+      "regional governments or their representatives can veto"
+     ],
+     "scale_fa": [
+      "مرکز یا رای‌دهندگان سراسری به‌تنهایی می‌توانند قانون اساسی را تغییر دهند",
+      "مجلس نمایندگی منطقه‌ای می‌تواند به تعویق بیندازد یا همه‌پرسی بخواهد",
+      "حکومت‌های منطقه‌ای می‌توانند به تعویق بیندازند یا همه‌پرسی بخواهند",
+      "مجلس نمایندگی منطقه‌ای حق وتو دارد، یا همه‌پرسی اکثریت مناطق را می‌خواهد",
+      "حکومت‌های منطقه‌ای یا نمایندگانشان حق وتو دارند"
+     ]
+    }
+   ]
+  }
+ }
 }

@@ -20,6 +20,11 @@
     "capital",
     "tranprov",
     "referen"
+   ],
+   "x": [
+    "ccp:democ",
+    "cap:2014",
+    "cap:2030"
    ]
   },
   {
@@ -31,6 +36,9 @@
     "equalgr1",
     "lhquota",
     "uhquota"
+   ],
+   "x": [
+    "cap:700"
    ]
   },
   {
@@ -49,6 +57,10 @@
    "topics": [
     "sub",
     "fedsep"
+   ],
+   "x": [
+    "cap:2001",
+    "ps:state"
    ]
   },
   {
@@ -56,6 +68,11 @@
    "sha": "900b6a89e37c8abb",
    "topics": [
     "lang"
+   ],
+   "x": [
+    "lang:list",
+    "lang:offsub",
+    "lang:multi"
    ]
   },
   {
@@ -63,6 +80,9 @@
    "sha": "688eeb6e6aad39fd",
    "topics": [
     "intlaw"
+   ],
+   "x": [
+    "ccp:rulelaw"
    ]
   },
   {
@@ -100,7 +120,10 @@
   {
    "n": 10,
    "sha": "489a0d04ad7e9187",
-   "topics": []
+   "topics": [],
+   "x": [
+    "ccp:rulelaw"
+   ]
   },
   {
    "n": 11,
@@ -119,18 +142,27 @@
    "topics": [
     "childpro",
     "equalgr16"
+   ],
+   "x": [
+    "cap:1207"
    ]
   },
   {
    "n": 13,
    "sha": "1bf345d8dbd3156d",
-   "topics": []
+   "topics": [],
+   "x": [
+    "cap:1303"
+   ]
   },
   {
    "n": 14,
    "sha": "72f89d39bba0db87",
    "topics": [
     "standliv"
+   ],
+   "x": [
+    "cap:1302"
    ]
   },
   {
@@ -147,6 +179,9 @@
     "fndfam",
     "marriage",
     "civmar"
+   ],
+   "x": [
+    "cap:1208"
    ]
   },
   {
@@ -181,6 +216,10 @@
    "sha": "31e1e59ca905f7c9",
    "topics": [
     "langprot"
+   ],
+   "x": [
+    "lang:freeuse",
+    "lang:sign"
    ]
   },
   {
@@ -189,6 +228,9 @@
    "topics": [
     "edfree",
     "achighed"
+   ],
+   "x": [
+    "cap:600"
    ]
   },
   {
@@ -196,6 +238,9 @@
    "sha": "63ac52a0ee27664d",
    "topics": [
     "acfree"
+   ],
+   "x": [
+    "cap:601"
    ]
   },
   {
@@ -203,6 +248,9 @@
    "sha": "27daf1ada4a08877",
    "topics": [
     "artists"
+   ],
+   "x": [
+    "cap:2300"
    ]
   },
   {
@@ -257,6 +305,9 @@
    "topics": [
     "jointrde",
     "strike"
+   ],
+   "x": [
+    "cap:504"
    ]
   },
   {
@@ -336,6 +387,9 @@
    "sha": "43c5a6c3193f4fbf",
    "topics": [
     "citizen"
+   ],
+   "x": [
+    "cap:900"
    ]
   },
   {
@@ -346,7 +400,13 @@
     "natcit",
     "citrev",
     "asylum"
-   ]
+   ],
+   "x": [
+    "cap:900"
+   ],
+   "lv": {
+    "cap:900": "P"
+   }
   },
   {
    "n": 42,
@@ -361,12 +421,24 @@
    "topics": [
     "camppubf",
     "partreg"
-   ]
+   ],
+   "x": [
+    "cap:2012"
+   ],
+   "lv": {
+    "cap:2012": "N"
+   }
   },
   {
    "n": 44,
    "sha": "f9cdfad27141c312",
-   "topics": []
+   "topics": [],
+   "x": [
+    "cap:1929"
+   ],
+   "lv": {
+    "cap:1929": "N"
+   }
   },
   {
    "n": 45,
@@ -378,13 +450,25 @@
     "finsup3",
     "finsup4",
     "standliv"
-   ]
+   ],
+   "x": [
+    "ccp:socsec",
+    "cap:1300",
+    "cap:300"
+   ],
+   "lv": {
+    "cap:1300": "C",
+    "cap:300": "C"
+   }
   },
   {
    "n": 46,
    "sha": "f3c010cf1ab0521d",
    "topics": [
     "fedsep"
+   ],
+   "x": [
+    "cap:2001"
    ]
   },
   {
@@ -392,6 +476,9 @@
    "sha": "369b441d0ab27dfa",
    "topics": [
     "fedsep"
+   ],
+   "x": [
+    "cap:2001"
    ]
   },
   {
@@ -400,6 +487,9 @@
    "topics": [
     "fedsep",
     "sub"
+   ],
+   "x": [
+    "cap:2001"
    ]
   },
   {
@@ -408,6 +498,9 @@
    "topics": [
     "fedsep",
     "sub"
+   ],
+   "x": [
+    "cap:2001"
    ]
   },
   {
@@ -415,6 +508,9 @@
    "sha": "0de997f899baaf47",
    "topics": [
     "sub"
+   ],
+   "x": [
+    "cap:2001"
    ]
   },
   {
@@ -422,6 +518,9 @@
    "sha": "caef1605ecc00f06",
    "topics": [
     "fedsep"
+   ],
+   "x": [
+    "cap:2001"
    ]
   },
   {
@@ -429,6 +528,9 @@
    "sha": "2d7d3576359b4620",
    "topics": [
     "sub"
+   ],
+   "x": [
+    "cap:2001"
    ]
   },
   {
@@ -436,6 +538,9 @@
    "sha": "df01464b9d881a7a",
    "topics": [
     "sub"
+   ],
+   "x": [
+    "cap:2001"
    ]
   },
   {
@@ -444,6 +549,9 @@
    "topics": [
     "fedsep",
     "fedrev"
+   ],
+   "x": [
+    "cap:2001"
    ]
   },
   {
@@ -451,7 +559,32 @@
    "sha": "c605cc77e5785102",
    "topics": [
     "mun"
-   ]
+   ],
+   "x": [
+    "cap:2001",
+    "ps:muni",
+    "ps:subpolice",
+    "cap:602",
+    "cap:1526",
+    "cap:1000",
+    "cap:2104",
+    "cap:800",
+    "cap:400",
+    "cap:1400",
+    "cap:703",
+    "cap:1227"
+   ],
+   "lv": {
+    "cap:602": "L",
+    "cap:1526": "L",
+    "cap:1000": "L",
+    "cap:2104": "L",
+    "cap:800": "L",
+    "cap:400": "L",
+    "cap:1400": "L",
+    "cap:703": "L",
+    "cap:1227": "L"
+   }
   },
   {
    "n": 56,
@@ -459,6 +592,9 @@
    "topics": [
     "sub",
     "fedrev"
+   ],
+   "x": [
+    "cap:2001"
    ]
   },
   {
@@ -466,6 +602,9 @@
    "sha": "8da4efa60c41a47a",
    "topics": [
     "sub"
+   ],
+   "x": [
+    "cap:2001"
    ]
   },
   {
@@ -474,6 +613,9 @@
    "topics": [
     "sub",
     "referen"
+   ],
+   "x": [
+    "cap:2001"
    ]
   },
   {
@@ -481,14 +623,27 @@
    "sha": "7ef6ca34c30e0559",
    "topics": [
     "headforn"
-   ]
+   ],
+   "x": [
+    "cap:1900"
+   ],
+   "lv": {
+    "cap:1900": "N"
+   }
   },
   {
    "n": 60,
    "sha": "39dd4b35aeb1fdae",
    "topics": [
     "sub"
-   ]
+   ],
+   "x": [
+    "cap:1900",
+    "cap:2001"
+   ],
+   "lv": {
+    "cap:1900": "N"
+   }
   },
   {
    "n": 61,
@@ -496,12 +651,25 @@
    "topics": [
     "treat",
     "sub"
-   ]
+   ],
+   "x": [
+    "cap:1900",
+    "cap:2001"
+   ],
+   "lv": {
+    "cap:1900": "R"
+   }
   },
   {
    "n": 62,
    "sha": "448d45182c59ddc0",
-   "topics": []
+   "topics": [],
+   "x": [
+    "cap:1227"
+   ],
+   "lv": {
+    "cap:1227": "C"
+   }
   },
   {
    "n": 63,
@@ -509,7 +677,13 @@
    "topics": [
     "milrest",
     "em"
-   ]
+   ],
+   "x": [
+    "cap:1600"
+   ],
+   "lv": {
+    "cap:1600": "N"
+   }
   },
   {
    "n": 64,
@@ -517,26 +691,51 @@
    "topics": [
     "milserv",
     "nomil"
-   ]
+   ],
+   "x": [
+    "cap:1608"
+   ],
+   "lv": {
+    "cap:1608": "NR"
+   }
   },
   {
    "n": 65,
    "sha": "4a6e36c80aa19fbd",
    "topics": [
     "milcom"
-   ]
+   ],
+   "x": [
+    "cap:1600",
+    "ps:miman"
+   ],
+   "lv": {
+    "cap:1600": "NR"
+   }
   },
   {
    "n": 66,
    "sha": "6cbe900759ec86a7",
    "topics": [
     "em"
-   ]
+   ],
+   "x": [
+    "cap:1615"
+   ],
+   "lv": {
+    "cap:1615": "N"
+   }
   },
   {
    "n": 67,
    "sha": "7fbf7c778e02715e",
-   "topics": []
+   "topics": [],
+   "x": [
+    "cap:600"
+   ],
+   "lv": {
+    "cap:600": "C"
+   }
   },
   {
    "n": 68,
@@ -544,38 +743,76 @@
    "topics": [
     "edcomp",
     "edfree"
-   ]
+   ],
+   "x": [
+    "cap:602",
+    "cap:606"
+   ],
+   "lv": {
+    "cap:602": "R",
+    "cap:606": "R"
+   }
   },
   {
    "n": 69,
    "sha": "e74fded167d8d38c",
-   "topics": []
+   "topics": [],
+   "x": [
+    "cap:604"
+   ],
+   "lv": {
+    "cap:604": "N"
+   }
   },
   {
    "n": 70,
    "sha": "c62ce5bbe69c2571",
    "topics": [
     "achighed"
-   ]
+   ],
+   "x": [
+    "cap:601"
+   ],
+   "lv": {
+    "cap:601": "C"
+   }
   },
   {
    "n": 71,
    "sha": "ee387441ef53fada",
    "topics": [
     "science"
-   ]
+   ],
+   "x": [
+    "cap:1700"
+   ],
+   "lv": {
+    "cap:1700": "N"
+   }
   },
   {
    "n": 72,
    "sha": "5fe7fec5d447a1ca",
-   "topics": []
+   "topics": [],
+   "x": [
+    "cap:604"
+   ],
+   "lv": {
+    "cap:604": "P"
+   }
   },
   {
    "n": 73,
    "sha": "c347829deaaa5f6a",
    "topics": [
     "achighed"
-   ]
+   ],
+   "x": [
+    "cap:601"
+   ],
+   "lv": {
+    "cap:601": "R"
+   }
   },
   {
    "n": 74,
@@ -589,19 +826,38 @@
    "sha": "4da59f8e1dd8c373",
    "topics": [
     "artists"
-   ]
+   ],
+   "x": [
+    "cap:2300"
+   ],
+   "lv": {
+    "cap:2300": "C"
+   }
   },
   {
    "n": 76,
    "sha": "46bfe0a2472d8b8f",
-   "topics": []
+   "topics": [],
+   "x": [
+    "cap:1526"
+   ],
+   "lv": {
+    "cap:1526": "N"
+   }
   },
   {
    "n": 77,
    "sha": "ac3749a77bd618d5",
    "topics": [
     "cultrght"
-   ]
+   ],
+   "x": [
+    "cap:2300",
+    "lang:culture"
+   ],
+   "lv": {
+    "cap:2300": "R"
+   }
   },
   {
    "n": 78,
@@ -609,14 +865,32 @@
    "topics": [
     "lang",
     "langprot"
-   ]
+   ],
+   "x": [
+    "cap:2300",
+    "lang:offsub",
+    "lang:multi",
+    "lang:minprot",
+    "lang:promote",
+    "lang:understand",
+    "lang:central"
+   ],
+   "lv": {
+    "cap:2300": "R"
+   }
   },
   {
    "n": 79,
    "sha": "e9adc38140e38dcb",
    "topics": [
     "artists"
-   ]
+   ],
+   "x": [
+    "cap:2300"
+   ],
+   "lv": {
+    "cap:2300": "N"
+   }
   },
   {
    "n": 80,
@@ -630,47 +904,91 @@
    "sha": "03803e64a5198e99",
    "topics": [
     "census"
-   ]
+   ],
+   "x": [
+    "cap:2013"
+   ],
+   "lv": {
+    "cap:2013": "N"
+   }
   },
   {
    "n": 82,
    "sha": "4ab1587937930ef6",
    "topics": [
     "env"
-   ]
+   ],
+   "x": [
+    "cap:700"
+   ],
+   "lv": {
+    "cap:700": "C"
+   }
   },
   {
    "n": 83,
    "sha": "f7293912269ff36b",
    "topics": [
     "env"
-   ]
+   ],
+   "x": [
+    "cap:700",
+    "cap:806"
+   ],
+   "lv": {
+    "cap:700": "NR",
+    "cap:806": "C"
+   }
   },
   {
    "n": 84,
    "sha": "46f0ca5aae8d2092",
    "topics": [
     "env"
-   ]
+   ],
+   "x": [
+    "cap:1403"
+   ],
+   "lv": {
+    "cap:1403": "P"
+   }
   },
   {
    "n": 85,
    "sha": "50d7610f7b9430b0",
-   "topics": []
+   "topics": [],
+   "x": [
+    "cap:1708"
+   ],
+   "lv": {
+    "cap:1708": "N"
+   }
   },
   {
    "n": 86,
    "sha": "a7e75c4e6275157d",
    "topics": [
     "env"
-   ]
+   ],
+   "x": [
+    "cap:2104"
+   ],
+   "lv": {
+    "cap:2104": "P"
+   }
   },
   {
    "n": 87,
    "sha": "4d10278ce5d97960",
    "topics": [
     "env"
-   ]
+   ],
+   "x": [
+    "cap:709"
+   ],
+   "lv": {
+    "cap:709": "P"
+   }
   },
   {
    "n": 88,
@@ -678,80 +996,180 @@
    "topics": [
     "env",
     "cultrght"
-   ]
+   ],
+   "x": [
+    "cap:2101",
+    "cap:709"
+   ],
+   "lv": {
+    "cap:2101": "R",
+    "cap:709": "N"
+   }
   },
   {
    "n": 89,
    "sha": "c0059d29271fd05d",
    "topics": [
     "env"
-   ]
+   ],
+   "x": [
+    "cap:408",
+    "cap:709"
+   ],
+   "lv": {
+    "cap:408": "P",
+    "cap:709": "P"
+   }
   },
   {
    "n": 90,
    "sha": "a9948d3c22de7636",
    "topics": [
     "env"
-   ]
+   ],
+   "x": [
+    "cap:405"
+   ],
+   "lv": {
+    "cap:405": "NR"
+   }
   },
   {
    "n": 91,
    "sha": "9a790b5bec66b367",
-   "topics": []
+   "topics": [],
+   "x": [
+    "cap:800"
+   ],
+   "lv": {
+    "cap:800": "N"
+   }
   },
   {
    "n": 92,
    "sha": "d9da937138449d85",
-   "topics": []
+   "topics": [],
+   "x": [
+    "cap:1001"
+   ],
+   "lv": {
+    "cap:1001": "C"
+   }
   },
   {
    "n": 93,
    "sha": "34c4ef2c90c181f6",
-   "topics": []
+   "topics": [],
+   "x": [
+    "cap:1002"
+   ],
+   "lv": {
+    "cap:1002": "N"
+   }
   },
   {
    "n": 94,
    "sha": "a1504fc8de6035f8",
-   "topics": []
+   "topics": [],
+   "x": [
+    "cap:1002"
+   ],
+   "lv": {
+    "cap:1002": "C"
+   }
   },
   {
    "n": 95,
    "sha": "d136d4393795f2a2",
-   "topics": []
+   "topics": [],
+   "x": [
+    "cap:1002"
+   ],
+   "lv": {
+    "cap:1002": "N"
+   }
   },
   {
    "n": 96,
    "sha": "a5179bf28dfb210a",
-   "topics": []
+   "topics": [],
+   "x": [
+    "cap:1005",
+    "cap:1003",
+    "cap:1007"
+   ],
+   "lv": {
+    "cap:1005": "N",
+    "cap:1003": "N",
+    "cap:1007": "N"
+   }
   },
   {
    "n": 97,
    "sha": "0305a7ed8b19dd2b",
-   "topics": []
+   "topics": [],
+   "x": [
+    "cap:1010"
+   ],
+   "lv": {
+    "cap:1010": "N"
+   }
   },
   {
    "n": 98,
    "sha": "25d3fda721e10256",
    "topics": [
     "env"
-   ]
+   ],
+   "x": [
+    "cap:800",
+    "cap:806",
+    "cap:807"
+   ],
+   "lv": {
+    "cap:800": "C",
+    "cap:806": "C",
+    "cap:807": "C"
+   }
   },
   {
    "n": 99,
    "sha": "3bd429c1db350c6c",
-   "topics": []
+   "topics": [],
+   "x": [
+    "cap:801"
+   ],
+   "lv": {
+    "cap:801": "N"
+   }
   },
   {
    "n": 100,
    "sha": "3ce3a7bc11c58a63",
-   "topics": []
+   "topics": [],
+   "x": [
+    "cap:802",
+    "cap:803"
+   ],
+   "lv": {
+    "cap:802": "N",
+    "cap:803": "N"
+   }
   },
   {
    "n": 101,
    "sha": "8138c5c3cddccbff",
    "topics": [
     "telecom"
-   ]
+   ],
+   "x": [
+    "cap:2003",
+    "cap:1706"
+   ],
+   "lv": {
+    "cap:2003": "N",
+    "cap:1706": "N"
+   }
   },
   {
    "n": 102,
@@ -760,59 +1178,121 @@
     "radio",
     "tv",
     "medcom"
-   ]
+   ],
+   "x": [
+    "cap:1707"
+   ],
+   "lv": {
+    "cap:1707": "N"
+   }
   },
   {
    "n": 103,
    "sha": "c9260b18d8b08817",
    "topics": [
     "freecomp"
-   ]
+   ],
+   "x": [
+    "cap:1500"
+   ],
+   "lv": {
+    "cap:1500": "C"
+   }
   },
   {
    "n": 104,
    "sha": "f200122393c70e13",
    "topics": [
     "busines"
-   ]
+   ],
+   "x": [
+    "cap:1500"
+   ],
+   "lv": {
+    "cap:1500": "N"
+   }
   },
   {
    "n": 105,
    "sha": "a0ee2909eafae607",
    "topics": [
     "freecomp"
-   ]
+   ],
+   "x": [
+    "cap:1520"
+   ],
+   "lv": {
+    "cap:1520": "N"
+   }
   },
   {
    "n": 106,
    "sha": "1ac14d24ee2106f9",
    "topics": [
     "conright"
-   ]
+   ],
+   "x": [
+    "cap:1525"
+   ],
+   "lv": {
+    "cap:1525": "N"
+   }
   },
   {
    "n": 107,
    "sha": "6ca1b8f0d2df5a5e",
-   "topics": []
+   "topics": [],
+   "x": [
+    "cap:1501",
+    "cap:1505"
+   ],
+   "lv": {
+    "cap:1501": "N",
+    "cap:1505": "N"
+   }
   },
   {
    "n": 108,
    "sha": "c21eb6c996a5f1a2",
    "topics": [
     "bank"
-   ]
+   ],
+   "x": [
+    "cap:104",
+    "cap:2006"
+   ],
+   "lv": {
+    "cap:104": "N",
+    "cap:2006": "N"
+   }
   },
   {
    "n": 109,
    "sha": "5b52eec8c2fc0828",
    "topics": [
     "econplan"
-   ]
+   ],
+   "x": [
+    "cap:100",
+    "cap:101",
+    "cap:103"
+   ],
+   "lv": {
+    "cap:100": "N",
+    "cap:101": "N",
+    "cap:103": "N"
+   }
   },
   {
    "n": 110,
    "sha": "d6620430c01ed978",
-   "topics": []
+   "topics": [],
+   "x": [
+    "cap:1800"
+   ],
+   "lv": {
+    "cap:1800": "N"
+   }
   },
   {
    "n": 111,
@@ -826,59 +1306,125 @@
    "sha": "6926123af1f80f85",
    "topics": [
     "resrce"
-   ]
+   ],
+   "x": [
+    "cap:2103",
+    "cap:803"
+   ],
+   "lv": {
+    "cap:2103": "N",
+    "cap:803": "N"
+   }
   },
   {
    "n": 113,
    "sha": "889a87e676647753",
    "topics": [
     "opgroup"
-   ]
+   ],
+   "x": [
+    "cap:108"
+   ],
+   "lv": {
+    "cap:108": "N"
+   }
   },
   {
    "n": 114,
    "sha": "b3eb40846a429a84",
-   "topics": []
+   "topics": [],
+   "x": [
+    "cap:400",
+    "cap:402",
+    "cap:403"
+   ],
+   "lv": {
+    "cap:400": "N",
+    "cap:402": "N",
+    "cap:403": "N"
+   }
   },
   {
    "n": 115,
    "sha": "9b1f5970d0567f8e",
-   "topics": []
+   "topics": [],
+   "x": [
+    "cap:400",
+    "cap:401"
+   ],
+   "lv": {
+    "cap:400": "N",
+    "cap:401": "N"
+   }
   },
   {
    "n": 116,
    "sha": "99b79a4d62040a74",
    "topics": [
     "illsub"
-   ]
+   ],
+   "x": [
+    "cap:342"
+   ],
+   "lv": {
+    "cap:342": "N"
+   }
   },
   {
    "n": 117,
    "sha": "e6192821973ce49f",
    "topics": [
     "arms"
-   ]
+   ],
+   "x": [
+    "cap:1211",
+    "cap:1606"
+   ],
+   "lv": {
+    "cap:1211": "N",
+    "cap:1606": "N"
+   }
   },
   {
    "n": 118,
    "sha": "5df4467fc95817c4",
    "topics": [
     "shelter"
-   ]
+   ],
+   "x": [
+    "cap:1400"
+   ],
+   "lv": {
+    "cap:1400": "N"
+   }
   },
   {
    "n": 119,
    "sha": "3a8ea991b4d72a4f",
    "topics": [
     "shelter"
-   ]
+   ],
+   "x": [
+    "cap:1400"
+   ],
+   "lv": {
+    "cap:1400": "N"
+   }
   },
   {
    "n": 120,
    "sha": "a5b2c33a25f49c77",
    "topics": [
     "leisure"
-   ]
+   ],
+   "x": [
+    "cap:500",
+    "cap:2030"
+   ],
+   "lv": {
+    "cap:500": "N",
+    "cap:2030": "N"
+   }
   },
   {
    "n": 121,
@@ -886,7 +1432,13 @@
    "topics": [
     "remuner",
     "opgroup"
-   ]
+   ],
+   "x": [
+    "cap:505"
+   ],
+   "lv": {
+    "cap:505": "N"
+   }
   },
   {
    "n": 122,
@@ -896,21 +1448,42 @@
     "finsup2",
     "finsup3",
     "standliv"
-   ]
+   ],
+   "x": [
+    "ccp:socsec",
+    "cap:1300",
+    "cap:503"
+   ],
+   "lv": {
+    "cap:1300": "N",
+    "cap:503": "N"
+   }
   },
   {
    "n": 123,
    "sha": "a98139b749298456",
    "topics": [
     "finsup3"
-   ]
+   ],
+   "x": [
+    "cap:1304"
+   ],
+   "lv": {
+    "cap:1304": "C"
+   }
   },
   {
    "n": 124,
    "sha": "4f80a3da38642b35",
    "topics": [
     "finsup2"
-   ]
+   ],
+   "x": [
+    "cap:500"
+   ],
+   "lv": {
+    "cap:500": "N"
+   }
   },
   {
    "n": 125,
@@ -918,28 +1491,60 @@
    "topics": [
     "finsup1",
     "finsup3"
-   ]
+   ],
+   "x": [
+    "cap:1303",
+    "cap:1304",
+    "cap:334"
+   ],
+   "lv": {
+    "cap:1303": "R",
+    "cap:1304": "R",
+    "cap:334": "R"
+   }
   },
   {
    "n": 126,
    "sha": "4f671198cc56147c",
    "topics": [
     "standliv"
-   ]
+   ],
+   "x": [
+    "cap:1302"
+   ],
+   "lv": {
+    "cap:1302": "R"
+   }
   },
   {
    "n": 127,
    "sha": "1a94373452cea421",
    "topics": [
     "finsup4"
-   ]
+   ],
+   "x": [
+    "cap:1308"
+   ],
+   "lv": {
+    "cap:1308": "N"
+   }
   },
   {
    "n": 128,
    "sha": "e7b21d7401661b42",
    "topics": [
     "health"
-   ]
+   ],
+   "x": [
+    "cap:300",
+    "cap:325",
+    "cap:323"
+   ],
+   "lv": {
+    "cap:300": "C",
+    "cap:325": "N",
+    "cap:323": "N"
+   }
   },
   {
    "n": 129,
@@ -947,7 +1552,17 @@
    "topics": [
     "health",
     "illsub"
-   ]
+   ],
+   "x": [
+    "cap:331",
+    "cap:321",
+    "cap:403"
+   ],
+   "lv": {
+    "cap:331": "N",
+    "cap:321": "N",
+    "cap:403": "N"
+   }
   },
   {
    "n": 130,
@@ -956,7 +1571,13 @@
     "science",
     "dignity",
     "privacy"
-   ]
+   ],
+   "x": [
+    "cap:398"
+   ],
+   "lv": {
+    "cap:398": "N"
+   }
   },
   {
    "n": 131,
@@ -964,52 +1585,106 @@
    "topics": [
     "dignity",
     "privacy"
-   ]
+   ],
+   "x": [
+    "cap:398"
+   ],
+   "lv": {
+    "cap:398": "N"
+   }
   },
   {
    "n": 132,
    "sha": "e676d7d36eae9e93",
    "topics": [
     "dignity"
-   ]
+   ],
+   "x": [
+    "cap:300"
+   ],
+   "lv": {
+    "cap:300": "N"
+   }
   },
   {
    "n": 133,
    "sha": "9d8003a6698fa12e",
    "topics": [
     "env"
-   ]
+   ],
+   "x": [
+    "cap:700"
+   ],
+   "lv": {
+    "cap:700": "N"
+   }
   },
   {
    "n": 134,
    "sha": "5d32b37fdabfe032",
-   "topics": []
+   "topics": [],
+   "x": [
+    "cap:1210",
+    "cap:1204"
+   ],
+   "lv": {
+    "cap:1210": "N",
+    "cap:1204": "R"
+   }
   },
   {
    "n": 135,
    "sha": "7f1f0b79c5838eff",
-   "topics": []
+   "topics": [],
+   "x": [
+    "cap:1210",
+    "cap:1205",
+    "cap:1204"
+   ],
+   "lv": {
+    "cap:1210": "N",
+    "cap:1205": "R",
+    "cap:1204": "R"
+   }
   },
   {
    "n": 136,
    "sha": "687217633551eff3",
    "topics": [
     "asylum"
-   ]
+   ],
+   "x": [
+    "cap:900"
+   ],
+   "lv": {
+    "cap:900": "N"
+   }
   },
   {
    "n": 137,
    "sha": "e86872dca4bb8d16",
    "topics": [
     "balbudgt"
-   ]
+   ],
+   "x": [
+    "cap:105"
+   ],
+   "lv": {
+    "cap:105": "C"
+   }
   },
   {
    "n": 138,
    "sha": "9d34c3adbce9137b",
    "topics": [
     "tax"
-   ]
+   ],
+   "x": [
+    "cap:107"
+   ],
+   "lv": {
+    "cap:107": "N"
+   }
   },
   {
    "n": 139,
@@ -1017,28 +1692,56 @@
    "topics": [
     "tax",
     "taxes"
-   ]
+   ],
+   "x": [
+    "cap:107",
+    "cap:2009",
+    "ps:subtax"
+   ],
+   "lv": {
+    "cap:107": "C",
+    "cap:2009": "L"
+   }
   },
   {
    "n": 140,
    "sha": "83c7caea28d31501",
    "topics": [
     "tax"
-   ]
+   ],
+   "x": [
+    "cap:107",
+    "cap:2001"
+   ],
+   "lv": {
+    "cap:107": "P"
+   }
   },
   {
    "n": 141,
    "sha": "9aeeaa7e45e4e002",
    "topics": [
     "tax"
-   ]
+   ],
+   "x": [
+    "cap:107"
+   ],
+   "lv": {
+    "cap:107": "N"
+   }
   },
   {
    "n": 142,
    "sha": "baa2b22671db1301",
    "topics": [
     "tax"
-   ]
+   ],
+   "x": [
+    "cap:1807"
+   ],
+   "lv": {
+    "cap:1807": "N"
+   }
   },
   {
    "n": 143,
@@ -1046,6 +1749,9 @@
    "topics": [
     "sub",
     "opgroup"
+   ],
+   "x": [
+    "cap:2001"
    ]
   },
   {
@@ -1130,14 +1836,26 @@
   {
    "n": 153,
    "sha": "a59a432d7e76290f",
-   "topics": []
+   "topics": [],
+   "x": [
+    "cap:2015"
+   ],
+   "lv": {
+    "cap:2015": "N"
+   }
   },
   {
    "n": 154,
    "sha": "18348ca459f9717b",
    "topics": [
     "civil"
-   ]
+   ],
+   "x": [
+    "cap:2004"
+   ],
+   "lv": {
+    "cap:2004": "N"
+   }
   },
   {
    "n": 155,
@@ -1161,6 +1879,9 @@
     "lhterm",
     "electsch",
     "lhseats"
+   ],
+   "x": [
+    "ps:j63"
    ]
   },
   {
@@ -1171,6 +1892,9 @@
     "uhseats",
     "uhterm",
     "electsch"
+   ],
+   "x": [
+    "ps:stconst"
    ]
   },
   {
@@ -1273,14 +1997,26 @@
    "sha": "2706a0fe1078414f",
    "topics": [
     "treat"
-   ]
+   ],
+   "x": [
+    "cap:1900"
+   ],
+   "lv": {
+    "cap:1900": "N"
+   }
   },
   {
    "n": 173,
    "sha": "ab36a32037a604a9",
    "topics": [
     "budget"
-   ]
+   ],
+   "x": [
+    "cap:105"
+   ],
+   "lv": {
+    "cap:105": "N"
+   }
   },
   {
    "n": 174,
@@ -1316,6 +2052,9 @@
    "sha": "2145730eb6465f3e",
    "topics": [
     "fedrev"
+   ],
+   "x": [
+    "cap:2001"
    ]
   },
   {
@@ -1324,7 +2063,13 @@
    "topics": [
     "em",
     "initiat"
-   ]
+   ],
+   "x": [
+    "cap:1600"
+   ],
+   "lv": {
+    "cap:1600": "N"
+   }
   },
   {
    "n": 180,
@@ -1340,6 +2085,10 @@
     "cabinet",
     "cabsel",
     "cabrest"
+   ],
+   "x": [
+    "ps:gcman",
+    "ps:j8"
    ]
   },
   {
@@ -1364,7 +2113,13 @@
    "sha": "fc7dd571cfe2d5f1",
    "topics": [
     "civil"
-   ]
+   ],
+   "x": [
+    "cap:2002"
+   ],
+   "lv": {
+    "cap:2002": "N"
+   }
   },
   {
    "n": 185,
@@ -1392,7 +2147,13 @@
    "sha": "58dfd7be93a1c7b3",
    "topics": [
     "budget"
-   ]
+   ],
+   "x": [
+    "cap:105"
+   ],
+   "lv": {
+    "cap:105": "N"
+   }
   },
   {
    "n": 189,
@@ -1400,20 +2161,37 @@
    "topics": [
     "headforn",
     "treat"
-   ]
+   ],
+   "x": [
+    "cap:1900"
+   ],
+   "lv": {
+    "cap:1900": "N"
+   }
   },
   {
    "n": 190,
    "sha": "5216e305d1ec487c",
    "topics": [
     "em"
-   ]
+   ],
+   "x": [
+    "cap:1600",
+    "cap:1227"
+   ],
+   "lv": {
+    "cap:1600": "N",
+    "cap:1227": "N"
+   }
   },
   {
    "n": 191,
    "sha": "df7d89f3333254c7",
    "topics": [
     "fedrev"
+   ],
+   "x": [
+    "cap:2001"
    ]
   },
   {
@@ -1459,7 +2237,13 @@
    "topics": [
     "ordsel",
     "levjud"
-   ]
+   ],
+   "x": [
+    "cap:1204"
+   ],
+   "lv": {
+    "cap:1204": "R"
+   }
   },
   {
    "n": 198,
@@ -1507,8 +2291,8 @@
   "publish": true,
   "notes": "Published unreviewed at the user's call (2026-10-03); the page says it is not yet reviewed."
  },
- "note_fa": "ساختار و عنوان اصول این پیش‌نویس تقریبن اصل به اصل از قانون اساسی فدرال سوئیس (۱۹۹۹) پیروی می‌کند. اصل ۱ («مردم ایالات … ایالات متحده ایران را تشکیل می‌دهند») و اصل ۲ (اهداف) همان اصل‌های ۱ و ۲ سوئیس‌اند؛ اصل‌های ۶ و ۷ (حکومت قانون، مسئولیت فردی و جمعی) همان ۵ و ۶؛ پارلمان با دو مجلس هم‌تراز، حکومت جمعی که پارلمان برمی‌گزیند و ریاست یک‌ساله‌ی چرخشی، دیوان عالی واحد، و اصل‌هایی درباره‌ی شکار و ماهی‌گیری، حمایت از حیوانات، الکل، سلاح، پزشکی تولید مثل، پیوند اعضا و مهندسی ژنتیک نیز همان الگو را دارند. جاهایی که پیش‌نویس از الگو جدا می‌شود: حق جدایی ایالت‌ها (اصل ۱)، نیمی از کرسی‌ها و مقام‌ها برای زنان (اصل ۲)، سقف ده‌برابری دستمزد (اصل‌های ۱۲۱ و ۱۵۴) و ممنوعیت سلاح برای افراد (اصل ۱۱۷). مقایسه از روی حافظه‌ی متن سوئیس انجام شده، نه با متن کنار متن.",
- "note_en": "The draft's structure and article titles follow the Swiss Federal Constitution of 1999 almost article by article. Art. 1 (“the people of the states … form the United States of Iran”) and Art. 2 (aims) are Swiss Arts. 1 and 2; Arts. 6–7 (rule of law, individual and collective responsibility) are Swiss Arts. 5–6; so are the two equal chambers, a collegial government elected by parliament with a one-year rotating presidency, a single supreme court, and articles on hunting and fishing, animal protection, alcohol, weapons, reproductive medicine, transplants and gene technology. Where it departs: a right of secession (Art. 1), half of all seats and offices for women (Art. 2), a tenfold cap on pay (Arts. 121, 154) and a ban on private weapons (Art. 117). The comparison was made from memory of the Swiss text, not side by side.",
+ "note_fa": "ساختار و عنوان اصول این پیش‌نویس تقریبن اصل به اصل از قانون اساسی فدرال سوئیس (۱۹۹۹) پیروی می‌کند. اصل ۱ («مردم ایالات … ایالات متحده ایران را تشکیل می‌دهند») و اصل ۲ (اهداف) همان اصل‌های ۱ و ۲ سوئیس‌اند؛ اصل‌های ۶ و ۷ (حکومت قانون، مسئولیت فردی و جمعی) همان ۵ و ۶؛ پارلمان با دو مجلس هم‌تراز، حکومت جمعی که پارلمان برمی‌گزیند و ریاست یک‌ساله‌ی چرخشی، دیوان عالی واحد، و اصل‌هایی درباره‌ی شکار و ماهی‌گیری، حمایت از حیوانات، الکل، سلاح، پزشکی تولید مثل، پیوند اعضا و مهندسی ژنتیک نیز همان الگو را دارند. جاهایی که پیش‌نویس از الگو جدا می‌شود: حق جدایی ایالت‌ها (اصل ۱)، نیمی از کرسی‌ها و مقام‌ها برای زنان (اصل ۲)، سقف ده‌برابری دستمزد (اصل‌های ۱۲۱ و ۱۵۴) و ممنوعیت سلاح برای افراد (اصل ۱۱۷). دو تغییر برای ایالت‌ها مهم است: اصل ۷۸ بندهای ۲ تا ۴ اصل ۷۰ سوئیس درباره‌ی زبان‌ها را برداشته اما بند ۱، یعنی زبان‌های رسمی خود جمهوری مشترک فدرال، را کنار گذاشته است، پس پیش‌نویس هیچ‌جا نمی‌گوید پارلمان، حکومت و دادگاه‌های فدرال به چه زبانی کار می‌کنند؛ و اصل ۱۹۱ اعتبار هر مصوبه‌ی ایالتی را به تایید فدرال وابسته می‌کند، در حالی که بند ۲ اصل ۱۸۶ سوئیس تنها جایی تایید می‌خواهد که قانون فدرال لازم بداند. اصل ۳۲ هم قید «استثنایی» را از حد استثناهای دسترسی به دادگاه (اصل ۲۹a سوئیس) انداخته است. با متن انگلیسی قانون اساسی سوئیس در fedlex.admin.ch (نسخه‌ی ۳ مارس ۲۰۲۴) سنجیده شد.",
+ "note_en": "The draft's structure and article titles follow the Swiss Federal Constitution of 1999 almost article by article. Art. 1 (“the people of the states … form the United States of Iran”) and Art. 2 (aims) are Swiss Arts. 1 and 2; Arts. 6–7 (rule of law, individual and collective responsibility) are Swiss Arts. 5–6; so are the two equal chambers, a collegial government elected by parliament with a one-year rotating presidency, a single supreme court, and articles on hunting and fishing, animal protection, alcohol, weapons, reproductive medicine, transplants and gene technology. Where it departs: a right of secession (Art. 1), half of all seats and offices for women (Art. 2), a tenfold cap on pay (Arts. 121, 154) and a ban on private weapons (Art. 117). Two changes matter for the states: Art. 78 copies Swiss Art. 70(2)–(4) on languages but leaves out 70(1), the federation's own official languages, so the draft never says what language the federal parliament, government and courts use; and Art. 191 makes every state enactment depend on federal approval, where Swiss Art. 186(2) requires approval only when federal law says so. Art. 32 also drops “exceptional” from the Swiss limit on exceptions to court access (Art. 29a). Checked against the English text of the Swiss constitution on fedlex.admin.ch (version of 3 March 2024).",
  "findings": [
   {
    "fa": "نهاد ناظر مستقل ندارد: نه بازرس عمومی (Ombudsman)، نه کمیسیون حقوق بشر، نه نهادی برای مبارزه با فساد.",
@@ -1626,6 +2410,144 @@
     158,
     181
    ]
+  },
+  {
+   "fa": "زبان رسمی نهادهای فدرال تعیین نشده است: اصل ۷۸ از اصل ۷۰ سوئیس پیروی می‌کند اما بند زبان‌های رسمی خود فدراسیون را ندارد. آموزش، دادگاه و اداره به زبان‌های اقلیت درون یک ایالت هم تضمین فدرال ندارد.",
+   "en": "No official language for the federal institutions: Art. 78 follows Swiss Art. 70 but leaves out its paragraph on the federation's own official languages. Schooling, courts and administration in minority languages within a state have no federal guarantee either.",
+   "topics": [
+    "lang"
+   ],
+   "articles": [
+    5,
+    78
+   ]
   }
- ]
+ ],
+ "extra": {
+  "version": "114ff5a618d9",
+  "prompt_version": "session-1-extra+own",
+  "model": "claude-opus-5-5",
+  "by": "claude-code session 2026-10-03",
+  "note": "Tagged against the Sartori layers from the same text. cap: the policy field an article governs, at any level; CAP's Civil Rights heading is not used (Constitute codes rights in detail), nor are codes for the state's own machinery. ps: only where the article lays down the rule. ccp: democracy, rule of law, social security. Borderline, left untagged: the double majority of people and states for amendments (148–149) is not Juon's territorial veto, which belongs to a minority's own units; the rotating presidency (182) rotates among ministers, not groups or regions. Not yet reviewed. Our own vocabularies (2026-10-03): lv gives, for each policy-field tag of an article that assigns the field, who holds it (N national, NR national law/regional execution, P national principles/regional detail, C shared, R regional, L local); rights and aims carry no level. Art. 55's list of municipal tasks and the states' courts (art. 197) were tagged for this. lang: only provisions the article makes; art. 34's 'in an understandable way' is not a language rule and is left out. rai: scored for the states, with the articles each score rests on."
+ },
+ "rai": {
+  "unit": {
+   "en": "the states (ایالت), the draft's only regional tier",
+   "fa": "ایالت‌ها، تنها سطح منطقه‌ای پیش‌نویس"
+  },
+  "dims": {
+   "instdepth": {
+    "score": 2,
+    "articles": [
+     4,
+     56,
+     191
+    ],
+    "en": "States are autonomous in everything not given to the federation and have their own parliament, government and courts (art. 4). But every state enactment needs the federal government's approval to be valid (art. 191), and state constitutions need federal approval (art. 56): a central veto.",
+    "fa": "ایالت‌ها در هر چه به جمهوری مشترک فدرال واگذار نشده خودمختارند و مجلس، حکومت و دادگاه خود را دارند (اصل ۴). اما هر مصوبه‌ی ایالتی برای اعتبار به تایید حکومت فدرال نیاز دارد (اصل ۱۹۱) و قانون اساسی ایالت هم به تایید فدرال (اصل ۵۶): حق وتوی مرکز."
+   },
+   "policy": {
+    "score": 4,
+    "articles": [
+     4,
+     41,
+     55,
+     56,
+     62,
+     68,
+     77,
+     125,
+     126
+    ],
+    "en": "Residual powers (art. 4), own constitution and institutions (56), local government (55) and police (62), with schools and culture (68, 77) and care and welfare for the needy (125, 126); states also naturalise foreigners within federal minimum conditions (41). Economic policy is almost wholly federal (103–115), which does not lower the score because two of the three policy areas suffice.",
+    "fa": "اختیارات باقی‌مانده (اصل ۴)، قانون اساسی و نهادهای خود (۵۶)، حکومت محلی (۵۵) و پلیس (۶۲)، همراه با مدرسه و فرهنگ (۶۸، ۷۷) و مراقبت و کمک به نیازمندان (۱۲۵، ۱۲۶)؛ ایالت‌ها با حداقل شرایط فدرال به بیگانگان تابعیت هم می‌دهند (۴۱). سیاست اقتصادی تقریبن یک‌سره فدرال است (۱۰۳ تا ۱۱۵)، که نمره را پایین نمی‌آورد، چون دو حوزه از سه حوزه بس است."
+   },
+   "fiscal": {
+    "score": 3,
+    "articles": [
+     139,
+     140
+    ],
+    "en": "Income and wealth tax is shared: each level sets its own rate (art. 139), but the federation harmonises who pays, what is taxed and the tax period (art. 140), so the states set the rate of a major tax, not its base.",
+    "fa": "مالیات بر درآمد و دارایی مشترک است: هر سطح نرخ خود را تعیین می‌کند (اصل ۱۳۹)، اما مشمول، موضوع و دوره‌ی مالیات را جمهوری مشترک فدرال هماهنگ می‌کند (اصل ۱۴۰)، پس ایالت‌ها نرخ یک مالیات بزرگ را تعیین می‌کنند، نه پایه‌اش را."
+   },
+   "borrow": {
+    "score": 2,
+    "articles": [
+     137
+    ],
+    "en": "The draft does not mention borrowing. Every level must balance its income and spending, with details by law (art. 137): a central limit without prior approval. Scored from that one clause; review.",
+    "fa": "پیش‌نویس از استقراض نامی نمی‌برد. هر سطح باید درآمد و هزینه‌اش را متعادل نگه دارد و جزئیات با قانون است (اصل ۱۳۷): قیدی از مرکز، بی‌تایید پیشین. نمره از همین یک بند است؛ بازبینی شود."
+   },
+   "repr": {
+    "score": 4,
+    "articles": [
+     1,
+     4,
+     56
+    ],
+    "en": "Each state is a democratic republic with its own parliament and government (arts. 1, 4) under a constitution its people approve (56), with no central appointment. The text does not say how state parliaments are elected or state governments chosen; 2 + 2 is inferred.",
+    "fa": "هر ایالت جمهوری‌ای دموکراتیک با مجلس و حکومت خود است (اصل‌های ۱ و ۴) با قانون اساسی‌ای که مردمش تایید می‌کنند (۵۶)، و مرکز کسی را منصوب نمی‌کند. متن نمی‌گوید مجلس ایالت چطور انتخاب و حکومتش چطور برگزیده می‌شود؛ ۲ + ۲ استنباط است."
+   },
+   "lawmaking": {
+    "score": 2,
+    "articles": [
+     50,
+     155,
+     156,
+     158,
+     163
+    ],
+    "en": "The senate is made of three representatives per state (art. 158), has equal rights with the lower chamber (156) and every law needs both (163); states are consulted on laws that affect them (50, 155). States set how their senators are elected, but do not designate them as governments. Capped at 2.",
+    "fa": "سنا از سه نماینده‌ی هر ایالت تشکیل می‌شود (اصل ۱۵۸)، با مجلس هم‌حقوق است (۱۵۶) و هر قانونی به تصویب هر دو نیاز دارد (۱۶۳)؛ با ایالت‌ها درباره‌ی قانون‌هایی که بر آن‌ها اثر دارد مشورت می‌شود (۵۰، ۱۵۵). ایالت‌ها شیوه‌ی انتخاب سناتورها را تعیین می‌کنند، اما حکومت‌هایشان آن‌ها را منصوب نمی‌کنند. سقف ۲."
+   },
+   "exec": {
+    "score": 1,
+    "articles": [
+     49,
+     50,
+     60,
+     67,
+     70
+    ],
+    "en": "The federation must inform and consult the states (arts. 50, 60) and they cooperate through joint bodies in education (67, 70), but no routine intergovernmental council with binding decisions is set up.",
+    "fa": "جمهوری مشترک فدرال باید ایالت‌ها را آگاه کند و با آن‌ها مشورت کند (اصل‌های ۵۰ و ۶۰) و در آموزش نهادهای مشترک دارند (۶۷، ۷۰)، اما شورای منظمی میان حکومت‌ها با تصمیم الزام‌آور پیش‌بینی نشده است."
+   },
+   "fiscalctl": {
+    "score": 2,
+    "articles": [
+     143,
+     158,
+     163
+    ],
+    "en": "Fiscal equalisation between the federation and the states is set by federal law (art. 143), which the senate of state representatives can block (158, 163).",
+    "fa": "توازن مالی میان جمهوری مشترک فدرال و ایالت‌ها با قانون فدرال تعیین می‌شود (اصل ۱۴۳) که سنای نمایندگان ایالت‌ها می‌تواند جلویش را بگیرد (۱۵۸، ۱۶۳)."
+   },
+   "borrowctl": {
+    "score": 0,
+    "articles": [],
+    "en": "Nothing on borrowing limits or on the states' say in them.",
+    "fa": "درباره‌ی قیدهای استقراض یا نقش ایالت‌ها در آن چیزی نیامده است."
+   },
+   "constit": {
+    "score": 3,
+    "articles": [
+     58,
+     148,
+     149,
+     158,
+     199
+    ],
+    "en": "Amending the federal constitution needs a majority of voters and a majority of states, each state's vote being its people's result (arts. 148–149), and passes through the senate like a law (199); a state's territory changes only with its citizens' consent (58). The states' governments themselves have no veto, which 4 would need.",
+    "fa": "بازنگری قانون اساسی فدرال به اکثریت رای‌دهندگان و اکثریت ایالت‌ها نیاز دارد و رای هر ایالت نتیجه‌ی رای مردم آن است (اصل‌های ۱۴۸ و ۱۴۹)، و مانند قانون از سنا می‌گذرد (۱۹۹)؛ قلمرو یک ایالت تنها با رضایت شهروندانش تغییر می‌کند (۵۸). خود حکومت‌های ایالتی حق وتو ندارند، که برای نمره‌ی ۴ لازم است."
+   }
+  },
+  "self": 15,
+  "shared": 8,
+  "total": 23,
+  "finding": {
+   "en": "The main brake on the states is art. 191: every state enactment needs the federal government's approval to be valid. Swiss Art. 186(2), which it follows, requires approval only when federal law says so.",
+   "fa": "مهم‌ترین ترمز بر ایالت‌ها اصل ۱۹۱ است: هر مصوبه‌ی ایالتی برای اعتبار به تایید حکومت فدرال نیاز دارد. بند ۲ اصل ۱۸۶ سوئیس، که الگوی این اصل است، تنها جایی تایید می‌خواهد که قانون فدرال لازم بداند."
+  }
+ }
 }
