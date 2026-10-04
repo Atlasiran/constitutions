@@ -1,4 +1,4 @@
-/* Qanun Atlas. Every rule is scoped under .qa-root so the module can sit inside
+/* Constitutions Atlas. Every rule is scoped under .qa-root so the module can sit inside
    another site (Atlas) without leaking styles either way. Theme: data-theme on
    .qa-root ("light"/"dark"); without it, the OS preference applies. */
 .qa-root{

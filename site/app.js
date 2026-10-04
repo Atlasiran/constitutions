@@ -1,4 +1,4 @@
-/* Qanun Atlas as a mountable module.
+/* Constitutions Atlas as a mountable module.
 
      import { mount } from "./app.js";
      mount(el, { lang: "fa", theme: "atlas", embedded: true });
@@ -106,7 +106,7 @@ const T={
    vtitle:"The vocabulary",vsub:n=>"All "+n+" topics, by vocabulary and subject: each with its definition and, for Constitute's, the question its coders ask of every constitution. Under each topic: the documents published here that provide for it.",
    vq:"Coding question",vdocs:"Provided for in",vnone:"No published document yet.",vdraft:"Persian name: draft",
    prog:(a,b)=>a+" of "+b+" constitutions and drafts done so far. The others are queued and follow one by one; the federal drafts come next.",queued:"queued",
-   title:"Qanun Atlas",
+   title:"Constitutions Atlas",
    lede:"Every known draft constitution for Iran, from the 1906 Fundamental Law to the transitional charters of 2020 — <em>extracted, split into articles, and made comparable</em>. Texts appear exactly as their authors wrote them; nothing here is ranked or endorsed. Alongside them, and kept apart: the bylaws, programmes and charters of organisations in Atlas, and two treatises, each compared only with its own kind.",
    sub:"Iranian constitutional drafts",
    enacted:"Enacted or historical",proposed:"Proposed constitutions",trans:"Transitional & programmatic",
@@ -225,7 +225,7 @@ const T={
    vtitle:"واژگان",vsub:n=>"همه‌ی "+num2(n)+" موضوع، بر پایه‌ی واژگان و موضوع اصلی: هر یک با تعریفش و، برای موضوع‌های Constitute، پرسشی که کدگذاران آن از هر قانون اساسی می‌پرسند. زیر هر موضوع: سندهای منتشرشده در این‌جا که درباره‌ی آن حکم می‌کنند.",
    vq:"پرسش کدگذاری",vdocs:"آمده در",vnone:"هنوز در هیچ سند منتشرشده‌ای نیامده.",vdraft:"نام فارسی: پیش‌نویس",
    prog:(a,b)=>"تاکنون "+num2(a)+" سند از "+num2(b)+" قانون اساسی و پیش‌نویس بررسی شده است. بقیه در نوبت‌اند و یکی‌یکی می‌آیند؛ نوبت بعد با پیش‌نویس‌های فدرال است.",queued:"در نوبت",
-   title:"اسناد بنیادین",
+   title:"اطلس اسناد بنیادین",
    lede:"همه‌ی پیش‌نویس‌های شناخته‌شده‌ی قانون اساسی برای ایران، از قانون اساسی مشروطه تا منشورهای دوران گذار — <em>استخراج‌شده، تفکیک‌شده به اصول، و قابل مقایسه</em>. متن‌ها همان‌گونه‌اند که نویسندگانشان نوشته‌اند؛ هیچ‌چیز در اینجا رتبه‌بندی یا تأیید نشده است. در کنار آن‌ها و جدا از آن‌ها: اساس‌نامه‌ها، برنامه‌ها و منشورهای سازمان‌های اطلس و دو رساله، که هر یک تنها با هم‌گونه‌های خود سنجیده می‌شوند.",
    sub:"پیش‌نویس‌های قانون اساسی ایران",
    enacted:"مصوب یا تاریخی",proposed:"پیش‌نویس‌های پیشنهادی",trans:"دوران گذار و برنامه‌ها",

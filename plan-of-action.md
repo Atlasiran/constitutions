@@ -29,7 +29,7 @@ Atlasiran/Atlas-website            ← main site (AtlasIran.org)
 | Repo | Local path | Remote | Stack | Deploy |
 |---|---|---|---|---|
 | Atlas | `~/Development/TCF-IT-Projects/Atlas-website` | `github.com/Atlasiran/Atlas-website` | SvelteKit 2 (Svelte 4), Tailwind 3, MDsveX, Supabase | GitHub Pages (`ADAPTER=static`, custom domain atlasiran.org, base `''`) + Cloudflare |
-| constitutions | `~/Development/TCF-IT-Projects/constitutions` | `github.com/Atlasiran/constitutions` (public, AGPL-3.0) | Python pipeline + a single-file vanilla JS site (`site/index.html`, "Qanun Atlas") | Cloudflare Pages project `qanun-atlas-dev` (standalone preview) |
+| constitutions | `~/Development/TCF-IT-Projects/constitutions` | `github.com/Atlasiran/constitutions` (public, AGPL-3.0) | Python pipeline + a single-file vanilla JS site (`site/index.html`, "Constitutions Atlas") | Cloudflare Pages project `Constitutions-atlas-dev` (standalone preview) |
 | normalcy | `~/Development/IV/normalcy` | `github.com/jomhoor/normalcy` | Cloudflare Worker (TypeScript), `@anthropic-ai/sdk` | **normalcy.is** (domain added in Cloudflare; Worker route not configured yet) |
 
 **Who uses what:**
@@ -92,7 +92,7 @@ Atlasiran/Atlas-website            ← main site (AtlasIran.org)
 | Constitutions repo | `Atlasiran/constitutions`, public (AGPL like Atlas) |
 | Integration into Atlas | The constitutions UI is refactored into `app.js` exporting `mount(el, { lang, base, dataUrl })`. An Atlas route `src/routes/constitutions/+page.svelte` renders Atlas's header and footer and calls `mount()`. Build output is copied to `static/constitutions/` before the Vite build. All URLs are relative to `base`. |
 | Styling | `atlas-theme.css` in constitutions mirrors Atlas's tokens. All CSS is scoped under `.qa-root`. Persian is the default when embedded. |
-| Tab name | «اسناد بنیادین» |
+| Tab name | «اطلس اسناد بنیادین» |
 | Treatises | Their own comparison group D (Yek Kalameh, Velayat-e Faqih), not compared with constitutions |
 | Source PDFs | Plain git (no LFS; GitHub Pages can't serve LFS files) |
 | مرامنامه (coc) | Grouped with charters/programmes, **not** with bylaws |
@@ -284,7 +284,7 @@ Status values: ☐ to do · ◐ in progress · ☑ done
 |---|---|---|
 | 3.1 | Refactor the site into `app.js` + `mount()`, add `atlas-theme.css`, scope CSS under `.qa-root`, Persian default | ☑ `0f8c94f`…`affa214` |
 | 3.2 | Build step producing `dist/` + `org-index.json` | ☑ `pipeline/build_module.py [--out DIR]` (stdlib; Atlas runs it from the submodule) |
-| 3.3 | Atlas: submodule at `modules/constitutions`, copy step before build, `/constitutions` route, «اسناد بنیادین» nav entry, prerender entries | ☑ Atlas `5ffde5f` on main; assets go to `static/modules/constitutions/` (not `static/constitutions/`, which would collide with the `/constitutions` page) |
+| 3.3 | Atlas: submodule at `modules/constitutions`, copy step before build, `/constitutions` route, «اطلس اسناد بنیادین» nav entry, prerender entries | ☑ Atlas `5ffde5f` on main; assets go to `static/modules/constitutions/` (not `static/constitutions/`, which would collide with the `/constitutions` page) |
 | 3.4 | CI `submodules: recursive`; Cloudflare nested submodules; test under base `/Atlas-website` | ☑ live on atlasiran.org (Cloudflare) and atlasiran.github.io/Atlas-website (Pages); both checked headless |
 
 ### Phase 4: new documents

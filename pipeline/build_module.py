@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Package the site as a module another site can mount (Atlas's «اسناد بنیادین» tab).
+"""Package the site as a module another site can mount (Atlas's «اطلس اسناد بنیادین» tab).
 
     python3 pipeline/build_module.py [--out DIR]     # default: dist/
 
